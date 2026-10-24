@@ -1,0 +1,98 @@
+{
+ "id": "haze_magazine_bound",
+ "title": "Haze: is a 12 s fight limited by magazine and reload rather than fire rate?",
+ "hero": "Haze",
+ "playstyle": "Victor Cosplay Haze",
+ "builds": [
+  "haze"
+ ],
+ "question": "Section I gun economy: with Titanic + Active Reload (55 rounds) at ~13-15 shots/s the magazine lasts ~4 s and reload is 2.35 s. Does Burst Fire add damage in a scripted 12 s fight with real reloads, compared with its +32% fire-rate headline?",
+ "hypothesis": "Model: Burst Fire adds 0 damage in a 10 s window and ~+25% in 12 s (depends on whether a third magazine starts); sustained value about half of the fire-rate headline. Prediction: Burst Fire's damage gain over 12 s is < 20%.",
+ "arms": [
+  {
+   "name": "no_burst",
+   "items": [
+    "upgrade_titan_round",
+    "upgrade_blitz_bullets",
+    "upgrade_ricochet"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "",
+   "notes": ""
+  },
+  {
+   "name": "burst_fire",
+   "items": [
+    "upgrade_titan_round",
+    "upgrade_blitz_bullets",
+    "upgrade_ricochet",
+    "upgrade_burst_fire"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "+3.2k",
+   "notes": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "unlock 7",
+  "souls": 50000,
+  "position": "enemy 350u",
+  "enemies": [
+   {
+    "hero": "Haze",
+    "count": 1,
+    "items": "none",
+    "behaviour": "bot",
+    "hp": "egod"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "hardreset"
+  ]
+ },
+ "controls": [
+  "hardreset between blocks (fresh pawns, factory cooldowns/charges, unlock 7 = all 3 tiers on every ability in BOTH arms)",
+  "Same position (fetch 350, aimoff 5.5 3), same enemy bot (Haze), egod default floor",
+  "Arms interleaved A,B,A,B (counterbalanced A,B,B,A for the second half)",
+  "healreset + mark none around every reset",
+  "cast reload 2.5 before each fire block (no auto-reload op)",
+  "accuracy 0.5 0",
+  "identical timeline: fire until empty (fire 6 caps it), cast reload 2.35, repeat until 12 s elapsed; log shots per block"
+ ],
+ "procedure": [
+  "give; cast reload 2.5; mark <arm>; fire 6; cast reload 2.35; fire 6 (truncate total to 12 s); acclog"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "damage_12s",
+   "unit": "hp",
+   "how": "damage csv",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "time_to_empty_s",
+   "unit": "s",
+   "how": "first-to-last GunFired of block 1",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "damage_12s",
+  "min_effect_pct": 20,
+  "min_trials": 5,
+  "rule": "If Burst Fire gains < 20%, the build is ammo-bound: magazine/refill items (Titanic, Lucky Shot clip, Vampiric Burst refill) are worth more than further fire rate; feeds the Healing Tempo vs Burst Fire comparison."
+ },
+ "limitations": [
+  "Checkpoint level/ability-tier states cannot be reproduced (unlock sets all tiers; GAPS #2): results are late-game relative comparisons only.",
+  "Active Reload timed press cannot be scripted (GAPS #15): Active Reload arms use the full 2.35 s reload."
+ ]
+}

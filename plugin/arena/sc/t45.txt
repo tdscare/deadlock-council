@@ -1,0 +1,622 @@
+meta kind ISOLATED ITEM
+meta hero Victor
+meta checkpoint Level 20, 0 souls spent, Berserker only, abilities at bits 7/15/7/7
+meta build none (pilot)
+meta items upgrade_berserker
+meta question Victor pilot T4/T5 mechanics: how do Berserker and ability tiers 4 and 5 (jump, aura, inc, ctrl) change output when measured in isolation?
+meta purpose pilot of Victor tier-4 and tier-5 ability effects with Berserker equipped
+meta mechanics Victor ability tiers via abil bits, Berserker stacks
+meta expectedstate items=none before each block then Berserker only; stacks=0; abilities off cooldown
+meta excluded all other Victor items - isolated result is not a build verdict
+meta accmode aimoff 0 0 fixed aim
+meta accwhy ability/aura effects should not depend on gun accuracy
+meta abilities per block as marked (T4 jump, T5 aura/inc/ctrl)
+meta runs 2/2
+meta assumed Berserker stack mechanics from game data
+setup Frank Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|ctrl|r1
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|jump|r1
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+cast 2 0.4
+wait 0.3
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|hurt|r1
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+hurtme 500
+wait 0.3
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|inc|r1
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+incoming gun 200
+wait 3
+incoming off
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|inc|r2
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+incoming gun 200
+wait 3
+incoming off
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|hurt|r2
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+hurtme 500
+wait 0.3
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|jump|r2
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+cast 2 0.4
+wait 0.3
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|ctrl|r2
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|jump|r3
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+cast 2 0.4
+wait 0.3
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|inc|r3
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+incoming gun 200
+wait 3
+incoming off
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|ctrl|r3
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_berserker
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T4|hurt|r3
+pos
+expect hero=Frank level=20 items=1 dist=350 enemies=1 cdready=1
+mods
+hurtme 500
+wait 0.3
+cast reload 2.3
+fire 3
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T5|ctrl|r1
+pos
+expect hero=Frank level=20 items=0 dist=350 enemies=1 cdready=1
+mods
+cast 1 0.5
+wait 2
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T5|aura|r1
+pos
+expect hero=Frank level=20 items=0 dist=350 enemies=1 cdready=1
+mods
+cast 3 8
+cast 2 0.4
+wait 0.5
+cast 1 0.5
+wait 2
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T5|inc|r1
+pos
+expect hero=Frank level=20 items=0 dist=350 enemies=1 cdready=1
+mods
+incoming gun 300
+wait 3
+incoming off
+cast 1 0.5
+wait 2
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T5|ctrl|r2
+pos
+expect hero=Frank level=20 items=0 dist=350 enemies=1 cdready=1
+mods
+cast 1 0.5
+wait 2
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T5|aura|r2
+pos
+expect hero=Frank level=20 items=0 dist=350 enemies=1 cdready=1
+mods
+cast 3 8
+cast 2 0.4
+wait 0.5
+cast 1 0.5
+wait 2
+mods
+healsum
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 7 15 7 7
+abilist
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 350
+wait 0.8
+healreset
+mark T5|inc|r2
+pos
+expect hero=Frank level=20 items=0 dist=350 enemies=1 cdready=1
+mods
+incoming gun 300
+wait 3
+incoming off
+cast 1 0.5
+wait 2
+mods
+healsum
+mark none
+lvlhold 0
+end

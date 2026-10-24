@@ -1,0 +1,246 @@
+{
+ "id": "paige_support",
+ "hk": "hero_bookworm",
+ "hero": "Paige",
+ "tag": "Fix",
+ "name": "Rizuhble's Bedtime Story Paige",
+ "desc": "Support Paige",
+ "tg": [
+  "utility",
+  "healing",
+  "Divine Barrier"
+ ],
+ "abil": [
+  "Bookwyrm",
+  "Plot Armor",
+  "Captivating Read",
+  "Rallying Charge"
+ ],
+ "order": [
+  2,
+  2,
+  3,
+  3,
+  1,
+  2,
+  4,
+  4,
+  1,
+  3,
+  2,
+  4,
+  3,
+  4,
+  1,
+  1
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "High-Velocity Rounds",
+      ""
+     ],
+     [
+      "Healing Rite",
+      ""
+     ],
+     [
+      "Grit",
+      ""
+     ],
+     [
+      "Extra Charge",
+      ""
+     ],
+     [
+      "Guardian Ward",
+      ""
+     ],
+     [
+      "Sprint Boots",
+      ""
+     ],
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Trophy Collector",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Mystic Expansion",
+      "On Captivating Read.",
+      "3"
+     ],
+     [
+      "Opening Rounds",
+      ""
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ],
+     [
+      "Compress Cooldown",
+      "On Plot Armor.",
+      "2"
+     ],
+     [
+      "Rescue Beam",
+      ""
+     ],
+     [
+      "Knockdown",
+      "Drop it on whoever dives your team, then throw your 3 on them."
+     ],
+     [
+      "Duration Extender",
+      "On Captivating Read. It makes the root last longer.",
+      "3"
+     ],
+     [
+      "Rapid Recharge",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Divine Barrier",
+      ""
+     ],
+     [
+      "Greater Expansion",
+      ""
+     ],
+     [
+      "Superior Duration",
+      ""
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Cursed Relic",
+      "Curse their carry as your team jumps them."
+     ],
+     [
+      "Lightning Scroll",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Knockdown if needed. Ahead? Skip it until you're dying. Sell Opening Rounds for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "One gun hero is deleting you: Haze, Wraith, Vindicta."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun and Metal Skin isn't enough."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult or Mo & Krill's Combo."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+     ],
+     [
+      "Unstoppable",
+      "Stuns keep cancelling your ult."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Echo Shard",
+      "On Plot Armor. Sell Opening Rounds for this.",
+      "2"
+     ],
+     [
+      "Vortex Web",
+      "Sell Knockdown for this."
+     ],
+     [
+      "Cheat Death",
+      "Sell Trophy Collector for this."
+     ],
+     [
+      "Refresher",
+      "Sell Rapid Recharge for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Round 13: new support build — sources: deadlocked.gg 'BEST SUPPORT PAIGE BUILD' (in-game, copied Oct 19, post Oct 14 patch: High-Velocity, Healing Rite, Grit, Guardian Ward, Extra Spirit, Extra Charge, Sprint Boots, Trophy Collector, Mystic Expansion on 3; Compress Cooldown on 2, Superior Cooldown, Duration Extender on 3, Rescue Beam, Improved Spirit, Rapid Recharge, Knockdown; Divine Barrier, Transcendent, Greater Expansion, Superior Duration, Boundless, Spirit Burn), tracklock.gg 'Paige - Tank-Crowd Control [61% WR]' (1,301 Phantom+ matches: same core plus Cursed Relic, Refresher/Rescue Beam late). Order: tracklock support build 2213244323341114 (Plot Armor maxed first, Bookwyrm last). Duration Extender on Captivating Read: its root and spirit-resist debuff both use the game's duration scaling, so the root goes 2s to 2.44s. Compress Cooldown on Plot Armor (28s, the ability cast most).",
+  "Round 14: ability order 2314223423341114 = the most-picked point at every level on mobalytics' Paige skill grid (Archon+, current patch, Plot Armor maxed first, 18.6K matches); the old order put Plot Armor T1 at point 2, which 4% of players do. Cursed Relic note cut to the timing tip (the 'your damage drops' part explained the item). Knockdown and Duration Extender notes trimmed to the tip. Counterspell example now confirmed parryable (Lash ult, Mo & Krill Combo); Unstoppable says 'your ult'.",
+  "Round 15: ability order 2314231223341144 takes Kieran's Paige T1 pattern (T1 Plot Armor, T1 Read, T1 Bookwyrm at 5-7) and still maxes Plot Armor first by point 9 like mobalytics' Plot-max players. Counters desc was 114 chars (game limit 112): now 'Get after Knockdown...'.",
+  "Round 19: style check, no change. Support/control Paige is the main public style (lockbuilds EVIL PAIGE official Oct 18, the most normal Paige build, Fire Plot Armor Paige, OTSO).",
+  "Round 20: Lightning Scroll replaces Refresher in core (LB EVIL PAIGE late core; the ult's stun on everyone the knights hit). Late list to ~77k: Transcendent Cooldown, Echo Shard, Vortex Web, Cheat Death, Refresher last (luxury). Slot locked merged in.",
+  "Round 23: kit check, no changes.",
+  "Round 25: points reordered for support: Plot Armor T2 at L6-7, ult T1 (+150 team heal) right at unlock, Captivating Read T2 (longer root, which Duration Extender scales) before Plot Armor T3, dragon tiers last.",
+  "Slot locked: Transcendent Cooldown moved out of the rich box (Kieran rule: tiny-gain expensive upgrades are Slot locked)."
+ ]
+}

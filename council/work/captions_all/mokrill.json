@@ -1,0 +1,3872 @@
+{
+ "schema": 1,
+ "id": "mokrill",
+ "hero": "Mo & Krill",
+ "name": "Rizuhble's Whack-A-Mole Mo",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Their burst catches you while Scorn's on cooldown. Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-7,200 (levels 1-13). Abilities gained (both point models agree): Combo T1. 4.8k spikes: spirit 4.8k at Cold Front.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "mokrill:6:phase_range:6656",
+    "mokrill:6:phase_abilities:6657",
+    "mokrill:6:phase_spikes:6665"
+   ],
+   "items": [
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 7.5 to Scorn's damage (0.75x scaling).",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Cold Front completes 4.8k spirit in 4000 souls (~4.0 min), 3 purchases",
+     "claim_ids": [
+      "mokrill:0:spirit_scaling:6642"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:0:spirit_scaling:6642",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Cold Front completes 3,200 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Cold Front completes 4.8k spirit in 3200 souls (~3.2 min), 2 purchases",
+     "claim_ids": [
+      "mokrill:1:spike_progress:6643"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:1:spike_progress:6643",
+       true,
+       "1600"
+      ]
+     ]
+    },
+    {
+     "name": "Quicksilver Reload",
+     "imbue": "1",
+     "caption": "Imbued on Scorn: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:2:imbue_reload:6647"
+     ],
+     "lint": [],
+     "legacy_note": "On Scorn.",
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:2:imbue_reload:6647",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Cold Front",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:3:spike_complete:6648"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:3:spike_complete:6648",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Sprint Boots",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Fortitude, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Enduring Speed",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Fortitude, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Health",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Fortitude completes 2,400 souls on.",
+     "cls": "b",
+     "why": "imminent: Fortitude completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "mokrill:6:spike_progress:6654"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:6:spike_progress:6654",
+       true,
+       "2400"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 7,200-20,800 (levels 13-26). Abilities gained (both point models agree): Scorn T3, Burrow T3. Your biggest single spirit hit (Scorn, damage) grows from 131 to 169. 4.8k spikes: vitality 4.8k at Fortitude.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "mokrill:14:phase_range:6684",
+    "mokrill:14:phase_abilities:6685",
+    "mokrill:14:phase_power:6686",
+    "mokrill:14:phase_spikes:6691"
+   ],
+   "items": [
+    {
+     "name": "Fortitude",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus. Upgrade of Extra Health (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:7:spike_complete:6666",
+      "mokrill:7:upgrade_of:6667"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:7:spike_complete:6666",
+       true,
+       "inventory vitality: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "mokrill:7:upgrade_of:6667",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Torment Pulse",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "1",
+     "caption": "Imbued on Scorn: takes 18% off its 8s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:9:imbue_cooldown:6670"
+     ],
+     "lint": [],
+     "legacy_note": "On Scorn.",
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:9:imbue_cooldown:6670",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 26.8 per second to Burrow's damage per second (1.49x scaling), your steepest spirit scaling. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:10:spirit_scaling:6673",
+      "mokrill:10:upgrade_of:6672"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:10:spirit_scaling:6673",
+       true,
+       ""
+      ],
+      [
+       "mokrill:10:upgrade_of:6672",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Expansion",
+     "imbue": "1",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 10,400 to 11,200 invested: bonus 52 to 59 spirit power. | Imbued on Scorn: widens its range.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "On Scorn.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Vulnerability",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Duration Extender",
+     "imbue": 3,
+     "caption": "Imbued on Sand Blast: its duration-scaled parts (duration 2.5s) get +22%.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:13:imbue_duration:6678"
+     ],
+     "lint": [],
+     "legacy_note": "On Sand Blast.",
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:13:imbue_duration:6678",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Superior Duration",
+     "imbue": null,
+     "caption": "+28% to every duration-scaled effect you have: Combo channel time (2.4s), Scorn debuff duration (16s), Burrow channel time (9s). Takes spirit from 14,400 to 16,000 invested: bonus 59 to 66 spirit power. Upgrade of Duration Extender (already owned): costs 1,600 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:14:dur_global:6683",
+      "mokrill:14:invest_step:6680",
+      "mokrill:14:upgrade_of:6681"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:14:dur_global:6683",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "mokrill:14:invest_step:6680",
+       true,
+       "inventory spirit: before 14400, after 16000, threshold 16000"
+      ],
+      [
+       "mokrill:14:upgrade_of:6681",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 cont.",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 20,800-31,200 (levels 26-30).",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "mokrill:18:phase_range:6702"
+   ],
+   "items": [
+    {
+     "name": "Healbane",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus. | Temporary, sold when you buy Colossus later.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: With 4 abilities trained their base cooldowns total 188s; 20% off is 37.6s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 44.6 per second to Burrow's damage per second (1.49x scaling), your steepest spirit scaling. Takes spirit from 20,000 to 24,800 invested: bonus 66 to 75 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:18:spirit_scaling:6701",
+      "mokrill:18:invest_step:6699",
+      "mokrill:18:upgrade_of:6700"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:18:spirit_scaling:6701",
+       true,
+       ""
+      ],
+      [
+       "mokrill:18:invest_step:6699",
+       true,
+       "inventory spirit: before 20000, after 24800, threshold 22400"
+      ],
+      [
+       "mokrill:18:upgrade_of:6700",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 31,200-49,600 (levels 30-36). Abilities gained (both point models agree): Sand Blast T3, Combo T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "mokrill:22:phase_range:6712",
+    "mokrill:22:phase_abilities:6713"
+   ],
+   "items": [
+    {
+     "name": "Colossus",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 6,400 to 11,200 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Pop it when you Combo someone in the middle of them. Sell Healbane for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 24,800 to 29,600 invested: bonus 75 to 100 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Greater Expansion",
+     "imbue": null,
+     "caption": "+30% range and radius on everything that scales with them: Scorn radius (10m), Burrow radius (7m). Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:21:global_reach:6709",
+      "mokrill:21:upgrade_of:6710"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:21:global_reach:6709",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "mokrill:21:upgrade_of:6710",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Arctic Blast",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Fortitude? Buy what is killing you, cheapest first. Not dying? Skip. Sell Torment Pulse.",
+   "desc": "Dying after Fortitude? Buy what is killing you, cheapest first. Not dying? Skip. Sell Torment Pulse.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Burrow (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:23:cc_exposure:6716"
+     ],
+     "lint": [],
+     "legacy_note": "Stuns keep breaking your Combo.",
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:23:cc_exposure:6716",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:23:defence_bullet:6717"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry melts you up front.",
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:23:defence_bullet:6717",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:23:defence_gun:6718"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:23:defence_gun:6718",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:23:defence_spirit:6719"
+     ],
+     "lint": [],
+     "legacy_note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:23:defence_spirit:6719",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spellbreaker",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Big spirit bursts hit you as you pop out of Burrow.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:23:defence_parry:6720"
+     ],
+     "lint": [],
+     "legacy_note": "A big ult or stun you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:23:defence_parry:6720",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Tankbuster for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mercurial Magnum",
+     "imbue": "1",
+     "caption": "Same-slot upgrade of Quicksilver Reload for 4,800 more souls: bonus fire rate 10 to 22; damage 44 to 60.. Imbued on Scorn: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:23:upgrade_delta:6723",
+      "mokrill:23:imbue_reload:6724"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Quicksilver Reload.",
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:23:upgrade_delta:6723",
+       true,
+       ""
+      ],
+      [
+       "mokrill:23:imbue_reload:6724",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Scourge",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Cast it on yourself before you go in. Sell Superior Duration for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Fortitude for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:23:upgrade_delta:6728"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:23:upgrade_delta:6728",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Juggernaut",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mokrill:23:upgrade_delta:6730"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Enduring Speed.",
+     "temporary": false,
+     "verify": [
+      [
+       "mokrill:23:upgrade_delta:6730",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "mokrill:0:spike_progress:6640": {
+   "id": "mokrill:0:spike_progress:6640",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Cold Front completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Cold Front completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "mokrill:0:component_for:6641": {
+   "id": "mokrill:0:component_for:6641",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 14400,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:0:spirit_scaling:6642": {
+   "id": "mokrill:0:spirit_scaling:6642",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 7.5 to Scorn's damage (0.75x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_intimidate"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "10.0",
+    "7.5",
+    "0.75"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:1:spike_progress:6643": {
+   "id": "mokrill:1:spike_progress:6643",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Cold Front completes 3,200 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 3200,
+    "event": "Cold Front completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    3200,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "mokrill:1:threshold_marginal:6644": {
+   "id": "mokrill:1:threshold_marginal:6644",
+   "kind": "threshold_marginal",
+   "phrase": "Scorn (104) is within 50% of the 80-damage trigger; resist handling unverified.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_intimidate",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_burrow",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_throw_sand"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:1:component_for:6645": {
+   "id": "mokrill:1:component_for:6645",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 23200,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:2:spike_progress:6646": {
+   "id": "mokrill:2:spike_progress:6646",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Quicksilver Reload",
+    "souls": 3200,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "mokrill:2:imbue_reload:6647": {
+   "id": "mokrill:2:imbue_reload:6647",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Scorn: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_quick_silver",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_intimidate"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 2,
+    "item": "Quicksilver Reload",
+    "souls": 3200,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 1
+   },
+   "numbers": [
+    "18.0",
+    "10.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:3:spike_complete:6648": {
+   "id": "mokrill:3:spike_complete:6648",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 3,
+    "item": "Cold Front",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "mokrill:3:component_for:6649": {
+   "id": "mokrill:3:component_for:6649",
+   "kind": "component_for",
+   "phrase": "From Arctic Blast: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Cold Front",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 44800.0,
+    "event": "Arctic Blast"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Arctic Blast"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:4:spike_progress:6650": {
+   "id": "mokrill:4:spike_progress:6650",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Sprint Boots",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "mokrill:4:component_for:6651": {
+   "id": "mokrill:4:component_for:6651",
+   "kind": "component_for",
+   "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Sprint Boots",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Enduring Speed"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Enduring Speed"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:5:spike_progress:6652": {
+   "id": "mokrill:5:spike_progress:6652",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Enduring Speed",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "mokrill:5:upgrade_of:6653": {
+   "id": "mokrill:5:upgrade_of:6653",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 5,
+    "item": "Enduring Speed",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Sprint Boots"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:6:spike_progress:6654": {
+   "id": "mokrill:6:spike_progress:6654",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Fortitude completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Extra Health",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Fortitude completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "mokrill:6:component_for:6655": {
+   "id": "mokrill:6:component_for:6655",
+   "kind": "component_for",
+   "phrase": "From Fortitude: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Extra Health",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Fortitude"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Fortitude"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:6:phase_range:6656": {
+   "id": "mokrill:6:phase_range:6656",
+   "kind": "phase_range",
+   "phrase": "Souls 0-7,200 (levels 1-13).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Extra Health",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Health",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "7,200",
+    "1",
+    "13"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:6:phase_abilities:6657": {
+   "id": "mokrill:6:phase_abilities:6657",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Combo T1.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Extra Health",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Health",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:6:phase_spikes:6665": {
+   "id": "mokrill:6:phase_spikes:6665",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Cold Front.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Extra Health",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Health",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:7:spike_complete:6666": {
+   "id": "mokrill:7:spike_complete:6666",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 7,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "mokrill:7:upgrade_of:6667": {
+   "id": "mokrill:7:upgrade_of:6667",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Health (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Health"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:7:swap_candidate:6668": {
+   "id": "mokrill:7:swap_candidate:6668",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Witchmail later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 7,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Fortitude",
+    "buyer": "Witchmail"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:8:invest_step:6669": {
+   "id": "mokrill:8:invest_step:6669",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 8,
+    "item": "Torment Pulse",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "8000",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "mokrill:9:imbue_cooldown:6670": {
+   "id": "mokrill:9:imbue_cooldown:6670",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Scorn: takes 18% off its 8s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_intimidate"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 9,
+    "item": "Compress Cooldown",
+    "souls": 14400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 1
+   },
+   "numbers": [
+    "18.0",
+    "8.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:9:component_for:6671": {
+   "id": "mokrill:9:component_for:6671",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Compress Cooldown",
+    "souls": 14400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12000,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:10:upgrade_of:6672": {
+   "id": "mokrill:10:upgrade_of:6672",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Improved Spirit",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:10:spirit_scaling:6673": {
+   "id": "mokrill:10:spirit_scaling:6673",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 26.8 per second to Burrow's damage per second (1.49x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_burrow"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 10,
+    "item": "Improved Spirit",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "DPS"
+   },
+   "numbers": [
+    "18.0",
+    "26.8",
+    "1.49"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:11:invest_step:6674": {
+   "id": "mokrill:11:invest_step:6674",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 10,400 to 11,200 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Mystic Expansion",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "10400",
+    "11200",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "mokrill:11:imbue_reach:6675": {
+   "id": "mokrill:11:imbue_reach:6675",
+   "kind": "imbue_reach",
+   "phrase": "Imbued on Scorn: widens its range.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_reach",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_intimidate"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 11,
+    "item": "Mystic Expansion",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 1,
+    "stats": [
+     "ETechRange",
+     "ETechRadius"
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:11:component_for:6676": {
+   "id": "mokrill:11:component_for:6676",
+   "kind": "component_for",
+   "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Mystic Expansion",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 28800.0,
+    "event": "Greater Expansion"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Greater Expansion"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:12:component_for:6677": {
+   "id": "mokrill:12:component_for:6677",
+   "kind": "component_for",
+   "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Mystic Vulnerability",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 24800.0,
+    "event": "Escalating Exposure"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:13:imbue_duration:6678": {
+   "id": "mokrill:13:imbue_duration:6678",
+   "kind": "imbue_duration",
+   "phrase": "Imbued on Sand Blast: its duration-scaled parts (duration 2.5s) get +22%.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_arcane_extension",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_throw_sand"
+   ],
+   "score": 58,
+   "point": {
+    "idx": 13,
+    "item": "Duration Extender",
+    "souls": 19200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 3,
+    "stats": [
+     "ETechDuration"
+    ]
+   },
+   "numbers": [
+    "22.0",
+    "2.5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:13:component_for:6679": {
+   "id": "mokrill:13:component_for:6679",
+   "kind": "component_for",
+   "phrase": "From Superior Duration: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Duration Extender",
+    "souls": 19200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Superior Duration"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Duration"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:14:invest_step:6680": {
+   "id": "mokrill:14:invest_step:6680",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 14,400 to 16,000 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Superior Duration",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "16000",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "mokrill:14:upgrade_of:6681": {
+   "id": "mokrill:14:upgrade_of:6681",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Duration Extender (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 14,
+    "item": "Superior Duration",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Duration Extender"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:14:swap_candidate:6682": {
+   "id": "mokrill:14:swap_candidate:6682",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Scourge later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 14,
+    "item": "Superior Duration",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Superior Duration",
+    "buyer": "Scourge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:14:dur_global:6683": {
+   "id": "mokrill:14:dur_global:6683",
+   "kind": "dur_global",
+   "phrase": "+28% to every duration-scaled effect you have: Combo channel time (2.4s), Scorn debuff duration (16s), Burrow channel time (9s).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_imbued_duration_extender",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_intimidate",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_burrow",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_throw_sand",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_ult_combo"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 14,
+    "item": "Superior Duration",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "dur_global"
+   },
+   "numbers": [
+    "28.0",
+    "2.4",
+    "16",
+    "9"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:14:phase_range:6684": {
+   "id": "mokrill:14:phase_range:6684",
+   "kind": "phase_range",
+   "phrase": "Souls 7,200-20,800 (levels 13-26).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Superior Duration",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Duration",
+    "keys": []
+   },
+   "numbers": [
+    "7,200",
+    "20,800",
+    "13",
+    "26"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:14:phase_abilities:6685": {
+   "id": "mokrill:14:phase_abilities:6685",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Scorn T3, Burrow T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Superior Duration",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Duration",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:14:phase_power:6686": {
+   "id": "mokrill:14:phase_power:6686",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Scorn, damage) grows from 131 to 169.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_intimidate",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Superior Duration",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Duration",
+    "keys": []
+   },
+   "numbers": [
+    "131",
+    "169"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:14:phase_spikes:6691": {
+   "id": "mokrill:14:phase_spikes:6691",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Fortitude.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Superior Duration",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Duration",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:15:invest_step:6692": {
+   "id": "mokrill:15:invest_step:6692",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Healbane",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "mokrill:15:temporary_sold:6693": {
+   "id": "mokrill:15:temporary_sold:6693",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Colossus later.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 34,
+   "point": {
+    "idx": 15,
+    "item": "Healbane",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Healbane",
+    "buyer": "Colossus"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:16:threshold_marginal:6694": {
+   "id": "mokrill:16:threshold_marginal:6694",
+   "kind": "threshold_marginal",
+   "phrase": "Scorn (176) is within 50% of the 165-damage trigger; resist handling unverified.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_intimidate",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_burrow",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_throw_sand"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:16:upgrade_of:6695": {
+   "id": "mokrill:16:upgrade_of:6695",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:16:swap_candidate:6696": {
+   "id": "mokrill:16:swap_candidate:6696",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Spirit Burn later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Tankbuster",
+    "buyer": "Spirit Burn"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:17:upgrade_of:6697": {
+   "id": "mokrill:17:upgrade_of:6697",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Superior Cooldown",
+    "souls": 26400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:17:cdr_rotation:6698": {
+   "id": "mokrill:17:cdr_rotation:6698",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 188s; 20% off is 37.6s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_intimidate",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_burrow",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_throw_sand",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_ult_combo"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 17,
+    "item": "Superior Cooldown",
+    "souls": 26400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "188",
+    "20.0",
+    "37.6"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:18:invest_step:6699": {
+   "id": "mokrill:18:invest_step:6699",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 20,000 to 24,800 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Boundless Spirit",
+    "souls": 31200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "20000",
+    "24800",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "mokrill:18:upgrade_of:6700": {
+   "id": "mokrill:18:upgrade_of:6700",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Boundless Spirit",
+    "souls": 31200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:18:spirit_scaling:6701": {
+   "id": "mokrill:18:spirit_scaling:6701",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 44.6 per second to Burrow's damage per second (1.49x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_burrow"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 18,
+    "item": "Boundless Spirit",
+    "souls": 31200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "DPS"
+   },
+   "numbers": [
+    "30.0",
+    "44.6",
+    "1.49"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:18:phase_range:6702": {
+   "id": "mokrill:18:phase_range:6702",
+   "kind": "phase_range",
+   "phrase": "Souls 20,800-31,200 (levels 26-30).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Boundless Spirit",
+    "souls": 31200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Boundless Spirit",
+    "keys": []
+   },
+   "numbers": [
+    "20,800",
+    "31,200",
+    "26",
+    "30"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:19:invest_step:6705": {
+   "id": "mokrill:19:invest_step:6705",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 11,200 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Colossus",
+    "souls": 37600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "11200",
+    "42.0",
+    "50.0",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "mokrill:19:sell_swap:6706": {
+   "id": "mokrill:19:sell_swap:6706",
+   "kind": "sell_swap",
+   "phrase": "Replaces Healbane: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Colossus",
+    "souls": 37600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Healbane",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Healbane"
+  },
+  "mokrill:20:invest_step:6707": {
+   "id": "mokrill:20:invest_step:6707",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 24,800 to 29,600 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Escalating Exposure",
+    "souls": 42400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "24800",
+    "29600",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "mokrill:20:upgrade_of:6708": {
+   "id": "mokrill:20:upgrade_of:6708",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Vulnerability (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Escalating Exposure",
+    "souls": 42400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Vulnerability"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:21:global_reach:6709": {
+   "id": "mokrill:21:global_reach:6709",
+   "kind": "global_reach",
+   "phrase": "+30% range and radius on everything that scales with them: Scorn radius (10m), Burrow radius (7m).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_range",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_intimidate",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_burrow"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 21,
+    "item": "Greater Expansion",
+    "souls": 44800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "global_reach"
+   },
+   "numbers": [
+    "30",
+    "10",
+    "7"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:21:upgrade_of:6710": {
+   "id": "mokrill:21:upgrade_of:6710",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 21,
+    "item": "Greater Expansion",
+    "souls": 44800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Expansion"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:22:upgrade_of:6711": {
+   "id": "mokrill:22:upgrade_of:6711",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Cold Front (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 22,
+    "item": "Arctic Blast",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Cold Front"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:22:phase_range:6712": {
+   "id": "mokrill:22:phase_range:6712",
+   "kind": "phase_range",
+   "phrase": "Souls 31,200-49,600 (levels 30-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_krill m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 22,
+    "item": "Arctic Blast",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Arctic Blast",
+    "keys": []
+   },
+   "numbers": [
+    "31,200",
+    "49,600",
+    "30",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:22:phase_abilities:6713": {
+   "id": "mokrill:22:phase_abilities:6713",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Sand Blast T3, Combo T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 22,
+    "item": "Arctic Blast",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Arctic Blast",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:23:cc_exposure:6716": {
+   "id": "mokrill:23:cc_exposure:6716",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Burrow (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 23,
+    "item": "Unstoppable",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Stuns keep breaking your Combo."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:23:defence_bullet:6717": {
+   "id": "mokrill:23:defence_bullet:6717",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Metal Skin",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry melts you up front."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:23:defence_gun:6718": {
+   "id": "mokrill:23:defence_gun:6718",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Plated Armor",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:23:defence_spirit:6719": {
+   "id": "mokrill:23:defence_spirit:6719",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Spirit Resilience",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:23:defence_parry:6720": {
+   "id": "mokrill:23:defence_parry:6720",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Counterspell",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ult or stun you can see coming."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:23:burn_trigger_modelled:6721": {
+   "id": "mokrill:23:burn_trigger_modelled:6721",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Scorn (230) = 230 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 23,
+    "item": "Spirit Burn",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "230",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:23:sell_swap:6722": {
+   "id": "mokrill:23:sell_swap:6722",
+   "kind": "sell_swap",
+   "phrase": "Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 23,
+    "item": "Spirit Burn",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Tankbuster",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Tankbuster"
+  },
+  "mokrill:23:upgrade_delta:6723": {
+   "id": "mokrill:23:upgrade_delta:6723",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Quicksilver Reload for 4,800 more souls: bonus fire rate 10 to 22; damage 44 to 60..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ethereal_bullets",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_quick_silver"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Mercurial Magnum",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": 1,
+    "note": "Upgrade of Quicksilver Reload."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Quicksilver Reload"
+   },
+   "numbers": [
+    "4,800",
+    "10",
+    "22",
+    "44",
+    "60"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:23:imbue_reload:6724": {
+   "id": "mokrill:23:imbue_reload:6724",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Scorn: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ethereal_bullets",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_intimidate"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 23,
+    "item": "Mercurial Magnum",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": 1,
+    "note": "Upgrade of Quicksilver Reload."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 1
+   },
+   "numbers": [
+    "14.0",
+    "22.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mokrill:23:upgrade_of:6725": {
+   "id": "mokrill:23:upgrade_of:6725",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Quicksilver Reload (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 23,
+    "item": "Mercurial Magnum",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": 1,
+    "note": "Upgrade of Quicksilver Reload."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Quicksilver Reload"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:23:sell_swap:6726": {
+   "id": "mokrill:23:sell_swap:6726",
+   "kind": "sell_swap",
+   "phrase": "Replaces Superior Duration: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 23,
+    "item": "Scourge",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Cast it on yourself before you go in. Sell Superior Duration for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Superior Duration",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Superior Duration"
+  },
+  "mokrill:23:sell_swap:6727": {
+   "id": "mokrill:23:sell_swap:6727",
+   "kind": "sell_swap",
+   "phrase": "Replaces Fortitude: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 23,
+    "item": "Witchmail",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Fortitude for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Fortitude",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Fortitude"
+  },
+  "mokrill:23:upgrade_delta:6728": {
+   "id": "mokrill:23:upgrade_delta:6728",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Transcendent Cooldown",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:23:upgrade_of:6729": {
+   "id": "mokrill:23:upgrade_of:6729",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 23,
+    "item": "Transcendent Cooldown",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mokrill:23:upgrade_delta:6730": {
+   "id": "mokrill:23:upgrade_delta:6730",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_juggernaut",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cardio_calibrator"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Juggernaut",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Enduring Speed"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "40",
+    "25",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mokrill:23:upgrade_of:6731": {
+   "id": "mokrill:23:upgrade_of:6731",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Enduring Speed (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 23,
+    "item": "Juggernaut",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Enduring Speed"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "mokrill",
+   "item": "Grit",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 49600.0,
+   "unpublished": []
+  },
+  {
+   "build": "mokrill",
+   "item": "Grit",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their burst catches you while Scorn's on cooldown. Sell it once you're out of slots."
+  },
+  {
+   "build": "mokrill",
+   "item": "Extra Spirit",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Cold Front completes 4.8k spirit in 4000 souls (~4.0 min), 3 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "mokrill:0:spike_progress:6640",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Cold Front completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Cold Front completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "mokrill:0:component_for:6641",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 14400,
+      "event": "Improved Spirit"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mokrill",
+   "item": "Mystic Burst",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Cold Front completes 4.8k spirit in 3200 souls (~3.2 min), 2 purchases",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "mokrill:1:spike_progress:6643",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Cold Front completes 3,200 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 3200,
+      "event": "Cold Front completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "mokrill:1:threshold_marginal:6644",
+     "tier": "MODELLED",
+     "phrase": "Scorn (104) is within 50% of the 80-damage trigger; resist handling unverified.",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    },
+    {
+     "id": "mokrill:1:component_for:6645",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 23200,
+      "event": "Tankbuster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mokrill",
+   "item": "Quicksilver Reload",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Scorn."
+  },
+  {
+   "build": "mokrill",
+   "item": "Sprint Boots",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Fortitude, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 5600,
+   "unpublished": [
+    {
+     "id": "mokrill:4:component_for:6651",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Enduring Speed"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mokrill",
+   "item": "Enduring Speed",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Fortitude, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 6400,
+   "unpublished": []
+  },
+  {
+   "build": "mokrill",
+   "item": "Extra Health",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Fortitude completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 7200,
+   "unpublished": [
+    {
+     "id": "mokrill:6:spike_progress:6654",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Fortitude completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Fortitude completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "mokrill:6:component_for:6655",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Fortitude: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Fortitude"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mokrill",
+   "item": "Compress Cooldown",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Scorn."
+  },
+  {
+   "build": "mokrill",
+   "item": "Mystic Expansion",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Scorn."
+  },
+  {
+   "build": "mokrill",
+   "item": "Mystic Vulnerability",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+   "souls": 17600,
+   "unpublished": [
+    {
+     "id": "mokrill:12:component_for:6677",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 24800.0,
+      "event": "Escalating Exposure"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mokrill",
+   "item": "Duration Extender",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Sand Blast."
+  },
+  {
+   "build": "mokrill",
+   "item": "Tankbuster",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 24800,
+   "unpublished": [
+    {
+     "id": "mokrill:16:threshold_marginal:6694",
+     "tier": "MODELLED",
+     "phrase": "Scorn (176) is within 50% of the 165-damage trigger; resist handling unverified.",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "mokrill",
+   "item": "Colossus",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Pop it when you Combo someone in the middle of them. Sell Healbane for this."
+  },
+  {
+   "build": "mokrill",
+   "item": "Arctic Blast",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 49600.0,
+   "unpublished": []
+  },
+  {
+   "build": "mokrill",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep breaking your Combo."
+  },
+  {
+   "build": "mokrill",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry melts you up front."
+  },
+  {
+   "build": "mokrill",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "mokrill",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+  },
+  {
+   "build": "mokrill",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 49600.0,
+   "unpublished": []
+  },
+  {
+   "build": "mokrill",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Big spirit bursts hit you as you pop out of Burrow."
+  },
+  {
+   "build": "mokrill",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ult or stun you can see coming."
+  },
+  {
+   "build": "mokrill",
+   "item": "Spirit Burn",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 49600.0,
+   "unpublished": [
+    {
+     "id": "mokrill:23:burn_trigger_modelled:6721",
+     "tier": "MODELLED",
+     "phrase": "One rotation of Scorn (230) = 230 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "mokrill",
+   "item": "Scourge",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 49600.0,
+   "unpublished": []
+  },
+  {
+   "build": "mokrill",
+   "item": "Scourge",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Cast it on yourself before you go in. Sell Superior Duration for this."
+  },
+  {
+   "build": "mokrill",
+   "item": "Witchmail",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 49600.0,
+   "unpublished": []
+  }
+ ],
+ "stats": {
+  "d": 8,
+  "b": 3,
+  "a": 17,
+  "c": 2,
+  "g": 6
+ }
+}

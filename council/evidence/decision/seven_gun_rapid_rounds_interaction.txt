@@ -1,0 +1,54 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: seven_gun
+HERO: Seven
+ITEM: Rapid Rounds
+CHECKPOINT: buy-point at 4000 souls (state souls 4000; item cost 800)
+VERSION: interaction-v1
+ARGS: --interactions seven_gun Rapid Rounds --vs Extended Magazine
+GENERATED: 2026-10-24T15:07:56Z
+BODY-SHA: ef885c5b1fb5d8acbd9663d40c317632329b3a7b415c0bdf107a8d67f2d6b3ea
+INPUT-SHA: b9029455fb528215cf9193c3a5585eaaf2facd5ca0ac6c255f8205ae6840df8e
+ALTERNATIVES (equal souls 800, unconditional, ranked): Extended Magazine, Close Quarters, Headshot Booster, Restorative Shot
+VERDICT: DEPENDS ON COMBAT WINDOW: sustained -> Extended Magazine; burst -> Rapid Rounds; ult -> Rapid Rounds
+UNKNOWN_CELLS: 2
+SELECTION: build-decision | Rapid Rounds is bought at 4000 souls in seven_gun: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (800) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage; plus requested ['Extended Magazine']
+PAIRWISE: Rapid Rounds vs Extended Magazine: sustained: Rapid Rounds -11..-5% vs Extended Magazine -> LOSES in every reading | burst: Rapid Rounds +1..+1% vs Extended Magazine -> TIE (within 2% in every reading) | ult: Rapid Rounds +0..+0% vs Extended Magazine -> TIE (within 2% in every reading)
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.6, long_share=0.3, W_sus=10.0, W_burst=3.0; reload 2.5 s (ASSUMED 2.5 s: reload duration is animation-defined, not in vdata)
+STATE: owned ['Monster Rounds', 'Opening Rounds', 'Extra Spirit', 'Rapid Rounds'] | tiers Lightning Ball=T1(spirit) Static Charge=U(spirit) Power Surge=T2(spirit) Storm Cloud=U(spirit) | weapon invest bonus 18% | spirit 33
+
+## INTERACTION MATRIX (item effect x kit component)
+- fire rate (more bullets) (BonusFireRate=9)
+    normal shooting                              WORKS                      [CALCULATED] more bullets per second (fire-rate pool now 0%: +9 adds 9.0% bullets)
+    1=Lightning Ball T1 [spirit]                 DOES NOT WORK              [CALCULATED] damage ['DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Static Charge U [spirit]                   DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    3=Power Surge T2 [spirit]                    UNKNOWN                    [UNKNOWN] spirit damage triggered by shooting (game text: 'Power up your weapon with a shock effect, making your bullets proc sho...'): whether more bullets trigger it more often is not in data (trigger rate/limit)
+    4=Storm Cloud U (ULT) [spirit]               DOES NOT WORK              [CALCULATED] damage ['DPS', 'LightningStrikeDamage'] scales with spirit power (ETechPower), not weapon damage/bullets
+- reload time of Seven's gun (ASSUMED 2.5 s)
+    normal shooting                              UNKNOWN                    [UNKNOWN] reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 8 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 8 UNKNOWN readings]
+(without: state before the b |       401              |       238              |       894              | 0
+Rapid Rounds                 |          423 (+6..+7%) |          251 (+5..+5%) |          894 (+0..+0%) | 0
+Extended Magazine            |        475 (+13..+19%) |          247 (+4..+4%) |          894 (+0..+0%) | 0
+Close Quarters               |          433 (+8..+8%) |          251 (+5..+5%) |          894 (+0..+0%) | 0
+Headshot Booster             |          422 (+5..+5%) |          246 (+3..+3%) |          894 (+0..+0%) | 0
+Restorative Shot             |          420 (+5..+5%) |          246 (+3..+3%) |          894 (+0..+0%) | 0
+  candidate detail (reading 1): sustained bullets 33, gun 287, stacks 0, procs 0, spirit 136 | ult: Storm Cloud damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Extended Magazine > Close Quarters > Rapid Rounds > Headshot Booster > Restorative Shot
+  burst: rank (reading 1) Rapid Rounds > Close Quarters > Extended Magazine > Headshot Booster > Restorative Shot
+  ult: rank (reading 1) Rapid Rounds > Extended Magazine > Close Quarters > Headshot Booster > Restorative Shot
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (205s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_seven_gun_Rapid_Rounds_3_Power_Surge_T2_fire_rate.txt
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_seven_gun_reload_probe.txt
+
+## NOT DETERMINED FROM DATA
+  - fire rate (more bullets) (BonusFireRate=9): 3=Power Surge T2 [spirit]: spirit damage triggered by shooting (game text: 'Power up your weapon with a shock effect, making your bullets proc sho...'): whether more bullets trigger it more often is not in data (trigger rate/limit)
+  - reload time of Seven's gun (ASSUMED 2.5 s): normal shooting: reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

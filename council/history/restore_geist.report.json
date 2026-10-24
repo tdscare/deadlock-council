@@ -1,0 +1,36 @@
+{
+ "proposal": "restore_geist",
+ "id": "geist",
+ "diff": [
+  "added Mid · L-R|Healing Booster, Mid · L-R|Extra Charge",
+  "removed Mid · cont.|Healing Booster, Late · L-R|Extra Charge"
+ ],
+ "block": [
+  "NEW violation introduced: bc: CORE_NOTE_NONEMPTY geist: Extra Charge: Life Drain gets charges once it's maxed. This adds one.",
+  "NEW violation introduced: bc: FRESH_T2_LATE geist: Spirit Lifesteal @21600",
+  "NEW violation introduced: bc: COUNTERS_DESC_FORMAT_OCT22 geist: \"Get after Berserker if needed. Ahead? Skip it until you're dying. Sell Kinetic Dash for it.\"",
+  "NEW violation introduced: bc: COUNTERS_X_NOT_IN_BUILD geist: Berserker if needed",
+  "NEW violation introduced: bc: COUNTERS_Y_NOT_IN_BUILD geist: Kinetic Dash for it"
+ ],
+ "warn": [],
+ "fixed": [
+  "bc: OVERSHOOT_GUN_BEFORE_HEALTH geist: gun 8000 at health 4.8k @18400",
+  "bc: HEALTH_4.8K_AFTER_16K geist: at 18400"
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY geist: Spirit Resilience: Your own bombs hurt you with spirit damage, so this cuts that too.",
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD geist: Healing Booster (T2) @9600"
+ ],
+ "newV": [
+  "bc: CORE_NOTE_NONEMPTY geist: Extra Charge: Life Drain gets charges once it's maxed. This adds one.",
+  "bc: FRESH_T2_LATE geist: Spirit Lifesteal @21600",
+  "bc: COUNTERS_DESC_FORMAT_OCT22 geist: \"Get after Berserker if needed. Ahead? Skip it until you're dying. Sell Kinetic Dash for it.\"",
+  "bc: COUNTERS_X_NOT_IN_BUILD geist: Berserker if needed",
+  "bc: COUNTERS_Y_NOT_IN_BUILD geist: Kinetic Dash for it",
+  "bc: RT_ITEMS geist: Mid · L-R: [[\"Radiant Regeneration\",null],[\"Spirit Resilience\",null],[\"Berserker\",null],[\"Bullet Resist Shredder\",null],[\"Bullet Lifesteal\",null],[\"Spirit Lifesteal\",null]] vs [[\"Radiant Regeneration\",null],[\"Healing Booster\",null],[\"Spirit Resilience\",null],[\"Berserker\",null],[\"Extra Charge\",null],[\"Bullet Resist Shredder\",null],[\"Bullet Lifesteal\",null],[\"Spirit Lifesteal\",null]]",
+  "bc: RT_ITEMS geist: Mid · cont.: [[\"Healing Booster\",null],[\"Spellslinger\",null],[\"Blood Tribute\",null]] vs [[\"Spellslinger\",null],[\"Blood Tribute\",null]]",
+  "bc: RT_ITEMS geist: Late · L-R: [[\"Leech\",null],[\"Extra Charge\",null],[\"Rapid Recharge\",null],[\"Refresher\",null]] vs [[\"Leech\",null],[\"Rapid Recharge\",null],[\"Refresher\",null]]"
+ ],
+ "when": "2026-10-24 04:51",
+ "line": "[2026-10-24 04:51] CANDIDATE restore of geist to LASTGOOD (data.js.bak_rel) core/ability order, because the current order shifted a 4.8k spike without a recorded reason (council/triage/TRIAGE.md). | added Mid · L-R|Healing Booster, Mid · L-R|Extra Charge; removed Mid · cont.|Healing Booster, Late · L-R|Extra Charge | evidence: data:council/triage/TRIAGE.md | gate: FAIL"
+}

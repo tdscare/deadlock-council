@@ -1,0 +1,65 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: venator_grenade
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:13Z
+BODY-SHA: 8b1175005090d56910fb1c131022bb80b0339bb7f650ccfe284c1f31e982d7e1
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): High-Velocity Rounds, Close Quarters, Monster Rounds, Battle Vest, Cultist Sacrifice, Extra Health, Fortitude
+  Mid · L-R                -> main path (sequential): Berserker, Hollow Point, Bullet Lifesteal, Recharging Rush, Extra Charge, Ballistic Enchantment, Rapid Recharge, Vampiric Burst
+  Late · L-R               -> main path (sequential): Silencer, Inhibitor, Crippling Headshot
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Spirit Resilience, Metal Skin, Counterspell, Dispel Magic, Warp Stone, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Ricochet, Siphon Bullets, Glass Cannon, Colossus, Divine Barrier
+
+## SALE CHECKLIST (computed)
+- Late · L-R (main path): buy Silencer, sell Close Quarters
+    function of Close Quarters: stats only; replacement Silencer: bullet_proc, silence, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Close Quarters is a component of later items: no
+    held for 34800.0 souls of purchases; resale 400, net cost of having owned it 400
+    investment before/after gun/vit/spirit 16000/11200/3200 -> 21600/11200/3200; thresholds lost: none
+    trade ratio after the sale 0.52; selling High-Velocity Rounds instead: 0.51 (-0.8%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- Late · L-R (main path): buy Crippling Headshot, sell High-Velocity Rounds
+    function of High-Velocity Rounds: stats only; replacement Crippling Headshot: resist_shred; roles lost: none  [VERIFIED GAME MECHANIC]
+    High-Velocity Rounds is a component of later items: no
+    held for 48000.0 souls of purchases; resale 400, net cost of having owned it 400
+    investment before/after gun/vit/spirit 21600/17600/3200 -> 27200/17600/3200; thresholds lost: none
+    trade ratio after the sale 0.41; selling Recharging Rush instead: 0.35 (-13.1%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Ricochet, sell Recharging Rush
+    function of Recharging Rush: ammo; replacement Ricochet: fire_rate; roles lost: ammo  [VERIFIED GAME MECHANIC]
+    Recharging Rush is a component of later items: no
+    held for 36000.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/17600/3200 -> 32000/17600/3200; thresholds lost: none
+    trade ratio after the sale 0.36; selling Battle Vest instead: 0.37 (+2.4%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Recharging Rush): 20 s 134 bullets (clip 33, 4.1 magazines, 34% not firing; refill items used every other charge) | 60 s 363 bullets, 40% not firing | damage 60 s 17766  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Recharging Rush, sell Battle Vest: 20 s 137 bullets (clip 40, 3.5 magazines, 28% not firing; refill items used every other charge) | 60 s 379 bullets, 34% not firing | damage 60 s 18023  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Recharging Rush, no Ricochet): 20 s 130 bullets (clip 40, 3.3 magazines, 26% not firing; refill items used every other charge) | 60 s 353 bullets, 32% not firing | damage 60 s 16982  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Siphon Bullets, sell Cultist Sacrifice
+    function of Cultist Sacrifice: charges, range; replacement Siphon Bullets: bullet_resist; roles lost: charges, range  [VERIFIED GAME MECHANIC]
+    Cultist Sacrifice is a component of later items: no
+    held for 48800.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 27200/17600/3200 -> 24000/24000/3200; thresholds lost: none
+    trade ratio after the sale 0.39; selling Recharging Rush instead: 0.35 (-10.5%)  [MODELLED ESTIMATE]
+    model limit: Cultist Sacrifice has an active effect (PRESS) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Glass Cannon, sell Hollow Point
+    function of Hollow Point: resist_shred; replacement Glass Cannon: ammo, bullet_proc, fire_rate, slow; roles lost: resist_shred  [VERIFIED GAME MECHANIC]
+    Hollow Point is a component of later items: no
+    held for 39200.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 27200/17600/3200 -> 30400/17600/3200; thresholds lost: none
+    trade ratio after the sale 0.45; selling Recharging Rush instead: 0.41 (-8.7%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Colossus, sell Fortitude
+    function of Fortitude: move_speed; replacement Colossus: bullet_resist, slow, spirit_resist; roles lost: move_speed  [VERIFIED GAME MECHANIC]
+    Fortitude is a component of later items: no
+    held for 45600.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 27200/17600/3200 -> 27200/20800/3200; thresholds lost: none
+    trade ratio after the sale 0.34; selling Recharging Rush instead: 0.32 (-5.1%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

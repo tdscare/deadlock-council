@@ -1,0 +1,122 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: venator
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:11:55Z
+BODY-SHA: 9503731a8c65a0c7a16e0800003b5c5cd45fac9b70178fb8e493f764f7292d5a
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Melee Lifesteal: retained-or-upgraded (-> Lifestrike)
+  Monster Rounds: retained-or-upgraded (-> Cultist Sacrifice)
+  Melee Charge: retained-or-upgraded (-> Crushing Fists)
+  Battle Vest: retained
+  Cultist Sacrifice: retained
+  Lifestrike: retained
+  Close Quarters: retained-or-upgraded (-> Point Blank)
+  Point Blank: retained
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed)
+  Enduring Speed: retained-or-upgraded (-> Juggernaut)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Hunter's Aura: retained
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Warp Stone: retained
+  Superior Cooldown: retained
+  Greater Expansion: retained
+  Crushing Fists: retained
+  Spirit Resilience: retained
+  Echo Shard: retained
+  Juggernaut: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Colossus: situational-luxury
+  Phantom Strike: situational-luxury
+  Diviner's Kevlar: situational-luxury
+  Cheat Death: situational-luxury
+  Divine Barrier: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Melee Lifesteal, Monster Rounds, Melee Charge, Battle Vest, Cultist Sacrifice, Lifestrike, Close Quarters, Point Blank
+  Mid · L-R                  -> main path (sequential): Sprint Boots, Enduring Speed, Compress Cooldown, Hunter's Aura, Mystic Expansion, Warp Stone, Superior Cooldown, Greater Expansion
+  Late · L-R                 -> main path (sequential): Crushing Fists, Spirit Resilience, Echo Shard, Juggernaut
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Counterspell, Dispel Magic, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Colossus, Phantom Strike, Diviner's Kevlar, Cheat Death, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+
+## Cultist Sacrifice: sold when buying Colossus (I'm rich as fuck, luxury)
+  role of Cultist Sacrifice: retained; role of Colossus: situational-luxury
+  Cultist Sacrifice: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 7200 souls (~7.5 min), replaced at ~54.0 min -> owned ~46.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 16000/24000/12800 -> after 12800/24000/12800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 77 min | window TR | key purchase times (min)
+  as built                                    |          64899 |      0.56 | Cultist Sacrifice 8, Colossus 54
+  keep Cultist Sacrifice (slot cap ignored)   |          65696 |      0.57 | Cultist Sacrifice 8, Colossus 56
+  skip Cultist Sacrifice                      |          63448 |      0.55 | Colossus 55
+  sell Battle Vest instead                    |          65058 |      0.55 | Cultist Sacrifice 8, Colossus 55
+  keep Cultist Sacrifice (slot cap ignored) vs as built: d souls +521, d window TR +1.7% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -))
+  skip Cultist Sacrifice vs as built: d souls -1349, d window TR -1.4% | souls: MODEL-ONLY (sign robust in 97% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Battle Vest instead vs as built: d souls +0, d window TR -2.1% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Cultist Sacrifice has an active effect (PRESS) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Colossus has an active effect (INSTANT_CAST) not priced
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Cultist Sacrifice (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | skip Cultist Sacrifice: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Warp Stone: sold when buying Phantom Strike (I'm rich as fuck, luxury)
+  role of Warp Stone: retained; role of Phantom Strike: situational-luxury
+  Warp Stone: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 23200 souls (~22.5 min), replaced at ~54.0 min -> owned ~31.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 16000/24000/12800 -> after 16000/20800/12800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 77 min | window TR | key purchase times (min)
+  as built                                    |          64405 |      0.45 | Warp Stone 22, Phantom Strike 54
+  keep Warp Stone (slot cap ignored)          |          65612 |      0.52 | Warp Stone 22, Phantom Strike 56
+  skip Warp Stone                             |          62319 |      0.38 | Phantom Strike 54
+  sell Battle Vest instead                    |          64988 |      0.49 | Warp Stone 22, Phantom Strike 55
+  keep Warp Stone (slot cap ignored) vs as built: d souls +517, d window TR +14.0% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Warp Stone vs as built: d souls -770, d window TR -12.9% | souls: MODEL-ONLY (sign robust in 94% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Battle Vest instead vs as built: d souls +203, d window TR +8.3% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  model limit: Warp Stone has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Phantom Strike has an active effect (PRESS) not priced
+  model limit: no modelled stat for Warp Stone (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Warp Stone (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+
+## Point Blank: sold when buying Diviner's Kevlar (I'm rich as fuck, luxury)
+  role of Point Blank: retained; role of Diviner's Kevlar: situational-luxury
+  Point Blank: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 12800 souls (~12.8 min), replaced at ~54.0 min -> owned ~41.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 16000/24000/12800 -> after 12800/24000/12800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 77 min | window TR | key purchase times (min)
+  as built                                    |          67208 |      0.61 | Point Blank 13, Diviner's Kevlar 54
+  keep Point Blank (slot cap ignored)         |          67501 |      0.61 | Point Blank 13, Diviner's Kevlar 56
+  skip Point Blank                            |          67366 |      0.61 | Diviner's Kevlar 53
+  sell Battle Vest instead                    |          66592 |      0.59 | Point Blank 13, Diviner's Kevlar 55
+  keep Point Blank (slot cap ignored) vs as built: d souls +146, d window TR +0.7% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: INSUFFICIENT (effect within model noise)
+  skip Point Blank vs as built: d souls +61, d window TR +1.5% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  sell Battle Vest instead vs as built: d souls -220, d window TR -3.0% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Point Blank (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | skip Point Blank: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Battle Vest: sold when buying Cheat Death (I'm rich as fuck, luxury)
+  role of Battle Vest: retained; role of Cheat Death: situational-luxury
+  Battle Vest: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 4800 souls (~5.2 min), replaced at ~55.0 min -> owned ~49.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 16000/24000/12800 -> after 16000/22400/12800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 77 min | window TR | key purchase times (min)
+  as built                                    |          65365 |      0.57 | Battle Vest 5, Cheat Death 55
+  keep Battle Vest (slot cap ignored)         |          66061 |      0.59 | Battle Vest 5, Cheat Death 56
+  skip Battle Vest                            |          62769 |      0.51 | Cheat Death 58
+  sell Hunter's Aura instead                  |          65882 |      0.59 | Battle Vest 5, Cheat Death 54
+  keep Battle Vest (slot cap ignored) vs as built: d souls +237, d window TR +3.6% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Battle Vest vs as built: d souls -775, d window TR -8.2% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Hunter's Aura instead vs as built: d souls +239, d window TR +2.8% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Battle Vest (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Hunter's Aura instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))

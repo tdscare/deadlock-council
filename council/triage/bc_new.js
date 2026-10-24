@@ -1,0 +1,116 @@
+// node council/audit/builds_check.js   (read-only; run from anywhere)
+const fs=require('fs'),z=require('zlib');process.chdir(__dirname+'/../..');
+const {B,CN}=new Function(fs.readFileSync('/tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/data.js','utf8')+';return {B,CN}')();
+const G=JSON.parse(fs.readFileSync('audit/items_full.json'));
+const L=JSON.parse(fs.readFileSync('a7/levels.json'));
+const gd=fs.readFileSync('gamedata.js','utf8');const {ITEMS,HEROES}=new Function(gd+';return {ITEMS,HEROES}')();
+const {parse}=require(process.cwd()+'/cats.js');
+const CC={Tech:'s',WeaponMod:'w',Armor:'v'},C={1:800,2:1600,3:3200,4:6400},COL={w:'gun',s:'spirit',v:'health'};
+const F={};const fl=(rule,id,msg)=>{(F[rule]=F[rule]||[]).push(id+': '+msg)};
+const core=t=>/^(Early|Mid|Late)/.test(t);
+const SPIRIT_T=[[800,7],[1600,11],[2400,15],[3200,19],[4800,38],[6400,45],[8000,52],[11200,59],[16000,66],[22400,75],[28800,100]];
+for(const b of B){const id=b.id;let owned=[],souls=0,sp={},at={},seq=[];const boxes=[];const all=[];
+ // structure
+ if(!b.order||b.order.length!==16)fl('ORDER_LEN',id,'order length '+(b.order||[]).length);
+ else{const c=[0,0,0,0,0];b.order.forEach(x=>c[x]++);if(c.slice(1).some(x=>x>4))fl('ORDER_MAX4',id,'ability clicked >4 times '+b.order.join(''));
+  if(c[4]<1)fl('ORDER_NO_ULT',id,'ult never taken');
+  // first click on each ability must be unlock (clicks cost); ult can't be before level 6 (unlock pts at L1,3,5,8): check ult first click index
+  if(b.order.indexOf(4)<3)fl('ORDER_ULT_EARLY',id,'ult unlocked within first 3 clicks '+b.order.join(''))}
+ if(!b.abil||b.abil.length!==4)fl('ABIL_NAMES',id,'abil length');
+ const hr=HEROES.find(h=>h.name===b.hero||h.key===b.hk);if(!hr)fl('STALE_HERO',id,'hero not in gamedata '+b.hero);
+ else if(hr.ab&&b.abil&&b.abil.some((a,i)=>hr.ab[i]&&hr.ab[i].n!==a))fl('STALE_ABIL',id,'abil names differ from gamedata: '+b.abil+' vs '+hr.ab.map(a=>a.name));
+ if(!/^Rizuhble's /.test(b.name))fl('NAME_FORMAT',id,'name "'+b.name+'"');
+ if(b.name.length>32)fl('NAME_LEN',id,b.name.length+' chars');
+ if(/spike|4\.8k|souls?\b/i.test(b.desc||''))fl('DESC_CONTENT',id,'desc mentions spikes: '+b.desc);
+ if(/\bover\b/.test(JSON.stringify(b.rows).replace(/"[^"]*Overflow[^"]*"/g,'')) )fl('OVER_WORDING',id,'"over" in notes: '+(JSON.stringify(b.rows).match(/[^"]{0,40}\bover\b[^"]{0,30}/)||[''])[0]);
+ for(const r of b.rows)for(const [t,d,o,items] of r){boxes.push(t);
+  if(items.length>8)fl('BOX_GT8',id,t+' has '+items.length);
+  
+  const cr=core(t);if(cr&&o)fl('CORE_FLAGGED_OPT',id,t);if(!cr&&!o)fl('OPT_FLAG_MISSING',id,t+' not marked optional');
+  
+  if(/^Counters/.test(t)){if(!/^Dying after .+\? Buy what is killing you, cheapest first\. Not dying\? Skip\. Sell .+\.$/.test(d))fl('COUNTERS_DESC_FORMAT_OCT22',id,JSON.stringify(d));
+   const m=d.match(/after ([^?.]+?)[?.]/i),s=d.match(/Sell ([^.]+)\./);if(m&&!JSON.stringify(b.rows).includes('"'+m[1].replace(/^Get after /,'')+'"'))fl('COUNTERS_X_NOT_IN_BUILD',id,m[1]);
+   if(s&&!JSON.stringify(b.rows).includes('"'+s[1]+'"'))fl('COUNTERS_Y_NOT_IN_BUILD',id,s[1])}
+  if(/^I'm rich/.test(t))for(const [n] of items){const g=G[n];if(g&&g.tier!==4)fl('RICH_NOT_T4',id,n+' T'+g.tier)}
+  if(/^Slot locked/.test(t))for(const [n,note] of items){const g=G[n];if(g&&g.tier<3)fl('SLOT_LOCKED_CHEAP',id,n+' T'+g.tier);if(!/^Upgrade of /.test(note||''))fl('SLOT_LOCKED_NOTE',id,n+' note "'+note+'"')}
+  if(/^Losing lane/.test(t))for(const [n] of items)if(G[n]&&CC[G[n].slot]==='w'&&!/Regen|Rite|Grit|Health|Resil|Armor|Sustain|Lifesteal/i.test(n))fl('LOSING_LANE_DAMAGE',id,n);
+  for(const [n,note,imb] of items){all.push([n,t]);const g=G[n];
+   if(!g){fl('STALE_ITEM',id,n+' not in current item list');continue}if(g.disabled)fl('DISABLED_ITEM',id,n);
+   if(!ITEMS[n])fl('STALE_ITEM_GAMEDATA',id,n+' not in gamedata.js (import encoder would fail)');
+   const isImb=/mbue/.test(g.desc)||n==='Echo Shard'||n==='Mystic Reverb';if(isImb&&!imb)fl('IMBUE_MISSING',id,n);if(!isImb&&imb)fl('IMBUE_ON_NON_IMBUE',id,n);
+   if(imb&&!(+imb>=1&&+imb<=4))fl('IMBUE_BAD_TARGET',id,n+' '+imb);
+   if(/\b(bug|glitch)\b/i.test(note||''))fl('NOTE_BUG',id,n+': '+note);
+   if(/shotgun|beam|laser/i.test(note||''))fl('NOTE_WORDING',id,n+': '+note);
+   if(/\b(proc|procs|tick|ticks|threshold)\b/i.test(note||''))fl('NOTE_JARGON',id,n+': '+note);
+   if(/\b[A-Z][A-Za-z']+ over [A-Z]/.test(note||''))fl('NOTE_X_OVER_Y',id,n+': '+note);
+   if(cr&&(note||'')&&!/^(Upgrade|On |Sell|If |Vs |Against |Only|When|Sell)/.test(note))fl('CORE_NOTE_NONEMPTY',id,n+': '+note.slice(0,70));
+   if(cr){const have=g.components.filter(c=>owned.includes(c));
+    souls+=C[g.tier]-have.reduce((a,c)=>a+C[G[c].tier],0);owned=owned.filter(x=>!have.includes(x));
+    if(owned.includes(n))fl('DUP_IN_CORE',id,n);owned.push(n);at[n]=souls;seq.push(n);
+    const sm=(note||'').match(/Sell ([A-Z][^.]*?) (?:for this|first)/);
+    if(sm){const i=owned.indexOf(sm[1]);if(i<0)fl('SELL_CHAIN_NOT_OWNED',id,n+' sells '+sm[1]+' which is not owned at that point');else owned.splice(i,1)}
+    if(owned.length>12)fl('SLOTS_GT12_NO_SELL',id,n+' is slot '+owned.length);
+    const inv={w:0,s:0,v:0};owned.forEach(x=>inv[CC[G[x].slot]]+=C[G[x].tier]);
+    for(const k in inv)if(inv[k]>=4800&&!sp[k])sp[k]=souls;
+    if(g.tier===1&&!g.components.length&&!Object.values(ITEMS).some(()=>false)){}
+   }}}
+ if(owned.length!==12)fl('CORE_NOT_12',id,'core ends with '+owned.length+' items, '+souls+' souls');
+ // dup across whole build
+ const cnt={};all.forEach(([n])=>cnt[n]=(cnt[n]||0)+1);for(const n in cnt)if(cnt[n]>1)fl('DUP_ANY_BOX',id,n+' x'+cnt[n]+' in '+all.filter(a=>a[0]===n).map(a=>a[1]).join(' & '));
+ // sells in optional boxes name item in core
+ for(const r of b.rows)for(const [t,d,o,items] of r)if(!core(t))for(const [n,note] of items)for(const mm of (note||'').matchAll(/[Ss]ell ([A-Z][A-Za-z'&-]+(?: (?:of |the )?[A-Z][A-Za-z'&-]+)*)/g)){if(!G[mm[1]])continue;if(!all.some(a=>a[0]===mm[1]&&core(a[1])))fl('OPT_SELL_NOT_IN_CORE',id,n+' sells '+mm[1]);else if(at[mm[1]]!=null&&at[n]==null){}}
+ // spike rules
+ const main=Object.entries(seq.reduce((a,n)=>{a[CC[G[n].slot]]=(a[CC[G[n].slot]]||0)+C[G[n].tier];return a},{})).sort((a,b)=>b[1]-a[1])[0][0];
+ if(sp[main]==null)fl('MAIN_COLOUR_NO_4.8K',id,COL[main]);else if(sp[main]>8000)fl('MAIN_4.8K_LATE',id,COL[main]+' 4.8k at '+sp[main]);
+ if(sp.v==null)fl('HEALTH_NEVER_4.8K',id,'health never reaches 4.8k in core');else if(sp.v>16000)fl('HEALTH_4.8K_AFTER_16K',id,'at '+sp.v);
+ // overshoot: at the moment health first reaches 4.8k, other colours invested >=8000
+ {let o2=[],s2=0;for(const n of seq){const g=G[n];const have=g.components.filter(c=>o2.includes(c));s2+=C[g.tier]-have.reduce((a,c)=>a+C[G[c].tier],0);o2=o2.filter(x=>!have.includes(x));o2.push(n);
+   const inv={w:0,s:0,v:0};o2.forEach(x=>inv[CC[G[x].slot]]+=C[G[x].tier]);
+   if(inv.v>=4800){ if(inv.s>=8000)fl('OVERSHOOT_SPIRIT_BEFORE_HEALTH',id,'spirit '+inv.s+' when health first hits 4.8k at '+s2);if(inv.w>=8000&&main==='w')fl('OVERSHOOT_GUN_BEFORE_HEALTH',id,'gun '+inv.w+' at health 4.8k @'+s2);break}}}
+ // 6.4k runs
+ {let run=0,maxrun=0,at0=0;for(const n of seq){if(G[n].tier===4&&at[n]<30000){run++;if(run>maxrun){maxrun=run;at0=at[n]}}else run=0}
+  const t4=seq.filter(n=>G[n].tier===4&&at[n]<20000);if(t4.length)fl('T4_BEFORE_20K',id,t4.map(n=>n+'@'+at[n]));
+  let r2=0,mx=0;for(const n of seq){if(G[n].tier===4&&at[n]<30000){r2++;mx=Math.max(mx,r2)}else r2=0}if(mx>=3)fl('LONG_T4_RUN_BEFORE_30K',id,mx+' consecutive T4 before 30k')}
+ // fresh T2 late (>20k souls) and dead-end T1 (800 never upgraded)
+ for(const n of seq){const g=G[n];if(g.tier===2&&at[n]>20000&&!g.components.some(c=>seq.includes(c)))fl('FRESH_T2_LATE',id,n+' @'+at[n]);
+  if(g.tier===1&&at[n]>8000&&!Object.values(G).some(h=>h.components.includes(n)))fl('T1_LATE_DEADEND',id,n+' @'+at[n])}
+ // dead-end 800s: T1 never component of any owned later item
+ for(const n of seq){const g=G[n];if(g.tier<=2){const up=seq.some(m=>G[m].components.includes(n))||(()=>{const sellers=JSON.stringify(b.rows).match(new RegExp('Sell [^"]*'+n.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));return !!sellers})();if(!up)fl('T1T2_NOT_UPGRADED_OR_SOLD',id,n+' (T'+g.tier+') @'+at[n])}}
+ // conditional items timing
+ const sp_at=s=>{let x=0;for(const l of L.levels)if(s>=l.gold&&l.std)x+=1.1;return x};
+ const chk={'Witchmail':n=>at[n]<20000,'Tankbuster':n=>at[n]<6400||(sp.v==null?false:at[n]<sp.v&&G.Tankbuster&&false),'Spirit Burn':n=>false,'Recharging Rush':n=>false,'Mystic Reverb':n=>false};
+ if(at['Witchmail']<20000)fl('WITCHMAIL_EARLY',id,'@'+at['Witchmail']);
+ if(at['Tankbuster']<8000)fl('TANKBUSTER_EARLY',id,'@'+at['Tankbuster']);
+ if(at['Tankbuster']!=null&&sp.v!=null&&at['Tankbuster']<sp.v-3200)fl('TANKBUSTER_BEFORE_HEALTH',id,'@'+at['Tankbuster']+' health spike '+sp.v);
+ if(at['Spirit Burn']!=null&&at['Spirit Burn']<12000)fl('SPIRITBURN_EARLY',id,'@'+at['Spirit Burn']);
+ if(at['Mystic Reverb']!=null&&at['Mystic Reverb']<8000)fl('REVERB_EARLY',id,'@'+at['Mystic Reverb']);
+ if(at['Recharging Rush']!=null&&/slow/i.test(b.desc))fl('RR_SLOW',id,'');
+ for(const n of ['Mystic Burst','Tankbuster','Spirit Burn','Mystic Reverb','Recharging Rush','Arcane Surge','Spiritual Overflow'])if(at[n]!=null&&!(b.changes||[]).some(c=>/Threshold|threshold/.test(c)&&c.includes(n)))fl('THRESH_ITEM_NO_THRESHOLD_LINE',id,n+' @'+at[n]+' has no "Threshold:" changes line naming it');
+ // Mystic Burst < 80 sanity: spirit power at buy
+ for(const n of ['Mystic Burst','Tankbuster','Spirit Burn','Mystic Reverb']){if(at[n]==null)continue;let o3=[],s3=0;for(const m of seq){const g=G[m];const have=g.components.filter(c=>o3.includes(c));s3+=C[g.tier]-have.reduce((a,c)=>a+C[G[c].tier],0);o3=o3.filter(x=>!have.includes(x));o3.push(m);if(m===n)break}
+  const inv=o3.filter(x=>CC[G[x].slot]==='s').reduce((a,x)=>a+C[G[x].tier],0);let bo=0;for(const[th,v] of [[800,7],[1600,11],[2400,15],[3200,19],[4800,38],[6400,45],[8000,52],[11200,59],[16000,66],[22400,75],[28800,100]])if(inv>=th)bo=v;let lv=0;for(const l of L.levels)if(s3>=l.gold&&l.std)lv+=1.1;const itsp=o3.reduce((a,x)=>{const st=G[x].stats||{};let t=0;for(const k of['TechPower','BonusTechPower','SpiritPower'])if(st[k]!=null&&!/x /.test(st[k]))t+=parseFloat(st[k]);return a+t},0);
+  (global.TBL=global.TBL||[]).push(`${id}\t${n}\t@${at[n]}\tSP~${(lv+bo+itsp).toFixed(0)}\torder-so-far ${b.order.join('')}`)}
+ // changes hygiene
+ if(!b.changes||!b.changes.length)fl('NO_CHANGES',id,'empty');
+ // imbue/ability spirit-items with no spirit invest: cheap sanity
+ // roundtrip decode
+ try{const raw=z.zstdDecompressSync(Buffer.from(fs.readFileSync('imp/'+id+'.b64','utf8').trim(),'base64'));
+  const g=(a,n)=>a.filter(x=>x[0]==n).map(x=>x[2]);const gs=(a,n)=>g(a,n).map(v=>Buffer.isBuffer(v)?v.toString():v);const byId={};for(const[n,v]of Object.entries(ITEMS))byId[v.id]=n;
+  const top=parse(raw);const det=parse(g(top,10)[0]);const dec=[];
+  const heroH=HEROES.find(h=>h.id==Number(g(top,2)[0]));const ab={};heroH&&heroH.ab.forEach((a,i)=>ab[a.id]=i+1);
+  for(const c of g(det,1)){const p=parse(c);dec.push({t:gs(p,2)[0],o:!!g(p,6)[0],items:g(p,1).map(m=>{const q=parse(m);const im=g(q,5)[0];return [byId[Number(g(q,1)[0])],im?ab[Number(im)]:undefined]})})}
+  const orderB=g(det,2)[0];let dord='';if(orderB){const o=parse(orderB);dord=g(o,1).map(c=>ab[Number(g(parse(c),1)[0])]).join('')}
+  const src=[];b.rows.forEach(r=>r.forEach(([t,d,o,items])=>src.push({t,o:!!o,items:items.map(i=>[i[0],i[2]?+i[2]:undefined])})));
+  if(heroH&&heroH.name!==b.hero&&heroH.key!==b.hk)fl('RT_HERO',id,'decoded hero '+heroH.name+' vs '+b.hero);
+  if(dec.length!==src.length)fl('RT_BOXCOUNT',id,dec.length+' vs '+src.length);
+  dec.forEach((d,i)=>{const s=src.find(x=>x.t===d.t);if(!s){fl('RT_BOX_MISSING',id,d.t);return}
+   if(d.o!==s.o)fl('RT_OPT_FLAG',id,d.t);if(JSON.stringify(d.items)!==JSON.stringify(s.items.map(x=>[x[0],x[1]])))fl('RT_ITEMS',id,d.t+': '+JSON.stringify(d.items)+' vs '+JSON.stringify(s.items))});
+  if(dord!==b.order.join(''))fl('RT_ORDER',id,dord+' vs '+b.order.join(''));
+ }catch(e){fl('RT_ERR',id,e.message)}
+ // site/index.html built from current data.js?
+}
+const idx=fs.readFileSync('site/index.html','utf8');const dj=fs.readFileSync('/tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/data.js','utf8');if(!idx.includes(dj.slice(0,5000))||!idx.includes(dj.slice(-3000)))fl('SITE_STALE','site/index.html','does not contain current data.js');
+const cj=JSON.parse(fs.readFileSync('codes.json','utf8'));fl('CODES_JSON_STALE','codes.json',Object.keys(cj).length+' of '+B.length+' builds present; file dated '+fs.statSync('codes.json').mtime.toISOString());
+console.log('builds',B.length);fs.writeFileSync('council/triage/thr_new.txt',(global.TBL||[]).join('\n'));
+for(const k of Object.keys(F).sort()){console.log('\n## '+k+' ('+F[k].length+')');F[k].slice(0,+process.env.N||6).forEach(x=>console.log('  '+x.slice(0,230)))}
+fs.writeFileSync('council/triage/bc_new.json',JSON.stringify(F,null,1));

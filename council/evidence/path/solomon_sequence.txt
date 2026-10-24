@@ -1,0 +1,126 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: solomon
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:11:44Z
+BODY-SHA: 886ec89b2f8b445d1c69830b2b1b666b7326d042b14550cb71fdf054c0292890
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  High-Velocity Rounds: retained-or-upgraded (-> Opening Rounds)
+  Opening Rounds: retained
+  Grit: retained-or-upgraded (-> Guardian Ward)
+  Extra Stamina: retained-or-upgraded (-> Stamina Mastery)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Superior Cooldown: retained
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Warp Stone: retained
+  Alchemical Fire: retained
+  Guardian Ward: retained-or-upgraded (-> Divine Barrier)
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Tankbuster: retained
+  Greater Expansion: retained
+  Stamina Mastery: retained
+  Escalating Exposure: retained
+  Boundless Spirit: retained
+  Spirit Burn: retained
+  Mystic Reverb: retained
+  Divine Barrier: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Diviner's Kevlar: situational-luxury
+  Cheat Death: situational-luxury
+  Refresher: situational-luxury
+  Echo Shard: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Extra Spirit, High-Velocity Rounds, Opening Rounds, Grit, Extra Stamina, Improved Spirit, Compress Cooldown, Superior Cooldown
+  Mid · L-R                  -> main path (sequential): Mystic Expansion, Warp Stone, Alchemical Fire, Guardian Ward, Mystic Vulnerability, Mystic Burst, Tankbuster
+  Late · L-R                 -> main path (sequential): Greater Expansion, Stamina Mastery, Escalating Exposure, Boundless Spirit, Spirit Burn, Mystic Reverb, Divine Barrier
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Counterspell, Spirit Resilience, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Diviner's Kevlar, Cheat Death, Refresher, Echo Shard
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+
+## Stamina Mastery: sold when buying Diviner's Kevlar (I'm rich as fuck, luxury)
+  role of Stamina Mastery: retained; role of Diviner's Kevlar: situational-luxury
+  Stamina Mastery: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 25600 souls (~28.2 min), replaced at ~88.0 min -> owned ~59.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/19200/35200 -> after 4800/16000/35200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 88 min | window TR | key purchase times (min)
+  as built                                    |          56425 |      0.32 | Stamina Mastery 28
+  keep Stamina Mastery (slot cap ignored)     |          56425 |      0.32 | Stamina Mastery 28
+  skip Stamina Mastery                        |          56469 |      0.32 | 
+  sell Opening Rounds instead                 |          56425 |      0.32 | Stamina Mastery 28
+  keep Stamina Mastery (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Stamina Mastery vs as built: d souls +73, d window TR +0.7% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  sell Opening Rounds instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: no modelled stat for Stamina Mastery (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: skip Stamina Mastery: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+
+## Warp Stone: sold when buying Cheat Death (I'm rich as fuck, luxury)
+  role of Warp Stone: retained; role of Cheat Death: situational-luxury
+  Warp Stone: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 12000 souls (~12.5 min), replaced at ~88.0 min -> owned ~75.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/19200/35200 -> after 4800/16000/35200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 88 min | window TR | key purchase times (min)
+  as built                                    |          56425 |      0.39 | Warp Stone 12
+  keep Warp Stone (slot cap ignored)          |          56425 |      0.39 | Warp Stone 12
+  skip Warp Stone                             |          53756 |      0.28 | 
+  sell Opening Rounds instead                 |          56425 |      0.39 | Warp Stone 12
+  keep Warp Stone (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Warp Stone vs as built: d souls -1408, d window TR -23.4% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Opening Rounds instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Warp Stone has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: no modelled stat for Warp Stone (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled)
+
+## Guardian Ward: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Guardian Ward: retained-or-upgraded (-> Divine Barrier); role of Refresher: situational-luxury
+  Guardian Ward: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 16000 souls (~16.8 min), replaced at ~88.0 min -> owned ~71.2 min  [MODELLED ESTIMATE]
+  component of later purchases: Divine Barrier -> selling and rebuying adds 800 souls vs keeping it in the upgrade (UNVERIFIED HYPOTHESIS resale)
+  investment gun/vit/spirit before 4800/12800/41600 -> after 4800/12800/41600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 88 min | window TR | key purchase times (min)
+  as built                                    |          56425 |      0.36 | Guardian Ward 17
+  keep Guardian Ward (slot cap ignored)       |          56425 |      0.36 | Guardian Ward 17
+  skip Guardian Ward                          |          56346 |      0.36 | 
+  sell Opening Rounds instead                 |          56425 |      0.36 | Guardian Ward 17
+  keep Guardian Ward (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Guardian Ward vs as built: d souls +1, d window TR -0.8% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Opening Rounds instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Guardian Ward has an active effect (PRESS) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: component sold before its planned upgrade
+  VERDICT: REVIEW: keep Guardian Ward until the Divine Barrier upgrade unless the freed slot is needed earlier (quantified above); proposal needs the gate; evidence tier: VERIFIED GAME MECHANIC (walk arithmetic) + MODEL-ONLY value
+
+## Mystic Reverb: sold when buying Echo Shard (I'm rich as fuck, luxury)
+  role of Mystic Reverb: retained; role of Echo Shard: situational-luxury
+  Mystic Reverb: price 6400, resale 3200, net cost of owning it 3200 souls (3.2 min of reference income); first bought at 48000 souls (~66.2 min), replaced at ~86.8 min -> owned ~20.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/12800/41600 -> after 4800/12800/35200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 88 min | window TR | key purchase times (min)
+  as built                                    |          56425 |      0.25 | Mystic Reverb 66, Echo Shard 87
+  keep Mystic Reverb (slot cap ignored)       |          56425 |      0.25 | Mystic Reverb 66
+  skip Mystic Reverb                          |          56505 |      0.26 | Echo Shard 78
+  sell Opening Rounds instead                 |          56425 |      0.25 | Mystic Reverb 66
+  keep Mystic Reverb (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Mystic Reverb vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Opening Rounds instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Echo Shard has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Mystic Reverb, Echo Shard (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled)

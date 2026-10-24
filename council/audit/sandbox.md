@@ -1,0 +1,82 @@
+# Audit: Sandbox Tester (agent "sandbox", 2026-10-24 ~05:45)
+Levels: R docs only / C coded / I integrated (output consumed, changes or gates a build) / T tested against known answer or measured.
+Evidence base: local PC mirror `/mnt/user-data/uploads/e/deadworks-server/` (`sbx_logs/plugin.log` 2.3 MB, damage/sample CSVs, deployed `SandboxTester/*.cs`), `council/sandbox/src/*.cs`, `/mnt/user-data/outputs/arena/*.cs`, `council/sandbox/*`. Nothing was sent to the PC/game; `ledger.js` was only run on empty temp dirs, then deleted. The mirror is a partial snapshot (the CSV for the newest runs is stale at 05:15); plugin.log was current to 05:39.
+
+## 1. Verdict in one paragraph
+The Sandbox Tester is an instrument (C, partly T for per-bullet maths). It has produced **zero build decisions** and **zero results that feed the Council**: no `sandbox/results/*.json` exists, `evidence/<hero>.json` does not exist, `ledger.js` is never invoked, `data.js` contains no sandbox-derived change (only a Rat King note saying a scenario is "untested"). The only A/B item-vs-item numbers ever produced (Victor Leech/Infuser/VB) are invalid. The "seeded accuracy / paired design" that Stage 0 and MORNING.md cite as MEASURED rests on an op (`accseed`) that **does not exist in the plugin** and has been silently ignored 55 times.
+
+## 2. How many tests produced real MEASURED results, and which were invalidated
+Source: parsed `plugin.log` ("SC scenario X started", unlock values, VERIFY lines). 84 scenario starts from 2026-10-23 12:59 to 05:21. Command: python over plugin.log (scenario / unlock / expectPASS / setupV / posV / finish).
+
+| group | runs | what it is | status | evidence |
+|---|---|---|---|---|
+| smoke, fire12, calib1, arena_* | ~12 | liveness / aim calibration | not results | plugin.log |
+| victor_lifesteal (Oct 23 13:17-13:25) | 4 | 6 items x 8 s on Haze bot, `results/` table | **INDICATIVE ONLY, not decision grade.** No setup-truth, no location check, pre-hardreset, 100% body hits, hand aim, single run per arm. Per-bullet damage differs per arm (34.8 / 36.9 / 39.0, from CSV) so dps differences are shop-category bonus from `give`, not item effect; hits 27-36 per 8 s vary by arm. Victor's own heal sources not isolated (TEST_MATRIX admits this). | `results/damage_20261023_132455.csv` recomputed; REVIEW_LOG 0.4 "give DOES apply shop category bonus" |
+| victor_rotation, victor_gun_swap (x3), swap2 (x2), swaprev (Oct 23 19:02 - Oct 24 01:31) | 7 | the Leech / Infuser / VB / none A/B quoted in TEST_MATRIX "Findings so far" | **INVALID: cooldown corruption.** All used `unlock 15` (log: `unlock ability_frank_shocktarget2 0 -> 15`), the setting AUTORUN DANGER blames for end=7e9 Pain Battery and 1193 s cooldowns. No VERIFY, no hardreset, pre-location. First swap session also logged "setup timed out". Raw swap CSVs exist but their conclusion ("VB > Infuser ~ none > Leech") is still printed in TEST_MATRIX with no invalidation tag, and it contradicts the Oct 23 table (Leech 45 hps best). | plugin.log lines 1743, 2758, 3431, 4151; TEST_MATRIX "Findings so far" |
+| rz_* , ov_t1-t8, sbxA_*, cal_*, imb*, mel_diag*, ab_scale | ~45 | op validation and diagnostics | mostly instrument checks; none comparative. Pre-04:20 runs have no `expect`, pre-05:02 no location verify. | plugin.log |
+| val_ka, val_ka2, val_aa, val_aa2 (x2), pv_test (x4) | 9 | Stage 0 known-answer, A/A, position verify | **Valid-ish, T-level for per-bullet maths.** 92 VERIFY PASS, 0 FAIL in log. Known answers (head x1.65, resist x0.80, Close Quarters, HV Rounds, Rapid Rounds) are deterministic per-bullet checks; not an item-effect measurement. | plugin.log; REVIEW_LOG 0.4 |
+| sbxA_aa_r1 (Abrams A/A, 04:42) | 1 | noise floor | Reproduced from `damage_20261024_043557.csv` with `ov/an.py`: dps A 55.0/50.2/47.8/53.1, A2 53.1/53.1/48.2/48.2 (CV ~5%, matches REVIEW_LOG); hps A 116/95/117/**25.8**, A2 97/112/119/112 (CV 42%, matches). Ran with free T1 on unlearned abilities (generator bug found 05:25), so Abrams kit state UNVALIDATED; REVIEW_LOG already says so. | recomputed |
+| p_ab (Abrams probes P0-P5, 05:17) | 1 | single-run probes | one run each; 40-85% confidence per its own table; ran with the ability_bits bug. | `results/abrams_probes.md` |
+| pw1_r1 (Wraith Swift Striker vs Titanic, 05:21) | running | first real pilot A/B | no result in mirror (CSV stale). Uses `accseed`. | pw1.py |
+
+Count: of ~84 starts, 0 comparative results are decision-grade; ~9 Stage-0 runs are valid for instrument checks; 7 comparative Victor runs are invalid (unlock 15); the Oct 23 Victor table is indicative at best. MORNING.md agrees: "Stage 1 pilots NOT yet scored", "no data.js changes proposed".
+
+## 3. Ops: coded vs documented only
+Method: `grep -n 'case "' council/sandbox/src/*.cs`, identical in `/mnt/user-data/outputs/arena/*.cs`; checked against deployed `uploads/e/.../SandboxTester/*.cs` (no `accseed` there either) and plugin.log "unknown op".
+
+| op / feature (doc) | level | evidence | gap |
+|---|---|---|---|
+| setup, clear, give, imbue, souls, mark, wait, aimoff, aim, fire, cast, hold, unlock, fetch, heal, hurtme, flex, raw, end | C, most T | Scenario.cs 167-249 | `hold`, `move` compiled; AUTORUN says not exercised on a hero that needs them |
+| hardreset, reset, basemods, mods, cds, cdreset, enemies, egod/ekeep/ehp, eitem/eclear, eresist, accuracy, acclog, lowhp, incoming, healreset/healsum, inhit, lvlhold, lvl, abil, expect, aimpt, pos, arena, include | C; T for hardreset, eitem, eresist, lowhp, incoming per AUTORUN logs | Realism.cs 391-660 | `cdreset each` still calls `ResetCooldown()` (Realism.cs:332, guarded). `reset` no longer touches cooldowns. |
+| **accseed** (used in 88 lines across 46 `arena/sc` scenarios, valgen.py, ovlib.py, pw1) | **R. NOT CODED** | `grep -ci accseed` = 0 in all .cs (src, arena, deployed); plugin.log: 55x `SC unknown op accseed` (first 04:36:20, last 05:34:48); `Realism.cs:10,31,35` use unseeded `new Random()` | REVIEW_LOG 0.3 "Seeded windows ... CV 5.5%, same seed A vs B hit counts within 0-7%", MORNING "Seeded accuracy makes A/B hit counts comparable" and the "paired design adopted" are unsupported: the windows were random. Hit-count agreement (e.g. 61/64, 55/59, 60/61 in `damage_20261024_043557.csv`) is chance. Haze unseeded CV was 15% (REVIEW_LOG), so Wraith/Haze effect sizes < ~25% cannot be resolved; pw1 (running now) relies on pairing that does not exist. |
+| `resist` op (18 generated plans in dwpkg2/scenarios) | R | not in any switch; real op is `eresist` | plans unrunnable as written (silently skipped) |
+| 507 generated scenarios in `/mnt/user-data/outputs/dwpkg2/scenarios` | C (files) / not usable | 503 contain `unlock 15`, 507 lack `expect`, 18 contain `resist`; only 9 of the 507 names ever queued (calib1, fire12, smoke, victor_*) | generated by `gen/mk_plan.py`, predate every fix; would reintroduce the cooldown corruption |
+| ekill, lethal, ecc, eheal, emove, tail, ally bot, shoot-back, streak accuracy, melee light/heavy, NPC/camp spawn (GAPS "Tester ops needed") | **R** | grep over all .cs: 0 hits | affects every build with kill stacks (Trophy, Glass Cannon, Bebop bomb), CC answers (Unstoppable, Dispel), anti-heal (Leech), executes, support builds. GAPS #1 ("imbues never applied") is stale: `imbue` and auto-Signature1 imbue work (35 Success, 3 ItemNotImbuable, 1 AbilityRejected in log) but imbue only works on base items and only the Signature slot a `give` lands on |
+| Stack presets (Berserker, Celeste, Talon owls, Drifter) | R (AUTORUN: "not implemented") | | all stack heroes can only be driven by play |
+| Head vs body | C, T | head x1.65 known-answer in REVIEW_LOG 0.4; AUTORUN section still says "Head vs body NOT yet calibrated" (stale contradiction) | `Headshot Booster` known-answer unexplained |
+| Cooldown / charge state readback | not possible (AUTORUN) | `expect cdready=1` uses `IsOnCooldown`, which AUTORUN says is unreliable | "cooldowns ready" gate is only as good as a flagged-garbage reader |
+
+## 4. Plugin edits unbuilt / unverified
+- Deployed source on PC (`SandboxTester/*.cs`, 04:53) vs arena copy (`outputs/arena`, Realism 04:59, SandboxTester 05:01): 14-line diff = the `_dist` setup-verify fix. plugin.log shows `OnLoad isReload=True` at 04:59:30 and 05:01:59, so those builds loaded. Local `council/sandbox/src` = arena copy (byte-identical, `cmp`). Good: no unbuilt C# edit found. But the mirror cannot show edits after ~05:02; none are documented.
+- `ov/Realism.cs` and `ov/Scenario.cs` (02:5x) and `outputs/Realism_new.cs`, `Realism_v3.cs`, `Scenario_v3.cs`, `dwpkg2/SandboxTester.cs` are stale forks that can be redeployed by mistake (no single source of truth).
+- Generator fix 05:25 (`ovlib.ability_bits` free-T1 bug) is Python-only and not yet followed by a rerun; all Abrams numbers before it are UNVALIDATED for tier. Wraith pw1 was generated before the fix too (pw1 at 05:21; fix at 05:25) so its ability tiers (3,0,3,0 / 7,3,7,0) may carry the free T1 on unlearned abilities.
+- Regression gate (PILOT amendment 04:12: rerun suite after ANY change): it is a manual procedure. `val_aa2` was rerun once at 05:04 after the location patch. Nothing in code tags later results UNVALIDATED.
+- `expect` FAIL does not abort or rerun the block (Realism.cs:578 only logs). Analysis wiring: `ov/an.py` and `autorun/tools/analyze.py` ignore VERIFY entirely (REVIEW_LOG says "TODO before Abrams verdicts"); only `val/valan.py` and `ov/pw1an.py` drop non-PASS. The gate "A block with any mismatch is INVALID and rerun" (PILOT 0.2) is R for Abrams, C for the pw1 analyser only.
+
+## 5. Has any Council build decision been changed by a sandbox result?
+**No (R/C only).** Evidence: `grep -oi sandbox data.js` = 1 hit (Rat King round note: "sandbox scenario ratking_grenade_range_bonus, no evidence file yet: inconclusive, so neither goes in"); `data.js` mtime 01:08, before every Stage 0 run; `evidence/` has no `<hero>.json`; MORNING.md "Proposed changes: None". All `weaknesses/*.md` state "No verdict here is MEASURED" (victor_gun.md:174, victor_spirit.md:155, wraith_wraith.md:328). `weaknesses/haze_runs.py/.out` is a Python kit-maths model of Haze (CALCULATED), not a sandbox run, despite sitting in the sandbox tree. One negative influence exists: the invalid Victor swap table (Leech worst) is cited in GAPS #8 and TEST_MATRIX as a finding; nothing in data.js changed because of it.
+
+## 6. Calibration / known-answer / A-A: runs or plans?
+| check | level | evidence |
+|---|---|---|
+| Known-answer per-bullet (head, resist, Close Quarters, HV, Rapid Rounds) | T (as runs) | val_ka, val_ka2, REVIEW_LOG 0.4 table; deterministic values (zero variance) |
+| Known-answer for an item *effect in a build* (healing, procs, Leech) | R | PILOT 0.4 lists flat-% items only; Headshot Booster failed/unexplained; no lifesteal known answer (Oct 23 table says lifesteal "matches item stats" 13%/28% but run is not decision grade) |
+| A/A null | T for Abrams dps (CV ~5%, recomputed); T for Haze random windows (CV 15%, n=4); **hps/loss for Abrams: noise too high (CV 42%)** so heal verdicts are "cannot measure" | sbxA_aa_r1; val_aa |
+| A/A with seeded accuracy | **R (op missing)** | section 3 |
+| Order effect A,B,B,A | T once (Haze, "ORD" sequence) | REVIEW_LOG 0.5; the earlier "first block low" claim in TEST_MATRIX is contradicted there and still printed |
+| Stage 0.1 30 min stability | T (continuous since 03:54; server log has 4 `NETWORK_DISCONNECT_OVERFLOW` lines for one client drop in `server_stdout.log`) | REVIEW_LOG 0.1 |
+| 0.6 hero confound check per pilot hero (stack/aura reset verified) | R | no run logged; Victor aura / Berserker not verifiable (no stack API) |
+| Power analysis / required reps from noise floor | R | no code |
+
+## 7. Do results flow back?
+**No.** `ledger.js` reads `sandbox/results/*.json` with fields `{scenario, arm, metrics{}, grade{}}` and the 50 scenario JSONs from `gen_scenarios.js` (arms[0] vs arms[1], metric names like `hp_healed_30s`). Observed: `ls council/sandbox/results/*.json` = none; run on empty dirs prints "no results"; nothing writes that format (`ov/an.py`, `val/valan.py`, `pw1an.py`, `autorun/tools/analyze.py` print to stdout; REVIEW_LOG/MORNING are hand-written). The scenario JSON specs (arms, metrics, trials) are not translatable to the ops the plugin runs: the runnable txt scenarios come from `ov/ovlib.py` and `gen/mk_plan.py`, keyed by builds_ov.json and checkpoints, with different arm and metric names. `validate.js` only schema-checks the JSON specs. `PROTOCOL.md` step 6 ("sandbox-tester writes sandbox/results/*.json; ledger.js turns them into verdicts") is R. `tools/duo_b2_json.js` literally records "sandbox/results is empty ... every hypothesis UNTESTED". Even if produced, no gate (validate.js, rebuild.sh, CHECKLIST, RULES) requires evidence before a data.js change.
+
+## 8. Other findings
+- AUTORUN.md is internally stale: says head/body "NOT yet calibrated" and `accuracy` hit rate "re-measure"; REVIEW_LOG later calibrated both (x1.65; p=0.55 gives 41%). Anyone following AUTORUN alone mis-sets accuracy.
+- Realised hit rate: `accuracy 0.45` gave 25-35% hits, p=0.55 gave 41% (REVIEW_LOG); the TEST_MATRIX rule "players hit 40-50%" is therefore not what most earlier `accuracy` runs delivered.
+- Distance scale 1 m = 39.4u is a bracket (33-40) from edge cases, flagged coarse by REVIEW_LOG; every range-item test (Long Range, Sharpshooter, Point Blank) depends on it.
+- `give` applies shop-category bonus (REVIEW_LOG 0.4), which makes arms of different category/cost non-comparable at equal "souls" unless purchase accounting is replicated; the cost-parity rule for same-tier swaps is R.
+- Enemy never shoots (bots attack disabled); `incoming` is 100 ms ticks via `Hurt` that bypass `OnTakeDamage`, so per-hit items (Witchmail, Spellbreaker, Return Fire, Plated Armor) and Berserker stacking are unverified (AUTORUN: "HealthTaken events carry no amounts").
+- GAPS.md (23 KB) lists 24 gaps; of its "Tester ops needed" list only imbue, `level`/ability points (lvl, lvlhold, abil), `incoming` profiles (partly), `ehp`/`ekeep` were implemented. Roughly 10 remain R.
+
+## TOP 10 gaps ranked by impact on build correctness
+1. **Results never reach the Council**: no results JSON, `ledger.js` never run, no gate before data.js edits (sections 5, 7). Any claim that "sandbox evidence supports build X" is currently unsupported.
+2. **`accseed` is a phantom op** (55 "unknown op" in plugin.log, 0 in source): seeded/paired design and "CV 5.5%" noise floor are unfounded; effects under ~25% are unresolvable for gun heroes (Wraith pilot running on it now).
+3. **Victor Leech/Infuser/VB conclusion is invalid** (unlock 15 cooldown corruption, no setup-truth) yet still recorded as a "finding" in TEST_MATRIX and echoed in GAPS #8; contradicts the Oct 23 table. Needs an INVALID tag and removal as evidence.
+4. **VERIFY FAIL does not stop or exclude a block, and `an.py` ignores VERIFY**: the PILOT 0.2 gate is not enforced for most analysis scripts.
+5. **Healing and survivability (the main Victor/Abrams/Wraith questions) are not measurable**: Abrams hps CV 42%, no per-source healing (events carry no amounts), `incoming` bypasses damage events, bots never shoot, no anti-heal so Leech is zero by construction.
+6. **Ability tier / level state was wrong in Abrams runs (free T1) and the fix is unrerun**; Wraith pw1 was generated before the fix. No Abrams or Wraith number is checkpoint-true.
+7. **Missing mechanics are R**: kill stacks (ekill), lethal-damage items, CC and cleanse answers, enemy movement, allies, executes below 90% HP (egod floor), stack presets. Every build using Trophy, Glass Cannon, Bebop bomb, Unstoppable/Dispel, supports, or execute thresholds cannot be judged.
+8. **507 generated scenarios are stale and dangerous**: 503 contain `unlock 15`, none contain `expect`, 18 use a non-existent `resist`; only 9 ever queued. Re-running the overnight batch from them would re-poison cooldowns.
+9. **Regression gate is manual and the plugin has several stale source forks** (`ov/*.cs`, `*_v3.cs`, `dwpkg2/SandboxTester.cs`); no code tags post-change results UNVALIDATED, and the mirror cannot prove what is deployed after ~05:02.
+10. **Docs contradict each other** (AUTORUN head/body and accuracy statements, TEST_MATRIX first-block warm-up claim vs REVIEW_LOG 0.5, GAPS #1 imbue) so agents reading one doc will reproduce known-wrong setups.

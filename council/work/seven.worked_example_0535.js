@@ -1,0 +1,261 @@
+{
+ "id": "seven",
+ "hero": "Seven",
+ "tag": "Fix",
+ "name": "Rizuhble's Power Outage Seven",
+ "desc": "Ult Seven",
+ "hk": "hero_gigawatt",
+ "abil": [
+  "Lightning Ball",
+  "Static Charge",
+  "Power Surge",
+  "Storm Cloud"
+ ],
+ "order": [
+  1,
+  3,
+  3,
+  1,
+  2,
+  3,
+  4,
+  4,
+  4,
+  2,
+  4,
+  3,
+  1,
+  1,
+  2,
+  2
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Monster Rounds",
+      ""
+     ],
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Extra Stamina",
+      ""
+     ],
+     [
+      "Arcane Surge",
+      "Dash-jump right before you pop your 3, or your ult once you have it."
+     ],
+     [
+      "Surge of Power",
+      "On Power Surge.",
+      "3"
+     ],
+     [
+      "Cultist Sacrifice",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Spirit Lifesteal",
+      ""
+     ],
+     [
+      "Sprint Boots",
+      ""
+     ],
+     [
+      "Healbane",
+      "Sell it for a counter."
+     ],
+     [
+      "Enduring Speed",
+      ""
+     ],
+     [
+      "Mystic Vulnerability",
+      ""
+     ],
+     [
+      "Duration Extender",
+      "On the ult.",
+      "4"
+     ],
+     [
+      "Compress Cooldown",
+      "On Power Surge.",
+      3
+     ],
+     [
+      "Mystic Expansion",
+      "On the ult.",
+      "4"
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Escalating Exposure",
+      ""
+     ],
+     [
+      "Superior Duration",
+      ""
+     ],
+     [
+      "Unstoppable",
+      "Pop it before you ult so nobody cancels the storm."
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Infuser",
+      "Pop it once they're all in the storm."
+     ],
+     [
+      "Greater Expansion",
+      ""
+     ],
+     [
+      "Diviner's Kevlar",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Dying after Enduring Speed? Buy what is killing you, cheapest first. Not dying? Skip. Sell Healbane.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "One gun hero is deleting you: Haze, Wraith, Vindicta."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun and Metal Skin isn't enough."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+     ],
+     [
+      "Dispel Magic",
+      "They hit you with Knockdown, Slowing Hex or Toxic Bullets."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit: Infernus, Kelvin, Geist, Vyper."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Spirit Burn",
+      "Sell Healbane for this."
+     ],
+     [
+      "Boundless Spirit",
+      "Sell Cultist Sacrifice for this."
+     ],
+     [
+      "Lightning Scroll",
+      "Sell Arcane Surge for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this. Otherwise sell Surge of Power."
+     ],
+     [
+      "Refresher",
+      "Sell Infuser for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ],
+     [
+      "Juggernaut",
+      "Upgrade of Enduring Speed."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Lost lane?",
+    "Get Mystic Vulnerability before Cultist Sacrifice and the green items, then carry on.",
+    true,
+    []
+   ]
+  ]
+ ],
+ "changes": [
+  "Style changed to Kieran's early-farm ult build (his in-game Burgercat copy): Extra Stamina → Arcane Surge and Extra Spirit → Surge of Power on Power Surge replace Duration Extender/Improved Spirit/Mystic Vulnerability in lane. 4.8k spirit still lands at 5.6k souls, now on Surge of Power (Burgercat's 1st power spike; pro Arcane Surge 66%). Cultist Sacrifice stays at 8k (pro 66%).",
+  "Health spike moved earlier and rebuilt: Spirit Lifesteal, Sprint Boots, Healbane, Enduring Speed = 4.8k at 12.8k (was Spirit Lifesteal/Healbane/Debuff Reducer at 12.8k). Burgercat runs Sprint Boots + Enduring Speed core; Seven has no kit sustain so greens come straight after Cultist.",
+  "Mystic Vulnerability (pro 91% mid), Duration Extender, Compress Cooldown and Mystic Expansion all on the ult now sit after the health spike (14.4k–18.4k), so no 8k+ spirit before any green.",
+  "Escalating Exposure at 23.2k (Burgercat's biggest spike, pro 71%), Unstoppable bought fresh at 31.2k instead of via Debuff Reducer (no fresh T2 late), Infuser at 37.6k, Refresher at 46.4k. Boundless Spirit and Diviner's Kevlar dropped from core; Boundless goes in the rich box (sells Arcane Surge, as Burgercat does).",
+  "Core 12 slots, 46.4k (was 56k). Ability order now maxes Power Surge by point 7 for the farm phase and the ult by point 11 (was ult by 9).",
+  "Ability order: Mobalytics Seven grid (79% Power Surge first, maxed 5-7, Static Charge last at 15-16) and Kieran's in-game BurgerCat order both max Power Surge first, which is where Surge of Power/Arcane Surge go; ball T1 at 8 for the extra farm charge, then Storm Cloud maxed 9-11 for the ult style (public ult points at 9 and 11), ball and Static Charge after.",
+  "Order: 3321324143114422 (data-first redo, see a7/order_seven.json).",
+  "Threshold: checked on the new order, nothing moved. Spirit Burn (rich, after the 46k core, ~145 spirit): Storm Cloud 95+65+0.6×145 = 247 per second, 1,235 in 5s vs 500. Arcane Surge only needs a dash-jump. Surge of Power on Power Surge (unlocked T2 at 5.6k), ult imbues bought after the ult is unlocked (16k, ult T1).",
+  "Round 8: Spirit Burn note fixed. Since Jul 28 the explosion (110 to 50) hits only the burned enemy, not a 12m area; each enemy procs it on its own (game files 6795: ExplosionRadius 3m, per-enemy cooldown).",
+  "Round 9: Worth a try box: Lightning Scroll (ult damage applies a 64% slow and a 0.75s stun 3s later; Storm Cloud hits everyone in a 30m cloud every 0.3s, so the whole team gets it; in BurgerCat's ult-maxing list Kieran plays) and Rapid Recharge on Lightning Ball (ball has 1 charge +1 at T1; Rapid Recharge adds 2 charges, 30% faster charges and +14 spirit on charged abilities, for the farm plan).",
+  "Round 11: Farm hero, so no role pivot: empty 'Lost lane?' box says Mystic Vulnerability (more damage on camps) goes before Cultist and the greens (spirit 6.4k at 7.2k souls; Escalating Exposure left where it is so spirit doesn't hit 11k with no health). Spirit Burn note: one target since Jul 28, so 'anyone the storm hits' became 'whoever the storm hits hardest'. No 6.4k run.",
+  "Round 12: 'Worth a try' box removed (Lightning Scroll; not Kieran's pick). Checked all 10 types: Surge of Power and Arcane Surge on Power Surge (Kieran's stated style); Duration Extender, Compress Cooldown and Mystic Expansion on the 205s Storm Cloud channel; Monster Rounds/Cultist, Mystic Vulnerability, Healbane, Spirit Lifesteal, Escalating Exposure and Superior Duration all in pro Seven lists (tracklock, last 30 days, 35 games); no duplicates, no colour-changing swaps; 'Lost lane?' reorder is Kieran's own (damage before greens and Cultist) and correct.",
+  "Round 13: notes cut to what a player wouldn't know (UPDATE 3), desc is a short style label (UPDATE 4), Counters notes name the right heroes (Spirit Resilience: real spirit-damage heroes, no Haze; Counterspell: a parryable ability). Duration Extender on the ult checked: Storm Cloud's 7s channel uses the game's duration scaling.",
+  "Round 14: Juggernaut added to Slot locked so Enduring Speed (dead-end T2) has an upgrade (BurgerCat lists it as the Enduring Speed upgrade). Dispel Magic note no longer names Yamato's grapple (not a verifiable debuff). Boundless and Divine Barrier no longer both sell Arcane Surge. Order verified: seemeta Seven most popular (Oct 5-19, 3,715 games, 59.3%) is exactly 3321324143114422.",
+  "Round 15: Arcane Surge note no longer claims extra range on Power Surge (not shown in the files); rich sells made distinct (Cultist was the fallback of both Boundless and Divine Barrier): Boundless sells Cultist, Divine Barrier sells Dispel Magic or Surge of Power.",
+  "Round 17: Divine Barrier note in the standard wording ('If you bought Dispel Magic, sell it for this.'), keeping the Surge of Power fallback. Pair check: Gun Seven now opens gun-first with Burst Fire and Toxic Bullets; this build stays the early-farm ult build.",
+  "Round 20: Lightning Scroll added to the late list (BurgerCat's ult-maxing box): every storm hit slows then stuns. Total ~80k.",
+  "Round 23: kit check. Storm Cloud is a 14s channel that scales with duration, so Diviner's Kevlar replaces Refresher in core: on cast you get 1000 barrier and +40 spirit for 20s (+24 storm DPS), +15% duration adds about 2s of storm (14s x 1.43 = 20s vs 17.9s with Superior Duration alone), and -10% ult cooldown. Refresher moves to the end of the late list as the luxury, selling Infuser (Kevlar covers its job by then). Arcane Surge note: its +15% duration, +12% radius and +20 spirit also work on the storm.",
+  "Round 25: points reordered for the ult build: Storm Cloud T1 and T2 right after unlocking it (L9-L11), ult T3 before Power Surge T3. Compress Cooldown moved from the ult to Power Surge.",
+  "Section L worked example (Oct 24, council/sandbox/weaknesses/seven_worked_example.md): Arcane Surge back in Early before Surge of Power (it had moved to Late after round 25 with no changes line). Spirit 4.8k returns to 5.6k (was 13.6k, after the health spike at 11.2k); storm per target +37% at 10k and +19% at 18k, Power Surge spirit 97 vs 58 at 5.6k (dash-jump), identical from 18.4k; health 4.8k at 12.8k, Cultist at 8.0k (~8 min). CALCULATED, confidence 75%. Unstoppable/Infuser stay where they are (31.2k/37.6k): rushing both after the health spike costs 22% (18k), 45% (24k) and 33% (30k) of storm damage per target; Infuser before Unstoppable and Kevlar earlier are PENDING tests seven_L1/L3 (UNTESTABLE side: stun timing), so no core change on them."
+ ]
+}

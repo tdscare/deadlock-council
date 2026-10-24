@@ -1,0 +1,97 @@
+{
+ "id": "haze_duration_windows",
+ "title": "Haze: does Superior Duration stretch the smoke lifesteal window and item actives?",
+ "hero": "Haze",
+ "playstyle": "Victor Cosplay Haze",
+ "builds": [
+  "haze"
+ ],
+ "question": "Superior Duration (+28% duration of abilities and items, +8% bullet resist, 3.2k) as an unconventional replacement for Healing Tempo: does it extend Smoke T3's 5 s lifesteal (PostInvisBuffDuration scales with ETechDuration in abilities.vdata), Vampiric Burst's 5 s and Burst Fire's 4.5 s?",
+ "hypothesis": "If item durations stretch: smoke window 6.4 s, VB 6.4 s; model: replacing Healing Tempo with Superior Duration gives +762 damage in 20 s, +246 HP, and saves 3.2k souls. Prediction: heal time after cast 2 rises from ~5.0 s to >=6.2 s.",
+ "arms": [
+  {
+   "name": "no_duration",
+   "items": [
+    "upgrade_titan_round"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "give",
+   "notes": ""
+  },
+  {
+   "name": "superior_duration",
+   "items": [
+    "upgrade_titan_round",
+    "upgrade_imbued_duration_extender"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "give",
+   "notes": "non-imbue item: no imbue op needed"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "unlock 7",
+  "souls": 50000,
+  "position": "enemy 350u",
+  "enemies": [
+   {
+    "hero": "Haze",
+    "count": 1,
+    "items": "none",
+    "behaviour": "bot",
+    "hp": "egod"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 40",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "hardreset between blocks (fresh pawns, factory cooldowns/charges, unlock 7 = all 3 tiers on every ability in BOTH arms)",
+  "Same position (fetch 350, aimoff 5.5 3), same enemy bot (Haze), egod default floor",
+  "Arms interleaved A,B,A,B (counterbalanced A,B,B,A for the second half)",
+  "healreset + mark none around every reset",
+  "cast reload 2.5 before each fire block (no auto-reload op)",
+  "accuracy 1 0",
+  "fire in 1 s blocks with marks t1..t8 after cast 2 so heal per second is visible"
+ ],
+ "procedure": [
+  "give; lowhp 40; cast reload 2.5; cast 2 0.3; mark w1; fire 1; mark w2; fire 1; ... mark w8; fire 1 (reload between if needed: cast reload 2.5 is a 2.5 s gap, keep it identical in both arms)",
+  "healsum per mark; mods at each mark (smoke lifesteal buff name)",
+  "second block: give upgrade_surging_power; cast i1; same per-second marks for VB"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "smoke_lifesteal_window_s",
+   "unit": "s",
+   "how": "last 1 s mark with heal/damage > 0.4 (or smoke buff modifier present in mods)",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "vb_window_s",
+   "unit": "s",
+   "how": "same for VB modifier",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "smoke_lifesteal_window_s",
+  "min_effect_pct": 20,
+  "min_trials": 5,
+  "rule": "SUPPORTS Superior Duration as Healing Tempo's replacement candidate (then run haze_tempo_trigger result + this together) if the window is >=20% longer; REFUTES if unchanged."
+ },
+ "limitations": [
+  "Checkpoint level/ability-tier states cannot be reproduced (unlock sets all tiers; GAPS #2): results are late-game relative comparisons only.",
+  "Duration Extender (imbue) cannot be tested: no imbue op (GAPS #1)."
+ ]
+}

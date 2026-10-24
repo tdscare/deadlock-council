@@ -1,0 +1,93 @@
+{
+ "id": "duo_ivy_bebop_beam_drop",
+ "title": "Ivy + Bebop: Hyper Beam from Air Drop",
+ "hero": "Bebop",
+ "playstyle": "Bomb Bebop",
+ "builds": [
+  "ivy",
+  "bebop_bomb"
+ ],
+ "question": "Can Bebop channel Hyper Beam while carried, and does casting 1s before the drop beat a grounded beam?",
+ "hypothesis": "H4.1-H4.3",
+ "arms": [
+  {
+   "name": "grounded",
+   "items": [],
+   "ability_order": null,
+   "souls": 25000,
+   "notes": "beam from ground"
+  },
+  {
+   "name": "air_drop",
+   "items": [],
+   "ability_order": null,
+   "souls": 25000,
+   "notes": "beam cast 1s before drop"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "~25k",
+  "souls": 25000,
+  "position": "3 bots clumped 15m away",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "Ivy",
+    "count": 1,
+    "role": "Air Drop"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "bot HP"
+  ]
+ },
+ "procedure": [
+  "Cast beam (air arm: 1s before Ivy drops)",
+  "Record whether channel survives carry/drop",
+  "Total beam damage over 11s"
+ ],
+ "metrics": [
+  {
+   "name": "beam_total",
+   "unit": "hp",
+   "how": "sum on 3 bots",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "channel_survived",
+   "unit": "bool",
+   "how": "visual",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "beam_total",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "SUPPORTS if air_drop beats grounded by >=10%; channel_survived false = pair dropped"
+ },
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists"
+ ],
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

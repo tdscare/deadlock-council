@@ -1,0 +1,3537 @@
+{
+ "schema": 1,
+ "id": "mirage",
+ "hero": "Mirage",
+ "name": "Rizuhble's Target Practice Mirage",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, for your first counter or when slots fill.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it for your first counter or when slots fill.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-11,200 (levels 1-18). Abilities gained (both point models agree): Djinn's Mark T3. 4.8k spikes: spirit 4.8k at Improved Spirit, vitality 4.8k at Dispel Magic. Ultimate (Traveler) is available from Improved Spirit.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "mirage:6:phase_range:4947",
+    "mirage:6:phase_abilities:4948",
+    "mirage:6:phase_spikes:4956",
+    "mirage:6:phase_ult:4957"
+   ],
+   "items": [
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 3.5 to Djinn's Mark's proc damage base (0.35x scaling).",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Improved Spirit completes 4.8k spirit in 4000 souls (~4.0 min), 3 purchases",
+     "claim_ids": [
+      "mirage:0:spirit_scaling:4931"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:0:spirit_scaling:4931",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "3",
+     "caption": "Imbued on Djinn's Mark: takes 18% off its 2.8s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:1:imbue_cooldown:4933"
+     ],
+     "lint": [],
+     "legacy_note": "On Djinn's Mark. Marks stack faster.",
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:1:imbue_cooldown:4933",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Vulnerability",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Improved Spirit completes 800 souls on.",
+     "cls": "b",
+     "why": "imminent: Improved Spirit completes 4.8k spirit in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "mirage:2:spike_progress:4935"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:2:spike_progress:4935",
+       true,
+       "4000"
+      ]
+     ]
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (4,000 to 4,800 invested): bonus 19 to 38 spirit power. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:3:spike_complete:4937",
+      "mirage:3:upgrade_of:4938"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:3:spike_complete:4937",
+       true,
+       "inventory spirit: before 4000, after 4800, threshold 4800"
+      ],
+      [
+       "mirage:3:upgrade_of:4938",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Shredder",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only; its 4.8k tier completes at Toxic Bullets, 8000 souls (~8.0 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Healbane",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Dispel Magic, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus. Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:6:spike_complete:4944",
+      "mirage:6:defence_purge:4946"
+     ],
+     "lint": [],
+     "legacy_note": "It doesn't remove ult effects.",
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:6:spike_complete:4944",
+       true,
+       "inventory vitality: before 1600, after 4800, threshold 4800"
+      ],
+      [
+       "mirage:6:defence_purge:4946",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 11,200-28,800 (levels 18-29). Abilities gained (both point models agree): Fire Scarabs T3, Dust Devil T3. Your biggest single spirit hit (Dust Devil, damage) grows from 150 to 228. 4.8k spikes: weapon 4.8k at Toxic Bullets.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "mirage:12:phase_range:4970",
+    "mirage:12:phase_abilities:4971",
+    "mirage:12:phase_power:4972",
+    "mirage:12:phase_spikes:4979"
+   ],
+   "items": [
+    {
+     "name": "Toxic Bullets",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:7:spike_complete:4958"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:7:spike_complete:4958",
+       true,
+       "inventory weapon: before 1600, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Headshot Booster",
+     "imbue": null,
+     "caption": "Builds toward the 6.4k weapon tier, which Extended Magazine completes 800 souls on.",
+     "cls": "b",
+     "why": "imminent: Extended Magazine completes 6.4k weapon in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "mirage:8:spike_progress:4960"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:8:spike_progress:4960",
+       true,
+       "5600"
+      ]
+     ]
+    },
+    {
+     "name": "Extended Magazine",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 5,600 to 6,400 invested: bonus 46 to 54% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Ricochet",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 54 to 74% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Bounced bullets put marks on two more of them.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 9,600 to 11,200 invested: bonus 52 to 59 spirit power. | With 4 abilities trained their base cooldowns total 201s; 20% off is 40.2s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 28,800-51,200 (levels 29-36). Abilities gained (both point models agree): Traveler T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "mirage:18:phase_range:4992",
+    "mirage:18:phase_abilities:4993"
+   ],
+   "items": [
+    {
+     "name": "Inhibitor",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 11,200 invested, crossing the 6.4k, 8k, 11.2k tiers: bonus 38 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Rend",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Titanic Magazine",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 27 to Dust Devil's damage (0.90x scaling), your steepest spirit scaling. Takes spirit from 11,200 to 16,000 invested: bonus 59 to 66 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:16:spirit_scaling:4987",
+      "mirage:16:invest_step:4985",
+      "mirage:16:upgrade_of:4986"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:16:spirit_scaling:4987",
+       true,
+       ""
+      ],
+      [
+       "mirage:16:invest_step:4985",
+       true,
+       "inventory spirit: before 11200, after 16000, threshold 16000"
+      ],
+      [
+       "mirage:16:upgrade_of:4986",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Headhunter",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 15,200 to 17,600 invested: bonus 74 to 86% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Leech",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Healbane? Buy what is killing you, cheapest first. Not dying? Skip. Sell Titanic Magazine.",
+   "desc": "Dying after Healbane? Buy what is killing you, cheapest first. Not dying? Skip. Sell Titanic Magazine.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:19:defence_bullet:4998"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry is out-shooting you.",
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:19:defence_bullet:4998",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:19:defence_gun:4999"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:19:defence_gun:4999",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:19:defence_spirit:5000"
+     ],
+     "lint": [],
+     "legacy_note": "Their spirit damage keeps hitting you.",
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:19:defence_spirit:5000",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Dust Devil (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:19:cc_exposure:5001"
+     ],
+     "lint": [],
+     "legacy_note": "Stuns and silences keep stopping your combo.",
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:19:cc_exposure:5001",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:19:defence_parry:5002"
+     ],
+     "lint": [],
+     "legacy_note": "A big ability you can see coming, like Bebop's hook or Apollo's ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:19:defence_parry:5002",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 16,000 to 22,400 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Healbane for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Reverb",
+     "imbue": "3",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 16,000 to 22,400 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "On Djinn's Mark. Sell Toxic Bullets for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Crippling Headshot",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 17,600 to 22,400 invested: bonus 86 to 100% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Titanic Magazine for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Siphon Bullets",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 17,600 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Headhunter for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun. Replaces Dispel Magic: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:19:defence_barrier:5013",
+      "mirage:19:sell_swap:5014"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Dispel Magic for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:19:defence_barrier:5013",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "mirage:19:sell_swap:5014",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Cheat Death",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 17,600 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Spirit Rend for this.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mirage:19:upgrade_delta:5017"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "mirage:19:upgrade_delta:5017",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "mirage:19:temporary_sold:4928": {
+   "id": "mirage:19:temporary_sold:4928",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, for your first counter or when slots fill.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 19,
+    "item": "Extra Regen",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it for your first counter or when slots fill."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:0:spike_progress:4929": {
+   "id": "mirage:0:spike_progress:4929",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Improved Spirit completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Improved Spirit completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "mirage:0:component_for:4930": {
+   "id": "mirage:0:component_for:4930",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 4000,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:0:spirit_scaling:4931": {
+   "id": "mirage:0:spirit_scaling:4931",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 3.5 to Djinn's Mark's proc damage base (0.35x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:mirage_sand_phantom"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 3,
+    "prop": "ProcDamageBase"
+   },
+   "numbers": [
+    "10.0",
+    "3.5",
+    "0.35"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mirage:1:spike_progress:4932": {
+   "id": "mirage:1:spike_progress:4932",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Compress Cooldown",
+    "souls": 2400,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "mirage:1:imbue_cooldown:4933": {
+   "id": "mirage:1:imbue_cooldown:4933",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Djinn's Mark: takes 18% off its 2.8s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:mirage_sand_phantom"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 1,
+    "item": "Compress Cooldown",
+    "souls": 2400,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 3
+   },
+   "numbers": [
+    "18.0",
+    "2.75"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mirage:1:component_for:4934": {
+   "id": "mirage:1:component_for:4934",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Compress Cooldown",
+    "souls": 2400,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 26400,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:2:spike_progress:4935": {
+   "id": "mirage:2:spike_progress:4935",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Improved Spirit completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Vulnerability",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Improved Spirit completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "mirage:2:component_for:4936": {
+   "id": "mirage:2:component_for:4936",
+   "kind": "component_for",
+   "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Vulnerability",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 23200,
+    "event": "Escalating Exposure"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:3:spike_complete:4937": {
+   "id": "mirage:3:spike_complete:4937",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (4,000 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 3,
+    "item": "Improved Spirit",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "mirage:3:upgrade_of:4938": {
+   "id": "mirage:3:upgrade_of:4938",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 3,
+    "item": "Improved Spirit",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:3:spirit_scaling:4939": {
+   "id": "mirage:3:spirit_scaling:4939",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 6.3 to Djinn's Mark's proc damage base (0.35x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:mirage_sand_phantom"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 3,
+    "item": "Improved Spirit",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 3,
+    "prop": "ProcDamageBase"
+   },
+   "numbers": [
+    "18.0",
+    "6.3",
+    "0.35"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mirage:4:spike_progress:4940": {
+   "id": "mirage:4:spike_progress:4940",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Spirit Shredder",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "mirage:4:component_for:4941": {
+   "id": "mirage:4:component_for:4941",
+   "kind": "component_for",
+   "phrase": "From Spirit Rend: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Spirit Shredder",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 30400,
+    "event": "Spirit Rend"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Rend"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:5:spike_progress:4942": {
+   "id": "mirage:5:spike_progress:4942",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Healbane",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "mirage:5:swap_candidate:4943": {
+   "id": "mirage:5:swap_candidate:4943",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Spirit Burn later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 5,
+    "item": "Healbane",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Healbane",
+    "buyer": "Spirit Burn"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:6:spike_complete:4944": {
+   "id": "mirage:6:spike_complete:4944",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 6,
+    "item": "Dispel Magic",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "mirage:6:swap_candidate:4945": {
+   "id": "mirage:6:swap_candidate:4945",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Divine Barrier later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 6,
+    "item": "Dispel Magic",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Dispel Magic",
+    "buyer": "Divine Barrier"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:6:defence_purge:4946": {
+   "id": "mirage:6:defence_purge:4946",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 6,
+    "item": "Dispel Magic",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:6:phase_range:4947": {
+   "id": "mirage:6:phase_range:4947",
+   "kind": "phase_range",
+   "phrase": "Souls 0-11,200 (levels 1-18).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Dispel Magic",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "11,200",
+    "1",
+    "18"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:6:phase_abilities:4948": {
+   "id": "mirage:6:phase_abilities:4948",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Djinn's Mark T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Dispel Magic",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:6:phase_spikes:4956": {
+   "id": "mirage:6:phase_spikes:4956",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Improved Spirit, vitality 4.8k at Dispel Magic.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Dispel Magic",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:6:phase_ult:4957": {
+   "id": "mirage:6:phase_ult:4957",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Traveler) is available from Improved Spirit.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Dispel Magic",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:7:spike_complete:4958": {
+   "id": "mirage:7:spike_complete:4958",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 7,
+    "item": "Toxic Bullets",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "mirage:7:swap_candidate:4959": {
+   "id": "mirage:7:swap_candidate:4959",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Mystic Reverb later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 7,
+    "item": "Toxic Bullets",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Toxic Bullets",
+    "buyer": "Mystic Reverb"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:8:spike_progress:4960": {
+   "id": "mirage:8:spike_progress:4960",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 6.4k weapon tier, which Extended Magazine completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 8,
+    "item": "Headshot Booster",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Extended Magazine completes the 6.4k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k",
+    800,
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 6400
+  },
+  "mirage:8:component_for:4961": {
+   "id": "mirage:8:component_for:4961",
+   "kind": "component_for",
+   "phrase": "From Headhunter: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 8,
+    "item": "Headshot Booster",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 29600,
+    "event": "Headhunter"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Headhunter"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:9:invest_step:4962": {
+   "id": "mirage:9:invest_step:4962",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 5,600 to 6,400 invested: bonus 46 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Extended Magazine",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "6400",
+    "46.0",
+    "54.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 6400
+  },
+  "mirage:9:component_for:4963": {
+   "id": "mirage:9:component_for:4963",
+   "kind": "component_for",
+   "phrase": "From Titanic Magazine: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Extended Magazine",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 21600,
+    "event": "Titanic Magazine"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Titanic Magazine"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:10:invest_step:4964": {
+   "id": "mirage:10:invest_step:4964",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 54 to 74% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Ricochet",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "12800",
+    "54.0",
+    "74.0",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 8000
+  },
+  "mirage:11:invest_step:4965": {
+   "id": "mirage:11:invest_step:4965",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Escalating Exposure",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "9600",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "mirage:11:upgrade_of:4966": {
+   "id": "mirage:11:upgrade_of:4966",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Vulnerability (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Escalating Exposure",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Vulnerability"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:12:invest_step:4967": {
+   "id": "mirage:12:invest_step:4967",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 9,600 to 11,200 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "11200",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "mirage:12:upgrade_of:4968": {
+   "id": "mirage:12:upgrade_of:4968",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:12:cdr_rotation:4969": {
+   "id": "mirage:12:cdr_rotation:4969",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 201s; 20% off is 40.2s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:mirage_fire_beetles",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:mirage_tornado",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:mirage_sand_phantom",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:mirage_teleport"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "201",
+    "20.0",
+    "40.2"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mirage:12:phase_range:4970": {
+   "id": "mirage:12:phase_range:4970",
+   "kind": "phase_range",
+   "phrase": "Souls 11,200-28,800 (levels 18-29).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "11,200",
+    "28,800",
+    "18",
+    "29"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:12:phase_abilities:4971": {
+   "id": "mirage:12:phase_abilities:4971",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Fire Scarabs T3, Dust Devil T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Cooldown",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:12:phase_power:4972": {
+   "id": "mirage:12:phase_power:4972",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Dust Devil, damage) grows from 150 to 228.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:mirage_tornado",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "150",
+    "228"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:12:phase_spikes:4979": {
+   "id": "mirage:12:phase_spikes:4979",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Toxic Bullets.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:13:invest_step:4980": {
+   "id": "mirage:13:invest_step:4980",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 11,200 invested, crossing the 6.4k, 8k, 11.2k tiers: bonus 38 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Inhibitor",
+    "souls": 35200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "11200",
+    "38.0",
+    "50.0",
+    "6.4k",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "mirage:14:upgrade_of:4981": {
+   "id": "mirage:14:upgrade_of:4981",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Shredder (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 14,
+    "item": "Spirit Rend",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Shredder"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:14:swap_candidate:4982": {
+   "id": "mirage:14:swap_candidate:4982",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Cheat Death later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 14,
+    "item": "Spirit Rend",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Rend",
+    "buyer": "Cheat Death"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:15:upgrade_of:4983": {
+   "id": "mirage:15:upgrade_of:4983",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extended Magazine (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Titanic Magazine",
+    "souls": 37600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extended Magazine"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:15:swap_candidate:4984": {
+   "id": "mirage:15:swap_candidate:4984",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Crippling Headshot later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 15,
+    "item": "Titanic Magazine",
+    "souls": 37600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Titanic Magazine",
+    "buyer": "Crippling Headshot"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:16:invest_step:4985": {
+   "id": "mirage:16:invest_step:4985",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 11,200 to 16,000 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Boundless Spirit",
+    "souls": 42400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "16000",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "mirage:16:upgrade_of:4986": {
+   "id": "mirage:16:upgrade_of:4986",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Boundless Spirit",
+    "souls": 42400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:16:spirit_scaling:4987": {
+   "id": "mirage:16:spirit_scaling:4987",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 27 to Dust Devil's damage (0.90x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:mirage_tornado"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 16,
+    "item": "Boundless Spirit",
+    "souls": 42400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "30.0",
+    "27",
+    "0.90"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mirage:17:invest_step:4988": {
+   "id": "mirage:17:invest_step:4988",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 15,200 to 17,600 invested: bonus 74 to 86% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Headhunter",
+    "souls": 44800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 16000
+   },
+   "numbers": [
+    "15200",
+    "17600",
+    "74.0",
+    "86.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 16000
+  },
+  "mirage:17:upgrade_of:4989": {
+   "id": "mirage:17:upgrade_of:4989",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Headshot Booster (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Headhunter",
+    "souls": 44800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Headshot Booster"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:17:swap_candidate:4990": {
+   "id": "mirage:17:swap_candidate:4990",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Siphon Bullets later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 17,
+    "item": "Headhunter",
+    "souls": 44800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Headhunter",
+    "buyer": "Siphon Bullets"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mirage:18:invest_step:4991": {
+   "id": "mirage:18:invest_step:4991",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Leech",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "17600",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "mirage:18:phase_range:4992": {
+   "id": "mirage:18:phase_range:4992",
+   "kind": "phase_range",
+   "phrase": "Souls 28,800-51,200 (levels 29-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Leech",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Leech",
+    "keys": []
+   },
+   "numbers": [
+    "28,800",
+    "51,200",
+    "29",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:18:phase_abilities:4993": {
+   "id": "mirage:18:phase_abilities:4993",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Traveler T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Leech",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Leech",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:19:defence_bullet:4998": {
+   "id": "mirage:19:defence_bullet:4998",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Metal Skin",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry is out-shooting you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:19:defence_gun:4999": {
+   "id": "mirage:19:defence_gun:4999",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Plated Armor",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:19:defence_spirit:5000": {
+   "id": "mirage:19:defence_spirit:5000",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Resilience",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Their spirit damage keeps hitting you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:19:cc_exposure:5001": {
+   "id": "mirage:19:cc_exposure:5001",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Dust Devil (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 19,
+    "item": "Unstoppable",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Stuns and silences keep stopping your combo."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mirage:19:defence_parry:5002": {
+   "id": "mirage:19:defence_parry:5002",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Counterspell",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ability you can see coming, like Bebop's hook or Apollo's ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:19:burn_trigger_modelled:5003": {
+   "id": "mirage:19:burn_trigger_modelled:5003",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Dust Devil (286) + Djinn's Mark (93.6) = 380 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Burn",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Healbane for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "380",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mirage:19:invest_step:5004": {
+   "id": "mirage:19:invest_step:5004",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 16,000 to 22,400 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Burn",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Healbane for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "16000",
+    "22400",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "mirage:19:sell_swap:5005": {
+   "id": "mirage:19:sell_swap:5005",
+   "kind": "sell_swap",
+   "phrase": "Replaces Healbane: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Burn",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Healbane for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Healbane",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Healbane"
+  },
+  "mirage:19:invest_step:5006": {
+   "id": "mirage:19:invest_step:5006",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 16,000 to 22,400 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Mystic Reverb",
+    "souls": 51200,
+    "noncore": true,
+    "imb": 3,
+    "note": "On Djinn's Mark. Sell Toxic Bullets for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "16000",
+    "22400",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "mirage:19:threshold_never:5007": {
+   "id": "mirage:19:threshold_never:5007",
+   "kind": "threshold_never",
+   "phrase": "Nothing in the kit (ultimate and damage-over-time ticks included) reaches the 100-damage trigger even at max ability tiers.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:mirage_sand_phantom"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 19,
+    "item": "Mystic Reverb",
+    "souls": 51200,
+    "noncore": true,
+    "imb": 3,
+    "note": "On Djinn's Mark. Sell Toxic Bullets for this."
+   },
+   "timing": {
+    "when": "never",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold_later",
+    "thr": 100.0,
+    "slots": [
+     3
+    ]
+   },
+   "numbers": [
+    "100.0"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "contradiction": false,
+   "caveat": "item has no localisation text; trigger semantics are modelled"
+  },
+  "mirage:19:sell_swap:5008": {
+   "id": "mirage:19:sell_swap:5008",
+   "kind": "sell_swap",
+   "phrase": "Replaces Toxic Bullets: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Mystic Reverb",
+    "souls": 51200,
+    "noncore": true,
+    "imb": 3,
+    "note": "On Djinn's Mark. Sell Toxic Bullets for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Toxic Bullets",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Toxic Bullets"
+  },
+  "mirage:19:invest_step:5009": {
+   "id": "mirage:19:invest_step:5009",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 17,600 to 22,400 invested: bonus 86 to 100% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Crippling Headshot",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Titanic Magazine for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "22400",
+    "86.0",
+    "100.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 22400
+  },
+  "mirage:19:sell_swap:5010": {
+   "id": "mirage:19:sell_swap:5010",
+   "kind": "sell_swap",
+   "phrase": "Replaces Titanic Magazine: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Crippling Headshot",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Titanic Magazine for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Titanic Magazine",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Titanic Magazine"
+  },
+  "mirage:19:invest_step:5011": {
+   "id": "mirage:19:invest_step:5011",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 17,600 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Siphon Bullets",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Headhunter for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "24000",
+    "54.0",
+    "60.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 22400
+  },
+  "mirage:19:sell_swap:5012": {
+   "id": "mirage:19:sell_swap:5012",
+   "kind": "sell_swap",
+   "phrase": "Replaces Headhunter: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Siphon Bullets",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Headhunter for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Headhunter",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Headhunter"
+  },
+  "mirage:19:defence_barrier:5013": {
+   "id": "mirage:19:defence_barrier:5013",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Dispel Magic for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:19:sell_swap:5014": {
+   "id": "mirage:19:sell_swap:5014",
+   "kind": "sell_swap",
+   "phrase": "Replaces Dispel Magic: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Dispel Magic for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Dispel Magic",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Dispel Magic"
+  },
+  "mirage:19:invest_step:5015": {
+   "id": "mirage:19:invest_step:5015",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 17,600 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_mirage m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Cheat Death",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Rend for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "24000",
+    "54.0",
+    "60.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 22400
+  },
+  "mirage:19:sell_swap:5016": {
+   "id": "mirage:19:sell_swap:5016",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Rend: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Cheat Death",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Rend for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Rend",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Rend"
+  },
+  "mirage:19:upgrade_delta:5017": {
+   "id": "mirage:19:upgrade_delta:5017",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Transcendent Cooldown",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mirage:19:upgrade_of:5018": {
+   "id": "mirage:19:upgrade_of:5018",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Transcendent Cooldown",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "mirage",
+   "item": "Extra Spirit",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Improved Spirit completes 4.8k spirit in 4000 souls (~4.0 min), 3 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "mirage:0:spike_progress:4929",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Improved Spirit completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Improved Spirit completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "mirage:0:component_for:4930",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 4000,
+      "event": "Improved Spirit"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mirage",
+   "item": "Compress Cooldown",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Djinn's Mark. Marks stack faster."
+  },
+  {
+   "build": "mirage",
+   "item": "Mystic Vulnerability",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Improved Spirit completes 4.8k spirit in 800 souls (~0.8 min), 1 purchases",
+   "souls": 4000,
+   "unpublished": [
+    {
+     "id": "mirage:2:spike_progress:4935",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Improved Spirit completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Improved Spirit completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "mirage:2:component_for:4936",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 23200,
+      "event": "Escalating Exposure"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mirage",
+   "item": "Spirit Shredder",
+   "section": "early",
+   "cls": "c",
+   "why": "weapon investment only; its 4.8k tier completes at Toxic Bullets, 8000 souls (~8.0 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 6400,
+   "unpublished": [
+    {
+     "id": "mirage:4:component_for:4941",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spirit Rend: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 30400,
+      "event": "Spirit Rend"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mirage",
+   "item": "Healbane",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Dispel Magic, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 8000,
+   "unpublished": []
+  },
+  {
+   "build": "mirage",
+   "item": "Dispel Magic",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "It doesn't remove ult effects."
+  },
+  {
+   "build": "mirage",
+   "item": "Headshot Booster",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Extended Magazine completes 6.4k weapon in 800 souls (~0.8 min), 1 purchases",
+   "souls": 15200,
+   "unpublished": [
+    {
+     "id": "mirage:8:spike_progress:4960",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 6.4k weapon tier, which Extended Magazine completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Extended Magazine completes the 6.4k weapon tier"
+     }
+    },
+    {
+     "id": "mirage:8:component_for:4961",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Headhunter: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 29600,
+      "event": "Headhunter"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mirage",
+   "item": "Ricochet",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Bounced bullets put marks on two more of them."
+  },
+  {
+   "build": "mirage",
+   "item": "Spirit Rend",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 36800,
+   "unpublished": []
+  },
+  {
+   "build": "mirage",
+   "item": "Titanic Magazine",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 37600,
+   "unpublished": []
+  },
+  {
+   "build": "mirage",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry is out-shooting you."
+  },
+  {
+   "build": "mirage",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "mirage",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their spirit damage keeps hitting you."
+  },
+  {
+   "build": "mirage",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns and silences keep stopping your combo."
+  },
+  {
+   "build": "mirage",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ability you can see coming, like Bebop's hook or Apollo's ult."
+  },
+  {
+   "build": "mirage",
+   "item": "Mystic Reverb",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Djinn's Mark. Sell Toxic Bullets for this."
+  }
+ ],
+ "stats": {
+  "g": 13,
+  "b": 3,
+  "a": 12,
+  "c": 2,
+  "d": 2
+ }
+}

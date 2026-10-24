@@ -1,0 +1,41 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: paradox
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:14Z
+BODY-SHA: c2bad02c11dde018b3b3b4a2ae915ed0817d47ea89a1db72cf7f0245e38047c5
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): High-Velocity Rounds, Long Range, Sharpshooter, Headshot Booster, Headhunter, Grit, Reactive Barrier, Veil Walker
+  Mid · L-R                -> main path (sequential): Express Shot, Mystic Burst, Tankbuster, Compress Cooldown, Extra Stamina, Hollow Point, Superior Cooldown, Stamina Mastery
+  Late · L-R               -> main path (sequential): Mystic Reverb, Indomitable, Glass Cannon, Crippling Headshot
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Plated Armor, Spirit Resilience, Dispel Magic, Counterspell, Warp Stone
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Spirit Burn, Lucky Shot, Divine Barrier, Cheat Death
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Spirit Burn, sell Express Shot
+    function of Express Shot: stats only; replacement Spirit Burn: range; roles lost: none  [VERIFIED GAME MECHANIC]
+    Express Shot is a component of later items: no
+    held for 43200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 25600/12800/12800 -> 22400/12800/19200; thresholds lost: none
+    trade ratio after the sale 0.11; selling Tankbuster instead: 0.11 (+0.5%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Lucky Shot, sell Headhunter
+    function of Headhunter: bullet_proc, move_speed; replacement Lucky Shot: ammo, bullet_proc; roles lost: move_speed  [VERIFIED GAME MECHANIC]
+    Headhunter is a component of later items: no
+    held for 51200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 25600/12800/12800 -> 28800/12800/12800; thresholds lost: none
+    trade ratio after the sale 0.11; selling Express Shot instead: 0.11 (+0.6%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Cheat Death, sell Stamina Mastery
+    function of Stamina Mastery: stats only; replacement Cheat Death: bullet_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Stamina Mastery is a component of later items: no
+    held for 30400 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 25600/12800/12800 -> 25600/16000/12800; thresholds lost: none
+    trade ratio after the sale 0.13; selling Express Shot instead: 0.13 (-1.8%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

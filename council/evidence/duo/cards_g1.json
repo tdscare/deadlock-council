@@ -1,0 +1,806 @@
+{
+ "bebop": {
+  "hero": "Bebop",
+  "file": "audit/hero_bebop.txt",
+  "setup": [
+   {
+    "ability": "3 Grapple Arm",
+    "effect": "pull",
+    "duration_s": 0.5,
+    "radius_m": null,
+    "range_m": 30,
+    "cooldown_s": null,
+    "needs_partner_to": "stand where the pulled target ends up (hook reels first hit; can hook allies)",
+    "notes": "AbilityCastRange 30m, HookImpactDelay 0.5, RestrictionDuration 0.5, SlowPercent 72 (hook slow, 0.5s restriction). T1 +20% weapon dmg vs victims 6s (BulletAmp 20, BulletAmpDuration 6). Cooldown not in file (unverified). Not a long hold: restriction only 0.5s."
+   },
+   {
+    "ability": "1 Exploding Uppercut",
+    "effect": "lift",
+    "duration_s": 0.5,
+    "radius_m": 14,
+    "range_m": 6,
+    "cooldown_s": null,
+    "needs_partner_to": "hit/shoot the tossed target while airborne; 5s debuff then explodes on land",
+    "notes": "EnemyHeroTossVelocity 20m, TossDuration 0.5 (friendly 0.3), OnLandDamageRadius 14m, ExplodeDebuffDuration 5, damage 0.01+1.0x light melee. Melee range 6m. Cooldown not in file. Airtime only 0.5s."
+   },
+   {
+    "ability": "2 Sticky Bomb",
+    "effect": "debuff",
+    "duration_s": 3.5,
+    "radius_m": 8,
+    "range_m": 6,
+    "cooldown_s": null,
+    "needs_partner_to": "keep target alive/in place 3.5s fuse; kills/hits grow it",
+    "notes": "FuseTime 3.5, Radius 8m, cast range 6m, self damage 20%, +1% dmg/hit +2.5%/kill"
+   },
+   {
+    "ability": "4 Hyper Beam",
+    "effect": "debuff",
+    "duration_s": 11,
+    "radius_m": null,
+    "range_m": 70,
+    "cooldown_s": null,
+    "needs_partner_to": "nothing; partner must hold target in 2.9m wide beam",
+    "notes": "Channel 11s (+1.0 cast delay), BeamWidth 2.9m, slow 20% 0.5s, close dmg 75%. Bebop move 1.8m channel. Applies an unnamed debuff (text stripped, unverified)"
+   }
+  ],
+  "payoff": [
+   {
+    "ability_or_item": "Grapple Arm (ally target)",
+    "needs": "ally to reel",
+    "window": "30m, ally ignored within 8m (FriendlyHookIgnoreRange)",
+    "numbers": "reels ally; use as peel/rescue"
+   },
+   {
+    "ability_or_item": "Hyper Beam",
+    "needs": "stationary|cc'd",
+    "window": "target must stay inside 2.9m x 70m beam up to 11s; needs CC longer than ~1s to matter",
+    "numbers": "damage per tick 0.1s; T3 lifesteal 65% hero / 20% non-hero (BeamLifesteal)"
+   },
+   {
+    "ability_or_item": "Sticky Bomb",
+    "needs": "clumped|low hp",
+    "window": "8m radius, 3.5s fuse",
+    "numbers": "permanent stacks per hit 1.0% / kill 2.5% (+spirit scaling)"
+   },
+   {
+    "ability_or_item": "Uppercut explosion",
+    "needs": "clumped",
+    "window": "14m radius on land",
+    "numbers": "dmg+debuff to others, 5s debuff"
+   }
+  ],
+  "ally_effects": [
+   {
+    "ability": "Grapple Arm / Uppercut on allies",
+    "what": "lift|pull",
+    "range_m": 30,
+    "duration_s": 0.3,
+    "numbers": "Uppercut friendly toss 0.3s; hook allies = reposition/rescue"
+   }
+  ],
+  "item_hooks": [
+   {
+    "item": "DoT / bullet-amp items",
+    "why": "hook T1 amps weapon dmg 20%/6s, so partner DoT or bullet-resist shred stacks on a reeled target; beam 11s wants long-duration target-hold not short stuns"
+   }
+  ],
+  "extends_or_is_extended_by": "Uppercut toss (0.5s) + hook restriction (0.5s) are short; a partner hold >=1.5s is needed before Hyper Beam (1.0s cast delay) lands. Beam is a poor fit for a 0.5s hook alone."
+ },
+ "greytalon": {
+  "hero": "Grey Talon",
+  "file": "audit/hero_greytalon.txt",
+  "setup": [
+   {
+    "ability": "3 Spirit Snare",
+    "effect": "tether",
+    "duration_s": 2.25,
+    "radius_m": 6.5,
+    "range_m": null,
+    "cooldown_s": 34,
+    "needs_partner_to": "nothing; enemies must walk into it or partner shoots/detonates",
+    "notes": "Arm 2.0s, lifetime 22s, TetherRadius 6m, trigger radius 6.5m, TetherDuration 2.25 (+1 T3), Curse + slow 24%, interrupts, silences, disarms, blocks items. Charged Shot hit on trap detonates early with larger radius (hit radius x30). T2 -15% bullet resist 10s. T3 +1.5m radius."
+   },
+   {
+    "ability": "4 Guided Owl",
+    "effect": "stun",
+    "duration_s": 0.75,
+    "radius_m": 12,
+    "range_m": null,
+    "cooldown_s": null,
+    "needs_partner_to": "stand where owl lands/ be in 12m",
+    "notes": "Cast delay 1.5s, channel up to 20s, ExplosionRadius 12m, StunDuration 0.75, T3 executes <22% HP. Cooldown not in file."
+   },
+   {
+    "ability": "2 Rain of Arrows",
+    "effect": "slow",
+    "duration_s": 1.5,
+    "radius_m": 4,
+    "range_m": null,
+    "cooldown_s": null,
+    "needs_partner_to": "none (self)",
+    "notes": "T1 airborne hits slow 24% for 1.5s; airborne 4s, 5 split shots"
+   }
+  ],
+  "payoff": [
+   {
+    "ability_or_item": "Guided Owl execute",
+    "needs": "low hp",
+    "window": "hit after 0.75s stun; 22% HP threshold",
+    "numbers": "kills <22% max HP"
+   },
+   {
+    "ability_or_item": "Charged Shot",
+    "needs": "cc'd|stationary",
+    "window": "charge needs 0.5s cast + hold; 4s between charges (1s after T3)",
+    "numbers": "pierces, headshot-able; best vs tethered target"
+   },
+   {
+    "ability_or_item": "Spirit Snare bullet-resist",
+    "needs": "debuffed",
+    "window": "10s of -15% bullet resist (T2)",
+    "numbers": "buffs partner gun damage too (unverified whether resist applies to allies' bullets: it is a debuff on enemy so should)"
+   }
+  ],
+  "ally_effects": [],
+  "item_hooks": [
+   {
+    "item": "Bullet/crit damage items",
+    "why": "snare gives 10s -15% resist plus 2.25-3.25s silence+disarm: partner's bullets benefit"
+   }
+  ],
+  "extends_or_is_extended_by": "Snare tether 2.25s (3.25s T3) fits a hold-then-burst partner; owl 0.75s stun is short and radius 12m is large (good for partner clump AoE). Partner CC could chain after tether ends."
+ },
+ "kelvin": {
+  "hero": "Kelvin",
+  "file": "audit/hero_kelvin.txt",
+  "setup": [
+   {
+    "ability": "1 Frost Grenade",
+    "effect": "slow",
+    "duration_s": 4,
+    "radius_m": 6.5,
+    "range_m": null,
+    "cooldown_s": null,
+    "needs_partner_to": "none",
+    "notes": "Slow 32% 4s, 2 charges 7s between; AuraSlowAmount -75 (unclear meaning, unverified); heals allies in cloud HealAmount 60+0.8x spirit; T2 pauses stamina regen; T3 radius +2m"
+   },
+   {
+    "ability": "3 Arctic Beam",
+    "effect": "slow",
+    "duration_s": 5,
+    "radius_m": null,
+    "range_m": 25,
+    "cooldown_s": null,
+    "needs_partner_to": "stay in 1.1m-wide beam",
+    "notes": "Slow builds 24% min to ~16% max (stats ambiguous), fire rate -20% max, 2s to max; AbilityDuration 5s"
+   },
+   {
+    "ability": "4 Frozen Shelter",
+    "effect": "zone",
+    "duration_s": 5,
+    "radius_m": 10,
+    "range_m": 8,
+    "cooldown_s": null,
+    "needs_partner_to": "stand inside dome (ally/self targeted); enemies slowed",
+    "notes": "Dome radius 10m, 5s, enemies slowed 28%, allies gain rapid regen (BonusHealthRegen 90+0.2x spirit); objectives invulnerable; EnemyDragSpeed 1000 (enemies pulled out? unverified). T3 purges non-ult debuffs on cast"
+   }
+  ],
+  "payoff": [
+   {
+    "ability_or_item": "Frost Grenade heal",
+    "needs": "ally in cloud",
+    "window": "4s cloud",
+    "numbers": "60+0.8x spirit"
+   },
+   {
+    "ability_or_item": "Shelter regen",
+    "needs": "ally inside dome",
+    "window": "5s",
+    "numbers": "90+0.2x spirit regen"
+   }
+  ],
+  "ally_effects": [
+   {
+    "ability": "Ice Path",
+    "what": "speed",
+    "range_m": 5,
+    "duration_s": 8,
+    "numbers": "ModifierRadius 5m, aura 18s, allies get movement bonus (self +2m speed, 60% slow resist)"
+   },
+   {
+    "ability": "Frost Grenade",
+    "what": "heal",
+    "range_m": 6.5,
+    "duration_s": 4,
+    "numbers": "60+0.8x spirit"
+   },
+   {
+    "ability": "Frozen Shelter",
+    "what": "heal|shield",
+    "range_m": 10,
+    "duration_s": 5,
+    "numbers": "can target ally hero at 8m; blocks projectiles ('impenetrable'); T3 purge"
+   }
+  ],
+  "item_hooks": [
+   {
+    "item": "Spirit power/healing amp items",
+    "why": "grenade heal 0.8x and shelter 0.2x spirit scale"
+   },
+   {
+    "item": "Slow-dependent items",
+    "why": "32%+28%+beam slows stack for partner burst"
+   }
+  ],
+  "extends_or_is_extended_by": "Shelter can be put on an ally, so it protects a partner's ult channel (5s, 10m). Whether enemies can shoot in is 'impenetrable' per text: unverified for ults."
+ },
+ "mina": {
+  "hero": "Mina",
+  "file": "audit/hero_mina.txt",
+  "setup": [
+   {
+    "ability": "3 Love Bites",
+    "effect": "slow",
+    "duration_s": 3,
+    "radius_m": null,
+    "range_m": null,
+    "cooldown_s": 10,
+    "needs_partner_to": "none; partner damage also builds the bite",
+    "notes": "Slow 24% 3s on proc (T1); buildup 18.4/shot, 5s buildup; per-target cd 10 (5 at T3); threshold not shown (unverified, likely 100)"
+   },
+   {
+    "ability": "4 Nox Nostra",
+    "effect": "debuff",
+    "duration_s": 1.25,
+    "radius_m": null,
+    "range_m": 40,
+    "cooldown_s": 150,
+    "needs_partner_to": "hold target within 20deg cone; partner CC keeps lock",
+    "notes": "75 bats, 30/s (about 2.5s), dmg 4.6+0.094x spirit each, debuff 1.25s (unnamed), MaxBatTargets 2, cone 20, T3 -45s cd, bonus bats up to +50 via Love Bites procs"
+   },
+   {
+    "ability": "1 Rake",
+    "effect": "pull",
+    "duration_s": null,
+    "radius_m": null,
+    "range_m": 10,
+    "cooldown_s": 16,
+    "needs_partner_to": "none",
+    "notes": "Hits up to 6 targets in 60 deg cone; MiniJump; dmg 60+1.0x stat count; no CC listed"
+   }
+  ],
+  "payoff": [
+   {
+    "ability_or_item": "Nox Nostra",
+    "needs": "stationary|clumped",
+    "window": "~2.5s release; lockon needs target in 20deg cone",
+    "numbers": "75 bats x 4.6 (+0.094 spirit) with bonus to +50 bats"
+   },
+   {
+    "ability_or_item": "Love Bites burst",
+    "needs": "debuffed|taking partner dmg",
+    "window": "buildup lasts 5s",
+    "numbers": "45+1.85x spirit burst; partner shots/abilities add buildup (BuildUpPerAbility/Bat 20)"
+   }
+  ],
+  "ally_effects": [],
+  "item_hooks": [
+   {
+    "item": "Spirit damage items",
+    "why": "bite 1.85x spirit, bats 0.094x each"
+   }
+  ],
+  "extends_or_is_extended_by": "No lift/CC; benefits from partner CC that holds one target in a 20deg cone for ~2.5s of bats. Sanguine Retreat 0.65s untargetable, range 9m (+recast) is self only."
+ },
+ "ratking": {
+  "hero": "Rat King",
+  "file": "audit/hero_ratking.txt",
+  "setup": [
+   {
+    "ability": "1 Scrap Grenade",
+    "effect": "slow",
+    "duration_s": 4,
+    "radius_m": 8,
+    "range_m": null,
+    "cooldown_s": 26,
+    "needs_partner_to": "keep targets in 8m for 3 detonations (0.8/0.7/1.5s = 3.0s)",
+    "notes": "Slow 20%+0.08x spirit 4s; big final explosion slow 40%; T3 extra big detonation; can be meleed away"
+   },
+   {
+    "ability": "2 Rat Swarm",
+    "effect": "debuff",
+    "duration_s": 4,
+    "radius_m": 10,
+    "range_m": 50,
+    "cooldown_s": 24,
+    "needs_partner_to": "keep target from dashing (dash shakes rats off)",
+    "notes": "Bite 8+0.08x spirit per rat/s, up to 5 rats, 6s, reduces bullet resist (stripped) up to -1%/bite at T3, debuff 4s"
+   },
+   {
+    "ability": "4 Rule Ratannia",
+    "effect": "slow",
+    "duration_s": 12,
+    "radius_m": 20,
+    "range_m": null,
+    "cooldown_s": 160,
+    "needs_partner_to": "stand in 20m with enemies",
+    "notes": "Cast delay 2.0, slam dmg 200+1.2x, slow 40%, flag 12s radius 20m, rats apply Rat Swarm"
+   }
+  ],
+  "payoff": [
+   {
+    "ability_or_item": "Rat Swarm bullet-resist shred",
+    "needs": "stationary|cc'd",
+    "window": "dash cancels rats; needs target held several seconds",
+    "numbers": "8+0.08x spirit per bite, bite rate scales with rats"
+   },
+   {
+    "ability_or_item": "Scrap Grenade",
+    "needs": "clumped|stationary",
+    "window": "3.0s of detonations at 8m radius",
+    "numbers": "70+0.6x per shrapnel, +300 big blast at T3"
+   }
+  ],
+  "ally_effects": [
+   {
+    "ability": "Rule Ratannia banner",
+    "what": "buff",
+    "range_m": 20,
+    "duration_s": 12,
+    "numbers": "allies near banner: speed (+3m T1), slow immunity, 15% damage reduction (+10 at T3 = base 15 listed), no shoot-slow penalty"
+   },
+   {
+    "ability": "Royal Pestments",
+    "what": "shield",
+    "range_m": null,
+    "duration_s": 6,
+    "numbers": "self only: 7 rats barrier, capped hit damage"
+   }
+  ],
+  "item_hooks": [
+   {
+    "item": "Ally-aura-style items",
+    "why": "banner is a 20m / 12s ally aura where partner stays; stack with partner team-fight damage"
+   },
+   {
+    "item": "Bullet resist shred items",
+    "why": "rat bites shred resist"
+   }
+  ],
+  "extends_or_is_extended_by": "Banner (20m, 12s +5s T2) is a large area a partner ult can fit inside; grenade and rats punish stationary targets. Slows (20-40%) are weak holds; rats shaken by dashes."
+ },
+ "violet": {
+  "hero": "Violet",
+  "file": "audit/hero_violet.txt",
+  "setup": [
+   {
+    "ability": "3 Still Life",
+    "effect": "stun",
+    "duration_s": 1,
+    "radius_m": null,
+    "range_m": 25,
+    "cooldown_s": 35,
+    "needs_partner_to": "target must stay in view/range <35m; look at subject",
+    "notes": "Channel 2.6s, DPS 30+0.7x spirit, completed sketch: damage 60+1.4x spirit, stun 1s (+0.35 T3), pull distance 800 (units), build 33/s + 15/shot/ability (partner damage adds buildup). T2 subject deals -35% damage while drawn"
+   },
+   {
+    "ability": "4 Abstract Landscape",
+    "effect": "zone",
+    "duration_s": 6,
+    "radius_m": 18,
+    "range_m": null,
+    "cooldown_s": 165,
+    "needs_partner_to": "stand inside / force enemies to leave",
+    "notes": "Grove radius 18m, 6s (+0.04x TechPower; +4s T3), vision-blocking ink; enemies revealed inside; on leaving: 100+1.4x spirit damage, 30% slow, silence 2s (+1.25 T3); allies buff (T2 +25% spirit lifesteal, +25 spirit power)"
+   },
+   {
+    "ability": "2 Flow State",
+    "effect": "slow",
+    "duration_s": 2,
+    "radius_m": 15,
+    "range_m": null,
+    "cooldown_s": 23,
+    "needs_partner_to": "stand in trail path",
+    "notes": "Trail 6s fading slow up to 60% 2s; flick cone 90 deg 15m (+8m T2) dmg 50-100+0.9-1.8x spirit; allies get bonus slide"
+   },
+   {
+    "ability": "1 Living Ink (Draw)",
+    "effect": "zone",
+    "duration_s": 20,
+    "radius_m": null,
+    "range_m": 25,
+    "cooldown_s": 22,
+    "needs_partner_to": "none",
+    "notes": "Solid ink stroke blocks projectiles AND characters, 20s DrawDuration, 25m max draw; can be broken by heavy melee"
+   }
+  ],
+  "payoff": [
+   {
+    "ability_or_item": "Still Life sketch",
+    "needs": "cc'd|stationary",
+    "window": "needs full 2.6s of target in view",
+    "numbers": "60+1.4x spirit and stun 1s"
+   },
+   {
+    "ability_or_item": "Landscape exit punish",
+    "needs": "zone",
+    "window": "enemies must exit within 6-10s",
+    "numbers": "100+1.4x spirit, 2-3.25s silence"
+   }
+  ],
+  "ally_effects": [
+   {
+    "ability": "Flow State trail",
+    "what": "speed",
+    "range_m": 2,
+    "duration_s": 6,
+    "numbers": "allies get bonus slide distance on trail"
+   },
+   {
+    "ability": "Abstract Landscape",
+    "what": "buff",
+    "range_m": 18,
+    "duration_s": 6,
+    "numbers": "ally spirit lifesteal 25% & +25 spirit power (T2), invisible to outside vision"
+   }
+  ],
+  "item_hooks": [
+   {
+    "item": "Spirit damage/cooldown items",
+    "why": "ability casts refresh Flow State and Ink hits reduce cooldowns; Still Life buildup counts shots from partner? unverified (BuildUpPerShot 15 may be Violet-only)"
+   }
+  ],
+  "extends_or_is_extended_by": "Grove 18m / 6s (10s T3, no destroy) is a large ult-compatible zone; enemy leaving causes silence 2s. Ink wall can seal an exit. Stun 1s is short."
+ },
+ "viscous": {
+  "hero": "Viscous",
+  "file": "audit/hero_viscous.txt",
+  "setup": [
+   {
+    "ability": "3 Puddle Punch",
+    "effect": "lift",
+    "duration_s": 3,
+    "radius_m": 4,
+    "range_m": 40,
+    "cooldown_s": null,
+    "needs_partner_to": "stand on punched target area / follow-up",
+    "notes": "Punch applies slow 24% (ImpactDuration 3s enemies, 2s friendly), TossDuration 0.6, charge refresh 1.7s, can parry; radius 4m (+1.5 T2). Hits allies: PunchFriendlyAirControl 30. Cooldown not in file"
+   },
+   {
+    "ability": "4 Goo Ball",
+    "effect": "stun",
+    "duration_s": 0.5,
+    "radius_m": 1.8,
+    "range_m": null,
+    "cooldown_s": 150,
+    "needs_partner_to": "none (self); be in path",
+    "notes": "Stun 0.5s (+0.3 T3) on impact, duration 11s (+7), 35% bullet/tech resist (+20), cd -25 T1"
+   },
+   {
+    "ability": "1 Splatter",
+    "effect": "slow",
+    "duration_s": 10,
+    "radius_m": 5,
+    "range_m": null,
+    "cooldown_s": null,
+    "needs_partner_to": "stand in puddles",
+    "notes": "Puddles 10s (+1.1x TechDuration), slow 28%, allies slide +60 on puddles; bounces 2 (+1)"
+   },
+   {
+    "ability": "2 Restorative Goo",
+    "effect": "hold",
+    "duration_s": 3,
+    "radius_m": null,
+    "range_m": 20,
+    "cooldown_s": null,
+    "needs_partner_to": "unclear: cube around target (cast range 20m), PostCubeBuffDuration 8",
+    "notes": "Cube 3s (+1 T-upgrade), regen 40+0.3x spirit (+25); breakout 1s; target can be ally? unverified"
+   }
+  ],
+  "payoff": [
+   {
+    "ability_or_item": "Goo Ball impact",
+    "needs": "clumped",
+    "window": "0.5s stun per tick (TickRate 0.25)",
+    "numbers": "damage +70 upgrade, +0.2 spirit"
+   }
+  ],
+  "ally_effects": [
+   {
+    "ability": "Splatter puddles",
+    "what": "speed",
+    "range_m": 5,
+    "duration_s": 10,
+    "numbers": "allies slide +60% on goo"
+   },
+   {
+    "ability": "Puddle Punch",
+    "what": "lift",
+    "range_m": 40,
+    "duration_s": 2,
+    "numbers": "friendly punch grants air control 30 for 2s"
+   },
+   {
+    "ability": "Restorative Goo",
+    "what": "heal|shield",
+    "range_m": 20,
+    "duration_s": 3,
+    "numbers": "regen 40+0.3x spirit; shielding/cube - verify if ally-castable (unverified)"
+   }
+  ],
+  "item_hooks": [
+   {
+    "item": "Duration items",
+    "why": "Puddle duration 1.1x TechDuration scaling"
+   }
+  ],
+  "extends_or_is_extended_by": "Puddle slow (28%) and punch roll slow (-36 for 1s) set up targets; Goo Ball stun 0.5s is short."
+ },
+ "astro": {
+  "hero": "Holliday",
+  "file": "new/hero_hero_astro.txt",
+  "setup": [
+   {
+    "ability": "4 Spirit Lasso",
+    "effect": "lift",
+    "duration_s": 2.25,
+    "radius_m": null,
+    "range_m": 20,
+    "cooldown_s": 130,
+    "needs_partner_to": "hit target while lifted; bounce pad extends",
+    "notes": "Duration 2.25 (+0.75 T), cast delay 0.5, lift height 7, extra targets radius x2 in 60 deg cone, pad extends +1.25s, damage 80+0.93x. Grabbed enemy cannot act? unverified (desc stripped)"
+   },
+   {
+    "ability": "1 Powder Keg",
+    "effect": "debuff",
+    "duration_s": 3,
+    "radius_m": 6,
+    "range_m": null,
+    "cooldown_s": 28,
+    "needs_partner_to": "shoot/melee barrel to detonate; partner can detonate barrels",
+    "notes": "Impact 40+0.525x spirit, burn DPS 13.3+0.175x for 3s, stacking, barrel life 8s, 2 charges 7.5s"
+   },
+   {
+    "ability": "2 Bounce Pad",
+    "effect": "lift",
+    "duration_s": 0.7,
+    "radius_m": 9,
+    "range_m": null,
+    "cooldown_s": 41,
+    "needs_partner_to": "stomp onto enemies",
+    "notes": "Pad 22s, radius 9m, stomp 60+0.372x, stun 0.7s (upgrade StompStunDuration), allies bounce too (velocity 750)"
+   },
+   {
+    "ability": "3 Crackshot",
+    "effect": "debuff",
+    "duration_s": 2,
+    "radius_m": 2,
+    "range_m": null,
+    "cooldown_s": 20,
+    "needs_partner_to": "none",
+    "notes": "55+1.116x, fading slow 40% 2s, T: -6% bullet resist 5s"
+   }
+  ],
+  "payoff": [
+   {
+    "ability_or_item": "Powder Keg burn stack",
+    "needs": "stationary|clumped",
+    "window": "3s burn per barrel, overlapping stacks",
+    "numbers": "13.3 DPS +0.175x each; partner AoE DoT amplifies"
+   },
+   {
+    "ability_or_item": "Lasso follow-up",
+    "needs": "lifted",
+    "window": "2.25-4.25s hang (3.5 w/pad)",
+    "numbers": "80 dmg + partner burst"
+   }
+  ],
+  "ally_effects": [
+   {
+    "ability": "Bounce Pad",
+    "what": "lift|speed",
+    "range_m": 9,
+    "duration_s": 22,
+    "numbers": "allies bounce; T: +4m speed 4s on land"
+   }
+  ],
+  "item_hooks": [
+   {
+    "item": "DoT / bullet-resist shred",
+    "why": "Keg burn stacks; lasso hang target stationary"
+   }
+  ],
+  "extends_or_is_extended_by": "Lasso lift is extended by her own pad (+1.25s); a partner could drop a stationary target field to land keg barrels."
+ },
+ "atlas": {
+  "hero": "Abrams",
+  "file": "new/hero_hero_atlas.txt",
+  "setup": [
+   {
+    "ability": "4 Seismic Impact",
+    "effect": "stun",
+    "duration_s": 1.6,
+    "radius_m": 9,
+    "range_m": null,
+    "cooldown_s": 215,
+    "needs_partner_to": "be near; stun long enough to burst",
+    "notes": "Radius 9m (+6 T3), impact height 6m, 1.6s stun (+0.8 T2 = 2.4), damage 100+2.325x spirit, T3 unstoppable 5s on cast"
+   },
+   {
+    "ability": "2 Shoulder Charge",
+    "effect": "stun",
+    "duration_s": 0.3,
+    "radius_m": 2.2,
+    "range_m": null,
+    "cooldown_s": 33,
+    "needs_partner_to": "wall behind enemy",
+    "notes": "1.4s duration, stun 0.3 (+0.8 on wall = 1.1), slow 32% 3s T1, damage 30+1.4x"
+   },
+   {
+    "ability": "1 Siphon Life",
+    "effect": "debuff",
+    "duration_s": 4,
+    "radius_m": 8,
+    "range_m": null,
+    "cooldown_s": 42,
+    "needs_partner_to": "enemies near",
+    "notes": "DPS 22+0.6x spirit, heals 70% of hero dmg; 4s (+2s T), radius 8m (+2m)"
+   }
+  ],
+  "payoff": [
+   {
+    "ability_or_item": "Siphon Life",
+    "needs": "stationary|cc'd",
+    "window": "4s duration",
+    "numbers": "22 DPS (+18 T3) per target; heals 70%/35% non-hero"
+   }
+  ],
+  "ally_effects": [],
+  "item_hooks": [
+   {
+    "item": "Spirit damage",
+    "why": "seismic 2.325x, charge 1.4x"
+   },
+   {
+    "item": "Partner ult-set-ups",
+    "why": "stun 1.6-2.4s in 9-15m radius is long enough for a channel"
+   }
+  ],
+  "extends_or_is_extended_by": "Impact stun 9m radius could be stretched by a partner lifting enemies into it; stun 1.6s then partner hold."
+ },
+ "chrono": {
+  "hero": "Paradox",
+  "file": "new/hero_hero_chrono.txt",
+  "setup": [
+   {
+    "ability": "3 Kinetic Carbine",
+    "effect": "hold",
+    "duration_s": 0.4,
+    "radius_m": 5,
+    "range_m": null,
+    "cooldown_s": 28,
+    "needs_partner_to": "keep target in 5m radius",
+    "notes": "Time-stop (BulletTimeScale 0.01) min 0.25s, max 0.4s (+0.4 T = 0.8), radius 5m, charge 2.5s, damage 5+125x weapon power at max"
+   },
+   {
+    "ability": "4 Paradoxical Swap",
+    "effect": "debuff",
+    "duration_s": null,
+    "radius_m": 7,
+    "range_m": 25,
+    "cooldown_s": 110,
+    "needs_partner_to": "stand at swap point; partner must deal with swapped enemy",
+    "notes": "Swap time 0.6-1.0s, 150+1.1x spirit damage, T3 multi-swap 7m, +10% max HP damage, barrier 200+1.5x"
+   },
+   {
+    "ability": "1 Pulse Grenade",
+    "effect": "slow",
+    "duration_s": 3.2,
+    "radius_m": 5.5,
+    "range_m": null,
+    "cooldown_s": 32,
+    "needs_partner_to": "stay inside",
+    "notes": "Radius 5.5m +1/pulse, 3.2s, interval 0.8, 35+0.3x, 4%/stack damage amp (amp for Paradox only per text), debuff 8s, slow 20% 0.2s"
+   },
+   {
+    "ability": "2 Time Wall",
+    "effect": "silence",
+    "duration_s": 2,
+    "radius_m": 8,
+    "range_m": 200,
+    "cooldown_s": 25,
+    "needs_partner_to": "fight through wall",
+    "notes": "Wall 8m wide, 5.5s, enemy projectiles stopped, friendly bullets +30% damage and 2x speed (T2 +35%) for ALL allies' bullets, enemies slowed 64%, silence T2"
+   }
+  ],
+  "payoff": [
+   {
+    "ability_or_item": "Carbine time-stop",
+    "needs": "hold|stationary",
+    "window": "0.25-0.8s",
+    "numbers": "125x weapon power at max charge"
+   }
+  ],
+  "ally_effects": [
+   {
+    "ability": "Time Wall",
+    "what": "buff",
+    "range_m": 8,
+    "duration_s": 5.5,
+    "numbers": "friendly bullets +30% damage (+35%) and time scale 2x, TimeWallWidth 8m"
+   }
+  ],
+  "item_hooks": [
+   {
+    "item": "Weapon damage",
+    "why": "wall boosts allies' weapon damage +30% and speed"
+   },
+   {
+    "item": "Spirit",
+    "why": "swap 1.1x spirit"
+   }
+  ],
+  "extends_or_is_extended_by": "Wall is a placed zone ally bullets pass; timestops 0.4s are very short, not chainable for long holds."
+ },
+ "forge": {
+  "hero": "McGinnis",
+  "file": "new/hero_hero_forge.txt",
+  "setup": [
+   {
+    "ability": "3 Spectral Wall",
+    "effect": "slow",
+    "duration_s": 2.5,
+    "radius_m": null,
+    "range_m": 50,
+    "cooldown_s": 50,
+    "needs_partner_to": "enemies pass through wall; erupt to damage",
+    "notes": "Slow 16% (+24 T3 mini turrets), duration 6s (+2), erupt dmg 60+0.73x, push force 175, T1 +20% damage amp 7s (McGinnis's own damage per text)"
+   },
+   {
+    "ability": "4 Heavy Barrage",
+    "effect": "slow",
+    "duration_s": 8,
+    "radius_m": 4.5,
+    "range_m": 36,
+    "cooldown_s": 200,
+    "needs_partner_to": "keep targets in 4.5m impact zone",
+    "notes": "6 rockets/s, 8s (+6) = 48 rockets x 21+0.2x; T1 slow 24% 1s; self slowed"
+   },
+   {
+    "ability": "1 Sentry",
+    "effect": "debuff",
+    "duration_s": 35,
+    "radius_m": null,
+    "range_m": 30,
+    "cooldown_s": 18,
+    "needs_partner_to": "none",
+    "notes": "24 DPS+0.42x for 35s, 2 charges T"
+   }
+  ],
+  "payoff": [
+   {
+    "ability_or_item": "Heavy Barrage",
+    "needs": "stationary|clumped|cc'd",
+    "window": "8-14s needs target to stay in 4.5m radius",
+    "numbers": "48 x 21 = 1008 base (+0.2x per rocket) per target; ExplosionFalloffDisabled"
+   }
+  ],
+  "ally_effects": [
+   {
+    "ability": "Medicinal Specter",
+    "what": "heal",
+    "range_m": 6,
+    "duration_s": 6.5,
+    "numbers": "25+0.3x spirit regen to allies in 6m (+3m T3), stamina recovery +100% T2, +2% max HP regen T3; heals turrets too"
+   }
+  ],
+  "item_hooks": [
+   {
+    "item": "Spirit power",
+    "why": "specter 0.3x, turrets 0.42x, barrage 0.2x"
+   }
+  ],
+  "extends_or_is_extended_by": "Barrage wants a held target for 8s: a stun of 1-2s is not enough; a zone/tether chain is. Specter heals partner in 6m."
+ }
+}

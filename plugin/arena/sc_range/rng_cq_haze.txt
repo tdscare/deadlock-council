@@ -1,0 +1,602 @@
+meta hero Haze
+meta kind ISOLATED ITEM
+meta checkpoint Level 18 stat floor, 0 souls spent, items given per block
+meta build none (mechanic discovery)
+meta items upgrade_close_range
+meta question Does Close Quarters add damage inside its range and nothing outside, and where is the edge?
+meta purpose measure the item activation edge in game units with verified distances; not a build verdict
+meta mechanics range-gated gun damage; Haze gun only, no abilities
+meta excluded all abilities and all other items; says nothing about a full build
+meta assumed none
+meta levels_mode isolated
+meta expectedstate items=none at start of every block
+meta accmode body-only
+meta accwhy hit counts are verified per block
+meta abilities gun only
+meta runs 1/1
+meta cond_start_stacks fresh pawn every block
+meta player_title Haze: Close Quarters range
+meta player_what Damage at 11 distances
+meta player_why Finding where the bonus stops
+meta player_short Close Quarters range
+meta player_expect Bonus near, none far
+setup Haze Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 60 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none|60u|body
+fire 2.0
+mark none
+rngreport A_none 60u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_close_range
+rng 60 20
+wait 0.5
+healreset
+rngreset
+mark RNG|B_cq|60u|body
+fire 2.0
+mark none
+moddump me
+rngreport B_cq 60u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 150 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none|150u|body
+fire 2.0
+mark none
+rngreport A_none 150u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_close_range
+rng 150 20
+wait 0.5
+healreset
+rngreset
+mark RNG|B_cq|150u|body
+fire 2.0
+mark none
+moddump me
+rngreport B_cq 150u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 300 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none|300u|body
+fire 2.0
+mark none
+rngreport A_none 300u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_close_range
+rng 300 20
+wait 0.5
+healreset
+rngreset
+mark RNG|B_cq|300u|body
+fire 2.0
+mark none
+moddump me
+rngreport B_cq 300u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 450 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none|450u|body
+fire 2.0
+mark none
+rngreport A_none 450u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_close_range
+rng 450 20
+wait 0.5
+healreset
+rngreset
+mark RNG|B_cq|450u|body
+fire 2.0
+mark none
+moddump me
+rngreport B_cq 450u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 500 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none|500u|body
+fire 2.0
+mark none
+rngreport A_none 500u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_close_range
+rng 500 20
+wait 0.5
+healreset
+rngreset
+mark RNG|B_cq|500u|body
+fire 2.0
+mark none
+moddump me
+rngreport B_cq 500u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 540 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none|540u|body
+fire 2.0
+mark none
+rngreport A_none 540u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_close_range
+rng 540 20
+wait 0.5
+healreset
+rngreset
+mark RNG|B_cq|540u|body
+fire 2.0
+mark none
+moddump me
+rngreport B_cq 540u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 580 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none|580u|body
+fire 2.0
+mark none
+rngreport A_none 580u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_close_range
+rng 580 20
+wait 0.5
+healreset
+rngreset
+mark RNG|B_cq|580u|body
+fire 2.0
+mark none
+moddump me
+rngreport B_cq 580u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 620 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none|620u|body
+fire 2.0
+mark none
+rngreport A_none 620u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_close_range
+rng 620 20
+wait 0.5
+healreset
+rngreset
+mark RNG|B_cq|620u|body
+fire 2.0
+mark none
+moddump me
+rngreport B_cq 620u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 700 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none|700u|body
+fire 2.0
+mark none
+rngreport A_none 700u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_close_range
+rng 700 20
+wait 0.5
+healreset
+rngreset
+mark RNG|B_cq|700u|body
+fire 2.0
+mark none
+moddump me
+rngreport B_cq 700u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 900 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none|900u|body
+fire 2.0
+mark none
+rngreport A_none 900u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_close_range
+rng 900 20
+wait 0.5
+healreset
+rngreset
+mark RNG|B_cq|900u|body
+fire 2.0
+mark none
+moddump me
+rngreport B_cq 900u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 1300 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none|1300u|body
+fire 2.0
+mark none
+rngreport A_none 1300u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_close_range
+rng 1300 20
+wait 0.5
+healreset
+rngreset
+mark RNG|B_cq|1300u|body
+fire 2.0
+mark none
+moddump me
+rngreport B_cq 1300u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 150 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none_rep|150u|body
+fire 2.0
+mark none
+rngreport A_none_rep 150u minhit=85
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+rng 580 20
+wait 0.5
+healreset
+rngreset
+mark RNG|A_none_rep|580u|body
+fire 2.0
+mark none
+rngreport A_none_rep 580u minhit=85
+wait 0.5
+rngsummary
+mark none
+end

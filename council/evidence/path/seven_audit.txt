@@ -1,0 +1,51 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: seven
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:13Z
+BODY-SHA: 68497a1eb9aa9bb240da38c6bcf0e6176b63b134c35f3058f8ef59b83bfa902a
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Monster Rounds, Extra Spirit, Extra Stamina, Surge of Power, Cultist Sacrifice
+  Mid · L-R                -> main path (sequential): Spirit Lifesteal, Sprint Boots, Healbane, Enduring Speed, Mystic Vulnerability, Duration Extender, Compress Cooldown, Mystic Expansion
+  Late · L-R               -> main path (sequential): Arcane Surge, Escalating Exposure, Superior Duration, Unstoppable, Superior Cooldown, Infuser, Greater Expansion, Diviner's Kevlar
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Dispel Magic, Spirit Resilience
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Spirit Burn, Boundless Spirit, Lightning Scroll, Divine Barrier, Refresher
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown, Juggernaut
+  Lost lane?               -> lane alternative (branch): 
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Spirit Burn, sell Healbane
+    function of Healbane: sustain; replacement Spirit Burn: range; roles lost: sustain  [VERIFIED GAME MECHANIC]
+    Healbane is a component of later items: no
+    held for 41600 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 3200/22400/20800 -> 3200/20800/27200; thresholds lost: none
+    trade ratio after the sale 0.40; selling Arcane Surge instead: 0.39 (-2.2%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Boundless Spirit, sell Cultist Sacrifice
+    function of Cultist Sacrifice: charges, range; replacement Boundless Spirit: stats only; roles lost: charges, range  [VERIFIED GAME MECHANIC]
+    Cultist Sacrifice is a component of later items: no
+    held for 45600 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 3200/22400/20800 -> 0/22400/27200; thresholds lost: none
+    trade ratio after the sale 0.50; selling Arcane Surge instead: 0.49 (-2.2%)  [MODELLED ESTIMATE]
+    model limit: Cultist Sacrifice has an active effect (PRESS) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Lightning Scroll, sell Arcane Surge
+    function of Arcane Surge: duration; replacement Lightning Scroll: slow, stun; roles lost: duration  [VERIFIED GAME MECHANIC]
+    Arcane Surge is a component of later items: no
+    held for 34400 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 3200/22400/20800 -> 3200/22400/25600; thresholds lost: none
+    trade ratio after the sale 0.39; selling Healbane instead: 0.40 (+2.3%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Refresher, sell Infuser
+    function of Infuser: spirit_resist, sustain; replacement Refresher: bullet_resist, spirit_resist; roles lost: sustain  [VERIFIED GAME MECHANIC]
+    Infuser is a component of later items: no
+    held for 15200 souls of purchases; resale 3200, net cost of having owned it 3200
+    investment before/after gun/vit/spirit 3200/22400/20800 -> 3200/16000/27200; thresholds lost: none
+    trade ratio after the sale 0.26; selling Arcane Surge instead: 0.51 (+97.2%)  [MODELLED ESTIMATE]
+    model limit: Infuser has an active effect (INSTANT_CAST) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

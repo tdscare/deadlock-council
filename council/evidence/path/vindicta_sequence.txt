@@ -1,0 +1,92 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: vindicta
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:12:30Z
+BODY-SHA: 493d2655d465e0084b4c8cc9b187b22736c2e898ac89ea608b62a0e3a3a3adbe
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  High-Velocity Rounds: retained-or-upgraded (-> Sharpshooter)
+  Long Range: retained-or-upgraded (-> Sharpshooter)
+  Sharpshooter: retained
+  Rapid Rounds: retained-or-upgraded (-> Swift Striker,Burst Fire)
+  Extended Magazine: retained-or-upgraded (-> Titanic Magazine)
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Bullet Lifesteal: retained-or-upgraded (-> Leech)
+  Rapid Recharge: retained
+  Counterspell: retained
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed)
+  Enduring Speed: retained
+  Quicksilver Reload: retained-or-upgraded (-> Mercurial Magnum)
+  Swift Striker: retained
+  Titanic Magazine: retained
+  Spirit Lifesteal: retained-or-upgraded (-> Leech)
+  Mercurial Magnum: retained
+  Burst Fire: retained
+  Leech: retained
+  Ricochet: retained
+  Blood Tribute: retained
+  Lucky Shot: retained
+  Healing Rite: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Spiritual Overflow: situational-luxury
+  Vampiric Burst: situational-luxury
+  Divine Barrier: situational-luxury
+  Juggernaut: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Healing Rite
+  Early · L-R                -> main path (sequential): High-Velocity Rounds, Long Range, Sharpshooter, Rapid Rounds, Extended Magazine, Extra Charge, Bullet Lifesteal, Rapid Recharge
+  Mid · L-R                  -> main path (sequential): Counterspell, Sprint Boots, Enduring Speed, Quicksilver Reload, Swift Striker, Titanic Magazine, Spirit Lifesteal, Mercurial Magnum
+  Late · L-R                 -> main path (sequential): Burst Fire, Leech, Ricochet, Blood Tribute, Lucky Shot
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Resilience, Unstoppable, Dispel Magic
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Spiritual Overflow, Vampiric Burst, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Juggernaut
+
+## Swift Striker: sold when buying Spiritual Overflow (I'm rich as fuck, luxury)
+  role of Swift Striker: retained; role of Spiritual Overflow: situational-luxury
+  Swift Striker: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 16800 souls (~15.2 min), replaced at ~36.0 min -> owned ~20.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 32000/11200/9600 -> after 30400/11200/9600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 79 min | window TR | key purchase times (min)
+  as built                                    |         118332 |      2.37 | Swift Striker 15, Spiritual Overflow 36
+  keep Swift Striker (slot cap ignored)       |         123285 |      2.92 | Swift Striker 15, Spiritual Overflow 36
+  skip Swift Striker                          |         117499 |      2.16 | Spiritual Overflow 36
+  sell Titanic Magazine instead               |         119370 |      2.51 | Swift Striker 15, Spiritual Overflow 36
+  keep Swift Striker (slot cap ignored) vs as built: d souls +1294, d window TR +4.8% | souls: MODEL-ONLY (sign robust in 82% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: +, 0.75: -); beta (0.0: +, 0.5: -))
+  skip Swift Striker vs as built: d souls -317, d window TR -3.9% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Titanic Magazine instead vs as built: d souls +160, d window TR +1.1% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: +, 0.75: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -))
+  FINDINGS: a computed alternative sequence is better: keep Swift Striker (slot cap ignored)
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): keep Swift Striker (slot cap ignored); evidence tier: MODEL-ONLY; flipping assumptions: keep Swift Striker (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with hit (0.35: +, 0.75: -); beta (0.0: +, 0.5: -)) | skip Swift Striker: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Titanic Magazine instead: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: +, 0.75: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -))
+
+## Titanic Magazine: sold when buying Vampiric Burst (I'm rich as fuck, luxury)
+  role of Titanic Magazine: retained; role of Vampiric Burst: situational-luxury
+  Titanic Magazine: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 17600 souls (~15.8 min), replaced at ~36.0 min -> owned ~20.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 25600/17600/9600 -> after 24000/17600/9600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 79 min | window TR | key purchase times (min)
+  as built                                    |         128056 |      4.38 | Titanic Magazine 16, Vampiric Burst 36
+  keep Titanic Magazine (slot cap ignored)    |         130156 |      4.86 | Titanic Magazine 16, Vampiric Burst 36
+  skip Titanic Magazine                       |         129432 |      4.69 | Vampiric Burst 36
+  sell Swift Striker instead                  |         124844 |      3.63 | Titanic Magazine 16, Vampiric Burst 36
+  keep Titanic Magazine (slot cap ignored) vs as built: d souls +587, d window TR +1.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: +, 0.75: -); beta (0.0: +, 0.5: -))
+  skip Titanic Magazine vs as built: d souls +292, d window TR +1.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  sell Swift Striker instead vs as built: d souls -751, d window TR -3.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  ammo mechanics (clip 19, reload 2.914 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Titanic Magazine): 8 s trade 74 bullets (0% not firing), 20 s 143 bullets (22% not firing, 3.8 magazines), damage 20 s 10070, refill uses 2.0
+    keep Titanic Magazine: 8 s trade 74 bullets (0% not firing), 20 s 164 bullets (10% not firing, 2.9 magazines), damage 20 s 12303, refill uses 2.0
+    without Vampiric Burst (keep Titanic Magazine): 8 s trade 73 bullets (0% not firing), 20 s 153 bullets (15% not firing, 2.7 magazines), damage 20 s 11185, refill uses 1.0
+    sell Swift Striker instead: 8 s trade 67 bullets (0% not firing), 20 s 155 bullets (6% not firing, 2.7 magazines), damage 20 s 11608, refill uses 2.0
+    sustained 20 s gun damage: selling Titanic Magazine costs 18% vs keeping it (both with Vampiric Burst); Vampiric Burst adds +10% on top of Titanic Magazine; selling Swift Striker instead: -6% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  model limit: Vampiric Burst has an active effect (INSTANT_CAST) not priced
+  FINDINGS: the sale of Titanic Magazine lowers modelled sustained gun damage by 18% (ammo mechanics)
+  VERDICT: REVIEW: selling Titanic Magazine costs sustained gun output; Vampiric Burst does not replace its ammo role (quantified above). Alternatives for the slot: sell Swift Striker (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED); flipping assumptions: keep Titanic Magazine (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with hit (0.35: +, 0.75: -); beta (0.0: +, 0.5: -)) | skip Titanic Magazine: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Swift Striker instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

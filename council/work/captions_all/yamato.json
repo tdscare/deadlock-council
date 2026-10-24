@@ -1,0 +1,3338 @@
+{
+ "schema": 1,
+ "id": "yamato",
+ "hero": "Yamato",
+ "name": "Rizuhble's Sushi Chef Yamato",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Healing Rite",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, once you're out of slots.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-9,600 (levels 1-16). Abilities gained (both point models agree): Flying Slash T3, Shadow Transformation unlocked. 4.8k spikes: spirit 4.8k at Spirit Snatch. Ultimate (Shadow Transformation) is available from Stalker.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "yamato:7:phase_range:3009",
+    "yamato:7:phase_abilities:3010",
+    "yamato:7:phase_spikes:3019",
+    "yamato:7:phase_ult:3020"
+   ],
+   "items": [
+    {
+     "name": "Restorative Shot",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary, sold when you buy Spirit Burn later.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Melee Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Lifestrike, 10400 souls (~10.4 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Lifestrike, 9600 souls (~9.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Strike",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Spirit Snatch completes 5,600 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Spirit Snatch completes 4.8k spirit in 5600 souls (~5.6 min), 3 purchases",
+     "claim_ids": [
+      "yamato:3:spike_progress:2998"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:3:spike_progress:2998",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Stalker",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only and the build never reaches the 4.8k weapon tier through the core: timing review",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 33.3 to Power Slash's full charge damage (1.85x scaling), your steepest spirit scaling.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:5:spirit_scaling:3004"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:5:spirit_scaling:3004",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Snatch",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power. Upgrade of Spirit Strike (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:6:spike_complete:3005",
+      "yamato:6:upgrade_of:3006"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:6:spike_complete:3005",
+       true,
+       "inventory spirit: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "yamato:6:upgrade_of:3006",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Healing Booster",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Lifestrike completes 2,400 souls on. Upgrade of Extra Regen (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "imminent: Lifestrike completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "yamato:7:spike_progress:3007",
+      "yamato:7:upgrade_of:3008"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:7:spike_progress:3007",
+       true,
+       "2400"
+      ],
+      [
+       "yamato:7:upgrade_of:3008",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 9,600-27,200 (levels 16-29). Abilities gained (both point models agree): Power Slash T3, Crimson Slash T3. Your biggest single spirit hit (Power Slash, full charge damage) grows from 279 to 654. 4.8k spikes: vitality 4.8k at Lifestrike.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "yamato:15:phase_range:3038",
+    "yamato:15:phase_abilities:3039",
+    "yamato:15:phase_power:3040",
+    "yamato:15:phase_spikes:3048"
+   ],
+   "items": [
+    {
+     "name": "Lifestrike",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus. Upgrade of Melee Lifesteal (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:8:spike_complete:3021",
+      "yamato:8:upgrade_of:3022"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:8:spike_complete:3021",
+       true,
+       "inventory vitality: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "yamato:8:upgrade_of:3022",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Recharging Rush",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only and the build never reaches the 4.8k weapon tier through the core: timing review",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Health",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 8k tier completes at Colossus, 29600.0 souls (~29.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Torment Pulse",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Power Slash (536) clears its 80-damage trigger.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:13:threshold_now:3030"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:13:threshold_now:3030",
+       true,
+       "instances above: [(1, 535.64)]"
+      ]
+     ]
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 70.5 to Power Slash's full charge damage (2.35x scaling), your steepest spirit scaling. Takes spirit from 8,800 to 13,600 invested: bonus 52 to 59 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:14:spirit_scaling:3034",
+      "yamato:14:invest_step:3032",
+      "yamato:14:upgrade_of:3033"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:14:spirit_scaling:3034",
+       true,
+       ""
+      ],
+      [
+       "yamato:14:invest_step:3032",
+       true,
+       "inventory spirit: before 8800, after 13600, threshold 11200"
+      ],
+      [
+       "yamato:14:upgrade_of:3033",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": "Power Slash (654) clears its 165-damage trigger. Takes spirit from 13,600 to 16,000 invested: bonus 59 to 66 spirit power. Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:15:threshold_now:3036",
+      "yamato:15:invest_step:3035",
+      "yamato:15:upgrade_of:3037"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:15:threshold_now:3036",
+       true,
+       "instances above: [(1, 653.892)]"
+      ],
+      [
+       "yamato:15:invest_step:3035",
+       true,
+       "inventory spirit: before 13600, after 16000, threshold 16000"
+      ],
+      [
+       "yamato:15:upgrade_of:3037",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 27,200-45,600 (levels 29-35).",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "yamato:18:phase_range:3056"
+   ],
+   "items": [
+    {
+     "name": "Mystic Reverb",
+     "imbue": "1",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 16,000 to 22,400 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": "One Power Slash hit (758) alone passes the 500 spirit-damage trigger. Takes spirit from 22,400 to 28,800 invested: bonus 75 to 100 spirit power. Replaces Restorative Shot: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:17:burn_trigger:3051",
+      "yamato:17:invest_step:3052",
+      "yamato:17:sell_swap:3053"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Restorative Shot for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:17:burn_trigger:3051",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "yamato:17:invest_step:3052",
+       true,
+       "inventory spirit: before 22400, after 28800, threshold 28800"
+      ],
+      [
+       "yamato:17:sell_swap:3053",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Colossus",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 7,200 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Lifestrike? Buy what is killing you, cheapest first. Not dying? Skip. Sell Stalker.",
+   "desc": "Dying after Lifestrike? Buy what is killing you, cheapest first. Not dying? Skip. Sell Stalker.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:19:defence_parry:3060"
+     ],
+     "lint": [],
+     "legacy_note": "A big ult you can see coming, like Lash's or Infernus's.",
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:19:defence_parry:3060",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:19:defence_purge:3061"
+     ],
+     "lint": [],
+     "legacy_note": "Hexes and slows stop you getting in.",
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:19:defence_purge:3061",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Reactive Barrier",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Stuns keep catching you on the way in.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:19:defence_bullet:3062"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry is out-shooting you.",
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:19:defence_bullet:3062",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:19:defence_spirit:3063"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:19:defence_spirit:3063",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Healbane",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Their team heals a lot. Spirit Burn does this job late, so sell it then.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 12,800 to 19,200 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Stalker for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spiritual Overflow",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Spirit Lifesteal for 4,800 more souls: bonus fire rate 0 to 25; bonus spirit lifesteal 0 to 10..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:19:upgrade_delta:3066"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Spirit Lifesteal.",
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:19:upgrade_delta:3066",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Diviner's Kevlar",
+     "imbue": null,
+     "caption": "Casting Shadow Transformation gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (150s at your current ultimate tier), so it is a once-per-fight burst of defence. Takes vitality from 12,800 to 19,200 invested: bonus 50 to 54 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:19:ult_trigger:3068",
+      "yamato:19:invest_step:3069"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Torment Pulse for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:19:ult_trigger:3068",
+       true,
+       ""
+      ],
+      [
+       "yamato:19:invest_step:3069",
+       true,
+       "inventory vitality: before 12800, after 19200, threshold 16000"
+      ]
+     ]
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 182s of base cooldown across your kit, 150s of it the ultimate; the item has its own cooldown of 300s. Replaces Recharging Rush: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:19:refresher:3071",
+      "yamato:19:sell_swap:3072"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Recharging Rush for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:19:refresher:3071",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "yamato:19:sell_swap:3072",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:19:defence_barrier:3073"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:19:defence_barrier:3073",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Healing Tempo",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "yamato:19:upgrade_delta:3074"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Healing Booster.",
+     "temporary": false,
+     "verify": [
+      [
+       "yamato:19:upgrade_delta:3074",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "yamato:19:temporary_sold:2991": {
+   "id": "yamato:19:temporary_sold:2991",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, once you're out of slots.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 19,
+    "item": "Healing Rite",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it once you're out of slots."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Healing Rite",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:0:spike_progress:2992": {
+   "id": "yamato:0:spike_progress:2992",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Restorative Shot",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "yamato:0:temporary_sold:2993": {
+   "id": "yamato:0:temporary_sold:2993",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Spirit Burn later.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 34,
+   "point": {
+    "idx": 0,
+    "item": "Restorative Shot",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Restorative Shot",
+    "buyer": "Spirit Burn"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:1:spike_progress:2994": {
+   "id": "yamato:1:spike_progress:2994",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Melee Lifesteal",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "yamato:1:component_for:2995": {
+   "id": "yamato:1:component_for:2995",
+   "kind": "component_for",
+   "phrase": "From Lifestrike: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Melee Lifesteal",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 10400,
+    "event": "Lifestrike"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Lifestrike"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:2:spike_progress:2996": {
+   "id": "yamato:2:spike_progress:2996",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Extra Regen",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "yamato:2:component_for:2997": {
+   "id": "yamato:2:component_for:2997",
+   "kind": "component_for",
+   "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Extra Regen",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 7200,
+    "event": "Healing Booster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Healing Booster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:3:spike_progress:2998": {
+   "id": "yamato:3:spike_progress:2998",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Spirit Snatch completes 5,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Spirit Strike",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 5600,
+    "event": "Spirit Snatch completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    5600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "yamato:3:component_for:2999": {
+   "id": "yamato:3:component_for:2999",
+   "kind": "component_for",
+   "phrase": "From Spirit Snatch: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Spirit Strike",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Spirit Snatch"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Snatch"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:4:spike_progress:3000": {
+   "id": "yamato:4:spike_progress:3000",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Stalker",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "yamato:4:swap_candidate:3001": {
+   "id": "yamato:4:swap_candidate:3001",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Witchmail later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 4,
+    "item": "Stalker",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Stalker",
+    "buyer": "Witchmail"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:5:spike_progress:3002": {
+   "id": "yamato:5:spike_progress:3002",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Improved Spirit",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "yamato:5:component_for:3003": {
+   "id": "yamato:5:component_for:3003",
+   "kind": "component_for",
+   "phrase": "From Boundless Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Improved Spirit",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 18400,
+    "event": "Boundless Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Boundless Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:5:spirit_scaling:3004": {
+   "id": "yamato:5:spirit_scaling:3004",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 33.3 to Power Slash's full charge damage (1.85x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_power_slash"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 5,
+    "item": "Improved Spirit",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "FullChargeDamage"
+   },
+   "numbers": [
+    "18.0",
+    "33.3",
+    "1.85"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "yamato:6:spike_complete:3005": {
+   "id": "yamato:6:spike_complete:3005",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 6,
+    "item": "Spirit Snatch",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "yamato:6:upgrade_of:3006": {
+   "id": "yamato:6:upgrade_of:3006",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Strike (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 6,
+    "item": "Spirit Snatch",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Strike"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:7:spike_progress:3007": {
+   "id": "yamato:7:spike_progress:3007",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Lifestrike completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Lifestrike completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "yamato:7:upgrade_of:3008": {
+   "id": "yamato:7:upgrade_of:3008",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Regen (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Regen"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:7:phase_range:3009": {
+   "id": "yamato:7:phase_range:3009",
+   "kind": "phase_range",
+   "phrase": "Souls 0-9,600 (levels 1-16).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Healing Booster",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "9,600",
+    "1",
+    "16"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:7:phase_abilities:3010": {
+   "id": "yamato:7:phase_abilities:3010",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Flying Slash T3, Shadow Transformation unlocked.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Healing Booster",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:7:phase_spikes:3019": {
+   "id": "yamato:7:phase_spikes:3019",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Spirit Snatch.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Healing Booster",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:7:phase_ult:3020": {
+   "id": "yamato:7:phase_ult:3020",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Shadow Transformation) is available from Stalker.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Healing Booster",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:8:spike_complete:3021": {
+   "id": "yamato:8:spike_complete:3021",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 8,
+    "item": "Lifestrike",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "yamato:8:upgrade_of:3022": {
+   "id": "yamato:8:upgrade_of:3022",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Melee Lifesteal (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 8,
+    "item": "Lifestrike",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Melee Lifesteal"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:9:spike_progress:3023": {
+   "id": "yamato:9:spike_progress:3023",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 4,000 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 9,
+    "item": "Recharging Rush",
+    "souls": 13600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "yamato:9:swap_candidate:3024": {
+   "id": "yamato:9:swap_candidate:3024",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Refresher later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 9,
+    "item": "Recharging Rush",
+    "souls": 13600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Recharging Rush",
+    "buyer": "Refresher"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:10:invest_step:3025": {
+   "id": "yamato:10:invest_step:3025",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Spirit Lifesteal",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "yamato:11:spike_progress:3026": {
+   "id": "yamato:11:spike_progress:3026",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 7,200 of the 8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 11,
+    "item": "Extra Health",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 7200
+   },
+   "numbers": [
+    "7200",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 8000
+  },
+  "yamato:11:component_for:3027": {
+   "id": "yamato:11:component_for:3027",
+   "kind": "component_for",
+   "phrase": "From Colossus: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Extra Health",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 29600.0,
+    "event": "Colossus"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Colossus"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:12:invest_step:3028": {
+   "id": "yamato:12:invest_step:3028",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Torment Pulse",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "8000",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "yamato:12:swap_candidate:3029": {
+   "id": "yamato:12:swap_candidate:3029",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Diviner's Kevlar later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 12,
+    "item": "Torment Pulse",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Torment Pulse",
+    "buyer": "Diviner's Kevlar"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:13:threshold_now:3030": {
+   "id": "yamato:13:threshold_now:3030",
+   "kind": "threshold_now",
+   "phrase": "Power Slash (536) clears its 80-damage trigger.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_power_slash",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_flying_strike",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_healing_slash"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 13,
+    "item": "Mystic Burst",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "80.0",
+    "536"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 6.7,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "yamato:13:component_for:3031": {
+   "id": "yamato:13:component_for:3031",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Mystic Burst",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 7200,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:14:invest_step:3032": {
+   "id": "yamato:14:invest_step:3032",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 8,800 to 13,600 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Boundless Spirit",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8800",
+    "13600",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "yamato:14:upgrade_of:3033": {
+   "id": "yamato:14:upgrade_of:3033",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 14,
+    "item": "Boundless Spirit",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:14:spirit_scaling:3034": {
+   "id": "yamato:14:spirit_scaling:3034",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 70.5 to Power Slash's full charge damage (2.35x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_power_slash"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 14,
+    "item": "Boundless Spirit",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "FullChargeDamage"
+   },
+   "numbers": [
+    "30.0",
+    "70.5",
+    "2.35"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "yamato:15:invest_step:3035": {
+   "id": "yamato:15:invest_step:3035",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 13,600 to 16,000 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Tankbuster",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "13600",
+    "16000",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "yamato:15:threshold_now:3036": {
+   "id": "yamato:15:threshold_now:3036",
+   "kind": "threshold_now",
+   "phrase": "Power Slash (654) clears its 165-damage trigger.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_power_slash",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_flying_strike",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_healing_slash"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 15,
+    "item": "Tankbuster",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "165.0",
+    "654"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 3.96,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "yamato:15:upgrade_of:3037": {
+   "id": "yamato:15:upgrade_of:3037",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Tankbuster",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:15:phase_range:3038": {
+   "id": "yamato:15:phase_range:3038",
+   "kind": "phase_range",
+   "phrase": "Souls 9,600-27,200 (levels 16-29).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Tankbuster",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Tankbuster",
+    "keys": []
+   },
+   "numbers": [
+    "9,600",
+    "27,200",
+    "16",
+    "29"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:15:phase_abilities:3039": {
+   "id": "yamato:15:phase_abilities:3039",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Power Slash T3, Crimson Slash T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Tankbuster",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Tankbuster",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:15:phase_power:3040": {
+   "id": "yamato:15:phase_power:3040",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Power Slash, full charge damage) grows from 279 to 654.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_power_slash",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Tankbuster",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Tankbuster",
+    "keys": []
+   },
+   "numbers": [
+    "279",
+    "654"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:15:phase_spikes:3048": {
+   "id": "yamato:15:phase_spikes:3048",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Lifestrike.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Tankbuster",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Tankbuster",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:16:invest_step:3049": {
+   "id": "yamato:16:invest_step:3049",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 16,000 to 22,400 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Mystic Reverb",
+    "souls": 33600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "16000",
+    "22400",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "yamato:16:threshold_now:3050": {
+   "id": "yamato:16:threshold_now:3050",
+   "kind": "threshold_now",
+   "phrase": "Power Slash (684) clears its 100-damage trigger.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_power_slash"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 16,
+    "item": "Mystic Reverb",
+    "souls": 33600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 100.0,
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "100.0",
+    "684"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 6.84,
+   "caveat": "item has no localisation text; trigger semantics are modelled",
+   "contradiction": false
+  },
+  "yamato:17:burn_trigger:3051": {
+   "id": "yamato:17:burn_trigger:3051",
+   "kind": "burn_trigger",
+   "phrase": "One Power Slash hit (758) alone passes the 500 spirit-damage trigger.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 60,
+   "point": {
+    "idx": 17,
+    "item": "Spirit Burn",
+    "souls": 40000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "758",
+    "500"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "yamato:17:invest_step:3052": {
+   "id": "yamato:17:invest_step:3052",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 22,400 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Spirit Burn",
+    "souls": 40000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "22400",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "yamato:17:sell_swap:3053": {
+   "id": "yamato:17:sell_swap:3053",
+   "kind": "sell_swap",
+   "phrase": "Replaces Restorative Shot: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 17,
+    "item": "Spirit Burn",
+    "souls": 40000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Restorative Shot",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Restorative Shot"
+  },
+  "yamato:18:invest_step:3054": {
+   "id": "yamato:18:invest_step:3054",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 7,200 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Colossus",
+    "souls": 45600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "12800",
+    "42.0",
+    "50.0",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "yamato:18:upgrade_of:3055": {
+   "id": "yamato:18:upgrade_of:3055",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Health (already owned): costs 5,600 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Colossus",
+    "souls": 45600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Health"
+    ]
+   },
+   "numbers": [
+    "5600",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:18:phase_range:3056": {
+   "id": "yamato:18:phase_range:3056",
+   "kind": "phase_range",
+   "phrase": "Souls 27,200-45,600 (levels 29-35).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Colossus",
+    "souls": 45600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Colossus",
+    "keys": []
+   },
+   "numbers": [
+    "27,200",
+    "45,600",
+    "29",
+    "35"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:19:defence_parry:3060": {
+   "id": "yamato:19:defence_parry:3060",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Counterspell",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ult you can see coming, like Lash's or Infernus's."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:19:defence_purge:3061": {
+   "id": "yamato:19:defence_purge:3061",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Dispel Magic",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Hexes and slows stop you getting in."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:19:defence_bullet:3062": {
+   "id": "yamato:19:defence_bullet:3062",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Metal Skin",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry is out-shooting you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:19:defence_spirit:3063": {
+   "id": "yamato:19:defence_spirit:3063",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Resilience",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:19:invest_step:3064": {
+   "id": "yamato:19:invest_step:3064",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 12,800 to 19,200 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Witchmail",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Stalker for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "19200",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "yamato:19:sell_swap:3065": {
+   "id": "yamato:19:sell_swap:3065",
+   "kind": "sell_swap",
+   "phrase": "Replaces Stalker: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Witchmail",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Stalker for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Stalker",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Stalker"
+  },
+  "yamato:19:upgrade_delta:3066": {
+   "id": "yamato:19:upgrade_delta:3066",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Spirit Lifesteal for 4,800 more souls: bonus fire rate 0 to 25; bonus spirit lifesteal 0 to 10..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_overflow",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_health_stealing_magic"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Spiritual Overflow",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Spirit Lifesteal."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Spirit Lifesteal"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "25",
+    "0",
+    "10"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:19:upgrade_of:3067": {
+   "id": "yamato:19:upgrade_of:3067",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Spiritual Overflow",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Spirit Lifesteal."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "yamato:19:ult_trigger:3068": {
+   "id": "yamato:19:ult_trigger:3068",
+   "kind": "ult_trigger",
+   "phrase": "Casting Shadow Transformation gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (150s at your current ultimate tier), so it is a once-per-fight burst of defence.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_diviners_kevlar",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_infinity_slash"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 19,
+    "item": "Diviner's Kevlar",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Torment Pulse for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "ult_tier",
+    "min_tier": 2
+   },
+   "numbers": [
+    "1,000",
+    "40",
+    "20",
+    "150"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "yamato:19:invest_step:3069": {
+   "id": "yamato:19:invest_step:3069",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 12,800 to 19,200 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_yamato m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Diviner's Kevlar",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Torment Pulse for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "19200",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "yamato:19:sell_swap:3070": {
+   "id": "yamato:19:sell_swap:3070",
+   "kind": "sell_swap",
+   "phrase": "Replaces Torment Pulse: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Diviner's Kevlar",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Torment Pulse for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Torment Pulse",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Torment Pulse"
+  },
+  "yamato:19:refresher:3071": {
+   "id": "yamato:19:refresher:3071",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 182s of base cooldown across your kit, 150s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_power_slash",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_flying_strike",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_healing_slash",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_infinity_slash"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 19,
+    "item": "Refresher",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Recharging Rush for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "182",
+    "150",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "yamato:19:sell_swap:3072": {
+   "id": "yamato:19:sell_swap:3072",
+   "kind": "sell_swap",
+   "phrase": "Replaces Recharging Rush: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Refresher",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Recharging Rush for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Recharging Rush",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Recharging Rush"
+  },
+  "yamato:19:defence_barrier:3073": {
+   "id": "yamato:19:defence_barrier:3073",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:19:upgrade_delta:3074": {
+   "id": "yamato:19:upgrade_delta:3074",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healbuff",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healing_booster"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Healing Tempo",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Healing Booster"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "35",
+    "0",
+    "10"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "yamato:19:upgrade_of:3075": {
+   "id": "yamato:19:upgrade_of:3075",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Healing Booster (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Healing Tempo",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Healing Booster"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "yamato",
+   "item": "Melee Lifesteal",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Lifestrike, 10400 souls (~10.4 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "yamato:1:component_for:2995",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Lifestrike: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 10400,
+      "event": "Lifestrike"
+     }
+    }
+   ]
+  },
+  {
+   "build": "yamato",
+   "item": "Extra Regen",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Lifestrike, 9600 souls (~9.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "yamato:2:component_for:2997",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 7200,
+      "event": "Healing Booster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "yamato",
+   "item": "Spirit Strike",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Spirit Snatch completes 4.8k spirit in 5600 souls (~5.6 min), 3 purchases",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "yamato:3:spike_progress:2998",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Spirit Snatch completes 5,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 5600,
+      "event": "Spirit Snatch completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "yamato:3:component_for:2999",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spirit Snatch: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Spirit Snatch"
+     }
+    }
+   ]
+  },
+  {
+   "build": "yamato",
+   "item": "Stalker",
+   "section": "early",
+   "cls": "c",
+   "why": "weapon investment only and the build never reaches the 4.8k weapon tier through the core: timing review",
+   "souls": 4800,
+   "unpublished": []
+  },
+  {
+   "build": "yamato",
+   "item": "Healing Booster",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Lifestrike completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 9600,
+   "unpublished": [
+    {
+     "id": "yamato:7:spike_progress:3007",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Lifestrike completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Lifestrike completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "yamato",
+   "item": "Recharging Rush",
+   "section": "mid",
+   "cls": "c",
+   "why": "weapon investment only and the build never reaches the 4.8k weapon tier through the core: timing review",
+   "souls": 13600,
+   "unpublished": []
+  },
+  {
+   "build": "yamato",
+   "item": "Extra Health",
+   "section": "mid",
+   "cls": "c",
+   "why": "vitality investment only; its 8k tier completes at Colossus, 29600.0 souls (~29.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 16000,
+   "unpublished": [
+    {
+     "id": "yamato:11:component_for:3027",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Colossus: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 29600.0,
+      "event": "Colossus"
+     }
+    }
+   ]
+  },
+  {
+   "build": "yamato",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ult you can see coming, like Lash's or Infernus's."
+  },
+  {
+   "build": "yamato",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Hexes and slows stop you getting in."
+  },
+  {
+   "build": "yamato",
+   "item": "Reactive Barrier",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 45600.0,
+   "unpublished": []
+  },
+  {
+   "build": "yamato",
+   "item": "Reactive Barrier",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep catching you on the way in."
+  },
+  {
+   "build": "yamato",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry is out-shooting you."
+  },
+  {
+   "build": "yamato",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit."
+  },
+  {
+   "build": "yamato",
+   "item": "Healbane",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 45600.0,
+   "unpublished": []
+  },
+  {
+   "build": "yamato",
+   "item": "Healbane",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their team heals a lot. Spirit Burn does this job late, so sell it then."
+  }
+ ],
+ "stats": {
+  "g": 7,
+  "c": 5,
+  "b": 2,
+  "a": 16,
+  "d": 2
+ }
+}

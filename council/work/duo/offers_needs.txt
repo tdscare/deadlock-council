@@ -1,0 +1,543 @@
+
+== Infernus ['MediumRange', 'RapidFire'] hp 830.0 {}
+  O slow Napalm T0 enemy {'pct': 28.0, 'duration': 8.0} DATA   
+  O amp_caster_only Napalm T0 enemy {'pct': 33.0} INFER shared=False  
+  O antiheal Napalm T3 enemy {'pct': 33.0} DATA   
+  O cc_stun Concussive Combustion T0 enemy {'duration': 2.15} DATA   
+  N conditional_marked_or_revealed Napalm {'state': 'marked_or_revealed', 'damage': 40.0} DATA ['ability_incendiary_projectile.IncomingDamagePercentFromCaster=33']
+  N delayed_payload Concussive Combustion {'delay': 3.25, 'radius': 22.0, 'damage': 225.0} DATA ['ability_fire_bomb.ExplodeDelay=3.25']
+
+== Seven ['BurstFire', 'MediumRange'] hp 730.0 {}
+  O slow Lightning Ball T2 enemy {'pct': 28.0, 'duration': 'UNKNOWN'} DATA   
+  O cc_stun Static Charge T0 enemy {'duration': 1.8} DATA   
+  O shred_spirit Power Surge T3 enemy {'pct': 15.0, 'duration': 10.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  N delayed_payload Static Charge {'delay': 3.5, 'radius': 12.0, 'damage': 195.0} DATA ['citadel_ability_static_charge.ShockDelay=3.5']
+  N exposed_channel Storm Cloud {'channel': 14.0, 'interrupted_by': ['STUNNED'], 'radius': 40.0, 'damage': 0, 'dps': 160.0, 'range': 0} DATA ['citadel_ability_storm_cloud.AbilityChannelTime=14', "citadel_ability_storm_cloud interrupting=['STUNNED']"]
+  N zone_occupancy Storm Cloud {'radius': 40.0, 'duration': 14.0, 'dps': 160.0} DATA ['citadel_ability_storm_cloud DPS=160 radius=40 dur=14']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Vindicta ['LongRange', 'RapidFire'] hp 755.0 {}
+  O slow Stake T0 enemy {'pct': 40.0, 'duration': 'UNKNOWN'} DATA   
+  O displace_pull Stake T0 enemy {'EnemyDragSpeed': 1000.0} DATA   
+  O displace_tether Stake T0 enemy {'ChainLength': 9.0, 'CaptureRadius': 11.0, 'ChainDuration': 2.5} DATA   
+  O shred_bullet Crow Familiar T0 enemy {'pct': 14.0, 'duration': 7.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O shred_spirit Crow Familiar T0 enemy {'pct': 14.0, 'duration': 7.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O antiheal Crow Familiar T1 enemy {'pct': 35.0} DATA   
+  O economy Assassinate T0 self {'prop': 'BonusGoldOnKill', 'amount': 250.0} DATA   
+  N charge_or_lockon Assassinate {'delay': 1.0, 'damage': 90.0} DATA ['citadel_ability_hornet_snipe.TimeToFullCharge=1']
+  N conditional_low_health Assassinate {'state': 'low_health', 'damage': 90.0} DATA ['citadel_ability_hornet_snipe.LowHealthEnemyDamageBonus=170', 'citadel_ability_hornet_snipe.LowHealthEnemyThresholdPct=50']
+  N long_range_weapon primary weapon {} DATA ['heroes.vdata hero_hornet weapon attr LongRange']
+
+== Lady Geist ['HeavyHitter', 'MediumRange'] hp 880.0 {}
+  O amp_all Malice T0 enemy {'pct': 15.0, 'duration': 9.0} DATA shared=UNKNOWN  
+  O cc_silence Soul Exchange T2 enemy {'duration': 3.0} DATA   
+  O slow Soul Exchange T0 enemy {'pct': 56.0, 'duration': 'UNKNOWN'} DATA   
+  N delayed_payload Essence Bomb {'delay': 0.65, 'radius': 9.0, 'damage': 140.0} DATA ['ability_blood_bomb.ArmingDuration=0.65']
+  N self_cost Essence Bomb {} DATA ['ability_blood_bomb.SelfDamagePct=30']
+  N conditional_stacks_on_target Malice {'state': 'stacks_on_target', 'damage': 48.2} DATA ['ability_blood_shards.MaxStacks=5']
+  N self_cost Malice {} DATA ['ability_blood_shards.HealthToDamage=48.2']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Abrams ['CloseRange', 'Spreadshot'] hp 800.0 {}
+  O cc_stun Shoulder Charge T0 enemy {'duration': 1.1} DATA   
+  O slow Shoulder Charge T1 enemy {'pct': 32.0, 'duration': 3.0} DATA   
+  O displace_pull Shoulder Charge T0 enemy {} TEXT   
+  O heal Infernal Resilience T0 self {'prop': 'BonusHealthRegen', 'amount': 1.0} DATA   
+  O cc_stun Seismic Impact T0 enemy {'duration': 2.4} DATA   
+  O displace_lift_toss Seismic Impact T0 enemy {'TossSpeed': 450.0} DATA   
+  O immunity Seismic Impact T0 self {'states': ['STATUS_IMMUNE', 'UNSTOPPABLE'], 'duration': 5.0} STATE   
+  N zone_occupancy Siphon Life {'radius': 10.0, 'duration': 6.0, 'dps': 40.0} DATA ['citadel_ability_bull_heal DPS=40 radius=10 dur=6']
+  N conditional_wall Shoulder Charge {'state': 'wall', 'damage': 30.0} TEXT ['citadel_ability_bull_charge text "wall"']
+  N close_range_weapon primary weapon {} DATA ['heroes.vdata hero_atlas weapon attr CloseRange']
+
+== Wraith ['MediumRange', 'RapidFire'] hp 730.0 {}
+  O slow Card Trick T0 enemy {'pct': 36.0, 'duration': 'UNKNOWN'} DATA   
+  O shred_bullet Card Trick T0 enemy {'pct': 11.0, 'duration': 5.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O barrier Project Mind T2 self {'amount': 300.0, 'duration': 0.0} DATA   
+  O cc_stun Telekinesis T0 enemy {'duration': 3.75} STATE   
+  O cc_silence Telekinesis T0 enemy {'duration': 3.75} STATE   
+  O cc_disarm Telekinesis T0 enemy {'duration': 3.75} STATE   
+  O slow Telekinesis T0 enemy {'pct': 32.0, 'duration': 'UNKNOWN'} DATA   
+  O displace_lift_toss Telekinesis T0 enemy {'LiftHeight': 80.0, 'LiftDuration': 2.0, 'TossDistance': 19.0} DATA   
+  N exposed_channel Telekinesis {'channel': 1.25, 'interrupted_by': ['STUNNED'], 'radius': None, 'damage': 200.0, 'dps': 0, 'range': 16.0} DATA ['citadel_ability_psychic_lift.AbilityChannelTime=1.25', "citadel_ability_psychic_lift interrupting=['STUNNED']"]
+
+== McGinnis ['MediumRange', 'RapidFire'] hp 780.0 {}
+  O heal Medicinal Specter T0 ally {'prop': 'ExternalBonusHealthRegen', 'amount': 25.0} DATA   
+  O slow Spectral Wall T0 enemy {'pct': 40.0, 'duration': 7.0} DATA   
+  O amp_caster_only Spectral Wall T1 enemy {'pct': 20.0} INFER shared=False  
+  O displace_knock_away Spectral Wall T0 enemy {'PushForce': 175.0} DATA   
+  O terrain Spectral Wall T0 area {'NumWallSegments': 8.0} DATA   
+  O slow Heavy Barrage T1 enemy {'pct': 24.0, 'duration': 1.0} DATA   
+  N conditional_wall Spectral Wall {'state': 'wall', 'damage': 60.0} DATA ['citadel_ability_fissure_wall.WallImpactRange=5']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Paradox ['BurstFire', 'MediumRange'] hp 730.0 {}
+  O slow Pulse Grenade T0 enemy {'pct': 20.0, 'duration': 8.0} DATA   
+  O amp_all Pulse Grenade T0 enemy {'pct': 8.0, 'duration': 8.0} DATA shared=UNKNOWN  
+  O slow Time Wall T0 enemy {'pct': 64.0, 'duration': 2.3} DATA   
+  O terrain Time Wall T0 area {'TimeWallWidth': 11.0, 'TimeWallHeight': 5.0, 'TimeWallDepth': 0.5, 'TimeWallDepthVisualScale': 0.16} DATA   
+  O displace_swap Paradoxical Swap T0 enemy {'MinSwapTime': 0.6, 'SwapTime': 1.0, 'MultiSwap': 7.0} DATA   
+  O barrier Paradoxical Swap T1 self {'amount': 200.0, 'duration': 0.0} DATA   
+  N conditional_wall Time Wall {'state': 'wall', 'damage': 0} TEXT ['citadel_ability_chrono_time_wall text "wall"']
+  N charge_or_lockon Kinetic Carbine {'delay': 2.5, 'damage': 0} DATA ['citadel_ability_chrono_kinetic_carbine.MaxChargeDuration=2.5']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Dynamo ['HeavyHitter', 'MediumRange', 'Projectile'] hp 880.0 {}
+  O slow Kinetic Pulse T2 enemy {'pct': 24.0, 'duration': 4.0} DATA   
+  O shred_bullet Kinetic Pulse T2 enemy {'pct': 15.0, 'duration': 4.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O displace_lift_toss Kinetic Pulse T0 enemy {'TossSpeed': 450.0, 'TossDuration': 1.0} DATA   
+  O displace_teleport_target Quantum Entanglement T0 ally {'AllyDistance': 13.0} DATA   
+  O ally_move Quantum Entanglement T0 ally {'duration': 1.4, 'cast_range': 16.0, 'AllyDistance': 13.0} DATA   
+  O cleanse Quantum Entanglement T3 ally {} DATA   
+  O heal Rejuvenating Aurora T0 ally {'prop': 'HealingPerSecond', 'amount': 30.0} DATA   
+  O ally_buff Rejuvenating Aurora T1 ally {'prop': 'MovementSpeedBonus', 'amount': 4.0, 'duration': 'UNKNOWN'} DATA   
+  O displace_lift_toss Singularity T0 enemy {'TossSpeed': 350.0} DATA   
+  N exposed_channel Rejuvenating Aurora {'channel': 6.0, 'interrupted_by': ['STUNNED'], 'radius': None, 'damage': 0, 'dps': 0, 'range': 0} DATA ['citadel_ability_nikuman.AbilityChannelTime=6', "citadel_ability_nikuman interrupting=['STUNNED']"]
+  N exposed_channel Singularity {'channel': 3.5, 'interrupted_by': ['STUNNED'], 'radius': 9.0, 'damage': 0, 'dps': 75.0, 'range': 0} DATA ['citadel_ability_self_vacuum.AbilityChannelTime=3.5', "citadel_ability_self_vacuum interrupting=['STUNNED']"]
+
+== Kelvin ['HeavyHitter', 'MediumRange', 'Projectile'] hp 880.0 {}
+  O slow Frost Grenade T0 enemy {'pct': 32.0, 'duration': 4.0} DATA   
+  O heal Frost Grenade T0 ally {'prop': 'HealAmount', 'amount': 90.0} DATA   
+  O displace_pull Ice Path T0 any {'IcePathPullInStrength': 20.0} DATA   
+  O ally_move Ice Path T0 ally {'duration': 8.0, 'cast_range': 'UNKNOWN'} TEXT   
+  O ally_buff Ice Path T0 ally {'prop': 'MoveSpeedBonus', 'amount': 4.0, 'duration': 8.0} DATA   
+  O slow Arctic Beam T0 enemy {'pct': 36.0, 'duration': 2.0} DATA   
+  O slow Frozen Shelter T0 enemy {'pct': 28.0, 'duration': 'UNKNOWN'} DATA   
+  O displace_pull Frozen Shelter T0 any {'EnemyDragSpeed': 1000.0} DATA   
+  O heal Frozen Shelter T0 ally {'prop': 'BonusHealthRegen', 'amount': 155.0} DATA   
+  O cleanse Frozen Shelter T3 ally {} DATA   
+  O terrain Frozen Shelter T0 area {'BlockerScaleFactor': 115.0} DATA   
+
+== Haze ['CloseRange', 'RapidFire'] hp 730.0 {}
+  O cc_sleep Sleep Dagger T0 enemy {'duration': 3.75, 'wake_delay_after_damage': 0.1, 'min_sleep': 0.2, 'damage_threshold': None} DATA  brk 
+  O slow Sleep Dagger T3 enemy {'pct': 40.0, 'duration': 3.0} DATA   
+  O shred_bullet Sleep Dagger T1 enemy {'pct': 10.0, 'duration': 6.0, 'per_stack': False, 'max_stacks': 15.0} DATA shared=UNKNOWN  
+  O cleanse Smoke Bomb T3 ally? {} DATA   
+  O immunity Smoke Bomb T0 self {'states': ['INVULNERABLE'], 'duration': 8.0} STATE   
+  O slow Fixation T1 enemy {'pct': 12.0, 'duration': 2.0} DATA   
+  N conditional_stacks_on_target Fixation {'state': 'stacks_on_target', 'damage': 0} DATA ['ability_stacking_damage.MaxStacks=80', 'ability_stacking_damage.DamageBonusFixedPerStack=0.31']
+  N close_range_weapon primary weapon {} DATA ['heroes.vdata hero_haze weapon attr CloseRange']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Holliday ['HeavyHitter', 'MediumRange'] hp 780.0 {}
+  O displace_lift_toss Powder Keg T0 enemy {'TossSpeed': 140.0, 'TossDuration': 0.4} DATA   
+  O cc_stun Bounce Pad T3 enemy {'duration': 0.7} DATA   
+  O displace_lift_toss Bounce Pad T0 enemy {'TossSpeed': 500.0} DATA   
+  O slow Crackshot T0 enemy {'pct': 60.0, 'duration': 2.0} DATA   
+  O shred_bullet Crackshot T2 enemy {'pct': 6.0, 'duration': 5.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O displace_pull Spirit Lasso T0 enemy {'GrabExtraTargetsRadiusMult': 2.0, 'FollowDistance': 60.0} DATA   
+  O displace_lift_toss Spirit Lasso T0 enemy {'LiftHeight': 7.0} DATA   
+  N delayed_payload Spirit Lasso {'delay': 0.5, 'radius': None, 'damage': 160.0} DATA ['ability_gravity_lasso.LiftInitialDelay=0.5']
+
+== Bebop ['BeamWeapon', 'MediumRange'] hp 880.0 {}
+  O displace_lift_toss Exploding Uppercut T0 any {'EnemyHeroTossVelocity': 20.0, 'TossDuration': 0.5} DATA   
+  O ally_move Exploding Uppercut T0 ally {'duration': 'UNKNOWN', 'cast_range': 'UNKNOWN', 'TossDurationFriendly': 0.3} TEXT   
+  O heal Exploding Uppercut T3 ally {'prop': 'MissingHPHeal', 'amount': 18.0} DATA   
+  O cooldown Exploding Uppercut T3 self {'prop': 'RestoreHookCooldown', 'amount': 1.0} DATA   
+  O slow Grapple Arm T0 enemy {'pct': 72.0, 'duration': 'UNKNOWN'} DATA   
+  O amp_caster_only Grapple Arm T1 enemy {'pct': 20.0} INFER shared=False  
+  O displace_pull Grapple Arm T0 any {} TEXT   
+  O ally_move Grapple Arm T0 ally {'duration': 'UNKNOWN', 'cast_range': 60.0, 'FriendlyHookIgnoreRange': 8.0} TEXT   
+  O slow Hyper Beam T0 enemy {'pct': 20.0, 'duration': 'UNKNOWN'} DATA   
+  N conditional_low_health Exploding Uppercut {'state': 'low_health', 'damage': 0} TEXT ['citadel_ability_uppercut text "missing health"']
+  N short_range Sticky Bomb {'range': 6.0, 'damage': 170.0} DATA ['citadel_ability_sticky_bomb.AbilityCastRange=6']
+  N self_cost Sticky Bomb {} DATA ['citadel_ability_sticky_bomb.SelfDamagePercent=20']
+  N delayed_payload Hyper Beam {'delay': 1.0, 'radius': None, 'damage': 0} DATA ['citadel_ability_bebop_laser_beam.AbilityCastDelay=1']
+  N exposed_channel Hyper Beam {'channel': 11.0, 'interrupted_by': ['STUNNED'], 'radius': None, 'damage': 0, 'dps': 268.0, 'range': 0} DATA ['citadel_ability_bebop_laser_beam.AbilityChannelTime=11', "citadel_ability_bebop_laser_beam interrupting=['STUNNED']"]
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Calico ['CloseRange', 'Spreadshot'] hp 730.0 {}
+  O shred_melee Gloom Bombs T2 enemy {'pct': 6.0, 'duration': 6.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O displace_lift_toss Gloom Bombs T0 enemy {'TossSpeed': 400.0} DATA   
+  O heal Leaping Slash T0 self {'prop': 'HealAmount', 'amount': 65.0} DATA   
+  O cooldown Leaping Slash T3 self {'prop': 'CooldownRefundPercent', 'amount': 50.0} DATA   
+  O economy Leaping Slash T2 self {'prop': 'BonusGoldOnKill', 'amount': 200.0} DATA   
+  O heal Ava T2 self {'prop': 'HealthRegen', 'amount': 15.0} DATA   
+  O heal Return to Shadows T3 self {'prop': 'HealAmount', 'amount': 450.0} DATA   
+  N short_range Leaping Slash {'range': 9.0, 'damage': 70.0} DATA ['ability_nano_dash.AbilityCastRange=9']
+  N exposed_channel Return to Shadows {'channel': 3.0, 'interrupted_by': ['STUNNED'], 'radius': 7.5, 'damage': 225.0, 'dps': 0, 'range': 0} DATA ['ability_nano_shadow_pulse.AbilityChannelTime=3', "ability_nano_shadow_pulse interrupting=['STUNNED']"]
+  N close_range_weapon primary weapon {} DATA ['heroes.vdata hero_nano weapon attr CloseRange']
+
+== Grey Talon ['HeavyHitter', 'MediumRange', 'Projectile'] hp 780.0 {}
+  O slow Rain of Arrows T1 enemy {'pct': 24.0, 'duration': 1.5} DATA   
+  O cc_silence Spirit Snare T0 enemy {'duration': 'UNKNOWN'} STATE   
+  O cc_disarm Spirit Snare T0 enemy {'duration': 'UNKNOWN'} STATE   
+  O slow Spirit Snare T0 enemy {'pct': 24.0, 'duration': 10.0} DATA   
+  O shred_bullet Spirit Snare T2 enemy {'pct': 15.0, 'duration': 10.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O displace_tether Spirit Snare T0 enemy {'TetherRadius': 6.0, 'TetherDuration': 3.25} DATA   
+  O cc_stun Guided Owl T0 enemy {'duration': 0.75} DATA   
+  N delayed_payload Spirit Snare {'delay': 2.0, 'radius': 8.0, 'damage': 25.0} DATA ['ability_immobilize_trap.ArmTime=2']
+  N delayed_payload Guided Owl {'delay': 1.5, 'radius': 12.0, 'damage': 315.0} DATA ['ability_guided_arrow.AbilityCastDelay=1.5']
+  N exposed_channel Guided Owl {'channel': 20.0, 'interrupted_by': ['IS_ASLEEP', 'STUNNED'], 'radius': 12.0, 'damage': 315.0, 'dps': 0, 'range': 0} DATA ['ability_guided_arrow.AbilityChannelTime=20', "ability_guided_arrow interrupting=['IS_ASLEEP', 'STUNNED']"]
+  N conditional_low_health Guided Owl {'state': 'low_health', 'damage': 315.0} DATA ['ability_guided_arrow.LowHealthEnemyThresholdPct=22']
+
+== Mo & Krill ['RapidFire', 'Spreadshot'] hp 930.0 {}
+  O amp_caster_only Scorn T3 enemy {'pct': 15.0} INFER shared=False  
+  O slow Burrow T0 enemy {'pct': 8.0, 'duration': 'UNKNOWN'} DATA   
+  O displace_lift_toss Burrow T0 enemy {'UpForce': 250.0, 'TossDuration': 1.0} DATA   
+  O slow Sand Blast T2 enemy {'pct': 24.0, 'duration': 'UNKNOWN'} DATA   
+  N delayed_payload Burrow {'delay': 1.0, 'radius': 7.0, 'damage': 0} DATA ['ability_burrow.AbilityCastDelay=1']
+  N exposed_channel Burrow {'channel': 9.0, 'interrupted_by': ['STUNNED'], 'radius': 7.0, 'damage': 0, 'dps': 125.0, 'range': 0} DATA ['ability_burrow.AbilityChannelTime=9', "ability_burrow interrupting=['STUNNED']"]
+  N zone_occupancy Burrow {'radius': 7.0, 'duration': 9.0, 'dps': 125.0} DATA ['ability_burrow DPS=125 radius=7 dur=9']
+  N exposed_channel Combo {'channel': 3.1, 'interrupted_by': ['STUNNED'], 'radius': None, 'damage': 0, 'dps': 80.0, 'range': 4.0} DATA ['ability_ult_combo.AbilityChannelTime=3.1', "ability_ult_combo interrupting=['STUNNED']"]
+  N short_range Combo {'range': 4.0, 'damage': 0} DATA ['ability_ult_combo.AbilityCastRange=4']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Shiv ['CloseRange', 'Spreadshot'] hp 830.0 {}
+  O slow Serrated Knives T0 enemy {'pct': 28.0, 'duration': 'UNKNOWN'} DATA   
+  O shred_spirit Slice and Dice T0 enemy {'pct': 10.0, 'duration': 14.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  N conditional_low_health Killing Blow {'state': 'low_health', 'damage': 200.0} DATA ['citadel_ability_shiv_killing_blow.EnemyHealthPercent=28']
+  N close_range_weapon primary weapon {} DATA ['heroes.vdata hero_shiv weapon attr CloseRange']
+
+== Ivy ['MediumRange', 'RapidFire'] hp 755.0 {}
+  O cc_immobilize Entangling Thorns T3 enemy {'duration': 1.6} DATA   
+  O slow Entangling Thorns T0 enemy {'pct': 28.0, 'duration': 'UNKNOWN'} DATA   
+  O ally_buff Kudzu Connection T0 ally {'prop': 'BonusFireRate', 'amount': 18.0, 'duration': -1.0} DATA   
+  O cc_stun Stone Form T0 enemy {'duration': 1.5} DATA   
+  O displace_lift_toss Stone Form T0 enemy {'LiftHeight': 180.0} DATA   
+  O cc_silence Air Drop T3 ally {'duration': 3.0} DATA   
+  O slow Air Drop T2 enemy {'pct': 32.0, 'duration': 3.0} DATA   
+  O ally_move Air Drop T0 ally {'duration': 21.0, 'cast_range': 22.0, 'AllyCastDelay': 0.1} TEXT   
+  O barrier Air Drop T1 ally {'amount': 300.0, 'duration': 21.0} DATA   
+  O cooldown Air Drop T0 ally {'prop': 'CooldownReductionPctOnOthers', 'amount': 30.0} DATA   
+  N delayed_payload Entangling Thorns {'delay': 2.0, 'radius': 8.0, 'damage': 0} DATA ['citadel_ability_tengu_urn.TimeToEntangle=2']
+  N zone_occupancy Entangling Thorns {'radius': 8.0, 'duration': 4.0, 'dps': 40.0} DATA ['citadel_ability_tengu_urn DPS=40 radius=8 dur=4']
+
+== Warden ['MediumRange', 'Projectile'] hp 805.0 {}
+  O slow Alchemical Flask T0 enemy {'pct': 16.0, 'duration': 3.0} DATA   
+  O barrier Willpower T0 ally? {'amount': 125.0, 'duration': 7.0} DATA   
+  O cc_immobilize Binding Word T0 enemy {'duration': 2.5} DATA   target_stays_still_EscapeTime=2.8
+  O shred_bullet Binding Word T1 enemy {'pct': 20.0, 'duration': 5.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O displace_tether Binding Word T0 enemy {'EscapeRange': 20.0} DATA   
+  O immunity Last Stand T0 self {'states': ['STATUS_IMMUNE', 'UNSTOPPABLE'], 'duration': 10.0} STATE   
+  N delayed_payload Last Stand {'delay': 2.0, 'radius': 16.0, 'damage': 0} DATA ['ability_warden_riot_protocol.AbilityCastDelay=2']
+  N zone_occupancy Last Stand {'radius': 16.0, 'duration': 10.0, 'dps': 110.5} DATA ['ability_warden_riot_protocol DPS=110.5 radius=16 dur=10']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Yamato ['CloseRange', 'Spreadshot'] hp 730.0 {}
+  O slow Power Slash T1 enemy {'pct': 32.0, 'duration': 3.0} DATA   
+  O immunity Power Slash T0 self {'states': ['STATUS_IMMUNE', 'UNSTOPPABLE'], 'duration': 'UNKNOWN'} STATE   
+  O slow Flying Slash T0 enemy {'pct': 40.0, 'duration': 2.5} DATA   
+  O heal Crimson Slash T0 self {'prop': 'HealFixedHealth', 'amount': 55.0} DATA   
+  O immunity Shadow Transformation T0 self {'states': ['INVULNERABLE', 'STATUS_IMMUNE', 'UNIT_STATUS_HEALTH_HIDDEN', 'UNSTOPPABLE'], 'duration': 8.0} STATE   
+  N delayed_payload Power Slash {'delay': 1.4, 'radius': None, 'damage': 295.0} DATA ['citadel_ability_power_slash.AbilityCastDelay=1.4']
+  N close_range_weapon primary weapon {} DATA ['heroes.vdata hero_yamato weapon attr CloseRange']
+
+== Lash ['BurstFire', 'MediumRange'] hp 780.0 {}
+  O slow Ground Strike T2 enemy {'pct': 40.0, 'duration': 3.0} DATA   
+  O displace_lift_toss Ground Strike T2 enemy {'StompBounceHeight': 400.0, 'TossDuration': 1.0} DATA   
+  O slow Flog T1 enemy {'pct': 28.0, 'duration': 3.0} DATA   
+  O heal Flog T0 self {'prop': 'HealPctVsHeroes', 'amount': 55.0} DATA   
+  O cc_stun Death Slam T3 enemy {'duration': 1.2} DATA   
+  O slow Death Slam T0 enemy {'pct': 40.0, 'duration': 4.0} DATA   
+  O displace_lift_toss Death Slam T0 enemy {'LiftHeight': 6.0, 'ThrowDistance': 26.0} DATA   
+  N charge_or_lockon Death Slam {'delay': 0.7, 'damage': 105.0} DATA ['citadel_ability_lash_ultimate.TimeToGainLockonStack=0.7']
+  N exposed_channel Death Slam {'channel': 2.3, 'interrupted_by': ['STUNNED'], 'radius': 6.0, 'damage': 105.0, 'dps': 0, 'range': 26.0} DATA ['citadel_ability_lash_ultimate.AbilityChannelTime=2.3', "citadel_ability_lash_ultimate interrupting=['STUNNED']"]
+
+== Viscous ['MediumRange', 'Projectile'] hp 780.0 {}
+  O slow Splatter T0 enemy {'pct': 28.0, 'duration': 'UNKNOWN'} DATA   
+  O displace_knock_away The Cube T0 ally {'PushBackForce': 250.0} DATA   
+  O heal The Cube T0 ally? {'prop': 'BonusHealthRegen', 'amount': 65.0} DATA   
+  O cleanse The Cube T3 ally? {} DATA   
+  O terrain The Cube T0 area {'CubeScale': 1.5} DATA   
+  O slow Puddle Punch T0 enemy {'pct': 24.0, 'duration': 'UNKNOWN'} DATA   
+  O displace_lift_toss Puddle Punch T0 any {'TossSpeed': 625.0, 'TossDuration': 0.6} DATA   
+  O ally_move Puddle Punch T0 ally {'duration': 'UNKNOWN', 'cast_range': 40.0, 'FriendlyImpactDuration': 2.0} TEXT   
+  O cc_stun Goo Ball T0 enemy {'duration': 0.8} DATA   
+  O displace_knock_away Goo Ball T0 enemy {'KnockForce': 400.0} DATA   
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Pocket ['CloseRange', 'Spreadshot'] hp 780.0 {}
+  O slow Barrage T0 enemy {'pct': 24.0, 'duration': 1.5} DATA   
+  O amp_all Barrage T0 enemy {'pct': 10.0, 'duration': 15.0} DATA shared=UNKNOWN  
+  O slow Enchanter's Satchel T3 enemy {'pct': 32.0, 'duration': 4.0} DATA   
+  O antiheal Affliction T3 enemy {'pct': 1.0} DATA   
+  N exposed_channel Barrage {'channel': 2.0, 'interrupted_by': ['IS_ASLEEP', 'STUNNED'], 'radius': 7.5, 'damage': 0, 'dps': 0, 'range': 0} DATA ['synth_barrage.AbilityChannelTime=2', "synth_barrage interrupting=['IS_ASLEEP', 'STUNNED']"]
+  N exposed_channel Enchanter's Satchel {'channel': 3.0, 'interrupted_by': ['STUNNED'], 'radius': 16.0, 'damage': 155.0, 'dps': 0, 'range': 0} DATA ['synth_pulse.AbilityChannelTime=3', "synth_pulse interrupting=['STUNNED']"]
+  N close_range_weapon primary weapon {} DATA ['heroes.vdata hero_synth weapon attr CloseRange']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Mirage ['HeavyHitter', 'MediumRange'] hp 730.0 {}
+  O cc_immobilize Dust Devil T0 enemy {'duration': 0.3} DATA   
+  O slow Dust Devil T0 enemy {'pct': 24.0, 'duration': 3.0} DATA   
+  O displace_lift_toss Dust Devil T0 enemy {'EnemyLiftDuration': 0.2, 'LiftHeight': 3.0} DATA   
+  O cc_stun Djinn's Mark T3 enemy {'duration': 0.5} DATA   
+  O reveal Djinn's Mark T0 enemy {'duration': 6.0} DATA   
+  O barrier Traveler T2 self {'amount': 400.0, 'duration': 0.0} DATA   
+  N conditional_stacks_on_target Fire Scarabs {'state': 'stacks_on_target', 'damage': 0} DATA ['mirage_fire_beetles.MaxStacks=100']
+  N conditional_marked_or_revealed Djinn's Mark {'state': 'marked_or_revealed', 'damage': 0} DATA ['mirage_sand_phantom.RevealDuration=6']
+  N conditional_stacks_on_target Djinn's Mark {'state': 'stacks_on_target', 'damage': 0} DATA ['mirage_sand_phantom.VictimStackDuration=8', 'mirage_sand_phantom.MaxStacks=5']
+
+== Vyper ['CloseRange', 'RapidFire'] hp 780.0 {}
+  O slow Screwjab Dagger T0 enemy {'pct': 28.0, 'duration': 2.0} DATA   
+  O shred_bullet Screwjab Dagger T2 enemy {'pct': 8.0, 'duration': 10.0, 'per_stack': False, 'max_stacks': 5.0} DATA shared=UNKNOWN  
+  O shred_bullet Screwjab Dagger T2 enemy {'pct': 6.0, 'duration': 10.0, 'per_stack': True, 'max_stacks': 5.0} DATA shared=UNKNOWN  
+  O cooldown Screwjab Dagger T3 self {'prop': 'CooldownRefundPercent', 'amount': 55.0} DATA   
+  O antiheal Lethal Venom T2 enemy {'pct': 40.0} DATA   
+  O barrier Slither T3 self {'amount': 180.0, 'duration': 0.0} DATA   
+  O cc_petrify Petrifying Bola T0 enemy {'duration': 3.2} DATA   
+  O slow Petrifying Bola T0 enemy {'pct': 40.0, 'duration': 1.5} DATA   
+  N conditional_stacks_on_target Screwjab Dagger {'state': 'stacks_on_target', 'damage': 50.0} DATA ['ability_viper_debuffdagger.DamagePerStack=25', 'ability_viper_debuffdagger.StackDuration=10']
+  N conditional_low_health Lethal Venom {'state': 'low_health', 'damage': 0} DATA ['ability_viper_venom.VenomMaxDamageHealthPercentage=30']
+  N conditional_stacks_on_target Lethal Venom {'state': 'stacks_on_target', 'damage': 0} DATA ['ability_viper_venom.BuildUpPerShot=4.5']
+  N close_range_weapon primary weapon {} DATA ['heroes.vdata hero_viper weapon attr CloseRange']
+
+== Sinclair ['BurstFire', 'LongRange', 'Projectile'] hp 730.0 {}
+  O displace_swap Spectral Assistant T0 enemy {'TotalSwaps': 2.0} DATA   
+  O amp_all Rabbit Hex T0 enemy {'pct': 22.0, 'duration': 'UNKNOWN'} DATA shared=UNKNOWN  
+  N long_range_weapon primary weapon {} DATA ['heroes.vdata hero_magician weapon attr LongRange']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Mina ['BurstFire', 'MediumRange'] hp 660.0 {}
+  O heal Rake T0 self {'prop': 'RakeHealPerKill', 'amount': 55.0} DATA   
+  O slow Love Bites T1 enemy {'pct': 24.0, 'duration': 3.0} DATA   
+  N short_range Rake {'range': 10.0, 'damage': 120.0} DATA ['ability_vampirebat_steallife.AbilityCastRange=10']
+  N conditional_low_health Rake {'state': 'low_health', 'damage': 120.0} DATA ['ability_vampirebat_steallife.MissingHealthDamagePercentage=13', 'ability_vampirebat_steallife.TrooperExecuteThreshold=60']
+  N conditional_stacks_on_target Love Bites {'state': 'stacks_on_target', 'damage': 0} DATA ['ability_vampirebat_lovebites.BuildUpPerShot=18.4']
+
+== Drifter ['CloseRange', 'Spreadshot'] hp 755.0 {}
+  O shred_bullet Stalker's Mark T1 enemy {'pct': 8.0, 'duration': 'UNKNOWN', 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O antiheal Stalker's Mark T3 enemy {'pct': 40.0} DATA   
+  O displace_teleport_target Stalker's Mark T0 enemy {'TeleportBackOffsetFromTarget': 135.0} DATA   
+  O amp_all Bloodscent T0 enemy {'pct': 26.0, 'duration': 'UNKNOWN'} DATA shared=UNKNOWN  
+  O reveal Eternal Night T0 enemy {'duration': 3.0} DATA   
+  N conditional_close_range Rend {'state': 'close_range', 'damage': 0} DATA ['drifter_blood_blast.RangeForBonusDamage=8']
+  N conditional_low_health Bloodscent {'state': 'low_health', 'damage': 0} DATA ['ability_drifter_hunger.LowHealthThreshold=30']
+  N conditional_isolated Bloodscent {'state': 'isolated', 'damage': 0} DATA ['ability_drifter_hunger.IsolationRange=20', 'ability_drifter_hunger.WeaponDmgPerIsolationKill=3']
+  N conditional_marked_or_revealed Eternal Night {'state': 'marked_or_revealed', 'damage': 0} DATA ['drifter_darkness.RevealDuration=3']
+  N conditional_isolated Eternal Night {'state': 'isolated', 'damage': 0} TEXT ['drifter_darkness text "isolat"']
+  N conditional_revealed Eternal Night {'state': 'revealed', 'damage': 0} TEXT ['drifter_darkness text "reveal"']
+  N close_range_weapon primary weapon {} DATA ['heroes.vdata hero_drifter weapon attr CloseRange']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Venator ['MediumRange', 'RapidFire'] hp 820.0 {}
+  O antiheal Consecrating Grenade T0 enemy {'pct': 50.0} DATA   
+  O cc_stun Gutshot T0 enemy {'duration': 1.0} DATA   
+  O displace_knock_away Gutshot T0 enemy {'KnockbackSpeed': 1200.0, 'BonusKnockbackDistance': 3.5, 'PushForce': 6.0, 'MaxPushForceHorizontal': 1400.0} DATA   
+  O cc_immobilize Hex-Lined Snap Trap T0 enemy {'duration': 2.25} DATA   
+  O amp_caster_only Hex-Lined Snap Trap T3 enemy {'pct': 30.0} INFER shared=False  
+  O displace_tether Hex-Lined Snap Trap T0 enemy {'TetherRadius': 0.3, 'TetherDuration': 0.6} DATA   
+  O reveal Hex-Lined Snap Trap T0 enemy {'duration': 6.0} DATA   
+  O displace_knock_away Ira Domini T0 enemy {'PushForce': 500.0} DATA   
+  N short_range Gutshot {'range': 10.0, 'damage': 85.0} DATA ['ability_priest_knockback.AbilityCastRange=10']
+  N conditional_wall Gutshot {'state': 'wall', 'damage': 85.0} DATA ['ability_priest_knockback.WallStunDistance=7']
+  N delayed_payload Hex-Lined Snap Trap {'delay': 0.5, 'radius': 2.0, 'damage': 80.0} DATA ['ability_priest_beartrap.ArmTime=0.5']
+  N conditional_marked_or_revealed Hex-Lined Snap Trap {'state': 'marked_or_revealed', 'damage': 80.0} DATA ['ability_priest_beartrap.RevealDuration=6', 'ability_priest_beartrap.IncomingDamagePercentFromCaster=30']
+  N conditional_revealed Hex-Lined Snap Trap {'state': 'revealed', 'damage': 80.0} TEXT ['ability_priest_beartrap text "reveal"']
+  N delayed_payload Ira Domini {'delay': 0.6, 'radius': 0.2, 'damage': 120.0} DATA ['ability_priest_weaponswap.SwapEndDelay=0.6']
+  N conditional_low_health Ira Domini {'state': 'low_health', 'damage': 120.0} DATA ['ability_priest_weaponswap.ExecuteThreshold=8']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Victor ['MediumRange', 'Projectile'] hp 800.0 {}
+  O slow Pain Battery T1 enemy {'pct': 32.0, 'duration': 2.0} DATA   
+  O heal Pain Battery T3 self {'prop': 'MissingHealthPercentHeal', 'amount': 15.0} DATA   
+  O heal Jumpstart T0 self {'prop': 'TotalHealthRegen', 'amount': 170.0} DATA   
+  O slow Aura of Suffering T1 enemy {'pct': 20.0, 'duration': 1.0} DATA   
+  O amp_all Aura of Suffering T3 enemy {'pct': 15.0, 'duration': 1.0} DATA shared=UNKNOWN  
+  O cc_stun Shocking Reanimation T0 enemy {'duration': 3.0} DATA   
+  O slow Shocking Reanimation T0 enemy {'pct': 120.0, 'duration': 'UNKNOWN'} DATA   
+  O immunity Shocking Reanimation T0 self {'states': ['INVULNERABLE'], 'duration': 'UNKNOWN'} STATE   
+  N conditional_low_health Pain Battery {'state': 'low_health', 'damage': 150.0} DATA ['ability_frank_shocktarget2.MissingHealthPercentHeal=15']
+  N self_cost Jumpstart {} DATA ['ability_frank_selfzap.CurrentHealthPercentDamage=15']
+  N zone_occupancy Aura of Suffering {'radius': 9.0, 'duration': 8.0, 'dps': 92.0} DATA ['ability_frank_painaura DPS=92 radius=9 dur=8']
+  N self_cost Aura of Suffering {} DATA ['ability_frank_painaura.SelfDPS=15']
+  N delayed_payload Shocking Reanimation {'delay': 0.5, 'radius': 18.0, 'damage': 375.0} DATA ['ability_frank_revive.InitialDelay=0.5']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Paige ['LongRange', 'RapidFire'] hp 680.0 {}
+  O displace_knock_away Plot Armor T0 ally {'PushForce': 900.0} DATA   
+  O barrier Plot Armor T0 ally {'amount': 225.0, 'duration': 7.0} DATA   
+  O ally_buff Plot Armor T1 ally {'prop': 'BonusFireRate', 'amount': 14.0, 'duration': 7.0} DATA   
+  O cc_immobilize Captivating Read T0 enemy {'duration': 2.0} DATA   
+  O slow Captivating Read T0 enemy {'pct': 36.0, 'duration': 0.5} DATA   
+  O shred_spirit Captivating Read T3 enemy {'pct': 18.0, 'duration': 6.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O cc_stun Rallying Charge T0 enemy {'duration': 1.5} DATA   
+  O displace_knock_away Rallying Charge T0 any {'TossBackSpeed': 100.0} DATA   
+  O displace_lift_toss Rallying Charge T0 any {'TossUpSpeed': 600.0} DATA   
+  O heal Rallying Charge T0 ally {'prop': 'HealAmount', 'amount': 275.0} DATA   
+  O ally_buff Rallying Charge T0 ally {'prop': 'BonusMoveSpeed', 'amount': 5.0, 'duration': 13.0} DATA   
+  N zone_occupancy Bookwyrm {'radius': 5.0, 'duration': 5.0, 'dps': 60.0} DATA ['ability_bookworm_dragonfire DPS=60 radius=5 dur=5']
+  N delayed_payload Captivating Read {'delay': 1.25, 'radius': 9.5, 'damage': 90.0} DATA ['ability_bookworm_aoemagic.DetonationDelay=1.25']
+  N long_range_weapon primary weapon {} DATA ['heroes.vdata hero_bookworm weapon attr LongRange']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== The Doorman ['HeavyHitter', 'MediumRange'] hp 755.0 {}
+  O slow Call Bell T0 enemy {'pct': 28.0, 'duration': 'UNKNOWN'} DATA   
+  O barrier Doorway T2 self {'amount': 250.0, 'duration': 35.0} DATA   
+  O displace_portal Doorway T0 any {'AbilityDuration': 35.0, 'AbilityCastRange': 80.0, 'DoorwayCloseCooldown': 8.0, 'DoorwayDistance': 105.0} TEXT   
+  O cc_stun Luggage Cart T3 enemy {'duration': 1.25} DATA   
+  O displace_pull Luggage Cart T0 any {} TEXT   
+  O ally_move Luggage Cart T0 ally {'duration': 6.0, 'cast_range': 45.0} TEXT   
+  O cc_stun Hotel Guest T2 enemy {'duration': 1.5} DATA   failure_to_check_out
+  O immunity Hotel Guest T0 self {'states': ['STATUS_IMMUNE', 'UNSTOPPABLE'], 'duration': 6.5} STATE   
+  O remove_target Hotel Guest T0 enemy {'duration': 6.5} STATE   
+  N conditional_wall Luggage Cart {'state': 'wall', 'damage': 140.0} DATA ['ability_doorman_luggage_cart.WallImpactDamage=75']
+  N short_range Hotel Guest {'range': 7.0, 'damage': 275.0} DATA ['ability_doorman_hotel.AbilityCastRange=7']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Billy ['CloseRange'] hp 820.0 {}
+  O displace_pull Bashdown T0 enemy {'PullDownRange': 3.0} DATA   
+  O displace_lift_toss Bashdown T0 enemy {'TossForce': 350.0, 'TossDuration': 0.4} DATA   
+  O displace_knock_away Rising Ram T0 enemy {'KnockAwaySpeed': 170.0} DATA   
+  O amp_caster_only Blasted T0 enemy {'pct': 17.0} INFER shared=False  
+  O displace_pull Chain Gang T0 enemy {'PullForceMax': 2000.0, 'PullDistance': 4.0} DATA   
+  O displace_tether Chain Gang T0 enemy {'RopeLength': 2.0, 'RopeSnapDistance': 45.0} DATA   
+  O immunity Chain Gang T0 self {'states': ['STATUS_IMMUNE', 'UNSTOPPABLE'], 'duration': 2.8} STATE   
+  N delayed_payload Bashdown {'delay': 0.5, 'radius': None, 'damage': 35.0} DATA ['ability_punkgoat_ult.ExplodeDelay=0.5']
+  N short_range Bashdown {'range': 6.0, 'damage': 35.0} DATA ['ability_punkgoat_ult.AbilityCastRange=6']
+  N close_range_weapon primary weapon {} DATA ['heroes.vdata hero_punkgoat weapon attr CloseRange']
+
+== Graves ['BeamWeapon', 'CloseRange'] hp 730.0 {}
+  O slow Jar of Dead T2 enemy {'pct': 24.0, 'duration': 1.0} DATA   
+  O heal Jar of Dead T1 self {'prop': 'HealPerPickup', 'amount': 5.0} DATA   
+  O economy Jar of Dead T0 self {'prop': 'SkullKillGold', 'amount': 7.0} DATA   
+  O cc_immobilize Grasping Hands T0 enemy {'duration': 1.75} DATA   
+  O slow Grasping Hands T0 enemy {'pct': 40.0, 'duration': 0.5} DATA   
+  O displace_tether Grasping Hands T0 enemy {'TetherDuration': 1.0, 'TetherRadius': 0.1} DATA   
+  O terrain Grasping Hands T0 area {'ZombieWallLength': 24.0, 'ZombieWallHeight': 2.5, 'ZombieWallDeployTime': 0.6} DATA   
+  O slow Borrowed Decree T0 enemy {'pct': 64.0, 'duration': 1.25} DATA   
+  O shred_spirit Borrowed Decree T0 enemy {'pct': 0.5, 'duration': 5.0, 'per_stack': True, 'max_stacks': 40.0} DATA shared=UNKNOWN  
+  O displace_knock_away Borrowed Decree T0 enemy {'PushForce': 300.0} DATA   
+  O displace_lift_toss Borrowed Decree T0 enemy {'KnockupSpeed': 240.0} DATA   
+  O immunity Borrowed Decree T0 self {'states': ['UNIT_STATUS_HEALTH_HIDDEN'], 'duration': 26.0} STATE   
+  O terrain Borrowed Decree T0 area {'BlockerScaleFactor': 1.0} DATA   
+  N conditional_isolated Jar of Dead {'state': 'isolated', 'damage': 16.0} TEXT ['ability_necro_hauntingskull text "no nearby enem"']
+  N delayed_payload Grasping Hands {'delay': 1.1, 'radius': 0.75, 'damage': 180.0} DATA ['ability_necro_zombiewall.GroundAuraPopDelay=1.1']
+  N conditional_wall Grasping Hands {'state': 'wall', 'damage': 180.0} TEXT ['ability_necro_zombiewall text "wall"']
+  N conditional_stacks_on_target Borrowed Decree {'state': 'stacks_on_target', 'damage': 115.0} DATA ['ability_necro_gravestone.MaxStacks=40', 'ability_necro_gravestone.StackDuration=5']
+  N close_range_weapon primary weapon {} DATA ['heroes.vdata hero_necro weapon attr CloseRange']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Apollo ['MediumRange', 'Projectile'] hp 770.0 {}
+  O slow Disengaging Sigil T0 enemy {'pct': 24.0, 'duration': 4.0} DATA   
+  O cc_stun Riposte T0 enemy {'duration': 1.2} DATA   
+  O slow Riposte T0 enemy {'pct': 40.0, 'duration': 4.0} DATA   
+  O shred_melee Riposte T0 enemy {'pct': 50.0, 'duration': 3.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O displace_lift_toss Riposte T0 enemy {'LiftHeight': 240.0} DATA   
+  O heal Flawless Advance T1 self {'prop': 'HealFixedHealth', 'amount': 35.0} DATA   
+  O cc_silence Itani Lo Sahn T0 enemy {'duration': 'UNKNOWN'} STATE   
+  O cc_disarm Itani Lo Sahn T0 enemy {'duration': 'UNKNOWN'} STATE   
+  O amp_caster_only Itani Lo Sahn T0 enemy {'pct': 110.0} INFER shared=False  
+  O displace_pull Itani Lo Sahn T0 enemy {'VacuumSpeed': 400.0} DATA   
+  N charge_or_lockon Flawless Advance {'delay': 1.1, 'damage': 130.0} DATA ['ability_fencer_lunge.HoldDurationMax=1.1']
+  N conditional_stacks_on_target Flawless Advance {'state': 'stacks_on_target', 'damage': 130.0} DATA ['ability_fencer_lunge.MaxStacks=2']
+  N delayed_payload Itani Lo Sahn {'delay': 1.5, 'radius': None, 'damage': 200.0} DATA ['ability_fencer_ultimate.AbilityCastDelay=1.5']
+  N conditional_low_health Itani Lo Sahn {'state': 'low_health', 'damage': 200.0} DATA ['ability_fencer_ultimate.LowHealthEnemyThresholdPct=50']
+
+== Deadman Danny ['BurstFire', 'MediumRange'] hp 730.0 {}
+  O slow Strix Salvo T0 enemy {'pct': 40.0, 'duration': 1.5} DATA   
+  O displace_lift_toss Chimera Mk1 T0 enemy {'TossDuration': 0.9} DATA   
+  O heal Chimera Mk1 T2 self {'prop': 'HealOnHit', 'amount': 150.0} DATA   
+  O shred_bullet Jettison Fuel T0 enemy {'pct': 25.0, 'duration': 7.0, 'per_stack': False, 'max_stacks': None} DATA shared=UNKNOWN  
+  O cc_stun Close The Deal T0 enemy {'duration': 1.0} DATA   
+  O cc_stun Close The Deal T0 enemy {'duration': 0.4} DATA   
+  O amp_caster_only Close The Deal T0 enemy {'pct': 75.0} INFER shared=False  
+  N conditional_marked_or_revealed Strix Salvo {'state': 'marked_or_revealed', 'damage': 57.0} DATA ['ability_deadpack_chargeblast.CoatedDamage=90']
+  N delayed_payload Chimera Mk1 {'delay': 0.7, 'radius': 8.0, 'damage': 190.0} DATA ['ability_deadpack_rocketeer.AbilityCastDelay=0.7']
+  N exposed_channel Chimera Mk1 {'channel': 5.0, 'interrupted_by': ['STUNNED'], 'radius': 8.0, 'damage': 190.0, 'dps': 0, 'range': 0} DATA ['ability_deadpack_rocketeer.AbilityChannelTime=5', "ability_deadpack_rocketeer interrupting=['STUNNED']"]
+  N self_cost Chimera Mk1 {} DATA ['ability_deadpack_rocketeer.MaxHealthSelfDamagePercent=10']
+  N conditional_marked_or_revealed Jettison Fuel {'state': 'marked_or_revealed', 'damage': 95.0} DATA ['ability_deadpack_flamethrower.BurstMarkStacks=1']
+  N short_range Close The Deal {'range': 10.0, 'damage': 160.0} DATA ['ability_deadpack_ultimate.AbilityCastRange=10']
+  N conditional_low_health Close The Deal {'state': 'low_health', 'damage': 160.0} DATA ['ability_deadpack_ultimate.LowHealthEnemyThresholdPct=50']
+  N self_cost Close The Deal {} DATA ['ability_deadpack_ultimate.SelfDamagePercent=25']
+
+== Rem ['BurstFire', 'MediumRange'] hp 680.0 {}
+  O slow Pillow Toss T0 enemy {'pct': 36.0, 'duration': 'UNKNOWN'} DATA   
+  O displace_lift_toss Pillow Toss T0 enemy {'TossDuration': 0.4, 'TossForce': 300.0} DATA   
+  O cooldown Pillow Toss T0 self {'prop': 'CDReduceOnPillowHit', 'amount': 5.0} DATA   
+  O ally_move Tag Along T0 ally {'duration': 5.5, 'cast_range': 23.0} TEXT   
+  O heal Tag Along T0 ally {'prop': 'HealingPerSecond', 'amount': 42.0} DATA   
+  O ally_buff Tag Along T0 ally {'prop': 'BonusMoveSpeed', 'amount': 4.0, 'duration': 5.5} DATA   
+  O ally_move Lil Helpers T0 ally {'duration': 'UNKNOWN', 'cast_range': 45.0} TEXT   
+  O heal Lil Helpers T0 ally {'prop': 'InfestHeal', 'amount': 8.0} DATA   
+  O ally_buff Lil Helpers T0 ally {'prop': 'BonusMoveSpeed', 'amount': 4.5, 'duration': 'UNKNOWN'} DATA   
+  O cc_sleep Naptime T0 enemy {'duration': 4.75, 'wake_delay_after_damage': 'UNKNOWN', 'min_sleep': 0.5, 'damage_threshold': 100.0} DATA  brk 
+  O immunity Naptime T0 self {'states': ['STATUS_IMMUNE', 'UNSTOPPABLE'], 'duration': 'UNKNOWN'} STATE   
+  N conditional_low_health Tag Along {'state': 'low_health', 'damage': 0} DATA ['ability_familiar_attach.MissingHealthBurstPct=15']
+
+== Silver ['MediumRange', 'Spreadshot'] hp 830.0 {}
+  O displace_knock_away Boot Kick T0 enemy {'EnemyPushForceAway': 300.0} DATA   
+  O slow Entangling Bola T0 enemy {'pct': 36.0, 'duration': 2.25} DATA   
+  O heal Lycan Curse T0 self {'prop': 'MissingHealthPercentHeal', 'amount': 30.0} DATA   
+  N short_range Slam Fire {'range': 1.0, 'damage': 40.0} DATA ['ability_werewolf_unloadgun.AbilityCastRange=1']
+  N conditional_stacks_on_target Slam Fire {'state': 'stacks_on_target', 'damage': 40.0} DATA ['ability_werewolf_unloadgun.MaxStacks=3', 'ability_werewolf_unloadgun.StackDuration=3']
+  N conditional_marked_or_revealed Boot Kick {'state': 'marked_or_revealed', 'damage': 0} DATA ['ability_werewolf_kickflip.MarkDuration=3']
+  N conditional_low_health Lycan Curse {'state': 'low_health', 'damage': 0} DATA ['ability_werewolf_transformation.AutoActivateHealthThreshold=20', 'ability_werewolf_transformation.LowHealthFraction=30']
+  N conditional_stacks_on_target Lycan Curse {'state': 'stacks_on_target', 'damage': 0} DATA ['ability_werewolf_transformation.MaxStacks=15', 'ability_werewolf_transformation.StackDuration=5']
+
+== Celeste ['Bouncy', 'MediumRange', 'Projectile'] hp 690.0 {}
+  O cc_silence Dazzling Trick T0 enemy {'duration': 'UNKNOWN'} STATE   
+  O barrier Dazzling Trick T0 self {'amount': 170.0, 'duration': 0.0} DATA   
+  O slow Shining Wonder T0 enemy {'pct': 48.0, 'duration': 1.5} DATA   
+  N delayed_payload Radiant Daggers {'delay': 1.4, 'radius': 8.0, 'damage': 125.0} DATA ['ability_unicorn_luminousstrike.PreExplosionDuration=1.4']
+  N delayed_payload Shining Wonder {'delay': 0.75, 'radius': None, 'damage': 230.0} DATA ['ability_unicorn_dazzlingorb.AbilityCastDelay=0.75']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Rat King ['RapidFire', 'Spreadshot'] hp 800 {}
+  O slow Scrap Grenade T0 enemy {'pct': 20.0, 'duration': 4.0} DATA   
+  O shred_bullet Scrap Grenade T0 enemy {'pct': 3.0, 'duration': 4.0, 'per_stack': True, 'max_stacks': None} DATA shared=UNKNOWN  
+  O shred_bullet Rat Swarm T0 enemy {'pct': 2.0, 'duration': 8.0, 'per_stack': True, 'max_stacks': None} DATA shared=UNKNOWN  
+  O slow Rule, Ratannia! T0 enemy {'pct': 40.0, 'duration': 'UNKNOWN'} DATA   
+  O displace_lift_toss Rule, Ratannia! T0 enemy {'TossDuration': 1.2} DATA   
+  O ally_buff Rule, Ratannia! T0 ally {'prop': 'BonusMoveSpeed', 'amount': 5.0, 'duration': 10.0} TEXT   
+  N delayed_payload Scrap Grenade {'delay': 0.8, 'radius': None, 'damage': 300.0} DATA ['ability_ratking_scrap_grenade.FirstBounceDetonateTimer=0.8']
+  N delayed_payload Rule, Ratannia! {'delay': 2.0, 'radius': 28.0, 'damage': 350.0} DATA ['ability_ratking_standard_bearer.AbilityCastDelay=2']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Solomon ['LongRange', 'RapidFire'] hp 780.0 {}
+  O slow Setup Bishop T0 enemy {'pct': 45.0, 'duration': 'UNKNOWN'} DATA   
+  O shred_spirit Setup Bishop T3 enemy {'pct': 2.5, 'duration': 10.0, 'per_stack': True, 'max_stacks': 10.0} DATA shared=UNKNOWN  
+  O barrier Kingside Knight T0 ally {'amount': 160.0, 'duration': 0.0} DATA   
+  O cleanse Kingside Knight T3 ally {} DATA   
+  O cc_immobilize Rook Battery T0 enemy {'duration': 1.5} DATA   
+  O displace_knock_away Rook Battery T0 enemy {'TossBackSpeed': 300.0} DATA   
+  O displace_lift_toss Rook Battery T0 enemy {'TossUpSpeed': 220.0, 'TossDuration': 1.0} DATA   
+  O barrier Rook Battery T0 self {'amount': 100.0, 'duration': 0.0} DATA   
+  O cc_stun Develop Queen T0 enemy {'duration': 1.25} DATA   
+  O slow Develop Queen T0 enemy {'pct': 30.0, 'duration': 1.5} DATA   
+  O displace_lift_toss Develop Queen T0 enemy {'TossUpSpeed': 600.0, 'LiftHeight': 4.0} DATA   
+  N conditional_stacks_on_target Setup Bishop {'state': 'stacks_on_target', 'damage': 70.0} DATA ['ability_chessmaster_throwbishop.MaxStacks=10', 'ability_chessmaster_throwbishop.StackDuration=10']
+  N conditional_wall Rook Battery {'state': 'wall', 'damage': 50.0} TEXT ['ability_chessmaster_forkpiece text "wall"']
+  N delayed_payload Develop Queen {'delay': 0.75, 'radius': None, 'damage': 120.0} DATA ['ability_chessmaster_queen.AbilityCastDelay=0.75']
+  N conditional_low_health Develop Queen {'state': 'low_health', 'damage': 120.0} DATA ['ability_chessmaster_queen.CheckmateThreshold=200']
+  N conditional_stacks_on_target Develop Queen {'state': 'stacks_on_target', 'damage': 120.0} DATA ['ability_chessmaster_queen.MaxStacks=3']
+  N long_range_weapon primary weapon {} DATA ['heroes.vdata hero_chessmaster weapon attr LongRange']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Violet ['LongRange', 'RapidFire'] hp 710.0 {}
+  O slow Flow State T0 enemy {'pct': 60.0, 'duration': 2.0} DATA   
+  O ally_buff Flow State T3 ally {'prop': 'OutgoingDamagePercent', 'amount': 20.0, 'duration': 'UNKNOWN'} TEXT   
+  O cc_stun Still Life T0 enemy {'duration': 1.35} DATA   
+  O displace_pull Still Life T0 enemy {'PullDistance': 800.0} DATA   
+  O displace_tether Still Life T0 enemy {'TetherBreakRange': 35.0} DATA   
+  O heal Still Life T1 self {'prop': 'HealthRegen', 'amount': 15.0} DATA   
+  O cc_silence Abstract Landscape T0 enemy {'duration': 3.25} DATA   
+  O slow Abstract Landscape T0 enemy {'pct': 30.0, 'duration': 'UNKNOWN'} DATA   
+  O reveal Abstract Landscape T0 enemy {'duration': 'UNKNOWN'} TEXT   
+  N conditional_stacks_on_target Living Ink {'state': 'stacks_on_target', 'damage': 35.0} DATA ['ability_artist_homingbrush.StackDuration=10', 'ability_artist_homingbrush.MaxStacks=5']
+  N exposed_channel Still Life {'channel': 2.6, 'interrupted_by': ['STUNNED'], 'radius': None, 'damage': 60.0, 'dps': 30.0, 'range': 25.0} DATA ['ability_artist_tether.AbilityChannelTime=2.6', "ability_artist_tether interrupting=['STUNNED']"]
+  N conditional_stacks_on_target Still Life {'state': 'stacks_on_target', 'damage': 60.0} DATA ['ability_artist_tether.BuildUpPerShot=15']
+  N conditional_revealed Abstract Landscape {'state': 'revealed', 'damage': 100.0} TEXT ['ability_artist_bamboogrove text "reveal"']
+  N long_range_weapon primary weapon {} DATA ['heroes.vdata hero_artist weapon attr LongRange']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Nurse Harrow ['LongRange', 'RapidFire'] hp 730 {}
+  O slow Lurking Terrors T0 enemy {'pct': 50.0, 'duration': 2.2} DATA   
+  N zone_occupancy Leech Therapy {'radius': 7.5, 'duration': 5.0, 'dps': 23.0} DATA ['ability_nurse_leech_therapy DPS=23 radius=7.5 dur=5']
+  N delayed_payload Lurking Terrors {'delay': 1.3, 'radius': None, 'damage': 0} DATA ['ability_nurse_fear.AbilityCastDelay=1.3']
+  N exposed_channel Lurking Terrors {'channel': 10.0, 'interrupted_by': ['STUNNED'], 'radius': None, 'damage': 0, 'dps': 90.0, 'range': 35.0} DATA ['ability_nurse_fear.AbilityChannelTime=10', "ability_nurse_fear interrupting=['STUNNED']"]
+  N conditional_revealed Lurking Terrors {'state': 'revealed', 'damage': 0} TEXT ['ability_nurse_fear text "reveal"']
+  N long_range_weapon primary weapon {} DATA ['heroes.vdata hero_nurse weapon attr LongRange']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']
+
+== Baba ['LongRange', 'RapidFire'] hp 780.0 {}
+  O displace_pull Threadsap T3 enemy {'PullDistance': 7.0} DATA   
+  O displace_knock_up Granny Long Legs T0 enemy {} TEXT   
+  O cc_silence Baba's Brew T0 enemy {'duration': 3.0} DATA   
+  O barrier Baba's Brew T0 self {'amount': 90.0, 'duration': 0.0} DATA   
+  N conditional_stacks_on_target Threadsap {'state': 'stacks_on_target', 'damage': 50.0} DATA ['ability_baba_bubbling_brew.MaxStacks=45']
+  N exposed_channel Baba's Brew {'channel': 1.0, 'interrupted_by': [], 'radius': 9.0, 'damage': 0, 'dps': 0, 'range': 12.0} DATA ['ability_baba_hexing_brew.AbilityChannelTime=1', 'ability_baba_hexing_brew interrupting=[]']
+  N charge_or_lockon Feed The Birds {'delay': 0.7, 'damage': 0} DATA ['ability_baba_ultimate_2.TimeToGainLockonStack=0.7']
+  N exposed_channel Feed The Birds {'channel': 6.5, 'interrupted_by': ['STUNNED'], 'radius': None, 'damage': 0, 'dps': 0, 'range': 22.0} DATA ['ability_baba_ultimate_2.AbilityChannelTime=6.5', "ability_baba_ultimate_2 interrupting=['STUNNED']"]
+  N long_range_weapon primary weapon {} DATA ['heroes.vdata hero_baba weapon attr LongRange']
+  N no_signature_mobility kit {} DATA ['no signature ability with BEHAVIOR_MOVEMENT']

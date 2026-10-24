@@ -1,0 +1,61 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: billy_damage
+HERO: Billy
+ITEM: Melee Charge
+CHECKPOINT: buy-point at 11200 souls (state souls 11200; item cost 1600)
+VERSION: interaction-v1
+ARGS: --interactions billy_damage Melee Charge
+GENERATED: 2026-10-24T16:47:11Z
+BODY-SHA: aecc55abf40d24996439d1ea637416e77647f31416cfec3b4cb051148e4f07cd
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 1600, unconditional, ranked): Opening Rounds, Mystic Shot, Bullet Resist Shredder, Intensifying Magazine, Titanic Magazine, Recharging Rush; also shown, not ranked (conditional or unequal cost): Kinetic Dash, Active Reload
+VERDICT: Melee Charge is beaten in every window: sustained: Titanic Magazine; burst: Mystic Shot; ult: Bullet Resist Shredder (no permanent equal-soul fire-rate item exists at this checkpoint)
+UNKNOWN_CELLS: 0
+SELECTION: build-decision | Melee Charge is bought at 11200 souls in billy_damage: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (1600) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+UPPER-BOUND OPTIONS THAT BEAT IT (their trigger condition decides; UNKNOWN uptime): Active Reload
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.8, long_share=0.1, W_sus=10.0, W_burst=3.0; reload 2.9 s (VERIFIED GAME MECHANIC m_reloadDuration (weapon vdata; Wraith value equals its sandbox measurement))
+STATE: owned ['Stalker', 'Cultist Sacrifice', 'Lifestrike', 'Spirit Shielding', 'Melee Charge'] | tiers Bashdown=T3(melee-scaled) Rising Ram=T1(spirit) Blasted=T2(gun-mode) Chain Gang=T1(spirit) | weapon invest bonus 54% | spirit 19
+
+## INTERACTION MATRIX (item effect x kit component)
+- defence (not damage) (BulletResist=6)
+    normal shooting                              n/a                        [CALCULATED] defensive stat; valued by --strategy (survival), not damage
+    1=Bashdown T3 [melee-scaled]                 n/a                        [CALCULATED] defensive stat
+    2=Rising Ram T1 [spirit]                     n/a                        [CALCULATED] defensive stat
+    3=Blasted T2 [gun-mode]                      n/a                        [CALCULATED] defensive stat
+    4=Chain Gang T1 (ULT) [spirit]               n/a                        [CALCULATED] defensive stat
+- melee damage % (BonusMeleeDamagePercent=10)
+    normal shooting                              DOES NOT WORK              [CALCULATED] melee % does not touch bullets
+    1=Bashdown T3 [melee-scaled]                 WORKS                      [CALCULATED] scales with melee damage
+    2=Rising Ram T1 [spirit]                     DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    3=Blasted T2 [gun-mode]                      DOES NOT WORK              [CALCULATED] no matching mechanic
+    4=Chain Gang T1 (ULT) [spirit]               DOES NOT WORK              [CALCULATED] damage ['Damage', 'DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    melee (light/heavy)                          WORKS                      [CALCULATED] melee damage %
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |       935              |       626              |       306              | 0
+Melee Charge                 |         1010 (+8..+8%) |        696 (+11..+11%) |          306 (+0..+0%) | 0
+Opening Rounds               |          998 (+7..+7%) |          663 (+6..+6%) |          329 (+7..+7%) | 0
+Mystic Shot                  |       1115 (+19..+19%) |        738 (+18..+18%) |          329 (+7..+7%) | 0
+Bullet Resist Shredder       |       1037 (+11..+11%) |        687 (+10..+10%) |        342 (+12..+12%) | 0
+Kinetic Dash                 |         1009 (+8..+8%) |          638 (+2..+2%) |          306 (+0..+0%) | 0  ! fire rate is a timed buff, counted as always on (upper bound)
+Intensifying Magazine        |       1037 (+11..+11%) |          673 (+8..+8%) |          306 (+0..+0%) | 0
+Titanic Magazine             |       1198 (+28..+28%) |        710 (+13..+13%) |          306 (+0..+0%) | 0
+Active Reload                |       1063 (+14..+14%) |        686 (+10..+10%) |          306 (+0..+0%) | 95  ! fire rate is a timed buff, counted as always on (upper bound)
+Recharging Rush              |       1073 (+15..+15%) |        691 (+10..+10%) |          306 (+0..+0%) | 0
+  candidate detail (reading 1): sustained bullets 61, gun 489, stacks 0, procs 0, spirit 76 | ult: Chain Gang damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Titanic Magazine > Mystic Shot > Recharging Rush > Intensifying Magazine > Bullet Resist Shredder > Melee Charge > Opening Rounds
+  burst: rank (reading 1) Mystic Shot > Titanic Magazine > Melee Charge > Recharging Rush > Bullet Resist Shredder > Intensifying Magazine > Opening Rounds
+  ult: rank (reading 1) Bullet Resist Shredder > Opening Rounds > Mystic Shot > Melee Charge > Intensifying Magazine > Titanic Magazine > Recharging Rush
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (175s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  none
+
+## NOT DETERMINED FROM DATA
+  - nothing beyond the ASSUMED shares above
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

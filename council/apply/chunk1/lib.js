@@ -1,0 +1,13 @@
+const fs=require('fs');const SP='/tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad';
+exports.SP=SP;
+exports.load=id=>JSON.parse(fs.readFileSync(__dirname+'/w/'+id+'.json','utf8'));
+exports.box=(b,title)=>{for(const r of b.rows)for(const x of r)if(x[0].startsWith(title))return x;throw Error('nobox '+title)};
+exports.idx=(bx,n)=>{const i=bx[3].findIndex(x=>x[0]===n);if(i<0)throw Error('noitem '+n);return i};
+exports.rm=(bx,n)=>{const i=exports.idx(bx,n);return bx[3].splice(i,1)[0]};
+exports.find=(b,n)=>{for(const r of b.rows)for(const x of r){const i=x[3].findIndex(y=>y[0]===n);if(i>=0)return [x,i]}throw Error('nf '+n)};
+exports.take=(b,n)=>{const [x,i]=exports.find(b,n);return x[3].splice(i,1)[0]};
+exports.after=(b,after,item)=>{const [x,i]=exports.find(b,after);x[3].splice(i+1,0,item)};
+exports.before=(b,bef,item)=>{const [x,i]=exports.find(b,bef);x[3].splice(i,0,item)};
+exports.note=(b,n,t)=>{const [x,i]=exports.find(b,n);x[3][i][1]=t};
+exports.save=(b,id)=>{fs.writeFileSync(SP+'/council/apply/chunk1/w/'+id+'.new.json',JSON.stringify(b,null,1));
+ fs.writeFileSync(SP+'/council/apply/chunk1/out/'+id+'.js',JSON.stringify(b,null,1))};

@@ -1,0 +1,3509 @@
+{
+ "schema": 1,
+ "id": "victor",
+ "hero": "Victor",
+ "name": "Rizuhble's Aura Farming Victor",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Losing trades up close. Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-5,600 (levels 1-11). Abilities gained (both point models agree): Shocking Reanimation unlocked. 4.8k spikes: spirit 4.8k at Torment Pulse. Ultimate (Shocking Reanimation) is available from Torment Pulse.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "victor:3:phase_range:2353",
+    "victor:3:phase_abilities:2354",
+    "victor:3:phase_spikes:2359",
+    "victor:3:phase_ult:2360"
+   ],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 16 to Pain Battery's damage (1.60x scaling), your steepest spirit scaling.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:1:spirit_scaling:2347"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "victor:1:spirit_scaling:2347",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 28.8 to Pain Battery's damage (1.60x scaling), your steepest spirit scaling. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:2:spirit_scaling:2350",
+      "victor:2:upgrade_of:2349"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "victor:2:spirit_scaling:2350",
+       true,
+       ""
+      ],
+      [
+       "victor:2:upgrade_of:2349",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Torment Pulse",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (1,600 to 4,800 invested): bonus 11 to 38 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:3:spike_complete:2351"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "victor:3:spike_complete:2351",
+       true,
+       "inventory spirit: before 1600, after 4800, threshold 4800"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 5,600-18,400 (levels 11-24). Abilities gained (both point models agree): Pain Battery T3, Aura of Suffering T3. Your biggest single spirit hit (Pain Battery, damage) grows from 207 to 373. 4.8k spikes: vitality 4.8k at Enduring Speed.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "victor:11:phase_range:2379",
+    "victor:11:phase_abilities:2380",
+    "victor:11:phase_power:2381",
+    "victor:11:phase_spikes:2390"
+   ],
+   "items": [
+    {
+     "name": "Healing Booster",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on.",
+     "cls": "b",
+     "why": "imminent: Enduring Speed completes 4.8k vitality in 1600 souls (~1.6 min), 2 purchases",
+     "claim_ids": [
+      "victor:5:spike_progress:2363"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "victor:5:spike_progress:2363",
+       true,
+       "3200"
+      ]
+     ]
+    },
+    {
+     "name": "Sprint Boots",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 800 souls on.",
+     "cls": "b",
+     "why": "imminent: Enduring Speed completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "victor:6:spike_progress:2365"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "victor:6:spike_progress:2365",
+       true,
+       "4000"
+      ]
+     ]
+    },
+    {
+     "name": "Enduring Speed",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus. Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:7:spike_complete:2367",
+      "victor:7:upgrade_of:2368"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "victor:7:spike_complete:2367",
+       true,
+       "inventory vitality: before 4000, after 4800, threshold 4800"
+      ],
+      [
+       "victor:7:upgrade_of:2368",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Vulnerability",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Expansion",
+     "imbue": "3",
+     "caption": null,
+     "cls": "c",
+     "why": "spirit investment only; its 8k tier completes at Compress Cooldown, 6400 souls (~6.4 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Infuser",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "2",
+     "caption": "Imbued on Jumpstart: takes 18% off its 22s base cooldown. Takes spirit from 7,200 to 8,800 invested: bonus 45 to 52 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:11:imbue_cooldown:2377",
+      "victor:11:invest_step:2376"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "victor:11:imbue_cooldown:2377",
+       true,
+       ""
+      ],
+      [
+       "victor:11:invest_step:2376",
+       true,
+       "inventory spirit: before 7200, after 8800, threshold 8000"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 cont.",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 18,400-30,400 (levels 24-30).",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "victor:15:phase_range:2400"
+   ],
+   "items": [
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 8,800 to 13,600 invested: bonus 52 to 59 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Greater Expansion",
+     "imbue": null,
+     "caption": "+30% range and radius on everything that scales with them: Shocking Reanimation radius (18m), Aura of Suffering radius (9m). Takes spirit from 13,600 to 16,000 invested: bonus 59 to 66 spirit power. Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:13:global_reach:2393",
+      "victor:13:invest_step:2394",
+      "victor:13:upgrade_of:2395"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "victor:13:global_reach:2393",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "victor:13:invest_step:2394",
+       true,
+       "inventory spirit: before 13600, after 16000, threshold 16000"
+      ],
+      [
+       "victor:13:upgrade_of:2395",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Warp Stone",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 9,600 to 12,800 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: With 4 abilities trained their base cooldowns total 266s; 20% off is 53.2s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 30,400-59,200 (levels 30-36). Abilities gained (both point models agree): Jumpstart T3, Shocking Reanimation T3. Your biggest single spirit hit (Pain Battery, damage) grows from 418 to 627.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "victor:20:phase_range:2412",
+    "victor:20:phase_abilities:2413",
+    "victor:20:phase_power:2414"
+   ],
+   "items": [
+    {
+     "name": "Scourge",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 17,600 to 24,000 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 66 to Pain Battery's damage (2.20x scaling), your steepest spirit scaling. Takes spirit from 24,000 to 28,800 invested: bonus 75 to 100 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:17:spirit_scaling:2407",
+      "victor:17:invest_step:2405",
+      "victor:17:upgrade_of:2406"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "victor:17:spirit_scaling:2407",
+       true,
+       ""
+      ],
+      [
+       "victor:17:invest_step:2405",
+       true,
+       "inventory spirit: before 24000, after 28800, threshold 28800"
+      ],
+      [
+       "victor:17:upgrade_of:2406",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Juggernaut",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 12,800 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "If you bought Healbane, sell it for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 17,600 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Infuser? Buy what is killing you, cheapest first. Not dying? Skip. Sell Warp Stone.",
+   "desc": "Dying after Infuser? Buy what is killing you, cheapest first. Not dying? Skip. Sell Warp Stone.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:21:defence_spirit:2419"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "victor:21:defence_spirit:2419",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:21:defence_bullet:2420"
+     ],
+     "lint": [],
+     "legacy_note": "A gun carry outshoots you while you sit in the aura.",
+     "temporary": false,
+     "verify": [
+      [
+       "victor:21:defence_bullet:2420",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:21:defence_gun:2421"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "victor:21:defence_gun:2421",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:21:defence_purge:2422"
+     ],
+     "lint": [],
+     "legacy_note": "Hexes and slows that pull you out of aura range.",
+     "temporary": false,
+     "verify": [
+      [
+       "victor:21:defence_purge:2422",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Healbane",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Their team heals a lot.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Debuff Reducer",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Stuns and slows keep you off them.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:21:defence_parry:2423"
+     ],
+     "lint": [],
+     "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow.",
+     "temporary": false,
+     "verify": [
+      [
+       "victor:21:defence_parry:2423",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Ethereal Shift",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Warp Stone for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 171s of base cooldown across your kit, 145s of it the ultimate; the item has its own cooldown of 300s. Replaces Torment Pulse: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:21:refresher:2425",
+      "victor:21:sell_swap:2426"
+     ],
+     "lint": [],
+     "legacy_note": "Resets your revive too, so you can come back twice in one fight. Sell Torment Pulse for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "victor:21:refresher:2425",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "victor:21:sell_swap:2426",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:21:defence_barrier:2427"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "victor:21:defence_barrier:2427",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:21:upgrade_delta:2428"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "victor:21:upgrade_delta:2428",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Healing Tempo",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "victor:21:upgrade_delta:2430"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Healing Booster.",
+     "temporary": false,
+     "verify": [
+      [
+       "victor:21:upgrade_delta:2430",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "victor:0:spike_progress:2343": {
+   "id": "victor:0:spike_progress:2343",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Extra Regen",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "victor:0:component_for:2344": {
+   "id": "victor:0:component_for:2344",
+   "kind": "component_for",
+   "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Extra Regen",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Healing Booster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Healing Booster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:1:spike_progress:2345": {
+   "id": "victor:1:spike_progress:2345",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "victor:1:component_for:2346": {
+   "id": "victor:1:component_for:2346",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:1:spirit_scaling:2347": {
+   "id": "victor:1:spirit_scaling:2347",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 16 to Pain Battery's damage (1.60x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_shocktarget2"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "10.0",
+    "16",
+    "1.60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "victor:2:spike_progress:2348": {
+   "id": "victor:2:spike_progress:2348",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Improved Spirit",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "victor:2:upgrade_of:2349": {
+   "id": "victor:2:upgrade_of:2349",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 2,
+    "item": "Improved Spirit",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:2:spirit_scaling:2350": {
+   "id": "victor:2:spirit_scaling:2350",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 28.8 to Pain Battery's damage (1.60x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_shocktarget2"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 2,
+    "item": "Improved Spirit",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "18.0",
+    "28.8",
+    "1.60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "victor:3:spike_complete:2351": {
+   "id": "victor:3:spike_complete:2351",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (1,600 to 4,800 invested): bonus 11 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 3,
+    "item": "Torment Pulse",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "11.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "victor:3:swap_candidate:2352": {
+   "id": "victor:3:swap_candidate:2352",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Refresher later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 3,
+    "item": "Torment Pulse",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Torment Pulse",
+    "buyer": "Refresher"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:3:phase_range:2353": {
+   "id": "victor:3:phase_range:2353",
+   "kind": "phase_range",
+   "phrase": "Souls 0-5,600 (levels 1-11).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Torment Pulse",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Torment Pulse",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "5,600",
+    "1",
+    "11"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:3:phase_abilities:2354": {
+   "id": "victor:3:phase_abilities:2354",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Shocking Reanimation unlocked.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Torment Pulse",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Torment Pulse",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:3:phase_spikes:2359": {
+   "id": "victor:3:phase_spikes:2359",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Torment Pulse.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Torment Pulse",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Torment Pulse",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:3:phase_ult:2360": {
+   "id": "victor:3:phase_ult:2360",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Shocking Reanimation) is available from Torment Pulse.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Torment Pulse",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Torment Pulse",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:4:spike_progress:2361": {
+   "id": "victor:4:spike_progress:2361",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Healing Booster",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "victor:4:upgrade_of:2362": {
+   "id": "victor:4:upgrade_of:2362",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Regen (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 4,
+    "item": "Healing Booster",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Regen"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:5:spike_progress:2363": {
+   "id": "victor:5:spike_progress:2363",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Spirit Lifesteal",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Enduring Speed completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "victor:5:component_for:2364": {
+   "id": "victor:5:component_for:2364",
+   "kind": "component_for",
+   "phrase": "From Infuser: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Spirit Lifesteal",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 8800,
+    "event": "Infuser"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Infuser"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:6:spike_progress:2365": {
+   "id": "victor:6:spike_progress:2365",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Sprint Boots",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Enduring Speed completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "victor:6:component_for:2366": {
+   "id": "victor:6:component_for:2366",
+   "kind": "component_for",
+   "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Sprint Boots",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Enduring Speed"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Enduring Speed"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:7:spike_complete:2367": {
+   "id": "victor:7:spike_complete:2367",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "victor:7:upgrade_of:2368": {
+   "id": "victor:7:upgrade_of:2368",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Sprint Boots"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:8:invest_step:2369": {
+   "id": "victor:8:invest_step:2369",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 8,
+    "item": "Mystic Vulnerability",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "victor:8:component_for:2370": {
+   "id": "victor:8:component_for:2370",
+   "kind": "component_for",
+   "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 8,
+    "item": "Mystic Vulnerability",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12000,
+    "event": "Escalating Exposure"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:9:spike_progress:2371": {
+   "id": "victor:9:spike_progress:2371",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 7,200 of the 8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 9,
+    "item": "Mystic Expansion",
+    "souls": 12000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 7200
+   },
+   "numbers": [
+    "7200",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 8000
+  },
+  "victor:9:imbue_reach:2372": {
+   "id": "victor:9:imbue_reach:2372",
+   "kind": "imbue_reach",
+   "phrase": "Imbued on Aura of Suffering: widens its range.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_reach",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_painaura"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 9,
+    "item": "Mystic Expansion",
+    "souls": 12000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 3,
+    "stats": [
+     "ETechRange",
+     "ETechRadius"
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "victor:9:component_for:2373": {
+   "id": "victor:9:component_for:2373",
+   "kind": "component_for",
+   "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Mystic Expansion",
+    "souls": 12000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 13600,
+    "event": "Greater Expansion"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Greater Expansion"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:10:invest_step:2374": {
+   "id": "victor:10:invest_step:2374",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Infuser",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "9600",
+    "38.0",
+    "46.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "victor:10:upgrade_of:2375": {
+   "id": "victor:10:upgrade_of:2375",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Infuser",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:11:invest_step:2376": {
+   "id": "victor:11:invest_step:2376",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 7,200 to 8,800 invested: bonus 45 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Compress Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "8800",
+    "45.0",
+    "52.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "victor:11:imbue_cooldown:2377": {
+   "id": "victor:11:imbue_cooldown:2377",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Jumpstart: takes 18% off its 22s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_selfzap"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 11,
+    "item": "Compress Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 2
+   },
+   "numbers": [
+    "18.0",
+    "22.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "victor:11:component_for:2378": {
+   "id": "victor:11:component_for:2378",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Compress Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12000,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:11:phase_range:2379": {
+   "id": "victor:11:phase_range:2379",
+   "kind": "phase_range",
+   "phrase": "Souls 5,600-18,400 (levels 11-24).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Compress Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "5,600",
+    "18,400",
+    "11",
+    "24"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:11:phase_abilities:2380": {
+   "id": "victor:11:phase_abilities:2380",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Pain Battery T3, Aura of Suffering T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Compress Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:11:phase_power:2381": {
+   "id": "victor:11:phase_power:2381",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Pain Battery, damage) grows from 207 to 373.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_shocktarget2",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Compress Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "207",
+    "373"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:11:phase_spikes:2390": {
+   "id": "victor:11:phase_spikes:2390",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Enduring Speed.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Compress Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:12:invest_step:2391": {
+   "id": "victor:12:invest_step:2391",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 8,800 to 13,600 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Escalating Exposure",
+    "souls": 23200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8800",
+    "13600",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "victor:12:upgrade_of:2392": {
+   "id": "victor:12:upgrade_of:2392",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Vulnerability (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 12,
+    "item": "Escalating Exposure",
+    "souls": 23200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Vulnerability"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:13:global_reach:2393": {
+   "id": "victor:13:global_reach:2393",
+   "kind": "global_reach",
+   "phrase": "+30% range and radius on everything that scales with them: Shocking Reanimation radius (18m), Aura of Suffering radius (9m).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_range",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_painaura",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_revive"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 13,
+    "item": "Greater Expansion",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "global_reach"
+   },
+   "numbers": [
+    "30",
+    "18",
+    "9"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "victor:13:invest_step:2394": {
+   "id": "victor:13:invest_step:2394",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 13,600 to 16,000 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Greater Expansion",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "13600",
+    "16000",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "victor:13:upgrade_of:2395": {
+   "id": "victor:13:upgrade_of:2395",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Greater Expansion",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Expansion"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:14:invest_step:2396": {
+   "id": "victor:14:invest_step:2396",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 9,600 to 12,800 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Warp Stone",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "12800",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "victor:14:swap_candidate:2397": {
+   "id": "victor:14:swap_candidate:2397",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Ethereal Shift later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 14,
+    "item": "Warp Stone",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Warp Stone",
+    "buyer": "Ethereal Shift"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:15:upgrade_of:2398": {
+   "id": "victor:15:upgrade_of:2398",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Superior Cooldown",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:15:cdr_rotation:2399": {
+   "id": "victor:15:cdr_rotation:2399",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 266s; 20% off is 53.2s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_shocktarget2",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_selfzap",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_painaura",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_revive"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 15,
+    "item": "Superior Cooldown",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "266",
+    "20.0",
+    "53.2"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "victor:15:phase_range:2400": {
+   "id": "victor:15:phase_range:2400",
+   "kind": "phase_range",
+   "phrase": "Souls 18,400-30,400 (levels 24-30).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Superior Cooldown",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "18,400",
+    "30,400",
+    "24",
+    "30"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:16:invest_step:2404": {
+   "id": "victor:16:invest_step:2404",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 17,600 to 24,000 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Scourge",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "24000",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "victor:17:invest_step:2405": {
+   "id": "victor:17:invest_step:2405",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 24,000 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Boundless Spirit",
+    "souls": 41600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "24000",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "victor:17:upgrade_of:2406": {
+   "id": "victor:17:upgrade_of:2406",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Boundless Spirit",
+    "souls": 41600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:17:spirit_scaling:2407": {
+   "id": "victor:17:spirit_scaling:2407",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 66 to Pain Battery's damage (2.20x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_shocktarget2"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 17,
+    "item": "Boundless Spirit",
+    "souls": 41600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "30.0",
+    "66",
+    "2.20"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "victor:18:invest_step:2408": {
+   "id": "victor:18:invest_step:2408",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 12,800 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Juggernaut",
+    "souls": 46400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "17600",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "victor:18:upgrade_of:2409": {
+   "id": "victor:18:upgrade_of:2409",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Enduring Speed (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Juggernaut",
+    "souls": 46400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Enduring Speed"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:19:burn_trigger_modelled:2410": {
+   "id": "victor:19:burn_trigger_modelled:2410",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Pain Battery (591) = 591 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Burn",
+    "souls": 52800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "591",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "victor:20:invest_step:2411": {
+   "id": "victor:20:invest_step:2411",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 17,600 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Witchmail",
+    "souls": 59200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "24000",
+    "54.0",
+    "60.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 22400
+  },
+  "victor:20:phase_range:2412": {
+   "id": "victor:20:phase_range:2412",
+   "kind": "phase_range",
+   "phrase": "Souls 30,400-59,200 (levels 30-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_frank m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Witchmail",
+    "souls": 59200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Witchmail",
+    "keys": []
+   },
+   "numbers": [
+    "30,400",
+    "59,200",
+    "30",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:20:phase_abilities:2413": {
+   "id": "victor:20:phase_abilities:2413",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Jumpstart T3, Shocking Reanimation T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Witchmail",
+    "souls": 59200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Witchmail",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:20:phase_power:2414": {
+   "id": "victor:20:phase_power:2414",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Pain Battery, damage) grows from 418 to 627.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_shocktarget2",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Witchmail",
+    "souls": 59200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Witchmail",
+    "keys": []
+   },
+   "numbers": [
+    "418",
+    "627"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:21:defence_spirit:2419": {
+   "id": "victor:21:defence_spirit:2419",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Spirit Resilience",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:21:defence_bullet:2420": {
+   "id": "victor:21:defence_bullet:2420",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Metal Skin",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "A gun carry outshoots you while you sit in the aura."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:21:defence_gun:2421": {
+   "id": "victor:21:defence_gun:2421",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Plated Armor",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:21:defence_purge:2422": {
+   "id": "victor:21:defence_purge:2422",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Dispel Magic",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "Hexes and slows that pull you out of aura range."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:21:defence_parry:2423": {
+   "id": "victor:21:defence_parry:2423",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Counterspell",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:21:sell_swap:2424": {
+   "id": "victor:21:sell_swap:2424",
+   "kind": "sell_swap",
+   "phrase": "Replaces Warp Stone: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Ethereal Shift",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Warp Stone for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Warp Stone",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Warp Stone"
+  },
+  "victor:21:refresher:2425": {
+   "id": "victor:21:refresher:2425",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 171s of base cooldown across your kit, 145s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_shocktarget2",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_selfzap",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_painaura",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_frank_revive"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 21,
+    "item": "Refresher",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "Resets your revive too, so you can come back twice in one fight. Sell Torment Pulse for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "171",
+    "145",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "victor:21:sell_swap:2426": {
+   "id": "victor:21:sell_swap:2426",
+   "kind": "sell_swap",
+   "phrase": "Replaces Torment Pulse: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Refresher",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "Resets your revive too, so you can come back twice in one fight. Sell Torment Pulse for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Torment Pulse",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Torment Pulse"
+  },
+  "victor:21:defence_barrier:2427": {
+   "id": "victor:21:defence_barrier:2427",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Divine Barrier",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:21:upgrade_delta:2428": {
+   "id": "victor:21:upgrade_delta:2428",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Transcendent Cooldown",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:21:upgrade_of:2429": {
+   "id": "victor:21:upgrade_of:2429",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 21,
+    "item": "Transcendent Cooldown",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "victor:21:upgrade_delta:2430": {
+   "id": "victor:21:upgrade_delta:2430",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healbuff",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healing_booster"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Healing Tempo",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Healing Booster"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "35",
+    "0",
+    "10"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "victor:21:upgrade_of:2431": {
+   "id": "victor:21:upgrade_of:2431",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Healing Booster (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 21,
+    "item": "Healing Tempo",
+    "souls": 59200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Healing Booster"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "victor",
+   "item": "Grit",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 59200,
+   "unpublished": []
+  },
+  {
+   "build": "victor",
+   "item": "Grit",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Losing trades up close. Sell it once you're out of slots."
+  },
+  {
+   "build": "victor",
+   "item": "Extra Regen",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "victor:0:component_for:2344",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Healing Booster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "victor",
+   "item": "Healing Booster",
+   "section": "mid",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 6400,
+   "unpublished": []
+  },
+  {
+   "build": "victor",
+   "item": "Spirit Lifesteal",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Enduring Speed completes 4.8k vitality in 1600 souls (~1.6 min), 2 purchases",
+   "souls": 8000,
+   "unpublished": [
+    {
+     "id": "victor:5:spike_progress:2363",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Enduring Speed completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "victor:5:component_for:2364",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Infuser: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 8800,
+      "event": "Infuser"
+     }
+    }
+   ]
+  },
+  {
+   "build": "victor",
+   "item": "Sprint Boots",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Enduring Speed completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+   "souls": 8800,
+   "unpublished": [
+    {
+     "id": "victor:6:spike_progress:2365",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Enduring Speed completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "victor:6:component_for:2366",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Enduring Speed"
+     }
+    }
+   ]
+  },
+  {
+   "build": "victor",
+   "item": "Mystic Expansion",
+   "section": "mid",
+   "cls": "c",
+   "why": "spirit investment only; its 8k tier completes at Compress Cooldown, 6400 souls (~6.4 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 12000,
+   "unpublished": [
+    {
+     "id": "victor:9:component_for:2373",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 13600,
+      "event": "Greater Expansion"
+     }
+    }
+   ]
+  },
+  {
+   "build": "victor",
+   "item": "Spirit Burn",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 52800,
+   "unpublished": [
+    {
+     "id": "victor:19:burn_trigger_modelled:2410",
+     "tier": "MODELLED",
+     "phrase": "One rotation of Pain Battery (591) = 591 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "victor",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit."
+  },
+  {
+   "build": "victor",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A gun carry outshoots you while you sit in the aura."
+  },
+  {
+   "build": "victor",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "victor",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Hexes and slows that pull you out of aura range."
+  },
+  {
+   "build": "victor",
+   "item": "Healbane",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 59200,
+   "unpublished": []
+  },
+  {
+   "build": "victor",
+   "item": "Healbane",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their team heals a lot."
+  },
+  {
+   "build": "victor",
+   "item": "Debuff Reducer",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 59200,
+   "unpublished": []
+  },
+  {
+   "build": "victor",
+   "item": "Debuff Reducer",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns and slows keep you off them."
+  },
+  {
+   "build": "victor",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+  },
+  {
+   "build": "victor",
+   "item": "Ethereal Shift",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 59200,
+   "unpublished": []
+  },
+  {
+   "build": "victor",
+   "item": "Refresher",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Resets your revive too, so you can come back twice in one fight. Sell Torment Pulse for this."
+  }
+ ],
+ "stats": {
+  "d": 5,
+  "c": 3,
+  "a": 16,
+  "b": 2,
+  "g": 8
+ }
+}

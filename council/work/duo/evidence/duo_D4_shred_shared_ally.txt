@@ -1,0 +1,8 @@
+KIND: duo-evidence
+SCENARIO: duo_D4_shred_shared_ally
+STATUS: UNTESTABLE-NOW (blocked_by ally_item_and_level_grant,ally_aim_target,ally_hold_channel,enemy_modifier_readback,damage_log_by_attacker)
+NOTE: D4 UNTESTABLE-NOW (needs ally items/levels + ally aim). Does a resist debuff applied by the ally raise the PLAYER's damage? Decides whether concentrating shred on an enabler can ever pay.
+QUESTION: Checking whether Danny's Jettison Fuel shred raises Haze's own gun damage.
+MECHANICS: resist debuff modifiers may be keyed to the applier; the data does not say whether other attackers benefit
+MODEL USE: duo engine shred SHARED flag
+RESULT RULE: WORKS (shared) if my per-hit damage rises while the ally shred modifier is on the enemy; DOES NOT WORK if unchanged

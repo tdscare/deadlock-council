@@ -1,0 +1,137 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: ivy
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:14:40Z
+BODY-SHA: 5fa6cc9dbaba1cfb377784a6f3a5d814552d0952eba03e751b8eef0e8e0ddca3
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Headshot Booster: retained-or-upgraded (-> Headhunter)
+  Titanic Magazine: temporary (bought to be sold)
+  Extra Regen: retained-or-upgraded (-> Healing Booster)
+  Headhunter: retained
+  Healing Booster: retained-or-upgraded (-> Healing Tempo)
+  Grit: retained-or-upgraded (-> Guardian Ward)
+  Guardian Ward: retained-or-upgraded (-> Divine Barrier)
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed)
+  Enduring Speed: retained
+  Heroic Aura: retained
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Rapid Recharge: retained
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Healbane: retained
+  Healing Tempo: retained
+  Duration Extender: retained-or-upgraded (-> Superior Duration)
+  Cursed Relic: retained
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Greater Expansion: retained
+  Superior Duration: retained
+  Superior Cooldown: retained
+  Divine Barrier: retained
+  Siphon Bullets: retained
+  Healing Rite: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Spellbreaker: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Warp Stone: conditional branch (counter menu)
+  Lightning Scroll: situational-luxury
+  Scourge: situational-luxury
+  Refresher: situational-luxury
+  Juggernaut: conditional branch (optional upgrade)
+  Transcendent Cooldown: conditional branch (optional upgrade)
+  Rescue Beam: conditional branch (alternative/optional)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Healing Rite
+  Early · L-R                -> main path (sequential): Headshot Booster, Titanic Magazine, Extra Regen, Headhunter, Healing Booster, Grit, Guardian Ward, Sprint Boots
+  Mid · L-R                  -> main path (sequential): Enduring Speed, Heroic Aura, Extra Charge, Rapid Recharge, Compress Cooldown, Healbane, Healing Tempo
+  Mid · cont.                -> main path (sequential): Duration Extender, Cursed Relic
+  Late · L-R                 -> main path (sequential): Mystic Expansion, Greater Expansion, Superior Duration, Superior Cooldown, Divine Barrier, Siphon Bullets
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Spirit Resilience, Spellbreaker, Counterspell, Unstoppable, Warp Stone
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Lightning Scroll, Scourge, Refresher
+  Slot locked                -> optional upgrade (branch): Juggernaut, Transcendent Cooldown
+  Swap for Heroic Aura       -> alternative/optional (branch): Rescue Beam
+
+## Titanic Magazine: sold when buying Cursed Relic (Mid · cont., main)
+  role of Titanic Magazine: temporary (bought to be sold); role of Cursed Relic: retained
+  Titanic Magazine: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 2400 souls (~3.0 min), replaced at ~29.5 min -> owned ~26.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 8000/11200/12800 -> after 6400/11200/12800; thresholds lost: gun 8000; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 76 min | window TR | key purchase times (min)
+  as built                                    |          69318 |      0.43 | Titanic Magazine 3, Cursed Relic 30
+  keep Titanic Magazine                       |          71887 |      0.49 | Titanic Magazine 3, Cursed Relic 30
+  skip Titanic Magazine                       |          67459 |      0.40 | Cursed Relic 30
+  sell Healbane instead                       |          71414 |      0.47 | Titanic Magazine 3, Cursed Relic 30
+  keep Titanic Magazine vs as built: d souls +1470, d window TR +12.0% | souls: MODEL-ONLY (sign robust in 97% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  skip Titanic Magazine vs as built: d souls -1512, d window TR -7.8% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Healbane instead vs as built: d souls +1269, d window TR +7.6% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  note: the variants ['keep Titanic Magazine', 'sell Healbane instead'] differ from 'as built' only through items with no modelled stat (Cursed Relic contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  ammo mechanics (clip 33, reload 2.444 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Titanic Magazine): 8 s trade 75 bullets (57% not firing), 20 s 178 bullets (59% not firing, 5.4 magazines), damage 20 s 1984, refill uses 0.0
+    keep Titanic Magazine: 8 s trade 119 bullets (32% not firing), 20 s 255 bullets (42% not firing, 3.9 magazines), damage 20 s 3237, refill uses 0.0
+    without Cursed Relic (keep Titanic Magazine): 8 s trade 119 bullets (32% not firing), 20 s 255 bullets (42% not firing, 3.9 magazines), damage 20 s 3237, refill uses 0.0
+    sell Healbane instead: 8 s trade 119 bullets (32% not firing), 20 s 255 bullets (42% not firing, 3.9 magazines), damage 20 s 3237, refill uses 0.0
+    sustained 20 s gun damage: selling Titanic Magazine costs 39% vs keeping it (both with Cursed Relic); Cursed Relic adds +0% on top of Titanic Magazine; selling Healbane instead: +0% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  model limit: Cursed Relic has an active effect (PRESS) not priced
+  model limit: no modelled stat for Cursed Relic (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: established 4.8k lost; the sale of Titanic Magazine lowers modelled sustained gun damage by 39% (ammo mechanics)
+  VERDICT: REVIEW: selling Titanic Magazine costs sustained gun output; Cursed Relic does not replace its ammo role (quantified above). Alternatives for the slot: sell Healbane (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED)
+
+## Rapid Recharge: sold when buying Lightning Scroll (I'm rich as fuck, luxury)
+  role of Rapid Recharge: retained; role of Lightning Scroll: situational-luxury
+  Rapid Recharge: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 16000 souls (~15.5 min), replaced at ~54.5 min -> owned ~39.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/22400/25600 -> after 6400/22400/22400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 84 min | window TR | key purchase times (min)
+  as built                                    |          74448 |      0.36 | Rapid Recharge 16, Lightning Scroll 54
+  keep Rapid Recharge (slot cap ignored)      |          74567 |      0.37 | Rapid Recharge 16, Lightning Scroll 56
+  skip Rapid Recharge                         |          74193 |      0.36 | Lightning Scroll 54
+  sell Healbane instead                       |          74379 |      0.36 | Rapid Recharge 16, Lightning Scroll 56
+  keep Rapid Recharge (slot cap ignored) vs as built: d souls +43, d window TR +2.0% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Rapid Recharge vs as built: d souls -65, d window TR -0.3% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  sell Healbane instead vs as built: d souls -46, d window TR -0.7% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: no modelled stat for Rapid Recharge (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Rapid Recharge (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | skip Rapid Recharge: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Healbane: sold when buying Scourge (I'm rich as fuck, luxury)
+  role of Healbane: retained; role of Scourge: situational-luxury
+  Healbane: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 19200 souls (~18.2 min), replaced at ~55.5 min -> owned ~37.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/22400/25600 -> after 6400/20800/25600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 84 min | window TR | key purchase times (min)
+  as built                                    |          74837 |      0.37 | Healbane 18, Scourge 56
+  keep Healbane (slot cap ignored)            |          75054 |      0.38 | Healbane 18, Scourge 56
+  skip Healbane                               |          74489 |      0.36 | Scourge 55
+  sell Headhunter instead                     |          74576 |      0.37 | Healbane 18, Scourge 54
+  keep Healbane (slot cap ignored) vs as built: d souls +102, d window TR +2.6% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Healbane vs as built: d souls -214, d window TR -1.9% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 97% of cells; no measured inputs)
+  sell Headhunter instead vs as built: d souls -242, d window TR +0.0% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Scourge has an active effect (PRESS) not priced
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Healbane (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Headhunter instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Siphon Bullets: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Siphon Bullets: retained; role of Refresher: situational-luxury
+  Siphon Bullets: price 6400, resale 3200, net cost of owning it 3200 souls (3.2 min of reference income); first bought at 48800.0 souls (~48.8 min), replaced at ~52.8 min -> owned ~4.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/22400/25600 -> after 6400/16000/25600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 84 min | window TR | key purchase times (min)
+  as built                                    |          74584 |      0.28 | Siphon Bullets 49, Refresher 53
+  keep Siphon Bullets (slot cap ignored)      |          75029 |      0.31 | Siphon Bullets 49, Refresher 56
+  skip Siphon Bullets                         |          74630 |      0.29 | Refresher 49
+  sell Healbane instead                       |          74812 |      0.30 | Siphon Bullets 49, Refresher 56
+  keep Siphon Bullets (slot cap ignored) vs as built: d souls +228, d window TR +10.4% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Siphon Bullets vs as built: d souls +29, d window TR +0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Healbane instead vs as built: d souls +130, d window TR +4.9% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: briefly-held purchase: owned ~4.0 min for a net cost of 3200 souls (3.2 min of reference income); review flag only
+  VERDICT: REVIEW (timing, insufficient evidence either way): Siphon Bullets is owned ~4.0 min before Refresher replaces it, for a net 3200 souls; its value over that window is priced above, so it cannot be called wasted or justified. Settle by measuring Siphon Bullets's contribution (queued interaction/path requests) or by deciding the branch ending is not reached; proposal needs the gate; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Siphon Bullets (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Healbane instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))

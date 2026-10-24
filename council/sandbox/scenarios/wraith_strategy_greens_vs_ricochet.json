@@ -1,0 +1,115 @@
+{
+ "id": "wraith_strategy_greens_vs_ricochet",
+ "title": "Wraith: as-built path vs A3 at 9600 souls (strategy test, complete path states)",
+ "hero": "Wraith",
+ "playstyle": "",
+ "builds": [
+  "wraith"
+ ],
+ "kind": "strategy",
+ "question": "For Wraith (wraith) between 2400 and 19200 souls: does the as-built path (Rapid Rounds...; Ricochet at 16800; vitality 4.8k at 21600) let Wraith play more effectively than data-generated alternatives?",
+ "hypothesis": "A0 AS-BUILT has the best time-averaged trade ratio (1-20 min, income-fed walk) in >=80% of the parameter grid; refuted if another path wins >=80% with >=3% median margin, undecided otherwise",
+ "alternatives": [
+  "A0 AS-BUILT",
+  "A3 SPREAD"
+ ],
+ "tradeoffs": [
+  "A3 vs A0 (equal souls, mean over checkpoints): HP +36%, heal/trade +93%, damage to heroes -10%, clear speed -35%; trade ratio better at [2400, 4800, 7200, 9600, 12000, 14400, 16800, 19200], worse at none"
+ ],
+ "missing_evidence": [
+  "clear speed/camp hp/soul values: no NPC or camp data in the sandbox or vdata (needs a camp-clear scenario per checkpoint, generic_camp_clear)",
+  "enemy poke/burst curve: reference enemy is ASSUMED (needs shoot-back mode / real lane logs)",
+  "trade->income link (beta), forced-back and death costs: ASSUMED (needs match data: souls vs lane trade outcome)",
+  "hit rate on heroes and melee uptime: ASSUMED ranges (needs streak-accuracy sandbox runs or replays)",
+  "enemy CC not modelled (GAPS 7): escapes and channels valued without silence/stun; anti-heal only as the grid parameter antiheal",
+  "model structure (not in the grid): 1v1 trade ratio TTD/TTK rewards balanced health and damage by construction; teamfight focus, burst before healing lands, positioning, objectives and item actives timing are not modelled; resource-gated cards assume card_stored",
+  "model-wide pattern (sweep of all 81 data.js builds, quick grid, 2026-10-24): the as-built path won 0 grid cells on any build and 1-2 cheap defensive greens before the spike item won 51 of 57 decided builds; either the Council builds under-buy early sustain in general or the 1v1 trade-ratio model over-values cheap health. Settle with a shoot-back lane test (GAPS 6/17) at one checkpoint before trusting a single-build verdict",
+  "unpriced item effects: Inhibitor: on-hit/stack effect not priced; Reactive Barrier: barrier only when CC'd (no CC in this model); Silencer: on-hit/stack effect not priced; Spirit Rend: on-hit/stack effect not priced; Spiritual Overflow: on-hit/stack effect not priced; kit barrier Project Mind T2 counted as used in the trade (351 x 0.83); real use competes with its escape role; kit barrier Project Mind T2 counted as used in the trade (353 x 0.83); real use competes with its escape role; kit barrier Project Mind T2 counted as used in the trade (362 x 0.83); real use competes with its escape role; kit barrier Project M"
+ ],
+ "strategy_file": "council/evidence/strategy/wraith_greens_vs_ricochet.txt",
+ "arms": [
+  {
+   "name": "A0",
+   "alt": "A0",
+   "souls": 9600,
+   "items": [
+    "Extra Spirit",
+    "Swift Striker",
+    "Tesla Bullets",
+    "Monster Rounds",
+    "Quicksilver Reload"
+   ],
+   "ability_order": null,
+   "notes": "complete A0 state at the checkpoint (strategy file)"
+  },
+  {
+   "name": "A3",
+   "alt": "A3",
+   "souls": 9600,
+   "items": [
+    "Spirit Lifesteal",
+    "Extra Spirit",
+    "Swift Striker",
+    "Quicksilver Reload",
+    "Bullet Lifesteal"
+   ],
+   "ability_order": null,
+   "notes": "complete A3 state"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "abil bits from the strategy file tiers at the checkpoint",
+  "souls": 9600,
+  "position": "shoot-back lane trade (GAPS 6/17 ops needed): enemy Haze bot 350u firing back",
+  "enemies": [
+   {
+    "hero": "Haze",
+    "count": 1,
+    "items": "reference enemy at the same souls",
+    "behaviour": "shoot back",
+    "hp": "finite (ehp)"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "hardreset"
+  ]
+ },
+ "controls": [
+  "same enemy and position",
+  "arms interleaved A,B,B,A",
+  "real ability tiers at the checkpoint (no unlock-all)"
+ ],
+ "procedure": [
+  "give the arm items",
+  "trade 8 s with the shoot-back enemy, measure damage dealt, damage taken, healing, HP left",
+  "rest 22 s, measure HP recovered",
+  "repeat 5 cycles"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "trade_ratio",
+   "unit": "ratio",
+   "how": "time-to-die / time-to-kill from the measured damage rates",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "net_hp_per_cycle",
+   "unit": "hp",
+   "how": "HP after rest minus HP before trade",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "trade_ratio",
+  "min_effect_pct": 5,
+  "min_trials": 5,
+  "rule": "SUPPORTS the strategy file if A3 beats A0 by >=5% with non-overlapping ranges; REFUTES if reverse; else INCONCLUSIVE"
+ }
+}

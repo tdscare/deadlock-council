@@ -1,0 +1,33 @@
+{
+ "proposal": "restore_graves_ult",
+ "id": "graves_ult",
+ "diff": [
+  "added Early · L-R|Arcane Surge",
+  "removed Mid · cont.|Arcane Surge"
+ ],
+ "block": [
+  "NEW violation introduced: bc: COUNTERS_DESC_FORMAT_OCT22 graves_ult: \"Get after Heroic Aura if needed. Ahead? Skip it until you're dying. Sell Arcane Surge for it.\"",
+  "NEW violation introduced: bc: COUNTERS_X_NOT_IN_BUILD graves_ult: Heroic Aura if needed",
+  "NEW violation introduced: bc: COUNTERS_Y_NOT_IN_BUILD graves_ult: Arcane Surge for it"
+ ],
+ "warn": [],
+ "fixed": [
+  "bc: MAIN_4.8K_LATE graves_ult: spirit 4.8k at 13600"
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY graves_ult: Arcane Surge: Dash-jump right before you cast your ult.",
+  "bc: CORE_NOTE_NONEMPTY graves_ult: Heroic Aura: Works on your ghouls too.",
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE graves_ult: Spirit Burn @54400 has no \"Threshold:\" changes line naming it",
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE graves_ult: Arcane Surge @2400 has no \"Threshold:\" changes line naming it",
+  "abt: ECHO-ON-ULT Echo Shard 36800"
+ ],
+ "newV": [
+  "bc: COUNTERS_DESC_FORMAT_OCT22 graves_ult: \"Get after Heroic Aura if needed. Ahead? Skip it until you're dying. Sell Arcane Surge for it.\"",
+  "bc: COUNTERS_X_NOT_IN_BUILD graves_ult: Heroic Aura if needed",
+  "bc: COUNTERS_Y_NOT_IN_BUILD graves_ult: Arcane Surge for it",
+  "bc: RT_ITEMS graves_ult: Early · L-R: [[\"Extra Spirit\",null],[\"Extra Stamina\",null],[\"Improved Spirit\",null],[\"Grit\",null],[\"Duration Extender\",4],[\"Enchanter's Emblem\",null]] vs [[\"Extra Spirit\",null],[\"Extra Stamina\",null],[\"Arcane Surge\",null],[\"Improved Spirit\",null],[\"Grit\",null],[\"Duration Extender\",4],[\"Enchanter's Emblem\",null]]",
+  "bc: RT_ITEMS graves_ult: Mid · cont.: [[\"Arcane Surge\",null],[\"Boundless Spirit\",null]] vs [[\"Boundless Spirit\",null]]"
+ ],
+ "when": "2026-10-24 04:51",
+ "line": "[2026-10-24 04:51] CANDIDATE restore of graves_ult to LASTGOOD (data.js.bak_rel) core/ability order, because the current order shifted a 4.8k spike without a recorded reason (council/triage/TRIAGE.md). | added Early · L-R|Arcane Surge; removed Mid · cont.|Arcane Surge | evidence: data:council/triage/TRIAGE.md | gate: FAIL"
+}

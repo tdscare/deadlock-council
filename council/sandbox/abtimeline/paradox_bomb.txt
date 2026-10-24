@@ -1,0 +1,103 @@
+# paradox_bomb | Paradox | Rizuhble's Time Bomb Paradox
+abilities: 1=Pulse Grenade (citadel_ability_chrono_pulse_grenade, start_trained=false, Signature) / 2=Time Wall (citadel_ability_chrono_time_wall, start_trained=false, Signature) / 3=Kinetic Carbine (citadel_ability_chrono_kinetic_carbine, start_trained=false, Signature) / 4=Paradoxical Swap (citadel_ability_chrono_swap, start_trained=false, Ultimate)
+order: 1122314412442333
+model A (data):  Pulse Gren:U@0  Pulse Gren:T1@200  Time Wall:U@500  Time Wall:T1@900  Kinetic Ca:U@1400  Pulse Gren:T2@2600  Paradoxica:U@3200  Paradoxica:T1@3900  Pulse Gren:T3@7600  Time Wall:T2@9200  Paradoxica:T2@11000  Paradoxica:T3@16100  Time Wall:T3@24600  Kinetic Ca:T1@26900  Kinetic Ca:T2@32100  Kinetic Ca:T3@48600
+model B (old):   Pulse Gren:T1@200  Pulse Gren:T2@900  Time Wall:T1@2000  Time Wall:T2@2600  Kinetic Ca:T1@3900  Pulse Gren:T3@4600  Paradoxica:U@5300  Paradoxica:T1@6000  Time Wall:T3@7600  Paradoxica:T2@8400  Paradoxica:T3@9200  Kinetic Ca:T2@11000  Kinetic Ca:T3@11900
+tier upgrades: Pulse Grenad: AbilityCooldown-12 / PulseDamage+20,PulseDamage+0.5x / DamageAmplificationPerStack+4,AbilityDuration+1.6 | Time Wall: TimeWallWidth+3,TimeWallHeight+1,AbilityDuration+3.5 / FriendlyBulletDamageBonus+35,DebuffDuration+2.3 / AbilityCharges+3,AbilityCooldownBetweenCharge+2 | Kinetic Carb: MaxSlowDuration+0.4 / AbilityCooldown-12,SpeedChange+0.06x / SpeedBoostDuration+2,MaxBonusBulletDamage+55x | Paradoxical : CombatBarrier+200,BarrierDuration+8,CombatBarrier+1.5x / AbilityCastRange+13,AbilityCooldown-30 / MultiSwap+7,MaxHealthDamage+10
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1    19  Extra Spirit
+        Pulse Gren T1 ch1 cd20 d3.2 PulseDam=41 | Time Wall U ch1 cd25 d5.5 | Kinetic Ca L[U] | Paradoxica L
+  1600 L5   2    25  Mystic Expansion [imbue Pulse Grenade]
+        Pulse Gren T1[T2] ch1 cd20 d3.2 PulseDam=43 | Time Wall T1[U] ch1 cd25 d9 | Kinetic Ca U ch1 cd28 | Paradoxica L
+  2400 L6   3    26  Extra Stamina
+        Pulse Gren T1[T2] ch1 cd20 d3.2 PulseDam=43 | Time Wall T1 ch1 cd25 d9 | Kinetic Ca U ch1 cd28 | Paradoxica L
+  3200 L8   4    57  Arcane Surge
+        Pulse Gren T2 ch1 cd20 d3.2 PulseDam=100 | Time Wall T1[T2] ch1 cd25 d9 | Kinetic Ca U ch1 cd28 | Paradoxica U[L] ch1 cd110 SwapDama=212
+  4800 L10  6    78  Duration Extender [imbue Pulse Grenade]
+        Pulse Gren T2[T3] ch1 cd20 d3.2 PulseDam=117 | Time Wall T1[T2] ch1 cd25 d9 | Kinetic Ca U[T1] ch1 cd28 | Paradoxica T1[L] ch1 cd110 SwapDama=236
+  6400 L12  8    86  Spirit Lifesteal
+        Pulse Gren T2[T3] ch1 cd20 d3.2 PulseDam=124 | Time Wall T1[T2] ch1 cd25 d9 | Kinetic Ca U[T1] ch1 cd28 | Paradoxica T1 ch1 cd110 SwapDama=245
+  9600 L16 12    96  Veil Walker
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=132 | Time Wall T2[T3] ch1 cd25 d9 | Kinetic Ca U[T1] ch1 cd28 | Paradoxica T1[T3] ch1 cd110 SwapDama=256
+ 10400 L17 13   106  Improved Spirit
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=139 | Time Wall T2[T3] ch1 cd25 d9 | Kinetic Ca U[T1] ch1 cd28 | Paradoxica T1[T3] ch1 cd110 SwapDama=266
+ 12000 L19 15   115  Mystic Vulnerability
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=147 | Time Wall T2[T3] ch1 cd25 d9 | Kinetic Ca U[T3] ch1 cd28 | Paradoxica T2[T3] ch1 cd80 SwapDama=276
+ 13600 L20 16   123  Compress Cooldown [imbue Pulse Grenade]
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=153 | Time Wall T2[T3] ch1 cd25 d9 | Kinetic Ca U[T3] ch1 cd28 | Paradoxica T2[T3] ch1 cd80 SwapDama=285
+ 15200 L22 18   125  Superior Duration
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=155 | Time Wall T2[T3] ch1 cd25 d9 | Kinetic Ca U[T3] ch1 cd28 | Paradoxica T2[T3] ch1 cd80 SwapDama=288
+ 16800 L23 19   133  Slowing Hex
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=162 | Time Wall T2[T3] ch1 cd25 d9 | Kinetic Ca U[T3] ch1 cd28 | Paradoxica T3 ch1 cd80 SwapDama=297,MaxHealt=10
+ 20000 L25 21   135  Warp Stone
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=163 | Time Wall T2[T3] ch1 cd25 d9 | Kinetic Ca U[T3] ch1 cd28 | Paradoxica T3 ch1 cd80 SwapDama=299,MaxHealt=10
+ 22400 L26 22   136  Greater Expansion
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=164 | Time Wall T2[T3] ch1 cd25 d9 | Kinetic Ca U[T3] ch1 cd28 | Paradoxica T3 ch1 cd80 SwapDama=300,MaxHealt=10
+ 28800 L29 25   147  Echo Shard [imbue Pulse Grenade]
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=172 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T1[T3] ch1 cd28 | Paradoxica T3 ch1 cd80 SwapDama=311,MaxHealt=10
+ 30400 L30 26   157  Superior Cooldown
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=181 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T1[T3] ch1 cd28 | Paradoxica T3 ch1 cd80 SwapDama=323,MaxHealt=10
+ 35200 L32 28   159  Escalating Exposure
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=182 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T2[T3] ch1 cd16 | Paradoxica T3 ch1 cd80 SwapDama=325,MaxHealt=10
+ 40000 L33 29   160  Infuser
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=183 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T2[T3] ch1 cd16 | Paradoxica T3 ch1 cd80 SwapDama=326,MaxHealt=10
+ 44800 L34 30   228  Boundless Spirit
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=237 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T2[T3] ch1 cd16 | Paradoxica T3 ch1 cd80 SwapDama=401,MaxHealt=10
+ 49600 L36 32   231  Vortex Web
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=239 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T3 ch1 cd80 SwapDama=404,MaxHealt=10
+ 56000 L36 32   231  Spirit Burn
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=239 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T3 ch1 cd80 SwapDama=404,MaxHealt=10
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @1600 Mystic Expansion [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Pulse Grenade; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its range and effect radius.
+    at buy: Pulse Grenade T1: cd 20s, duration 3.2s, charges 1
+- @3200 Arcane Surge [dash] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs a dash-jump then an ability
+    game text: After you Dash-Jump, the next ability you use within {s:ArcaneSurgeWindow}s will have bonus Range, Duration, and Spirit Power.
+    at buy: not computed (needs play data)
+    reliability: its spirit is conditional: only the next ability after a dash-jump
+- @4800 Duration Extender [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Pulse Grenade; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its Duration.
+    at buy: Pulse Grenade T2: cd 20s, duration 3.2s, charges 1; duration-scaled props: AbilityDuration=3.2, PulseInterval=0.8, DebuffDuration=8, MovementSlowDuration=0.2
+- @12000 Mystic Vulnerability [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: When an enemy takes {g:citadel_inline_attribute:'SpiritDamage'}, they have their {g:citadel_inline_attribute:'SpiritResist'} reduced. | vdata: proc damage types ABILITY
+    at buy: spirit sources: Pulse Grenade, Paradoxical Swap
+- @13600 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Pulse Grenade; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Pulse Grenade T3: cd 20s, duration 4.8s, charges 1; saves 3.6s/cast (3.00->3.66 casts/min)
+- @15200 Superior Duration [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Increases the duration of your abilities and items.
+    at buy: 4 abilities trained, summed cooldown 153s
+- @28800 Echo Shard [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Pulse Grenade; needs it trained and non-ultimate and the stat the item raises
+    game text: (no game text)
+    at buy: Pulse Grenade T3: cd 20s, duration 4.8s, charges 1
+- @30400 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 153s; 20% saves 30.6s per rotation
+- @35200 Escalating Exposure [spiritsrc+stack] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} applies a stacking Spirit Amp that increases your {g:citadel_inline_attribute:'SpiritDamage'} to t... | vdata: proc damage types ABILITY
+    at buy: spirit sources: Pulse Grenade, Paradoxical Swap
+    reliability: max 12 stacks, one per 0.7s of spirit hits = 8.4s of continuous spirit damage to max
+- @40000 Infuser [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Gain Spirit Lifesteal and Spirit Power.
+    at buy: spirit sources: Pulse Grenade, Paradoxical Swap
+- @56000 Spirit Burn [win] -> OK | verdict: buy now (needs ult in the combo) | UNTESTABLE-HIGH-RISK
+    rule: 500 spirit damage to one enemy within 5s (game text: 'significant spirit damage'); per-enemy cooldown
+    game text: Dealing significant {g:citadel_inline_attribute:'SpiritDamage'} to an enemy within {s:DamageThresholdDuration}s causes an explosion dealing damage and...
+    at buy: all abilities in 5s ~653 (Pulse Grenad 239x1; Paradoxical  414x1), without ult 239
+    margin: -52% without ult, +31% with
+    reliability: needs the whole combo on one target (hit rate, travel time)
+    unverified: pre/post resist; item and DoT damage count (text says any spirit damage)
+
+no trigger condition (plain stats/actives): Extra Spirit, Extra Stamina, Spirit Lifesteal, Veil Walker, Improved Spirit, Slowing Hex, Warp Stone, Greater Expansion, Boundless Spirit, Vortex Web

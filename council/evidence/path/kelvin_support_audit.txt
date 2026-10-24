@@ -1,0 +1,41 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: kelvin_support
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:13Z
+BODY-SHA: 6aeb847306774be04cf530079c543f5e57e454c444e7a9fe01b6c50848af7d72
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Early · L-R              -> main path (sequential): Extra Charge, Extra Regen, Healing Booster, Extra Spirit, Mystic Expansion, Compress Cooldown, Improved Spirit
+  Mid · L-R                -> main path (sequential): Sprint Boots, Trophy Collector, Enchanter's Emblem, Healbane, Rapid Recharge, Superior Cooldown, Duration Extender, Warp Stone
+  Late · L-R               -> main path (sequential): Boundless Spirit, Healing Tempo, Cursed Relic, Refresher, Greater Expansion, Superior Duration
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Counterspell, Dispel Magic, Spirit Resilience, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Divine Barrier, Diviner's Kevlar, Scourge, Rescue Beam
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Diviner's Kevlar, sell Enchanter's Emblem
+    function of Enchanter's Emblem: cooldown, spirit_resist; replacement Diviner's Kevlar: cooldown, duration, sustain; roles lost: spirit_resist  [VERIFIED GAME MECHANIC]
+    Enchanter's Emblem is a component of later items: no
+    held for 43200 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 0/14400/32000 -> 0/19200/32000; thresholds lost: none
+    trade ratio after the sale 0.89; selling Trophy Collector instead: 0.98 (+10.1%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Scourge, sell Healbane
+    function of Healbane: sustain; replacement Scourge: cleanse, spirit_resist; roles lost: sustain  [VERIFIED GAME MECHANIC]
+    Healbane is a component of later items: no
+    held for 41600 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 0/14400/32000 -> 0/12800/38400; thresholds lost: none
+    trade ratio after the sale 0.85; selling Trophy Collector instead: 0.87 (+2.3%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Rescue Beam, sell Warp Stone
+    function of Warp Stone: bullet_resist; replacement Rescue Beam: range, sustain; roles lost: bullet_resist  [VERIFIED GAME MECHANIC]
+    Warp Stone is a component of later items: no
+    held for 29600 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 0/14400/32000 -> 0/14400/32000; thresholds lost: none
+    trade ratio after the sale 0.59; selling Trophy Collector instead: 0.76 (+29.0%)  [MODELLED ESTIMATE]
+    model limit: Warp Stone has an active effect (INSTANT_CAST) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

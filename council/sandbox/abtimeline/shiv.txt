@@ -1,0 +1,108 @@
+# shiv | Shiv | Rizuhble's Stabby McStabface
+abilities: 1=Serrated Knives (citadel_ability_shiv_dagger, start_trained=false, Signature) / 2=Slice and Dice (citadel_ability_shiv_dash, start_trained=false, Signature) / 3=Bloodletting (citadel_ability_shiv_defer_damage, start_trained=false, Signature) / 4=Killing Blow (citadel_ability_shiv_killing_blow, start_trained=false, Ultimate)
+order: 1122314344221334
+model A (data):  Serrated K:U@0  Serrated K:T1@200  Slice and :U@500  Slice and :T1@900  Bloodletti:U@1400  Serrated K:T2@2600  Killing Bl:U@3200  Bloodletti:T1@3900  Killing Bl:T1@4600  Killing Bl:T2@6000  Slice and :T2@7600  Slice and :T3@11900  Serrated K:T3@17400  Bloodletti:T2@20600  Bloodletti:T3@32100  Killing Bl:T3@48600
+model B (old):   Serrated K:T1@200  Serrated K:T2@900  Slice and :T1@2000  Slice and :T2@2600  Bloodletti:T1@3900  Serrated K:T3@4600  Killing Bl:U@5300  Bloodletti:T2@6000  Killing Bl:T1@6800  Killing Bl:T2@7600  Slice and :T3@8400  Bloodletti:T3@11000  Killing Bl:T3@12800
+tier upgrades: Serrated Kni: BleedDuration+2 / AbilityCharges+2 / BleedDPSPerStack+12,BleedDPSPerStack+0.07x | Slice and Di: AbilityCooldown-6 / TechArmorDamageReduction-4,DashRange+2 / ImpactDamage+50,CooldownReductionOnHit+2,CooldownReductionOnHitNonHero+1,MaxCooldownReductionsFromHits+8 | Bloodletting: AbilityCooldown-15 / DeferClearPct+40 / DamagePctDeferred+15 | Killing Blow: BonusMoveSpeed+2,AbilityCastRange+6 / BuffDamage+16,AbilityCooldown-25 / EnemyHealthPercent+10
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     9  Mystic Regeneration
+        Serrated K T1 ch2 cd16/2 BleedDPS=11 | Slice and  U ch1 cd16 ImpactDa=86 | Bloodletti L[U] | Killing Bl L
+  1600 L5   2    15  Extra Charge
+        Serrated K T1[T2] ch2 cd16/2 BleedDPS=13 | Slice and  T1[U] ch1 cd10 ImpactDa=93 | Bloodletti U ch1 cd25 | Killing Bl L
+  4000 L9   5    28  Radiant Regeneration
+        Serrated K T2 ch4 cd16/2 BleedDPS=15 | Slice and  T1[T2] ch1 cd10 ImpactDa=108 | Bloodletti T1 ch1 cd10 | Killing Bl U[L] ch1 cd145 Damage=200
+  5600 L11  7    49  Compress Cooldown [imbue Slice and Dice]
+        Serrated K T2[T3] ch4 cd16/2 BleedDPS=17 | Slice and  T1[T2] ch1 cd10 ImpactDa=134 | Bloodletti T1 ch1 cd10 | Killing Bl T1[U] ch1 cd145 Damage=200
+  7200 L13  9    66  Enchanter's Emblem
+        Serrated K T2[T3] ch4 cd16/2 BleedDPS=20 | Slice and  T1[T2] ch1 cd10 ImpactDa=154 | Bloodletti T1[T2] ch1 cd10 | Killing Bl T2[T1] ch1 cd120 Damage=200
+  8800 L15 11    74  Spirit Lifesteal
+        Serrated K T2[T3] ch4 cd16/2 BleedDPS=21 | Slice and  T2[T3] ch1 cd10 ImpactDa=164 | Bloodletti T1[T2] ch1 cd10 | Killing Bl T2 ch1 cd120 Damage=200
+  9600 L16 12    76  Grit
+        Serrated K T2[T3] ch4 cd16/2 BleedDPS=21 | Slice and  T2[T3] ch1 cd10 ImpactDa=166 | Bloodletti T1[T2] ch1 cd10 | Killing Bl T2 ch1 cd120 Damage=200
+ 10400 L17 13    77  Spirit Shielding
+        Serrated K T2[T3] ch4 cd16/2 BleedDPS=21 | Slice and  T2[T3] ch1 cd10 ImpactDa=167 | Bloodletti T1[T2] ch1 cd10 | Killing Bl T2 ch1 cd120 Damage=200
+ 13600 L20 16    94  Torment Pulse
+        Serrated K T2[T3] ch4 cd16/2 BleedDPS=23 | Slice and  T3 ch1 cd10 ImpactDa=238 | Bloodletti T1[T3] ch1 cd10 | Killing Bl T2[T3] ch1 cd120 Damage=200
+ 15200 L22 18    96  Mystic Vulnerability
+        Serrated K T2[T3] ch4 cd16/2 BleedDPS=23 | Slice and  T3 ch1 cd10 ImpactDa=240 | Bloodletti T1[T3] ch1 cd10 | Killing Bl T2[T3] ch1 cd120 Damage=200
+ 16800 L23 19   104  Superior Cooldown
+        Serrated K T2[T3] ch4 cd16/2 BleedDPS=24 | Slice and  T3 ch1 cd10 ImpactDa=250 | Bloodletti T1[T3] ch1 cd10 | Killing Bl T2[T3] ch1 cd120 Damage=200
+ 19200 L25 21   106  Rapid Recharge
+        Serrated K T3 ch4 cd16/2 BleedDPS=46 | Slice and  T3 ch1 cd10 ImpactDa=253 | Bloodletti T1[T3] ch1 cd10 | Killing Bl T2[T3] ch1 cd120 Damage=200
+ 20800 L26 22   114  Healbane
+        Serrated K T3 ch4 cd16/2 BleedDPS=48 | Slice and  T3 ch1 cd10 ImpactDa=262 | Bloodletti T2[T3] ch1 cd10 | Killing Bl T2[T3] ch1 cd120 Damage=200
+ 24000 L27 23   131  Decay
+        Serrated K T3 ch4 cd16/2 BleedDPS=51 | Slice and  T3 ch1 cd10 ImpactDa=282 | Bloodletti T2[T3] ch1 cd10 | Killing Bl T2[T3] ch1 cd120 Damage=200
+ 28800 L29 25   139  Leech
+        Serrated K T3 ch4 cd16/2 BleedDPS=53 | Slice and  T3 ch1 cd10 ImpactDa=292 | Bloodletti T2[T3] ch1 cd10 | Killing Bl T2[T3] ch1 cd120 Damage=200
+ 32000 L30 26   140  Dispel Magic
+        Serrated K T3 ch4 cd16/2 BleedDPS=53 | Slice and  T3 ch1 cd10 ImpactDa=293 | Bloodletti T2[T3] ch1 cd10 | Killing Bl T2[T3] ch1 cd120 Damage=200
+ 38400 L33 29   152  Mystic Reverb [imbue Slice and Dice]
+        Serrated K T3 ch4 cd16/2 BleedDPS=55 | Slice and  T3 ch1 cd10 ImpactDa=308 | Bloodletti T3 ch1 cd10 | Killing Bl T2[T3] ch1 cd120 Damage=200
+ 43200 L34 30   178  Escalating Exposure
+        Serrated K T3 ch4 cd16/2 BleedDPS=60 | Slice and  T3 ch1 cd10 ImpactDa=339 | Bloodletti T3 ch1 cd10 | Killing Bl T2[T3] ch1 cd120 Damage=200
+ 49600 L36 32   174  Spirit Burn
+        Serrated K T3 ch4 cd16/2 BleedDPS=60 | Slice and  T3 ch1 cd10 ImpactDa=333 | Bloodletti T3 ch1 cd10 | Killing Bl T3 ch1 cd120 Damage=200
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @800 Mystic Regeneration [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} to enemy Heroes grants you Bonus {g:citadel_inline_attribute:'Regen'}. Stacks when dealing damage ...
+    at buy: spirit sources: Serrated Knives, Slice and Dice
+- @1600 Extra Charge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Adds one to your ability max charges.
+    at buy: Serrated Knives 2->3 charges; Serrated Knives shots in 5s 2->3 (between-charge 2s)
+    unverified: F7 1-charge abilities
+- @4000 Radiant Regeneration [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Heal and gain bonus Movement Speed for a short duration when you cast an ability.
+    at buy: 4 abilities trained, summed cooldown 181s
+- @5600 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Slice and Dice; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Slice and Dice T1: cd 10s, duration 0s, charges 1; saves 1.8s/cast (6.00->7.32 casts/min)
+- @7200 Enchanter's Emblem [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: While you are above {s:LifeThreshold}% health, gain bonus {g:citadel_inline_attribute:'Spirit'} and Cooldown Reduction.
+    at buy: not computed (needs play data)
+    reliability: its spirit is conditional: only above 65% health
+- @10400 Spirit Shielding [taken] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: triggers on damage TAKEN from enemies (enemy-dependent) (DamageWindow=3.5, DamageThreshold=225)
+    game text: Gain a Barrier whenever you take significant {g:citadel_inline_attribute:'SpiritDamage'} from enemy Heroes in a small time frame.
+    at buy: not computed (needs play data)
+- @15200 Mystic Vulnerability [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: When an enemy takes {g:citadel_inline_attribute:'SpiritDamage'}, they have their {g:citadel_inline_attribute:'SpiritResist'} reduced. | vdata: proc damage types ABILITY
+    at buy: spirit sources: Serrated Knives, Slice and Dice, Killing Blow, upgrade_tech_damage_pulse
+- @16800 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 156s; 20% saves 31.2s per rotation
+- @19200 Rapid Recharge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: (no game text)
+    at buy: Serrated Knives 4->6 charges; Serrated Knives shots in 5s 3->4 (between-charge 2s) (cd 16->13.8s, between 2->1.40s)
+    unverified: F7 1-charge abilities
+- @38400 Mystic Reverb [hitimb] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 100 (imbued ability only); scaled by spirit at hit time; procs at most every 6s
+    game text: (no game text) | vdata: proc damage types ABILITY/BULLET, CanProcByOtherObjects=true
+    at buy: best Slice and Dice.ImpactDamage 308 at spirit 152 (290 without conditional spirit)
+    margin: +208%
+    reliability: procs from Slice and Dice.ImpactDamage 308 (cd 10)
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @43200 Escalating Exposure [spiritsrc+stack] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} applies a stacking Spirit Amp that increases your {g:citadel_inline_attribute:'SpiritDamage'} to t... | vdata: proc damage types ABILITY
+    at buy: spirit sources: Serrated Knives, Slice and Dice, Killing Blow, upgrade_tech_damage_pulse
+    reliability: max 12 stacks, one per 0.7s of spirit hits = 8.4s of continuous spirit damage to max
+- @49600 Spirit Burn [win] -> OK | verdict: buy now (needs ult in the combo) | UNTESTABLE-HIGH-RISK
+    rule: 500 spirit damage to one enemy within 5s (game text: 'significant spirit damage'); per-enemy cooldown
+    game text: Dealing significant {g:citadel_inline_attribute:'SpiritDamage'} to an enemy within {s:DamageThresholdDuration}s causes an explosion dealing damage and...
+    at buy: all abilities in 5s ~569 (Serrated Kni 12x3; Slice and Di 333x1; Killing Blow 200x1), without ult 369
+    margin: -26% without ult, +14% with
+    reliability: needs the whole combo on one target (hit rate, travel time)
+    unverified: pre/post resist; item and DoT damage count (text says any spirit damage)
+
+no trigger condition (plain stats/actives): Spirit Lifesteal, Grit, Torment Pulse, Healbane, Decay, Leech, Dispel Magic

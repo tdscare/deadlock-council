@@ -1,0 +1,108 @@
+{
+ "id": "harrow_vapors_duration_vs_cooldown",
+ "title": "Harrow: Duration Extender vs Compress Cooldown on Wretched Vapors",
+ "hero": "Nurse Harrow",
+ "playstyle": "Friendly Fire Harrow",
+ "builds": [
+  "nurse"
+ ],
+ "question": "Does +22% Vapors duration beat -18% Vapors cooldown, given Healing Needles T3 already stretches ally buffs up to 200%?",
+ "hypothesis": "Compress gives 22% more rushes; Duration Extender adds 1.1s to a 5s rush that needles can already double, and banks more crash damage. Prediction: ally damage taken per 120s is >=10% lower with Compress; crash damage landed is lower with Compress.",
+ "arms": [
+  {
+   "name": "duration_extender",
+   "items": [
+    "Duration Extender"
+   ],
+   "ability_order": null,
+   "imbues": {
+    "Duration Extender": "Wretched Vapors"
+   },
+   "souls": "~15k",
+   "notes": "Vapors T1, Needles T3"
+  },
+  {
+   "name": "compress_cooldown",
+   "items": [
+    "Compress Cooldown"
+   ],
+   "ability_order": null,
+   "imbues": {
+    "Compress Cooldown": "Wretched Vapors"
+   },
+   "souls": "~15k",
+   "notes": "Vapors T1, Needles T3"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "mid (~15k)",
+  "souls": 15000,
+  "position": "sandbox open lane",
+  "enemies": [
+   {
+    "hero": "Haze bot",
+    "count": 1,
+    "items": "mid gun",
+    "behaviour": "shoot the ally",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "any ally bot",
+    "count": 1,
+    "role": "takes focus"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "HP"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns, HP, leech stacks reset between trials",
+  "Same boons/souls/ability points in both arms except the item/imbue under test",
+  "Same enemy hero, level, items, behaviour",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "120s fight; Vapors on the ally on cooldown",
+  "Needle the ally during each rush (extends it)",
+  "Record rush seconds, crash damage landed, ally HP lost"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "ally_damage_taken_120s",
+   "unit": "hp",
+   "how": "damage log",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": true
+  },
+  {
+   "name": "crash_damage_landed",
+   "unit": "hp",
+   "how": "specter crash ticks on ally",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": false
+  },
+  {
+   "name": "rush_uptime_pct",
+   "unit": "%",
+   "how": "rush seconds / 120",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "ally_damage_taken_120s",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "SUPPORTS compress_cooldown if >=10% lower with non-overlapping ranges"
+ }
+}

@@ -1,0 +1,84 @@
+# vindicta | Vindicta | Rizuhble's Drive-By Vindicta
+abilities: 1=Stake (citadel_ability_hornet_chain, start_trained=false, Signature) / 2=Flight (citadel_ability_hornet_leap, start_trained=false, Signature) / 3=Crow Familiar (citadel_ability_hornet_sting, start_trained=false, Signature) / 4=Assassinate (citadel_ability_hornet_snipe, start_trained=false, Ultimate)
+order: 3322124342311441
+model A (data):  Crow Famil:U@0  Crow Famil:T1@200  Flight:U@500  Flight:T1@900  Stake:U@1400  Flight:T2@2600  Assassinat:U@3200  Crow Famil:T2@4600  Assassinat:T1@5300  Flight:T3@9200  Crow Famil:T3@13800  Stake:T1@14900  Stake:T2@17400  Assassinat:T2@20600  Assassinat:T3@32100  Stake:T3@48600
+model B (old):   Crow Famil:T1@200  Crow Famil:T2@900  Flight:T1@2000  Flight:T2@2600  Stake:T1@3900  Flight:T3@4600  Assassinat:U@5300  Crow Famil:T3@6000  Assassinat:T1@6800  Stake:T2@9200  Stake:T3@10100  Assassinat:T2@11000  Assassinat:T3@11900
+tier upgrades: Stake: Damage+45 / AbilityCooldown-22 / ChainDuration+0.75,CaptureRadius+2 | Flight: BonusClipSizePercent+50 / AbilityDuration+10 / MagicDamagePerBullet+10,MagicDamagePerBullet+0.1x,RefreshOnKill+1 | Crow Familia: HealAmpReceivePenaltyPercent-35,HealAmpRegenPenaltyPercent-35 / AbilityCooldown-16,DotHealthPercent+0.5 / BulletResistReduction-8,TechArmorDamageReduction-8,DebuffDuration+2 | Assassinate: AbilityCooldown-15 / LowHealthEnemyDamageBonus+80 / WeaponDamageBonusPerKill+4
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  High-Velocity Rounds
+        Stake L[U] | Flight U ch1 cd42 d13 MagicDam=10 | Crow Famil T1 ch1 cd32 ImpactDa=42 | Assassinat L
+  2400 L6   3     6  Long Range
+        Stake U ch1 cd40 Damage=43 | Flight T1 ch1 cd42 d13 MagicDam=11 | Crow Famil T1[T2] ch1 cd32 ImpactDa=44 | Assassinat L
+  3200 L8   4     8  Sharpshooter
+        Stake U ch1 cd40 Damage=44 | Flight T2 ch1 cd42 d23 MagicDam=11 | Crow Famil T1[T2] ch1 cd32 ImpactDa=46 | Assassinat U[L] ch2 cd55/2.5 Damage=97
+  4000 L9   5     9  Rapid Rounds
+        Stake U[T1] ch1 cd40 Damage=44 | Flight T2 ch1 cd42 d23 MagicDam=12 | Crow Famil T1[T2] ch1 cd32 ImpactDa=47 | Assassinat U[L] ch2 cd55/2.5 Damage=98
+  4800 L10  6    10  Extended Magazine
+        Stake U[T1] ch1 cd40 Damage=45 | Flight T2[T3] ch1 cd42 d23 MagicDam=12 | Crow Famil T2 ch1 cd16 ImpactDa=47 | Assassinat U[L] ch2 cd55/2.5 Damage=99
+  5600 L11  7    18  Extra Charge
+        Stake U[T1] ch1 cd40 Damage=49 | Flight T2[T3] ch1 cd42 d23 MagicDam=13 | Crow Famil T2 ch1 cd16 ImpactDa=53 | Assassinat T1[U] ch2 cd40/2.5 Damage=113
+  7200 L13  9    20  Bullet Lifesteal
+        Stake U[T1] ch1 cd40 Damage=50 | Flight T2[T3] ch1 cd42 d23 MagicDam=14 | Crow Famil T2[T3] ch1 cd16 ImpactDa=55 | Assassinat T1 ch2 cd40/2.5 Damage=115
+  9600 L16 12    36  Rapid Recharge
+        Stake U[T2] ch1 cd40 Damage=58 | Flight T3 ch1 cd42 d23 MagicDam=30 | Crow Famil T2[T3] ch1 cd16 ImpactDa=66 | Assassinat T1 ch2 cd40/2.5 Damage=136
+ 12800 L20 16    60  Counterspell
+        Stake U[T3] ch1 cd40 Damage=70 | Flight T3 ch1 cd42 d23 MagicDam=37 | Crow Famil T2[T3] ch1 cd16 ImpactDa=85 | Assassinat T1[T3] ch2 cd40/2.5 Damage=159
+ 13600 L20 16    60  Sprint Boots
+        Stake U[T3] ch1 cd40 Damage=70 | Flight T3 ch1 cd42 d23 MagicDam=37 | Crow Famil T2[T3] ch1 cd16 ImpactDa=85 | Assassinat T1[T3] ch2 cd40/2.5 Damage=159
+ 14400 L21 17    61  Enduring Speed
+        Stake U[T3] ch1 cd40 Damage=70 | Flight T3 ch1 cd42 d23 MagicDam=37 | Crow Famil T3 ch1 cd16 ImpactDa=85 | Assassinat T1[T3] ch2 cd40/2.5 Damage=160
+ 16000 L22 18    81  Quicksilver Reload [imbue Crow Familiar]
+        Stake T1[T3] ch1 cd40 Damage=126 | Flight T3 ch1 cd42 d23 MagicDam=43 | Crow Famil T3 ch1 cd16 ImpactDa=100 | Assassinat T1[T3] ch2 cd40/2.5 Damage=178
+ 16800 L23 19    82  Swift Striker
+        Stake T1[T3] ch1 cd40 Damage=126 | Flight T3 ch1 cd42 d23 MagicDam=43 | Crow Famil T3 ch1 cd16 ImpactDa=101 | Assassinat T1[T3] ch2 cd40/2.5 Damage=179
+ 17600 L24 20    83  Titanic Magazine
+        Stake T2[T3] ch1 cd18 Damage=127 | Flight T3 ch1 cd42 d23 MagicDam=43 | Crow Famil T3 ch1 cd16 ImpactDa=102 | Assassinat T1[T3] ch2 cd40/2.5 Damage=180
+ 19200 L25 21    90  Spirit Lifesteal
+        Stake T2[T3] ch1 cd18 Damage=130 | Flight T3 ch1 cd42 d23 MagicDam=45 | Crow Famil T3 ch1 cd16 ImpactDa=107 | Assassinat T1[T3] ch2 cd40/2.5 Damage=187
+ 24000 L27 23   114  Mercurial Magnum [imbue Crow Familiar]
+        Stake T2[T3] ch1 cd18 Damage=142 | Flight T3 ch1 cd42 d23 MagicDam=52 | Crow Famil T3 ch1 cd16 ImpactDa=125 | Assassinat T2[T3] ch2 cd40/2.5 Damage=209
+ 27200 L29 25   116  Burst Fire
+        Stake T2[T3] ch1 cd18 Damage=143 | Flight T3 ch1 cd42 d23 MagicDam=52 | Crow Famil T3 ch1 cd16 ImpactDa=126 | Assassinat T2[T3] ch2 cd40/2.5 Damage=211
+ 30400 L30 26   123  Leech
+        Stake T2[T3] ch1 cd18 Damage=146 | Flight T3 ch1 cd42 d23 MagicDam=54 | Crow Famil T3 ch1 cd16 ImpactDa=131 | Assassinat T2[T3] ch2 cd40/2.5 Damage=217
+ 36800 L32 28   125  Ricochet
+        Stake T2[T3] ch1 cd18 Damage=148 | Flight T3 ch1 cd42 d23 MagicDam=55 | Crow Famil T3 ch1 cd16 ImpactDa=133 | Assassinat T3 ch2 cd40/2.5 Damage=219
+ 40000 L33 29   126  Blood Tribute
+        Stake T2[T3] ch1 cd18 Damage=148 | Flight T3 ch1 cd42 d23 MagicDam=55 | Crow Famil T3 ch1 cd16 ImpactDa=134 | Assassinat T3 ch2 cd40/2.5 Damage=220
+ 46400 L35 31   128  Lucky Shot
+        Stake T2[T3] ch1 cd18 Damage=149 | Flight T3 ch1 cd42 d23 MagicDam=56 | Crow Famil T3 ch1 cd16 ImpactDa=136 | Assassinat T3 ch2 cd40/2.5 Damage=222
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @2400 Long Range [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (LongRangeBonusWeaponPowerMinRange=15m)
+    game text: Deal additional Weapon Damage when beyond a minimum distance from your target.
+    at buy: not computed (needs play data)
+- @3200 Sharpshooter [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (LongRangeBonusWeaponPowerMinRange=15m)
+    game text: Deal additional Weapon Damage when beyond a minimum distance from your target.
+    at buy: not computed (needs play data)
+- @5600 Extra Charge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Adds one to your ability max charges.
+    at buy: Assassinate 2->3 charges; Assassinate shots in 5s 2->3 (between-charge 2.5s)
+    unverified: F7 1-charge abilities
+- @9600 Rapid Recharge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: (no game text)
+    at buy: Assassinate 2->4 charges; Assassinate shots in 5s 2->3 (between-charge 2.5s) (cd 40->34.4s, between 2.5->1.75s)
+    unverified: F7 1-charge abilities
+- @16000 Quicksilver Reload [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Crow Familiar; needs it trained and the stat the item raises
+    game text: Your imbued ability charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, {g:citadel_inline_attribute:'BonusFireRate'}, and relo... | vdata: proc damage types ABILITY/BULLET/MELEE, CanProcByOtherObjects=true
+    at buy: Crow Familiar T3: cd 16s, duration 0s, charges 1
+- @24000 Mercurial Magnum [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Crow Familiar; needs it trained and the stat the item raises
+    game text: Your imbued ability charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, {g:citadel_inline_attribute:'BonusFireRate'}, and relo... | vdata: proc damage types ABILITY/BULLET/MELEE, CanProcByOtherObjects=true
+    at buy: Crow Familiar T3: cd 16s, duration 0s, charges 1
+- @46400 Lucky Shot [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=25)
+    game text: Your bullets have a chance to be empowered, causing them to deal bonus weapon damage on hit.Bonus damage cannot Crit.
+    at buy: not computed (needs play data)
+
+no trigger condition (plain stats/actives): High-Velocity Rounds, Rapid Rounds, Extended Magazine, Bullet Lifesteal, Counterspell, Sprint Boots, Enduring Speed, Swift Striker, Titanic Magazine, Spirit Lifesteal, Burst Fire, Leech, Ricochet, Blood Tribute

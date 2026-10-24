@@ -1,0 +1,20 @@
+SCOPE: build-context
+KIND: context
+VALID: yes (CALCULATED from game data by abtimeline.py --context; not a sandbox measurement)
+BUILD: wraith
+CHECKPOINT: core_end (complete core, item bought at 3200)
+ITEM: Intensifying Magazine
+WITH: complete build at the checkpoint incl. the item (owned items, ability tiers, imbues; see sources below)
+WITHOUT: same build with the item removed and its components held
+ALT: Titanic Magazine (same-tier catalog item, not in build); also [('Quicksilver Reload', 11.0), ('Bullet Lifesteal', 2.7)] [('Titanic Magazine', 22.1), ('Active Reload', 14.9), ('Kinetic Dash', 10.3)]
+ESTIMATE: Intensifying Magazine | cannot estimate: needs build-context sandbox run, Quicksilver cast
+METRIC: gun damage over 20 s, use=0.5; same-tier items already listed in this build, bought instead of the item
+VERDICT-BASIS: REDUNDANT-LIKELY at core_end
+ESTIMATE-AT core_end: verdict REDUNDANT-LIKELY, whole item 3.74006545114538
+GROUP ammo: REDUNDANT-LIKELY - overlapped role adds +3.7% (threshold 8.0%), remaining roles of the item are valued separately (whole item +3.7%)
+  assumption: continuous fire at 100% accuracy on a stationary target; reload 2.82 s (measured 2.82 s in council/sandbox/results/wraith_gun_PR-W1.md)
+  assumption: refill/unlimited sources are used at a rate of `use` (1.0 = every time off cooldown, 0.5 = every other); first use available at fight start
+  assumption: cooldown reduction from owned items applied to hero abilities; item active intervals = AbilityChargeUpTime|AbilityCooldown from data
+  source: Mercurial Magnum.AmmoReloadPercent=100
+  source: Mercurial Magnum.BonusClipSizePercent=20
+  source: ability3 Full Auto T3: UnlimitedAmmo=1

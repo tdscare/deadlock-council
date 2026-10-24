@@ -1,0 +1,82 @@
+IMBUE AUDIT (data-only, all 81 builds in data.js, read-only; game text from citadel_mods_english.txt)
+imbue slot groups by number of distinct imbue items: 1 item(s): 29, 2 item(s): 35, 3 item(s): 15, 4 item(s): 9, 5 item(s): 3
+builds with >=2 imbue items on one ability: 56 of 81 (hero not mapped, item types only: violet, violet_spirit, baba, baba_tank)
+imbue items that would be unused if the game allows ONE imbue per ability (sum of n-1 per slot): 104 placements
+type combinations on one slot (item imbue behaviours): active + active x12; active + modifier_value x11; active_non_ult + modifier_value x8; active_non_ult + modifier_value + modifier_value x6; active + active_non_ult + modifier_value + modifier_value x4; modifier_value + modifier_value x4; active + active + modifier_value + modifier_value x2; active + active + active_non_ult + modifier_value x2; active + active + active x2; active + active + modifier_value x2; active + modifier_value + modifier_value x2; modifier_value + modifier_value + modifier_value x2; active + active_non_ult + modifier_value x1; active + active + active + active_non_ult + modifier_value x1; active + active + active_non_ult + modifier_value + modifier_value x1; active + active + active + modifier_value + modifier_value x1; active_non_ult + modifier_value + modifier_value + modifier_value x1
+same-type pairs on one slot (highest chance of replace/refuse): 42
+Echo Shard + Compress Cooldown on the same ability (cooldown arithmetic: Echo Shard cooldown = 30 s + imbued ability cooldown, so the order of reduction matters): 20  bebop_bomb slot 2, bebop_support slot 3, dynamo_damage slot 1, greytalon slot 1, kelvin slot 3, paige slot 1, paige_support slot 2, ratking slot 1, ratking_grenade slot 1, rem slot 2, solomon slot 3, solomon_support slot 2, venator slot 2, viscous slot 2, geist_bomb slot 1, mcginnis_turret slot 1, paradox_bomb slot 1, apollo slot 3, graves_ult slot 4, nurse slot 2
+multi-imbue slots on an ultimate: 5  dynamo slot 4: Compress Cooldown, Duration Extender; seven slot 4: Duration Extender, Mystic Expansion; vindicta_sniper slot 4: Compress Cooldown, Surge of Power, Mystic Reverb; mcginnis_ult slot 4: Mystic Expansion, Compress Cooldown, Duration Extender; graves_ult slot 4: Duration Extender, Compress Cooldown, Echo Shard
+
+A. CERTAIN (the game data alone makes it dead, independent of any multi-imbue rule)
+  graves_ult: Echo Shard on Borrowed Decree (slot 4): type IMBUE_ACTIVE_NON_ULT (Echo Shard: "Reset the cooldown of the imbued non-ultimate ability.") on an ultimate
+
+B. DEPENDS ON ANOTHER UNKNOWN (not N01)
+  [DEPENDS-ON-N08] dynamo: Duration Extender on Singularity (slot 4): AbilityDuration=0 at every tier; other duration props: none (does the extender scale them? UNRESOLVED)
+  [DEPENDS-ON-N08] infernus: Duration Extender on Afterburn (slot 3): AbilityDuration=0 at every tier; other duration props: BuildUpDuration, BurnDuration, BurnDurationBase, RefillDuration, RefillDurationCrit (does the extender scale them? UNRESOLVED)
+  [DEPENDS-ON-N08] paige_support: Duration Extender on Captivating Read (slot 3): AbilityDuration=0 at every tier; other duration props: DebuffDuration, ImmobilizeDuration, SlowDuration (does the extender scale them? UNRESOLVED)
+  [DEPENDS-ON-N08] seven: Duration Extender on Storm Cloud (slot 4): AbilityDuration=0 at every tier; other duration props: none (does the extender scale them? UNRESOLVED)
+  [DEPENDS-ON-N08] pocket: Duration Extender on Affliction (slot 4): AbilityDuration=0 at every tier; other duration props: DebuffDuration (does the extender scale them? UNRESOLVED)
+  [DEPENDS-ON-N08] sinclair: Duration Extender on Rabbit Hex (slot 3): AbilityDuration=0 at every tier; other duration props: AirDampingDuration, HexDuration (does the extender scale them? UNRESOLVED)
+  [DEPENDS-ON-N08] sinclair_bolt: Duration Extender on Rabbit Hex (slot 3): AbilityDuration=0 at every tier; other duration props: AirDampingDuration, HexDuration (does the extender scale them? UNRESOLVED)
+  [DEPENDS-ON-CHARGES] graves: Surge of Power on Jar of Dead (slot 1): no cooldown field but charges_by_tier=[4.0, 4.0, 4.0, 4.0]: how a use-triggered imbue interacts with charge recharge is UNRESOLVED
+  [DEPENDS-ON-CHARGES] graves: Mercurial Magnum on Jar of Dead (slot 1): no cooldown field but charges_by_tier=[4.0, 4.0, 4.0, 4.0]: how a use-triggered imbue interacts with charge recharge is UNRESOLVED
+  [DEPENDS-ON-CHARGES] nurse: Surge of Power on Healing Needles (slot 3): no cooldown field but charges_by_tier=[1.0, 2.0, 2.0, 2.0]: how a use-triggered imbue interacts with charge recharge is UNRESOLVED
+  [DEPENDS-ON-CHARGES] nurse: Mercurial Magnum on Healing Needles (slot 3): no cooldown field but charges_by_tier=[1.0, 2.0, 2.0, 2.0]: how a use-triggered imbue interacts with charge recharge is UNRESOLVED
+
+C. DEPENDS ON N01 (2+ imbue items on one ability: allowed / replace / refuse / stack are all UNRESOLVED)
+  danny: slot 2 Chimera Mk1: Mystic Expansion, Compress Cooldown, Surge of Power, Mystic Reverb
+  danny_gun: slot 3 Jettison Fuel: Duration Extender, Surge of Power, Echo Shard
+  bebop_bomb: slot 2 Sticky Bomb: Compress Cooldown, Mystic Expansion, Echo Shard, Mystic Reverb
+  bebop_support: slot 3 Grapple Arm: Compress Cooldown, Echo Shard
+  dynamo: slot 4 Singularity: Compress Cooldown, Duration Extender
+  dynamo_damage: slot 1 Kinetic Pulse: Compress Cooldown, Quicksilver Reload, Mercurial Magnum, Mystic Reverb, Echo Shard
+  greytalon: slot 1 Charged Shot: Compress Cooldown, Surge of Power, Mystic Reverb, Echo Shard
+  greytalon_gun: slot 2 Rain of Arrows: Quicksilver Reload, Surge of Power, Mercurial Magnum
+  infernus_dash: slot 2 Flame Dash: Duration Extender, Echo Shard
+  kelvin: slot 3 Arctic Beam: Compress Cooldown, Duration Extender, Echo Shard | slot 1 Frost Grenade: Mystic Expansion, Mystic Reverb
+  kelvin_support: slot 1 Frost Grenade: Mystic Expansion, Compress Cooldown
+  paige: slot 1 Bookwyrm: Compress Cooldown, Surge of Power, Mystic Reverb, Echo Shard
+  paige_support: slot 3 Captivating Read: Mystic Expansion, Duration Extender | slot 2 Plot Armor: Compress Cooldown, Echo Shard
+  ratking: slot 1 Scrap Grenade: Mystic Expansion, Compress Cooldown, Ballistic Enchantment, Echo Shard
+  ratking_grenade: slot 1 Scrap Grenade: Mystic Expansion, Compress Cooldown, Ballistic Enchantment, Echo Shard, Mystic Reverb
+  haze: slot 1 Sleep Dagger: Surge of Power, Mercurial Magnum
+  rem: slot 2 Tag Along: Compress Cooldown, Echo Shard
+  seven: slot 3 Power Surge: Surge of Power, Compress Cooldown | slot 4 Storm Cloud: Duration Extender, Mystic Expansion
+  seven_gun: slot 3 Power Surge: Duration Extender, Surge of Power
+  solomon: slot 3 Rook Battery: Compress Cooldown, Echo Shard | slot 1 Setup Bishop: Mystic Expansion, Mystic Reverb
+  solomon_support: slot 2 Kingside Knight: Compress Cooldown, Echo Shard
+  venator: slot 2 Gutshot: Compress Cooldown, Mystic Expansion, Echo Shard
+  victor_gun: slot 2 Jumpstart: Quicksilver Reload, Compress Cooldown, Mercurial Magnum
+  violet: slot 1 ?: Surge of Power, Mercurial Magnum
+  violet_spirit: slot 1 ?: Surge of Power, Mystic Reverb
+  viscous: slot 2 The Cube: Compress Cooldown, Mystic Expansion, Echo Shard
+  viscous_damage: slot 1 Splatter: Mystic Expansion, Compress Cooldown, Mystic Reverb
+  wraith: slot 1 Card Trick: Quicksilver Reload, Surge of Power, Mercurial Magnum
+  mina: slot 1 Rake: Quicksilver Reload, Mystic Expansion, Compress Cooldown, Mercurial Magnum, Mystic Reverb
+  vindicta: slot 3 Crow Familiar: Quicksilver Reload, Mercurial Magnum
+  vindicta_sniper: slot 4 Assassinate: Compress Cooldown, Surge of Power, Mystic Reverb
+  geist_bomb: slot 1 Essence Bomb: Mystic Expansion, Compress Cooldown, Mystic Reverb, Echo Shard
+  mcginnis: slot 1 Mini Turret: Quicksilver Reload, Mercurial Magnum
+  mcginnis_turret: slot 1 Mini Turret: Mystic Expansion, Compress Cooldown, Echo Shard
+  mcginnis_ult: slot 4 Heavy Barrage: Mystic Expansion, Compress Cooldown, Duration Extender
+  paradox: slot 3 Kinetic Carbine: Compress Cooldown, Mystic Reverb
+  paradox_bomb: slot 1 Pulse Grenade: Mystic Expansion, Duration Extender, Compress Cooldown, Echo Shard
+  apollo: slot 3 Flawless Advance: Mystic Expansion, Compress Cooldown, Mystic Reverb, Echo Shard
+  celeste_carry: slot 3 Radiant Daggers: Quicksilver Reload, Mercurial Magnum
+  warden: slot 1 Alchemical Flask: Quicksilver Reload, Mercurial Magnum
+  lash: slot 1 Ground Strike: Compress Cooldown, Mystic Reverb
+  mirage: slot 3 Djinn's Mark: Compress Cooldown, Mystic Reverb
+  vyper: slot 1 Screwjab Dagger: Quicksilver Reload, Mercurial Magnum
+  vyper_gun: slot 1 Screwjab Dagger: Quicksilver Reload, Mercurial Magnum
+  sinclair: slot 3 Rabbit Hex: Duration Extender, Echo Shard
+  sinclair_bolt: slot 3 Rabbit Hex: Duration Extender, Mystic Expansion, Echo Shard | slot 1 Vexing Bolt: Compress Cooldown, Mystic Reverb
+  doorman: slot 1 Call Bell: Mystic Expansion, Compress Cooldown, Mystic Reverb
+  abrams: slot 1 Siphon Life: Duration Extender, Mystic Expansion, Compress Cooldown
+  holliday: slot 1 Powder Keg: Ballistic Enchantment, Mercurial Magnum
+  holliday_spirit: slot 1 Powder Keg: Compress Cooldown, Mystic Reverb
+  graves: slot 1 Jar of Dead: Surge of Power, Mercurial Magnum
+  graves_ult: slot 4 Borrowed Decree: Duration Extender, Compress Cooldown, Echo Shard
+  calico: slot 1 Gloom Bombs: Compress Cooldown, Mystic Reverb
+  mokrill: slot 1 Scorn: Quicksilver Reload, Compress Cooldown, Mystic Expansion, Mercurial Magnum
+  shiv: slot 2 Slice and Dice: Compress Cooldown, Mystic Reverb
+  nurse: slot 2 Wretched Vapors: Compress Cooldown, Echo Shard | slot 3 Healing Needles: Surge of Power, Mercurial Magnum

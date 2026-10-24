@@ -1,0 +1,110 @@
+# mcginnis_turret | McGinnis | Rizuhble's Flat-Pack Fort McGinnis
+abilities: 1=Mini Turret (citadel_ability_shieldedsentry, start_trained=false, Signature) / 2=Medicinal Specter (citadel_ability_mobile_resupply, start_trained=false, Signature) / 3=Spectral Wall (citadel_ability_fissure_wall, start_trained=false, Signature) / 4=Heavy Barrage (citadel_ability_rocket_barrage, start_trained=false, Ultimate)
+order: 1312141332232444
+model A (data):  Mini Turre:U@0  Mini Turre:T1@200  Spectral W:U@500  Medicinal :U@1400  Mini Turre:T2@2000  Heavy Barr:U@3200  Mini Turre:T3@6000  Spectral W:T1@6800  Spectral W:T2@8400  Medicinal :T1@9200  Medicinal :T2@11000  Spectral W:T3@16100  Medicinal :T3@24600  Heavy Barr:T1@26900  Heavy Barr:T2@32100  Heavy Barr:T3@48600
+model B (old):   Mini Turre:T1@200  Spectral W:T1@900  Mini Turre:T2@2000  Medicinal :T1@2600  Mini Turre:T3@3900  Heavy Barr:U@4600  Spectral W:T2@6000  Spectral W:T3@6800  Medicinal :T2@7600  Medicinal :T3@8400  Heavy Barr:T1@11000  Heavy Barr:T2@11900  Heavy Barr:T3@12800
+tier upgrades: Mini Turret: TurretAttackRange+10,TurretDPS+10 / AbilityCharges+2 / AttackSpeedMult+25,TurretLifetime+12 | Medicinal Sp: AbilityDuration+1.5 / AbilityCooldown-20,StaminaCooldownReduction+100 / MaxHealthRegenPct+2,HealRadius+3,SpiritResist+40 | Spectral Wal: BonusDamagePercent+20,DebuffDuration+7 / AbilityCooldown-20,AbilityDuration+2 / CreateTurrets+2,TurretLifeTime+8,SlowPercent+24 | Heavy Barrag: MoveSlowPercent+24,EnemyDashSlowPercent-16,MoveSlowDuration+1 / AbilityCooldown-45,AbilityDuration+6 / DamagePerRocket+15,DamagePerRocket+0.16x,ExplosionRadius+2
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  Monster Rounds
+        Mini Turre T1 ch1 cd18/3 TurretDP=17 | Medicinal  L[U] | Spectral W U ch1 cd50 d6 Damage=62 | Heavy Barr L
+  1600 L5   2    11  Extra Charge
+        Mini Turre T1 ch1 cd18/3 TurretDP=19 | Medicinal  U ch1 cd50 d6.5 | Spectral W U[T1] ch1 cd50 d6 Damage=68 | Heavy Barr L
+  3200 L8   4    23  Mystic Slow
+        Mini Turre T2 ch3 cd18/3 TurretDP=23 | Medicinal  U[T1] ch1 cd50 d6.5 | Spectral W U[T1] ch1 cd50 d6 Damage=77 | Heavy Barr U[L] ch1 cd200 d8 DamagePe=26
+  4000 L9   5    28  Mystic Expansion [imbue Mini Turret]
+        Mini Turre T2[T3] ch3 cd18/3 TurretDP=24 | Medicinal  U[T1] ch1 cd50 d6.5 | Spectral W U[T1] ch1 cd50 d6 Damage=80 | Heavy Barr U[L] ch1 cd200 d8 DamagePe=27
+  5600 L11  7    49  Compress Cooldown [imbue Mini Turret]
+        Mini Turre T2[T3] ch3 cd18/3 TurretDP=29 | Medicinal  U[T1] ch1 cd50 d6.5 | Spectral W U[T1] ch1 cd50 d6 Damage=96 | Heavy Barr U ch1 cd200 d8 DamagePe=31
+  7200 L13  9    66  Enchanter's Emblem
+        Mini Turre T3 ch3 cd18/3 TurretDP=32 | Medicinal  U[T1] ch1 cd50 d6.5 | Spectral W T1[T3] ch1 cd50 d6 Damage=108 | Heavy Barr U ch1 cd200 d8 DamagePe=34
+  8000 L14 10    67  Extra Stamina
+        Mini Turre T3 ch3 cd18/3 TurretDP=33 | Medicinal  U[T2] ch1 cd50 d6.5 | Spectral W T1[T3] ch1 cd50 d6 Damage=109 | Heavy Barr U ch1 cd200 d8 DamagePe=34
+ 10400 L17 13    71  Stamina Mastery
+        Mini Turre T3 ch3 cd18/3 TurretDP=33 | Medicinal  T1[T3] ch1 cd50 d8 | Spectral W T2[T3] ch1 cd30 d8 Damage=112 | Heavy Barr U ch1 cd200 d8 DamagePe=35
+ 12000 L19 15    98  Improved Spirit
+        Mini Turre T3 ch3 cd18/3 TurretDP=39 | Medicinal  T2[T3] ch1 cd30 d8 | Spectral W T2[T3] ch1 cd30 d8 Damage=132 | Heavy Barr U[T2] ch1 cd200 d8 DamagePe=41
+ 13600 L20 16   106  Mystic Vulnerability
+        Mini Turre T3 ch3 cd18/3 TurretDP=41 | Medicinal  T2[T3] ch1 cd30 d8 | Spectral W T2[T3] ch1 cd30 d8 Damage=137 | Heavy Barr U[T3] ch1 cd200 d8 DamagePe=42
+ 15200 L22 18   115  Healbane
+        Mini Turre T3 ch3 cd18/3 TurretDP=43 | Medicinal  T2[T3] ch1 cd30 d8 | Spectral W T2[T3] ch1 cd30 d8 Damage=144 | Heavy Barr U[T3] ch1 cd200 d8 DamagePe=44
+ 17600 L24 20   117  Rapid Recharge
+        Mini Turre T3 ch3 cd18/3 TurretDP=45 | Medicinal  T2[T3] ch1 cd30 d8 | Spectral W T3 ch1 cd30 d8 Damage=146 | Heavy Barr U[T3] ch1 cd200 d8 DamagePe=44
+ 18400 L24 20   117  Sprint Boots
+        Mini Turre T3 ch3 cd18/3 TurretDP=45 | Medicinal  T2[T3] ch1 cd30 d8 | Spectral W T3 ch1 cd30 d8 Damage=146 | Heavy Barr U[T3] ch1 cd200 d8 DamagePe=44
+ 19200 L25 21   118  Enduring Speed
+        Mini Turre T3 ch3 cd18/3 TurretDP=45 | Medicinal  T2[T3] ch1 cd30 d8 | Spectral W T3 ch1 cd30 d8 Damage=147 | Heavy Barr U[T3] ch1 cd200 d8 DamagePe=45
+ 20000 L25 21   125  Mystic Regeneration
+        Mini Turre T3 ch3 cd18/3 TurretDP=46 | Medicinal  T2[T3] ch1 cd30 d8 | Spectral W T3 ch1 cd30 d8 Damage=152 | Heavy Barr U[T3] ch1 cd200 d8 DamagePe=46
+ 21600 L26 22   126  Superior Cooldown
+        Mini Turre T3 ch3 cd18/3 TurretDP=47 | Medicinal  T2[T3] ch1 cd30 d8 | Spectral W T3 ch1 cd30 d8 Damage=152 | Heavy Barr U[T3] ch1 cd200 d8 DamagePe=46
+ 24000 L27 23   128  Radiant Regeneration
+        Mini Turre T3 ch3 cd18/3 TurretDP=47 | Medicinal  T2[T3] ch1 cd30 d8 | Spectral W T3 ch1 cd30 d8 Damage=153 | Heavy Barr U[T3] ch1 cd200 d8 DamagePe=47
+ 28800 L29 25   137  Escalating Exposure
+        Mini Turre T3 ch3 cd18/3 TurretDP=49 | Medicinal  T3 ch1 cd30 d8 | Spectral W T3 ch1 cd30 d8 Damage=160 | Heavy Barr T1[T3] ch1 cd200 d8 DamagePe=48
+ 31200 L30 26   147  Greater Expansion
+        Mini Turre T3 ch3 cd18/3 TurretDP=51 | Medicinal  T3 ch1 cd30 d8 | Spectral W T3 ch1 cd30 d8 Damage=167 | Heavy Barr T1[T3] ch1 cd200 d8 DamagePe=50
+ 37600 L32 28   174  Spirit Burn
+        Mini Turre T3 ch3 cd18/3 TurretDP=57 | Medicinal  T3 ch1 cd30 d8 | Spectral W T3 ch1 cd30 d8 Damage=187 | Heavy Barr T2[T3] ch1 cd155 d14 DamagePe=56
+ 42400 L34 30   217  Boundless Spirit
+        Mini Turre T3 ch3 cd18/3 TurretDP=65 | Medicinal  T3 ch1 cd30 d8 | Spectral W T3 ch1 cd30 d8 Damage=218 | Heavy Barr T2[T3] ch1 cd155 d14 DamagePe=64
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @800 Monster Rounds [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: (no game text)
+    at buy: not computed (needs play data)
+- @1600 Extra Charge [charged] -> DEAD-AT-BUY | verdict: delay / reorder points | CALCULATED | F7-DEPENDENT (1-charge counts: OK) | gap 400
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Adds one to your ability max charges.
+    at buy: no ability with charges now: Mini Turret 1, Medicinal Specter 0, Spectral Wall 0
+    enabler/next: Mini Turret T2 @2000 (+400)
+    unverified: F7 1-charge abilities
+- @4000 Mystic Expansion [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Mini Turret; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its range and effect radius.
+    at buy: Mini Turret T2: cd 18s, duration 0s, charges 3
+- @5600 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Mini Turret; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Mini Turret T2: cd 18s, duration 0s, charges 3; saves 3.2s/cast (3.33->4.07 casts/min)
+- @7200 Enchanter's Emblem [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: While you are above {s:LifeThreshold}% health, gain bonus {g:citadel_inline_attribute:'Spirit'} and Cooldown Reduction.
+    at buy: not computed (needs play data)
+    reliability: its spirit is conditional: only above 65% health
+- @13600 Mystic Vulnerability [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: When an enemy takes {g:citadel_inline_attribute:'SpiritDamage'}, they have their {g:citadel_inline_attribute:'SpiritResist'} reduced. | vdata: proc damage types ABILITY
+    at buy: spirit sources: Mini Turret, Spectral Wall, Heavy Barrage
+- @17600 Rapid Recharge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: (no game text)
+    at buy: Mini Turret 3->5 charges; Mini Turret shots in 5s 2->3 (between-charge 3s) (cd 18->15.5s, between 3->2.10s)
+    unverified: F7 1-charge abilities
+- @20000 Mystic Regeneration [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} to enemy Heroes grants you Bonus {g:citadel_inline_attribute:'Regen'}. Stacks when dealing damage ...
+    at buy: spirit sources: Mini Turret, Spectral Wall, Heavy Barrage
+- @21600 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 278s; 20% saves 55.6s per rotation
+- @24000 Radiant Regeneration [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Heal and gain bonus Movement Speed for a short duration when you cast an ability.
+    at buy: 4 abilities trained, summed cooldown 278s
+- @28800 Escalating Exposure [spiritsrc+stack] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} applies a stacking Spirit Amp that increases your {g:citadel_inline_attribute:'SpiritDamage'} to t... | vdata: proc damage types ABILITY
+    at buy: spirit sources: Mini Turret, Spectral Wall, Heavy Barrage
+    reliability: max 12 stacks, one per 0.7s of spirit hits = 8.4s of continuous spirit damage to max
+- @37600 Spirit Burn [win] -> KIT-ONLY-BELOW | verdict: check by hand: abilities alone < threshold, item/proc spirit damage not counted | UNTESTABLE-HIGH-RISK
+    rule: 500 spirit damage to one enemy within 5s (game text: 'significant spirit damage'); per-enemy cooldown
+    game text: Dealing significant {g:citadel_inline_attribute:'SpiritDamage'} to an enemy within {s:DamageThresholdDuration}s causes an explosion dealing damage and...
+    at buy: all abilities in 5s ~356 (Mini Turret 57x2; Spectral Wal 187x1; Heavy Barrag 56x1), without ult 300
+    margin: -40% without ult, -29% with
+    reliability: needs the whole combo on one target (hit rate, travel time)
+    unverified: pre/post resist; item and DoT damage count (text says any spirit damage)
+
+no trigger condition (plain stats/actives): Mystic Slow, Extra Stamina, Stamina Mastery, Improved Spirit, Healbane, Sprint Boots, Enduring Speed, Greater Expansion, Boundless Spirit

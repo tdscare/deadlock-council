@@ -1,0 +1,38 @@
+BUILD seven_gun | diff: added Early · L-R|Enchanter's Emblem, Early · L-R|Spirit Lifesteal, Mid · L-R|Escalating Exposure, Late · L-R|Superior Duration, I'm rich as fuck|Witchmail; removed Early · L-R|Rapid Rounds, Early · L-R|Swift Striker, Mid · L-R|Spirit Lifesteal, Late · L-R|Escalating Exposure, I'm rich as fuck|Superior Duration; ability order 1331234324141224 -> 1133234324141224
+fixed: 7 | UNRESOLVED in resulting build: 1 | NEW: 6
+  fixed   bc: T1T2_NOT_UPGRADED_OR_SOLD seven_gun: Swift Striker (T2) @4800
+  fixed   bc: THRESH_ITEM_NO_THRESHOLD_LINE seven_gun: Spiritual Overflow @33600 has no "Threshold:" changes line naming it
+  fixed   bc: FRESH_T2_LATE seven_gun: Mystic Vulnerability @20800
+  fixed   bc: RICH_NOT_T4 seven_gun: Superior Duration T3
+  fixed   bc: OVERSHOOT_GUN_BEFORE_HEALTH seven_gun: gun 19200 at health 4.8k @40000
+  fixed   bc: HEALTH_4.8K_AFTER_16K seven_gun: at 40000
+  fixed   bc: OVERSHOOT_SPIRIT_BEFORE_HEALTH seven_gun: spirit 12800 when health first hits 4.8k at 40000
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY seven_gun: Unstoppable: Pop it before you ult so nobody cancels the storm.
+STRATEGY BLOCK
+INTERACTION BLOCK Enchanter's Emblem
+INTERACTION BLOCK Rapid Rounds
+INTERACTION BLOCK Swift Striker
+INTERACTION BLOCK Surge of Power
+INTERACTION BLOCK Tesla Bullets
+INTERACTION BLOCK Spiritual Overflow
+OVERLAP check (changed items):
+  overlap Enchanter's Emblem (added): core_end=ADDS-VALUE
+  overlap Spirit Lifesteal (moved earlier): no overlap-candidate
+  overlap Sprint Boots (moved earlier): no overlap-candidate
+  overlap Enduring Speed (moved earlier): no overlap-candidate
+  overlap Mystic Vulnerability (moved earlier): at_buy=ADDS-VALUE
+  overlap Unstoppable (moved earlier): no overlap-candidate
+  overlap Superior Duration (moved optional->core): at_buy=ADDS-VALUE; core_end=ADDS-VALUE
+  overlap Witchmail (added (optional)): core_end=ADDS-VALUE
+UNRESOLVED overlap-candidates in resulting build (not part of this change): 2
+  UNRESOLVED overlap-candidate Spiritual Overflow [at_buy=REDUNDANT-LIKELY(6.8% whole item); core_end=REDUNDANT-LIKELY(6.8% whole item)]
+  UNRESOLVED overlap-candidate Lightning Scroll [core_end=UNKNOWN]
+WARN WAIVED bc: MAIN_4.8K_LATE seven_gun: spirit 4.8k at 14400 because: Gun is the main colour (gun 4.8k at 5.6k, tg weapon first); the checker picks spirit by late T4 cost. Spirit 4.8k is delayed to 14.4k on purpose so the health 4.8k lands at 12.0k (Kieran: damage spike, then health spike); computed path comparison in the evidence file.
+BLOCK STRATEGY: proposal changes purchase order + greens (Spirit Lifesteal,Sprint Boots,Enduring Speed,Unstoppable -> Enchanter's Emblem,Spirit Lifesteal,Sprint Boots,Enduring Speed,Unstoppable) + 4.8k spike timing (gun 7200 -> 5600, vitality 40000 -> 12000, spirit 11200 -> 14400) but cites no `strategy` evidence file (run abtimeline.py --strategy seven_gun <checkpoints> and cite it as kind `strategy`)
+BLOCK INTERACTION: Enchanter's Emblem (added) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions seven_gun "Enchanter's Emblem") is cited
+BLOCK INTERACTION: Rapid Rounds (removed) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions seven_gun "Rapid Rounds") is cited
+BLOCK INTERACTION: Swift Striker (removed) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions seven_gun "Swift Striker") is cited
+BLOCK INTERACTION: Surge of Power (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions seven_gun "Surge of Power") is cited
+BLOCK INTERACTION: Tesla Bullets (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions seven_gun "Tesla Bullets") is cited
+BLOCK INTERACTION: Spiritual Overflow (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions seven_gun "Spiritual Overflow") is cited
+RESULT: BLOCKED

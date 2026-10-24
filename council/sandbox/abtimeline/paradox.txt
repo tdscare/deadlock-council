@@ -1,0 +1,115 @@
+# paradox | Paradox | Rizuhble's Clock Sniper Paradox
+abilities: 1=Pulse Grenade (citadel_ability_chrono_pulse_grenade, start_trained=false, Signature) / 2=Time Wall (citadel_ability_chrono_time_wall, start_trained=false, Signature) / 3=Kinetic Carbine (citadel_ability_chrono_kinetic_carbine, start_trained=false, Signature) / 4=Paradoxical Swap (citadel_ability_chrono_swap, start_trained=false, Ultimate)
+order: 1133234423242411
+model A (data):  Pulse Gren:U@0  Pulse Gren:T1@200  Kinetic Ca:U@500  Kinetic Ca:T1@900  Time Wall:U@1400  Kinetic Ca:T2@2600  Paradoxica:U@3200  Paradoxica:T1@3900  Time Wall:T1@4600  Kinetic Ca:T3@8400  Time Wall:T2@10100  Paradoxica:T2@11900  Time Wall:T3@17400  Paradoxica:T3@26900  Pulse Gren:T2@32100  Pulse Gren:T3@48600
+model B (old):   Pulse Gren:T1@200  Pulse Gren:T2@900  Kinetic Ca:T1@2000  Kinetic Ca:T2@2600  Time Wall:T1@3900  Kinetic Ca:T3@4600  Paradoxica:U@5300  Paradoxica:T1@6000  Time Wall:T2@6800  Time Wall:T3@8400  Paradoxica:T2@9200  Paradoxica:T3@11000  Pulse Gren:T3@11900
+tier upgrades: Pulse Grenad: AbilityCooldown-12 / PulseDamage+20,PulseDamage+0.5x / DamageAmplificationPerStack+4,AbilityDuration+1.6 | Time Wall: TimeWallWidth+3,TimeWallHeight+1,AbilityDuration+3.5 / FriendlyBulletDamageBonus+35,DebuffDuration+2.3 / AbilityCharges+3,AbilityCooldownBetweenCharge+2 | Kinetic Carb: MaxSlowDuration+0.4 / AbilityCooldown-12,SpeedChange+0.06x / SpeedBoostDuration+2,MaxBonusBulletDamage+55x | Paradoxical : CombatBarrier+200,BarrierDuration+8,CombatBarrier+1.5x / AbilityCastRange+13,AbilityCooldown-30 / MultiSwap+7,MaxHealthDamage+10
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  High-Velocity Rounds
+        Pulse Gren T1 ch1 cd20 d3.2 PulseDam=36 | Time Wall L[U] | Kinetic Ca U ch1 cd28 | Paradoxica L
+  2400 L6   3     6  Long Range
+        Pulse Gren T1[T2] ch1 cd20 d3.2 PulseDam=37 | Time Wall U ch1 cd25 d5.5 | Kinetic Ca T1 ch1 cd28 | Paradoxica L
+  3200 L8   4     8  Sharpshooter
+        Pulse Gren T1[T2] ch1 cd20 d3.2 PulseDam=37 | Time Wall U ch1 cd25 d5.5 | Kinetic Ca T2 ch1 cd16 | Paradoxica U[L] ch1 cd110 SwapDama=158
+  4000 L9   5     9  Headshot Booster
+        Pulse Gren T1[T2] ch1 cd20 d3.2 PulseDam=38 | Time Wall U[T1] ch1 cd25 d5.5 | Kinetic Ca T2 ch1 cd16 | Paradoxica T1[L] ch1 cd110 SwapDama=160
+  6400 L12  8    12  Headhunter
+        Pulse Gren T1[T2] ch1 cd20 d3.2 PulseDam=39 | Time Wall T1 ch1 cd25 d9 | Kinetic Ca T2[T3] ch1 cd16 | Paradoxica T1 ch1 cd110 SwapDama=163
+  7200 L13  9    13  Grit
+        Pulse Gren T1[T2] ch1 cd20 d3.2 PulseDam=39 | Time Wall T1[T2] ch1 cd25 d9 | Kinetic Ca T2[T3] ch1 cd16 | Paradoxica T1 ch1 cd110 SwapDama=165
+  8000 L14 10    14  Reactive Barrier
+        Pulse Gren T1[T2] ch1 cd20 d3.2 PulseDam=39 | Time Wall T1[T2] ch1 cd25 d9 | Kinetic Ca T2[T3] ch1 cd16 | Paradoxica T1 ch1 cd110 SwapDama=166
+ 11200 L18 14    25  Veil Walker
+        Pulse Gren T1[T2] ch1 cd20 d3.2 PulseDam=42 | Time Wall T2[T3] ch1 cd25 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T1[T3] ch1 cd110 SwapDama=177
+ 14400 L21 17    28  Express Shot
+        Pulse Gren T1[T3] ch1 cd20 d3.2 PulseDam=43 | Time Wall T2[T3] ch1 cd25 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T2[T3] ch1 cd80 SwapDama=181
+ 15200 L22 18    36  Mystic Burst
+        Pulse Gren T1[T3] ch1 cd20 d3.2 PulseDam=46 | Time Wall T2[T3] ch1 cd25 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T2[T3] ch1 cd80 SwapDama=190
+ 17600 L24 20    50  Tankbuster
+        Pulse Gren T1[T3] ch1 cd20 d3.2 PulseDam=50 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T2[T3] ch1 cd80 SwapDama=205
+ 19200 L25 21    70  Compress Cooldown [imbue Kinetic Carbine]
+        Pulse Gren T1[T3] ch1 cd20 d3.2 PulseDam=56 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T2[T3] ch1 cd80 SwapDama=227
+ 20000 L25 21    70  Extra Stamina
+        Pulse Gren T1[T3] ch1 cd20 d3.2 PulseDam=56 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T2[T3] ch1 cd80 SwapDama=227
+ 23200 L27 23    73  Hollow Point
+        Pulse Gren T1[T3] ch1 cd20 d3.2 PulseDam=57 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T2[T3] ch1 cd80 SwapDama=230
+ 24800 L28 24    81  Superior Cooldown
+        Pulse Gren T1[T3] ch1 cd20 d3.2 PulseDam=59 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T2[T3] ch1 cd80 SwapDama=239
+ 27200 L29 25    82  Stamina Mastery
+        Pulse Gren T1[T3] ch1 cd20 d3.2 PulseDam=60 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T3 ch1 cd80 SwapDama=240,MaxHealt=10
+ 33600 L31 27    98  Mystic Reverb [imbue Kinetic Carbine]
+        Pulse Gren T2[T3] ch1 cd20 d3.2 PulseDam=133 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T3 ch1 cd80 SwapDama=258,MaxHealt=10
+ 38400 L33 29   100  Indomitable
+        Pulse Gren T2[T3] ch1 cd20 d3.2 PulseDam=135 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T3 ch1 cd80 SwapDama=260,MaxHealt=10
+ 44800 L34 30   101  Glass Cannon
+        Pulse Gren T2[T3] ch1 cd20 d3.2 PulseDam=136 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T3 ch1 cd80 SwapDama=261,MaxHealt=10
+ 51200 L36 32   104  Crippling Headshot
+        Pulse Gren T3 ch1 cd20 d4.8 PulseDam=138 | Time Wall T3 ch3 cd25/2 d9 | Kinetic Ca T3 ch1 cd16 | Paradoxica T3 ch1 cd80 SwapDama=264,MaxHealt=10
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @2400 Long Range [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (LongRangeBonusWeaponPowerMinRange=15m)
+    game text: Deal additional Weapon Damage when beyond a minimum distance from your target.
+    at buy: not computed (needs play data)
+- @3200 Sharpshooter [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (LongRangeBonusWeaponPowerMinRange=15m)
+    game text: Deal additional Weapon Damage when beyond a minimum distance from your target.
+    at buy: not computed (needs play data)
+- @4000 Headshot Booster [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=100)
+    game text: Your next headshot against an enemy Hero deals {g:citadel_inline_attribute:'BonusWeaponDamage'}.
+    at buy: not computed (needs play data)
+- @6400 Headhunter [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=100)
+    game text: Your next headshot against an enemy Hero deals {g:citadel_inline_attribute:'BonusWeaponDamage'}, {g:citadel_inline_attribute:'Heal'} you, and briefly ...
+    at buy: not computed (needs play data)
+- @14400 Express Shot [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Your next attack will fire twice in quick succession with increased damage and velocity. This attack consumes extra ammo.
+    at buy: not computed (needs play data)
+- @15200 Mystic Burst [hit] -> ULT-ONLY | verdict: delay to ~32100 or reorder/buy enabler first | CALCULATED | MODEL-DEPENDENT (B: OK) | gap 16900
+    rule: one ability damage instance > 80 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcByOtherObjects=true
+    at buy: best Paradoxical Swap.SwapDamage 190 at spirit 36
+    margin: +137%
+    reliability: procs from Paradoxical Swap.SwapDamage 190 (cd 80); below threshold: Pulse Grenade.PulseDamage 46 - ULT ONLY (low uptime)
+    enabler/next: met by a non-ult ability @32100 (Pulse Grenade T2)
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data); weapon-scaled ability damage not computed: Kinetic Carbine.MinBonusBulletDamage, Kinetic Carbine.MaxBonusBulletDamage
+- @17600 Tankbuster [hit] -> ULT-ONLY | verdict: skip/swap | CALCULATED
+    rule: one ability damage instance > 165 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcFromItems=false, IgnoreResists=true, CanProcByOtherObjects=true
+    at buy: best Paradoxical Swap.SwapDamage 205 at spirit 50
+    margin: +24%
+    reliability: procs from Paradoxical Swap.SwapDamage 205 (cd 80); below threshold: Pulse Grenade.PulseDamage 50 - ULT ONLY (low uptime)
+    enabler/next: never met in this build
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data); weapon-scaled ability damage not computed: Kinetic Carbine.MinBonusBulletDamage, Kinetic Carbine.MaxBonusBulletDamage
+- @19200 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Kinetic Carbine; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Kinetic Carbine T3: cd 16s, duration 0s, charges 1; saves 2.9s/cast (3.75->4.57 casts/min)
+- @23200 Hollow Point [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: When you are above {s:LifeThreshold}% health, deal additional Weapon Damage and your bullets reduce enemy Bullet Resist.
+    at buy: not computed (needs play data)
+- @24800 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 141s; 20% saves 28.2s per rotation
+- @33600 Mystic Reverb [hitimb] -> UNCOMPUTED-WEAPON-SCALED | verdict: check by hand / sandbox | UNTESTABLE-HIGH-RISK
+    rule: one ability damage instance > 100 (imbued ability only); scaled by spirit at hit time; procs at most every 6s
+    game text: (no game text) | vdata: proc damage types ABILITY/BULLET, CanProcByOtherObjects=true
+    at buy: best -.None 0 at spirit 98
+    margin: -100%
+    reliability: no qualifying hit
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data); weapon-scaled ability damage not computed: Kinetic Carbine.MinBonusBulletDamage, Kinetic Carbine.MaxBonusBulletDamage
+- @44800 Glass Cannon [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (BonusClipPerKill=2, FireRatePerKill=7, MaxStacks=8)
+    game text: Each hero kill grants permanent Fire Rate (up to a max of {s:MaxStacks} times). Death results in the loss of 1 stack.
+    at buy: not computed (needs play data)
+- @51200 Crippling Headshot [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: (no game text)
+    at buy: not computed (needs play data)
+
+no trigger condition (plain stats/actives): High-Velocity Rounds, Grit, Reactive Barrier, Veil Walker, Extra Stamina, Stamina Mastery, Indomitable

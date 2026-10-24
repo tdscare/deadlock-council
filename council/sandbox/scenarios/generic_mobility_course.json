@@ -1,0 +1,80 @@
+{
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the item/order under test",
+  "Same enemy hero, level, items, behaviour"
+ ],
+ "builds": [],
+ "id": "generic_mobility_course",
+ "title": "Generic: movement / escape",
+ "hero": "any",
+ "playstyle": "mobile / kiting",
+ "question": "How much do movement items/orders change distance covered or escape success?",
+ "hypothesis": "defined per use",
+ "arms": [
+  {
+   "name": "A",
+   "items": [],
+   "souls": ""
+  },
+  {
+   "name": "B",
+   "items": [],
+   "souls": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "set per use",
+  "enemies": [
+   {
+    "hero": "chaser bot",
+    "count": 1,
+    "behaviour": "chase"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "positions"
+  ]
+ },
+ "procedure": [
+  "Run a fixed marked route / flee from the chaser for 15s"
+ ],
+ "metrics": [
+  {
+   "name": "distance",
+   "unit": "m",
+   "how": "",
+   "category": "mobility",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "time_to_route_end",
+   "unit": "s",
+   "how": "",
+   "category": "mobility",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": false
+  },
+  {
+   "name": "damage_taken",
+   "unit": "hp",
+   "how": "",
+   "category": "survivability",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "distance",
+  "min_effect_pct": 8,
+  "min_trials": 5,
+  "rule": "higher better"
+ }
+}

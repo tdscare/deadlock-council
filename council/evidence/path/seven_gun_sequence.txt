@@ -1,0 +1,106 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: seven_gun
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:11:41Z
+BODY-SHA: 91bbc2cfb05cac3f3f9fc29b466b27c5ce8022e5b623c80afbbe73fe6d1ff1b1
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Monster Rounds: retained-or-upgraded (-> Cultist Sacrifice)
+  High-Velocity Rounds: retained-or-upgraded (-> Opening Rounds)
+  Opening Rounds: retained
+  Extra Spirit: retained-or-upgraded (-> Surge of Power,Improved Spirit)
+  Rapid Rounds: retained-or-upgraded (-> Swift Striker)
+  Swift Striker: retained
+  Cultist Sacrifice: retained
+  Duration Extender: retained
+  Surge of Power: retained
+  Spirit Lifesteal: retained-or-upgraded (-> Spiritual Overflow)
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed)
+  Enduring Speed: retained
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Tesla Bullets: retained
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Toxic Bullets: retained
+  Escalating Exposure: retained
+  Spiritual Overflow: retained
+  Unstoppable: retained
+  Boundless Spirit: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Superior Duration: situational-luxury
+  Spirit Burn: situational-luxury
+  Ricochet: situational-luxury
+  Lightning Scroll: situational-luxury
+  Divine Barrier: situational-luxury
+  Juggernaut: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Monster Rounds, High-Velocity Rounds, Opening Rounds, Extra Spirit, Rapid Rounds, Swift Striker, Cultist Sacrifice, Duration Extender
+  Mid · L-R                  -> main path (sequential): Surge of Power, Spirit Lifesteal, Sprint Boots, Enduring Speed, Improved Spirit, Tesla Bullets, Mystic Vulnerability, Toxic Bullets
+  Late · L-R                 -> main path (sequential): Escalating Exposure, Spiritual Overflow, Unstoppable, Boundless Spirit
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Dispel Magic, Spirit Resilience
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Superior Duration, Spirit Burn, Ricochet, Lightning Scroll, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Juggernaut
+
+## Opening Rounds: sold when buying Spirit Burn (I'm rich as fuck, luxury)
+  role of Opening Rounds: retained; role of Spirit Burn: situational-luxury
+  Opening Rounds: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 2400 souls (~2.8 min), replaced at ~48.2 min -> owned ~45.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 19200/8000/24000 -> after 17600/8000/24000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 75 min | window TR | key purchase times (min)
+  as built                                    |          69690 |      0.27 | Opening Rounds 3, Spirit Burn 48
+  keep Opening Rounds (slot cap ignored)      |          69764 |      0.28 | Opening Rounds 3, Spirit Burn 49
+  skip Opening Rounds                         |          69724 |      0.28 | Spirit Burn 48
+  sell Swift Striker instead                  |          69635 |      0.27 | Opening Rounds 3, Spirit Burn 48
+  keep Opening Rounds (slot cap ignored) vs as built: d souls +52, d window TR +1.0% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Opening Rounds vs as built: d souls +75, d window TR +0.3% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  sell Swift Striker instead vs as built: d souls -47, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: no modelled stat for Spirit Burn (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Opening Rounds (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | skip Opening Rounds: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Toxic Bullets: sold when buying Ricochet (I'm rich as fuck, luxury)
+  role of Toxic Bullets: retained; role of Ricochet: situational-luxury
+  Toxic Bullets: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 24000 souls (~21.8 min), replaced at ~47.2 min -> owned ~25.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 25600/8000/17600 -> after 22400/8000/17600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 75 min | window TR | key purchase times (min)
+  as built                                    |          70425 |      0.24 | Toxic Bullets 22, Ricochet 47
+  keep Toxic Bullets (slot cap ignored)       |          70360 |      0.23 | Toxic Bullets 22, Ricochet 49
+  skip Toxic Bullets                          |          70644 |      0.24 | Ricochet 45
+  sell Opening Rounds instead                 |          70316 |      0.23 | Toxic Bullets 22, Ricochet 48
+  keep Toxic Bullets (slot cap ignored) vs as built: d souls -45, d window TR -0.2% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Toxic Bullets vs as built: d souls +236, d window TR +2.3% | souls: MODEL-ONLY (sign robust in 88% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 85% of cells; no measured inputs)
+  sell Opening Rounds instead vs as built: d souls -72, d window TR -1.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Toxic Bullets'] differ from 'as built' only through items with no modelled stat (Toxic Bullets contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: no modelled stat for Toxic Bullets (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Cultist Sacrifice: sold when buying Lightning Scroll (I'm rich as fuck, luxury)
+  role of Cultist Sacrifice: retained; role of Lightning Scroll: situational-luxury
+  Cultist Sacrifice: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 7200 souls (~7.5 min), replaced at ~47.2 min -> owned ~39.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 19200/8000/24000 -> after 16000/8000/24000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 75 min | window TR | key purchase times (min)
+  as built                                    |          69049 |      0.26 | Cultist Sacrifice 8, Lightning Scroll 47
+  keep Cultist Sacrifice (slot cap ignored)   |          69786 |      0.27 | Cultist Sacrifice 8, Lightning Scroll 49
+  skip Cultist Sacrifice                      |          67370 |      0.25 | Lightning Scroll 48
+  sell Opening Rounds instead                 |          69712 |      0.26 | Cultist Sacrifice 8, Lightning Scroll 48
+  keep Cultist Sacrifice (slot cap ignored) vs as built: d souls +1001, d window TR +1.8% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Cultist Sacrifice vs as built: d souls -1452, d window TR -2.6% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 97% of cells; no measured inputs)
+  sell Opening Rounds instead vs as built: d souls +858, d window TR +0.7% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Cultist Sacrifice has an active effect (PRESS) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Cultist Sacrifice (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))

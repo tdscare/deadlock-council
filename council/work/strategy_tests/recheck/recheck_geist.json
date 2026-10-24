@@ -1,0 +1,35 @@
+{
+ "id": "geist",
+ "buildFile": "council/work/geist.js",
+ "reason": "Revert two silent edits since CLEANBASE that were mistakes on computed paths: Healing Booster back to right after Radiant Regeneration (9.6k; health 4.8k 18.4k -> 12.8k, +20% heal on Life Drain/Radiant from 9.6k), Extra Charge back to 16.8k (Life Drain has 3 charges from 6.8k under every point model, so a 4th charge works there). Extra Charge note stays empty.",
+ "evidence": [
+  {
+   "path": "council/work/tri2/geist_paths.txt",
+   "kind": "calc"
+  },
+  {
+   "path": "council/work/tri2/ap_models.txt",
+   "kind": "calc"
+  },
+  {
+   "path": "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata",
+   "kind": "data"
+  },
+  {
+   "path": "council/work/tri2/geist_waiver_fresh_t2.txt",
+   "kind": "calc"
+  },
+  {
+   "path": "gt/repo/game/citadel/resource/localization/citadel_heroes/citadel_heroes_english.txt",
+   "kind": "data",
+   "note": "line 1955: Essence Bomb self damage is Spirit and can be mitigated (Spirit Resilience note is true)"
+  }
+ ],
+ "waive": [
+  {
+   "rule": "FRESH_T2_LATE",
+   "why": "Spirit Lifesteal at 21.6k is a Leech component, not a dead-end late T2; every order that puts all T2s under 20k either delays the Geist health spike to 18.4k or the main gun 8k to 21.6k (computed).",
+   "evidence": "council/work/tri2/geist_waiver_fresh_t2.txt"
+  }
+ ]
+}

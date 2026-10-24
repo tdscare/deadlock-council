@@ -1,0 +1,3800 @@
+{
+ "schema": 1,
+ "id": "doorman_support",
+ "hero": "The Doorman",
+ "name": "Rizuhble's Concierge Doorman",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "mid",
+  "late",
+  "counters",
+  "swap",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, once you're out of slots.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-8,800 (levels 1-15). 4.8k spikes: spirit 4.8k at Compress Cooldown. Ultimate (Hotel Guest) is available from Rapid Recharge.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "doorman_support:7:phase_range:5480",
+    "doorman_support:7:phase_spikes:5489",
+    "doorman_support:7:phase_ult:5490"
+   ],
+   "items": [
+    {
+     "name": "High-Velocity Rounds",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only; its 4.8k tier completes at Heroic Aura, 16800 souls (~16.8 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Opening Rounds",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only; its 4.8k tier completes at Heroic Aura, 16000 souls (~16.0 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Charge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Call Bell (2 to 3).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:2:charges:5467"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:2:charges:5467",
+       true,
+       "[1]"
+      ]
+     ]
+    },
+    {
+     "name": "Healing Rite",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Rescue Beam, 9600 souls (~9.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Rescue Beam, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Rapid Recharge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Call Bell (3 to 4). Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:5:charges:5474",
+      "doorman_support:5:upgrade_of:5473"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:5:charges:5474",
+       true,
+       "[1]"
+      ],
+      [
+       "doorman_support:5:upgrade_of:5473",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "3",
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power. Imbued on Luggage Cart: takes 18% off its 30s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:6:spike_complete:5475",
+      "doorman_support:6:imbue_cooldown:5476"
+     ],
+     "lint": [],
+     "legacy_note": "On Luggage Cart.",
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:6:spike_complete:5475",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ],
+      [
+       "doorman_support:6:imbue_cooldown:5476",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Sprint Boots",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Rescue Beam, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 8,800-20,800 (levels 15-26). Abilities gained (both point models agree): Doorway T3, Luggage Cart T3. Your biggest single spirit hit (Call Bell, explosion damage) grows from 185 to 237. 4.8k spikes: vitality 4.8k at Rescue Beam, weapon 4.8k at Heroic Aura.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "doorman_support:15:phase_range:5509",
+    "doorman_support:15:phase_abilities:5510",
+    "doorman_support:15:phase_power:5511",
+    "doorman_support:15:phase_spikes:5520"
+   ],
+   "items": [
+    {
+     "name": "Guardian Ward",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Rescue Beam, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Put it on the mate you're about to cart in.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Trophy Collector",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Rescue Beam completes 2,400 souls on. Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "imminent: Rescue Beam completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "doorman_support:9:spike_progress:5493",
+      "doorman_support:9:upgrade_of:5494"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:9:spike_progress:5493",
+       true,
+       "4000"
+      ],
+      [
+       "doorman_support:9:upgrade_of:5494",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Rescue Beam",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (4,000 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 20 to 42 vitality bonus. Upgrade of Healing Rite (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:10:spike_complete:5496",
+      "doorman_support:10:upgrade_of:5497"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:10:spike_complete:5496",
+       true,
+       "inventory vitality: before 4000, after 6400, threshold 4800"
+      ],
+      [
+       "doorman_support:10:upgrade_of:5497",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Enchanter's Emblem",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 6,400 to 8,000 invested: bonus 42 to 46 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Heroic Aura",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:12:spike_complete:5500"
+     ],
+     "lint": [],
+     "legacy_note": "Only if your team has gun heroes.",
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:12:spike_complete:5500",
+       true,
+       "inventory weapon: before 1600, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Slowing Hex",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 15 to Hotel Guest's late checkout damage (1.50x scaling), your steepest spirit scaling.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:14:spirit_scaling:5505"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:14:spirit_scaling:5505",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 27 to Hotel Guest's late checkout damage (1.50x scaling), your steepest spirit scaling. Takes spirit from 7,200 to 8,000 invested: bonus 45 to 52 spirit power. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:15:spirit_scaling:5508",
+      "doorman_support:15:invest_step:5506",
+      "doorman_support:15:upgrade_of:5507"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:15:spirit_scaling:5508",
+       true,
+       ""
+      ],
+      [
+       "doorman_support:15:invest_step:5506",
+       true,
+       "inventory spirit: before 7200, after 8000, threshold 8000"
+      ],
+      [
+       "doorman_support:15:upgrade_of:5507",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 cont.",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 20,800-30,400 (levels 26-30).",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "doorman_support:18:phase_range:5527"
+   ],
+   "items": [
+    {
+     "name": "Warp Stone",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 8,000 to 11,200 invested: bonus 46 to 50 vitality bonus. | Temporary, sold when you buy Cheat Death later.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: With 4 abilities trained their base cooldowns total 198s; 20% off is 39.6s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Vortex Web",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 9,600 to 14,400 invested: bonus 52 to 59 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 30,400-49,600 (levels 30-36). Abilities gained (both point models agree): Call Bell T3, Hotel Guest T3. Your biggest single spirit hit (Call Bell, explosion damage) grows from 251 to 385.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "doorman_support:22:phase_range:5538",
+    "doorman_support:22:phase_abilities:5539",
+    "doorman_support:22:phase_power:5540"
+   ],
+   "items": [
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun. Takes vitality from 11,200 to 16,000 invested: bonus 50 to 54 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:19:defence_barrier:5532",
+      "doorman_support:19:invest_step:5530"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Guardian Ward. If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:19:defence_barrier:5532",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "doorman_support:19:invest_step:5530",
+       true,
+       "inventory vitality: before 11200, after 16000, threshold 16000"
+      ]
+     ]
+    },
+    {
+     "name": "Knockdown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 14,400 to 17,600 invested: bonus 59 to 66 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Knockdown their carry, then cart a mate in on them as the stun lands.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 45 to Hotel Guest's late checkout damage (1.50x scaling), your steepest spirit scaling. Takes spirit from 17,600 to 22,400 invested: bonus 66 to 75 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:21:spirit_scaling:5536",
+      "doorman_support:21:invest_step:5534",
+      "doorman_support:21:upgrade_of:5535"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:21:spirit_scaling:5536",
+       true,
+       ""
+      ],
+      [
+       "doorman_support:21:invest_step:5534",
+       true,
+       "inventory spirit: before 17600, after 22400, threshold 22400"
+      ],
+      [
+       "doorman_support:21:upgrade_of:5535",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Cheat Death",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Warp Stone for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Guardian Ward? Buy what is killing you, cheapest first. Not dying? Skip. Sell Knockdown.",
+   "desc": "Dying after Guardian Ward? Buy what is killing you, cheapest first. Not dying? Skip. Sell Knockdown.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:23:defence_bullet:5544"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry dives you.",
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:23:defence_bullet:5544",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:23:defence_gun:5545"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:23:defence_gun:5545",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:23:defence_spirit:5546"
+     ],
+     "lint": [],
+     "legacy_note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:23:defence_spirit:5546",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:23:defence_parry:5547"
+     ],
+     "lint": [],
+     "legacy_note": "A big ult or stun you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:23:defence_parry:5547",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:23:defence_purge:5548"
+     ],
+     "lint": [],
+     "legacy_note": "Hexes and slows that let them catch you.",
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:23:defence_purge:5548",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Stuns keep cancelling Hotel Guest.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "swap",
+   "label": "Optional swap / pivot",
+   "box_title": "Swap for Heroic Aura",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Alchemical Fire",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Instead of Heroic Aura when your team has no gun heroes.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Cursed Relic",
+     "imbue": null,
+     "caption": "Silences, disarms and blocks item use on one enemy for 3.25s and strips their non-ultimate buffs, at -25% damage for you and a 55s cooldown: a single-target answer to a buffed carry or engage. Replaces Warp Stone: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:23:defence_curse:5549",
+      "doorman_support:23:sell_swap:5550"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Warp Stone for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:23:defence_curse:5549",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "doorman_support:23:sell_swap:5550",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 19,200 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Trophy Collector for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 198s of base cooldown across your kit, 120s of it the ultimate; the item has its own cooldown of 300s. Takes spirit from 22,400 to 28,800 invested: bonus 75 to 100 spirit power. Replaces Enchanter's Emblem: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:23:refresher:5553",
+      "doorman_support:23:invest_step:5554",
+      "doorman_support:23:sell_swap:5555"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Enchanter's Emblem for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:23:refresher:5553",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "doorman_support:23:invest_step:5554",
+       true,
+       "inventory spirit: before 22400, after 28800, threshold 28800"
+      ],
+      [
+       "doorman_support:23:sell_swap:5555",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "doorman_support:23:upgrade_delta:5556"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "doorman_support:23:upgrade_delta:5556",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "doorman_support:23:temporary_sold:5460": {
+   "id": "doorman_support:23:temporary_sold:5460",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, once you're out of slots.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 23,
+    "item": "Extra Regen",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it once you're out of slots."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:0:spike_progress:5461": {
+   "id": "doorman_support:0:spike_progress:5461",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "doorman_support:0:component_for:5462": {
+   "id": "doorman_support:0:component_for:5462",
+   "kind": "component_for",
+   "phrase": "From Opening Rounds: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Opening Rounds"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Opening Rounds"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:1:spike_progress:5463": {
+   "id": "doorman_support:1:spike_progress:5463",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Opening Rounds",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "doorman_support:1:upgrade_of:5464": {
+   "id": "doorman_support:1:upgrade_of:5464",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of High-Velocity Rounds (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 1,
+    "item": "Opening Rounds",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "High-Velocity Rounds"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:2:spike_progress:5465": {
+   "id": "doorman_support:2:spike_progress:5465",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Extra Charge",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "doorman_support:2:component_for:5466": {
+   "id": "doorman_support:2:component_for:5466",
+   "kind": "component_for",
+   "phrase": "From Rapid Recharge: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Extra Charge",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 4000,
+    "event": "Rapid Recharge"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Rapid Recharge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:2:charges:5467": {
+   "id": "doorman_support:2:charges:5467",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Call Bell (2 to 3).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_extra_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_bomb"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 2,
+    "item": "Extra Charge",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "1",
+    "2",
+    "3"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "doorman_support:3:spike_progress:5468": {
+   "id": "doorman_support:3:spike_progress:5468",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Healing Rite",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "doorman_support:3:component_for:5469": {
+   "id": "doorman_support:3:component_for:5469",
+   "kind": "component_for",
+   "phrase": "From Rescue Beam: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Healing Rite",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 9600,
+    "event": "Rescue Beam"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Rescue Beam"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:4:spike_progress:5470": {
+   "id": "doorman_support:4:spike_progress:5470",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Grit",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "doorman_support:4:component_for:5471": {
+   "id": "doorman_support:4:component_for:5471",
+   "kind": "component_for",
+   "phrase": "From Guardian Ward: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Grit",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Guardian Ward"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Guardian Ward"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:5:spike_progress:5472": {
+   "id": "doorman_support:5:spike_progress:5472",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Rapid Recharge",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "doorman_support:5:upgrade_of:5473": {
+   "id": "doorman_support:5:upgrade_of:5473",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 5,
+    "item": "Rapid Recharge",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Charge"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:5:charges:5474": {
+   "id": "doorman_support:5:charges:5474",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Call Bell (3 to 4).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_rapid_recharge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_bomb"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 5,
+    "item": "Rapid Recharge",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "1",
+    "3",
+    "4"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "doorman_support:6:spike_complete:5475": {
+   "id": "doorman_support:6:spike_complete:5475",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 6,
+    "item": "Compress Cooldown",
+    "souls": 8000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "doorman_support:6:imbue_cooldown:5476": {
+   "id": "doorman_support:6:imbue_cooldown:5476",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Luggage Cart: takes 18% off its 30s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_luggage_cart"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 6,
+    "item": "Compress Cooldown",
+    "souls": 8000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 3
+   },
+   "numbers": [
+    "18.0",
+    "30.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "doorman_support:6:component_for:5477": {
+   "id": "doorman_support:6:component_for:5477",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Compress Cooldown",
+    "souls": 8000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 17600,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:7:spike_progress:5478": {
+   "id": "doorman_support:7:spike_progress:5478",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Sprint Boots",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "doorman_support:7:component_for:5479": {
+   "id": "doorman_support:7:component_for:5479",
+   "kind": "component_for",
+   "phrase": "From Trophy Collector: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Sprint Boots",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Trophy Collector"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Trophy Collector"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:7:phase_range:5480": {
+   "id": "doorman_support:7:phase_range:5480",
+   "kind": "phase_range",
+   "phrase": "Souls 0-8,800 (levels 1-15).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Sprint Boots",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Sprint Boots",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "8,800",
+    "1",
+    "15"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:7:phase_spikes:5489": {
+   "id": "doorman_support:7:phase_spikes:5489",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Compress Cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Sprint Boots",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Sprint Boots",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:7:phase_ult:5490": {
+   "id": "doorman_support:7:phase_ult:5490",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Hotel Guest) is available from Rapid Recharge.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Sprint Boots",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Sprint Boots",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:8:spike_progress:5491": {
+   "id": "doorman_support:8:spike_progress:5491",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 8,
+    "item": "Guardian Ward",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "doorman_support:8:upgrade_of:5492": {
+   "id": "doorman_support:8:upgrade_of:5492",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 8,
+    "item": "Guardian Ward",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Grit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:9:spike_progress:5493": {
+   "id": "doorman_support:9:spike_progress:5493",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Rescue Beam completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 9,
+    "item": "Trophy Collector",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Rescue Beam completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "doorman_support:9:upgrade_of:5494": {
+   "id": "doorman_support:9:upgrade_of:5494",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 9,
+    "item": "Trophy Collector",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Sprint Boots"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:9:swap_candidate:5495": {
+   "id": "doorman_support:9:swap_candidate:5495",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Witchmail later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 9,
+    "item": "Trophy Collector",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Trophy Collector",
+    "buyer": "Witchmail"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:10:spike_complete:5496": {
+   "id": "doorman_support:10:spike_complete:5496",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (4,000 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 20 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 10,
+    "item": "Rescue Beam",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "6400",
+    "20.0",
+    "42.0",
+    "4.8k",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "doorman_support:10:upgrade_of:5497": {
+   "id": "doorman_support:10:upgrade_of:5497",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Healing Rite (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Rescue Beam",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Healing Rite"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:11:invest_step:5498": {
+   "id": "doorman_support:11:invest_step:5498",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 8,000 invested: bonus 42 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Enchanter's Emblem",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "8000",
+    "42.0",
+    "46.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "doorman_support:11:swap_candidate:5499": {
+   "id": "doorman_support:11:swap_candidate:5499",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Refresher later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 11,
+    "item": "Enchanter's Emblem",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Enchanter's Emblem",
+    "buyer": "Refresher"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:12:spike_complete:5500": {
+   "id": "doorman_support:12:spike_complete:5500",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 12,
+    "item": "Heroic Aura",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "doorman_support:13:invest_step:5501": {
+   "id": "doorman_support:13:invest_step:5501",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Slowing Hex",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "doorman_support:13:component_for:5502": {
+   "id": "doorman_support:13:component_for:5502",
+   "kind": "component_for",
+   "phrase": "From Vortex Web: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Slowing Hex",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 11200,
+    "event": "Vortex Web"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Vortex Web"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:14:spike_progress:5503": {
+   "id": "doorman_support:14:spike_progress:5503",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 7,200 of the 8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 14,
+    "item": "Extra Spirit",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 7200
+   },
+   "numbers": [
+    "7200",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 8000
+  },
+  "doorman_support:14:component_for:5504": {
+   "id": "doorman_support:14:component_for:5504",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Extra Spirit",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:14:spirit_scaling:5505": {
+   "id": "doorman_support:14:spirit_scaling:5505",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 15 to Hotel Guest's late checkout damage (1.50x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_hotel"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 14,
+    "item": "Extra Spirit",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "LateCheckoutDamage"
+   },
+   "numbers": [
+    "10.0",
+    "15",
+    "1.50"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "doorman_support:15:invest_step:5506": {
+   "id": "doorman_support:15:invest_step:5506",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 7,200 to 8,000 invested: bonus 45 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Improved Spirit",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "8000",
+    "45.0",
+    "52.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "doorman_support:15:upgrade_of:5507": {
+   "id": "doorman_support:15:upgrade_of:5507",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Improved Spirit",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:15:spirit_scaling:5508": {
+   "id": "doorman_support:15:spirit_scaling:5508",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 27 to Hotel Guest's late checkout damage (1.50x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_hotel"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 15,
+    "item": "Improved Spirit",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "LateCheckoutDamage"
+   },
+   "numbers": [
+    "18.0",
+    "27",
+    "1.50"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "doorman_support:15:phase_range:5509": {
+   "id": "doorman_support:15:phase_range:5509",
+   "kind": "phase_range",
+   "phrase": "Souls 8,800-20,800 (levels 15-26).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Improved Spirit",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Improved Spirit",
+    "keys": []
+   },
+   "numbers": [
+    "8,800",
+    "20,800",
+    "15",
+    "26"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:15:phase_abilities:5510": {
+   "id": "doorman_support:15:phase_abilities:5510",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Doorway T3, Luggage Cart T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Improved Spirit",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Improved Spirit",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:15:phase_power:5511": {
+   "id": "doorman_support:15:phase_power:5511",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Call Bell, explosion damage) grows from 185 to 237.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_bomb",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Improved Spirit",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Improved Spirit",
+    "keys": []
+   },
+   "numbers": [
+    "185",
+    "237"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:15:phase_spikes:5520": {
+   "id": "doorman_support:15:phase_spikes:5520",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Rescue Beam, weapon 4.8k at Heroic Aura.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Improved Spirit",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Improved Spirit",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:16:invest_step:5521": {
+   "id": "doorman_support:16:invest_step:5521",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 8,000 to 11,200 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Warp Stone",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "11200",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "doorman_support:16:temporary_sold:5522": {
+   "id": "doorman_support:16:temporary_sold:5522",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Cheat Death later.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 34,
+   "point": {
+    "idx": 16,
+    "item": "Warp Stone",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Warp Stone",
+    "buyer": "Cheat Death"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:17:upgrade_of:5523": {
+   "id": "doorman_support:17:upgrade_of:5523",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Superior Cooldown",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:17:cdr_rotation:5524": {
+   "id": "doorman_support:17:cdr_rotation:5524",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 198s; 20% off is 39.6s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_bomb",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_doorway",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_luggage_cart",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_hotel"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 17,
+    "item": "Superior Cooldown",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "198",
+    "20.0",
+    "39.6"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "doorman_support:18:invest_step:5525": {
+   "id": "doorman_support:18:invest_step:5525",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 9,600 to 14,400 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Vortex Web",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "14400",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "doorman_support:18:upgrade_of:5526": {
+   "id": "doorman_support:18:upgrade_of:5526",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Slowing Hex (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Vortex Web",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Slowing Hex"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:18:phase_range:5527": {
+   "id": "doorman_support:18:phase_range:5527",
+   "kind": "phase_range",
+   "phrase": "Souls 20,800-30,400 (levels 26-30).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Vortex Web",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Vortex Web",
+    "keys": []
+   },
+   "numbers": [
+    "20,800",
+    "30,400",
+    "26",
+    "30"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:19:invest_step:5530": {
+   "id": "doorman_support:19:invest_step:5530",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 11,200 to 16,000 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 35200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "16000",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "doorman_support:19:upgrade_of:5531": {
+   "id": "doorman_support:19:upgrade_of:5531",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Guardian Ward (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 35200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Guardian Ward"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:19:defence_barrier:5532": {
+   "id": "doorman_support:19:defence_barrier:5532",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 35200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:20:invest_step:5533": {
+   "id": "doorman_support:20:invest_step:5533",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 14,400 to 17,600 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Knockdown",
+    "souls": 38400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "17600",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "doorman_support:21:invest_step:5534": {
+   "id": "doorman_support:21:invest_step:5534",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 17,600 to 22,400 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 21,
+    "item": "Boundless Spirit",
+    "souls": 43200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "22400",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "doorman_support:21:upgrade_of:5535": {
+   "id": "doorman_support:21:upgrade_of:5535",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 21,
+    "item": "Boundless Spirit",
+    "souls": 43200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "doorman_support:21:spirit_scaling:5536": {
+   "id": "doorman_support:21:spirit_scaling:5536",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 45 to Hotel Guest's late checkout damage (1.50x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_hotel"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 21,
+    "item": "Boundless Spirit",
+    "souls": 43200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "LateCheckoutDamage"
+   },
+   "numbers": [
+    "30.0",
+    "45",
+    "1.50"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "doorman_support:22:sell_swap:5537": {
+   "id": "doorman_support:22:sell_swap:5537",
+   "kind": "sell_swap",
+   "phrase": "Replaces Warp Stone: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 22,
+    "item": "Cheat Death",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Warp Stone",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Warp Stone"
+  },
+  "doorman_support:22:phase_range:5538": {
+   "id": "doorman_support:22:phase_range:5538",
+   "kind": "phase_range",
+   "phrase": "Souls 30,400-49,600 (levels 30-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 22,
+    "item": "Cheat Death",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Cheat Death",
+    "keys": []
+   },
+   "numbers": [
+    "30,400",
+    "49,600",
+    "30",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:22:phase_abilities:5539": {
+   "id": "doorman_support:22:phase_abilities:5539",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Call Bell T3, Hotel Guest T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 22,
+    "item": "Cheat Death",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Cheat Death",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:22:phase_power:5540": {
+   "id": "doorman_support:22:phase_power:5540",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Call Bell, explosion damage) grows from 251 to 385.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_bomb",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 22,
+    "item": "Cheat Death",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Cheat Death",
+    "keys": []
+   },
+   "numbers": [
+    "251",
+    "385"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:23:defence_bullet:5544": {
+   "id": "doorman_support:23:defence_bullet:5544",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Metal Skin",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry dives you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:23:defence_gun:5545": {
+   "id": "doorman_support:23:defence_gun:5545",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Plated Armor",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:23:defence_spirit:5546": {
+   "id": "doorman_support:23:defence_spirit:5546",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Spirit Resilience",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:23:defence_parry:5547": {
+   "id": "doorman_support:23:defence_parry:5547",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Counterspell",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ult or stun you can see coming."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:23:defence_purge:5548": {
+   "id": "doorman_support:23:defence_purge:5548",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Dispel Magic",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Hexes and slows that let them catch you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:23:defence_curse:5549": {
+   "id": "doorman_support:23:defence_curse:5549",
+   "kind": "defence_curse",
+   "phrase": "Silences, disarms and blocks item use on one enemy for 3.25s and strips their non-ultimate buffs, at -25% damage for you and a 55s cooldown: a single-target answer to a buffed carry or engage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_glitch"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Cursed Relic",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Warp Stone for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Cursed Relic",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "3.25",
+    "25",
+    "55"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:23:sell_swap:5550": {
+   "id": "doorman_support:23:sell_swap:5550",
+   "kind": "sell_swap",
+   "phrase": "Replaces Warp Stone: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 23,
+    "item": "Cursed Relic",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Warp Stone for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Warp Stone",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Warp Stone"
+  },
+  "doorman_support:23:invest_step:5551": {
+   "id": "doorman_support:23:invest_step:5551",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 19,200 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 23,
+    "item": "Witchmail",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Trophy Collector for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 22400
+   },
+   "numbers": [
+    "19200",
+    "24000",
+    "54.0",
+    "60.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 22400
+  },
+  "doorman_support:23:sell_swap:5552": {
+   "id": "doorman_support:23:sell_swap:5552",
+   "kind": "sell_swap",
+   "phrase": "Replaces Trophy Collector: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 23,
+    "item": "Witchmail",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Trophy Collector for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Trophy Collector",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Trophy Collector"
+  },
+  "doorman_support:23:refresher:5553": {
+   "id": "doorman_support:23:refresher:5553",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 198s of base cooldown across your kit, 120s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_bomb",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_doorway",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_luggage_cart",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_doorman_hotel"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 23,
+    "item": "Refresher",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "198",
+    "120",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "doorman_support:23:invest_step:5554": {
+   "id": "doorman_support:23:invest_step:5554",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 22,400 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_doorman m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 23,
+    "item": "Refresher",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "22400",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "doorman_support:23:sell_swap:5555": {
+   "id": "doorman_support:23:sell_swap:5555",
+   "kind": "sell_swap",
+   "phrase": "Replaces Enchanter's Emblem: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 23,
+    "item": "Refresher",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Enchanter's Emblem",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Enchanter's Emblem"
+  },
+  "doorman_support:23:upgrade_delta:5556": {
+   "id": "doorman_support:23:upgrade_delta:5556",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Transcendent Cooldown",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "doorman_support:23:upgrade_of:5557": {
+   "id": "doorman_support:23:upgrade_of:5557",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 23,
+    "item": "Transcendent Cooldown",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "doorman_support",
+   "item": "High-Velocity Rounds",
+   "section": "early",
+   "cls": "c",
+   "why": "weapon investment only; its 4.8k tier completes at Heroic Aura, 16800 souls (~16.8 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "doorman_support:0:component_for:5462",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Opening Rounds: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Opening Rounds"
+     }
+    }
+   ]
+  },
+  {
+   "build": "doorman_support",
+   "item": "Opening Rounds",
+   "section": "early",
+   "cls": "c",
+   "why": "weapon investment only; its 4.8k tier completes at Heroic Aura, 16000 souls (~16.0 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 1600,
+   "unpublished": []
+  },
+  {
+   "build": "doorman_support",
+   "item": "Healing Rite",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Rescue Beam, 9600 souls (~9.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "doorman_support:3:component_for:5469",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Rescue Beam: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 9600,
+      "event": "Rescue Beam"
+     }
+    }
+   ]
+  },
+  {
+   "build": "doorman_support",
+   "item": "Grit",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Rescue Beam, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 4000,
+   "unpublished": [
+    {
+     "id": "doorman_support:4:component_for:5471",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Guardian Ward: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Guardian Ward"
+     }
+    }
+   ]
+  },
+  {
+   "build": "doorman_support",
+   "item": "Compress Cooldown",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Luggage Cart."
+  },
+  {
+   "build": "doorman_support",
+   "item": "Sprint Boots",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Rescue Beam, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 8800,
+   "unpublished": [
+    {
+     "id": "doorman_support:7:component_for:5479",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Trophy Collector: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Trophy Collector"
+     }
+    }
+   ]
+  },
+  {
+   "build": "doorman_support",
+   "item": "Guardian Ward",
+   "section": "mid",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Rescue Beam, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 9600,
+   "unpublished": []
+  },
+  {
+   "build": "doorman_support",
+   "item": "Guardian Ward",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Put it on the mate you're about to cart in."
+  },
+  {
+   "build": "doorman_support",
+   "item": "Trophy Collector",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Rescue Beam completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 10400,
+   "unpublished": [
+    {
+     "id": "doorman_support:9:spike_progress:5493",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Rescue Beam completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Rescue Beam completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "doorman_support",
+   "item": "Heroic Aura",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Only if your team has gun heroes."
+  },
+  {
+   "build": "doorman_support",
+   "item": "Divine Barrier",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Upgrade of Guardian Ward. If you bought Dispel Magic, sell it for this."
+  },
+  {
+   "build": "doorman_support",
+   "item": "Knockdown",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Knockdown their carry, then cart a mate in on them as the stun lands."
+  },
+  {
+   "build": "doorman_support",
+   "item": "Cheat Death",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 49600.0,
+   "unpublished": []
+  },
+  {
+   "build": "doorman_support",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry dives you."
+  },
+  {
+   "build": "doorman_support",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "doorman_support",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+  },
+  {
+   "build": "doorman_support",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ult or stun you can see coming."
+  },
+  {
+   "build": "doorman_support",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Hexes and slows that let them catch you."
+  },
+  {
+   "build": "doorman_support",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 49600.0,
+   "unpublished": []
+  },
+  {
+   "build": "doorman_support",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep cancelling Hotel Guest."
+  },
+  {
+   "build": "doorman_support",
+   "item": "Alchemical Fire",
+   "section": "swap",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 49600.0,
+   "unpublished": []
+  }
+ ],
+ "stats": {
+  "g": 8,
+  "c": 6,
+  "a": 17,
+  "b": 1,
+  "d": 3
+ }
+}

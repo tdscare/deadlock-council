@@ -1,0 +1,41 @@
+{
+ "overlap": {
+  "changed": [
+   "  overlap Arcane Surge (moved earlier): no overlap-candidate"
+  ],
+  "unresolved": [
+   "overlap-candidate Superior Cooldown [at_buy=REDUNDANT-LIKELY; core_end=REDUNDANT-LIKELY]",
+   "overlap-candidate Diviner's Kevlar [at_buy=UNKNOWN; core_end=UNKNOWN]",
+   "overlap-candidate Divine Barrier [core_end=UNKNOWN]"
+  ]
+ },
+ "unresolved": [
+  "bc: CORE_NOTE_NONEMPTY graves_ult: Arcane Surge: Dash-jump right before you cast your ult.",
+  "bc: CORE_NOTE_NONEMPTY graves_ult: Heroic Aura: Works on your ghouls too."
+ ],
+ "proposal": "graves_ult",
+ "id": "graves_ult",
+ "diff": [
+  "added Early · L-R|Arcane Surge",
+  "removed Mid · cont.|Arcane Surge"
+ ],
+ "block": [],
+ "warn": [],
+ "fixed": [
+  "bc: MAIN_4.8K_LATE graves_ult: spirit 4.8k at 13600",
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE graves_ult: Spirit Burn @54400 has no \"Threshold:\" changes line naming it",
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE graves_ult: Arcane Surge @25600 has no \"Threshold:\" changes line naming it",
+  "abt: ECHO-ON-ULT Echo Shard 36800"
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY graves_ult: Arcane Surge: Dash-jump right before you cast your ult.",
+  "bc: CORE_NOTE_NONEMPTY graves_ult: Heroic Aura: Works on your ghouls too."
+ ],
+ "newV": [
+  "bc: RT_ITEMS graves_ult: Early · L-R: [[\"Extra Spirit\",null],[\"Extra Stamina\",null],[\"Improved Spirit\",null],[\"Grit\",null],[\"Duration Extender\",4],[\"Enchanter's Emblem\",null]] vs [[\"Extra Spirit\",null],[\"Extra Stamina\",null],[\"Arcane Surge\",null],[\"Improved Spirit\",null],[\"Grit\",null],[\"Duration Extender\",4],[\"Enchanter's Emblem\",null]]",
+  "bc: RT_ITEMS graves_ult: Mid · cont.: [[\"Arcane Surge\",null],[\"Boundless Spirit\",null]] vs [[\"Boundless Spirit\",null]]",
+  "bc: RT_ITEMS graves_ult: Late · L-R: [[\"Echo Shard\",4],[\"Escalating Exposure\",null],[\"Magic Carpet\",null],[\"Spirit Burn\",null]] vs [[\"Echo Shard\",2],[\"Escalating Exposure\",null],[\"Magic Carpet\",null],[\"Spirit Burn\",null]]"
+ ],
+ "when": "2026-10-24 11:45",
+ "line": "[2026-10-24 11:45] Triage of silent edits since CLEANBASE. (1) Arcane Surge moved Early(2.4k)->Mid cont.(25.6k) with no changes line: MISTAKE. It delayed the spirit 4.8k from 5.6k to 13.6k souls (-20 to -40 spirit power from 5.6k to 13.6k: Hands 296 vs 348 and ult 207 vs 249 at 8k) and left the Counters 'Sell Arcane Surge' pointing at an item not yet owned at Heroic Aura. Restored to 2.4k after comparing P0 (Surge at 2.4k), P2 (Grit+Duration Extender first, Surge 5.6k), P3 (Surge 4k): all three hold spirit 4.8k at 5.6k and health 4.8k at 9.6k; P0 gives spirit power 65 vs 37 when the ult unlocks (3.2k) and Arcane Surge on the first ults, P2 gives Grit + vitality bonus 800 souls earlier; damage-first rule decides (calculated, unvalidated; scenario graves_ult_arcane_surge_timing). (2) Pre-existing hard error kept by both bases: Echo Shard imbued on Borrowed Decree; game data (abilities.vdata upgrade_ability_power_shard m_TargetAbilityEffectsToApply=IMBUE_ACTIVE_NON_ULT, text 'imbued non-ultimate ability', 6819 unchanged) forbids it. Re-imbued on Grasping Hands (cd 20s at T3 from 13.8k, 2 ghouls per cast, feeds the ghoul plan); Jar of Dead rejected (charges are gated by collected death, a reset adds no jar), Essence Theft has no cooldown. (3) Refresher note 'right after Echo Shard for a third gravestone' was false (Echo can't touch the ult; late ult cooldown ~81-85s stays above its ~60s duration): now 'Use it right after your ult to cast it again.' Round 23's 'Echo Shard + Refresher give 3' is withdrawn. Ability order unchanged (strict vs separate unlock queue give identical tiers; no charge items, so the 1-charge question does not apply). Threshold: Spirit Burn @54.4k: Jar+Hands+Theft deal ~863 spirit damage to one target in 5s without the ult (~1542 with it) vs 500 needed (+73%), abtimeline CALCULATED; Arcane Surge @2.4k: its only condition is a dash-jump before the cast (no number to meet), first ult at 3.2k (model A) / 3.9k (model B) gets it. | added Early · L-R|Arcane Surge; removed Mid · cont.|Arcane Surge | evidence: calc:council/triage/calc/graves_paths.txt, calc:council/triage/calc/paths.py, data:gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata, data:council/audit/GAMEDATA_6819.md, calc:council/sandbox/scenarios/graves_ult_echo_target.json, calc:council/sandbox/scenarios/graves_ult_arcane_surge_timing.json, calc:council/sandbox/scenarios/graves_ult_refresher_second_stone.json | gate: FAIL"
+}

@@ -1,0 +1,76 @@
+{
+ "meta": {
+  "note": "MEASURED entries from sandbox runs, cited by log lines as relayed by the coordinator (logs are on the PC; the engine has not read them directly). Hypotheses stay in ../hypotheses/.",
+  "format_version": 1
+ },
+ "measured": [
+  {
+   "id": "M-haze-active-reload-2nd-press",
+   "hero": "haze",
+   "fact": "Active Reload second-press delays (s after first press) -> reload: 0.8 none (2.469), 0.9 none, 1.0 none, 1.10 effect (1.203 vs base 2.406, buff 7.0 s), 1.2 effect (1.266 vs 2.438), 1.3 none, 1.4 none, 1.5 none, 1.6 none (2.438). Window lies inside (1.0, 1.3) s; edges unmeasured.",
+   "tier": "CONTROLLED SANDBOX RESULT (preliminary)",
+   "n": "1 per delay (9 delays, two sessions)",
+   "status": "CONTROLLED SANDBOX RESULT, PRELIMINARY: n=1 per delay; window edges and width unmeasured; act_ar2 server frames clean (max 76 ms)",
+   "log": "E:\\deadworks-server\\sbx_logs\\plugin.log between 'QR TASK-START act:ar1#1' (16:24:56.393) and 'QR TASK-END act:ar1#1' (16:25:47.452); result E:\\deadworks-server\\sbx_queue\\results\\act_ar1.json",
+   "cited_lines": [
+    "SC RELOAD done: first press -> refill 2.44s (clip 19->30, second press none)",
+    "SC RB base_reload = 2.438",
+    "SC RB ar_a = 2.469 (0.80 s)",
+    "SC RELOAD done: ... 1.27s (clip 21->36, second press 1.20s)",
+    "ACT modifier seen: upgrade_active_reload/buff (16:25:38.952)",
+    "SC RB ar_b = 1.266",
+    "SC RB ar_c = 2.438 (1.60 s)",
+    "RB CHECK Timed press reloaded faster: ar_best=1.266 < base_reload=2.438 => PASS"
+   ],
+   "not_cited": "act:ar1 activation COUNT (matched the intrinsic modifier; untrustworthy)",
+   "reported": "2026-10-24",
+   "log2": "E:\\deadworks-server\\sbx_logs\\plugin.log between 'QR TASK-START p2:act_ar2#1' (2026-10-24 20:00:19) and 'QR TASK-END p2:act_ar2#1' (20:01:28); result sbx_queue\\results\\p2_act_ar2.json",
+   "links": [
+    {
+     "template": "item_window",
+     "hero": "hero_haze",
+     "item": "upgrade_active_reload",
+     "outcome": "confirmed-window",
+     "stage": 2
+    }
+   ]
+  },
+  {
+   "id": "M-drifter-rend-crushing-fists",
+   "hero": "drifter",
+   "fact": "Crushing Fists raises the Melee-typed damage component of Rend (drifter_blood_blast) from 136.9 to 204.1 (x1.491) and adds its own 51.0 Melee damage line per cast; the Ability-typed component stays 133.9. Per cast total 270.8 -> 389.0 (+43.6 percent). Identical in every block at 100, 150 and 250 units.",
+   "tier": "CONTROLLED SANDBOX RESULT",
+   "n": "4 A/B blocks (A,B,A2,B2) x 3 ranges per run; 2 complete valid runs (v14:T5_77785e7cae and disc:T5_77785e7cae#2), identical values; same server session, one target, fixed ability levels; 12 registered casts and 54 hits per run",
+   "status": "CONTROLLED SANDBOX RESULT, replicated once in the same session; valid; build 5DA596D0; client 6819 / server 6819 match",
+   "does_not_show": [
+    "whether Crushing Fists is a good purchase or has build value (cost, slot, alternatives not compared)",
+    "purchase timing or how much of a real fight's damage is Rend",
+    "other target types, resistances or armor, or other hero levels/ability tiers",
+    "other sessions or patches (one session only)",
+    "that the 51.0 line is a separate damage instance rather than a reporting split of the same hit (not distinguished)"
+   ],
+   "log": "E:\\deadworks-server\\sbx_logs\\plugin.log between 'QR TASK-START v14:T5_77785e7cae#1' (2026-10-24 21:48:47) and 'QR TASK-END' (21:55:39); damage csv sbx_logs\\damage_20261024_214809.csv; result sbx_queue\\results\\v14_T5_77785e7cae.json",
+   "cited_lines": [
+    "ACT SUMMARY cast1: count=12 (needed 1)",
+    "RB CHECK items_ok: 1=1 == 1=1 => PASS",
+    "RB CHECK dmg_hits: hits=54 > 0=0 => PASS",
+    "damage csv: drifter_blood_blast Ability 133.9 both arms; Melee 136.9 (A) vs 204.1 (B); upgrade_crushing_fists Melee 51.0 (B only)"
+   ],
+   "hypothesis": "T5-77785e7cae (answers: item heavy-melee bonus applies to the melee-typed part of ability damage)",
+   "reported": "2026-10-24",
+   "log_replication": "plugin.log 'QR TASK-START disc:T5_77785e7cae#2' (2026-10-24 22:02:38) .. TASK-END (22:09:31); damage_20261024_214809.csv window ms [869562,1282734]; result sbx_queue\\results\\disc_T5_77785e7cae.json",
+   "links": [
+    {
+     "template": "T5",
+     "hero": "hero_drifter",
+     "ability": "drifter_blood_blast",
+     "item": "upgrade_crushing_fists",
+     "event": "heavy_melee",
+     "outcome": "confirmed",
+     "stage": 2,
+     "mechanism": "item scales the MELEE-typed part of the ability damage (x1.49), not the ABILITY-typed part"
+    }
+   ]
+  }
+ ]
+}

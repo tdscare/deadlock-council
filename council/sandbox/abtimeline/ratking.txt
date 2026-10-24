@@ -1,0 +1,104 @@
+# ratking | Rat King | Rizuhble's Unkillable Rat King
+abilities: 1=Scrap Grenade (ability_ratking_scrap_grenade, start_trained=false, Signature) / 2=Rat Swarm (ability_ratking_ratnibble, start_trained=false, Signature) / 3=Royal Pestments (ability_ratking_ratarmor, start_trained=false, Signature) / 4=Rule, Ratannia! (ability_ratking_standard_bearer, start_trained=false, Ultimate)
+order: 3311234131444222
+model A (data):  Royal Pest:U@0  Royal Pest:T1@200  Scrap Gren:U@500  Scrap Gren:T1@900  Rat Swarm:U@1400  Royal Pest:T2@2600  Rule, Rata:U@3200  Scrap Gren:T2@4600  Royal Pest:T3@8400  Scrap Gren:T3@12800  Rule, Rata:T1@13800  Rule, Rata:T2@16100  Rule, Rata:T3@24600  Rat Swarm:T1@26900  Rat Swarm:T2@32100  Rat Swarm:T3@48600
+model B (old):   Royal Pest:T1@200  Royal Pest:T2@900  Scrap Gren:T1@2000  Scrap Gren:T2@2600  Rat Swarm:T1@3900  Royal Pest:T3@4600  Rule, Rata:U@5300  Scrap Gren:T3@6000  Rule, Rata:T1@8400  Rule, Rata:T2@9200  Rule, Rata:T3@10100  Rat Swarm:T2@11000  Rat Swarm:T3@11900
+tier upgrades: Scrap Grenad: AbilityCooldown-8 / DamagePerShrapnel+70 / Detonations+1,BigExplosionDamage+300,BigExplosionDamage+1x,BigExplosionRadius+14,BigExplosionRadius+1x,BigExplosionSlowPercent+0.12x | Rat Swarm: AbilityCharges+1 / RatSwarmCols+2,RatSwarmRows+1,RatSwarmWidth+100,DebuffDuration+4 / ArmorReductionPerBite-1,DamagePerBite+8 | Royal Pestme: AbilityDuration+4 / ReturnFireChance+15,AbilityCooldown-8 / MaxHealthPct+10,MaxDamagePerHit+250 | Rule, Ratann: BonusMoveSpeed+2 / FlagDuration+5,Radius+8 / Damage+150,AllyDamageReduction+10
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  High-Velocity Rounds
+        Scrap Gren U ch1 cd26 | Rat Swarm L[U] | Royal Pest T1 ch1 cd22 d10 | Rule, Rata L
+  1600 L5   2     4  Extra Health
+        Scrap Gren T1[U] ch1 cd18 | Rat Swarm U ch1 cd24/8 d6 DamagePe=8 | Royal Pest T1[T2] ch1 cd22 d10 | Rule, Rata L
+  2400 L6   3     6  Monster Rounds
+        Scrap Gren T1 ch1 cd18 | Rat Swarm U ch1 cd24/8 d6 DamagePe=8 | Royal Pest T1[T2] ch1 cd22 d10 | Rule, Rata L
+  3200 L8   4     8  Sprint Boots
+        Scrap Gren T1[T2] ch1 cd18 | Rat Swarm U ch1 cd24/8 d6 DamagePe=9 | Royal Pest T2 ch1 cd14 d10 | Rule, Rata U[L] ch1 cd160 d10
+  4000 L9   5    16  Mystic Expansion [imbue Scrap Grenade]
+        Scrap Gren T1[T2] ch1 cd18 | Rat Swarm U[T1] ch1 cd24/8 d6 DamagePe=9 | Royal Pest T2 ch1 cd14 d10 | Rule, Rata U[L] ch1 cd160 d10
+  4800 L10  6    24  Opening Rounds
+        Scrap Gren T2 ch1 cd18 | Rat Swarm U[T1] ch1 cd24/8 d6 DamagePe=10 | Royal Pest T2[T3] ch1 cd14 d10 | Rule, Rata U[L] ch1 cd160 d10
+  7200 L13  9    27  Cultist Sacrifice
+        Scrap Gren T2[T3] ch1 cd18 | Rat Swarm U[T1] ch1 cd24/8 d6 DamagePe=10 | Royal Pest T2[T3] ch1 cd14 d10 | Rule, Rata U ch1 cd160 d10
+  8000 L14 10    28  Close Quarters
+        Scrap Gren T2[T3] ch1 cd18 | Rat Swarm U[T1] ch1 cd24/8 d6 DamagePe=10 | Royal Pest T2[T3] ch1 cd14 d10 | Rule, Rata U ch1 cd160 d10
+ 10400 L17 13    32  Fortitude
+        Scrap Gren T2[T3] ch1 cd18 | Rat Swarm U[T1] ch1 cd24/8 d6 DamagePe=11 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata U[T3] ch1 cd160 d10
+ 11200 L18 14    33  Enduring Speed
+        Scrap Gren T2[T3] ch1 cd18 | Rat Swarm U[T2] ch1 cd24/8 d6 DamagePe=11 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata U[T3] ch1 cd160 d10
+ 12800 L20 16    35  Fleetfoot
+        Scrap Gren T3 ch1 cd18 | Rat Swarm U[T3] ch1 cd24/8 d6 DamagePe=11 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata U[T3] ch1 cd160 d10
+ 14400 L21 17    44  Compress Cooldown [imbue Scrap Grenade]
+        Scrap Gren T3 ch1 cd18 | Rat Swarm U[T3] ch1 cd24/8 d6 DamagePe=12 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata T1[T3] ch1 cd160 d10
+ 16000 L22 18    45  Return Fire
+        Scrap Gren T3 ch1 cd18 | Rat Swarm U[T3] ch1 cd24/8 d6 DamagePe=12 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata T1[T3] ch1 cd160 d10
+ 19200 L25 21    48  Berserker
+        Scrap Gren T3 ch1 cd18 | Rat Swarm U[T3] ch1 cd24/8 d6 DamagePe=12 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata T2[T3] ch1 cd160 d10
+ 21600 L26 22    46  Ballistic Enchantment [imbue Scrap Grenade]
+        Scrap Gren T3 ch1 cd18 | Rat Swarm U[T3] ch1 cd24/8 d6 DamagePe=12 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata T2[T3] ch1 cd160 d10
+ 28000 L29 25    49  Siphon Bullets
+        Scrap Gren T3 ch1 cd18 | Rat Swarm T1[T3] ch2 cd24/8 d6 DamagePe=12 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata T3 ch1 cd160 d10
+ 29600 L30 26    58  Superior Cooldown
+        Scrap Gren T3 ch1 cd18 | Rat Swarm T1[T3] ch2 cd24/8 d6 DamagePe=13 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata T3 ch1 cd160 d10
+ 32000 L30 26    58  Point Blank
+        Scrap Gren T3 ch1 cd18 | Rat Swarm T1[T3] ch2 cd24/8 d6 DamagePe=13 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata T3 ch1 cd160 d10
+ 38400 L33 29    54  Colossus
+        Scrap Gren T3 ch1 cd18 | Rat Swarm T2[T3] ch2 cd24/8 d6 DamagePe=12 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata T3 ch1 cd160 d10
+ 44800 L34 30    69  Witchmail
+        Scrap Gren T3 ch1 cd18 | Rat Swarm T2[T3] ch2 cd24/8 d6 DamagePe=14 | Royal Pest T3 ch1 cd14 d10 | Rule, Rata T3 ch1 cd160 d10
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @2400 Monster Rounds [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: (no game text)
+    at buy: not computed (needs play data)
+- @4000 Mystic Expansion [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Scrap Grenade; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its range and effect radius.
+    at buy: Scrap Grenade T1: cd 18s, duration 0s, charges 1
+- @4800 Opening Rounds [enemyhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on enemy health % (EnemyLifeThreshold=50)
+    game text: Your attacks have additional Weapon Damage against enemies above {s:EnemyLifeThreshold}% health.
+    at buy: not computed (needs play data)
+- @7200 Cultist Sacrifice [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Target an enemy NPC and consume it for {s:BonusSoulsPct}% Bonus Souls and grants a powerful long lasting buff.
+    at buy: not computed (needs play data)
+- @8000 Close Quarters [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (CloseRangeBonusDamageRange=15m)
+    game text: Deal additional Weapon Damage when in close range to your target.
+    at buy: not computed (needs play data)
+- @10400 Fortitude [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (HealthThreshold=75)
+    game text: After not taking damage for a period, gain health regen.
+    at buy: not computed (needs play data)
+- @14400 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Scrap Grenade; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Scrap Grenade T3: cd 18s, duration 0s, charges 1; saves 3.2s/cast (3.33->4.07 casts/min)
+- @19200 Berserker [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (DamageToStack=120, MaxStacks=10)
+    game text: Your Weapon Damage increases as you take sustained damage.
+    at buy: not computed (needs play data)
+- @21600 Ballistic Enchantment [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Scrap Grenade; needs it trained and the stat the item raises
+    game text: Imbue an ability with increased range. Dealing damage with that ability grants you increased weapon damage per unique hero hit. Has reduced effect on ... | vdata: proc damage types ABILITY/BULLET/MELEE/PURE, CanProcByOtherObjects=true
+    at buy: Scrap Grenade T3: cd 18s, duration 0s, charges 1
+- @28000 Siphon Bullets [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (StealPerHit=1, StealPerKill=1, MaxStacks=9999)
+    game text: (no game text) | vdata: proc damage types BULLET, CanProcByOtherObjects=true
+    at buy: not computed (needs play data)
+- @29600 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 216s; 20% saves 43.2s per rotation
+- @32000 Point Blank [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (CloseRangeBonusDamageRange=15m)
+    game text: When in close range to your target, gain Weapon Damage and your bullets apply a Movement Slow.
+    at buy: not computed (needs play data)
+- @44800 Witchmail [taken] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: triggers on damage TAKEN from enemies (enemy-dependent) (CooldownReductionPerHit=4, DamageThreshold=75)
+    game text: Taking heavy hits of {g:citadel_inline_attribute:'SpiritDamage'} from an enemy reduces a random ability cooldown.
+    at buy: not computed (needs play data)
+
+no trigger condition (plain stats/actives): High-Velocity Rounds, Extra Health, Sprint Boots, Enduring Speed, Fleetfoot, Return Fire, Colossus

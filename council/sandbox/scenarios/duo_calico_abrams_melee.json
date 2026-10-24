@@ -1,0 +1,93 @@
+{
+ "id": "duo_calico_abrams_melee",
+ "title": "Calico + Abrams: Gloom Bomb melee shred",
+ "hero": "Abrams",
+ "playstyle": "Melee Abrams",
+ "builds": [
+  "calico",
+  "abrams_melee"
+ ],
+ "question": "Do 4 bomb touches stack -24% melee resist and apply to an ally's melee?",
+ "hypothesis": "H8.1-H8.3",
+ "arms": [
+  {
+   "name": "clean",
+   "items": [],
+   "ability_order": null,
+   "souls": 20000,
+   "notes": "no bombs"
+  },
+  {
+   "name": "bombed",
+   "items": [],
+   "ability_order": null,
+   "souls": 20000,
+   "notes": "4 bombs on target, Calico T2"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "~20k",
+  "souls": 20000,
+  "position": "dummy at 0 melee resist",
+  "enemies": [
+   {
+    "hero": "dummy",
+    "count": 1,
+    "items": [],
+    "behaviour": "stand",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "Calico",
+    "count": 1,
+    "role": "Gloom Bombs T2"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "debuffs",
+   "cooldowns"
+  ]
+ },
+ "procedure": [
+  "(bombed) Calico throws 4 bombs at dummy feet, read debuff value",
+  "Abrams heavy melee within 6s",
+  "Record heavy damage"
+ ],
+ "metrics": [
+  {
+   "name": "heavy_damage",
+   "unit": "hp",
+   "how": "damage number",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "melee_resist_shown",
+   "unit": "%",
+   "how": "debuff panel",
+   "grade_target": "A",
+   "better": "lower",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "heavy_damage",
+  "min_effect_pct": 15,
+  "min_trials": 5,
+  "rule": "SUPPORTS pair if bombed beats clean by >=15%; <10% drops it"
+ },
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists"
+ ],
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

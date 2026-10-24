@@ -1,0 +1,72 @@
+# haze_assassin | Haze | Rizuhble's Night Night Haze
+abilities: 1=Sleep Dagger (ability_sleep_dagger, start_trained=false, Signature) / 2=Smoke Bomb (ability_smoke_bomb, start_trained=false, Signature) / 3=Fixation (ability_stacking_damage, start_trained=false, Signature) / 4=Bullet Dance (ability_bullet_flurry, start_trained=false, Ultimate)
+order: 3311234422141432
+model A (data):  Fixation:U@0  Fixation:T1@200  Sleep Dagg:U@500  Sleep Dagg:T1@900  Smoke Bomb:U@1400  Fixation:T2@2600  Bullet Dan:U@3200  Bullet Dan:T1@3900  Smoke Bomb:T1@4600  Smoke Bomb:T2@6000  Sleep Dagg:T2@7600  Bullet Dan:T2@9200  Sleep Dagg:T3@13800  Bullet Dan:T3@20600  Fixation:T3@32100  Smoke Bomb:T3@48600
+model B (old):   Fixation:T1@200  Fixation:T2@900  Sleep Dagg:T1@2000  Sleep Dagg:T2@2600  Smoke Bomb:T1@3900  Fixation:T3@4600  Bullet Dan:U@5300  Bullet Dan:T1@6000  Smoke Bomb:T2@6800  Smoke Bomb:T3@7600  Sleep Dagg:T3@8400  Bullet Dan:T2@9200  Bullet Dan:T3@11000
+tier upgrades: Sleep Dagger: BulletResistReduction-10,BulletResistReductionDuration+6 / SleepDuration+1,FixationStacks+15 / AbilityCooldown-17,SlowPercent+40,GroundDashReductionPercent-45,DebuffDuration+3 | Smoke Bomb: InvisMoveSpeedMod+7 / AbilityCharges+2,AbilityCooldownBetweenCharge+7 / BulletLifesteal+50,PostInvisBuffDuration+5,DispelOnUse+1 | Fixation: ProcDamage+40,ProcDamage+0.8x,ProcDamageStackCount+20,SlowPercent+12,SlowDuration+2 / AbilityDuration+5,MaxStacks+40 / DamageBonusFixedPerStack+0.11,DamageBonusFixedPerStack+0.00035x | Bullet Dance: WeaponDamageBonus+7 / BonusFireRate+10,ChannelMoveSpeed+3 / EvasionPercent+40,AbilityCooldown-65
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1    18  Extra Spirit
+        Sleep Dagg U ch1 cd30 Damage=105 | Smoke Bomb L[U] | Fixation T1 ch1 cd0 d6 ProcDama=54 | Bullet Dan L
+  1600 L5   2    19  Rapid Rounds
+        Sleep Dagg T1[U] ch1 cd30 Damage=107 | Smoke Bomb U ch1 cd33 d8 | Fixation T1[T2] ch1 cd0 d6 ProcDama=55 | Bullet Dan L
+  3200 L8   4    20  Active Reload
+        Sleep Dagg T1[T2] ch1 cd30 Damage=110 | Smoke Bomb U ch1 cd33 d8 | Fixation T2 ch1 cd0 d11 ProcDama=56 | Bullet Dan U[L] ch1 cd165 d3.5
+  4000 L9   5    21  Swift Striker
+        Sleep Dagg T1[T2] ch1 cd30 Damage=111 | Smoke Bomb U[T1] ch1 cd33 d8 | Fixation T2 ch1 cd0 d11 ProcDama=57 | Bullet Dan T1[L] ch1 cd165 d3.5
+  5600 L11  7    22  Fleetfoot
+        Sleep Dagg T1[T2] ch1 cd30 Damage=113 | Smoke Bomb T1 ch1 cd33 d8 | Fixation T2[T3] ch1 cd0 d11 ProcDama=58 | Bullet Dan T1[U] ch1 cd165 d3.5
+  6400 L12  8    22  Sprint Boots
+        Sleep Dagg T1[T2] ch1 cd30 Damage=114 | Smoke Bomb T2[T1] ch2 cd33/7 d8 | Fixation T2[T3] ch1 cd0 d11 ProcDama=58 | Bullet Dan T1 ch1 cd165 d3.5
+  7200 L13  9    23  Enduring Speed
+        Sleep Dagg T1[T2] ch1 cd30 Damage=116 | Smoke Bomb T2 ch2 cd33/7 d8 | Fixation T2[T3] ch1 cd0 d11 ProcDama=58 | Bullet Dan T1 ch1 cd165 d3.5
+ 10400 L17 13    31  Veil Walker
+        Sleep Dagg T2[T3] ch1 cd30 Damage=133 | Smoke Bomb T2[T3] ch2 cd33/7 d8 | Fixation T2[T3] ch1 cd0 d11 ProcDama=65 | Bullet Dan T2 ch1 cd165 d3.5
+ 12800 L20 16    34  Surge of Power [imbue Sleep Dagger]
+        Sleep Dagg T2[T3] ch1 cd30 Damage=202 | Smoke Bomb T2[T3] ch2 cd33/7 d8 | Fixation T2[T3] ch1 cd0 d11 ProcDama=68 | Bullet Dan T2[T3] ch1 cd165 d3.5
+ 14400 L21 17    54  Bullet Resist Shredder
+        Sleep Dagg T3 ch1 cd13 Damage=245 | Smoke Bomb T2[T3] ch2 cd33/7 d8 | Fixation T2[T3] ch1 cd0 d11 ProcDama=83 | Bullet Dan T2[T3] ch1 cd165 d3.5
+ 16000 L22 18    54  Recharging Rush
+        Sleep Dagg T3 ch1 cd13 Damage=247 | Smoke Bomb T2[T3] ch2 cd33/7 d8 | Fixation T2[T3] ch1 cd0 d11 ProcDama=84 | Bullet Dan T2[T3] ch1 cd165 d3.5
+ 19200 L25 21    56  Tesla Bullets
+        Sleep Dagg T3 ch1 cd13 Damage=250 | Smoke Bomb T2[T3] ch2 cd33/7 d8 | Fixation T2[T3] ch1 cd0 d11 ProcDama=85 | Bullet Dan T2[T3] ch1 cd165 d3.5
+ 22400 L26 22    56  Burst Fire
+        Sleep Dagg T3 ch1 cd13 Damage=251 | Smoke Bomb T2[T3] ch2 cd33/7 d8 | Fixation T2[T3] ch1 cd0 d11 ProcDama=85 | Bullet Dan T3 ch1 cd100 d3.5
+ 25600 L28 24    58  Capacitor
+        Sleep Dagg T3 ch1 cd13 Damage=253 | Smoke Bomb T2[T3] ch2 cd33/7 d8 | Fixation T2[T3] ch1 cd0 d11 ProcDama=86 | Bullet Dan T3 ch1 cd100 d3.5
+ 32000 L30 26    58  Lucky Shot
+        Sleep Dagg T3 ch1 cd13 Damage=255 | Smoke Bomb T2[T3] ch2 cd33/7 d8 | Fixation T2[T3] ch1 cd0 d11 ProcDama=87 | Bullet Dan T3 ch1 cd100 d3.5
+ 38400 L33 29    60  Unstoppable
+        Sleep Dagg T3 ch1 cd13 Damage=259 | Smoke Bomb T2[T3] ch2 cd33/7 d8 | Fixation T3 ch1 cd0 d11 ProcDama=88 | Bullet Dan T3 ch1 cd100 d3.5
+ 44800 L34 30    60  Ricochet
+        Sleep Dagg T3 ch1 cd13 Damage=260 | Smoke Bomb T2[T3] ch2 cd33/7 d8 | Fixation T3 ch1 cd0 d11 ProcDama=88 | Bullet Dan T3 ch1 cd100 d3.5
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @12800 Surge of Power [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Sleep Dagger; needs it trained and the stat the item raises
+    game text: Imbue an ability with permanent Spirit Power. When that ability is used, gain bonus Move Speed and maintain full speed while attacking.
+    at buy: Sleep Dagger T2: cd 30s, duration 0s, charges 1; with imbue: Damage 202
+- @14400 Bullet Resist Shredder [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Reduces Bullet Resist on enemies when you deal {g:citadel_inline_attribute:'SpiritDamage'}.
+    at buy: spirit sources: Sleep Dagger, Fixation
+- @16000 Recharging Rush [gunwin+charged] -> OK | verdict: buy now | CALCULATED
+    rule: 200 weapon damage within 3.5s (game text: 'significant weapon damage'), refills one charge per charged ability; cd 25s; needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Dealing significant {g:citadel_inline_attribute:'WeaponDamage'} replenishes a charge for each of your charged abilities.
+    at buy: gun 15/bullet x 35 shots = 518 in 3.5s (100% hits, base + level + weapon-invest + item weapon damage); Smoke Bomb 2->2 charges; Smoke Bomb shots in 5s 1->1 (between-charge 7s)
+    margin: +159% at 100% hits; needs 13.5 hits
+    unverified: falloff, headshots, accuracy; whether ability weapon-damage counts; F7 1-charge abilities
+- @19200 Tesla Bullets [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=15)
+    game text: Your bullets have a chance to shock your target. The shock will jump to a nearby enemy.
+    at buy: not computed (needs play data)
+- @25600 Capacitor [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=20)
+    game text: Launch a projectile that deals {g:citadel_inline_attribute:'SpiritIcon'}damage, applies a strong slow that recovers over time, prevents Stamina usage ...
+    at buy: not computed (needs play data)
+- @32000 Lucky Shot [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=25)
+    game text: Your bullets have a chance to be empowered, causing them to deal bonus weapon damage on hit.Bonus damage cannot Crit.
+    at buy: not computed (needs play data)
+
+no trigger condition (plain stats/actives): Extra Spirit, Rapid Rounds, Active Reload, Swift Striker, Fleetfoot, Sprint Boots, Enduring Speed, Veil Walker, Burst Fire, Unstoppable, Ricochet

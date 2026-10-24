@@ -1,0 +1,134 @@
+{
+ "id": "duo_victor_haze_crossshred",
+ "title": "Victor + Haze: Bullet Resist Shredder on Victor, Spirit Shredder/Rend on Haze",
+ "hero": "Victor",
+ "playstyle": "Spirit Victor + tanky gun Haze",
+ "builds": [
+  "victor_duo_haze",
+  "haze_duo_victor",
+  "victor",
+  "haze"
+ ],
+ "question": "Does Victor's aura keep Bullet Resist Shredder on the whole clump for Haze, and does Haze's Spirit Shredder/Rend raise Victor's aura damage?",
+ "hypothesis": "H-B2-1.1: Haze gun damage on 3 bots inside Victor's aura (Victor with BRS) is >=8% higher than with base Victor (no BRS). H-B2-1.2: Victor aura damage on Haze's target is >=6% higher with Spirit Shredder, >=25% with Spirit Rend at 4 stacks. H-B2-1.3: Ricochet splits apply Spirit Shredder to secondary bots (debuff icon on >=2 bots). H-B2-1.4: Victor heals from Spirit Shredder's 10% ally spirit lifesteal (Victor healing per 10s rises by >=8% of his aura damage on that bot).",
+ "arms": [
+  {
+   "name": "base_pair",
+   "items": [],
+   "ability_order": null,
+   "imbues": {},
+   "souls": 30000,
+   "notes": "victor + haze base builds at 30k"
+  },
+  {
+   "name": "duo_pair",
+   "items": [
+    "Bullet Resist Shredder (Victor)",
+    "Spirit Shredder (Haze)"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": 30000,
+   "notes": "victor_duo_haze + haze_duo_victor at 30k"
+  },
+  {
+   "name": "duo_pair_rend",
+   "items": [
+    "Bullet Resist Shredder (Victor)",
+    "Spirit Rend (Haze)"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": 45000,
+   "notes": "45k, compare to base_pair at 45k"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "30k and 45k souls",
+  "souls": 30000,
+  "position": "Victor in the middle of 3 bots (within 6m), Haze 8m behind him",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "haze_duo_victor",
+    "count": 1,
+    "role": "gun"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "bot HP",
+   "debuffs"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns, HP and debuffs reset between trials",
+  "Same boons/souls/ability points in both arms except the item under test",
+  "Same bot heroes, HP and resists",
+  "Arms run interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Victor channels Aura of Suffering for 8s",
+  "Haze shoots bot 1 for the same 8s (aim at the head for the Rend arm)",
+  "Read per-hero damage on each bot (damage numbers / health delta) and the debuff icons",
+  "Repeat with Haze firing first and Victor joining 1s later"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "haze_gun_damage_dealt_8s",
+   "unit": "hp",
+   "how": "Haze damage summed over the 3 bots",
+   "category": "sustained damage",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "victor_aura_damage_dealt_bot1_8s",
+   "unit": "hp",
+   "how": "Victor damage on Haze's target",
+   "category": "sustained damage",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "victor_lifesteal_heal_8s",
+   "unit": "hp",
+   "how": "Victor healing during the channel",
+   "category": "healing",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "bots_with_shredder_icon",
+   "unit": "count",
+   "how": "Spirit Shredder icon on bots (Ricochet)",
+   "category": "other",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "haze_gun_damage_dealt_8s",
+  "min_effect_pct": 8,
+  "min_trials": 5,
+  "rule": "SUPPORTS if duo_pair beats base_pair by >=8% with non-overlapping ranges; REFUTES if <3%; else INCONCLUSIVE. Victor side judged separately on victor_aura_damage_dealt_bot1_8s (>=6% Shredder, >=25% Rend)."
+ },
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

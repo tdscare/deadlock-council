@@ -1,0 +1,46 @@
+meta kind BASELINE
+meta hero Haze
+meta checkpoint 0 souls (level-18 stat floor, no items)
+meta build none
+meta question Display test - does the in-game chat show the live experiment description?
+meta purpose verify the [Sandbox Tester] chat messages are delivered to the client (gun-only, no items)
+meta mechanics none - gun only; reload cast then fire
+meta expectedstate items=none stacks=0
+meta accmode seeded 55% hit, 25% head
+meta accwhy fixed seed so repeats are comparable
+meta abilities gun only
+meta runs 1/1
+meta player_title Message display test
+meta player_what Is this text readable?
+meta player_why No items, just shooting
+meta player_short Message display test
+meta player_expect Expected: text fully visible
+setup Haze Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+aimpt -33 -30
+accseed 7
+accuracy 0.55 0.25 25 60
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark SD|s7|a
+cast reload 2.3
+fire 2.6
+cast reload 2.3
+fire 2.6
+mark none
+acclog
+end

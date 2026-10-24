@@ -1,0 +1,111 @@
+{
+ "id": "geist_drain_charges",
+ "title": "Geist: Life Drain charge count with Extra Charge, Rapid Recharge and the Cultist buff, before and after Life Drain T3",
+ "hero": "Lady Geist",
+ "playstyle": "Gun tank Geist",
+ "builds": [
+  "geist"
+ ],
+ "question": "Life Drain has AbilityCharges 0 until T3 (+3). Does Extra Charge add a charge before T3 (0-charge ability), does it make 4 at T3, and does the Cultist Sacrifice buff (same MODIFIER_VALUE_BONUS_ABILITY_CHARGES +1, ConditionallyApplied) add another?",
+ "hypothesis": "Before T3: Extra Charge adds nothing (1 cast, no charge counter). At T3: 3 base, 4 with Extra Charge, 5 with Extra Charge + Cultist buff, 6 with Rapid Recharge + Cultist buff. Any other count refutes the model rows in council/work/tri2/geist_paths.txt.",
+ "arms": [
+  {
+   "name": "A_T2_extra_charge",
+   "items": [
+    "Extra Charge"
+   ],
+   "ability_order": "3231224233444111",
+   "imbues": {},
+   "souls": "Life Drain T2 (abil bits 7)",
+   "notes": "expect no charge counter"
+  },
+  {
+   "name": "B_T3_none",
+   "items": [],
+   "ability_order": "3231224233444111",
+   "imbues": {},
+   "souls": "Life Drain T3 (bits 15)",
+   "notes": "expect 3"
+  },
+  {
+   "name": "C_T3_extra_charge",
+   "items": [
+    "Extra Charge"
+   ],
+   "ability_order": "3231224233444111",
+   "imbues": {},
+   "souls": "T3",
+   "notes": "expect 4"
+  },
+  {
+   "name": "D_T3_extra_charge_cultist_buff",
+   "items": [
+    "Extra Charge",
+    "Cultist Sacrifice"
+   ],
+   "ability_order": "3231224233444111",
+   "imbues": {},
+   "souls": "T3, Cultist used on a camp first",
+   "notes": "expect 5"
+  },
+  {
+   "name": "E_T3_rapid_recharge_cultist_buff",
+   "items": [
+    "Rapid Recharge",
+    "Cultist Sacrifice"
+   ],
+   "ability_order": "3231224233444111",
+   "imbues": {},
+   "souls": "T3, Cultist used",
+   "notes": "expect 6"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "level 20",
+  "souls": "n/a (count check)",
+  "position": "any",
+  "enemies": [
+   {
+    "hero": "target dummy or idle bot",
+    "count": 1,
+    "items": [],
+    "behaviour": "stationary",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "charges",
+   "buffs"
+  ]
+ },
+ "controls": [
+  "tier set with abil bits, logged before each arm",
+  "same level"
+ ],
+ "procedure": [
+  "set tier",
+  "give items",
+  "(D,E) consume a camp NPC with Cultist",
+  "read charge counter on the Life Drain icon; cast drains back to back and count casts before the cooldown starts"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "drain_charges",
+   "unit": "count",
+   "how": "charge counter / casts before cooldown",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "drain_charges",
+  "min_effect_pct": 1,
+  "min_trials": 5,
+  "rule": "Exact counts: SUPPORTS the model if every arm matches its expected count; any mismatch REFUTES and the Extra Charge timing in geist is recomputed."
+ }
+}

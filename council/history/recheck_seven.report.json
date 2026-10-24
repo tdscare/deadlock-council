@@ -1,0 +1,60 @@
+{
+ "strategy": {
+  "trig": [
+   "purchase order",
+   "greens (Extra Stamina,Spirit Lifesteal,Sprint Boots,Healbane,Enduring Speed,Unstoppable,Infuser,Diviner's Kevlar -> Extra Stamina,Spirit Lifesteal,Sprint Boots,Healbane,Enduring Speed,Unstoppable,Infuser,Diviner's Kevlar)",
+   "4.8k spike timing (vitality 11200 -> 12800, spirit 13600 -> 5600)"
+  ],
+  "lines": [
+   "STRATEGY BLOCK"
+  ]
+ },
+ "interaction": {
+  "lines": [
+   "INTERACTION BLOCK Arcane Surge"
+  ]
+ },
+ "overlap": {
+  "changed": [
+   "  overlap Arcane Surge (moved earlier): no overlap-candidate"
+  ],
+  "unresolved": [
+   "overlap-candidate Superior Cooldown [core_end=REDUNDANT-LIKELY]",
+   "overlap-candidate Counterspell [core_end=UNKNOWN]",
+   "overlap-candidate Lightning Scroll [core_end=UNKNOWN]",
+   "overlap-candidate Divine Barrier [core_end=UNKNOWN]"
+  ]
+ },
+ "unresolved": [
+  "bc: CORE_NOTE_NONEMPTY seven: Arcane Surge: Dash-jump right before you pop your 3, or your ult once you have it.",
+  "bc: CORE_NOTE_NONEMPTY seven: Unstoppable: Pop it before you ult so nobody cancels the storm.",
+  "bc: CORE_NOTE_NONEMPTY seven: Infuser: Pop it once they're all in the storm."
+ ],
+ "proposal": "recheck_seven",
+ "id": "seven",
+ "diff": [
+  "added Early · L-R|Arcane Surge",
+  "removed Late · L-R|Arcane Surge",
+  "ability order 1331234442431122 -> 1133234442431122"
+ ],
+ "block": [
+  "STRATEGY: proposal changes purchase order + greens (Extra Stamina,Spirit Lifesteal,Sprint Boots,Healbane,Enduring Speed,Unstoppable,Infuser,Diviner's Kevlar -> Extra Stamina,Spirit Lifesteal,Sprint Boots,Healbane,Enduring Speed,Unstoppable,Infuser,Diviner's Kevlar) + 4.8k spike timing (vitality 11200 -> 12800, spirit 13600 -> 5600) but cites no `strategy` evidence file (run abtimeline.py --strategy seven <checkpoints> and cite it as kind `strategy`)",
+  "INTERACTION: Arcane Surge (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions seven \"Arcane Surge\") is cited"
+ ],
+ "warn": [],
+ "fixed": [
+  "bc: MAIN_4.8K_LATE seven: spirit 4.8k at 13600"
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY seven: Arcane Surge: Dash-jump right before you pop your 3, or your ult once you have it.",
+  "bc: CORE_NOTE_NONEMPTY seven: Unstoppable: Pop it before you ult so nobody cancels the storm.",
+  "bc: CORE_NOTE_NONEMPTY seven: Infuser: Pop it once they're all in the storm."
+ ],
+ "newV": [
+  "bc: RT_ITEMS seven: Early · L-R: [[\"Monster Rounds\",null],[\"Extra Spirit\",null],[\"Extra Stamina\",null],[\"Surge of Power\",3],[\"Cultist Sacrifice\",null]] vs [[\"Monster Rounds\",null],[\"Extra Spirit\",null],[\"Extra Stamina\",null],[\"Arcane Surge\",null],[\"Surge of Power\",3],[\"Cultist Sacrifice\",null]]",
+  "bc: RT_ITEMS seven: Late · L-R: [[\"Arcane Surge\",null],[\"Escalating Exposure\",null],[\"Superior Duration\",null],[\"Unstoppable\",null],[\"Superior Cooldown\",null],[\"Infuser\",null],[\"Greater Expansion\",null],[\"Diviner's Kevlar\",null]] vs [[\"Escalating Exposure\",null],[\"Superior Duration\",null],[\"Unstoppable\",null],[\"Superior Cooldown\",null],[\"Infuser\",null],[\"Greater Expansion\",null],[\"Diviner's Kevlar\",null]]",
+  "bc: RT_ORDER seven: 1331234442431122 vs 1133234442431122"
+ ],
+ "when": "2026-10-24 13:59",
+ "line": "[2026-10-24 13:59] TRIAGE seven (vs CLEANBASE data_pre_spikefix): the silent spikefix move of Arcane Surge Early->Late is a MISTAKE (spirit 4.8k 5.6k->13.6k against Kieran's Seven rule 'Surge of Power/Arcane Surge on his 3 early'; Power Surge per proc -13..-28% at 5.6k-12k for health 4.8k 1.6k earlier); Arcane Surge restored before Surge of Power. The silent order change 3311->1331 had the right intent (Kieran: first point in Lightning Ball for the 2nd charge) but under the game-data unlock model it leaves ball T1 at 900 souls; order 1133234442431122 gives it at 200 (under the old model B, 1331 would be right). CALCULATED, unvalidated. | added Early · L-R|Arcane Surge; removed Late · L-R|Arcane Surge; ability order 1331234442431122 -> 1133234442431122 | evidence: calc:council/triage/seven_calc/seven_N_compare.txt, calc:council/triage/seven_calc/early_orders.txt, calc:council/triage/seven_calc/seven_paths.txt, data:council/sandbox/abtimeline/FOUNDATIONS.md, calc:council/triage/seven.md | gate: FAIL"
+}

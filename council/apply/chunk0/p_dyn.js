@@ -1,0 +1,20 @@
+const L=require('./lib');
+let b=L.load('dynamo');
+const sw=L.find(b,'Knockdown');sw.item[0]='Spirit Rend';sw.item[1]='Instead of Heroic Aura when your team has no gun heroes.';
+L.move(b,'Heroic Aura','Mid · L-R','Compress Cooldown');
+L.note(b,'Heroic Aura','Only if your team has gun heroes.');
+L.add(b,"Cost pass: Spirit Rend (gun) replaces Knockdown in the Heroic Aura swap; Heroic Aura moved after Compress Cooldown so spirit 4.8k lands earlier.");
+L.save(b);
+b=L.load('dynamo');
+{const sw=L.find(b,'Knockdown');sw.item[0]='Spirit Rend';sw.item[1]='Instead of Heroic Aura when your team has no gun heroes.';
+L.move(b,'Heroic Aura','Mid · L-R','Compress Cooldown');
+L.note(b,'Refresher','Sell Greater Expansion for this.');
+L.add(b,"Cost pass: Spirit Rend (gun) replaces Knockdown in the Heroic Aura swap; Heroic Aura moved after Compress Cooldown so spirit 4.8k lands earlier (18.4k to 15.2k); Refresher sells Greater Expansion instead of Headhunter.");
+L.save(b);}
+b=L.load('dynamo_damage');
+b.name="Rizuhble's Dyson Dynamo";
+L.box(b,'Counters')[1]="Get after Warp Stone if needed. Ahead? Skip it until you're dying. Sell Rapid Recharge for it.";
+L.note(b,'Witchmail','Sell Superior Cooldown for this.');
+L.note(b,'Boundless Spirit','Sell Rapid Recharge for this.');
+L.add(b,"Cost pass: renamed Dyson Dynamo; counters sell Rapid Recharge, Witchmail sells Superior Cooldown, Boundless sells Rapid Recharge (gun 4.8k holds; Headhunter and Recharging Rush stay).");
+L.save(b);

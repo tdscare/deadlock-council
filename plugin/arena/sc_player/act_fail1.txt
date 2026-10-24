@@ -1,0 +1,62 @@
+meta kind ISOLATED ITEM
+meta hero Haze
+meta checkpoint Level 18 stat floor, 0 souls spent, then Clip Size given
+meta build none (harness check)
+meta items upgrade_clip_size
+meta question Does the tester prove that a clip-size item changes the magazine and that a reload really happened?
+meta purpose calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict
+meta mechanics reload plus clip-size readback; gun only
+meta expectedstate items=none at start; exactly one item given mid-run
+meta excluded all abilities and all other items; this is a harness check
+meta accmode body-only
+meta accwhy not a damage test
+meta abilities gun only
+meta runs 1/1
+meta assumed clip size item raises the magazine
+meta required_activation Fake proc never fires|modifier|zzz_not_a_real_modifier|1
+meta required_readback Clip shrank (should fail)|clip_after|<|clip_before
+meta activation_range 300
+meta range_expect out
+meta player_title Haze check: forced failure
+meta player_what Clip bigger after the item?|Did a reload really occur?
+meta player_why Checking the tester, not a build
+meta player_short Harness check
+meta player_expect Clip grows, reload occurs
+setup Haze Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark ACT|none|body
+rbprobe
+rb clip_before clip
+fire 1.5
+cast reload 2.5
+wait 0.5
+give upgrade_clip_size
+wait 1.0
+fire 1.5
+cast reload 2.5
+wait 0.8
+rb clip_after clip
+rb items_after items
+rb clipmax_seen clipmax
+mark none
+end

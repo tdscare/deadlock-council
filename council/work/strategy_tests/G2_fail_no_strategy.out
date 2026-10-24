@@ -1,0 +1,27 @@
+BUILD billy_damage | diff: added Early · L-R|Extra Health, Mid · L-R|Weapon Shielding, Mid · L-R|Cultist Sacrifice, Mid · cont.|Close Quarters, Mid · cont.|Point Blank, Late · L-R|Rapid Recharge, Late · L-R|Berserker; removed Early · L-R|Cultist Sacrifice, Mid · L-R|Close Quarters, Mid · L-R|Point Blank, Mid · cont.|Rapid Recharge, Mid · cont.|Berserker
+fixed: 0 | UNRESOLVED in resulting build: 5 | NEW: 8
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY billy_damage: Cultist Sacrifice: Have it by about 8 minutes and eat a big camp with it.
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY billy_damage: Lifestrike: Light punches and troopers trigger it too.
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY billy_damage: Spirit Strike: Bashdown counts as a punch for this.
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY billy_damage: Colossus: Pop it when you chain them in.
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY billy_damage: Scourge: Cast it on yourself as you dive in.
+  UNRESOLVED walk: Scourge: slot 13 with no sell that frees a slot
+STRATEGY BLOCK
+INTERACTION: no damage/fire-rate/stat item added, removed or reordered
+WEAKNESS: proposal is not justified by a weakness
+SALES: no investment drop, sale-before-upgrade or redundant purchase detected
+OVERLAP check (changed items):
+  overlap Extra Health (added): no overlap-candidate
+  overlap Weapon Shielding (added): at_buy=COMPLEMENTS; core_end=ADDS-VALUE
+UNRESOLVED overlap-candidates in resulting build (not part of this change): 5
+  UNRESOLVED overlap-candidate Lifestrike [core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Point Blank [at_buy=UNKNOWN; core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Unstoppable [core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Phantom Strike [core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Divine Barrier [core_end=UNKNOWN]
+BLOCK NEW violation introduced: bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Weapon Shielding (T2) @5600
+BLOCK NEW violation introduced: bc: SLOTS_GT12_NO_SELL billy_damage: Scourge is slot 13
+BLOCK NEW violation introduced: bc: CORE_NOT_12 billy_damage: core ends with 13 items, 51200 souls
+BLOCK NEW violation introduced: walk: Scourge: slot 13 with no sell that frees a slot
+BLOCK STRATEGY: proposal changes greens (Melee Lifesteal,Grit,Lifestrike,Spirit Shielding,Colossus -> Melee Lifesteal,Grit,Extra Health,Weapon Shielding,Lifestrike,Spirit Shielding,Colossus) + 4.8k spike timing (gun 6400 -> 8000, vitality 9600 -> 10400, spirit 16000 -> 18400) but cites no `strategy` evidence file (run abtimeline.py --strategy billy_damage <checkpoints> and cite it as kind `strategy`)
+RESULT: BLOCKED

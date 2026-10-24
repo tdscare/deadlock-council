@@ -1,0 +1,2510 @@
+{
+ "schema": 1,
+ "id": "ivy_carry",
+ "hero": "Ivy",
+ "name": "Rizuhble's Rock Hard Carry Ivy",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, once you're out of slots.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-10,400 (levels 1-17). Abilities gained (both point models agree): Kudzu Connection T3. 4.8k spikes: weapon 4.8k at Tesla Bullets. Ultimate (Air Drop) is available from Tesla Bullets.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "ivy_carry:7:phase_range:7000",
+    "ivy_carry:7:phase_abilities:7001",
+    "ivy_carry:7:phase_spikes:7009",
+    "ivy_carry:7:phase_ult:7010"
+   ],
+   "items": [
+    {
+     "name": "Extended Magazine",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 4,000 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Tesla Bullets completes 4.8k weapon in 4000 souls (~4.0 min), 2 purchases",
+     "claim_ids": [
+      "ivy_carry:0:spike_progress:6985"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "ivy_carry:0:spike_progress:6985",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Titanic Magazine",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 3,200 souls on. Upgrade of Extended Magazine (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Tesla Bullets completes 4.8k weapon in 3200 souls (~3.2 min), 1 purchases",
+     "claim_ids": [
+      "ivy_carry:1:spike_progress:6987",
+      "ivy_carry:1:upgrade_of:6988"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "ivy_carry:1:spike_progress:6987",
+       true,
+       "1600"
+      ],
+      [
+       "ivy_carry:1:upgrade_of:6988",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Tesla Bullets",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "ivy_carry:2:spike_complete:6990"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "ivy_carry:2:spike_complete:6990",
+       true,
+       "inventory weapon: before 1600, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Monster Rounds",
+     "imbue": null,
+     "caption": "Temporary, sold when you buy Ricochet later. Until then it speeds up camps: +25% weapon damage and +25% bullet resist against non-hero targets.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "ivy_carry:3:temporary_sold:6993"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "ivy_carry:3:temporary_sold:6993",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Intensifying Magazine",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 5,600 to 7,200 invested: bonus 46 to 54% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Headshot Booster",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 7,200 to 8,000 invested: bonus 54 to 62% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Active Reload",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: swap_candidate)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Health",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 10,400-29,600 (levels 17-30). Abilities gained (both point models agree): Stone Form T3, Air Drop T3. Your biggest single spirit hit (Stone Form, damage) grows from 86.5 to 171. 4.8k spikes: vitality 4.8k at Stamina Mastery.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "ivy_carry:13:phase_range:7021",
+    "ivy_carry:13:phase_abilities:7022",
+    "ivy_carry:13:phase_power:7023",
+    "ivy_carry:13:phase_spikes:7029"
+   ],
+   "items": [
+    {
+     "name": "Fortitude",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Stamina Mastery",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (3,200 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 20 to 42 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "ivy_carry:9:spike_complete:7013"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "ivy_carry:9:spike_complete:7013",
+       true,
+       "inventory vitality: before 3200, after 6400, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Headhunter",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 9,600 to 12,000 invested: bonus 62 to 74% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Capacitor",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Bullet Resist Shredder",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "spirit investment only and the build never reaches the 4.8k spirit tier through the core: timing review",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Thorns put it on them, so drop Thorns before you shoot.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Siphon Bullets",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 29,600-48,800 (levels 30-36). Abilities gained (both point models agree): Entangling Thorns T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "ivy_carry:16:phase_range:7034",
+    "ivy_carry:16:phase_abilities:7035"
+   ],
+   "items": [
+    {
+     "name": "Silencer",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 15,200 to 21,600 invested: bonus 74 to 86% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Inhibitor",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 12,800 to 19,200 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Ricochet",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 21,600 to 27,200 invested: bonus 86 to 100% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Monster Rounds for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Capacitor? Buy what is killing you, cheapest first. Not dying? Skip. Sell Intensifying Magazine.",
+   "desc": "Dying after Capacitor? Buy what is killing you, cheapest first. Not dying? Skip. Sell Intensifying Magazine.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "ivy_carry:17:defence_bullet:7039"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry dives you.",
+     "temporary": false,
+     "verify": [
+      [
+       "ivy_carry:17:defence_bullet:7039",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "ivy_carry:17:defence_spirit:7040"
+     ],
+     "lint": [],
+     "legacy_note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "ivy_carry:17:defence_spirit:7040",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "ivy_carry:17:defence_parry:7041"
+     ],
+     "lint": [],
+     "legacy_note": "A big ult or stun you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "ivy_carry:17:defence_parry:7041",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Stuns keep catching you.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Warp Stone",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They keep diving you while Air Drop's on cooldown.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Crippling Headshot",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 27,200 to 33,600 invested: bonus 100 to 115% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Bullet Resist Shredder for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spellslinger",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 27,200 to 32,000 invested: bonus 100 to 115% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Active Reload for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Indomitable",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 19,200 to 22,400 invested: bonus 54 to 60 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Stamina Mastery for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Armor Piercer",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 27,200 to 32,000 invested: bonus 100 to 115% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Titanic Magazine for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "ivy_carry:17:temporary_sold:6984": {
+   "id": "ivy_carry:17:temporary_sold:6984",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, once you're out of slots.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 17,
+    "item": "Extra Regen",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it once you're out of slots."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:0:spike_progress:6985": {
+   "id": "ivy_carry:0:spike_progress:6985",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Extended Magazine",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Tesla Bullets completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "ivy_carry:0:component_for:6986": {
+   "id": "ivy_carry:0:component_for:6986",
+   "kind": "component_for",
+   "phrase": "From Titanic Magazine: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Extended Magazine",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Titanic Magazine"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Titanic Magazine"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:1:spike_progress:6987": {
+   "id": "ivy_carry:1:spike_progress:6987",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 3,200 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Titanic Magazine",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 3200,
+    "event": "Tesla Bullets completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    3200,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "ivy_carry:1:upgrade_of:6988": {
+   "id": "ivy_carry:1:upgrade_of:6988",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extended Magazine (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 1,
+    "item": "Titanic Magazine",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extended Magazine"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:1:swap_candidate:6989": {
+   "id": "ivy_carry:1:swap_candidate:6989",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Armor Piercer later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 1,
+    "item": "Titanic Magazine",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Titanic Magazine",
+    "buyer": "Armor Piercer"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:2:spike_complete:6990": {
+   "id": "ivy_carry:2:spike_complete:6990",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 2,
+    "item": "Tesla Bullets",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "ivy_carry:2:component_for:6991": {
+   "id": "ivy_carry:2:component_for:6991",
+   "kind": "component_for",
+   "phrase": "From Capacitor: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Tesla Bullets",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 16800,
+    "event": "Capacitor"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Capacitor"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:3:spike_progress:6992": {
+   "id": "ivy_carry:3:spike_progress:6992",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 5,600 of the 6.4k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Monster Rounds",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 6400
+  },
+  "ivy_carry:3:temporary_sold:6993": {
+   "id": "ivy_carry:3:temporary_sold:6993",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Ricochet later. Until then it speeds up camps: +25% weapon damage and +25% bullet resist against non-hero targets.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_non_player_bonus"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 3,
+    "item": "Monster Rounds",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Monster Rounds",
+    "buyer": "Ricochet"
+   },
+   "numbers": [
+    "25",
+    "25"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "ivy_carry:4:invest_step:6994": {
+   "id": "ivy_carry:4:invest_step:6994",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 5,600 to 7,200 invested: bonus 46 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 4,
+    "item": "Intensifying Magazine",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "7200",
+    "46.0",
+    "54.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 6400
+  },
+  "ivy_carry:5:invest_step:6995": {
+   "id": "ivy_carry:5:invest_step:6995",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 7,200 to 8,000 invested: bonus 54 to 62% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 5,
+    "item": "Headshot Booster",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "8000",
+    "54.0",
+    "62.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 8000
+  },
+  "ivy_carry:5:component_for:6996": {
+   "id": "ivy_carry:5:component_for:6996",
+   "kind": "component_for",
+   "phrase": "From Headhunter: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Headshot Booster",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 10400,
+    "event": "Headhunter"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Headhunter"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:6:swap_candidate:6997": {
+   "id": "ivy_carry:6:swap_candidate:6997",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Spellslinger later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 6,
+    "item": "Active Reload",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Active Reload",
+    "buyer": "Spellslinger"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:7:spike_progress:6998": {
+   "id": "ivy_carry:7:spike_progress:6998",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Extra Health",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "ivy_carry:7:component_for:6999": {
+   "id": "ivy_carry:7:component_for:6999",
+   "kind": "component_for",
+   "phrase": "From Fortitude: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Health",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Fortitude"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Fortitude"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:7:phase_range:7000": {
+   "id": "ivy_carry:7:phase_range:7000",
+   "kind": "phase_range",
+   "phrase": "Souls 0-10,400 (levels 1-17).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Health",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Health",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "10,400",
+    "1",
+    "17"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:7:phase_abilities:7001": {
+   "id": "ivy_carry:7:phase_abilities:7001",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Kudzu Connection T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Health",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Health",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:7:phase_spikes:7009": {
+   "id": "ivy_carry:7:phase_spikes:7009",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Tesla Bullets.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Health",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Health",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:7:phase_ult:7010": {
+   "id": "ivy_carry:7:phase_ult:7010",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Air Drop) is available from Tesla Bullets.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Health",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Health",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:8:spike_progress:7011": {
+   "id": "ivy_carry:8:spike_progress:7011",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 8,
+    "item": "Fortitude",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "ivy_carry:8:upgrade_of:7012": {
+   "id": "ivy_carry:8:upgrade_of:7012",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Health (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 8,
+    "item": "Fortitude",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Health"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:9:spike_complete:7013": {
+   "id": "ivy_carry:9:spike_complete:7013",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (3,200 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 20 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 9,
+    "item": "Stamina Mastery",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "6400",
+    "20.0",
+    "42.0",
+    "4.8k",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "ivy_carry:9:swap_candidate:7014": {
+   "id": "ivy_carry:9:swap_candidate:7014",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Indomitable later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 9,
+    "item": "Stamina Mastery",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Stamina Mastery",
+    "buyer": "Indomitable"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:10:invest_step:7015": {
+   "id": "ivy_carry:10:invest_step:7015",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 9,600 to 12,000 invested: bonus 62 to 74% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Headhunter",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "12000",
+    "62.0",
+    "74.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 11200
+  },
+  "ivy_carry:10:upgrade_of:7016": {
+   "id": "ivy_carry:10:upgrade_of:7016",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Headshot Booster (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Headhunter",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Headshot Booster"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:11:upgrade_of:7017": {
+   "id": "ivy_carry:11:upgrade_of:7017",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Tesla Bullets (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Capacitor",
+    "souls": 21600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Tesla Bullets"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:12:spike_progress:7018": {
+   "id": "ivy_carry:12:spike_progress:7018",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 12,
+    "item": "Bullet Resist Shredder",
+    "souls": 23200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "ivy_carry:12:swap_candidate:7019": {
+   "id": "ivy_carry:12:swap_candidate:7019",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Crippling Headshot later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 12,
+    "item": "Bullet Resist Shredder",
+    "souls": 23200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Bullet Resist Shredder",
+    "buyer": "Crippling Headshot"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "ivy_carry:13:invest_step:7020": {
+   "id": "ivy_carry:13:invest_step:7020",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Siphon Bullets",
+    "souls": 29600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "12800",
+    "42.0",
+    "50.0",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "ivy_carry:13:phase_range:7021": {
+   "id": "ivy_carry:13:phase_range:7021",
+   "kind": "phase_range",
+   "phrase": "Souls 10,400-29,600 (levels 17-30).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Siphon Bullets",
+    "souls": 29600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Siphon Bullets",
+    "keys": []
+   },
+   "numbers": [
+    "10,400",
+    "29,600",
+    "17",
+    "30"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:13:phase_abilities:7022": {
+   "id": "ivy_carry:13:phase_abilities:7022",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Stone Form T3, Air Drop T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Siphon Bullets",
+    "souls": 29600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Siphon Bullets",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:13:phase_power:7023": {
+   "id": "ivy_carry:13:phase_power:7023",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Stone Form, damage) grows from 86.5 to 171.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_tengu_stone_form",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Siphon Bullets",
+    "souls": 29600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Siphon Bullets",
+    "keys": []
+   },
+   "numbers": [
+    "86.5",
+    "171"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:13:phase_spikes:7029": {
+   "id": "ivy_carry:13:phase_spikes:7029",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Stamina Mastery.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Siphon Bullets",
+    "souls": 29600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Siphon Bullets",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:14:invest_step:7030": {
+   "id": "ivy_carry:14:invest_step:7030",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 15,200 to 21,600 invested: bonus 74 to 86% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Silencer",
+    "souls": 36000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 16000
+   },
+   "numbers": [
+    "15200",
+    "21600",
+    "74.0",
+    "86.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 16000
+  },
+  "ivy_carry:15:invest_step:7031": {
+   "id": "ivy_carry:15:invest_step:7031",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 12,800 to 19,200 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Inhibitor",
+    "souls": 42400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "19200",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "ivy_carry:16:invest_step:7032": {
+   "id": "ivy_carry:16:invest_step:7032",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 21,600 to 27,200 invested: bonus 86 to 100% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Ricochet",
+    "souls": 48800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 22400
+   },
+   "numbers": [
+    "21600",
+    "27200",
+    "86.0",
+    "100.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 22400
+  },
+  "ivy_carry:16:sell_swap:7033": {
+   "id": "ivy_carry:16:sell_swap:7033",
+   "kind": "sell_swap",
+   "phrase": "Replaces Monster Rounds: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 16,
+    "item": "Ricochet",
+    "souls": 48800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Monster Rounds",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Monster Rounds"
+  },
+  "ivy_carry:16:phase_range:7034": {
+   "id": "ivy_carry:16:phase_range:7034",
+   "kind": "phase_range",
+   "phrase": "Souls 29,600-48,800 (levels 30-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 16,
+    "item": "Ricochet",
+    "souls": 48800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Ricochet",
+    "keys": []
+   },
+   "numbers": [
+    "29,600",
+    "48,800",
+    "30",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:16:phase_abilities:7035": {
+   "id": "ivy_carry:16:phase_abilities:7035",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Entangling Thorns T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 16,
+    "item": "Ricochet",
+    "souls": 48800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Ricochet",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:17:defence_bullet:7039": {
+   "id": "ivy_carry:17:defence_bullet:7039",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 17,
+    "item": "Metal Skin",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry dives you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:17:defence_spirit:7040": {
+   "id": "ivy_carry:17:defence_spirit:7040",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 17,
+    "item": "Spirit Resilience",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:17:defence_parry:7041": {
+   "id": "ivy_carry:17:defence_parry:7041",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 17,
+    "item": "Counterspell",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ult or stun you can see coming."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "ivy_carry:17:invest_step:7042": {
+   "id": "ivy_carry:17:invest_step:7042",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 27,200 to 33,600 invested: bonus 100 to 115% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Crippling Headshot",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Bullet Resist Shredder for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 28800
+   },
+   "numbers": [
+    "27200",
+    "33600",
+    "100.0",
+    "115.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 28800
+  },
+  "ivy_carry:17:sell_swap:7043": {
+   "id": "ivy_carry:17:sell_swap:7043",
+   "kind": "sell_swap",
+   "phrase": "Replaces Bullet Resist Shredder: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 17,
+    "item": "Crippling Headshot",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Bullet Resist Shredder for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Bullet Resist Shredder",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Bullet Resist Shredder"
+  },
+  "ivy_carry:17:invest_step:7044": {
+   "id": "ivy_carry:17:invest_step:7044",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 27,200 to 32,000 invested: bonus 100 to 115% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Spellslinger",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Active Reload for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 28800
+   },
+   "numbers": [
+    "27200",
+    "32000",
+    "100.0",
+    "115.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 28800
+  },
+  "ivy_carry:17:sell_swap:7045": {
+   "id": "ivy_carry:17:sell_swap:7045",
+   "kind": "sell_swap",
+   "phrase": "Replaces Active Reload: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 17,
+    "item": "Spellslinger",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Active Reload for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Active Reload",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Active Reload"
+  },
+  "ivy_carry:17:invest_step:7046": {
+   "id": "ivy_carry:17:invest_step:7046",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 19,200 to 22,400 invested: bonus 54 to 60 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Indomitable",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Stamina Mastery for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 22400
+   },
+   "numbers": [
+    "19200",
+    "22400",
+    "54.0",
+    "60.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 22400
+  },
+  "ivy_carry:17:sell_swap:7047": {
+   "id": "ivy_carry:17:sell_swap:7047",
+   "kind": "sell_swap",
+   "phrase": "Replaces Stamina Mastery: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 17,
+    "item": "Indomitable",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Stamina Mastery for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Stamina Mastery",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Stamina Mastery"
+  },
+  "ivy_carry:17:invest_step:7048": {
+   "id": "ivy_carry:17:invest_step:7048",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 27,200 to 32,000 invested: bonus 100 to 115% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_tengu m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Armor Piercer",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Titanic Magazine for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 28800
+   },
+   "numbers": [
+    "27200",
+    "32000",
+    "100.0",
+    "115.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 28800
+  },
+  "ivy_carry:17:sell_swap:7049": {
+   "id": "ivy_carry:17:sell_swap:7049",
+   "kind": "sell_swap",
+   "phrase": "Replaces Titanic Magazine: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 17,
+    "item": "Armor Piercer",
+    "souls": 48800.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Titanic Magazine for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Titanic Magazine",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Titanic Magazine"
+  }
+ },
+ "review": [
+  {
+   "build": "ivy_carry",
+   "item": "Extended Magazine",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Tesla Bullets completes 4.8k weapon in 4000 souls (~4.0 min), 2 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "ivy_carry:0:spike_progress:6985",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Tesla Bullets completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "ivy_carry:0:component_for:6986",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Titanic Magazine: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Titanic Magazine"
+     }
+    }
+   ]
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Titanic Magazine",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Tesla Bullets completes 4.8k weapon in 3200 souls (~3.2 min), 1 purchases",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "ivy_carry:1:spike_progress:6987",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 3,200 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 3200,
+      "event": "Tesla Bullets completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Active Reload",
+   "section": "early",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: swap_candidate)",
+   "souls": 9600,
+   "unpublished": []
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Extra Health",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 10400,
+   "unpublished": [
+    {
+     "id": "ivy_carry:7:component_for:6999",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Fortitude: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Fortitude"
+     }
+    }
+   ]
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Fortitude",
+   "section": "mid",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 12800,
+   "unpublished": []
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Capacitor",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 21600,
+   "unpublished": []
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Bullet Resist Shredder",
+   "section": "mid",
+   "cls": "c",
+   "why": "spirit investment only and the build never reaches the 4.8k spirit tier through the core: timing review",
+   "souls": 23200,
+   "unpublished": []
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Bullet Resist Shredder",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Thorns put it on them, so drop Thorns before you shoot."
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry dives you."
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ult or stun you can see coming."
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 48800.0,
+   "unpublished": []
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep catching you."
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Warp Stone",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 48800.0,
+   "unpublished": []
+  },
+  {
+   "build": "ivy_carry",
+   "item": "Warp Stone",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They keep diving you while Air Drop's on cooldown."
+  }
+ ],
+ "stats": {
+  "g": 12,
+  "b": 2,
+  "a": 6,
+  "d": 4,
+  "c": 3
+ }
+}

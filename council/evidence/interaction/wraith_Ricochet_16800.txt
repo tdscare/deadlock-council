@@ -1,0 +1,63 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: wraith
+HERO: Wraith
+ITEM: Ricochet
+CHECKPOINT: buy-point at 16800 souls (state souls 16800; item cost 6400)
+VERSION: interaction-v1
+ARGS: --interactions wraith Ricochet
+GENERATED: 2026-10-24T16:27:41Z
+BODY-SHA: 2f6a80b3a6eff641f0bf8f3fa823dbba46be323f43872700118b0a1329ea0195
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 6400, unconditional, ranked): Leech, Phantom Strike, Armor Piercer; also shown, not ranked (conditional or unequal cost): Frenzy, Spiritual Overflow, Focus Lens, Healing Tempo, Spellslinger
+VERDICT: DEPENDS ON COMBAT WINDOW: sustained -> Ricochet; burst -> Ricochet; ult -> Leech
+UNKNOWN_CELLS: 0
+SELECTION: build-decision | Ricochet is bought at 16800 souls in wraith: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (6400) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+UPPER-BOUND OPTIONS THAT BEAT IT (their trigger condition decides; UNKNOWN uptime): Focus Lens, Healing Tempo, Spiritual Overflow
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.6, long_share=0.3, W_sus=10.0, W_burst=3.0; reload 2.82 s (measured 2.82 s in council/sandbox/results/wraith_gun_PR-W1.md)
+STATE: owned ['Swift Striker', 'Tesla Bullets', 'Monster Rounds', 'Quicksilver Reload', 'Surge of Power', 'Ricochet'] | tiers Card Trick=T3(cards) Project Mind=T2(utility) Full Auto=T3(gun-mode) Telekinesis=U(spirit) | weapon invest bonus 74% | spirit 62
+
+## INTERACTION MATRIX (item effect x kit component)
+- bullet bounces (RicochetDamagePercent=65)
+    normal shooting                              WORKS                      [CALCULATED] bounces need a 2nd enemy within 13m: 0 in these single-target windows; vs groups/camps priced in --strategy (p2hero, N_NPC)
+    1=Card Trick T3 [cards]                      DOES NOT WORK              [CALCULATED] no matching mechanic
+    2=Project Mind T2 [utility]                  NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Full Auto T3 [gun-mode]                    WORKS                      [CALCULATED] ability fires the weapon (game text: 'Temporarily boost your fire rate and deal bonus {g:citadel_i...'); bullets take weapon bonuses
+    4=Telekinesis U (ULT) [spirit]               DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+- fire rate (more bullets) (BonusFireRate=18)
+    normal shooting                              WORKS                      [CALCULATED] more bullets per second (fire-rate pool now 50%: +18 adds 12.0% bullets)
+    1=Card Trick T3 [cards]                      WORKS                      [CALCULATED] cards are earned per bullet hit (CardResourcePerBulletHit=4, 100 per card)
+    2=Project Mind T2 [utility]                  NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Full Auto T3 [gun-mode]                    WORKS                      [CALCULATED+ASSUMED] adds to the ability's own BonusFireRate=30 (additive stacking ASSUMED)
+    3=Full Auto T3 [gun-mode] bullets            WORKS                      [CALCULATED] MagicDamagePerBullet: more bullets -> more spirit damage
+    4=Telekinesis U (ULT) [spirit]               DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    owned proc Tesla Bullets                     WORKS                      [CALCULATED] more bullets -> more procs/build-up (capped by cooldown 0.2)
+    other fire-rate items                        WORKS (diminishing)        [CALCULATED] additive pool 50%: relative gain 12.0%
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |      3141              |       509              |       162              | 0
+Ricochet                     |       3718 (+18..+18%) |        642 (+26..+26%) |          162 (+0..+0%) | 0
+Frenzy                       |       3653 (+16..+16%) |        630 (+24..+24%) |          162 (+0..+0%) | 144  ! fire rate is a timed buff, counted as always on (upper bound); conditional item (selfhp): counted as if its condition is met (upper bound)
+Leech                        |         3398 (+8..+8%) |          545 (+7..+7%) |          174 (+7..+7%) | 334
+Spiritual Overflow           |       3631 (+16..+16%) |        615 (+21..+21%) |          168 (+4..+4%) | 0  ! conditional item (stack): counted as if its condition is met (upper bound)
+Focus Lens                   |       3637 (+16..+16%) |        559 (+10..+10%) |        183 (+13..+13%) | 0  ! fire rate is a timed buff, counted as always on (upper bound)
+Phantom Strike               |         3365 (+7..+7%) |          549 (+8..+8%) |          170 (+5..+5%) | 0
+Healing Tempo                |       3799 (+21..+21%) |        628 (+23..+23%) |          162 (+0..+0%) | 0  ! fire rate is a timed buff, counted as always on (upper bound); conditional item (heal): counted as if its condition is met (upper bound)
+Armor Piercer                |         3412 (+9..+9%) |        591 (+16..+16%) |          162 (+0..+0%) | 0
+Spellslinger                 |       3579 (+14..+14%) |        618 (+21..+21%) |          162 (+0..+0%) | 0  ! fire rate is a timed buff, counted as always on (upper bound); conditional item (stack): counted as if its condition is met (upper bound)
+  candidate detail (reading 1): sustained bullets 176, gun 1472, stacks 0, procs 652, spirit 1594 | ult: Telekinesis damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Ricochet > Armor Piercer > Leech > Phantom Strike
+  burst: rank (reading 1) Ricochet > Armor Piercer > Phantom Strike > Leech
+  ult: rank (reading 1) Leech > Phantom Strike > Ricochet > Armor Piercer
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (150s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  none
+
+## NOT DETERMINED FROM DATA
+  - nothing beyond the ASSUMED shares above
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

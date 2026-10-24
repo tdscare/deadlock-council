@@ -1,0 +1,3334 @@
+{
+ "schema": 1,
+ "id": "geist",
+ "hero": "Lady Geist",
+ "name": "Rizuhble's Stubborn Old Geist",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Health",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Getting bursted in lane while you're low from your own bombs. Sell it when slots fill.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-6,400 (levels 1-12). Abilities gained (both point models agree): Soul Exchange unlocked. 4.8k spikes: weapon 4.8k at Cultist Sacrifice. Ultimate (Soul Exchange) is available from Cultist Sacrifice.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "geist:5:phase_range:3458",
+    "geist:5:phase_abilities:3459",
+    "geist:5:phase_spikes:3466",
+    "geist:5:phase_ult:3467"
+   ],
+   "items": [
+    {
+     "name": "Monster Rounds",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 5,600 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 5600 souls (~5.6 min), 5 purchases",
+     "claim_ids": [
+      "geist:0:spike_progress:3444"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "geist:0:spike_progress:3444",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Bullet Lifesteal, 16800 souls (~16.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Regeneration",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "spirit investment only; its 4.8k tier completes at Bullet Resist Shredder, 14400 souls (~14.4 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Stamina",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Bullet Lifesteal, 15200 souls (~15.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Kinetic Dash",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 2,400 souls on. Upgrade of Extra Stamina (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "imminent: Cultist Sacrifice completes 4.8k weapon in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "geist:4:spike_progress:3452",
+      "geist:4:upgrade_of:3453"
+     ],
+     "lint": [],
+     "legacy_note": "Sell it for a counter.",
+     "temporary": true,
+     "verify": [
+      [
+       "geist:4:spike_progress:3452",
+       true,
+       "2400"
+      ],
+      [
+       "geist:4:upgrade_of:3453",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Cultist Sacrifice",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (2,400 to 4,800 invested): bonus 15 to 46% weapon damage. Upgrade of Monster Rounds (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:5:spike_complete:3455",
+      "geist:5:upgrade_of:3456"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "geist:5:spike_complete:3455",
+       true,
+       "inventory weapon: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "geist:5:upgrade_of:3456",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 6,400-20,000 (levels 12-25). Abilities gained (both point models agree): Life Drain T3, Malice T3. Your biggest single spirit hit (Essence Bomb, damage) grows from 113 to 176. 4.8k spikes: spirit 4.8k at Bullet Resist Shredder, vitality 4.8k at Bullet Lifesteal.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "geist:11:phase_range:3479",
+    "geist:11:phase_abilities:3480",
+    "geist:11:phase_power:3481",
+    "geist:11:phase_spikes:3488"
+   ],
+   "items": [
+    {
+     "name": "Radiant Regeneration",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "spirit investment only; its 4.8k tier completes at Bullet Resist Shredder, 8000 souls (~8.0 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:7:defence_spirit:3471"
+     ],
+     "lint": [],
+     "legacy_note": "Your own bombs hurt you with spirit damage, so this cuts that too.",
+     "temporary": false,
+     "verify": [
+      [
+       "geist:7:defence_spirit:3471",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Berserker",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 46 to 62% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Bullet Resist Shredder",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:9:spike_complete:3473"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "geist:9:spike_complete:3473",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Bullet Lifesteal",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (4,000 to 5,600 invested): bonus 20 to 38 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:10:spike_complete:3475"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "geist:10:spike_complete:3475",
+       true,
+       "inventory vitality: before 4000, after 5600, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 5,600 to 7,200 invested: bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 cont.",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 20,000-30,400 (levels 25-30). Abilities gained (both point models agree): Soul Exchange T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "geist:14:phase_range:3494",
+    "geist:14:phase_abilities:3495"
+   ],
+   "items": [
+    {
+     "name": "Healing Booster",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 7,200 to 8,000 invested: bonus 42 to 46 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spellslinger",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 8,000 to 14,400 invested: bonus 62 to 74% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Blood Tribute",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 14,400 to 17,600 invested: bonus 74 to 86% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 30,400-43,200 (levels 30-34). Your biggest single spirit hit (Essence Bomb, damage) grows from 183 to 271.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "geist:18:phase_range:3509",
+    "geist:18:phase_power:3510"
+   ],
+   "items": [
+    {
+     "name": "Leech",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 8,000 to 11,200 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Charge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Life Drain (3 to 4).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:16:charges:3503"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "geist:16:charges:3503",
+       true,
+       "[2]"
+      ]
+     ]
+    },
+    {
+     "name": "Rapid Recharge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Life Drain (4 to 5). Takes spirit from 5,600 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power. Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:17:charges:3506",
+      "geist:17:invest_step:3504",
+      "geist:17:upgrade_of:3505"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "geist:17:charges:3506",
+       true,
+       "[2]"
+      ],
+      [
+       "geist:17:invest_step:3504",
+       true,
+       "inventory spirit: before 5600, after 8000, threshold 6400"
+      ],
+      [
+       "geist:17:upgrade_of:3505",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 216s of base cooldown across your kit, 170s of it the ultimate; the item has its own cooldown of 300s. Takes spirit from 8,000 to 14,400 invested: bonus 52 to 59 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:18:refresher:3507",
+      "geist:18:invest_step:3508"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "geist:18:refresher:3507",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "geist:18:invest_step:3508",
+       true,
+       "inventory spirit: before 8000, after 14400, threshold 11200"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Berserker? Buy what is killing you, cheapest first. Not dying? Skip. Sell Kinetic Dash.",
+   "desc": "Dying after Berserker? Buy what is killing you, cheapest first. Not dying? Skip. Sell Kinetic Dash.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Warp Stone",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They dive you and you've got no way out.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:19:defence_purge:3515"
+     ],
+     "lint": [],
+     "legacy_note": "Silences and hexes keep shutting down your abilities.",
+     "temporary": false,
+     "verify": [
+      [
+       "geist:19:defence_purge:3515",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:19:defence_parry:3516"
+     ],
+     "lint": [],
+     "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "geist:19:defence_parry:3516",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:19:defence_bullet:3517"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry is melting you.",
+     "temporary": false,
+     "verify": [
+      [
+       "geist:19:defence_bullet:3517",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:19:defence_gun:3518"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "geist:19:defence_gun:3518",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Stuns keep cutting your drain and Soul Exchange.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spellbreaker",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Big spirit bursts keep killing you.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Cheat Death",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Their burst kills you before you can swap. Don't buy it if they have Cursed Relic.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Inhibitor",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Cultist Sacrifice for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Silencer",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Blood Tribute for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Crippling Headshot",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 17,600 to 24,000 invested: bonus 86 to 100% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Bullet Resist Shredder for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Ricochet",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 17,600 to 22,400 invested: bonus 86 to 100% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Kinetic Dash for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:19:defence_barrier:3526"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "geist:19:defence_barrier:3526",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Healing Tempo",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "geist:19:upgrade_delta:3527"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Healing Booster.",
+     "temporary": false,
+     "verify": [
+      [
+       "geist:19:upgrade_delta:3527",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "geist:0:spike_progress:3444": {
+   "id": "geist:0:spike_progress:3444",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 5,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Monster Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 5600,
+    "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    5600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "geist:0:component_for:3445": {
+   "id": "geist:0:component_for:3445",
+   "kind": "component_for",
+   "phrase": "From Cultist Sacrifice: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Monster Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Cultist Sacrifice"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Cultist Sacrifice"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:1:spike_progress:3446": {
+   "id": "geist:1:spike_progress:3446",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Extra Regen",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "geist:1:component_for:3447": {
+   "id": "geist:1:component_for:3447",
+   "kind": "component_for",
+   "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Extra Regen",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 19200,
+    "event": "Healing Booster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Healing Booster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:2:spike_progress:3448": {
+   "id": "geist:2:spike_progress:3448",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Regeneration",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "geist:2:component_for:3449": {
+   "id": "geist:2:component_for:3449",
+   "kind": "component_for",
+   "phrase": "From Radiant Regeneration: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Regeneration",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 6400,
+    "event": "Radiant Regeneration"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Radiant Regeneration"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:3:spike_progress:3450": {
+   "id": "geist:3:spike_progress:3450",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Extra Stamina",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "geist:3:component_for:3451": {
+   "id": "geist:3:component_for:3451",
+   "kind": "component_for",
+   "phrase": "From Kinetic Dash: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Extra Stamina",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Kinetic Dash"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Kinetic Dash"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:4:spike_progress:3452": {
+   "id": "geist:4:spike_progress:3452",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Kinetic Dash",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "geist:4:upgrade_of:3453": {
+   "id": "geist:4:upgrade_of:3453",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Stamina (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 4,
+    "item": "Kinetic Dash",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Stamina"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:4:swap_candidate:3454": {
+   "id": "geist:4:swap_candidate:3454",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Ricochet later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 4,
+    "item": "Kinetic Dash",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Kinetic Dash",
+    "buyer": "Ricochet"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:5:spike_complete:3455": {
+   "id": "geist:5:spike_complete:3455",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (2,400 to 4,800 invested): bonus 15 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 5,
+    "item": "Cultist Sacrifice",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "geist:5:upgrade_of:3456": {
+   "id": "geist:5:upgrade_of:3456",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Monster Rounds (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 5,
+    "item": "Cultist Sacrifice",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Monster Rounds"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:5:swap_candidate:3457": {
+   "id": "geist:5:swap_candidate:3457",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Inhibitor later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 5,
+    "item": "Cultist Sacrifice",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Cultist Sacrifice",
+    "buyer": "Inhibitor"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:5:phase_range:3458": {
+   "id": "geist:5:phase_range:3458",
+   "kind": "phase_range",
+   "phrase": "Souls 0-6,400 (levels 1-12).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Cultist Sacrifice",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Cultist Sacrifice",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "6,400",
+    "1",
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:5:phase_abilities:3459": {
+   "id": "geist:5:phase_abilities:3459",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Soul Exchange unlocked.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Cultist Sacrifice",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Cultist Sacrifice",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:5:phase_spikes:3466": {
+   "id": "geist:5:phase_spikes:3466",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Cultist Sacrifice.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Cultist Sacrifice",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Cultist Sacrifice",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:5:phase_ult:3467": {
+   "id": "geist:5:phase_ult:3467",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Soul Exchange) is available from Cultist Sacrifice.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Cultist Sacrifice",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Cultist Sacrifice",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:6:spike_progress:3468": {
+   "id": "geist:6:spike_progress:3468",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Radiant Regeneration",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "geist:6:upgrade_of:3469": {
+   "id": "geist:6:upgrade_of:3469",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Regeneration (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 6,
+    "item": "Radiant Regeneration",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Regeneration"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:7:spike_progress:3470": {
+   "id": "geist:7:spike_progress:3470",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 4,000 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Resilience",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "geist:7:defence_spirit:3471": {
+   "id": "geist:7:defence_spirit:3471",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Resilience",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:8:invest_step:3472": {
+   "id": "geist:8:invest_step:3472",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 46 to 62% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 8,
+    "item": "Berserker",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "8000",
+    "46.0",
+    "62.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 6400
+  },
+  "geist:9:spike_complete:3473": {
+   "id": "geist:9:spike_complete:3473",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 9,
+    "item": "Bullet Resist Shredder",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "geist:9:swap_candidate:3474": {
+   "id": "geist:9:swap_candidate:3474",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Crippling Headshot later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 9,
+    "item": "Bullet Resist Shredder",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Bullet Resist Shredder",
+    "buyer": "Crippling Headshot"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:10:spike_complete:3475": {
+   "id": "geist:10:spike_complete:3475",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (4,000 to 5,600 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 10,
+    "item": "Bullet Lifesteal",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "5600",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "geist:10:component_for:3476": {
+   "id": "geist:10:component_for:3476",
+   "kind": "component_for",
+   "phrase": "From Leech: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 10,
+    "item": "Bullet Lifesteal",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 15200,
+    "event": "Leech"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Leech"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:11:invest_step:3477": {
+   "id": "geist:11:invest_step:3477",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 5,600 to 7,200 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Lifesteal",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "7200",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "geist:11:component_for:3478": {
+   "id": "geist:11:component_for:3478",
+   "kind": "component_for",
+   "phrase": "From Leech: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Lifesteal",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 13600,
+    "event": "Leech"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Leech"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:11:phase_range:3479": {
+   "id": "geist:11:phase_range:3479",
+   "kind": "phase_range",
+   "phrase": "Souls 6,400-20,000 (levels 12-25).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Lifesteal",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Lifesteal",
+    "keys": []
+   },
+   "numbers": [
+    "6,400",
+    "20,000",
+    "12",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:11:phase_abilities:3480": {
+   "id": "geist:11:phase_abilities:3480",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Life Drain T3, Malice T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Lifesteal",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Lifesteal",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:11:phase_power:3481": {
+   "id": "geist:11:phase_power:3481",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Essence Bomb, damage) grows from 113 to 176.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_blood_bomb",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Lifesteal",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Lifesteal",
+    "keys": []
+   },
+   "numbers": [
+    "113",
+    "176"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:11:phase_spikes:3488": {
+   "id": "geist:11:phase_spikes:3488",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Bullet Resist Shredder, vitality 4.8k at Bullet Lifesteal.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Lifesteal",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Lifesteal",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:12:invest_step:3489": {
+   "id": "geist:12:invest_step:3489",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 7,200 to 8,000 invested: bonus 42 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Healing Booster",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "8000",
+    "42.0",
+    "46.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "geist:12:upgrade_of:3490": {
+   "id": "geist:12:upgrade_of:3490",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Regen (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 12,
+    "item": "Healing Booster",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Regen"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:13:invest_step:3491": {
+   "id": "geist:13:invest_step:3491",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 8,000 to 14,400 invested: bonus 62 to 74% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Spellslinger",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "14400",
+    "62.0",
+    "74.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 11200
+  },
+  "geist:14:invest_step:3492": {
+   "id": "geist:14:invest_step:3492",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 14,400 to 17,600 invested: bonus 74 to 86% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Blood Tribute",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "17600",
+    "74.0",
+    "86.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 16000
+  },
+  "geist:14:swap_candidate:3493": {
+   "id": "geist:14:swap_candidate:3493",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Silencer later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 14,
+    "item": "Blood Tribute",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Blood Tribute",
+    "buyer": "Silencer"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:14:phase_range:3494": {
+   "id": "geist:14:phase_range:3494",
+   "kind": "phase_range",
+   "phrase": "Souls 20,000-30,400 (levels 25-30).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Blood Tribute",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Blood Tribute",
+    "keys": []
+   },
+   "numbers": [
+    "20,000",
+    "30,400",
+    "25",
+    "30"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:14:phase_abilities:3495": {
+   "id": "geist:14:phase_abilities:3495",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Soul Exchange T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Blood Tribute",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Blood Tribute",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:15:invest_step:3499": {
+   "id": "geist:15:invest_step:3499",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 8,000 to 11,200 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Leech",
+    "souls": 33600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "11200",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "geist:15:upgrade_of:3500": {
+   "id": "geist:15:upgrade_of:3500",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Bullet Lifesteal, Spirit Lifesteal (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Leech",
+    "souls": 33600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Bullet Lifesteal",
+     "Spirit Lifesteal"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:16:spike_progress:3501": {
+   "id": "geist:16:spike_progress:3501",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 5,600 of the 6.4k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 16,
+    "item": "Extra Charge",
+    "souls": 34400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 6400
+  },
+  "geist:16:component_for:3502": {
+   "id": "geist:16:component_for:3502",
+   "kind": "component_for",
+   "phrase": "From Rapid Recharge: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 16,
+    "item": "Extra Charge",
+    "souls": 34400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Rapid Recharge"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Rapid Recharge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:16:charges:3503": {
+   "id": "geist:16:charges:3503",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Life Drain (3 to 4).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_extra_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_life_drain"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 16,
+    "item": "Extra Charge",
+    "souls": 34400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "1",
+    "3",
+    "4"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "geist:17:invest_step:3504": {
+   "id": "geist:17:invest_step:3504",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 5,600 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Rapid Recharge",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "8000",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "geist:17:upgrade_of:3505": {
+   "id": "geist:17:upgrade_of:3505",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Rapid Recharge",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Charge"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "geist:17:charges:3506": {
+   "id": "geist:17:charges:3506",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Life Drain (4 to 5).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_rapid_recharge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_life_drain"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 17,
+    "item": "Rapid Recharge",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "1",
+    "4",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "geist:18:refresher:3507": {
+   "id": "geist:18:refresher:3507",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 216s of base cooldown across your kit, 170s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_blood_bomb",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_life_drain",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_blood_shards",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_health_swap"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 18,
+    "item": "Refresher",
+    "souls": 43200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "216",
+    "170",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "geist:18:invest_step:3508": {
+   "id": "geist:18:invest_step:3508",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 8,000 to 14,400 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Refresher",
+    "souls": 43200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "14400",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "geist:18:phase_range:3509": {
+   "id": "geist:18:phase_range:3509",
+   "kind": "phase_range",
+   "phrase": "Souls 30,400-43,200 (levels 30-34).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Refresher",
+    "souls": 43200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Refresher",
+    "keys": []
+   },
+   "numbers": [
+    "30,400",
+    "43,200",
+    "30",
+    "34"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:18:phase_power:3510": {
+   "id": "geist:18:phase_power:3510",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Essence Bomb, damage) grows from 183 to 271.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_blood_bomb",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Refresher",
+    "souls": 43200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Refresher",
+    "keys": []
+   },
+   "numbers": [
+    "183",
+    "271"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:19:defence_purge:3515": {
+   "id": "geist:19:defence_purge:3515",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Dispel Magic",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Silences and hexes keep shutting down your abilities."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:19:defence_parry:3516": {
+   "id": "geist:19:defence_parry:3516",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Counterspell",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Lash ult, Infernus ult. Anything big you can see coming."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:19:defence_bullet:3517": {
+   "id": "geist:19:defence_bullet:3517",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Metal Skin",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry is melting you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:19:defence_gun:3518": {
+   "id": "geist:19:defence_gun:3518",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Plated Armor",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:19:invest_step:3519": {
+   "id": "geist:19:invest_step:3519",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Inhibitor",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Cultist Sacrifice for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "17600",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "geist:19:sell_swap:3520": {
+   "id": "geist:19:sell_swap:3520",
+   "kind": "sell_swap",
+   "phrase": "Replaces Cultist Sacrifice: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Inhibitor",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Cultist Sacrifice for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Cultist Sacrifice",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Cultist Sacrifice"
+  },
+  "geist:19:sell_swap:3521": {
+   "id": "geist:19:sell_swap:3521",
+   "kind": "sell_swap",
+   "phrase": "Replaces Blood Tribute: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Silencer",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Blood Tribute for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Blood Tribute",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Blood Tribute"
+  },
+  "geist:19:invest_step:3522": {
+   "id": "geist:19:invest_step:3522",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 17,600 to 24,000 invested: bonus 86 to 100% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Crippling Headshot",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Bullet Resist Shredder for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "24000",
+    "86.0",
+    "100.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 22400
+  },
+  "geist:19:sell_swap:3523": {
+   "id": "geist:19:sell_swap:3523",
+   "kind": "sell_swap",
+   "phrase": "Replaces Bullet Resist Shredder: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Crippling Headshot",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Bullet Resist Shredder for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Bullet Resist Shredder",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Bullet Resist Shredder"
+  },
+  "geist:19:invest_step:3524": {
+   "id": "geist:19:invest_step:3524",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 17,600 to 22,400 invested: bonus 86 to 100% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_ghost m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Ricochet",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Kinetic Dash for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "22400",
+    "86.0",
+    "100.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 22400
+  },
+  "geist:19:sell_swap:3525": {
+   "id": "geist:19:sell_swap:3525",
+   "kind": "sell_swap",
+   "phrase": "Replaces Kinetic Dash: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Ricochet",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Kinetic Dash for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Kinetic Dash",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Kinetic Dash"
+  },
+  "geist:19:defence_barrier:3526": {
+   "id": "geist:19:defence_barrier:3526",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:19:upgrade_delta:3527": {
+   "id": "geist:19:upgrade_delta:3527",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healbuff",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healing_booster"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Healing Tempo",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Healing Booster"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "35",
+    "0",
+    "10"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "geist:19:upgrade_of:3528": {
+   "id": "geist:19:upgrade_of:3528",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Healing Booster (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Healing Tempo",
+    "souls": 43200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Healing Booster"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "geist",
+   "item": "Extra Health",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 43200,
+   "unpublished": []
+  },
+  {
+   "build": "geist",
+   "item": "Extra Health",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Getting bursted in lane while you're low from your own bombs. Sell it when slots fill."
+  },
+  {
+   "build": "geist",
+   "item": "Monster Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 5600 souls (~5.6 min), 5 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "geist:0:spike_progress:3444",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 5,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 5600,
+      "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "geist:0:component_for:3445",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Cultist Sacrifice: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Cultist Sacrifice"
+     }
+    }
+   ]
+  },
+  {
+   "build": "geist",
+   "item": "Extra Regen",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Bullet Lifesteal, 16800 souls (~16.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "geist:1:component_for:3447",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 19200,
+      "event": "Healing Booster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "geist",
+   "item": "Mystic Regeneration",
+   "section": "early",
+   "cls": "c",
+   "why": "spirit investment only; its 4.8k tier completes at Bullet Resist Shredder, 14400 souls (~14.4 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "geist:2:component_for:3449",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Radiant Regeneration: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 6400,
+      "event": "Radiant Regeneration"
+     }
+    }
+   ]
+  },
+  {
+   "build": "geist",
+   "item": "Extra Stamina",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Bullet Lifesteal, 15200 souls (~15.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "geist:3:component_for:3451",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Kinetic Dash: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Kinetic Dash"
+     }
+    }
+   ]
+  },
+  {
+   "build": "geist",
+   "item": "Kinetic Dash",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Cultist Sacrifice completes 4.8k weapon in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 4000,
+   "unpublished": [
+    {
+     "id": "geist:4:spike_progress:3452",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "geist",
+   "item": "Radiant Regeneration",
+   "section": "mid",
+   "cls": "c",
+   "why": "spirit investment only; its 4.8k tier completes at Bullet Resist Shredder, 8000 souls (~8.0 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 8800,
+   "unpublished": []
+  },
+  {
+   "build": "geist",
+   "item": "Spirit Resilience",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Your own bombs hurt you with spirit damage, so this cuts that too."
+  },
+  {
+   "build": "geist",
+   "item": "Warp Stone",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 43200,
+   "unpublished": []
+  },
+  {
+   "build": "geist",
+   "item": "Warp Stone",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They dive you and you've got no way out."
+  },
+  {
+   "build": "geist",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Silences and hexes keep shutting down your abilities."
+  },
+  {
+   "build": "geist",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming."
+  },
+  {
+   "build": "geist",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry is melting you."
+  },
+  {
+   "build": "geist",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "geist",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 43200,
+   "unpublished": []
+  },
+  {
+   "build": "geist",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep cutting your drain and Soul Exchange."
+  },
+  {
+   "build": "geist",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 43200,
+   "unpublished": []
+  },
+  {
+   "build": "geist",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Big spirit bursts keep killing you."
+  },
+  {
+   "build": "geist",
+   "item": "Cheat Death",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 43200,
+   "unpublished": []
+  },
+  {
+   "build": "geist",
+   "item": "Cheat Death",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their burst kills you before you can swap. Don't buy it if they have Cursed Relic."
+  },
+  {
+   "build": "geist",
+   "item": "Silencer",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 43200,
+   "unpublished": []
+  }
+ ],
+ "stats": {
+  "d": 6,
+  "b": 2,
+  "c": 4,
+  "a": 13,
+  "g": 9
+ }
+}

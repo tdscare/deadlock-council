@@ -1,0 +1,245 @@
+{
+ "id": "billy",
+ "hk": "hero_punkgoat",
+ "hero": "Billy",
+ "tag": "New",
+ "name": "Rizuhble's Mosh Pit Billy",
+ "desc": "Tanky Billy",
+ "abil": [
+  "Bashdown",
+  "Rising Ram",
+  "Blasted",
+  "Chain Gang"
+ ],
+ "order": [
+  1,
+  1,
+  3,
+  3,
+  2,
+  1,
+  4,
+  3,
+  4,
+  1,
+  2,
+  2,
+  2,
+  4,
+  3,
+  4
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Sell it for Unstoppable."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Melee Lifesteal",
+      ""
+     ],
+     [
+      "Close Quarters",
+      ""
+     ],
+     [
+      "Monster Rounds",
+      ""
+     ],
+     [
+      "Grit",
+      ""
+     ],
+     [
+      "Extra Health",
+      ""
+     ],
+     [
+      "Lifestrike",
+      "Light punches and troopers trigger it too."
+     ],
+     [
+      "Cultist Sacrifice",
+      "Have it by about 8 minutes and eat a big camp with it."
+     ],
+     [
+      "Sprint Boots",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Enduring Speed",
+      ""
+     ],
+     [
+      "Fortitude",
+      ""
+     ],
+     [
+      "Melee Charge",
+      ""
+     ],
+     [
+      "Extra Charge",
+      ""
+     ],
+     [
+      "Rapid Recharge",
+      ""
+     ],
+     [
+      "Spirit Resilience",
+      "Get it earlier if most of their damage is spirit."
+     ],
+     [
+      "Reactive Barrier",
+      ""
+     ],
+     [
+      "Crushing Fists",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Colossus",
+      "Pop it when you chain them in."
+     ],
+     [
+      "Siphon Bullets",
+      ""
+     ],
+     [
+      "Cheat Death",
+      "Sell Cultist Sacrifice for this."
+     ],
+     [
+      "Unstoppable",
+      "Get it earlier if stuns keep stopping you before you reach them."
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Fortitude if needed. Ahead? Skip it until you're dying. Sell Close Quarters for it.",
+    true,
+    [
+     [
+      "Bullet Resilience",
+      "Two or more gun heroes keep hitting you."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun."
+     ],
+     [
+      "Metal Skin",
+      "Their gun carry melts you on the way in."
+     ],
+     [
+      "Dispel Magic",
+      "Slows and hexes keep you off them."
+     ],
+     [
+      "Counterspell",
+      "A big ult or stun you can see coming."
+     ],
+     [
+      "Warp Stone",
+      "They kite you and the ram keeps missing."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Indomitable",
+      "Upgrade of Reactive Barrier."
+     ],
+     [
+      "Witchmail",
+      "Sell Spirit Resilience for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Juggernaut",
+      "Upgrade of Enduring Speed."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Lost lane?",
+    "Get Cultist Sacrifice before Extra Health, then carry on.",
+    true,
+    []
+   ]
+  ]
+ ],
+ "changes": [
+  "Lined up with the crayon build Kieran plays, which is tankier than the site build: Extra Health, Reactive Barrier, Hunter's Aura and Siphon Bullets out; Spirit Shielding (Grit upgrade, 46% pick), Bullet Resist Shredder (53%, 49.6% WR, best T2 on Billy), Spirit Resilience (54%) and Scourge (18% pick, 57% WR) in. Zizis' top build and tracklock's core use the same green 4.8k (Lifestrike + Spirit Shielding) and purple 4.8k (Bullet Resist Shredder + Spirit Snatch).",
+  "Spikes: gun 5.6k at 7.2k souls (Monster, Close Quarters, Stalker, Cultist; same as before, 800 over because Close Quarters is a 91% pick lane item), health 4.8k exactly at 11.2k (Lifestrike + Spirit Shielding), spirit 4.8k exactly at 15.2k (Spirit Strike to Snatch + Bullet Resist Shredder), spirit 8k on Rapid Recharge, health 8k on Spirit Resilience at 23.2k, gun 16k exactly on Berserker once Stalker is sold.",
+  "Colossus bought straight (6.4k) instead of upgrading a lane Extra Health; Berserker sits between Colossus and Scourge so the two 6.4ks aren't back to back. Total 46.4k (was 51.2k), core 12 slots.",
+  "Counters sell Bullet Resist Shredder (the T2 that never upgrades); Bullet Resilience and Warp Stone added from the crayon 'buy 2 or 3 to not die' box, Spirit Resilience moved out of counters into core. Rich is Witchmail (56% WR) and Divine Barrier; the slot-locked box is gone (Indomitable needs Reactive Barrier, which is out).",
+  "Ability order: Mobalytics Billy grid and Kieran's in-game crayon build agree: Blasted T1/T2 at 5-6, Ram T1/T2 at 7-8, Bashdown 9-11, ult 13-15, Ram T3 last; for the tanky style the 1-AP Chain Gang T1 (+40% resists) is pulled to 9 and Blasted T3 (+50 melee bonus health) before Bashdown T3.",
+  "Threshold: no damage-threshold items. Extra Charge (17.6k) and Cultist Sacrifice (7.2k) bought after Bashdown T2 charge (Bashdown T2 by 7.2k). Witchmail only in the rich box. No change.",
+  "Round 9 (Worth a try): Diviner's Kevlar — Chain Gang 135s at T1, -10%; 1000 barrier while pulling; +40 spirit = +36 chain DPS (0.9x) per chained hero and +48 Blasted melee health (1.2x at T3). Lightning Scroll — chain damage counts as ult damage; Scroll stuns 0.75s 3s after the hit, and the yank comes at 2.8s, so they land stunned for Bashdown.",
+  "Round 10: Extra Charge note said \"Two Bashdowns\"; Bashdown already has 2 charges from its second upgrade by the time you buy it (17.6k, Bashdown fully upgraded), so it adds a third. Note fixed, no item change.",
+  "Round 11: Added \"Lost lane?\" reorder box (Cultist before Stalker to farm sooner). No T4 run before 30k.",
+  "Round 12: Removed the \"Worth a try\" box (Lightning Scroll instead of Scourge was not Kieran's pick and no pro Billy builds it, tracklock last 30 days).",
+  "Round 13: notes cut to niche tips, timings, imbue targets, sells and upgrades only (Kieran 00:05); desc is now just the style label.",
+  "Round 13: tank Billy made properly tanky so it's clearly apart from Brawler Billy, using SwoleBenji's UNBEATABLE Melee MEGA TANK (lockbuilds, Sep 4: Extra Health, Close Quarters, Sprint Boots, Melee Lifesteal; Enduring Speed, Fortitude, Spirit Resilience, Bullet Resilience, Lifestrike, Melee Charge, Crushing Fists; Extra Charge, Rapid Recharge, Unstoppable, Siphon Bullets; Colossus, Cheat Death, Juggernaut). Health 4.8k now at 6.4k (was 11.2k), 8k at Fortitude. Out: Stalker, Spirit Strike→Spirit Snatch, Bullet Resist Shredder, Spirit Shielding, Point Blank, Berserker, Scourge (those are the Brawler build's). Kept from Kieran's tank: Monster Rounds→Cultist (slow farmer), Grit in lane. Witchmail dropped from rich (not a pricier version of anything in the build).",
+  "Round 14: Debuff Reducer (a fresh T2 at 49.6k whose default note said 'Upgrades to Unstoppable') removed; Unstoppable is bought outright as the last core item. Counters sold Melee Charge, which is already Crushing Fists by the time slots fill: now Close Quarters. Spirit Resilience and Unstoppable got situational notes (an empty note showed the site default with 'Viper' and Haze). 'Upgrade.' notes removed; Divine Barrier note is now the sell. Items otherwise unchanged; health 4.8k still at 6.4k.",
+  "Round 15: Close Quarters was sold twice (Counters desc and Cheat Death). Counters now 'Get after Fortitude … Sell Enduring Speed for it.' (112; old desc was 113, over the game's 112 limit). Close Quarters and Grit notes emptied (they repeated the sells on Cheat Death and Bullet Resilience).",
+  "Round 17: Lifestrike note 'trigger' (no 'proc'). Counters no longer sell Enduring Speed (Slot locked upgrades it to Juggernaut); they sell Cultist Sacrifice, the farm item, since Sprint Boots is already inside Enduring Speed by then. Lane sell note standard; Divine Barrier note now 'If you bought Dispel Magic, sell it for this.'.",
+  "Round 19: verified as the public tank Billy (SwoleBenji UNBEATABLE Melee MEGA TANK Sep 4 and FAST FARM Tempo Brawler Tank Oct 4: Melee Lifesteal, Extra Health, Sprint Boots, Enduring Speed, Fortitude, Lifestrike, Spirit/Bullet Resilience, Crushing Fists, Rapid Recharge, Unstoppable, Siphon Bullets, Cheat Death, Colossus, Juggernaut). Counters caption uses Kieran's exact wording (sell Close Quarters for it, to stay within 112 characters); Cheat Death now sells Cultist Sacrifice so no item is sold twice.",
+  "Round 20: Grit now upgrades to Reactive Barrier (mid, after Spirit Resilience) instead of being sold for Bullet Resilience; Bullet Resilience moves to Counters (Siphon Bullets, Colossus, Cheat Death and Unstoppable already make the core tanky). Late list: Indomitable (upgrade of Reactive Barrier), Witchmail (Zizis luxuries, SALMAN very late; sell Spirit Resilience), Divine Barrier; slot-locked Juggernaut. Core 52k, with the late list 68k without Divine Barrier.",
+  "Round 20 (update 2): checked Restorative Shot and lane timing: every lane item helps in lane now, no Slowing Bullets or Weighted Shots; no changes.",
+  "Round 23: kit re-read item by item; no change (see log).",
+  "Round 25: ability order 3124332211134442 → 1133214341222434 (kit-based for this playstyle, no idle early points)."
+ ]
+}

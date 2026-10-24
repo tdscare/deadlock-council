@@ -1,0 +1,34 @@
+{
+ "proposal": "restore_seven",
+ "id": "seven",
+ "diff": [
+  "added Early · L-R|Arcane Surge",
+  "removed Late · L-R|Arcane Surge",
+  "ability order 1331234442431122 -> 3311234442431122"
+ ],
+ "block": [
+  "NEW violation introduced: bc: COUNTERS_DESC_FORMAT_OCT22 seven: \"Get after Enduring Speed if needed. Ahead? Skip it until you're dying. Sell Healbane for it.\"",
+  "NEW violation introduced: bc: COUNTERS_X_NOT_IN_BUILD seven: Enduring Speed if needed",
+  "NEW violation introduced: bc: COUNTERS_Y_NOT_IN_BUILD seven: Healbane for it"
+ ],
+ "warn": [],
+ "fixed": [
+  "bc: MAIN_4.8K_LATE seven: spirit 4.8k at 13600"
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY seven: Arcane Surge: Dash-jump right before you pop your 3, or your ult once you have it.",
+  "bc: CORE_NOTE_NONEMPTY seven: Unstoppable: Pop it before you ult so nobody cancels the storm.",
+  "bc: CORE_NOTE_NONEMPTY seven: Infuser: Pop it once they're all in the storm.",
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD seven: Enduring Speed (T2) @12800"
+ ],
+ "newV": [
+  "bc: COUNTERS_DESC_FORMAT_OCT22 seven: \"Get after Enduring Speed if needed. Ahead? Skip it until you're dying. Sell Healbane for it.\"",
+  "bc: COUNTERS_X_NOT_IN_BUILD seven: Enduring Speed if needed",
+  "bc: COUNTERS_Y_NOT_IN_BUILD seven: Healbane for it",
+  "bc: RT_ITEMS seven: Early · L-R: [[\"Monster Rounds\",null],[\"Extra Spirit\",null],[\"Extra Stamina\",null],[\"Surge of Power\",3],[\"Cultist Sacrifice\",null]] vs [[\"Monster Rounds\",null],[\"Extra Spirit\",null],[\"Extra Stamina\",null],[\"Arcane Surge\",null],[\"Surge of Power\",3],[\"Cultist Sacrifice\",null]]",
+  "bc: RT_ITEMS seven: Late · L-R: [[\"Arcane Surge\",null],[\"Escalating Exposure\",null],[\"Superior Duration\",null],[\"Unstoppable\",null],[\"Superior Cooldown\",null],[\"Infuser\",null],[\"Greater Expansion\",null],[\"Diviner's Kevlar\",null]] vs [[\"Escalating Exposure\",null],[\"Superior Duration\",null],[\"Unstoppable\",null],[\"Superior Cooldown\",null],[\"Infuser\",null],[\"Greater Expansion\",null],[\"Diviner's Kevlar\",null]]",
+  "bc: RT_ORDER seven: 1331234442431122 vs 3311234442431122"
+ ],
+ "when": "2026-10-24 04:51",
+ "line": "[2026-10-24 04:51] CANDIDATE restore of seven to LASTGOOD (data.js.bak_rel) core/ability order, because the current order shifted a 4.8k spike without a recorded reason (council/triage/TRIAGE.md). | added Early · L-R|Arcane Surge; removed Late · L-R|Arcane Surge; ability order 1331234442431122 -> 3311234442431122 | evidence: data:council/triage/TRIAGE.md | gate: FAIL"
+}

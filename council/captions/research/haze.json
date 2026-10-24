@@ -1,0 +1,14 @@
+{"_note": "Researcher-authored claims for haze (swap trade-offs).",
+ "items": {
+  "Vampiric Burst": [{"phrase": "A button, not a passive: 5s of 70% lifesteal, 34% fire rate and a 75% reload on a 30s cooldown, so it is burst recovery inside a committed fight rather than steady sustain.",
+     "score": 62, "numbers": [5, 70, 34, 75, 30], "sources": ["abilities.vdata:upgrade_surging_power"],
+     "checks": [{"kind": "item_stat", "item": "Vampiric Burst", "key": "AbilityDuration", "op": "==", "value": 5}, {"kind": "item_stat", "item": "Vampiric Burst", "key": "ActiveBonusLifesteal", "op": "==", "value": 70},
+                {"kind": "item_stat", "item": "Vampiric Burst", "key": "ActiveBonusFireRate", "op": "==", "value": 34}, {"kind": "item_stat", "item": "Vampiric Burst", "key": "ActiveReloadPercent", "op": "==", "value": 75},
+                {"kind": "item_stat", "item": "Vampiric Burst", "key": "AbilityCooldown", "op": "==", "value": 30}]}],
+  "Leech": [{"phrase": "The consistent option against anti-heal: 28% bullet lifesteal that is always on and shrinks the effect of enemy healing reduction, against Vampiric Burst's 70% for 5s once per 30s.",
+     "score": 62, "numbers": [28, 70, 5, 30], "sources": ["abilities.vdata:upgrade_damage_recycler", "abilities.vdata:upgrade_surging_power", "citadel_mods_english.txt upgrade_damage_recycler_desc"],
+     "requires": {"owned": ["Vampiric Burst"]},
+     "checks": [{"kind": "item_text", "item": "Leech", "contains": "Reduces the effect of enemy applied healing reduction"}, {"kind": "item_stat", "item": "Leech", "key": "BulletLifestealPercent", "op": "==", "value": 28},
+                {"kind": "item_stat", "item": "Vampiric Burst", "key": "ActiveBonusLifesteal", "op": "==", "value": 70}, {"kind": "item_stat", "item": "Vampiric Burst", "key": "AbilityDuration", "op": "==", "value": 5},
+                {"kind": "item_stat", "item": "Vampiric Burst", "key": "AbilityCooldown", "op": "==", "value": 30}]}]
+ }}

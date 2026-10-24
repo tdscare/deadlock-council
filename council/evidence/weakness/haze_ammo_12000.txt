@@ -1,0 +1,46 @@
+SCOPE: build-context
+KIND: weakness
+BUILD: haze
+HERO: Haze
+WEAKNESS: ammo
+CHECKPOINT: 12000
+VERSION: weakness-v1
+ARGS: --weakness haze ammo --at 12000
+GENERATED: 2026-10-24T16:28:03Z
+BODY-SHA: 3c3f8e3b1a0237f9f4b01afc95e8872570b4aab862bd0f7c9ae2320f776d4d7f
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ROOT-CAUSE: magazine 65 bullets empties in 4.7 s at 13.8 bullets/s (fire-rate pool 45% from ['Active Reload', 'Swift Striker']); reload 2.35 s (VERIFIED GAME MECHANIC m_reloadDuration (weapon vdata; Wraith value equals its sandbox measurement)). Time not firing: 29% of an 8 s trade, 30% of 20 s uninterrupted fire
+NO-FIX: no
+REMEDY-SET: auto-reload / reload-through-ability; capacity (direct); do nothing / behaviour; survive and keep fighting; trade fire rate for per-bullet damage
+SIMPLE-REMEDY: Mercurial Magnum +12.2%/1000 souls
+CONCLUSION: Weapon Shielding [survive and keep fighting] beats the best simple remedy Mercurial Magnum (+33.3% vs +12.2% trade ratio per 1000 souls)
+SCORING: same for every candidate: change in trade ratio per 1000 souls (complete build, central --strategy parameters), plus damage in 8 s; no bonus for novelty or category match
+GRADE: CALCULATED from game data + ASSUMED (trade model, reload unless measured, reach model); test requests below for what the data cannot answer
+
+NO-FIX CHECK (CALCULATED, reload ASSUMED unless measured): realistic 8 s trade loses 29% of firing time to reloads vs 30% in a 20 s uninterrupted test -> the weakness is present in realistic trades
+AMMO-SCALING CHECK (CALCULATED): no ability or weapon property scales magazine size with spirit or other power (weapon ammo fields: [('m_iClipSize', '25')]): spirit items cannot fix ammo; imbued/charged-only spirit (ImbuedTechPower, BonusSpiritForChargedAbilities) is per-ability anyway
+ABILITY-UPGRADE CHECK (CALCULATED): no untaken ability tier in this kit adds charges, sustain, mobility, cleanse or ammo at this checkpoint
+
+## REMEDIES (base trade ratio 0.74, base 8 s damage 990, owned ['Active Reload', 'Swift Striker', 'Titanic Magazine', 'Fortitude'])
+class                                  | candidate                                   | souls | dTR%  | dTR%/1000 souls | d8s dmg% | notes [grade]
+survive and keep fighting              | Weapon Shielding                            |  1600 | +53.3 |           +33.3 |     +0.0 | best defensive green by time-to-die per 800 souls; reload loss 8s 29% [CALCULATED]
+survive and keep fighting              | Spirit Lifesteal                            |  1600 | +42.4 |           +26.5 |     +1.8 | best defensive green by time-to-die per 800 souls; reload loss 8s 27% [CALCULATED]
+auto-reload / reload-through-ability   | Vampiric Burst                              |  6400 | +91.9 |           +14.4 |    +41.5 | active item (INSTANT_CAST): refills 75% of the magazine when activated, cooldown 30s; activation must be verified; reload loss 8s 5% [CALCULATED (trigger) + ASSUMED (use rate 0.5)]
+capacity (direct)                      | Mercurial Magnum                            |  6400 | +78.1 |           +12.2 |    +49.7 | more bullets per magazine; reload loss 8s -0% [CALCULATED]
+auto-reload / reload-through-ability   | Mercurial Magnum                            |  6400 | +78.1 |           +12.2 |    +49.7 | imbue on Sleep Dagger (cd 30s): refills on that cast, at most every 14s; reload loss 8s -0% [CALCULATED (trigger) + ASSUMED (use rate 0.5)]
+auto-reload / reload-through-ability   | Quicksilver Reload                          |  1600 | +14.2 |            +8.9 |    +43.9 | imbue on Sleep Dagger (cd 30s): refills on that cast, at most every 18s; reload loss 8s -0% [CALCULATED (trigger) + ASSUMED (use rate 0.5)]
+trade fire rate for per-bullet damage  | Opening Rounds instead of Swift Striker     |     0 |  +7.0 |            +7.0 |     -1.3 | same souls; fewer bullets: fewer procs/stacks/lifesteal hits, more damage per bullet; reload loss 8s 22% [CALCULATED]
+capacity (direct)                      | Kinetic Dash                                |  1600 | +11.1 |            +6.9 |    +22.7 | more bullets per magazine; reload loss 8s 29% [CALCULATED]
+capacity (direct)                      | Escalating Resilience                       |  3200 | +16.9 |            +5.3 |    +25.6 | more bullets per magazine; reload loss 8s 26% [CALCULATED]
+capacity (direct)                      | Recharging Rush                             |  1600 |  +6.2 |            +3.9 |    +12.9 | more bullets per magazine; reload loss 8s 28% [CALCULATED]
+capacity (direct)                      | Intensifying Magazine                       |  1600 |  +3.1 |            +2.0 |     +6.5 | more bullets per magazine; reload loss 8s 28% [CALCULATED]
+capacity (direct)                      | Lucky Shot                                  |  6400 | +10.0 |            +1.6 |    +20.5 | more bullets per magazine; reload loss 8s 27% [CALCULATED]
+do nothing / behaviour                 | no purchase                                 |     0 |  +0.0 |            +0.0 |     +0.0 | reload during ability casts and repositioning; no souls spent; reload loss 8s 29% [CALCULATED]
+trade fire rate for per-bullet damage  | Opening Rounds instead of Active Reload     |     0 |  -3.7 |            -3.7 |     -7.5 | same souls; fewer bullets: fewer procs/stacks/lifesteal hits, more damage per bullet; reload loss 8s 24% [CALCULATED]
+
+## UNKNOWN / NEEDS TESTS
+  - queued request: council/sandbox/autorun/scenarios/interaction/int_haze_weakness_ammo.txt
+  - reload duration: MEASURED
+  - auto-reload use rate (0.5 of charges) and whether the imbued ability is cast in the firing window: readback activation:<item>, ability_cast:<slot>
+  - ability-upgrade remedies need points at the tier: verify ability_tiers readback at the checkpoint before trusting them
+  - score per 1000 souls favours cheap items when gains are not linear in souls; absolute dTR is shown too (an equal-souls bundle comparison is the next step: --strategy alternatives)

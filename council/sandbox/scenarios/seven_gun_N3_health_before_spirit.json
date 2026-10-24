@@ -1,0 +1,106 @@
+{
+ "id": "seven_gun_N3_health_before_spirit",
+ "title": "Gun Seven: health 4.8k at 12.0k before Surge of Power vs spirit 4.8k at 11.2k first",
+ "hero": "Seven",
+ "playstyle": "Gun Seven",
+ "builds": [
+  "seven_gun"
+ ],
+ "question": "At 12.0k souls, which state survives a gun duel longer and by how much does it lose damage?",
+ "hypothesis": "H-N3: PROPOSED (Spirit Lifesteal+Enduring Speed) lives >= 20% longer vs a gun bot (HP 2166 vs 1694 calculated, plus 13% spirit lifesteal) and deals ~13% less window damage (5492 vs 6307).",
+ "arms": [
+  {
+   "name": "HEALTH_FIRST",
+   "items": [
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_pristine_emblem",
+    "upgrade_magic_shield",
+    "upgrade_arcane_extension",
+    "upgrade_health_stealing_magic",
+    "upgrade_sprint_booster"
+   ],
+   "ability_order": "1133234324141224",
+   "imbues": {
+    "upgrade_arcane_extension": 3
+   },
+   "souls": 12000,
+   "notes": "proposed"
+  },
+  {
+   "name": "SPIRIT_FIRST",
+   "items": [
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_pristine_emblem",
+    "upgrade_magic_shield",
+    "upgrade_arcane_extension",
+    "upgrade_magic_storm"
+   ],
+   "ability_order": "1133234324141224",
+   "imbues": {
+    "upgrade_arcane_extension": 3,
+    "upgrade_magic_storm": 3
+   },
+   "souls": 12000,
+   "notes": "clean base at 12k"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "souls 12000",
+  "souls": 12000,
+  "position": "1v1 at 20 m",
+  "enemies": [
+   {
+    "hero": "Haze (bot)",
+    "count": 1,
+    "items": [
+     "gun 4.8k"
+    ],
+    "behaviour": "shoots player",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "Arms interleaved A,B,A,B; A/A floor run first",
+  "hardreset between blocks",
+  "Same souls/level per arm; ability tiers set with abil ops per FOUNDATIONS F9 (unlocked 1, T1 3, T2 7, T3 15), logged before each block",
+  "Same bot heroes, positions, HP keep-alive and resists"
+ ],
+ "procedure": [
+  "duel: cast 3, fire continuously; record time to death and damage dealt"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "time_to_death",
+   "unit": "s",
+   "how": "timer",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "damage_dealt",
+   "unit": "hp",
+   "how": "damage csv",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "time_to_death",
+  "min_effect_pct": 15,
+  "min_trials": 5,
+  "rule": "HEALTH_FIRST >= +15% survival supports the proposed order; if damage loss > survival gain in kills-before-death, reopen"
+ },
+ "blockedIfNo": [
+  "bot that shoots the player"
+ ]
+}

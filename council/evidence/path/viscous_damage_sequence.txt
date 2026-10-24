@@ -1,0 +1,106 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: viscous_damage
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:12:13Z
+BODY-SHA: bf2e3be050c496bbeb3e695b648caf637e22244a186349d4a9243e789b645594
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Spirit Strike: retained-or-upgraded (-> Spirit Snatch)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Melee Lifesteal: retained-or-upgraded (-> Lifestrike)
+  Extra Health: retained-or-upgraded (-> Fortitude)
+  Melee Charge: retained-or-upgraded (-> Crushing Fists)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Lifestrike: retained
+  Grit: retained-or-upgraded (-> Spirit Shielding)
+  Spirit Snatch: retained
+  Tankbuster: retained
+  Superior Cooldown: retained
+  Spirit Shielding: retained
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Greater Expansion: retained
+  Crushing Fists: retained
+  Fortitude: retained
+  Rapid Recharge: retained
+  Boundless Spirit: retained
+  Mystic Reverb: retained
+  Spirit Burn: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Escalating Exposure: situational-luxury
+  Witchmail: situational-luxury
+  Refresher: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Mystic Burst, Extra Spirit, Mystic Expansion, Spirit Strike, Compress Cooldown, Melee Lifesteal, Extra Health, Melee Charge
+  Mid · L-R                  -> main path (sequential): Improved Spirit, Lifestrike, Grit, Spirit Snatch, Tankbuster, Superior Cooldown, Spirit Shielding, Extra Charge
+  Late · L-R                 -> main path (sequential): Greater Expansion, Crushing Fists, Fortitude, Rapid Recharge, Boundless Spirit, Mystic Reverb, Spirit Burn
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Spirit Resilience, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Escalating Exposure, Witchmail, Refresher
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+
+## Spirit Shielding: sold when buying Escalating Exposure (I'm rich as fuck, luxury)
+  role of Spirit Shielding: retained; role of Escalating Exposure: situational-luxury
+  Spirit Shielding: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 19200 souls (~18.0 min), replaced at ~58.5 min -> owned ~40.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/8000/41600 -> after 6400/6400/41600; thresholds lost: vitality 8000; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 84 min | window TR | key purchase times (min)
+  as built                                    |          68340 |      0.37 | Spirit Shielding 18, Escalating Exposure 58
+  keep Spirit Shielding (slot cap ignored)    |          68697 |      0.40 | Spirit Shielding 18, Escalating Exposure 60
+  skip Spirit Shielding                       |          67224 |      0.35 | Escalating Exposure 60
+  sell Spirit Snatch instead                  |          68632 |      0.39 | Spirit Shielding 18, Escalating Exposure 57
+  keep Spirit Shielding (slot cap ignored) vs as built: d souls +150, d window TR +5.7% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Spirit Shielding vs as built: d souls -198, d window TR -6.9% | souls: MODEL-ONLY (sign robust in 82% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 85% of cells; no measured inputs)
+  sell Spirit Snatch instead vs as built: d souls +123, d window TR +4.8% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  model limit: no modelled stat for Escalating Exposure (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: established 4.8k lost
+  VERDICT: KEEP AS WRITTEN (as-built sequence is not beaten robustly by the alternatives); evidence tier: VERIFIED GAME MECHANIC (walk arithmetic) + MODEL-ONLY value; flipping assumptions: keep Spirit Shielding (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Spirit Snatch instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+
+## Spirit Snatch: sold when buying Witchmail (I'm rich as fuck, luxury)
+  role of Spirit Snatch: retained; role of Witchmail: situational-luxury
+  Spirit Snatch: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 14400 souls (~14.0 min), replaced at ~57.2 min -> owned ~43.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/14400/35200 -> after 6400/14400/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 84 min | window TR | key purchase times (min)
+  as built                                    |          68848 |      0.43 | Spirit Snatch 14, Witchmail 57
+  keep Spirit Snatch (slot cap ignored)       |          68894 |      0.43 | Spirit Snatch 14, Witchmail 60
+  skip Spirit Snatch                          |          69166 |      0.43 | Witchmail 56
+  sell Spirit Shielding instead               |          68555 |      0.41 | Spirit Snatch 14, Witchmail 58
+  keep Spirit Snatch (slot cap ignored) vs as built: d souls +17, d window TR +0.6% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Spirit Snatch vs as built: d souls +232, d window TR +2.1% | souls: MODEL-ONLY (sign robust in 97% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 97% of cells; no measured inputs)
+  sell Spirit Shielding instead vs as built: d souls -122, d window TR -3.7% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: a computed alternative sequence is better: skip Spirit Snatch
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Spirit Snatch; evidence tier: MODEL-ONLY; flipping assumptions: sell Spirit Shielding instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Lifestrike: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Lifestrike: retained; role of Refresher: situational-luxury
+  Lifestrike: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 11200 souls (~11.2 min), replaced at ~57.2 min -> owned ~46.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/8000/41600 -> after 6400/4800/41600; thresholds lost: vitality 6400, vitality 8000; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 84 min | window TR | key purchase times (min)
+  as built                                    |          68305 |      0.41 | Lifestrike 11, Refresher 57
+  keep Lifestrike (slot cap ignored)          |          69069 |      0.46 | Lifestrike 11, Refresher 60
+  skip Lifestrike                             |          64570 |      0.33 | Refresher 62
+  sell Spirit Shielding instead               |          68603 |      0.43 | Lifestrike 11, Refresher 58
+  keep Lifestrike (slot cap ignored) vs as built: d souls +247, d window TR +9.3% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Lifestrike vs as built: d souls -2228, d window TR -17.8% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Spirit Shielding instead vs as built: d souls +53, d window TR +2.2% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: established 4.8k lost
+  VERDICT: KEEP AS WRITTEN (as-built sequence is not beaten robustly by the alternatives); evidence tier: VERIFIED GAME MECHANIC (walk arithmetic) + MODEL-ONLY value; flipping assumptions: keep Lifestrike (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Spirit Shielding instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))

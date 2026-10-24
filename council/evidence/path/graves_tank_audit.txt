@@ -1,0 +1,48 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: graves_tank
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:16Z
+BODY-SHA: 8555cb042e9dabd8dc6dfc96538824f9be5e72316ec805c8897941ffd181b93a
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Grit
+  Early · L-R              -> main path (sequential): Extra Stamina, Mystic Vulnerability, Torment Pulse, Enchanter's Emblem, Stamina Mastery, Extra Regen
+  Mid · L-R                -> main path (sequential): Spirit Shredder, Toxic Bullets, Spirit Lifesteal, Spirit Resilience, Escalating Resilience, Escalating Exposure, Superior Cooldown
+  Late · L-R               -> main path (sequential): Siphon Bullets, Scourge, Leech
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Plated Armor, Counterspell, Dispel Magic, Reactive Barrier, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Spirit Rend, Witchmail, Indomitable, Boundless Spirit, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown
+
+## SALE CHECKLIST (computed)
+- Mid · L-R (main path): buy Spirit Resilience, sell Extra Regen
+    function of Extra Regen: sustain; replacement Spirit Resilience: spirit_resist; roles lost: sustain  [VERIFIED GAME MECHANIC]
+    Extra Regen is a component of later items: no
+    held for 9200.0 souls of purchases; resale 400, net cost of having owned it 400
+    investment before/after gun/vit/spirit 4800/7200/4800 -> 4800/9600/4800; thresholds lost: none
+    trade ratio after the sale 1.21; selling Enchanter's Emblem instead: 1.06 (-12.2%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Witchmail, sell Enchanter's Emblem
+    function of Enchanter's Emblem: cooldown, spirit_resist; replacement Witchmail: cooldown, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Enchanter's Emblem is a component of later items: no
+    held for 47600.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 8000/20800/19200 -> 8000/25600/19200; thresholds lost: none
+    trade ratio after the sale 0.69; selling Torment Pulse instead: 0.78 (+12.0%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Indomitable, sell Spirit Resilience
+    function of Spirit Resilience: spirit_resist; replacement Indomitable: bullet_resist, spirit_resist, sustain; roles lost: none  [VERIFIED GAME MECHANIC]
+    Spirit Resilience is a component of later items: no
+    held for 35200.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 8000/20800/19200 -> 8000/24000/19200; thresholds lost: none
+    trade ratio after the sale 0.75; selling Enchanter's Emblem instead: 0.72 (-3.2%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Boundless Spirit, sell Stamina Mastery
+    function of Stamina Mastery: stats only; replacement Boundless Spirit: stats only; roles lost: none  [VERIFIED GAME MECHANIC]
+    Stamina Mastery is a component of later items: no
+    held for 45200.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 8000/20800/19200 -> 8000/17600/25600; thresholds lost: none
+    trade ratio after the sale 1.09; selling Enchanter's Emblem instead: 0.91 (-16.1%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

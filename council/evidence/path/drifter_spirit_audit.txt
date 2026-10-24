@@ -1,0 +1,41 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: drifter_spirit
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:16Z
+BODY-SHA: 80e45aa0996b1a0fd58488f8f0921fccaed08977b0568569002b8d1b600ef5a1
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Melee Lifesteal, Stalker, Spirit Strike, Mystic Burst, Cold Front, Spirit Snatch, Sprint Boots, Extra Health
+  Mid · L-R                -> main path (sequential): Lifestrike, Trophy Collector, Fortitude, Mystic Vulnerability, Melee Charge, Tankbuster, Veil Walker, Duration Extender
+  Mid · cont.              -> main path (sequential): Superior Duration
+  Late · L-R               -> main path (sequential): Crushing Fists, Escalating Exposure, Spirit Burn
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Spirit Resilience, Counterspell, Dispel Magic, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Arctic Blast, Boundless Spirit, Cursed Relic, Divine Barrier, Ethereal Shift
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Boundless Spirit, sell Stalker
+    function of Stalker: move_speed, resist_shred; replacement Boundless Spirit: stats only; roles lost: move_speed, resist_shred  [VERIFIED GAME MECHANIC]
+    Stalker is a component of later items: no
+    held for 47200 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 8000/11200/24000 -> 6400/11200/30400; thresholds lost: none
+    trade ratio after the sale 0.35; selling Trophy Collector instead: 0.38 (+6.8%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Cursed Relic, sell Trophy Collector
+    function of Trophy Collector: stats only; replacement Cursed Relic: stats only; roles lost: none  [VERIFIED GAME MECHANIC]
+    Trophy Collector is a component of later items: no
+    held for 36800 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 8000/11200/24000 -> 8000/9600/30400; thresholds lost: none
+    trade ratio after the sale 0.34; selling Stalker instead: 0.32 (-6.6%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Ethereal Shift, sell Superior Duration
+    function of Superior Duration: bullet_resist, duration; replacement Ethereal Shift: move_speed, spirit_resist; roles lost: bullet_resist, duration  [VERIFIED GAME MECHANIC]
+    Superior Duration is a component of later items: no
+    held for 22400 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 8000/11200/24000 -> 8000/11200/27200; thresholds lost: none
+    trade ratio after the sale 0.35; selling Trophy Collector instead: 0.38 (+10.0%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)

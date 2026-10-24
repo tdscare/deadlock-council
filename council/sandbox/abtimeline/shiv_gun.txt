@@ -1,0 +1,86 @@
+# shiv_gun | Shiv | Rizuhble's Gun To Knife Fight
+abilities: 1=Serrated Knives (citadel_ability_shiv_dagger, start_trained=false, Signature) / 2=Slice and Dice (citadel_ability_shiv_dash, start_trained=false, Signature) / 3=Bloodletting (citadel_ability_shiv_defer_damage, start_trained=false, Signature) / 4=Killing Blow (citadel_ability_shiv_killing_blow, start_trained=false, Ultimate)
+order: 1122334441341322
+model A (data):  Serrated K:U@0  Serrated K:T1@200  Slice and :U@500  Slice and :T1@900  Bloodletti:U@1400  Bloodletti:T1@2000  Killing Bl:U@3200  Killing Bl:T1@3200  Killing Bl:T2@4600  Serrated K:T2@6000  Bloodletti:T2@7600  Killing Bl:T3@11900  Serrated K:T3@17400  Bloodletti:T3@26900  Slice and :T2@32100  Slice and :T3@48600
+model B (old):   Serrated K:T1@200  Serrated K:T2@900  Slice and :T1@2000  Slice and :T2@2600  Bloodletti:T1@3900  Bloodletti:T2@4600  Killing Bl:U@5300  Killing Bl:T1@6000  Killing Bl:T2@6800  Serrated K:T3@7600  Bloodletti:T3@8400  Killing Bl:T3@9200  Slice and :T3@11900
+tier upgrades: Serrated Kni: BleedDuration+2 / AbilityCharges+2 / BleedDPSPerStack+12,BleedDPSPerStack+0.07x | Slice and Di: AbilityCooldown-6 / TechArmorDamageReduction-4,DashRange+2 / ImpactDamage+50,CooldownReductionOnHit+2,CooldownReductionOnHitNonHero+1,MaxCooldownReductionsFromHits+8 | Bloodletting: AbilityCooldown-15 / DeferClearPct+40 / DamagePctDeferred+15 | Killing Blow: BonusMoveSpeed+2,AbilityCastRange+6 / BuffDamage+16,AbilityCooldown-25 / EnemyHealthPercent+10
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  Restorative Shot
+        Serrated K T1 ch2 cd16/2 BleedDPS=10 | Slice and  U ch1 cd16 ImpactDa=78 | Bloodletti L[U] | Killing Bl L
+  1600 L5   2     4  Close Quarters
+        Serrated K T1[T2] ch2 cd16/2 BleedDPS=11 | Slice and  T1[U] ch1 cd10 ImpactDa=80 | Bloodletti U ch1 cd25 | Killing Bl L
+  2400 L6   3    12  Mystic Regeneration
+        Serrated K T1[T2] ch2 cd16/2 BleedDPS=12 | Slice and  T1 ch1 cd10 ImpactDa=90 | Bloodletti T1[U] ch1 cd10 | Killing Bl L
+  3200 L8   4    15  High-Velocity Rounds
+        Serrated K T1[T2] ch2 cd16/2 BleedDPS=12 | Slice and  T1[T2] ch1 cd10 ImpactDa=93 | Bloodletti T1[U] ch1 cd10 | Killing Bl T1[L] ch1 cd145 Damage=200
+  5600 L11  7    18  Express Shot
+        Serrated K T1[T2] ch2 cd16/2 BleedDPS=12 | Slice and  T1[T2] ch1 cd10 ImpactDa=97 | Bloodletti T1[T2] ch1 cd10 | Killing Bl T2[U] ch1 cd120 Damage=200
+  7200 L13  9    20  Battle Vest
+        Serrated K T2 ch4 cd16/2 BleedDPS=13 | Slice and  T1[T2] ch1 cd10 ImpactDa=99 | Bloodletti T1[T2] ch1 cd10 | Killing Bl T2 ch1 cd120 Damage=200
+  9600 L16 12    36  Radiant Regeneration
+        Serrated K T2[T3] ch4 cd16/2 BleedDPS=15 | Slice and  T1[T2] ch1 cd10 ImpactDa=118 | Bloodletti T2[T3] ch1 cd10 | Killing Bl T2[T3] ch1 cd120 Damage=200
+ 12800 L20 16    40  Dispel Magic
+        Serrated K T2[T3] ch4 cd16/2 BleedDPS=15 | Slice and  T1[T3] ch1 cd10 ImpactDa=123 | Bloodletti T2[T3] ch1 cd10 | Killing Bl T3 ch1 cd120 Damage=200
+ 14400 L21 17    60  Bullet Resist Shredder
+        Serrated K T2[T3] ch4 cd16/2 BleedDPS=18 | Slice and  T1[T3] ch1 cd10 ImpactDa=147 | Bloodletti T2[T3] ch1 cd10 | Killing Bl T3 ch1 cd120 Damage=200
+ 17600 L24 20    63  Hunter's Aura
+        Serrated K T3 ch4 cd16/2 BleedDPS=35 | Slice and  T1[T3] ch1 cd10 ImpactDa=151 | Bloodletti T2[T3] ch1 cd10 | Killing Bl T3 ch1 cd120 Damage=200
+ 19200 L25 21    64  Fleetfoot
+        Serrated K T3 ch4 cd16/2 BleedDPS=35 | Slice and  T1[T3] ch1 cd10 ImpactDa=152 | Bloodletti T2[T3] ch1 cd10 | Killing Bl T3 ch1 cd120 Damage=200
+ 20800 L26 22    66  Bullet Lifesteal
+        Serrated K T3 ch4 cd16/2 BleedDPS=35 | Slice and  T1[T3] ch1 cd10 ImpactDa=154 | Bloodletti T2[T3] ch1 cd10 | Killing Bl T3 ch1 cd120 Damage=200
+ 24000 L27 23    67  Berserker
+        Serrated K T3 ch4 cd16/2 BleedDPS=35 | Slice and  T1[T3] ch1 cd10 ImpactDa=155 | Bloodletti T2[T3] ch1 cd10 | Killing Bl T3 ch1 cd120 Damage=200
+ 30400 L30 26    70  Lucky Shot
+        Serrated K T3 ch4 cd16/2 BleedDPS=36 | Slice and  T1[T3] ch1 cd10 ImpactDa=159 | Bloodletti T3 ch1 cd10 | Killing Bl T3 ch1 cd120 Damage=200
+ 35200 L32 28    72  Vampiric Burst
+        Serrated K T3 ch4 cd16/2 BleedDPS=36 | Slice and  T2[T3] ch1 cd10 ImpactDa=162 | Bloodletti T3 ch1 cd10 | Killing Bl T3 ch1 cd120 Damage=200
+ 41600 L34 30    74  Silencer
+        Serrated K T3 ch4 cd16/2 BleedDPS=37 | Slice and  T2[T3] ch1 cd10 ImpactDa=164 | Bloodletti T3 ch1 cd10 | Killing Bl T3 ch1 cd120 Damage=200
+ 48000 L35 31    75  Inhibitor
+        Serrated K T3 ch4 cd16/2 BleedDPS=37 | Slice and  T2[T3] ch1 cd10 ImpactDa=165 | Bloodletti T3 ch1 cd10 | Killing Bl T3 ch1 cd120 Damage=200
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @800 Restorative Shot [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=100)
+    game text: Your next bullet will heal you based on what target you hit.
+    at buy: not computed (needs play data)
+- @1600 Close Quarters [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (CloseRangeBonusDamageRange=15m)
+    game text: Deal additional Weapon Damage when in close range to your target.
+    at buy: not computed (needs play data)
+- @2400 Mystic Regeneration [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} to enemy Heroes grants you Bonus {g:citadel_inline_attribute:'Regen'}. Stacks when dealing damage ...
+    at buy: spirit sources: Serrated Knives, Slice and Dice
+- @5600 Express Shot [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Your next attack will fire twice in quick succession with increased damage and velocity. This attack consumes extra ammo.
+    at buy: not computed (needs play data)
+- @7200 Battle Vest [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: While you are above {s:LifeThreshold}% health, gain {g:citadel_inline_attribute:'WeaponDamage'} and {g:citadel_inline_attribute:'BonusFireRate'}.
+    at buy: not computed (needs play data)
+- @9600 Radiant Regeneration [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Heal and gain bonus Movement Speed for a short duration when you cast an ability.
+    at buy: 4 abilities trained, summed cooldown 156s
+- @14400 Bullet Resist Shredder [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Reduces Bullet Resist on enemies when you deal {g:citadel_inline_attribute:'SpiritDamage'}.
+    at buy: spirit sources: Serrated Knives, Slice and Dice, Killing Blow
+- @24000 Berserker [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (DamageToStack=120, MaxStacks=10)
+    game text: Your Weapon Damage increases as you take sustained damage.
+    at buy: not computed (needs play data)
+- @30400 Lucky Shot [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=25)
+    game text: Your bullets have a chance to be empowered, causing them to deal bonus weapon damage on hit.Bonus damage cannot Crit.
+    at buy: not computed (needs play data)
+- @41600 Silencer [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Your bullets build up to a Silence. Victims are immune to the build up for {s:ImmunityDuration}s after silence expires.
+    at buy: not computed (needs play data)
+
+no trigger condition (plain stats/actives): High-Velocity Rounds, Dispel Magic, Hunter's Aura, Fleetfoot, Bullet Lifesteal, Vampiric Burst, Inhibitor

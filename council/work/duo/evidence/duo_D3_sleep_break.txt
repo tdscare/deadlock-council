@@ -1,0 +1,8 @@
+KIND: duo-evidence
+SCENARIO: duo_D3_sleep_break
+STATUS: UNTESTABLE-NOW (blocked_by enemy_modifier_readback)
+NOTE: D3 NOW (single player; enemy modifier dump via moddump). Measures the real wake-up delay after damage and whether the sleep outlasts a delayed payload.
+QUESTION: Checking how fast Sleep Dagger ends once the sleeping enemy is shot.
+MECHANICS: sleep ends shortly after damage; the data gives the constants but not whether a single bullet, a tick of area damage or a delayed hit ends it, nor the real hold left for a delayed payload
+MODEL USE: duo engine HOLD sleep rule
+RESULT RULE: WORKS (wake delay read from the enemy modifier dump) if the asleep modifier disappears within 0.5 s of damage; DOES NOT WORK if it persists

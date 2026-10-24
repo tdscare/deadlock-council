@@ -1,0 +1,161 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: pocket
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:13:20Z
+BODY-SHA: 7af12ba4cdc480bc69ac3a29f8b48d073e70274c9b54f98b52fb50b05d28ccf0
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Restorative Shot: temporary (bought to be sold)
+  Monster Rounds: retained-or-upgraded (-> Cultist Sacrifice)
+  Battle Vest: retained
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Rapid Rounds: retained-or-upgraded (-> Swift Striker)
+  Cultist Sacrifice: retained
+  Swift Striker: retained
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Tankbuster: retained
+  Majestic Leap: retained
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Superior Cooldown: retained
+  Dispel Magic: retained
+  Duration Extender: retained-or-upgraded (-> Superior Duration)
+  Spirit Burn: retained
+  Superior Duration: retained
+  Greater Expansion: retained
+  Ethereal Shift: retained
+  Diviner's Kevlar: retained
+  Extra Regen: conditional branch (lane alternative)
+  Grit: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Spirit Shielding: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Escalating Exposure: situational-luxury
+  Divine Barrier: situational-luxury
+  Arctic Blast: situational-luxury
+  Mystic Reverb: situational-luxury
+  Refresher: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen, Grit
+  Early · L-R                -> main path (sequential): Restorative Shot, Monster Rounds, Battle Vest, Mystic Burst, Rapid Rounds, Cultist Sacrifice, Swift Striker, Compress Cooldown
+  Mid · L-R                  -> main path (sequential): Tankbuster, Majestic Leap, Mystic Expansion, Superior Cooldown, Dispel Magic, Duration Extender, Spirit Burn, Superior Duration
+  Late · L-R                 -> main path (sequential): Greater Expansion, Ethereal Shift, Diviner's Kevlar
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Shielding, Unstoppable, Counterspell
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Escalating Exposure, Divine Barrier, Arctic Blast, Mystic Reverb, Refresher
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+
+## Restorative Shot: sold when buying Diviner's Kevlar (Late · L-R, main)
+  role of Restorative Shot: temporary (bought to be sold); role of Diviner's Kevlar: retained
+  Restorative Shot: price 800, resale 400, net cost of owning it 400 souls (0.4 min of reference income); first bought at 800 souls (~1.0 min), replaced at ~43.8 min -> owned ~42.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 5600/14400/25600 -> after 4800/14400/25600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 65 min | window TR | key purchase times (min)
+  as built                                    |          63535 |      0.32 | Restorative Shot 1, Diviner's Kevlar 44
+  keep Restorative Shot                       |          63562 |      0.32 | Restorative Shot 1, Diviner's Kevlar 44
+  skip Restorative Shot                       |          63841 |      0.33 | Diviner's Kevlar 43
+  sell Battle Vest instead                    |          63350 |      0.31 | Restorative Shot 1, Diviner's Kevlar 43
+  keep Restorative Shot vs as built: d souls +23, d window TR +0.3% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Restorative Shot vs as built: d souls +114, d window TR +1.0% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: +, 0.75: -); beta (0.0: -, 0.5: +))
+  sell Battle Vest instead vs as built: d souls -101, d window TR -4.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: a computed alternative sequence is better: skip Restorative Shot
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Restorative Shot; evidence tier: MODEL-ONLY; flipping assumptions: skip Restorative Shot: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: +, 0.75: -); beta (0.0: -, 0.5: +)) | sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Greater Expansion: sold when buying Escalating Exposure (I'm rich as fuck, luxury)
+  role of Greater Expansion: retained; role of Escalating Exposure: situational-luxury
+  Greater Expansion: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 32800 souls (~30.8 min), replaced at ~49.0 min -> owned ~18.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/14400/32000 -> after 4800/14400/28800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 73 min | window TR | key purchase times (min)
+  as built                                    |          69737 |      0.22 | Greater Expansion 31, Escalating Exposure 49
+  keep Greater Expansion (slot cap ignored)   |          69753 |      0.22 | Greater Expansion 31, Escalating Exposure 51
+  skip Greater Expansion                      |          69802 |      0.23 | Escalating Exposure 48
+  sell Battle Vest instead                    |          69534 |      0.21 | Greater Expansion 31, Escalating Exposure 50
+  keep Greater Expansion (slot cap ignored) vs as built: d souls +6, d window TR +1.0% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -))
+  skip Greater Expansion vs as built: d souls +40, d window TR +1.6% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY (sign robust in 97% of cells; no measured inputs)
+  sell Battle Vest instead vs as built: d souls -126, d window TR -6.9% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Greater Expansion'] differ from 'as built' only through items with no modelled stat (Greater Expansion, Escalating Exposure contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: no modelled stat for Greater Expansion, Escalating Exposure (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Greater Expansion (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -)) | sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Dispel Magic: sold when buying Divine Barrier (I'm rich as fuck, luxury)
+  role of Dispel Magic: retained; role of Divine Barrier: situational-luxury
+  Dispel Magic: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 20800 souls (~19.5 min), replaced at ~49.0 min -> owned ~29.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/20800/25600 -> after 4800/17600/25600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 73 min | window TR | key purchase times (min)
+  as built                                    |          69732 |      0.25 | Dispel Magic 20, Divine Barrier 49
+  keep Dispel Magic (slot cap ignored)        |          69753 |      0.25 | Dispel Magic 20, Divine Barrier 51
+  skip Dispel Magic                           |          69736 |      0.25 | Divine Barrier 47
+  sell Battle Vest instead                    |          69521 |      0.24 | Dispel Magic 20, Divine Barrier 50
+  keep Dispel Magic (slot cap ignored) vs as built: d souls +7, d window TR +0.9% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Dispel Magic vs as built: d souls +31, d window TR +0.6% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Battle Vest instead vs as built: d souls -132, d window TR -5.3% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Dispel Magic has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Divine Barrier has an active effect (PRESS) not priced
+  model limit: no modelled stat for Dispel Magic (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Battle Vest: sold when buying Arctic Blast (I'm rich as fuck, luxury)
+  role of Battle Vest: retained; role of Arctic Blast: situational-luxury
+  Battle Vest: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 3200 souls (~3.8 min), replaced at ~50.0 min -> owned ~46.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/14400/32000 -> after 4800/12800/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 73 min | window TR | key purchase times (min)
+  as built                                    |          69518 |      0.28 | Battle Vest 4, Arctic Blast 50
+  keep Battle Vest (slot cap ignored)         |          69731 |      0.30 | Battle Vest 4, Arctic Blast 51
+  skip Battle Vest                            |          67935 |      0.25 | Arctic Blast 51
+  sell Swift Striker instead                  |          69461 |      0.29 | Battle Vest 4, Arctic Blast 50
+  keep Battle Vest (slot cap ignored) vs as built: d souls +130, d window TR +5.1% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Battle Vest vs as built: d souls -963, d window TR -10.1% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Swift Striker instead vs as built: d souls -54, d window TR +0.4% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Arctic Blast has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Arctic Blast (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Battle Vest (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Swift Striker instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Superior Duration: sold when buying Mystic Reverb (I'm rich as fuck, luxury)
+  role of Superior Duration: retained; role of Mystic Reverb: situational-luxury
+  Superior Duration: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 30400 souls (~28.5 min), replaced at ~49.0 min -> owned ~20.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/14400/32000 -> after 4800/14400/28800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 73 min | window TR | key purchase times (min)
+  as built                                    |          69662 |      0.22 | Superior Duration 28, Mystic Reverb 49
+  keep Superior Duration (slot cap ignored)   |          69739 |      0.23 | Superior Duration 28, Mystic Reverb 51
+  skip Superior Duration                      |          69620 |      0.22 | Mystic Reverb 49
+  sell Battle Vest instead                    |          69524 |      0.21 | Superior Duration 28, Mystic Reverb 50
+  keep Superior Duration (slot cap ignored) vs as built: d souls +34, d window TR +3.8% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Superior Duration vs as built: d souls -18, d window TR -1.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Battle Vest instead vs as built: d souls -96, d window TR -4.0% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: no modelled stat for Superior Duration, Mystic Reverb (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Superior Duration (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Tankbuster: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Tankbuster: retained; role of Refresher: situational-luxury
+  Tankbuster: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 12000 souls (~11.8 min), replaced at ~49.0 min -> owned ~37.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/14400/32000 -> after 4800/14400/28800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 73 min | window TR | key purchase times (min)
+  as built                                    |          69951 |      0.29 | Tankbuster 12, Refresher 49
+  keep Tankbuster (slot cap ignored)          |          69934 |      0.29 | Tankbuster 12, Refresher 51
+  skip Tankbuster                             |          70181 |      0.29 | Refresher 48
+  sell Battle Vest instead                    |          69682 |      0.27 | Tankbuster 12, Refresher 50
+  keep Tankbuster (slot cap ignored) vs as built: d souls -5, d window TR -0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Tankbuster vs as built: d souls +95, d window TR +2.4% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Battle Vest instead vs as built: d souls -156, d window TR -5.3% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Tankbuster'] differ from 'as built' only through items with no modelled stat (Refresher contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: skip Tankbuster: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

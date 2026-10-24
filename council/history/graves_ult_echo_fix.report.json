@@ -1,0 +1,55 @@
+{
+ "strategy": {
+  "trig": [],
+  "lines": [
+   "STRATEGY: not triggered (no purchase-order/greens/spike-timing change)"
+  ]
+ },
+ "interaction": {
+  "lines": [
+   "INTERACTION: no damage/fire-rate/stat item added, removed or reordered"
+  ]
+ },
+ "weakness": {
+  "lines": [
+   "WEAKNESS: proposal is not justified by a weakness"
+  ]
+ },
+ "overlap": {
+  "changed": [],
+  "unresolved": [
+   "overlap-candidate Superior Cooldown [at_buy=REDUNDANT-LIKELY; core_end=REDUNDANT-LIKELY]",
+   "overlap-candidate Diviner's Kevlar [at_buy=UNKNOWN; core_end=UNKNOWN]",
+   "overlap-candidate Divine Barrier [core_end=UNKNOWN]"
+  ]
+ },
+ "unresolved": [
+  "bc: CORE_NOTE_NONEMPTY graves_ult: Heroic Aura: Works on your ghouls too.",
+  "bc: CORE_NOTE_NONEMPTY graves_ult: Arcane Surge: Dash-jump right before you cast your ult.",
+  "bc: MAIN_4.8K_LATE graves_ult: spirit 4.8k at 13600",
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE graves_ult: Spirit Burn @54400 has no \"Threshold:\" changes line naming it",
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE graves_ult: Arcane Surge @25600 has no \"Threshold:\" changes line naming it"
+ ],
+ "proposal": "graves_ult_echo_fix",
+ "id": "graves_ult",
+ "diff": [
+  "notes/imbues changed on Echo Shard, Refresher"
+ ],
+ "block": [],
+ "warn": [],
+ "fixed": [
+  "abt: ECHO-ON-ULT Echo Shard 36800"
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY graves_ult: Heroic Aura: Works on your ghouls too.",
+  "bc: CORE_NOTE_NONEMPTY graves_ult: Arcane Surge: Dash-jump right before you cast your ult.",
+  "bc: MAIN_4.8K_LATE graves_ult: spirit 4.8k at 13600",
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE graves_ult: Spirit Burn @54400 has no \"Threshold:\" changes line naming it",
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE graves_ult: Arcane Surge @25600 has no \"Threshold:\" changes line naming it"
+ ],
+ "newV": [
+  "bc: RT_ITEMS graves_ult: Late · L-R: [[\"Echo Shard\",4],[\"Escalating Exposure\",null],[\"Magic Carpet\",null],[\"Spirit Burn\",null]] vs [[\"Echo Shard\",2],[\"Escalating Exposure\",null],[\"Magic Carpet\",null],[\"Spirit Burn\",null]]"
+ ],
+ "when": "2026-10-24 22:03",
+ "line": "[2026-10-24 22:03] Echo Shard is imbued on Borrowed Decree, which is Graves' ultimate, but the item's imbue type is IMBUE_ACTIVE_NON_ULT and its text says 'Reset the cooldown of the imbued non-ultimate ability' (data fact, citations in the evidence file). Move the imbue to Grasping Hands, the only other Graves ability that has a plain cooldown (34 s, 20 s at T4), and correct the Refresher note that claimed an Echo Shard + ult interaction. Nothing else in the build changes: no item added, removed or reordered. | notes/imbues changed on Echo Shard, Refresher | evidence: data:council/evidence/interactions/imbue_audit/graves_ult_echo_shard.txt, data:gt6819/game/citadel/pak01_dir/scripts/abilities.vdata, data:council/evidence/interactions/imbue_audit/imbue_audit.json | gate: FAIL"
+}

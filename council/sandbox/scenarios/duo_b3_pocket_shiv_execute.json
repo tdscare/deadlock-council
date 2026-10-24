@@ -1,0 +1,88 @@
+{
+ "id": "duo_b3_pocket_shiv_execute",
+ "title": "Pocket + Shiv: Affliction into Killing Blow chain",
+ "hero": "Shiv",
+ "playstyle": "Duo Shiv / Duo Pocket",
+ "builds": [
+  "shiv_duo_pocket",
+  "pocket_duo_shiv"
+ ],
+ "question": "Does Affliction (healing blocked) plus Killing Blow T3 (28%) chain more executes than Shiv alone?",
+ "hypothesis": "H-B3-4.1 executes per Killing Blow cast >=2 with Affliction vs <=1 without. H-B3-4.2 T3 threshold (28%) catches the Afflicted targets where 18% misses. H-B3-4.3 no Afflicted bot heals back above the line during the 16s recast window.",
+ "arms": [
+  {
+   "name": "shiv_alone_t2",
+   "items": [],
+   "ability_order": "1122314344221334",
+   "souls": 25000,
+   "notes": "base order (Killing Blow T2), bots healing"
+  },
+  {
+   "name": "affliction_t3",
+   "items": [],
+   "ability_order": "1122314344422133",
+   "souls": 25000,
+   "notes": "Pocket Affliction T3 on the 3 bots, Shiv Killing Blow T3"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "25k",
+  "souls": 25000,
+  "position": "3 bots within 10m of each other, each starting at 55% HP with regen on",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 3,
+    "items": [
+     "Healing Rite"
+    ],
+    "behaviour": "heal and back off",
+    "hp": "55%"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "Pocket",
+    "count": 1,
+    "role": "Affliction"
+   }
+  ],
+  "start_hp": "55%",
+  "resets": [
+   "cooldowns",
+   "HP"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Pocket casts Affliction (arm 2)",
+  "Shiv attacks normally and uses Killing Blow when a bot is under the line, recasting on each kill",
+  "Count executes per Killing Blow cast"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "executes_per_ult",
+   "unit": "count",
+   "how": "kill feed",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "executes_per_ult",
+  "min_effect_pct": 50,
+  "min_trials": 5,
+  "rule": "SUPPORTS if affliction_t3 averages >=2 and beats shiv_alone_t2 with non-overlapping ranges. REFUTED: revert shiv_duo_pocket to the base order and drop the pair."
+ },
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

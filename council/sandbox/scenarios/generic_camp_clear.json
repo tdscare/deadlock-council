@@ -1,0 +1,81 @@
+{
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the item/order under test",
+  "Same enemy hero, level, items, behaviour"
+ ],
+ "builds": [],
+ "id": "generic_camp_clear",
+ "title": "Generic: farming speed",
+ "hero": "any",
+ "playstyle": "farm builds",
+ "question": "Does the farm item/order clear a standard camp faster (Ricochet, Mystic Shot, imbues)?",
+ "hypothesis": "defined per use",
+ "arms": [
+  {
+   "name": "A",
+   "items": [],
+   "souls": ""
+  },
+  {
+   "name": "B",
+   "items": [],
+   "souls": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "early/mid",
+  "enemies": [
+   {
+    "hero": "neutral camp",
+    "count": 1,
+    "behaviour": "camp"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "camp respawn"
+  ]
+ },
+ "procedure": [
+  "Clear the same camp from the same start point",
+  "Stop at last neutral death"
+ ],
+ "metrics": [
+  {
+   "name": "clear_time",
+   "unit": "s",
+   "how": "",
+   "category": "farming",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": true
+  },
+  {
+   "name": "hp_lost",
+   "unit": "hp",
+   "how": "",
+   "category": "survivability",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": false
+  },
+  {
+   "name": "souls_gained",
+   "unit": "souls",
+   "how": "",
+   "category": "farming",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "clear_time",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "lower better"
+ }
+}

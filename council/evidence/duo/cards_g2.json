@@ -1,0 +1,113 @@
+{
+"Abrams": {"hero":"Abrams","file":"audit/hero_abrams.txt",
+ "setup":[
+  {"ability":"2 Shoulder Charge","effect":"stun","duration_s":0.3,"radius_m":2.2,"range_m":null,"cooldown_s":null,"needs_partner_to":"nothing for slow; wall stun needs a wall behind target (T2 stun upgrade list shows StunDuration +0.8; unverified whether it adds to 0.3 base)","notes":"ChargeRadius 2.2m, AbilityDuration 1.4s, speed 18.75-30m/s; T1 slow for SlowDuration +3s (SlowPercent value not in file); CollidePlayersStopTime 0.3; T3 cooldown -18s. Cooldown base not in file"},
+  {"ability":"4 Seismic Impact","effect":"stun","duration_s":1.6,"radius_m":9,"range_m":null,"cooldown_s":null,"needs_partner_to":"nothing; AoE stun lands on its own. Partner payoff must fire inside 1.6s window","notes":"StunDuration 1.6, ImpactRadius 9m (T3 +6m = 15m), ImpactHeight 6m, T3 Unstoppable 5s on cast. Cooldown not in file"}],
+ "payoff":[
+  {"ability_or_item":"1 Siphon Life","needs":"enemies within 8m (stunned/clumped keeps them in radius)","window":"AbilityDuration 4s (+2 T1), 8m radius (+2m T2), 1 target limit, heals 70% of dmg dealt on heroes, 35% non-hero","numbers":"HealingFactor 70; TickRate 0.25"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Spirit-damage DoT/ zone items","why":"Siphon scales with spirit (T3 'improved Spirit scaling'); a partner that holds enemies inside the 8m radius extends drain value"}],
+ "extends_or_is_extended_by":"Seismic stun 1.6s over 9-15m is a wide setup window for partner burst. Siphon radius 8m needs targets to stay close: partner pulls/tethers/lifts that keep them in 8m help; partner knockbacks/slow-fliers hurt. Charge wall-stun needs terrain, not partner."},
+
+"Haze": {"hero":"Haze","file":"audit/hero_haze.txt",
+ "setup":[
+  {"ability":"1 Sleep Dagger","effect":"sleep","duration_s":2.75,"radius_m":null,"range_m":null,"cooldown_s":null,"needs_partner_to":"partner must NOT damage target (sleepers wake shortly after damage: SleepWakeUpDelay 0.1s, MinimumSleepTime 0.2s) until the payoff moment; single target","notes":"SleepDuration 2.75 (+1 T2 = 3.75); T1 BulletResistReduction on wake-up; T3 slow 40% move/-45 dash for 3s on wake; does not break invis; does not interrupt channels. Cooldown not in file (T3 cooldown cut listed)"}],
+ "payoff":[
+  {"ability_or_item":"3 Fixation","needs":"shooting same target","window":"6s duration (+5), 40 max stacks (+40), 3 stacks per headshot","numbers":"0.2 dmg/stack (+0.11, +scaling with weapon dmg)"},
+  {"ability_or_item":"4 Bullet Dance","needs":"enemies within 16m, auto-targets with perfect accuracy","window":"3.5s (+0.03x spirit)","numbers":"+7 weapon dmg bonus (+7 T1), +25% fire rate T2"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Bullet-resist reduction on wake-up (T1 Sleep Dagger)","why":"a sleeping target is a controlled target; partner bullet burst after wake benefits from the BR reduction (value not in file)"}],
+ "extends_or_is_extended_by":"Sleep 2.75-3.75s is a lockdown a partner could chain with, but any partner damage wakes the target within 0.1s, so partner damage must be timed AFTER the sleep or be the wake trigger. Smoke Bomb invis 8s (+0.1x spirit)."},
+
+"Solomon": {"hero":"Solomon","file":"audit/hero_solomon.txt",
+ "setup":[
+  {"ability":"1 Setup Bishop","effect":"slow","duration_s":3,"radius_m":3.5,"range_m":20,"cooldown_s":12,"needs_partner_to":"none; diagonal squares (TileSteps 2) damage when stepped on after a delay","notes":"FadingSlow 30% (+15), SlowDuration 3 (+1.0x spirit), Damage 25 (+0.64x), ImpactDamage 70 (+2.0x), DPS 30 (+0.7x); T3 squares reduce spirit resist 2.5%/stack, 10 stacks"},
+  {"ability":"3 Rook Battery","effect":"root","duration_s":1,"radius_m":null,"range_m":null,"cooldown_s":33,"needs_partner_to":"none; T3 gives ImmobilizeDuration 1 (+0.5) per upgrade list","notes":"Damage 50 (+1.3x); T1 -25% fire rate 5s; T2 5% current hp; T3 -12s cooldown, +1 reflect. Immobilize only from T3 (unverified whether base applies it)"},
+  {"ability":"4 Develop Queen","effect":"stun","duration_s":1.25,"radius_m":null,"range_m":30,"cooldown_s":210,"needs_partner_to":"none; LiftHeight 4m","notes":"StunDuration 1.25, Damage 120 (+1.4x), DPS 50 (+0.7x) squares, slow 15% (+15) 1.5s; T2 execute threshold 200 hp (+5% listed; unverified exact). Radius not in file"}],
+ "payoff":[
+  {"ability_or_item":"4 Queen checkmate / Rook current-hp%","needs":"low hp target","window":"execute below CheckmateThreshold (200 flat per upgrade list)","numbers":"unverified whether 200 is hp or %"}],
+ "ally_effects":[
+  {"ability":"2 Kingside Knight","what":"shield+stamina+reposition","range_m":28,"duration_s":7,"numbers":"CombatBarrier 80 (+0.8x spirit) (+80 T2), Stamina 1 (+1), move 13m invulnerable during move, cooldown 25 (-8); T3 two allies within 20m, removes debuffs on self move"}],
+ "item_hooks":[{"item":"Spirit power/ resist-shred items","why":"nearly all damage and slow durations scale with spirit; Bishop squares shred spirit resist"},{"item":"Barrier-amp items","why":"Knight barrier scales 0.8x spirit and is cast on partner"}],
+ "extends_or_is_extended_by":"Knight can relocate (invulnerable move 13m) a partner to a position or out of danger; bishop slow 3s and squares keep targets inside zone. Rook reflect/wall needs map walls."},
+
+"Venator": {"hero":"Venator","file":"audit/hero_venator.txt",
+ "setup":[
+  {"ability":"3 Hex-Lined Snap Trap","effect":"root","duration_s":1.25,"radius_m":2,"range_m":null,"cooldown_s":28,"needs_partner_to":"enemy must walk over armed trap (ArmTime 0.5s, lifetime 30s); partner can force enemy over it with pull/knockback","notes":"2 charges (CD between 8s), Damage 80 (+2.2x spirit), ImmobilizeDuration 1.25 (+1.0), RevealDuration 6, TetherDuration 0.6; T3 +30% damage from caster against revealed targets and +1 charge"},
+  {"ability":"2 Gutshot","effect":"knockdown","duration_s":0.6,"radius_m":null,"range_m":10,"cooldown_s":23,"needs_partner_to":"wall within 7m behind target for stun (WallStunDistance 7m)","notes":"Damage 60 (+0.7x wpn), BonusDamage 30 near wall, StunDuration 0.6 (+0.4), TargetingCone 60, UnitTargetLimit 99; knockback pushes enemies away (can disperse clumps)"},
+  {"ability":"1 Consecrating Grenade","effect":"debuff","duration_s":3.5,"radius_m":4.5,"range_m":null,"cooldown_s":25,"needs_partner_to":"none","notes":"burn: -30% incoming healing (-20 more), burn zone 4.5m (+1.5), Damage 35 (+1.0x wpn), DPS 10 (+1.6x level boons); burning targets damage nearby enemies"}],
+ "payoff":[
+  {"ability_or_item":"4 Ira Domini","needs":"low hp (execute <8)","window":"15s, 3 stakes","numbers":"Damage 120 (+1.5x wpn), blessed final stake bonus 115 (+3x boons) (+65 T2), execute threshold 8 (unit unverified); cooldown 160"},
+  {"ability_or_item":"Snap Trap T3","needs":"revealed targets","window":"RevealDuration 6s","numbers":"+30% damage from Venator vs revealed"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Weapon damage items","why":"Grenade, Gutshot, Ira scale with base weapon damage increase"},{"item":"Heal-reduction stacking","why":"grenade -30% (-50% with T3) incoming healing; sustaining enemies or partner lifesteal counter"}],
+ "extends_or_is_extended_by":"Trap root 1.25-2.25s and 6s reveal give partner burst a window; a partner that pushes/pulls enemies over the trap or into a wall (7m) boosts Gutshot stun. Trap needs enemy to step on it: unreliable alone."},
+
+"Baba": {"hero":"Baba","file":"new/hero_hero_baba.txt",
+ "setup":[
+  {"ability":"1 Threadsap","effect":"pull","duration_s":0.6,"radius_m":3.5,"range_m":35,"cooldown_s":28,"needs_partner_to":"none; T3 pull 7m over PullDuration 0.6 on hit","notes":"Damage 50, ExplodeTime 0.9, DebuffDuration 22 (+8), steals spirit (MaxStacks 45, TechPowerGain 10 per stack scaled), +1 charge T3 (between-charge 6s)"},
+  {"ability":"2 Granny Long Legs","effect":"slow","duration_s":4,"radius_m":8,"range_m":null,"cooldown_s":32,"needs_partner_to":"none; heavy melee ground pound","notes":"HeavyMelee 75 (+0.6x spirit), 50% slow 4s, KnockUp 0.3s height 2.54m, light kick knockback 10m; 10s duration"},
+  {"ability":"3 Baba's Brew","effect":"silence","duration_s":3,"radius_m":6,"range_m":12,"cooldown_s":27,"needs_partner_to":"none; cycles Barrier (0-2.5s), Silence (2.5-3.5s locks), Fire (4.5s) states, pausable","notes":"Barrier 90 (+0.7x) 8s, Silence 3s, burn DPS 12 (+0.152x) 8s with -15% spirit resist; T1 radius +3m, T3 +33% effectiveness"},
+  {"ability":"4 Feed The Birds","effect":"slow","duration_s":2.75,"radius_m":null,"range_m":18,"cooldown_s":150,"needs_partner_to":"targets must stay in front cone (LockonCone 40) during up to 6.5s channel","notes":"hexes to pigeon 2.75s (+0.5), BarrageMaxDamage 450 (+1.6x) (+125), max slow 32% (x2 T1), ChannelTime 6.5, AbilityUnitTargetLimit 9999; multi-target; hex = unable to act is unverified from file"}],
+ "payoff":[
+  {"ability_or_item":"4 Feed The Birds","needs":"targets held in front cone","window":"TimeToMaxStacks 3.5s, channel 6.5s; more bread = more damage","numbers":"max 450 (+1.6x spirit); TickDamageIncreasePerHit 30"}],
+ "ally_effects":[{"ability":"3 Baba's Brew","what":"barrier","range_m":12,"duration_s":8,"numbers":"CombatBarrier 90 (+0.7x spirit) in 6m radius (state-dependent, thrown at allies possible; unverified)"}],
+ "item_hooks":[{"item":"Spirit power/ Spirit resist shred","why":"threadsap steals spirit at 175% effectiveness, brew shreds 15% spirit resist, ult scales 1.6x"},{"item":"Slow/ hold items on partner","why":"ult needs targets in front for 3.5-6.5s; a hold or tether partner raises bread count"}],
+ "extends_or_is_extended_by":"Baba pull 7m can gather enemies into brew 6m radius and ult cone; partner holds/slows keep them in cone for the 6.5s channel."},
+
+"Vindicta": {"hero":"Vindicta","file":"new/hero_hero_hornet.txt",
+ "setup":[
+  {"ability":"1 Stake","effect":"tether","duration_s":1.75,"radius_m":9,"range_m":null,"cooldown_s":40,"needs_partner_to":"none; enemies in 9m capture radius are tethered to landing point, movement limited to ChainLength 9m (unverified hard immobilize: tether lets them move within 9m)","notes":"Damage 40 (+0.5x spirit), slow 40%, EnemyDragSpeed 1000, duration +0.75 and radius +2m T3, cooldown -22"},
+  {"ability":"3 Crow Familiar","effect":"bullet-resist-shred","duration_s":5,"radius_m":4,"range_m":null,"cooldown_s":32,"needs_partner_to":"none; hits target","notes":"-6% bullet resist and -6% spirit resist (-8 more T3), bleed 2.2% current hp per sec (+0.5), impact 40 (+0.744x), -35% heal in/regen T1, duration +2"}],
+ "payoff":[
+  {"ability_or_item":"4 Assassinate","needs":"stationary target for charge; low hp bonus","window":"TimeToFullCharge 1.0s scoped; 50% dmg uncharged","numbers":"Damage 90 (+0.93x spirit); +90 (+2.3x) vs <50% hp (+80); 2 charges; 55s CD; range 1000m; headshot +20"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Spirit power","why":"most abilities scale with spirit; snipe needs target in place 1s"},{"item":"Bullet damage on partner","why":"crow shred of bullet and spirit resist (6-14%) benefits partner bursts"}],
+ "extends_or_is_extended_by":"Stake tether 1.75-2.5s over 9m holds clumped enemies in a known area for partner AoE (but enemies can still move within 9m, unverified); extends partner area by gathering. Flight 13s lets items cast at +range (FlyingItemCastRange 50)."},
+
+"Mirage": {"hero":"Mirage","file":"new/hero_hero_mirage.txt",
+ "setup":[
+  {"ability":"2 Dust Devil","effect":"lift","duration_s":0.2,"radius_m":4,"range_m":20,"cooldown_s":36,"needs_partner_to":"none; lift is short (EnemyLiftDuration 0.2, LiftHeight 3m, HoldInPlaceDuration 0.3)","notes":"Damage 65 (+0.3x) (+60), slow 24% 3s, TornadoSpeed 24m/s, 30% evasion after, T3 recast within 6s; lift is brief so not a lockdown"},
+  {"ability":"3 Djinn's Mark","effect":"debuff","duration_s":5,"radius_m":null,"range_m":40,"cooldown_s":2.75,"needs_partner_to":"partner shooting is not needed; marks apply on Mirage's shots; max 4 stacks, each mark doubles damage","notes":"ProcDamageBase 11 (+0.35x) (+20), stack window 5s (+3), reveal 6s, T3 stun 0.5s on max marks, 4->5 max"},
+  {"ability":"1 Fire Scarabs","effect":"debuff","duration_s":5,"radius_m":null,"range_m":null,"cooldown_s":35,"needs_partner_to":"none","notes":"-20% target damage output (-35 T3), DPS 8 (+0.1x), life steal, 2 charges (+1), duration +2s"}],
+ "payoff":[{"ability_or_item":"3 Djinn's Mark","needs":"stayed alive and in range 40m for stacks","window":"stack timer 5s (+3)","numbers":"11 x 2^n up to 4 marks (~88+ base per consume, scaling 0.35x)"}],
+ "ally_effects":[{"ability":"4 Traveler","what":"teleport","range_m":null,"duration_s":2,"numbers":"minimap teleport, 2s wait, 140 CD (-90); self only (unverified allies not carried); T1 +3m/s +20% fire rate 12s; T2 400 barrier (+0.6x)"}],
+ "item_hooks":[{"item":"Spirit power","why":"Djinn marks and tornado scale on spirit"},{"item":"Fire rate/ proc rate","why":"marks have 2.75s per-target cooldown so extra damage sources do not stack faster"}],
+ "extends_or_is_extended_by":"Brief tornado lift (0.2-0.5s) is not a reliable partner window; Traveler lets the pair regroup quickly. Mark reveals target 6s on map."},
+
+"Calico": {"hero":"Calico","file":"new/hero_hero_nano.txt",
+ "setup":[
+  {"ability":"1 Gloom Bombs","effect":"debuff","duration_s":6,"radius_m":3,"range_m":null,"cooldown_s":14,"needs_partner_to":"none; T2: melee resist reduction per bomb touch","notes":"Damage 45 (+0.644x), 4 bombs (+3), MultiHit penalty 65%, -6% melee resist 6s per bomb touch, lifetime 0.75s detonation"},
+  {"ability":"4 Return to Shadows","effect":"zone","duration_s":3,"radius_m":7.5,"range_m":null,"cooldown_s":115,"needs_partner_to":"none; self untargetable 3s then return blast","notes":"Damage 150 (+0.609x) on start and again on return (+75 T2), 3s channel, T3 heal 450 and refund all cooldowns"}],
+ "payoff":[{"ability_or_item":"2 Leaping Slash","needs":"hero within 9m","window":"13s CD","numbers":"10 (+0.8x light melee) (+60); heal 40 (+1.4x) (+25); T3 50% cooldown refund on hero hit"},{"ability_or_item":"Gloom Bombs melee reduction","needs":"melee users on team","window":"6s","numbers":"-6% melee resist per bomb touch"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Melee-damage items on partner","why":"Gloom Bombs melee resist reduction (-6% per bomb touch, 4 bombs) only helps melee damage"},{"item":"Spirit power","why":"bombs and ult scale spirit"}],
+ "extends_or_is_extended_by":"Ult 7.5m radius double hit needs enemies clumped or held; Ava cat form 15s (+15) has CatFormDamageDealtReduction -100 so no damage while possessed."},
+
+"Shiv": {"hero":"Shiv","file":"new/hero_hero_shiv.txt",
+ "setup":[
+  {"ability":"2 Slice and Dice","effect":"debuff","duration_s":14,"radius_m":2.5,"range_m":12,"cooldown_s":16,"needs_partner_to":"none","notes":"-6% spirit resist stacking (-4 more), DebuffDuration 14, Damage 75 (+1.2x), range +2m, T3 -2s cooldown per hero hit; echo retraces at full rage"},
+  {"ability":"1 Serrated Knives","effect":"slow","duration_s":5,"radius_m":null,"range_m":null,"cooldown_s":16,"needs_partner_to":"none; slow 28% only listed as movement slow; full rage slow too","notes":"2 charges (+2), bleed 10 DPS/stack (+12) (+0.13x), BleedDuration 5 (+2), at full rage 3.5% current hp per knife"}],
+ "payoff":[{"ability_or_item":"4 Killing Blow","needs":"low hp","window":"leap 12m (+6); recast 16s after kill","numbers":"Damage 200, execute below 18% (+10) enemy hp (buffer 3); cooldown 145 (-25)"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Spirit power","why":"dash 1.2x, bleed 0.13x"},{"item":"Burst partner","why":"Spirit resist shred (-6 to -10% stacking, 14s) boosts partner spirit damage; Killing Blow wants low hp targets"}],
+ "extends_or_is_extended_by":"Spirit-resist shred 14s lasts long enough for partner rotation; rage fills from damage (partner damage on same target does not fill Shiv rage)."},
+
+"Warden": {"hero":"Warden","file":"new/hero_hero_warden.txt",
+ "setup":[
+  {"ability":"3 Binding Word","effect":"root","duration_s":1.75,"radius_m":null,"range_m":15,"cooldown_s":34,"needs_partner_to":"target must not leave initial position within EscapeTime 2.8s; partner slow/hold/tether keeps them in place; escape if >20m EscapeRange","notes":"Damage 110 (+2.437x spirit), immobilize 1.75 (+0.75 = 2.5), T3 silence until they escape or are immobilized, T1 +20% bullet damage from Warden on trapped heroes for 5s, cooldown -14"},
+  {"ability":"1 Alchemical Flask","effect":"debuff","duration_s":7,"radius_m":5.5,"range_m":null,"cooldown_s":12,"needs_partner_to":"none","notes":"Damage 60 (+0.63x), -25% weapon damage (-25 more), 16% slow 3s, -30% fire rate T3, +2m radius, -7 cooldown, -1 stamina T1"}],
+ "payoff":[{"ability_or_item":"4 Last Stand","needs":"enemies within 12m in 115 degree cone","window":"6s (+4), 2s charge delay","numbers":"PulseDPS 70 (+1.3x) every 0.5s (+40.5); heals 75% of hero damage, 10% non-hero; resist 50% bullet/spirit; unstoppable T3"}],
+ "ally_effects":[{"ability":"2 Willpower","what":"barrier+speed","range_m":null,"duration_s":5,"numbers":"CombatBarrier 125 (+0.8x) self barrier (self only per text: 'Gain a Barrier'; unverified allies); +15% move speed (+20), cooldown 40 (-24)"}],
+ "item_hooks":[{"item":"Spirit power","why":"Binding Word 2.437x, Last Stand 1.3x, flask 0.63x"},{"item":"Partner slows/holds","why":"Binding Word triggers if target stays 2.8s; any CC from partner guarantees land"}],
+ "extends_or_is_extended_by":"Last Stand cone 12m (+4) needs enemies kept in front for 6-10s; partner holds/pulls extend. Binding Word conflicts with partner knockback/pull (target moving away breaks the curse)."},
+
+"Silver": {"hero":"Silver","file":"new/hero_hero_werewolf.txt",
+ "setup":[
+  {"ability":"3 Entangling Bola","effect":"slow","duration_s":1.5,"radius_m":null,"range_m":null,"cooldown_s":23,"needs_partner_to":"none; ricochet 2 targets within 15m at T3","notes":"Damage 40 (+1.6x), slow 16% (+20), prevents movement abilities and stamina, debuff +0.75s"},
+  {"ability":"2 Boot Kick","effect":"debuff","duration_s":3,"radius_m":1.7,"range_m":10.6,"cooldown_s":21,"needs_partner_to":"mark is consumed by Silver's shots only (partner shots: unverified)","notes":"mark 3s, BonusDamage 25 (+2x) (+80), kicked enemy deals -35% damage for 5s T3, enemy pushed away 300"}],
+ "payoff":[{"ability_or_item":"1 Slam Fire","needs":"target hp (current health damage)","window":"5s, 3 shots","numbers":"2.5% current hp (+7%) per shot, +300% fire rate, damage 40"},{"ability_or_item":"4 Lycan Curse","needs":"enemy heroes in melee","window":"15s (+15 on kill)","numbers":"stacks on enemies max 15 for 5s, +125 hp, 60 (+0.45x) fire rate"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Weapon/melee items","why":"Slam Fire and Lycan are weapon/melee driven"},{"item":"Heal-reduction","why":"MissingHealthPercentHeal 30 on transform"}],
+ "extends_or_is_extended_by":"Bola 1.5-2.25s movement-ability lockdown helps Silver and partners chase; Boot Kick pushes enemies away so partner pulls offset it."}
+}

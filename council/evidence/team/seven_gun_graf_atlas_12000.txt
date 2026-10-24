@@ -1,0 +1,22 @@
+SCOPE: build-context
+KIND: team
+BUILD: seven_gun
+ALLIES: ['hero_graf', 'hero_atlas']
+CHECKPOINT: 12000
+ARGS: --team seven_gun --allies SEED --at 12000
+GENERATED: 2026-10-24T15:24:05Z
+BODY-SHA: 25ac1eff84a81ecce86684fb228920e6e7411bffb8ebe348b51b2886df1a1c93
+INPUT-SHA: d85f74c93c011434fc7ae58984772f806ab0b6616f386c31d4d044ac17577806
+RULE: only MY purchases are optimised; allies are context; ordinary teammate behaviour (attacking the enemy I debuff) is assumed at a shared-target share of 0.3 / 0.6 (MODELLED ESTIMATE); no prearranged plan
+ALLY PROFILES (kit data, VERIFIED GAME MECHANIC inputs; split MODELLED at spirit 30, 55% hits): hero_graf: gun 100% / spirit 0%; hero_atlas: gun 78% / spirit 22%
+MARGIN (pre-registered): an option is shown as an optional pivot only if team damage (mine + allies) rises >= 5% at the 0.3 share, or my trade ratio rises >= 5%
+
+## OPTIONS FOR MY HERO (best catalog item per approach, replacing my newest same-tier item)
+approach | item (replaces) | my trade ratio % | my dps change | ally dps added (share 0.3 / 0.6) | team damage % | result | tier
+conventional (as built) | - | +0.0 | +0 | 0 / 0 | +0.0 | default | baseline
+debuff for allies (anti-heal) | Decay (Surge of Power) | +4.3 | +0 | 9 / 17 | +4.2 | default stays | MODEL-ONLY
+debuff for allies (bullet resist) | Bullet Resist Shredder (Duration Extender) | +9.1 | +3 | 6 / 12 | +3.7 | OPTIONAL PIVOT | MODEL-ONLY
+debuff for allies (spirit resist) | Spirit Sap (Duration Extender) | +3.2 | +0 | 1 / 1 | +0.3 | default stays | MODEL-ONLY
+disruption | Slowing Hex (Duration Extender) | +0.0 | +0 | 0 / 0 | +0.0 | default stays | INSUFFICIENT (disruption value: denying enemy farm/picks has no model)
+
+## UNKNOWN: how often allies hit my debuffed target (share ASSUMED), disruption value, team win effect; not measurable in the sandbox (no allied bots, no economy).

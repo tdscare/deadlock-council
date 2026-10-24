@@ -1,0 +1,255 @@
+{
+ "id": "danny",
+ "hero": "Danny",
+ "tag": "Fix",
+ "name": "Rizuhble's Belly Flop Danny",
+ "desc": "Dive Danny",
+ "hk": "hero_deadpack",
+ "abil": [
+  "Strix Salvo",
+  "Chimera Mk1",
+  "Jettison Fuel",
+  "Close The Deal"
+ ],
+ "order": [
+  1,
+  1,
+  2,
+  2,
+  3,
+  2,
+  4,
+  4,
+  1,
+  2,
+  4,
+  4,
+  1,
+  3,
+  3,
+  3
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane?",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "If you're getting poked out of lane. Sell it for Diviner's Kevlar."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "High-Velocity Rounds",
+      ""
+     ],
+     [
+      "Opening Rounds",
+      ""
+     ],
+     [
+      "Grit",
+      ""
+     ],
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Mystic Burst",
+      ""
+     ],
+     [
+      "Mystic Expansion",
+      "On the dive.",
+      "2"
+     ],
+     [
+      "Extra Stamina",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Improved Spirit",
+      ""
+     ],
+     [
+      "Compress Cooldown",
+      "On the dive.",
+      "2"
+     ],
+     [
+      "Enchanter's Emblem",
+      ""
+     ],
+     [
+      "Reactive Barrier",
+      ""
+     ],
+     [
+      "Stamina Mastery",
+      ""
+     ],
+     [
+      "Sharpshooter",
+      "Chimera's landing also scales with weapon damage."
+     ],
+     [
+      "Tankbuster",
+      ""
+     ],
+     [
+      "Greater Expansion",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · cont.",
+    "",
+    false,
+    [
+     [
+      "Surge of Power",
+      "On the dive.",
+      "2"
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Diviner's Kevlar",
+      ""
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Spirit Burn",
+      ""
+     ],
+     [
+      "Indomitable",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Diviner's Kevlar if needed. Ahead? Skip it until you're dying. Sell Opening Rounds for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "One gun hero is deleting you: Haze, Wraith, Vindicta."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun and Metal Skin isn't enough."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+     ],
+     [
+      "Dispel Magic",
+      "Knockdown before it lands, Slowing Hex, Disarming Hex."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+     ],
+     [
+      "Unstoppable",
+      "Stuns and silences keep stopping your dive."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Mystic Reverb",
+      "On the dive. Sell Opening Rounds for this, or Sharpshooter if it's gone.",
+      "2"
+     ],
+     [
+      "Witchmail",
+      "Sell Enchanter's Emblem for this."
+     ],
+     [
+      "Focus Lens",
+      "Silence them before the dive: part of the dive damage hits them again after. Sell Stamina Mastery for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Base: Kieran's in-game build, items, order and spikes untouched (gun 4.8k at Sharpshooter 11.2k souls, spirit 5.6k at Tankbuster 13.6k, health 6.4k at Stamina Mastery 16.8k, 12.8k at Kevlar 30.4k; core 12 slots, 48k).",
+  "False facts fixed: Opening Rounds works on enemies above half health, not you; Silence stops abilities, not dashes; Enchanter's Emblem doesn't build into Spellbreaker (Spellbreaker = Debuff Reducer) — it's now sold for Witchmail; Witchmail/Focus Lens/Divine Barrier have no such components, so 'expensive late upgrade' → 'pricier version of' (Divine Barrier paired with the Dispel Magic counter).",
+  "Mystic Burst/Tankbuster checked: Chimera 70 + 1.5×spirit = 95 at Mystic Burst (Extra Spirit 10 + Opening Rounds 7 = 17 spirit) and 227 with the +120 T3 by Tankbuster, so both clear their thresholds.",
+  "Sells added because core is full: counters sell Opening Rounds (1600, conditional damage, weakest late), rich items name Enchanter's / Opening Rounds / Sharpshooter / Silence Wave; Extra Regen says it goes for Kevlar; lane box set optional. 'Can't land the dive?' items now name what they replace (Mystic Expansion / Greater Expansion / Spirit Burn).",
+  "Counters description in the new wording; 'Upgrade.' added where true (Improved Spirit, Boundless, Superior Cooldown, Compress→Superior).",
+  "Mid box had 9 items; split into Mid · L-R (8) + Mid · cont. per the layout rule, order unchanged.",
+  "Ability order: Data: unlock 1 first, take Strix T1/T2 early, then max Chimera (the most common first max), ult mid, Jettison last. Ours is that path exactly. Danny data is mixed and he's a low-WR hero, so this is the weakest consensus.",
+  "Round 10: Spike order changed: spirit 4.8k first (Compress Cooldown moved up, 8k souls), then health (Stamina Mastery, 12.8k), then gun (Sharpshooter, 16k). Before: gun at 11.2k, spirit at 13.6k, health at 16.8k. Why: at 6.4k souls the build already has 3.2k spirit and 1.6k gun, so one 1.6k item finishes the spirit spike while the gun needs a 3.2k item. +19 spirit power is +93 on the ult (70+1.0x plus 3+0.09x per metre over ~43m), +28 on Chimera, +14 per missile and +21 per marked shot. The gun spike (+34% weapon damage) is +43 on Chimera's bullet part and about +37% gun damage. tracklock.gg pro Danny (last 30 days to Oct 19, 182 games): Improved Spirit 93%, Mystic Expansion 86%, Mystic Burst 72% early and Compress Cooldown 60% mid, before their 3.2k gun item (Express Shot 68% mid); Sharpshooter isn't in their top 8.",
+  "Round 10: 'Can't land the dive?' notes fixed: Toxic Bullets and Spiritual Overflow build up from your gun (0.25s per shot), not from your 3.",
+  "Round 11: 'Can't land the dive?' is the pivot (gun flyer, a real second job: Jettison Fuel maxed and the gun items). Desc now says when to take it; 'max your 3' moved into it. No new box: a lost lane doesn't change the dive plan. No 6.4k run (Kevlar 30.4k, Boundless 35.2k, then Superior Cooldown).",
+  "Round 12: 'Can't land the dive?' role pivot removed (a gun Danny becomes its own build next round). Sharpshooter note: the +60% only works past 15m (while flying); what makes Chimera's landing hit harder is the 4.8k gun spike (landing = 70 + 1.4x weapon damage bonus), so the note says that. Dispel Magic no longer lists Geist bomb; Spirit Resilience no longer lists Haze, spells Vyper. Checked all 10 types: imbues (Mystic Expansion on Chimera = the landing radius; Compress Cooldown on the 135s ult saves far more than on the 21s Chimera; Mystic Reverb on Chimera clears 100), thresholds, no duplicates, no late dead-end 800s.",
+  "Round 13: notes cut to what a player wouldn't know (UPDATE 3), desc is a short style label (UPDATE 4), Counters notes name the right heroes (Spirit Resilience: real spirit-damage heroes, no Haze; Counterspell: a parryable ability).",
+  "Round 14: ability order now seemeta's most popular Danny order exactly (Strix T1 before unlocking Chimera, Strix T3 before ult T2/T3). Cursed Relic out of Counters (it cuts your own damage 25% while the curse lasts, so 'curse them before you dive' weakened the dive). Arctic Blast out of rich (not a pricier version of anything in the build; its sell was Sharpshooter, the gun spike). Sells made unique: Divine Barrier now replaces Dispel Magic (Opening Rounds was already the Counters sell), Mystic Reverb falls back to Sharpshooter. Notes: Opening Rounds and Enchanter's emptied (repeated the Counters/Witchmail sells), Sharpshooter cut to the interaction, Silence Wave no longer claims it stops going invulnerable (silence only blocks abilities, not items), Focus Lens says part of the damage (35%) repeats, Dispel Magic no longer lists Yamato's grapple, Unstoppable wording.",
+  "Round 15: Counters description shortened to 109 characters (was 119; the game rejects box descriptions over 112) by writing Kevlar for Diviner's Kevlar, Kieran's own wording in his in-game build ('After Kevlar').",
+  "Round 19: checked against the real Danny styles (seemeta Oct 5-19 most popular order maxes Chimera then the ult; dive/ult builds He's a phantom Oct 15, FLY LIKE DEADMAN DANNY Oct 14). Kieran's dive+ult main with his HV > Opening Rounds > Sharpshooter gun line; no item changes. Round 20: late list ordered by impact (Mystic Reverb first), 76.8k total; Focus Lens note cut to 102 characters (was 116).",
+  "Round 23: kit re-read item by item; no change (see log).",
+  "Round 25: ability order 1123124242144333 → 1122324412441333 (kit-based for this playstyle, no idle early points). Silence Wave out of the core (Kieran: only for dodgers, that is the Jettison build) → Surge of Power on the dive (same 3.2k spirit slot; 14s Surge vs ~17s dive). Compress Cooldown moved from the ult to the dive (extra dives inside a fight; the 100s ult rarely gets a second cast). Focus Lens note no longer names Silence Wave."
+ ]
+}

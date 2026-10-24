@@ -1,0 +1,94 @@
+{
+ "id": "duo_vindicta_haze_sleep_shot",
+ "title": "Vindicta + Haze: Assassinate on a slept target",
+ "hero": "Vindicta",
+ "playstyle": "Sniper Vindicta",
+ "builds": [
+  "vindicta_sniper",
+  "haze_assassin"
+ ],
+ "question": "Does one full-charge Assassinate always land in full on a Haze-slept target, and does the low-HP set-up add the bonus?",
+ "hypothesis": "H1.1/H1.2: full-charge value (~151 at 14.4k) hits 5/5; with target under 50% the hit is ~473.",
+ "arms": [
+  {
+   "name": "full_hp",
+   "items": [],
+   "ability_order": null,
+   "souls": 14400,
+   "notes": "target full HP when slept"
+  },
+  {
+   "name": "low_hp",
+   "items": [],
+   "ability_order": null,
+   "souls": 14400,
+   "notes": "Haze shoots target to 45% before dagger"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "14.4k souls",
+  "souls": 14400,
+  "position": "Vindicta 40m away, pre-scoped",
+  "enemies": [
+   {
+    "hero": "any",
+    "count": 1,
+    "items": [],
+    "behaviour": "walks a line",
+    "hp": "full or 45%"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "Haze",
+    "count": 1,
+    "role": "Sleep Dagger"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "target HP",
+   "cooldowns"
+  ]
+ },
+ "procedure": [
+  "Vindicta scopes 1s",
+  "Haze lands Sleep Dagger",
+  "Vindicta fires within 1s of the sleep",
+  "Record hit, damage number, time to wake"
+ ],
+ "metrics": [
+  {
+   "name": "assassinate_damage",
+   "unit": "hp",
+   "how": "damage number",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "hit_rate",
+   "unit": "%",
+   "how": "hits/5",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "assassinate_damage",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "SUPPORTS H1.2 if low_hp beats full_hp by >=10%; H1.1 needs 5/5 hits at predicted value +-5%"
+ },
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists"
+ ],
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

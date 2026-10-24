@@ -1,0 +1,104 @@
+# seven | Seven | Rizuhble's Power Outage Seven
+abilities: 1=Lightning Ball (citadel_ability_lightning_ball, start_trained=false, Signature) / 2=Static Charge (citadel_ability_static_charge, start_trained=false, Signature) / 3=Power Surge (ability_power_surge, start_trained=false, Signature) / 4=Storm Cloud (citadel_ability_storm_cloud, start_trained=false, Ultimate)
+order: 1331234442431122
+model A (data):  Lightning :U@0  Power Surg:U@500  Power Surg:T1@500  Lightning :T1@900  Static Cha:U@1400  Power Surg:T2@2600  Storm Clou:U@3200  Storm Clou:T1@3900  Storm Clou:T2@5300  Static Cha:T1@6000  Storm Clou:T3@10100  Power Surg:T3@14900  Lightning :T2@17400  Lightning :T3@26900  Static Cha:T2@32100  Static Cha:T3@48600
+model B (old):   Lightning :T1@200  Power Surg:T1@900  Power Surg:T2@2000  Lightning :T2@2600  Static Cha:T1@3900  Power Surg:T3@4600  Storm Clou:U@5300  Storm Clou:T1@6000  Storm Clou:T2@6800  Static Cha:T2@7600  Storm Clou:T3@8400  Lightning :T3@10100  Static Cha:T3@11900
+tier upgrades: Lightning Ba: AbilityCharges+1 / SlowPercent+28,MaxLifetime+1 / DPS+58.5,ShockRadius+1.75 | Static Charg: AbilityCooldown-20 / ShockRadius+7,AbilityCastRange+5 / StunDuration+0.9,Damage+160 | Power Surge: AbilityCooldown-18 / BonusMoveSpeed+3,BonusPerChain+8,DamagePerChain+8,BonusPerChain+0.23x,DamagePerChain+0.23x / TechResistDebuff-15,DebuffDuration+10,AbilityDuration+10 | Storm Cloud: BulletResistOnActive+55 / Radius+10,InitialRadius+5,AbilityChannelTime+7 / DPS+65,FlightControlEnabled+4
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  Monster Rounds
+        Lightning  U[T1] ch1 cd26/6 DPS=8 | Static Cha L[U] | Power Surg T1[U] ch1 cd32 d10 DamagePe=10,BonusPer=11 | Storm Clou L
+  1600 L5   2    21  Extra Spirit
+        Lightning  T1 ch2 cd26/6 DPS=9 | Static Cha U ch1 cd42 Damage=52 | Power Surg T1 ch1 cd32 d10 DamagePe=13,BonusPer=17 | Storm Clou L
+  2400 L6   3    22  Extra Stamina
+        Lightning  T1 ch2 cd26/6 DPS=9 | Static Cha U ch1 cd42 Damage=53 | Power Surg T1[T2] ch1 cd32 d10 DamagePe=13,BonusPer=17 | Storm Clou L
+  4800 L10  6    29  Surge of Power [imbue Power Surge]
+        Lightning  T1[T2] ch2 cd26/6 DPS=9 | Static Cha U[T1] ch1 cd42 Damage=58 | Power Surg T2[T3] ch1 cd32 d10 DamagePe=39,BonusPer=49 | Storm Clou T1[L] ch1 cd205 DPS=112,Lightnin=89
+  7200 L13  9    32  Cultist Sacrifice
+        Lightning  T1[T2] ch2 cd26/6 DPS=9 | Static Cha T1 ch1 cd22 Damage=61 | Power Surg T2[T3] ch1 cd32 d10 DamagePe=40,BonusPer=51 | Storm Clou T2 ch1 cd205 DPS=114,Lightnin=91
+  8800 L15 11    40  Spirit Lifesteal
+        Lightning  T1[T2] ch2 cd26/6 DPS=10 | Static Cha T1[T2] ch1 cd22 Damage=67 | Power Surg T2[T3] ch1 cd32 d10 DamagePe=43,BonusPer=56 | Storm Clou T2[T3] ch1 cd205 DPS=119,Lightnin=95
+  9600 L16 12    42  Sprint Boots
+        Lightning  T1[T2] ch2 cd26/6 DPS=10 | Static Cha T1[T2] ch1 cd22 Damage=68 | Power Surg T2[T3] ch1 cd32 d10 DamagePe=44,BonusPer=56 | Storm Clou T2[T3] ch1 cd205 DPS=120,Lightnin=96
+ 11200 L18 14    51  Healbane
+        Lightning  T1[T3] ch2 cd26/6 DPS=10 | Static Cha T1[T2] ch1 cd22 Damage=75 | Power Surg T2[T3] ch1 cd32 d10 DamagePe=47,BonusPer=61 | Storm Clou T3 ch1 cd205 DPS=190,Lightnin=100
+ 12000 L19 15    52  Enduring Speed
+        Lightning  T1[T3] ch2 cd26/6 DPS=10 | Static Cha T1[T3] ch1 cd22 Damage=76 | Power Surg T2[T3] ch1 cd32 d10 DamagePe=48,BonusPer=62 | Storm Clou T3 ch1 cd205 DPS=191,Lightnin=101
+ 13600 L20 16    72  Mystic Vulnerability
+        Lightning  T1[T3] ch2 cd26/6 DPS=11 | Static Cha T1[T3] ch1 cd22 Damage=92 | Power Surg T2[T3] ch1 cd32 d10 DamagePe=55,BonusPer=73 | Storm Clou T3 ch1 cd205 DPS=203,Lightnin=111
+ 15200 L22 18    81  Duration Extender [imbue Storm Cloud]
+        Lightning  T1[T3] ch2 cd26/6 DPS=12 | Static Cha T1[T3] ch1 cd22 Damage=99 | Power Surg T3 ch1 cd32 d20 DamagePe=58,BonusPer=78 | Storm Clou T3 ch1 cd205 DPS=209,Lightnin=116
+ 16800 L23 19    89  Compress Cooldown [imbue Power Surge]
+        Lightning  T1[T3] ch2 cd26/6 DPS=12 | Static Cha T1[T3] ch1 cd22 Damage=106 | Power Surg T3 ch1 cd32 d20 DamagePe=61,BonusPer=82 | Storm Clou T3 ch1 cd205 DPS=214,Lightnin=120
+ 17600 L24 20    90  Mystic Expansion [imbue Storm Cloud]
+        Lightning  T2[T3] ch2 cd26/6 DPS=12 | Static Cha T1[T3] ch1 cd22 Damage=107 | Power Surg T3 ch1 cd32 d20 DamagePe=62,BonusPer=83 | Storm Clou T3 ch1 cd205 DPS=214,Lightnin=120
+ 18400 L24 20   110  Arcane Surge
+        Lightning  T2[T3] ch2 cd26/6 DPS=13 | Static Cha T1[T3] ch1 cd22 Damage=122 | Power Surg T3 ch1 cd32 d20 DamagePe=69,BonusPer=94 | Storm Clou T3 ch1 cd205 DPS=226,Lightnin=130
+ 23200 L27 23   121  Escalating Exposure
+        Lightning  T2[T3] ch2 cd26/6 DPS=14 | Static Cha T1[T3] ch1 cd22 Damage=131 | Power Surg T3 ch1 cd32 d20 DamagePe=73,BonusPer=100 | Storm Clou T3 ch1 cd205 DPS=232,Lightnin=135
+ 24800 L28 24   129  Superior Duration
+        Lightning  T2[T3] ch2 cd26/6 DPS=14 | Static Cha T1[T3] ch1 cd22 Damage=137 | Power Surg T3 ch1 cd32 d20 DamagePe=76,BonusPer=104 | Storm Clou T3 ch1 cd205 DPS=237,Lightnin=139
+ 31200 L30 26   131  Unstoppable
+        Lightning  T3 ch2 cd26/6 DPS=20 | Static Cha T1[T3] ch1 cd22 Damage=139 | Power Surg T3 ch1 cd32 d20 DamagePe=77,BonusPer=105 | Storm Clou T3 ch1 cd205 DPS=239,Lightnin=140
+ 32800 L31 27   132  Superior Cooldown
+        Lightning  T3 ch2 cd26/6 DPS=20 | Static Cha T2[T3] ch1 cd22 Damage=140 | Power Surg T3 ch1 cd32 d20 DamagePe=77,BonusPer=106 | Storm Clou T3 ch1 cd205 DPS=239,Lightnin=141
+ 37600 L32 28   133  Infuser
+        Lightning  T3 ch2 cd26/6 DPS=20 | Static Cha T2[T3] ch1 cd22 Damage=140 | Power Surg T3 ch1 cd32 d20 DamagePe=78,BonusPer=107 | Storm Clou T3 ch1 cd205 DPS=240,Lightnin=142
+ 40000 L33 29   134  Greater Expansion
+        Lightning  T3 ch2 cd26/6 DPS=20 | Static Cha T2[T3] ch1 cd22 Damage=141 | Power Surg T3 ch1 cd32 d20 DamagePe=78,BonusPer=107 | Storm Clou T3 ch1 cd205 DPS=241,Lightnin=142
+ 46400 L35 31   176  Diviner's Kevlar
+        Lightning  T3 ch2 cd26/6 DPS=22 | Static Cha T2[T3] ch1 cd22 Damage=175 | Power Surg T3 ch1 cd32 d20 DamagePe=94,BonusPer=130 | Storm Clou T3 ch1 cd205 DPS=266,Lightnin=163
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @800 Monster Rounds [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: (no game text)
+    at buy: not computed (needs play data)
+- @4800 Surge of Power [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Power Surge; needs it trained and the stat the item raises
+    game text: Imbue an ability with permanent Spirit Power. When that ability is used, gain bonus Move Speed and maintain full speed while attacking.
+    at buy: Power Surge T2: cd 32s, duration 10s, charges 1; with imbue: DamagePerChain 39, BonusPerChain 49
+- @7200 Cultist Sacrifice [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Target an enemy NPC and consume it for {s:BonusSoulsPct}% Bonus Souls and grants a powerful long lasting buff.
+    at buy: not computed (needs play data)
+- @13600 Mystic Vulnerability [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: When an enemy takes {g:citadel_inline_attribute:'SpiritDamage'}, they have their {g:citadel_inline_attribute:'SpiritResist'} reduced. | vdata: proc damage types ABILITY
+    at buy: spirit sources: Lightning Ball, Static Charge, Power Surge, Storm Cloud
+- @15200 Duration Extender [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Storm Cloud; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its Duration.
+    at buy: Storm Cloud T3: cd 205s, duration 0s, charges 1; duration-scaled props: AbilityChannelTime=14
+- @16800 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Power Surge; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Power Surge T3: cd 32s, duration 20s, charges 1; saves 5.8s/cast (1.88->2.29 casts/min)
+- @17600 Mystic Expansion [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Storm Cloud; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its range and effect radius.
+    at buy: Storm Cloud T3: cd 205s, duration 0s, charges 1
+- @18400 Arcane Surge [dash] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs a dash-jump then an ability
+    game text: After you Dash-Jump, the next ability you use within {s:ArcaneSurgeWindow}s will have bonus Range, Duration, and Spirit Power.
+    at buy: not computed (needs play data)
+    reliability: its spirit is conditional: only the next ability after a dash-jump
+- @23200 Escalating Exposure [spiritsrc+stack] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} applies a stacking Spirit Amp that increases your {g:citadel_inline_attribute:'SpiritDamage'} to t... | vdata: proc damage types ABILITY
+    at buy: spirit sources: Lightning Ball, Static Charge, Power Surge, Storm Cloud
+    reliability: max 12 stacks, one per 0.7s of spirit hits = 8.4s of continuous spirit damage to max
+- @24800 Superior Duration [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Increases the duration of your abilities and items.
+    at buy: 4 abilities trained, summed cooldown 285s
+- @32800 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 285s; 20% saves 57.0s per rotation
+- @37600 Infuser [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Gain Spirit Lifesteal and Spirit Power.
+    at buy: spirit sources: Lightning Ball, Static Charge, Power Surge, Storm Cloud
+
+no trigger condition (plain stats/actives): Extra Spirit, Extra Stamina, Spirit Lifesteal, Sprint Boots, Healbane, Enduring Speed, Unstoppable, Greater Expansion, Diviner's Kevlar

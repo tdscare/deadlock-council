@@ -1,0 +1,129 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: infernus
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:11:03Z
+BODY-SHA: 6d7c34608080e513e102cdc737750601b978f72d5a504da2c9f350a076e769c0
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Rapid Rounds: retained-or-upgraded (-> Swift Striker,Burst Fire)
+  Duration Extender: retained-or-upgraded (-> Superior Duration)
+  Improved Spirit: retained
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Extended Magazine: retained-or-upgraded (-> Titanic Magazine)
+  Toxic Bullets: retained
+  Bullet Lifesteal: retained-or-upgraded (-> Leech)
+  Spirit Lifesteal: retained-or-upgraded (-> Leech,Spiritual Overflow)
+  Healbane: retained
+  Swift Striker: retained
+  Titanic Magazine: retained
+  Superior Duration: retained
+  Burst Fire: retained
+  Spirit Rend: retained
+  Escalating Exposure: retained
+  Leech: retained
+  Spiritual Overflow: retained
+  Ricochet: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Boundless Spirit: situational-luxury
+  Indomitable: situational-luxury
+  Crippling Headshot: situational-luxury
+  Spirit Burn: situational-luxury
+  Witchmail: situational-luxury
+  Divine Barrier: situational-luxury
+  Armor Piercer: conditional branch (alternative/optional)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Extra Spirit, Rapid Rounds, Duration Extender, Improved Spirit, Mystic Vulnerability, Extended Magazine, Toxic Bullets
+  Mid · L-R                  -> main path (sequential): Bullet Lifesteal, Spirit Lifesteal, Healbane, Swift Striker, Titanic Magazine, Superior Duration, Burst Fire
+  Mid · cont.                -> main path (sequential): Spirit Rend
+  Late · L-R                 -> main path (sequential): Escalating Exposure, Leech, Spiritual Overflow, Ricochet
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Dispel Magic, Spirit Resilience, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Boundless Spirit, Indomitable, Crippling Headshot, Spirit Burn, Witchmail, Divine Barrier
+  Swap for Ricochet          -> alternative/optional (branch): Armor Piercer
+
+## Swift Striker: sold when buying Indomitable (I'm rich as fuck, luxury)
+  role of Swift Striker: retained; role of Indomitable: situational-luxury
+  Swift Striker: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 15200 souls (~15.0 min), replaced at ~42.8 min -> owned ~27.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 25600/14400/11200 -> after 24000/14400/11200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 75 min | window TR | key purchase times (min)
+  as built                                    |          85210 |      1.44 | Swift Striker 15, Indomitable 43
+  keep Swift Striker (slot cap ignored)       |          86060 |      1.49 | Swift Striker 15, Indomitable 44
+  skip Swift Striker                          |          85755 |      1.51 | Indomitable 42
+  sell Titanic Magazine instead               |          82594 |      1.29 | Swift Striker 15, Indomitable 43
+  keep Swift Striker (slot cap ignored) vs as built: d souls +254, d window TR +1.1% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  skip Swift Striker vs as built: d souls -12, d window TR +1.8% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: +, 0.75: -))
+  sell Titanic Magazine instead vs as built: d souls -1013, d window TR -10.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Swift Striker (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | skip Swift Striker: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: +, 0.75: -)) | sell Titanic Magazine instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Titanic Magazine: sold when buying Crippling Headshot (I'm rich as fuck, luxury)
+  role of Titanic Magazine: retained; role of Crippling Headshot: situational-luxury
+  Titanic Magazine: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 16000 souls (~15.5 min), replaced at ~42.8 min -> owned ~27.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 32000/8000/11200 -> after 30400/8000/11200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 75 min | window TR | key purchase times (min)
+  as built                                    |          80111 |      1.13 | Titanic Magazine 16, Crippling Headshot 43
+  keep Titanic Magazine (slot cap ignored)    |          83295 |      1.29 | Titanic Magazine 16, Crippling Headshot 44
+  skip Titanic Magazine                       |          80291 |      1.13 | Crippling Headshot 44
+  sell Swift Striker instead                  |          82460 |      1.24 | Titanic Magazine 16, Crippling Headshot 43
+  keep Titanic Magazine (slot cap ignored) vs as built: d souls +1603, d window TR +10.9% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Titanic Magazine vs as built: d souls +107, d window TR +0.3% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  sell Swift Striker instead vs as built: d souls +1244, d window TR +7.8% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  ammo mechanics (clip 27, reload 2.25 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Titanic Magazine): 8 s trade 62 bullets (53% not firing), 20 s 148 bullets (55% not firing, 5.5 magazines), damage 20 s 2786, refill uses 0.0
+    keep Titanic Magazine: 8 s trade 94 bullets (29% not firing), 20 s 206 bullets (38% not firing, 3.8 magazines), damage 20 s 4120, refill uses 0.0
+    without Crippling Headshot (keep Titanic Magazine): 8 s trade 94 bullets (29% not firing), 20 s 206 bullets (38% not firing, 3.8 magazines), damage 20 s 3864, refill uses 0.0
+    sell Swift Striker instead: 8 s trade 84 bullets (28% not firing), 20 s 192 bullets (34% not firing, 3.5 magazines), damage 20 s 3839, refill uses 0.0
+    sustained 20 s gun damage: selling Titanic Magazine costs 32% vs keeping it (both with Crippling Headshot); Crippling Headshot adds +7% on top of Titanic Magazine; selling Swift Striker instead: -7% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: the sale of Titanic Magazine lowers modelled sustained gun damage by 32% (ammo mechanics)
+  VERDICT: REVIEW: selling Titanic Magazine costs sustained gun output; Crippling Headshot does not replace its ammo role (quantified above). Alternatives for the slot: sell Swift Striker (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED); flipping assumptions: keep Titanic Magazine (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | skip Titanic Magazine: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Swift Striker instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Healbane: sold when buying Spirit Burn (I'm rich as fuck, luxury)
+  role of Healbane: retained; role of Spirit Burn: situational-luxury
+  Healbane: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 14400 souls (~14.2 min), replaced at ~42.8 min -> owned ~28.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 25600/8000/17600 -> after 25600/6400/17600; thresholds lost: vitality 8000; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 75 min | window TR | key purchase times (min)
+  as built                                    |          82152 |      1.23 | Healbane 14, Spirit Burn 43
+  keep Healbane (slot cap ignored)            |          83275 |      1.29 | Healbane 14, Spirit Burn 44
+  skip Healbane                               |          81761 |      1.19 | Spirit Burn 42
+  sell Titanic Magazine instead               |          80202 |      1.15 | Healbane 14, Spirit Burn 43
+  keep Healbane (slot cap ignored) vs as built: d souls +377, d window TR +5.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Healbane vs as built: d souls -67, d window TR -3.3% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Titanic Magazine instead vs as built: d souls -883, d window TR -3.1% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: no modelled stat for Spirit Burn (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: established 4.8k lost
+  VERDICT: KEEP AS WRITTEN (as-built sequence is not beaten robustly by the alternatives); evidence tier: VERIFIED GAME MECHANIC (walk arithmetic) + MODEL-ONLY value; flipping assumptions: keep Healbane (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | skip Healbane: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Titanic Magazine instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Toxic Bullets: sold when buying Witchmail (I'm rich as fuck, luxury)
+  role of Toxic Bullets: retained; role of Witchmail: situational-luxury
+  Toxic Bullets: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 9600 souls (~9.8 min), replaced at ~42.2 min -> owned ~32.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 25600/14400/11200 -> after 22400/14400/11200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 75 min | window TR | key purchase times (min)
+  as built                                    |          86713 |      1.53 | Toxic Bullets 10, Witchmail 42
+  keep Toxic Bullets (slot cap ignored)       |          86592 |      1.50 | Toxic Bullets 10, Witchmail 44
+  skip Toxic Bullets                          |          90261 |      2.12 | Witchmail 39
+  sell Titanic Magazine instead               |          83216 |      1.32 | Toxic Bullets 10, Witchmail 43
+  keep Toxic Bullets (slot cap ignored) vs as built: d souls -6, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Toxic Bullets vs as built: d souls +1203, d window TR +15.9% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Titanic Magazine instead vs as built: d souls -1179, d window TR -9.3% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Toxic Bullets'] differ from 'as built' only through items with no modelled stat (Toxic Bullets contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: no modelled stat for Toxic Bullets (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Titanic Magazine instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

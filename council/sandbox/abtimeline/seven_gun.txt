@@ -1,0 +1,89 @@
+# seven_gun | Seven | Rizuhble's Static Shock Seven
+abilities: 1=Lightning Ball (citadel_ability_lightning_ball, start_trained=false, Signature) / 2=Static Charge (citadel_ability_static_charge, start_trained=false, Signature) / 3=Power Surge (ability_power_surge, start_trained=false, Signature) / 4=Storm Cloud (citadel_ability_storm_cloud, start_trained=false, Ultimate)
+order: 1331234324141224
+model A (data):  Lightning :U@0  Power Surg:U@500  Power Surg:T1@500  Lightning :T1@900  Static Cha:U@1400  Power Surg:T2@2600  Storm Clou:U@3200  Power Surg:T3@6800  Static Cha:T1@7600  Storm Clou:T1@8400  Lightning :T2@10100  Storm Clou:T2@11900  Lightning :T3@17400  Static Cha:T2@20600  Static Cha:T3@32100  Storm Clou:T3@48600
+model B (old):   Lightning :T1@200  Power Surg:T1@900  Power Surg:T2@2000  Lightning :T2@2600  Static Cha:T1@3900  Power Surg:T3@4600  Storm Clou:U@5300  Static Cha:T2@6800  Storm Clou:T1@7600  Lightning :T3@8400  Storm Clou:T2@9200  Static Cha:T3@11000  Storm Clou:T3@12800
+tier upgrades: Lightning Ba: AbilityCharges+1 / SlowPercent+28,MaxLifetime+1 / DPS+58.5,ShockRadius+1.75 | Static Charg: AbilityCooldown-20 / ShockRadius+7,AbilityCastRange+5 / StunDuration+0.9,Damage+160 | Power Surge: AbilityCooldown-18 / BonusMoveSpeed+3,BonusPerChain+8,DamagePerChain+8,BonusPerChain+0.23x,DamagePerChain+0.23x / TechResistDebuff-15,DebuffDuration+10,AbilityDuration+10 | Storm Cloud: BulletResistOnActive+55 / Radius+10,InitialRadius+5,AbilityChannelTime+7 / DPS+65,FlightControlEnabled+4
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  Monster Rounds
+        Lightning  U[T1] ch1 cd26/6 DPS=8 | Static Cha L[U] | Power Surg T1[U] ch1 cd32 d10 DamagePe=10,BonusPer=11 | Storm Clou L
+  1600 L5   2     4  High-Velocity Rounds
+        Lightning  T1 ch2 cd26/6 DPS=8 | Static Cha U ch1 cd42 Damage=38 | Power Surg T1 ch1 cd32 d10 DamagePe=11,BonusPer=11 | Storm Clou L
+  2400 L6   3    12  Opening Rounds
+        Lightning  T1 ch2 cd26/6 DPS=8 | Static Cha U ch1 cd42 Damage=45 | Power Surg T1[T2] ch1 cd32 d10 DamagePe=12,BonusPer=14 | Storm Clou L
+  3200 L8   4    32  Extra Spirit
+        Lightning  T1[T2] ch2 cd26/6 DPS=9 | Static Cha U ch1 cd42 Damage=60 | Power Surg T2 ch1 cd32 d10 DamagePe=30,BonusPer=35 | Storm Clou U[L] ch1 cd205 DPS=114,Lightnin=91
+  4000 L9   5    33  Rapid Rounds
+        Lightning  T1[T2] ch2 cd26/6 DPS=9 | Static Cha U[T1] ch1 cd42 Damage=61 | Power Surg T2 ch1 cd32 d10 DamagePe=30,BonusPer=36 | Storm Clou U[L] ch1 cd205 DPS=115,Lightnin=91
+  4800 L10  6    34  Swift Striker
+        Lightning  T1[T2] ch2 cd26/6 DPS=9 | Static Cha U[T1] ch1 cd42 Damage=62 | Power Surg T2[T3] ch1 cd32 d10 DamagePe=31,BonusPer=37 | Storm Clou U[L] ch1 cd205 DPS=115,Lightnin=92
+  7200 L13  9    37  Cultist Sacrifice
+        Lightning  T1[T2] ch2 cd26/6 DPS=9 | Static Cha U[T2] ch1 cd42 Damage=64 | Power Surg T3 ch1 cd32 d20 DamagePe=32,BonusPer=38 | Storm Clou U ch1 cd205 DPS=117,Lightnin=94
+  8800 L15 11    47  Duration Extender [imbue Power Surge]
+        Lightning  T1[T3] ch2 cd26/6 DPS=10 | Static Cha T1[T2] ch1 cd22 Damage=73 | Power Surg T3 ch1 cd32 d20 DamagePe=36,BonusPer=44 | Storm Clou T1 ch1 cd205 DPS=123,Lightnin=99
+ 11200 L18 14    64  Surge of Power [imbue Power Surge]
+        Lightning  T2[T3] ch2 cd26/6 DPS=11 | Static Cha T1[T3] ch1 cd22 Damage=85 | Power Surg T3 ch1 cd32 d20 DamagePe=52,BonusPer=68 | Storm Clou T1[T2] ch1 cd205 DPS=133,Lightnin=107
+ 12800 L20 16    72  Spirit Lifesteal
+        Lightning  T2[T3] ch2 cd26/6 DPS=11 | Static Cha T1[T3] ch1 cd22 Damage=92 | Power Surg T3 ch1 cd32 d20 DamagePe=55,BonusPer=73 | Storm Clou T2[T3] ch1 cd205 DPS=138,Lightnin=111
+ 13600 L20 16    72  Sprint Boots
+        Lightning  T2[T3] ch2 cd26/6 DPS=11 | Static Cha T1[T3] ch1 cd22 Damage=92 | Power Surg T3 ch1 cd32 d20 DamagePe=55,BonusPer=73 | Storm Clou T2[T3] ch1 cd205 DPS=138,Lightnin=111
+ 14400 L21 17    73  Enduring Speed
+        Lightning  T2[T3] ch2 cd26/6 DPS=11 | Static Cha T1[T3] ch1 cd22 Damage=93 | Power Surg T3 ch1 cd32 d20 DamagePe=55,BonusPer=74 | Storm Clou T2[T3] ch1 cd205 DPS=139,Lightnin=112
+ 16000 L22 18    99  Improved Spirit
+        Lightning  T2[T3] ch2 cd26/6 DPS=12 | Static Cha T1[T3] ch1 cd22 Damage=114 | Power Surg T3 ch1 cd32 d20 DamagePe=65,BonusPer=88 | Storm Clou T2[T3] ch1 cd205 DPS=154,Lightnin=125
+ 19200 L25 21   102  Tesla Bullets
+        Lightning  T3 ch2 cd26/6 DPS=18 | Static Cha T1[T3] ch1 cd22 Damage=116 | Power Surg T3 ch1 cd32 d20 DamagePe=66,BonusPer=90 | Storm Clou T2[T3] ch1 cd205 DPS=156,Lightnin=126
+ 20800 L26 22   110  Mystic Vulnerability
+        Lightning  T3 ch2 cd26/6 DPS=19 | Static Cha T2[T3] ch1 cd22 Damage=123 | Power Surg T3 ch1 cd32 d20 DamagePe=69,BonusPer=94 | Storm Clou T2[T3] ch1 cd205 DPS=161,Lightnin=130
+ 24000 L27 23   112  Toxic Bullets
+        Lightning  T3 ch2 cd26/6 DPS=19 | Static Cha T2[T3] ch1 cd22 Damage=123 | Power Surg T3 ch1 cd32 d20 DamagePe=70,BonusPer=95 | Storm Clou T2[T3] ch1 cd205 DPS=162,Lightnin=131
+ 28800 L29 25   121  Escalating Exposure
+        Lightning  T3 ch2 cd26/6 DPS=19 | Static Cha T2[T3] ch1 cd22 Damage=131 | Power Surg T3 ch1 cd32 d20 DamagePe=73,BonusPer=100 | Storm Clou T2[T3] ch1 cd205 DPS=167,Lightnin=135
+ 33600 L31 27   123  Spiritual Overflow
+        Lightning  T3 ch2 cd26/6 DPS=20 | Static Cha T3 ch1 cd22 Damage=292 | Power Surg T3 ch1 cd32 d20 DamagePe=74,BonusPer=101 | Storm Clou T2[T3] ch1 cd205 DPS=169,Lightnin=136
+ 40000 L33 29   125  Unstoppable
+        Lightning  T3 ch2 cd26/6 DPS=20 | Static Cha T3 ch1 cd22 Damage=294 | Power Surg T3 ch1 cd32 d20 DamagePe=75,BonusPer=102 | Storm Clou T2[T3] ch1 cd205 DPS=170,Lightnin=138
+ 44800 L34 30   167  Boundless Spirit
+        Lightning  T3 ch2 cd26/6 DPS=22 | Static Cha T3 ch1 cd22 Damage=327 | Power Surg T3 ch1 cd32 d20 DamagePe=90,BonusPer=125 | Storm Clou T2[T3] ch1 cd205 DPS=195,Lightnin=159
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @800 Monster Rounds [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: (no game text)
+    at buy: not computed (needs play data)
+- @2400 Opening Rounds [enemyhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on enemy health % (EnemyLifeThreshold=50)
+    game text: Your attacks have additional Weapon Damage against enemies above {s:EnemyLifeThreshold}% health.
+    at buy: not computed (needs play data)
+- @7200 Cultist Sacrifice [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Target an enemy NPC and consume it for {s:BonusSoulsPct}% Bonus Souls and grants a powerful long lasting buff.
+    at buy: not computed (needs play data)
+- @8800 Duration Extender [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Power Surge; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its Duration.
+    at buy: Power Surge T3: cd 32s, duration 20s, charges 1; duration-scaled props: AbilityDuration=20, DamagePerChain=18, DebuffDuration=10
+- @11200 Surge of Power [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Power Surge; needs it trained and the stat the item raises
+    game text: Imbue an ability with permanent Spirit Power. When that ability is used, gain bonus Move Speed and maintain full speed while attacking.
+    at buy: Power Surge T3: cd 32s, duration 20s, charges 1; with imbue: DamagePerChain 52, BonusPerChain 68
+- @19200 Tesla Bullets [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=15)
+    game text: Your bullets have a chance to shock your target. The shock will jump to a nearby enemy.
+    at buy: not computed (needs play data)
+- @20800 Mystic Vulnerability [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: When an enemy takes {g:citadel_inline_attribute:'SpiritDamage'}, they have their {g:citadel_inline_attribute:'SpiritResist'} reduced. | vdata: proc damage types ABILITY
+    at buy: spirit sources: Lightning Ball, Static Charge, Power Surge, Storm Cloud, upgrade_chain_lightning
+- @28800 Escalating Exposure [spiritsrc+stack] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} applies a stacking Spirit Amp that increases your {g:citadel_inline_attribute:'SpiritDamage'} to t... | vdata: proc damage types ABILITY
+    at buy: spirit sources: Lightning Ball, Static Charge, Power Surge, Storm Cloud, upgrade_chain_lightning
+    reliability: max 12 stacks, one per 0.7s of spirit hits = 8.4s of continuous spirit damage to max
+- @33600 Spiritual Overflow [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack
+    game text: Gain bonus Fire Rate, Spirit Power and Spirit Lifesteal by charging up when shooting enemy heroes.
+    at buy: not computed (needs play data)
+
+no trigger condition (plain stats/actives): High-Velocity Rounds, Extra Spirit, Rapid Rounds, Swift Striker, Spirit Lifesteal, Sprint Boots, Enduring Speed, Improved Spirit, Toxic Bullets, Unstoppable, Boundless Spirit

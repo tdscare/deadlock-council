@@ -1,0 +1,129 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: solomon_support
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:11:47Z
+BODY-SHA: f606e6a6e702f80b38744118b4726304999d953257a7e2fc140b01d705bac3d6
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Healing Rite: retained-or-upgraded (-> Healing Nova)
+  High-Velocity Rounds: retained-or-upgraded (-> Opening Rounds)
+  Opening Rounds: retained
+  Grit: retained-or-upgraded (-> Guardian Ward)
+  Extra Stamina: retained-or-upgraded (-> Stamina Mastery)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Superior Cooldown: retained
+  Healing Nova: retained
+  Healing Booster: retained
+  Sprint Boots: retained-or-upgraded (-> Trophy Collector)
+  Trophy Collector: retained
+  Guardian Ward: retained-or-upgraded (-> Divine Barrier)
+  Heroic Aura: retained
+  Enchanter's Emblem: retained
+  Cursed Relic: retained
+  Warp Stone: retained
+  Boundless Spirit: retained
+  Stamina Mastery: retained
+  Divine Barrier: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Knockdown: conditional branch (counter menu)
+  Alchemical Fire: conditional branch (alternative/optional)
+  Echo Shard: situational-luxury
+  Witchmail: situational-luxury
+  Cheat Death: situational-luxury
+  Refresher: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+  Healing Tempo: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Extra Spirit, Healing Rite, High-Velocity Rounds, Opening Rounds, Grit, Extra Stamina, Improved Spirit, Compress Cooldown
+  Mid · L-R                  -> main path (sequential): Superior Cooldown, Healing Nova, Healing Booster, Sprint Boots, Trophy Collector, Guardian Ward, Heroic Aura, Enchanter's Emblem
+  Late · L-R                 -> main path (sequential): Cursed Relic, Warp Stone, Boundless Spirit, Stamina Mastery, Divine Barrier
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Counterspell, Dispel Magic, Spirit Resilience, Unstoppable, Knockdown
+  Swap for Heroic Aura       -> alternative/optional (branch): Alchemical Fire
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Echo Shard, Witchmail, Cheat Death, Refresher
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown, Healing Tempo
+
+## Trophy Collector: sold when buying Echo Shard (I'm rich as fuck, luxury)
+  role of Trophy Collector: retained; role of Echo Shard: situational-luxury
+  Trophy Collector: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 14400 souls (~15.0 min), replaced at ~64.0 min -> owned ~49.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/20800/22400 -> after 4800/19200/22400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          51025 |      0.47 | Trophy Collector 15, Echo Shard 64
+  keep Trophy Collector (slot cap ignored)    |          50994 |      0.47 | Trophy Collector 15, Echo Shard 66
+  skip Trophy Collector                       |          51467 |      0.48 | Echo Shard 63
+  sell Opening Rounds instead                 |          50864 |      0.46 | Trophy Collector 15, Echo Shard 64
+  keep Trophy Collector (slot cap ignored) vs as built: d souls -16, d window TR -0.2% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Trophy Collector vs as built: d souls +239, d window TR +2.2% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Opening Rounds instead vs as built: d souls -77, d window TR -1.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Trophy Collector'] differ from 'as built' only through items with no modelled stat (Echo Shard contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Echo Shard has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Echo Shard (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Enchanter's Emblem: sold when buying Witchmail (I'm rich as fuck, luxury)
+  role of Enchanter's Emblem: retained; role of Witchmail: situational-luxury
+  Enchanter's Emblem: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 20000 souls (~21.8 min), replaced at ~64.0 min -> owned ~42.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/27200/16000 -> after 4800/25600/16000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          50999 |      0.44 | Enchanter's Emblem 22, Witchmail 64
+  keep Enchanter's Emblem (slot cap ignored)  |          51058 |      0.45 | Enchanter's Emblem 22, Witchmail 66
+  skip Enchanter's Emblem                     |          50517 |      0.42 | Witchmail 63
+  sell Opening Rounds instead                 |          50934 |      0.44 | Enchanter's Emblem 22, Witchmail 64
+  keep Enchanter's Emblem (slot cap ignored) vs as built: d souls +12, d window TR +0.2% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Enchanter's Emblem vs as built: d souls -294, d window TR -3.5% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Opening Rounds instead vs as built: d souls -29, d window TR -0.3% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT
+
+## Warp Stone: sold when buying Cheat Death (I'm rich as fuck, luxury)
+  role of Warp Stone: retained; role of Cheat Death: situational-luxury
+  Warp Stone: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 29600 souls (~34.5 min), replaced at ~62.5 min -> owned ~28.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/27200/16000 -> after 4800/24000/16000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          50845 |      0.39 | Warp Stone 34, Cheat Death 62
+  keep Warp Stone (slot cap ignored)          |          51075 |      0.41 | Warp Stone 34, Cheat Death 66
+  skip Warp Stone                             |          50008 |      0.33 | Cheat Death 61
+  sell Opening Rounds instead                 |          50944 |      0.41 | Warp Stone 34, Cheat Death 64
+  keep Warp Stone (slot cap ignored) vs as built: d souls +81, d window TR +2.8% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Warp Stone vs as built: d souls -384, d window TR -11.4% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY (sign robust in 94% of cells; no measured inputs)
+  sell Opening Rounds instead vs as built: d souls +16, d window TR +1.7% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  model limit: Warp Stone has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: no modelled stat for Warp Stone (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Warp Stone (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | skip Warp Stone: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+
+## Enchanter's Emblem: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Enchanter's Emblem: retained; role of Refresher: situational-luxury
+  Enchanter's Emblem: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 20000 souls (~21.8 min), replaced at ~64.0 min -> owned ~42.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/20800/22400 -> after 4800/19200/22400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          51033 |      0.45 | Enchanter's Emblem 22, Refresher 64
+  keep Enchanter's Emblem (slot cap ignored)  |          51096 |      0.45 | Enchanter's Emblem 22, Refresher 66
+  skip Enchanter's Emblem                     |          50554 |      0.43 | Refresher 63
+  sell Opening Rounds instead                 |          50970 |      0.44 | Enchanter's Emblem 22, Refresher 64
+  keep Enchanter's Emblem (slot cap ignored) vs as built: d souls +12, d window TR +0.2% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Enchanter's Emblem vs as built: d souls -294, d window TR -3.5% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Opening Rounds instead vs as built: d souls -25, d window TR -0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled)

@@ -1,0 +1,107 @@
+{
+ "id": "duo_b3_doorman_venator_trap",
+ "title": "Doorman + Venator: Cart through a door onto Snap Trap",
+ "hero": "The Doorman",
+ "playstyle": "Duo Doorman / Duo Venator",
+ "builds": [
+  "doorman_duo_push",
+  "venator_duo_doorman"
+ ],
+ "question": "Does a Cart push carry an enemy through a door onto an armed Snap Trap, and how long is the target locked?",
+ "hypothesis": "H-B3-2.1 a carted hero passes through Doorway and exits at the other door. H-B3-2.2 a trap 1-2m in front of the exit door roots them (2.25s T2, ~2.75s with Duration Extender). H-B3-2.3 Gutshot at the exit door wall-stuns every time (door on wall, 7m). H-B3-2.4 time-to-kill on a 2500 HP bot drops >=30% vs Venator fighting the bot in the open.",
+ "arms": [
+  {
+   "name": "open_field",
+   "items": [
+    "Warp Stone"
+   ],
+   "ability_order": "2231243234413411",
+   "souls": 22000,
+   "notes": "base Venator chases the bot, no Doorman"
+  },
+  {
+   "name": "door_trap",
+   "items": [
+    "Duration Extender (Snap Trap)"
+   ],
+   "ability_order": "2231243234413411",
+   "souls": 22000,
+   "notes": "Doorman doors + Cart, trap at exit door"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "22k souls",
+  "souls": 22000,
+  "position": "exit door on a wall near Venator; entry door 30m away beside the bot",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 1,
+    "items": [],
+    "behaviour": "walks away at full speed when hit",
+    "hp": "2500"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "The Doorman",
+    "count": 1,
+    "role": "doors + cart"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "HP"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Doorman places doors; Venator kicks a trap 1.5m in front of the exit door",
+  "Doorman Carts the bot into the entry door",
+  "Venator Gutshots toward the wall, then heavy melee",
+  "Record root duration, wall stun yes/no, time to kill"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "time_to_kill",
+   "unit": "s",
+   "how": "stopwatch from first hit to death",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": true
+  },
+  {
+   "name": "root_duration",
+   "unit": "s",
+   "how": "debuff timer",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "cart_through_door",
+   "unit": "bool",
+   "how": "visual",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "time_to_kill",
+  "min_effect_pct": 30,
+  "min_trials": 5,
+  "rule": "SUPPORTS if door_trap is >=30% faster with non-overlapping ranges. If cart_through_door is false, change the combo to carting straight onto the trap (no door) and retest. If REFUTED, put Warp Stone back in venator_duo_doorman."
+ },
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

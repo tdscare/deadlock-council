@@ -1,0 +1,25 @@
+// HostLoad.cs.staged - STAGED DESIGN SKELETON, NOT COMPILED, NOT IN THE BUILD (extension .staged). Rename to HostLoad.cs only through the maintenance protocol + buildcheck.
+// Purpose: record host contention per task and INVALIDATE (interrupt+refund+backoff, never "fail") a task whose timing was unreliable. Does not throttle anything.
+using System.Diagnostics;
+namespace SandboxTester;
+public partial class SandboxTester
+{
+	private static long _hlLast, _hlWinStart; private static int _hlFrames, _hlOver31, _hlOver100; private static double _hlSum, _hlMax;
+	private static TimeSpan _hlCpu0; private static long _hlCpuAt;
+	internal static int HlBadWindows;          // consecutive 10 s windows judged unreliable
+	// call once per game frame from OnGameFrame (before QrTick)
+	private static void HostLoadTick()
+	{
+		long t = Stopwatch.GetTimestamp(); double ms = _hlLast == 0 ? 0 : (t - _hlLast) * 1000.0 / Stopwatch.Frequency; _hlLast = t;
+		if (ms > 0) { _hlFrames++; _hlSum += ms; if (ms > _hlMax) _hlMax = ms; if (ms > 31.25) _hlOver31++; if (ms > 100) _hlOver100++; }
+		long now = Environment.TickCount64; if (_hlWinStart == 0) _hlWinStart = now;
+		if (now - _hlWinStart < 10000) return;
+		double cpu = 0; try { var p = Process.GetCurrentProcess(); var c = p.TotalProcessorTime; if (_hlCpuAt != 0) cpu = (c - _hlCpu0).TotalMilliseconds / (now - _hlCpuAt) * 100.0; _hlCpu0 = c; _hlCpuAt = now; } catch { }
+		bool bad = _hlFrames > 100 && (_hlOver31 * 100.0 / _hlFrames > 5.0 || _hlMax > 250);   // server runs 64 Hz = 15.6 ms/frame; >31 ms = more than 2 frames late
+		HlBadWindows = bad ? HlBadWindows + 1 : 0;
+		Log($"HOSTLOAD frames={_hlFrames} avg={_hlSum / Math.Max(1, _hlFrames):0.0}ms max={_hlMax:0}ms over31={_hlOver31} over100={_hlOver100} serverCpu={cpu:0}%one-core bad={bad}");
+		var r = _qr; if (r != null && bad) lock (r) r.TimingBad++;      // QRun.TimingBad: new int field
+		_hlFrames = _hlOver31 = _hlOver100 = 0; _hlSum = _hlMax = 0; _hlWinStart = now;
+	}
+	// QFinalize: if (r.TimingBad >= 2) => QAbort("timing unreliable (host contention): " + r.TimingBad + " bad 10 s windows", refund:true, newState:"pending", persist:true, operatorAction:true) + t["notBefore"] = now+180 s ; NOT a failure.
+}

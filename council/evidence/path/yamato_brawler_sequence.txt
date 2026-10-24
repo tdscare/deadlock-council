@@ -1,0 +1,162 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: yamato_brawler
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:12:21Z
+BODY-SHA: e2ee4d49ba800b38dc979d6848d52e3359e7697102d4ff61a4769ffe7ee9ec04
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Restorative Shot: temporary (bought to be sold)
+  Melee Lifesteal: retained-or-upgraded (-> Lifestrike)
+  Close Quarters: temporary (bought to be sold)
+  Stalker: retained
+  Grit: retained-or-upgraded (-> Reactive Barrier)
+  Recharging Rush: retained
+  Lifestrike: retained
+  Extra Regen: retained-or-upgraded (-> Healing Booster)
+  Melee Charge: retained-or-upgraded (-> Crushing Fists)
+  Healing Booster: retained
+  Spirit Strike: retained-or-upgraded (-> Spirit Snatch)
+  Bullet Resist Shredder: retained
+  Hunter's Aura: retained
+  Reactive Barrier: retained
+  High-Velocity Rounds: retained-or-upgraded (-> Express Shot)
+  Express Shot: retained
+  Berserker: retained
+  Crushing Fists: retained
+  Spirit Snatch: retained
+  Colossus: retained
+  Extra Health: conditional branch (lane alternative)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Healbane: conditional branch (counter menu)
+  Indomitable: situational-luxury
+  Witchmail: situational-luxury
+  Leech: situational-luxury
+  Refresher: situational-luxury
+  Cheat Death: situational-luxury
+  Divine Barrier: situational-luxury
+  Healing Tempo: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Health
+  Early · L-R                -> main path (sequential): Restorative Shot, Melee Lifesteal, Close Quarters, Stalker, Grit, Recharging Rush, Lifestrike, Extra Regen
+  Mid · L-R                  -> main path (sequential): Melee Charge, Healing Booster, Spirit Strike, Bullet Resist Shredder, Hunter's Aura, Reactive Barrier, High-Velocity Rounds, Express Shot
+  Mid · cont.                -> main path (sequential): Berserker
+  Late · L-R                 -> main path (sequential): Crushing Fists, Spirit Snatch, Colossus
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Counterspell, Dispel Magic, Unstoppable, Metal Skin, Spirit Resilience, Healbane
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Indomitable, Witchmail, Leech, Refresher, Cheat Death, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Healing Tempo
+
+## Restorative Shot: sold when buying Express Shot (Mid · L-R, main)
+  role of Restorative Shot: temporary (bought to be sold); role of Express Shot: retained
+  Restorative Shot: price 800, resale 400, net cost of owning it 400 souls (0.4 min of reference income); first bought at 800 souls (~1.2 min), replaced at ~20.0 min -> owned ~18.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 13600/6400/2400 -> after 12800/6400/2400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 55 min | window TR | key purchase times (min)
+  as built                                    |          53694 |      1.29 | Restorative Shot 1, Express Shot 20
+  keep Restorative Shot                       |          53915 |      1.30 | Restorative Shot 1, Express Shot 20
+  skip Restorative Shot                       |          54080 |      1.32 | Express Shot 19
+  sell Recharging Rush instead                |          53406 |      1.27 | Restorative Shot 1, Express Shot 20
+  keep Restorative Shot vs as built: d souls +98, d window TR +0.7% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  skip Restorative Shot vs as built: d souls +128, d window TR +2.3% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY (sign robust in 88% of cells; no measured inputs)
+  sell Recharging Rush instead vs as built: d souls -145, d window TR -1.2% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: a computed alternative sequence is better: skip Restorative Shot
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Restorative Shot; evidence tier: MODEL-ONLY; flipping assumptions: keep Restorative Shot: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | skip Restorative Shot: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Recharging Rush instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Close Quarters: sold when buying Crushing Fists (Late · L-R, main)
+  role of Close Quarters: temporary (bought to be sold); role of Crushing Fists: retained
+  Close Quarters: price 800, resale 400, net cost of owning it 400 souls (0.4 min of reference income); first bought at 2400 souls (~3.2 min), replaced at ~27.0 min -> owned ~23.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 21600/6400/2400 -> after 20800/6400/2400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 55 min | window TR | key purchase times (min)
+  as built                                    |          53694 |      1.30 | Close Quarters 3, Crushing Fists 27
+  keep Close Quarters                         |          54083 |      1.33 | Close Quarters 3, Crushing Fists 27
+  skip Close Quarters                         |          53587 |      1.29 | Crushing Fists 27
+  sell Recharging Rush instead                |          53861 |      1.31 | Close Quarters 3, Crushing Fists 26
+  keep Close Quarters vs as built: d souls +153, d window TR +1.2% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -))
+  skip Close Quarters vs as built: d souls -153, d window TR -1.1% | souls: MODEL-ONLY (sign robust in 85% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Recharging Rush instead vs as built: d souls +72, d window TR +0.8% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  model limit: no modelled stat for Close Quarters, Crushing Fists (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Close Quarters: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -)) | skip Close Quarters: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Recharging Rush instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+
+## Stalker: sold when buying Witchmail (I'm rich as fuck, luxury)
+  role of Stalker: retained; role of Witchmail: situational-luxury
+  Stalker: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 4000 souls (~4.8 min), replaced at ~41.8 min -> owned ~37.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 19200/19200/4800 -> after 17600/19200/4800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 63 min | window TR | key purchase times (min)
+  as built                                    |          60494 |      1.26 | Stalker 5, Witchmail 42
+  keep Stalker (slot cap ignored)             |          60835 |      1.28 | Stalker 5, Witchmail 43
+  skip Stalker                                |          60345 |      1.24 | Witchmail 41
+  sell Recharging Rush instead                |          60747 |      1.27 | Stalker 5, Witchmail 42
+  keep Stalker (slot cap ignored) vs as built: d souls +140, d window TR +0.9% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  skip Stalker vs as built: d souls -107, d window TR -2.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Recharging Rush instead vs as built: d souls +65, d window TR +0.7% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Stalker (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | skip Stalker: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Recharging Rush instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+
+## Hunter's Aura: sold when buying Leech (I'm rich as fuck, luxury)
+  role of Hunter's Aura: retained; role of Leech: situational-luxury
+  Hunter's Aura: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 17600 souls (~16.8 min), replaced at ~40.8 min -> owned ~24.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 19200/19200/4800 -> after 16000/19200/4800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 63 min | window TR | key purchase times (min)
+  as built                                    |          67162 |      1.69 | Hunter's Aura 17, Leech 41
+  keep Hunter's Aura (slot cap ignored)       |          66532 |      1.60 | Hunter's Aura 17, Leech 43
+  skip Hunter's Aura                          |          68032 |      1.81 | Leech 39
+  sell Recharging Rush instead                |          66519 |      1.60 | Hunter's Aura 17, Leech 42
+  keep Hunter's Aura (slot cap ignored) vs as built: d souls -95, d window TR -3.0% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Hunter's Aura vs as built: d souls +168, d window TR +5.1% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Recharging Rush instead vs as built: d souls -109, d window TR -2.1% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Hunter's Aura (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | skip Hunter's Aura: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Recharging Rush instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Recharging Rush: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Recharging Rush: retained; role of Refresher: situational-luxury
+  Recharging Rush: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 6400 souls (~7.0 min), replaced at ~41.8 min -> owned ~34.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 19200/12800/11200 -> after 17600/12800/11200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 63 min | window TR | key purchase times (min)
+  as built                                    |          60972 |      1.27 | Recharging Rush 7, Refresher 42
+  keep Recharging Rush (slot cap ignored)     |          61035 |      1.27 | Recharging Rush 7, Refresher 43
+  skip Recharging Rush                        |          60751 |      1.26 | Refresher 41
+  sell Bullet Resist Shredder instead         |          60318 |      1.23 | Recharging Rush 7, Refresher 42
+  keep Recharging Rush (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Recharging Rush vs as built: d souls -192, d window TR -0.9% | souls: MODEL-ONLY (sign robust in 85% of cells; no measured inputs) | TR: INSUFFICIENT (effect within model noise)
+  sell Bullet Resist Shredder instead vs as built: d souls -335, d window TR -2.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  ammo mechanics (clip 12, reload 2.444 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Recharging Rush): 8 s trade 20 bullets (0% not firing), 20 s 42 bullets (11% not firing, 1.6 magazines), damage 20 s 4719, refill uses 0.0
+    keep Recharging Rush: 8 s trade 20 bullets (0% not firing), 20 s 42 bullets (11% not firing, 1.3 magazines), damage 20 s 4935, refill uses 0.0
+    without Refresher (keep Recharging Rush): 8 s trade 20 bullets (0% not firing), 20 s 42 bullets (11% not firing, 1.5 magazines), damage 20 s 4935, refill uses 0.0
+    sell Bullet Resist Shredder instead: 8 s trade 20 bullets (0% not firing), 20 s 42 bullets (11% not firing, 1.4 magazines), damage 20 s 4740, refill uses 0.0
+    sustained 20 s gun damage: selling Recharging Rush costs 4% vs keeping it (both with Refresher); Refresher adds +0% on top of Recharging Rush; selling Bullet Resist Shredder instead: -4% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Bullet Resist Shredder instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Express Shot: sold when buying Cheat Death (I'm rich as fuck, luxury)
+  role of Express Shot: retained; role of Cheat Death: situational-luxury
+  Express Shot: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 21200.0 souls (~20.0 min), replaced at ~40.8 min -> owned ~20.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 19200/19200/4800 -> after 16000/19200/4800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 63 min | window TR | key purchase times (min)
+  as built                                    |          59985 |      1.03 | Express Shot 20, Cheat Death 41
+  keep Express Shot (slot cap ignored)        |          60022 |      1.03 | Express Shot 20, Cheat Death 43
+  skip Express Shot                           |          60733 |      1.08 | Cheat Death 40
+  sell Recharging Rush instead                |          59887 |      1.02 | Express Shot 20, Cheat Death 42
+  keep Express Shot (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Express Shot vs as built: d souls +334, d window TR +4.5% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 97% of cells; no measured inputs)
+  sell Recharging Rush instead vs as built: d souls -44, d window TR -0.5% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: a computed alternative sequence is better: skip Express Shot
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Express Shot; evidence tier: MODEL-ONLY

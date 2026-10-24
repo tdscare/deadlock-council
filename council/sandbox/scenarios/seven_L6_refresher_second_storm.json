@@ -1,0 +1,89 @@
+{
+ "id": "seven_L6_refresher_second_storm",
+ "title": "Refresher second storm without Kevlar/Unstoppable",
+ "hero": "Seven",
+ "playstyle": "Ult Seven",
+ "builds": [
+  "seven"
+ ],
+ "question": "Does the Refresher storm get Diviner's Kevlar's barrier and +40 spirit (40 s cooldown) and keep Escalating Exposure stacks from the first storm?",
+ "hypothesis": "H-L6: second storm has no Kevlar barrier/spirit and no Unstoppable (60 s), Infuser only from 30 s; damage ~96% of the first because EE stacks (12 s x duration) carry over.",
+ "arms": [
+  {
+   "name": "REF",
+   "items": [
+    "upgrade_magic_storm",
+    "upgrade_arcane_surge",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_healbane",
+    "upgrade_cardio_calibrator",
+    "upgrade_escalating_exposure",
+    "upgrade_imbued_duration_extender",
+    "upgrade_cooldown_reduction",
+    "upgrade_magic_reach",
+    "upgrade_diviners_kevlar",
+    "upgrade_ability_refresher",
+    "upgrade_infuser"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 46400,
+   "notes": "cast 4 22; cast i(refresher) 0.7; cast 4 22"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "souls 46400 (levels.json)",
+  "souls": 46400,
+  "position": "mid lane, bots on a 300 u ring (inside the 40 m storm)",
+  "enemies": [
+   {
+    "hero": "Haze (bot)",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand, attacks disabled",
+    "hp": "ekeep 0.9"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 50 (heals never capped)",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance (enemies 3 at 300 u ring, main target 350 u)",
+  "hardreset between blocks (fresh cooldowns, no items)",
+  "Same souls/level/ability tiers (unlock 7) in every arm except the thing under test",
+  "Same bot heroes, HP keep-alive (ekeep 0.9) and resists",
+  "Arms interleaved A,B,A,B; A/A floor run first"
+ ],
+ "procedure": [
+  "give items; enemies 3 300 8; cast 4 23; cast refresher; mods; cast 4 23; mods"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "storm2_over_storm1",
+   "unit": "ratio",
+   "how": "damage csv split by mark",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "kevlar_on_storm2",
+   "unit": "bool",
+   "how": "'mods' shows Kevlar buff during storm 2",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "storm2_over_storm1",
+  "min_effect_pct": 5,
+  "min_trials": 5,
+  "rule": "ratio >= 0.9 and no Kevlar on storm 2 supports the anti-synergy note (Refresher stays rich-only)"
+ }
+}

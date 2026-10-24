@@ -1,0 +1,90 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: mcginnis_ult
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:12:46Z
+BODY-SHA: f14b53e959461d46d976a6d1f13304d5fb468c459098e7897c8962d2f59fc291
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Monster Rounds: temporary (bought to be sold)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Extra Stamina: retained-or-upgraded (-> Stamina Mastery)
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Duration Extender: retained-or-upgraded (-> Superior Duration)
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed)
+  Enduring Speed: retained
+  Stamina Mastery: retained
+  Mystic Slow: retained-or-upgraded (-> Lightning Scroll)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Superior Cooldown: retained
+  Debuff Reducer: retained-or-upgraded (-> Unstoppable)
+  Spirit Lifesteal: retained-or-upgraded (-> Infuser)
+  Escalating Exposure: retained
+  Unstoppable: retained
+  Boundless Spirit: retained
+  Lightning Scroll: retained
+  Superior Duration: retained
+  Greater Expansion: retained
+  Infuser: retained
+  Diviner's Kevlar: retained
+  Refresher: retained
+  Extra Regen: conditional branch (lane alternative)
+  Warp Stone: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Spirit Burn: situational-luxury
+  Divine Barrier: situational-luxury
+  Juggernaut: conditional branch (optional upgrade)
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Monster Rounds, Extra Spirit, Extra Stamina, Mystic Expansion, Compress Cooldown, Duration Extender, Sprint Boots, Enduring Speed
+  Mid · L-R                  -> main path (sequential): Stamina Mastery, Mystic Slow, Improved Spirit, Mystic Vulnerability, Superior Cooldown, Debuff Reducer, Spirit Lifesteal, Escalating Exposure
+  Late · L-R                 -> main path (sequential): Unstoppable, Boundless Spirit, Lightning Scroll, Superior Duration, Greater Expansion, Infuser, Diviner's Kevlar, Refresher
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Warp Stone, Metal Skin, Plated Armor, Dispel Magic, Counterspell, Spirit Resilience
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Spirit Burn, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Juggernaut, Transcendent Cooldown
+
+## Monster Rounds: sold when buying Lightning Scroll (Late · L-R, main)
+  role of Monster Rounds: temporary (bought to be sold); role of Lightning Scroll: retained
+  Monster Rounds: price 800, resale 400, net cost of owning it 400 souls (0.4 min of reference income); first bought at 800 souls (~1.0 min), replaced at ~42.5 min -> owned ~41.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 800/12800/26400 -> after 0/12800/26400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 93 min | window TR | key purchase times (min)
+  as built                                    |          64439 |      0.14 | Monster Rounds 1, Lightning Scroll 42
+  keep Monster Rounds                         |          65526 |      0.14 | Monster Rounds 1, Lightning Scroll 43
+  skip Monster Rounds                         |          63009 |      0.13 | Lightning Scroll 44
+  sell Boundless Spirit instead               |          65365 |      0.13 | Monster Rounds 1, Lightning Scroll 39
+  keep Monster Rounds vs as built: d souls +1104, d window TR +1.1% | souls: MODEL-ONLY (sign robust in 94% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Monster Rounds vs as built: d souls -1430, d window TR -2.8% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 88% of cells; no measured inputs)
+  sell Boundless Spirit instead vs as built: d souls +648, d window TR -5.8% | souls: MODEL-ONLY (sign robust in 94% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: a computed alternative sequence is better: keep Monster Rounds
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): keep Monster Rounds; evidence tier: MODEL-ONLY; flipping assumptions: keep Monster Rounds: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | sell Boundless Spirit instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Stamina Mastery: sold when buying Spirit Burn (I'm rich as fuck, luxury)
+  role of Stamina Mastery: retained; role of Spirit Burn: situational-luxury
+  Stamina Mastery: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 10400 souls (~10.5 min), replaced at ~93.0 min -> owned ~82.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/24000/41600 -> after 0/20800/41600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 95 min | window TR | key purchase times (min)
+  as built                                    |          65082 |      0.13 | Stamina Mastery 10, Spirit Burn 93
+  keep Stamina Mastery (slot cap ignored)     |          65082 |      0.13 | Stamina Mastery 10
+  skip Stamina Mastery                        |          64994 |      0.13 | Spirit Burn 91
+  sell Boundless Spirit instead               |          65082 |      0.13 | Stamina Mastery 10, Spirit Burn 88
+  keep Stamina Mastery (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Stamina Mastery vs as built: d souls -75, d window TR +0.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  sell Boundless Spirit instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: no modelled stat for Stamina Mastery, Spirit Burn (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: skip Stamina Mastery: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

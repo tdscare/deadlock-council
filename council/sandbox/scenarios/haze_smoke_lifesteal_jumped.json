@@ -1,0 +1,86 @@
+{
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the item/order under test",
+  "Same enemy hero, level, items, behaviour"
+ ],
+ "builds": [
+  "haze"
+ ],
+ "id": "haze_smoke_lifesteal_jumped",
+ "title": "Haze: lifesteal from smoke while jumped farming",
+ "hero": "Haze",
+ "playstyle": "Victor Cosplay Haze (tanky lifesteal)",
+ "question": "With gun items and lifesteal from Smoke Bomb, how much do the point-order choices (max Smoke vs max knife first) change survival when two enemies jump her at a camp?",
+ "hypothesis": "Smoke-first order survives longer than knife-first because smokes are the only sustain on an all-weapon build.",
+ "arms": [
+  {
+   "name": "smoke_first",
+   "items": "build:haze core",
+   "ability_order": "Kieran order (Fixation,knife,Fixation,Smoke max,...)"
+  },
+  {
+   "name": "knife_first",
+   "items": "build:haze core",
+   "ability_order": "public order (knife max first)"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "mid",
+  "enemies": [
+   {
+    "hero": "Wraith,Vindicta",
+    "count": 2,
+    "behaviour": "attack Haze while she farms"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "camp respawn",
+   "hp",
+   "cooldowns"
+  ]
+ },
+ "procedure": [
+  "Haze starts clearing a camp",
+  "At t=10s two enemies engage",
+  "Haze fights/escapes normally until death or 30s"
+ ],
+ "metrics": [
+  {
+   "name": "survival_time",
+   "unit": "s",
+   "how": "",
+   "category": "survivability",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "hp_healed",
+   "unit": "hp",
+   "how": "",
+   "category": "healing",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "enemy_hp_removed",
+   "unit": "hp",
+   "how": "",
+   "category": "mobility",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "survival_time",
+  "min_effect_pct": 20,
+  "min_trials": 5,
+  "rule": "higher better"
+ }
+}

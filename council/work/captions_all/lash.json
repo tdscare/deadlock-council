@@ -1,0 +1,4058 @@
+{
+ "schema": 1,
+ "id": "lash",
+ "hero": "Lash",
+ "name": "Rizuhble's Elbow Drop Lash",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked",
+  "swap"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Getting poked out. Sell it when slots fill.",
+     "temporary": true,
+     "verify": []
+    },
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They burst you when you drop in. Sell it when slots fill.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-8,000 (levels 1-14). Abilities gained (both point models agree): Ground Strike T3, Death Slam unlocked. 4.8k spikes: spirit 4.8k at Cold Front. Ultimate (Death Slam) is available from Improved Spirit.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "lash:7:phase_range:4757",
+    "lash:7:phase_abilities:4758",
+    "lash:7:phase_spikes:4767",
+    "lash:7:phase_ult:4768"
+   ],
+   "items": [
+    {
+     "name": "Headshot Booster",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only; its 4.8k tier completes at Headhunter, 16000 souls (~16.0 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 8.5 to Flog's damage (0.85x scaling).",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Cold Front completes 4.8k spirit in 4000 souls (~4.0 min), 4 purchases",
+     "claim_ids": [
+      "lash:1:spirit_scaling:4742"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "lash:1:spirit_scaling:4742",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Cold Front completes 3,200 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Cold Front completes 4.8k spirit in 3200 souls (~3.2 min), 3 purchases",
+     "claim_ids": [
+      "lash:2:spike_progress:4743"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "lash:2:spike_progress:4743",
+       true,
+       "1600"
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Expansion",
+     "imbue": "4",
+     "caption": "Builds toward the 4.8k spirit tier, which Cold Front completes 2,400 souls on.",
+     "cls": "b",
+     "why": "imminent: Cold Front completes 4.8k spirit in 2400 souls (~2.4 min), 2 purchases",
+     "claim_ids": [
+      "lash:3:spike_progress:4746"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "lash:3:spike_progress:4746",
+       true,
+       "2400"
+      ]
+     ]
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 17.5 to Death Slam's impact damage (0.97x scaling), your steepest spirit scaling. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:4:spirit_scaling:4751",
+      "lash:4:upgrade_of:4750"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "lash:4:spirit_scaling:4751",
+       true,
+       ""
+      ],
+      [
+       "lash:4:upgrade_of:4750",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Cold Front",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:5:spike_complete:4752"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "lash:5:spike_complete:4752",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Shot",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only; its 4.8k tier completes at Headhunter, 9600 souls (~9.6 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Stamina",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 8,000-27,200 (levels 14-29). Abilities gained (both point models agree): Flog T3, Death Slam T3. Your biggest single spirit hit (Flog, damage) grows from 132 to 269. 4.8k spikes: vitality 4.8k at Stamina Mastery, weapon 4.8k at Headhunter.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "lash:15:phase_range:4789",
+    "lash:15:phase_abilities:4790",
+    "lash:15:phase_power:4791",
+    "lash:15:phase_spikes:4799"
+   ],
+   "items": [
+    {
+     "name": "Enchanter's Emblem",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Stamina Mastery completes 2,400 souls on.",
+     "cls": "b",
+     "why": "imminent: Stamina Mastery completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "lash:8:spike_progress:4769"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "lash:8:spike_progress:4769",
+       true,
+       "2400"
+      ]
+     ]
+    },
+    {
+     "name": "Stamina Mastery",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus. Upgrade of Extra Stamina (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:9:spike_complete:4771",
+      "lash:9:upgrade_of:4772"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "lash:9:spike_complete:4771",
+       true,
+       "inventory vitality: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "lash:9:upgrade_of:4772",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": "Takes spirit from 4,800 to 7,200 invested: bonus 38 to 45 spirit power. From Flog T3: first ability hit above its 165-damage trigger (nothing clears it at this purchase). Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "b",
+     "why": "payoff Flog T3 in 3000 souls (~3.0 min)",
+     "claim_ids": [
+      "lash:10:invest_step:4773",
+      "lash:10:threshold_later:4774",
+      "lash:10:upgrade_of:4775"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "lash:10:invest_step:4773",
+       true,
+       "inventory spirit: before 4800, after 7200, threshold 6400"
+      ],
+      [
+       "lash:10:threshold_later:4774",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "lash:10:upgrade_of:4775",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Headhunter",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (2,400 to 4,800 invested): bonus 15 to 46% weapon damage. Upgrade of Headshot Booster (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:11:spike_complete:4777",
+      "lash:11:upgrade_of:4778"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "lash:11:spike_complete:4777",
+       true,
+       "inventory weapon: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "lash:11:upgrade_of:4778",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Extra Charge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Grapple (1 to 2). Temporary, sold when you buy Mystic Reverb later.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:12:charges:4781",
+      "lash:12:temporary_sold:4780"
+     ],
+     "lint": [],
+     "legacy_note": "A second grapple gets you higher before the slam, and the higher you drop from the harder it hits.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:12:charges:4781",
+       true,
+       "[2]"
+      ],
+      [
+       "lash:12:temporary_sold:4780",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": 1,
+     "caption": "Imbued on Ground Strike: takes 18% off its 8s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:13:imbue_cooldown:4782"
+     ],
+     "lint": [],
+     "legacy_note": "On Ground Strike.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:13:imbue_cooldown:4782",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Warp Stone",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 29.2 to Death Slam's impact damage (0.97x scaling), your steepest spirit scaling. Takes spirit from 9,600 to 14,400 invested: bonus 52 to 59 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:15:spirit_scaling:4788",
+      "lash:15:invest_step:4786",
+      "lash:15:upgrade_of:4787"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "lash:15:spirit_scaling:4788",
+       true,
+       ""
+      ],
+      [
+       "lash:15:invest_step:4786",
+       true,
+       "inventory spirit: before 9600, after 14400, threshold 11200"
+      ],
+      [
+       "lash:15:upgrade_of:4787",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 27,200-44,000 (levels 29-34).",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "lash:19:phase_range:4811"
+   ],
+   "items": [
+    {
+     "name": "Greater Expansion",
+     "imbue": null,
+     "caption": "+30% range and radius on everything that scales with them: Death Slam throw distance (26m), Death Slam impact radius (6m), Ground Strike radius (10m). Takes spirit from 14,400 to 16,800 invested: bonus 59 to 66 spirit power. Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:16:global_reach:4800",
+      "lash:16:invest_step:4801",
+      "lash:16:upgrade_of:4802"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "lash:16:global_reach:4800",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "lash:16:invest_step:4801",
+       true,
+       "inventory spirit: before 14400, after 16800, threshold 16000"
+      ],
+      [
+       "lash:16:upgrade_of:4802",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: With 4 abilities trained their base cooldowns total 171s; 20% off is 34.2s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 18,400 to 24,800 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Reverb",
+     "imbue": "1",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 24,800 to 30,400 invested: bonus 75 to 100 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Extra Charge for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Tankbuster? Buy what is killing you, cheapest first. Not dying? Skip. Sell Enchanter's Emblem.",
+   "desc": "Dying after Tankbuster? Buy what is killing you, cheapest first. Not dying? Skip. Sell Enchanter's Emblem.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Grapple (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:20:cc_exposure:4815"
+     ],
+     "lint": [],
+     "legacy_note": "Stuns and sleeps keep catching you before the slam.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:20:cc_exposure:4815",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:20:defence_purge:4816"
+     ],
+     "lint": [],
+     "legacy_note": "Hexes and slows keep you from getting out.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:20:defence_purge:4816",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:20:defence_parry:4817"
+     ],
+     "lint": [],
+     "legacy_note": "A big ability you can see coming, like Bebop's hook or Apollo's ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:20:defence_parry:4817",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:20:defence_bullet:4818"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry melts you as you land.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:20:defence_bullet:4818",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:20:defence_gun:4819"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:20:defence_gun:4819",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:20:defence_spirit:4820"
+     ],
+     "lint": [],
+     "legacy_note": "Their spirit damage keeps hitting you.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:20:defence_spirit:4820",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spellbreaker",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Big spirit bursts catch you as you land.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Ethereal Shift",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They burst you the second you land. Sell Cold Front for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 8,000 to 12,800 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Enchanter's Emblem for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Arctic Blast",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Cold Front for 4,800 more souls: damage 95 to 175; tech resist 6 to 10..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:20:upgrade_delta:4824"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Cold Front.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:20:upgrade_delta:4824",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Cheat Death",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 8,000 to 11,200 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Warp Stone for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Lightning Scroll",
+     "imbue": null,
+     "caption": "Death Slam deals damage (impact damage), so it applies the item's 0.75s stun after a 3s delay plus 150 damage. Replaces Greater Expansion: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:20:ult_trigger:4828",
+      "lash:20:sell_swap:4829"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Greater Expansion for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:20:ult_trigger:4828",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "lash:20:sell_swap:4829",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:20:defence_barrier:4830"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:20:defence_barrier:4830",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 171s of base cooldown across your kit, 135s of it the ultimate; the item has its own cooldown of 300s. Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:20:refresher:4831",
+      "lash:20:sell_swap:4832"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Tankbuster for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:20:refresher:4831",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "lash:20:sell_swap:4832",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "lash:20:upgrade_delta:4833"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "lash:20:upgrade_delta:4833",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "swap",
+   "label": "Optional swap / pivot",
+   "box_title": "Swap for Warp Stone",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Majestic Leap",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Instead of Warp Stone. Leap up, then Ground Strike from the top for a bigger slam.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "lash:0:spike_progress:4738": {
+   "id": "lash:0:spike_progress:4738",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Headshot Booster",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "lash:0:component_for:4739": {
+   "id": "lash:0:component_for:4739",
+   "kind": "component_for",
+   "phrase": "From Headhunter: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Headshot Booster",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 16000,
+    "event": "Headhunter"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Headhunter"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:1:spike_progress:4740": {
+   "id": "lash:1:spike_progress:4740",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Cold Front completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Cold Front completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "lash:1:component_for:4741": {
+   "id": "lash:1:component_for:4741",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:1:spirit_scaling:4742": {
+   "id": "lash:1:spirit_scaling:4742",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 8.5 to Flog's damage (0.85x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_lash_flog"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 3,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "10.0",
+    "8.5",
+    "0.85"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:2:spike_progress:4743": {
+   "id": "lash:2:spike_progress:4743",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Cold Front completes 3,200 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Burst",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 3200,
+    "event": "Cold Front completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    3200,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "lash:2:threshold_marginal:4744": {
+   "id": "lash:2:threshold_marginal:4744",
+   "kind": "threshold_marginal",
+   "phrase": "Ground Strike (80.9) is within 50% of the 80-damage trigger; resist handling unverified.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_down_strike",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_lash_flog"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Burst",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:2:component_for:4745": {
+   "id": "lash:2:component_for:4745",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Burst",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12000,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:3:spike_progress:4746": {
+   "id": "lash:3:spike_progress:4746",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Cold Front completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Expansion",
+    "souls": 3200,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Cold Front completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "lash:3:imbue_untrained:4747": {
+   "id": "lash:3:imbue_untrained:4747",
+   "kind": "imbue_untrained",
+   "phrase": "From Death Slam unlocking: the imbue has nothing to act on yet.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_reach",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_ultimate"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Expansion",
+    "souls": 3200,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Death Slam unlocks"
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 4
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:3:component_for:4748": {
+   "id": "lash:3:component_for:4748",
+   "kind": "component_for",
+   "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Expansion",
+    "souls": 3200,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 26400,
+    "event": "Greater Expansion"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Greater Expansion"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:4:spike_progress:4749": {
+   "id": "lash:4:spike_progress:4749",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Improved Spirit",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "lash:4:upgrade_of:4750": {
+   "id": "lash:4:upgrade_of:4750",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 4,
+    "item": "Improved Spirit",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:4:spirit_scaling:4751": {
+   "id": "lash:4:spirit_scaling:4751",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 17.5 to Death Slam's impact damage (0.97x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_ultimate"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 4,
+    "item": "Improved Spirit",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "ImpactDamage"
+   },
+   "numbers": [
+    "18.0",
+    "17.5",
+    "0.97"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:5:spike_complete:4752": {
+   "id": "lash:5:spike_complete:4752",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 5,
+    "item": "Cold Front",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "lash:5:swap_candidate:4753": {
+   "id": "lash:5:swap_candidate:4753",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Ethereal Shift later (listed under Counters).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 5,
+    "item": "Cold Front",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Cold Front",
+    "buyer": "Ethereal Shift"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:6:spike_progress:4754": {
+   "id": "lash:6:spike_progress:4754",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Mystic Shot",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "lash:7:spike_progress:4755": {
+   "id": "lash:7:spike_progress:4755",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Extra Stamina",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "lash:7:component_for:4756": {
+   "id": "lash:7:component_for:4756",
+   "kind": "component_for",
+   "phrase": "From Stamina Mastery: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Stamina",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 4000,
+    "event": "Stamina Mastery"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Stamina Mastery"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:7:phase_range:4757": {
+   "id": "lash:7:phase_range:4757",
+   "kind": "phase_range",
+   "phrase": "Souls 0-8,000 (levels 1-14).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Stamina",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Stamina",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "8,000",
+    "1",
+    "14"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:7:phase_abilities:4758": {
+   "id": "lash:7:phase_abilities:4758",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Ground Strike T3, Death Slam unlocked.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Stamina",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Stamina",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:7:phase_spikes:4767": {
+   "id": "lash:7:phase_spikes:4767",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Cold Front.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Stamina",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Stamina",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:7:phase_ult:4768": {
+   "id": "lash:7:phase_ult:4768",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Death Slam) is available from Improved Spirit.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Stamina",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Stamina",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:8:spike_progress:4769": {
+   "id": "lash:8:spike_progress:4769",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Stamina Mastery completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 8,
+    "item": "Enchanter's Emblem",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Stamina Mastery completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "lash:8:swap_candidate:4770": {
+   "id": "lash:8:swap_candidate:4770",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Witchmail later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 8,
+    "item": "Enchanter's Emblem",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Enchanter's Emblem",
+    "buyer": "Witchmail"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:9:spike_complete:4771": {
+   "id": "lash:9:spike_complete:4771",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 9,
+    "item": "Stamina Mastery",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "lash:9:upgrade_of:4772": {
+   "id": "lash:9:upgrade_of:4772",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Stamina (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 9,
+    "item": "Stamina Mastery",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Stamina"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:10:invest_step:4773": {
+   "id": "lash:10:invest_step:4773",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 7,200 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Tankbuster",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "7200",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "lash:10:threshold_later:4774": {
+   "id": "lash:10:threshold_later:4774",
+   "kind": "threshold_later",
+   "phrase": "From Flog T3: first ability hit above its 165-damage trigger (nothing clears it at this purchase).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_down_strike",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_lash_flog"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Tankbuster",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 3000,
+    "event": "Flog T3"
+   },
+   "check": {
+    "kind": "threshold_later",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "165.0"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "best_now": 143.2
+  },
+  "lash:10:upgrade_of:4775": {
+   "id": "lash:10:upgrade_of:4775",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Tankbuster",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:10:swap_candidate:4776": {
+   "id": "lash:10:swap_candidate:4776",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Refresher later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 10,
+    "item": "Tankbuster",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Tankbuster",
+    "buyer": "Refresher"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:11:spike_complete:4777": {
+   "id": "lash:11:spike_complete:4777",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (2,400 to 4,800 invested): bonus 15 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 11,
+    "item": "Headhunter",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "lash:11:upgrade_of:4778": {
+   "id": "lash:11:upgrade_of:4778",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Headshot Booster (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Headhunter",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Headshot Booster"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:12:invest_step:4779": {
+   "id": "lash:12:invest_step:4779",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 7,200 to 8,000 invested: bonus 45 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Extra Charge",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "8000",
+    "45.0",
+    "52.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "lash:12:temporary_sold:4780": {
+   "id": "lash:12:temporary_sold:4780",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Mystic Reverb later.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 34,
+   "point": {
+    "idx": 12,
+    "item": "Extra Charge",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Charge",
+    "buyer": "Mystic Reverb"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:12:charges:4781": {
+   "id": "lash:12:charges:4781",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Grapple (1 to 2).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_extra_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 12,
+    "item": "Extra Charge",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "1",
+    "1",
+    "2"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:13:imbue_cooldown:4782": {
+   "id": "lash:13:imbue_cooldown:4782",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Ground Strike: takes 18% off its 8s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_down_strike"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 13,
+    "item": "Compress Cooldown",
+    "souls": 19200,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 1
+   },
+   "numbers": [
+    "18.0",
+    "8.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:13:component_for:4783": {
+   "id": "lash:13:component_for:4783",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Compress Cooldown",
+    "souls": 19200,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12000,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:14:invest_step:4784": {
+   "id": "lash:14:invest_step:4784",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Warp Stone",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "8000",
+    "38.0",
+    "46.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "lash:14:swap_candidate:4785": {
+   "id": "lash:14:swap_candidate:4785",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Cheat Death later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 14,
+    "item": "Warp Stone",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Warp Stone",
+    "buyer": "Cheat Death"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:15:invest_step:4786": {
+   "id": "lash:15:invest_step:4786",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 9,600 to 14,400 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "14400",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "lash:15:upgrade_of:4787": {
+   "id": "lash:15:upgrade_of:4787",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:15:spirit_scaling:4788": {
+   "id": "lash:15:spirit_scaling:4788",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 29.2 to Death Slam's impact damage (0.97x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_ultimate"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "ImpactDamage"
+   },
+   "numbers": [
+    "30.0",
+    "29.2",
+    "0.97"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:15:phase_range:4789": {
+   "id": "lash:15:phase_range:4789",
+   "kind": "phase_range",
+   "phrase": "Souls 8,000-27,200 (levels 14-29).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Boundless Spirit",
+    "keys": []
+   },
+   "numbers": [
+    "8,000",
+    "27,200",
+    "14",
+    "29"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:15:phase_abilities:4790": {
+   "id": "lash:15:phase_abilities:4790",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Flog T3, Death Slam T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Boundless Spirit",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:15:phase_power:4791": {
+   "id": "lash:15:phase_power:4791",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Flog, damage) grows from 132 to 269.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_lash_flog",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Boundless Spirit",
+    "keys": []
+   },
+   "numbers": [
+    "132",
+    "269"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:15:phase_spikes:4799": {
+   "id": "lash:15:phase_spikes:4799",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Stamina Mastery, weapon 4.8k at Headhunter.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Boundless Spirit",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:16:global_reach:4800": {
+   "id": "lash:16:global_reach:4800",
+   "kind": "global_reach",
+   "phrase": "+30% range and radius on everything that scales with them: Death Slam throw distance (26m), Death Slam impact radius (6m), Ground Strike radius (10m).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_range",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_down_strike",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_ultimate"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 16,
+    "item": "Greater Expansion",
+    "souls": 29600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "global_reach"
+   },
+   "numbers": [
+    "30",
+    "26",
+    "6",
+    "10"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:16:invest_step:4801": {
+   "id": "lash:16:invest_step:4801",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 14,400 to 16,800 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Greater Expansion",
+    "souls": 29600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "16800",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "lash:16:upgrade_of:4802": {
+   "id": "lash:16:upgrade_of:4802",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Greater Expansion",
+    "souls": 29600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Expansion"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:16:swap_candidate:4803": {
+   "id": "lash:16:swap_candidate:4803",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Lightning Scroll later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 16,
+    "item": "Greater Expansion",
+    "souls": 29600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Greater Expansion",
+    "buyer": "Lightning Scroll"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:17:upgrade_of:4804": {
+   "id": "lash:17:upgrade_of:4804",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Superior Cooldown",
+    "souls": 31200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:17:cdr_rotation:4805": {
+   "id": "lash:17:cdr_rotation:4805",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 171s; 20% off is 34.2s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_down_strike",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_lash_flog",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_ultimate"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 17,
+    "item": "Superior Cooldown",
+    "souls": 31200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "171",
+    "20.0",
+    "34.2"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:18:burn_trigger_modelled:4806": {
+   "id": "lash:18:burn_trigger_modelled:4806",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Ground Strike (193) + Flog (288) = 481 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 18,
+    "item": "Spirit Burn",
+    "souls": 37600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "481",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:18:invest_step:4807": {
+   "id": "lash:18:invest_step:4807",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 18,400 to 24,800 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Spirit Burn",
+    "souls": 37600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "18400",
+    "24800",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "lash:19:invest_step:4808": {
+   "id": "lash:19:invest_step:4808",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 24,800 to 30,400 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Mystic Reverb",
+    "souls": 44000.0,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "24800",
+    "30400",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "lash:19:threshold_now:4809": {
+   "id": "lash:19:threshold_now:4809",
+   "kind": "threshold_now",
+   "phrase": "Ground Strike (218) clears its 100-damage trigger.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_down_strike"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 19,
+    "item": "Mystic Reverb",
+    "souls": 44000.0,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 100.0,
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "100.0",
+    "218"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 2.18,
+   "caveat": "item has no localisation text; trigger semantics are modelled",
+   "contradiction": false
+  },
+  "lash:19:sell_swap:4810": {
+   "id": "lash:19:sell_swap:4810",
+   "kind": "sell_swap",
+   "phrase": "Replaces Extra Charge: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Mystic Reverb",
+    "souls": 44000.0,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Extra Charge",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Extra Charge"
+  },
+  "lash:19:phase_range:4811": {
+   "id": "lash:19:phase_range:4811",
+   "kind": "phase_range",
+   "phrase": "Souls 27,200-44,000 (levels 29-34).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Mystic Reverb",
+    "souls": 44000.0,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mystic Reverb",
+    "keys": []
+   },
+   "numbers": [
+    "27,200",
+    "44,000",
+    "29",
+    "34"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:20:cc_exposure:4815": {
+   "id": "lash:20:cc_exposure:4815",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Grapple (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 20,
+    "item": "Unstoppable",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Stuns and sleeps keep catching you before the slam."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:20:defence_purge:4816": {
+   "id": "lash:20:defence_purge:4816",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Dispel Magic",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Hexes and slows keep you from getting out."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:20:defence_parry:4817": {
+   "id": "lash:20:defence_parry:4817",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Counterspell",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ability you can see coming, like Bebop's hook or Apollo's ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:20:defence_bullet:4818": {
+   "id": "lash:20:defence_bullet:4818",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Metal Skin",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry melts you as you land."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:20:defence_gun:4819": {
+   "id": "lash:20:defence_gun:4819",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Plated Armor",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:20:defence_spirit:4820": {
+   "id": "lash:20:defence_spirit:4820",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Resilience",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their spirit damage keeps hitting you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:20:sell_swap:4821": {
+   "id": "lash:20:sell_swap:4821",
+   "kind": "sell_swap",
+   "phrase": "Replaces Cold Front: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Ethereal Shift",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "They burst you the second you land. Sell Cold Front for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Cold Front",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Cold Front"
+  },
+  "lash:20:invest_step:4822": {
+   "id": "lash:20:invest_step:4822",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 8,000 to 12,800 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Witchmail",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "12800",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "lash:20:sell_swap:4823": {
+   "id": "lash:20:sell_swap:4823",
+   "kind": "sell_swap",
+   "phrase": "Replaces Enchanter's Emblem: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Witchmail",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Enchanter's Emblem",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Enchanter's Emblem"
+  },
+  "lash:20:upgrade_delta:4824": {
+   "id": "lash:20:upgrade_delta:4824",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Cold Front for 4,800 more souls: damage 95 to 175; tech resist 6 to 10..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_arctic_blast",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cold_front"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Arctic Blast",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Cold Front."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Cold Front"
+   },
+   "numbers": [
+    "4,800",
+    "95",
+    "175",
+    "6",
+    "10"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:20:upgrade_of:4825": {
+   "id": "lash:20:upgrade_of:4825",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Cold Front (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Arctic Blast",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Cold Front."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Cold Front"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "lash:20:invest_step:4826": {
+   "id": "lash:20:invest_step:4826",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 8,000 to 11,200 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_lash m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Cheat Death",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Warp Stone for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "11200",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "lash:20:sell_swap:4827": {
+   "id": "lash:20:sell_swap:4827",
+   "kind": "sell_swap",
+   "phrase": "Replaces Warp Stone: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Cheat Death",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Warp Stone for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Warp Stone",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Warp Stone"
+  },
+  "lash:20:ult_trigger:4828": {
+   "id": "lash:20:ult_trigger:4828",
+   "kind": "ult_trigger",
+   "phrase": "Death Slam deals damage (impact damage), so it applies the item's 0.75s stun after a 3s delay plus 150 damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ultimate_burst",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_ultimate"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 20,
+    "item": "Lightning Scroll",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Greater Expansion for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "ult_dmg"
+   },
+   "numbers": [
+    "0.75",
+    "3",
+    "150"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:20:sell_swap:4829": {
+   "id": "lash:20:sell_swap:4829",
+   "kind": "sell_swap",
+   "phrase": "Replaces Greater Expansion: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Lightning Scroll",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Greater Expansion for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Greater Expansion",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Greater Expansion"
+  },
+  "lash:20:defence_barrier:4830": {
+   "id": "lash:20:defence_barrier:4830",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Divine Barrier",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:20:refresher:4831": {
+   "id": "lash:20:refresher:4831",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 171s of base cooldown across your kit, 135s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_down_strike",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_lash_flog",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_lash_ultimate"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 20,
+    "item": "Refresher",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "171",
+    "135",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "lash:20:sell_swap:4832": {
+   "id": "lash:20:sell_swap:4832",
+   "kind": "sell_swap",
+   "phrase": "Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Refresher",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Tankbuster",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Tankbuster"
+  },
+  "lash:20:upgrade_delta:4833": {
+   "id": "lash:20:upgrade_delta:4833",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "lash:20:upgrade_of:4834": {
+   "id": "lash:20:upgrade_of:4834",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "lash",
+   "item": "Extra Regen",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 44000.0,
+   "unpublished": []
+  },
+  {
+   "build": "lash",
+   "item": "Extra Regen",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Getting poked out. Sell it when slots fill."
+  },
+  {
+   "build": "lash",
+   "item": "Grit",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 44000.0,
+   "unpublished": []
+  },
+  {
+   "build": "lash",
+   "item": "Grit",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They burst you when you drop in. Sell it when slots fill."
+  },
+  {
+   "build": "lash",
+   "item": "Headshot Booster",
+   "section": "early",
+   "cls": "c",
+   "why": "weapon investment only; its 4.8k tier completes at Headhunter, 16000 souls (~16.0 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "lash:0:component_for:4739",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Headhunter: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 16000,
+      "event": "Headhunter"
+     }
+    }
+   ]
+  },
+  {
+   "build": "lash",
+   "item": "Extra Spirit",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Cold Front completes 4.8k spirit in 4000 souls (~4.0 min), 4 purchases",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "lash:1:spike_progress:4740",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Cold Front completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Cold Front completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "lash:1:component_for:4741",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Improved Spirit"
+     }
+    }
+   ]
+  },
+  {
+   "build": "lash",
+   "item": "Mystic Burst",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Cold Front completes 4.8k spirit in 3200 souls (~3.2 min), 3 purchases",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "lash:2:spike_progress:4743",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Cold Front completes 3,200 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 3200,
+      "event": "Cold Front completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "lash:2:threshold_marginal:4744",
+     "tier": "MODELLED",
+     "phrase": "Ground Strike (80.9) is within 50% of the 80-damage trigger; resist handling unverified.",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    },
+    {
+     "id": "lash:2:component_for:4745",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 12000,
+      "event": "Tankbuster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "lash",
+   "item": "Mystic Expansion",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Cold Front completes 4.8k spirit in 2400 souls (~2.4 min), 2 purchases",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "lash:3:spike_progress:4746",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Cold Front completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Cold Front completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "lash:3:imbue_untrained:4747",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Death Slam unlocking: the imbue has nothing to act on yet.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Death Slam unlocks"
+     }
+    },
+    {
+     "id": "lash:3:component_for:4748",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 26400,
+      "event": "Greater Expansion"
+     }
+    }
+   ]
+  },
+  {
+   "build": "lash",
+   "item": "Mystic Shot",
+   "section": "early",
+   "cls": "c",
+   "why": "weapon investment only; its 4.8k tier completes at Headhunter, 9600 souls (~9.6 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 7200,
+   "unpublished": []
+  },
+  {
+   "build": "lash",
+   "item": "Extra Stamina",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 8000,
+   "unpublished": [
+    {
+     "id": "lash:7:component_for:4756",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Stamina Mastery: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 4000,
+      "event": "Stamina Mastery"
+     }
+    }
+   ]
+  },
+  {
+   "build": "lash",
+   "item": "Enchanter's Emblem",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Stamina Mastery completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 9600,
+   "unpublished": [
+    {
+     "id": "lash:8:spike_progress:4769",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Stamina Mastery completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Stamina Mastery completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "lash",
+   "item": "Tankbuster",
+   "section": "mid",
+   "cls": "b",
+   "why": "payoff Flog T3 in 3000 souls (~3.0 min)",
+   "souls": 14400,
+   "unpublished": [
+    {
+     "id": "lash:10:threshold_later:4774",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Flog T3: first ability hit above its 165-damage trigger (nothing clears it at this purchase).",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 3000,
+      "event": "Flog T3"
+     }
+    }
+   ]
+  },
+  {
+   "build": "lash",
+   "item": "Extra Charge",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A second grapple gets you higher before the slam, and the higher you drop from the harder it hits."
+  },
+  {
+   "build": "lash",
+   "item": "Compress Cooldown",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Ground Strike."
+  },
+  {
+   "build": "lash",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns and sleeps keep catching you before the slam."
+  },
+  {
+   "build": "lash",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Hexes and slows keep you from getting out."
+  },
+  {
+   "build": "lash",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ability you can see coming, like Bebop's hook or Apollo's ult."
+  },
+  {
+   "build": "lash",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry melts you as you land."
+  },
+  {
+   "build": "lash",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "lash",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their spirit damage keeps hitting you."
+  },
+  {
+   "build": "lash",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 44000.0,
+   "unpublished": []
+  },
+  {
+   "build": "lash",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Big spirit bursts catch you as you land."
+  },
+  {
+   "build": "lash",
+   "item": "Ethereal Shift",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 44000.0,
+   "unpublished": []
+  },
+  {
+   "build": "lash",
+   "item": "Ethereal Shift",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They burst you the second you land. Sell Cold Front for this."
+  },
+  {
+   "build": "lash",
+   "item": "Majestic Leap",
+   "section": "swap",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 44000.0,
+   "unpublished": []
+  },
+  {
+   "build": "lash",
+   "item": "Majestic Leap",
+   "section": "swap",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Instead of Warp Stone. Leap up, then Ground Strike from the top for a bigger slam."
+  }
+ ],
+ "stats": {
+  "d": 5,
+  "c": 3,
+  "b": 5,
+  "a": 19,
+  "g": 6
+ }
+}

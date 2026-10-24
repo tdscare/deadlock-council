@@ -1,0 +1,43 @@
+{
+ "overlap": {
+  "changed": [
+   "  overlap Cultist Sacrifice (moved earlier): no overlap-candidate",
+   "  overlap Battle Vest (moved earlier): core_end=ADDS-VALUE"
+  ],
+  "unresolved": [
+   "overlap-candidate Superior Cooldown [core_end=REDUNDANT-LIKELY]",
+   "overlap-candidate Mystic Reverb [core_end=UNKNOWN]",
+   "overlap-candidate Juggernaut [core_end=UNKNOWN]"
+  ]
+ },
+ "unresolved": [
+  "bc: CORE_NOTE_NONEMPTY ratking_grenade: Extended Magazine: Its weapon damage raises your grenade damage.",
+  "bc: MAIN_4.8K_LATE ratking_grenade: health 4.8k at 11200",
+  "c12: Bullet Resist Shredder (spirit) instead of Battle Vest (health): colour changes, check spikes",
+  "c12: Bullet Resist Shredder (spirit) instead of Battle Vest (health): colour changes, check spikes"
+ ],
+ "proposal": "ratking_grenade",
+ "id": "ratking_grenade",
+ "diff": [
+  "added Early · L-R|Battle Vest",
+  "removed Late · L-R|Battle Vest, I'm rich as fuck|Glass Cannon"
+ ],
+ "block": [],
+ "warn": [],
+ "fixed": [
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD ratking_grenade: Titanic Magazine (T2) @2400",
+  "bc: FRESH_T2_LATE ratking_grenade: Battle Vest @24000"
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY ratking_grenade: Extended Magazine: Its weapon damage raises your grenade damage.",
+  "bc: MAIN_4.8K_LATE ratking_grenade: health 4.8k at 11200",
+  "c12: Bullet Resist Shredder (spirit) instead of Battle Vest (health): colour changes, check spikes"
+ ],
+ "newV": [
+  "bc: RT_ITEMS ratking_grenade: Early · L-R: [[\"Extended Magazine\",null],[\"Monster Rounds\",null],[\"Titanic Magazine\",null],[\"Sprint Boots\",null],[\"Enduring Speed\",null],[\"Cultist Sacrifice\",null]] vs [[\"Extended Magazine\",null],[\"Monster Rounds\",null],[\"Titanic Magazine\",null],[\"Cultist Sacrifice\",null],[\"Battle Vest\",null],[\"Sprint Boots\",null],[\"Enduring Speed\",null]]",
+  "bc: RT_ITEMS ratking_grenade: Late · L-R: [[\"Battle Vest\",null],[\"Echo Shard\",1],[\"Witchmail\",null],[\"Colossus\",null]] vs [[\"Echo Shard\",1],[\"Witchmail\",null],[\"Colossus\",null]]",
+  "bc: RT_ITEMS ratking_grenade: I'm rich as fuck: [[\"Glass Cannon\",null],[\"Mystic Reverb\",1],[\"Cheat Death\",null],[\"Refresher\",null]] vs [[\"Mystic Reverb\",1],[\"Cheat Death\",null],[\"Refresher\",null]]"
+ ],
+ "when": "2026-10-24 11:45",
+ "line": "[2026-10-24 11:45] Undo silent edits that were mistakes: Battle Vest back to right after Cultist Sacrifice (it sat at 24k as a fresh tier 2, losing +10.8 grenade damage per detonation and 18% bullet resist for 17.6k souls), Sprint Boots/Enduring Speed back after Battle Vest (they pushed the gun 4.8k from 4.8k to 6.4k). Titanic before Cultist kept (neutral). Glass Cannon out of the rich box (tank-leaning build, -13% max health against the cape and Colossus, not a pricier version of anything in the build). Cheat Death now sells Titanic Magazine (14% weapon damage) instead of Hollow Point (35%), which also gives Titanic a named sell. Spikes: gun 4.8k at 4.8k, health 4.8k at 11.2k, gun 8k at 14.4k, spirit 4.8k at 24k (matches the existing Relevance pass line again). | added Early · L-R|Battle Vest; removed Late · L-R|Battle Vest, I'm rich as fuck|Glass Cannon | evidence: calc:council/work/tri2/ratking_grenade_paths.txt, calc:council/work/tri2/ap_models.txt, data:gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata, calc:council/work/tri2/ratking_waiver_main.txt | gate: FAIL"
+}

@@ -1,0 +1,126 @@
+# drifter_spirit | Drifter | Rizuhble's Cold Cuts Drifter
+abilities: 1=Rend (drifter_blood_blast, start_trained=false, Signature) / 2=Stalker's Mark (drifter_shadow_mark, start_trained=false, Signature) / 3=Bloodscent (ability_drifter_hunger, start_trained=false, Signature) / 4=Eternal Night (drifter_darkness, start_trained=false, Ultimate)
+order: 1123124122443334
+model A (data):  Rend:U@0  Rend:T1@200  Stalker's :U@500  Bloodscent:U@1400  Rend:T2@2000  Stalker's :T1@2600  Eternal Ni:U@3200  Rend:T3@6800  Stalker's :T2@8400  Stalker's :T3@12800  Eternal Ni:T1@13800  Eternal Ni:T2@16100  Bloodscent:T1@17400  Bloodscent:T2@20600  Bloodscent:T3@32100  Eternal Ni:T3@48600
+model B (old):   Rend:T1@200  Rend:T2@900  Stalker's :T1@2000  Bloodscent:T1@2600  Rend:T3@3900  Stalker's :T2@4600  Eternal Ni:U@5300  Stalker's :T3@6800  Eternal Ni:T1@8400  Eternal Ni:T2@9200  Bloodscent:T2@10100  Bloodscent:T3@11000  Eternal Ni:T3@12800
+tier upgrades: Rend: BonusDamage+40 / AbilityCooldown-8 / DebuffDuration+2,UseHeavyMelee+1,DamageHeavyMelee+0.55x,Damage+0 | Stalker's Ma: BulletResistReduction-8 / AbilityDuration+3,AbilityCooldown-10 / DotHealthPercent+1.5,HealAmpReceivePenaltyPercent-40,HealAmpRegenPenaltyPercent-40 | Bloodscent: BonusMoveSpeed+3 / HealOnKillPct+24,StaminaToRestore+2 / AmpDamagePercent+11 | Eternal Nigh: BonusSprintSpeed+10 / AbilityCooldown-40 / AbilityDuration+2.5,MaxTargets+1
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  Melee Lifesteal
+        Rend T1 ch1 cd16 BonusDam=83 | Stalker's  U ch1 cd26 d5 | Bloodscent L[U] | Eternal Ni L
+  2400 L6   3     6  Stalker
+        Rend T2 ch1 cd8 BonusDam=88 | Stalker's  U[T1] ch1 cd26 d5 | Bloodscent U ch1 cd0 WeaponDm=3 | Eternal Ni L
+  3200 L8   4    15  Spirit Strike
+        Rend T2 ch1 cd8 BonusDam=101 | Stalker's  T1 ch1 cd26 d5 | Bloodscent U[T1] ch1 cd0 WeaponDm=3 | Eternal Ni U[L] ch1 cd145 d6.5
+  4000 L9   5    20  Mystic Burst
+        Rend T2[T3] ch1 cd8 BonusDam=108 | Stalker's  T1 ch1 cd26 d5 | Bloodscent U[T1] ch1 cd0 WeaponDm=3 | Eternal Ni U[L] ch1 cd145 d6.5
+  5600 L11  7    30  Cold Front
+        Rend T2[T3] ch1 cd8 BonusDam=122 | Stalker's  T1[T2] ch1 cd26 d5 | Bloodscent U[T1] ch1 cd0 WeaponDm=3 | Eternal Ni U ch1 cd145 d6.5
+  8000 L14 10    52  Spirit Snatch
+        Rend T3 ch1 cd8 BonusDam=153 | Stalker's  T1[T3] ch1 cd26 d5 | Bloodscent U[T1] ch1 cd0 WeaponDm=3 | Eternal Ni U ch1 cd145 d6.5
+  8800 L15 11    53  Sprint Boots
+        Rend T3 ch1 cd8 BonusDam=155 | Stalker's  T2[T3] ch1 cd16 d8 | Bloodscent U[T1] ch1 cd0 WeaponDm=3 | Eternal Ni U[T1] ch1 cd145 d6.5
+  9600 L16 12    54  Extra Health
+        Rend T3 ch1 cd8 BonusDam=156 | Stalker's  T2[T3] ch1 cd16 d8 | Bloodscent U[T1] ch1 cd0 WeaponDm=3 | Eternal Ni U[T2] ch1 cd145 d6.5
+ 12000 L19 15    58  Lifestrike
+        Rend T3 ch1 cd8 BonusDam=161 | Stalker's  T2[T3] ch1 cd16 d8 | Bloodscent U[T3] ch1 cd0 WeaponDm=3 | Eternal Ni U[T2] ch1 cd145 d6.5
+ 12800 L20 16    59  Trophy Collector
+        Rend T3 ch1 cd8 BonusDam=162 | Stalker's  T3 ch1 cd16 d8 | Bloodscent U[T3] ch1 cd0 WeaponDm=3 | Eternal Ni U[T3] ch1 cd145 d6.5
+ 15200 L22 18    61  Fortitude
+        Rend T3 ch1 cd8 BonusDam=166 | Stalker's  T3 ch1 cd16 d8 | Bloodscent U[T3] ch1 cd0 WeaponDm=3 | Eternal Ni T1[T3] ch1 cd145 d6.5
+ 16800 L23 19    69  Mystic Vulnerability
+        Rend T3 ch1 cd8 BonusDam=177 | Stalker's  T3 ch1 cd16 d8 | Bloodscent U[T3] ch1 cd0 WeaponDm=3 | Eternal Ni T2[T3] ch1 cd105 d6.5
+ 18400 L24 20    70  Melee Charge
+        Rend T3 ch1 cd8 BonusDam=178 | Stalker's  T3 ch1 cd16 d8 | Bloodscent T1[T3] ch1 cd0 WeaponDm=3 | Eternal Ni T2[T3] ch1 cd105 d6.5
+ 20800 L26 22    80  Tankbuster
+        Rend T3 ch1 cd8 BonusDam=191 | Stalker's  T3 ch1 cd16 d8 | Bloodscent T2[T3] ch1 cd0 WeaponDm=3 | Eternal Ni T2[T3] ch1 cd105 d6.5
+ 24000 L27 23    87  Veil Walker
+        Rend T3 ch1 cd8 BonusDam=201 | Stalker's  T3 ch1 cd16 d8 | Bloodscent T2[T3] ch1 cd0 WeaponDm=3 | Eternal Ni T2[T3] ch1 cd105 d6.5
+ 25600 L28 24    95  Duration Extender [imbue Stalker's Mark]
+        Rend T3 ch1 cd8 BonusDam=213 | Stalker's  T3 ch1 cd16 d8 | Bloodscent T2[T3] ch1 cd0 WeaponDm=3 | Eternal Ni T2[T3] ch1 cd105 d6.5
+ 27200 L29 25    96  Superior Duration
+        Rend T3 ch1 cd8 BonusDam=214 | Stalker's  T3 ch1 cd16 d8 | Bloodscent T2[T3] ch1 cd0 WeaponDm=3 | Eternal Ni T2[T3] ch1 cd105 d6.5
+ 32000 L30 26    97  Crushing Fists
+        Rend T3 ch1 cd8 BonusDam=216 | Stalker's  T3 ch1 cd16 d8 | Bloodscent T2[T3] ch1 cd0 WeaponDm=3 | Eternal Ni T2[T3] ch1 cd105 d6.5
+ 36800 L32 28   106  Escalating Exposure
+        Rend T3 ch1 cd8 BonusDam=229 | Stalker's  T3 ch1 cd16 d8 | Bloodscent T3 ch1 cd0 WeaponDm=3 | Eternal Ni T2[T3] ch1 cd105 d6.5
+ 43200 L34 30   117  Spirit Burn
+        Rend T3 ch1 cd8 BonusDam=244 | Stalker's  T3 ch1 cd16 d8 | Bloodscent T3 ch1 cd0 WeaponDm=3 | Eternal Ni T2[T3] ch1 cd105 d6.5
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @800 Melee Lifesteal [melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs melee hits
+    game text: Your next Melee attack heals you. This heal is {s:NonHeroHealPct}% effective vs non-heroes. Cooldown is {s:LightMeleeCooldownMult}x as long for Light ... | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @2400 Stalker [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Dealing {g:citadel_inline_attribute:'WeaponDamage'} at close range opens a wound and grants you {g:citadel_inline_attribute:'BonusMoveSpeed'}. Wounded...
+    at buy: not computed (needs play data)
+- @3200 Spirit Strike [melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs melee hits
+    game text: When you perform a Light or Heavy Melee attack against a hero, deal extra {g:citadel_inline_attribute:'SpiritDamage'} with the attack and reduce the t... | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @4000 Mystic Burst [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 80 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcByOtherObjects=true
+    at buy: best Rend.BonusDamage 108 at spirit 20
+    margin: +35%
+    reliability: procs from Rend.BonusDamage 108 (cd 8); below threshold: Bloodscent.WeaponDmgPerIsolationKill 3
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @8000 Spirit Snatch [melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs melee hits
+    game text: When you perform a Light or Heavy Melee attack against a hero, the attack deals extra {g:citadel_inline_attribute:'SpiritDamage'} and steals Spirit Re... | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @12000 Lifestrike [melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs melee hits
+    game text: Your Melee Attack applies Movement Slow and heals you for a percentage of the Melee Damage dealt plus a fixed amount. This heal is {s:NonHeroHealPct}%... | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @12800 Trophy Collector [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (MaxStacks=16)
+    game text: Whenever you score an assist or kill, gain extra sprint, ability range and passive soul generation. This effect stacks and persists through death.
+    at buy: not computed (needs play data)
+- @15200 Fortitude [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (HealthThreshold=75)
+    game text: After not taking damage for a period, gain health regen.
+    at buy: not computed (needs play data)
+- @16800 Mystic Vulnerability [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: When an enemy takes {g:citadel_inline_attribute:'SpiritDamage'}, they have their {g:citadel_inline_attribute:'SpiritResist'} reduced. | vdata: proc damage types ABILITY
+    at buy: spirit sources: Rend, Bloodscent, upgrade_magic_burst, upgrade_spirit_snatch
+- @18400 Melee Charge [melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs melee hits
+    game text: Your next Heavy Melee attack against an enemy deals increased damage. | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @20800 Tankbuster [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 165 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcFromItems=false, IgnoreResists=true, CanProcByOtherObjects=true
+    at buy: best Rend.BonusDamage 191 at spirit 80
+    margin: +16%
+    reliability: procs from Rend.BonusDamage 191 (cd 8); below threshold: Bloodscent.WeaponDmgPerIsolationKill 3
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @25600 Duration Extender [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Stalker's Mark; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its Duration.
+    at buy: Stalker's Mark T3: cd 16s, duration 8s, charges 1; duration-scaled props: AbilityDuration=8
+- @27200 Superior Duration [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Increases the duration of your abilities and items.
+    at buy: 4 abilities trained, summed cooldown 129s
+- @32000 Crushing Fists [stack+melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (MaxStacks=6)
+    game text: Your {g:citadel_inline_attribute:'MeleeDamage'} will restore ammo and apply a stacking bullet resist debuff on enemies. Heavy melee applies 2 stacks. ... | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @36800 Escalating Exposure [spiritsrc+stack] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} applies a stacking Spirit Amp that increases your {g:citadel_inline_attribute:'SpiritDamage'} to t... | vdata: proc damage types ABILITY
+    at buy: spirit sources: Rend, Bloodscent, upgrade_spirit_snatch, upgrade_magic_shock
+    reliability: max 12 stacks, one per 0.7s of spirit hits = 8.4s of continuous spirit damage to max
+- @43200 Spirit Burn [win] -> KIT-ONLY-BELOW | verdict: check by hand: abilities alone < threshold, item/proc spirit damage not counted | UNTESTABLE-HIGH-RISK
+    rule: 500 spirit damage to one enemy within 5s (game text: 'significant spirit damage'); per-enemy cooldown
+    game text: Dealing significant {g:citadel_inline_attribute:'SpiritDamage'} to an enemy within {s:DamageThresholdDuration}s causes an explosion dealing damage and...
+    at buy: all abilities in 5s ~247 (Rend 244x1; Bloodscent 3x1), without ult 247
+    margin: -51% without ult, -51% with
+    reliability: needs the whole combo on one target (hit rate, travel time)
+    unverified: pre/post resist; item and DoT damage count (text says any spirit damage)
+
+no trigger condition (plain stats/actives): Cold Front, Sprint Boots, Extra Health, Veil Walker

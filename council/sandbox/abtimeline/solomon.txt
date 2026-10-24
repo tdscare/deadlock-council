@@ -1,0 +1,110 @@
+# solomon | Solomon | Rizuhble's Come Here My Pawns
+abilities: 1=Setup Bishop (ability_chessmaster_throwbishop, start_trained=false, Signature) / 2=Kingside Knight (ability_chessmaster_knightbuff, start_trained=false, Signature) / 3=Rook Battery (ability_chessmaster_forkpiece, start_trained=false, Signature) / 4=Develop Queen (ability_chessmaster_queen, start_trained=false, Ultimate)
+order: 1123144123343242
+model A (data):  Setup Bish:U@0  Setup Bish:T1@200  Kingside K:U@500  Rook Batte:U@1400  Setup Bish:T2@2000  Develop Qu:U@3200  Develop Qu:T1@3200  Setup Bish:T3@6800  Kingside K:T1@7600  Rook Batte:T1@8400  Rook Batte:T2@10100  Develop Qu:T2@11900  Rook Batte:T3@17400  Kingside K:T2@20600  Develop Qu:T3@32100  Kingside K:T3@48600
+model B (old):   Setup Bish:T1@200  Setup Bish:T2@900  Kingside K:T1@2000  Rook Batte:T1@2600  Setup Bish:T3@3900  Develop Qu:U@4600  Develop Qu:T1@5300  Kingside K:T2@6800  Rook Batte:T2@7600  Rook Batte:T3@8400  Develop Qu:T2@9200  Kingside K:T3@11000  Develop Qu:T3@11900
+tier upgrades: Setup Bishop: MoveDistance+5,FadingSlowPercent+15 / MaxPieces+1,RecastWindow+8 / TechArmorDamageReductionPerStack-2.5,MaxStacks+10,StackDuration+10,TileSteps+1 | Kingside Kni: AbilityCooldown-8 / Stamina+1,CombatBarrier+80 / MaxPieces+1,BonusTargetRadius+20,RemoveDebuffs+1 | Rook Battery: FireRateSlow+25,DebuffDuration+5 / CurrentHealthPercent+5 / AbilityCooldown-12,ImmobilizeDuration+0.5,MaxReflectCount+1 | Develop Quee: AbilityCooldown-40 / CheckmateThreshold+200,CheckmateThreshold+5x,SlowPercent+15 / TileSteps+1,QueenBonusMoves+2
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1    19  Extra Spirit
+        Setup Bish T1 ch1 cd12 ImpactDa=108,Damage=37 | Kingside K U ch1 cd25 | Rook Batte L[U] | Develop Qu L
+  1600 L5   2    21  High-Velocity Rounds
+        Setup Bish T1[T2] ch1 cd12 ImpactDa=113,Damage=39 | Kingside K U ch1 cd25 | Rook Batte U ch1 cd33 Damage=78 | Develop Qu L
+  2400 L6   3    30  Opening Rounds
+        Setup Bish T2 ch1 cd12 ImpactDa=129,Damage=44 | Kingside K U[T1] ch1 cd25 | Rook Batte U ch1 cd33 Damage=88 | Develop Qu L
+  3200 L8   4    32  Grit
+        Setup Bish T2 ch1 cd12 ImpactDa=133,Damage=45 | Kingside K U[T1] ch1 cd25 | Rook Batte U[T1] ch1 cd33 Damage=91 | Develop Qu T1[L] ch1 cd170 Damage=164,DPS=72
+  4000 L9   5    33  Extra Stamina
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=136,Damage=46 | Kingside K U[T1] ch1 cd25 | Rook Batte U[T1] ch1 cd33 Damage=93 | Develop Qu T1[L] ch1 cd170 Damage=166,DPS=73
+  4800 L10  6    46  Improved Spirit
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=162,Damage=54 | Kingside K U[T1] ch1 cd25 | Rook Batte U[T1] ch1 cd33 Damage=110 | Develop Qu T1[U] ch1 cd170 Damage=184,DPS=82
+  6400 L12  8    56  Compress Cooldown [imbue Rook Battery]
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=182,Damage=61 | Kingside K U[T1] ch1 cd25 | Rook Batte U[T1] ch1 cd33 Damage=123 | Develop Qu T1 ch1 cd170 Damage=199,DPS=89
+  8000 L14 10    77  Superior Cooldown
+        Setup Bish T3 ch1 cd12 ImpactDa=225,Damage=74 | Kingside K T1[T2] ch1 cd17 | Rook Batte U[T2] ch1 cd33 Damage=150 | Develop Qu T1 ch1 cd170 Damage=228,DPS=104
+  8800 L15 11    78  Mystic Expansion [imbue Setup Bishop]
+        Setup Bish T3 ch1 cd12 ImpactDa=227,Damage=75 | Kingside K T1[T2] ch1 cd17 | Rook Batte T1[T3] ch1 cd33 Damage=152 | Develop Qu T1 ch1 cd170 Damage=230,DPS=105
+ 12000 L19 15    83  Warp Stone
+        Setup Bish T3 ch1 cd12 ImpactDa=236,Damage=78 | Kingside K T1[T3] ch1 cd17 | Rook Batte T2[T3] ch1 cd33 Damage=158 | Develop Qu T2[T3] ch1 cd170 Damage=236,DPS=108
+ 15200 L22 18    96  Alchemical Fire
+        Setup Bish T3 ch1 cd12 ImpactDa=262,Damage=87 | Kingside K T1[T3] ch1 cd17 | Rook Batte T2[T3] ch1 cd33 Damage=175 | Develop Qu T2[T3] ch1 cd170 Damage=255,DPS=117
+ 16000 L22 18    96  Guardian Ward
+        Setup Bish T3 ch1 cd12 ImpactDa=262,Damage=87 | Kingside K T1[T3] ch1 cd17 | Rook Batte T2[T3] ch1 cd33 Damage=175 | Develop Qu T2[T3] ch1 cd170 Damage=255,DPS=117
+ 17600 L24 20   105  Mystic Vulnerability
+        Setup Bish T3 ch1 cd12 ImpactDa=281,Damage=92 | Kingside K T1[T3] ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=187 | Develop Qu T2[T3] ch1 cd170 Damage=267,DPS=124
+ 18400 L24 20   112  Mystic Burst
+        Setup Bish T3 ch1 cd12 ImpactDa=295,Damage=97 | Kingside K T1[T3] ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=196 | Develop Qu T2[T3] ch1 cd170 Damage=277,DPS=129
+ 20800 L26 22   114  Tankbuster
+        Setup Bish T3 ch1 cd12 ImpactDa=299,Damage=98 | Kingside K T2[T3] ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=199 | Develop Qu T2[T3] ch1 cd170 Damage=280,DPS=130
+ 23200 L27 23   123  Greater Expansion
+        Setup Bish T3 ch1 cd12 ImpactDa=315,Damage=103 | Kingside K T2[T3] ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=209 | Develop Qu T2[T3] ch1 cd170 Damage=292,DPS=136
+ 25600 L28 24   124  Stamina Mastery
+        Setup Bish T3 ch1 cd12 ImpactDa=317,Damage=104 | Kingside K T2[T3] ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=211 | Develop Qu T2[T3] ch1 cd170 Damage=293,DPS=137
+ 30400 L30 26   133  Escalating Exposure
+        Setup Bish T3 ch1 cd12 ImpactDa=336,Damage=110 | Kingside K T2[T3] ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=223 | Develop Qu T2[T3] ch1 cd170 Damage=306,DPS=143
+ 35200 L32 28   180  Boundless Spirit
+        Setup Bish T3 ch1 cd12 ImpactDa=429,Damage=140 | Kingside K T2[T3] ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=283 | Develop Qu T3 ch1 cd170 Damage=371,DPS=176
+ 41600 L34 30   211  Spirit Burn
+        Setup Bish T3 ch1 cd12 ImpactDa=492,Damage=160 | Kingside K T2[T3] ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=324 | Develop Qu T3 ch1 cd170 Damage=415,DPS=198
+ 48000 L35 31   212  Mystic Reverb [imbue Setup Bishop]
+        Setup Bish T3 ch1 cd12 ImpactDa=494,Damage=161 | Kingside K T2[T3] ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=326 | Develop Qu T3 ch1 cd170 Damage=417,DPS=198
+ 52800 L36 32   213  Divine Barrier
+        Setup Bish T3 ch1 cd12 ImpactDa=497,Damage=162 | Kingside K T3 ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=327 | Develop Qu T3 ch1 cd170 Damage=419,DPS=199
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @2400 Opening Rounds [enemyhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on enemy health % (EnemyLifeThreshold=50)
+    game text: Your attacks have additional Weapon Damage against enemies above {s:EnemyLifeThreshold}% health.
+    at buy: not computed (needs play data)
+- @6400 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Rook Battery; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Rook Battery U: cd 33s, duration 0s, charges 1; saves 5.9s/cast (1.82->2.22 casts/min)
+    enabler/next: after T3 @17400 (+11000): cd 21, saves 3.8s/cast, +0.63 casts/min vs +0.40 now
+- @8000 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 232s; 20% saves 46.4s per rotation
+- @8800 Mystic Expansion [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Setup Bishop; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its range and effect radius.
+    at buy: Setup Bishop T3: cd 12s, duration 0s, charges 1
+- @17600 Mystic Vulnerability [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: When an enemy takes {g:citadel_inline_attribute:'SpiritDamage'}, they have their {g:citadel_inline_attribute:'SpiritResist'} reduced. | vdata: proc damage types ABILITY
+    at buy: spirit sources: Setup Bishop, Rook Battery, Develop Queen
+- @18400 Mystic Burst [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 80 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcByOtherObjects=true
+    at buy: best Setup Bishop.ImpactDamage 295 at spirit 112
+    margin: +268%
+    reliability: procs from Setup Bishop.ImpactDamage 295 (cd 12), Setup Bishop.Damage 97 (cd 12), Rook Battery.Damage 196 (cd 21), Develop Queen.Damage 277 (cd 170)
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @20800 Tankbuster [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 165 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcFromItems=false, IgnoreResists=true, CanProcByOtherObjects=true
+    at buy: best Setup Bishop.ImpactDamage 299 at spirit 114
+    margin: +81%
+    reliability: procs from Setup Bishop.ImpactDamage 299 (cd 12), Rook Battery.Damage 199 (cd 21), Develop Queen.Damage 280 (cd 170); below threshold: Setup Bishop.Damage 98
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @30400 Escalating Exposure [spiritsrc+stack] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} applies a stacking Spirit Amp that increases your {g:citadel_inline_attribute:'SpiritDamage'} to t... | vdata: proc damage types ABILITY
+    at buy: spirit sources: Setup Bishop, Rook Battery, Develop Queen, upgrade_magic_shock
+    reliability: max 12 stacks, one per 0.7s of spirit hits = 8.4s of continuous spirit damage to max
+- @41600 Spirit Burn [win] -> OK | verdict: buy now | UNTESTABLE-HIGH-RISK
+    rule: 500 spirit damage to one enemy within 5s (game text: 'significant spirit damage'); per-enemy cooldown
+    game text: Dealing significant {g:citadel_inline_attribute:'SpiritDamage'} to an enemy within {s:DamageThresholdDuration}s causes an explosion dealing damage and...
+    at buy: all abilities in 5s ~1766 (Setup Bishop 829x1; Rook Battery 324x1; Develop Quee 613x1), without ult 1153
+    margin: +131% without ult, +253% with
+    reliability: needs the whole combo on one target (hit rate, travel time)
+    unverified: pre/post resist; item and DoT damage count (text says any spirit damage)
+- @48000 Mystic Reverb [hitimb] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 100 (imbued ability only); scaled by spirit at hit time; procs at most every 6s
+    game text: (no game text) | vdata: proc damage types ABILITY/BULLET, CanProcByOtherObjects=true
+    at buy: best Setup Bishop.ImpactDamage 494 at spirit 212
+    margin: +394%
+    reliability: procs from Setup Bishop.ImpactDamage 494 (cd 12), Setup Bishop.Damage 161 (cd 12)
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+
+no trigger condition (plain stats/actives): Extra Spirit, High-Velocity Rounds, Grit, Extra Stamina, Improved Spirit, Warp Stone, Alchemical Fire, Guardian Ward, Greater Expansion, Stamina Mastery, Boundless Spirit, Divine Barrier

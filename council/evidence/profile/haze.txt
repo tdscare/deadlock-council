@@ -1,0 +1,52 @@
+SCOPE: build-context
+KIND: profile
+BUILD: haze
+HERO: Haze
+ARGS: --profile haze nurse paige
+GENERATED: 2026-10-24T16:15:37Z
+BODY-SHA: d5fade799f6918cf69e1738f5c5c32e005e2a699e89b1a69a2da7e4f1eac44f9
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+WINDOW: 0-65 min of the soul-income walk, central parameters (MODELLED ESTIMATE); value of X = AS BUILT minus WITHOUT X (X's souls flow to the following purchases, so this is the value of X net of its best in-path alternative use)
+PHASES: lane / farm / fights / survive are ledger groups (one owner per effect; lane: lane troopers (base), lane: trade advantage, lane: forced recalls (HP budget); farm: camps/waves farmed, Cultist-type bonus souls; fights: fights/objectives (base), fights: trade advantage, kills; survive: time dead)
+TIERS per cell: VERIFIED GAME MECHANIC (a stat the item has in game data) | CONTROLLED SANDBOX RESULT (none ingested for profiles yet) | MODELLED ESTIMATE (the number below) | ASSUMED (activation frequency parameters listed per item)
+DECISION USE: this is a contribution profile, not a verdict; an item with a low total can still be worth buying for a phase the model does not price (see NOT MODELLED), a high total never proves the item beats an unlisted alternative. Compare through --strategy/--path/--seq files.
+KNOWN MODEL LIMITS: camp respawn / wave spawn caps and contested lanes are NOT modelled (camps/min = share of time x (hp/clear speed + travel)); extra souls from faster clearing therefore appear only through F_LANE/F_MID, travel, hscale and the omega elasticity (omega=0 means saved seconds never become souls)
+
+## RELEVANCE (activities scored only where they matter for this hero/build; basis stated)
+  lane: RELEVANT - every build starts in lane (lane ends at minute 9 in the walk)
+  farm: RELEVANT - the build owns farm-affecting stats: bounce
+  fights: RELEVANT - every build fights; fight income and kills come from the trade ratio
+  survive: RELEVANT - time dead and forced recalls cost income in every build
+MEASURED vs MODELLED: measured inputs ingested for this hero: none. Every number in the table is a MODELLED ESTIMATE; "direct" = ledger effect in the phases the item's stats feed, "reallocation" = the remainder, caused by the following purchases arriving earlier (not a property of the item). VERIFIED stats are named in the stat columns.
+
+item | role | price | d souls lane | farm | fights | survive | d souls total | d window TR % | modelled stats | NOT MODELLED stats | activation assumptions (labelled)
+Rapid Rounds | retained-or-upgraded | 800 | -22 | via realloc | -7 | via realloc | direct -29 + reallocation -4 = -33 | -0.1 | BonusFireRate | - | hit (accuracy)
+Active Reload | retained | 1600 | -333 | via realloc | +1939 | +780 | direct +2386 + reallocation +352 = +2739 | +23.0 | BulletLifestealPercent, BonusFireRate, BonusClipSizePercent, BonusMoveSpeed | AbilityCooldown, AbilityDuration | hit (accuracy); POKE (damage taken); reload (VERIFIED m_reloadDuration)
+Swift Striker | retained | 1600 | -254 | via realloc | +445 | via realloc | direct +192 + reallocation +347 = +538 | +3.5 | BonusFireRate, BonusSprintSpeed | - | hit (accuracy)
+Extended Magazine | retained-or-upgraded | 800 | +21 | via realloc | +9 | via realloc | direct +29 + reallocation +9 = +38 | +0.2 | BonusClipSizePercent, BaseAttackDamagePercent | - | reload (VERIFIED m_reloadDuration); hit (accuracy)
+Titanic Magazine | retained | 1600 | -225 | via realloc | +1102 | via realloc | direct +878 + reallocation +974 = +1852 | +11.2 | BonusClipSizePercent, BaseAttackDamagePercent | - | reload (VERIFIED m_reloadDuration); hit (accuracy)
+Extra Health | retained-or-upgraded | 800 | +368 | via realloc | +351 | +142 | direct +861 + reallocation +77 = +938 | +4.2 | BonusHealth | - | POKE/enemy (damage taken)
+Fortitude | retained | 3200 | +160 | via realloc | +327 | +141 | direct +629 + reallocation -225 = +404 | +3.0 | BonusMoveSpeed, BonusHealth | RestoreDelay, HealLifePercentOutOfCombat, HealthThreshold | POKE/enemy (damage taken)
+Ricochet | retained | 6400 | +0 | +2322 | -54 | via realloc | direct +2268 + reallocation -556 = +1712 | -0.0 | BonusFireRate | RicochetDamagePercent, RicochetRadius, RicochetTargets | p2hero (second hero found by a bounce); N_NPC (NPCs per camp hit); hit (accuracy)
+Healing Booster | retained-or-upgraded | 1600 | +0 | via realloc | -165 | -76 | direct -241 + reallocation -42 = -283 | -1.7 | BonusHealthRegen, OutOfCombatHealthRegen | HealAmpCastPercent, HealAmpRegenPercent | POKE/enemy (damage taken)
+Siphon Bullets | retained | 6400 | +0 | via realloc | -411 | -107 | direct -518 + reallocation -75 = -592 [LOW COVERAGE 1/10 stats modelled: a negative value here is an under-count, not a finding] | -3.0 | BaseAttackDamagePercent | BulletResist, StealPerHit, StealPerKill, StackLostPerDeath, MaxStacks, StealDuration, ProcCooldown, HealthStealPctHero, ParticleRadius | hit (accuracy); POKE/enemy (damage taken)
+Burst Fire | retained | 3200 | +0 | via realloc | -32 | via realloc | direct -32 + reallocation +37 = +5 | -0.5 | BonusFireRate, BonusMoveSpeed | AbilityDuration, ActivatedFireRate, SlideScale | hit (accuracy)
+Bullet Lifesteal | retained-or-upgraded | 1600 | +0 | via realloc | +395 | +177 | direct +572 + reallocation +11 = +583 | +4.6 | BulletLifestealPercent, BonusHealth, BaseAttackDamagePercent | - | hit (accuracy); POKE (damage taken); POKE/enemy (damage taken)
+Extra Charge | retained-or-upgraded | 800 | via realloc | via realloc | via realloc | via realloc | direct +0 + reallocation +176 = +176 | +1.1 | - | BonusAbilityCharges, BonusSpiritForChargedAbilities | -
+Lucky Shot | retained | 6400 | +0 | via realloc | -849 | via realloc | direct -849 + reallocation -416 = -1266 [LOW COVERAGE 1/4 stats modelled: a negative value here is an under-count, not a finding] | -7.3 | BonusClipSizePercent | Radius, ProcChance, CritDamagePercent | hit (accuracy); reload (VERIFIED m_reloadDuration)
+Rapid Recharge | retained | 3200 | via realloc | via realloc | via realloc | via realloc | direct +0 + reallocation +70 = +70 | +0.3 | - | CooldownBetweenChargeReduction, BonusAbilityCharges, CooldownReductionOnChargedAbilities, BonusSpiritForChargedAbilities | -
+Vampiric Burst | retained | 6400 | +0 | via realloc | +1121 | +584 | direct +1705 + reallocation +28 = +1733 | +14.9 | BonusHealth, BulletLifestealPercent, BaseAttackDamagePercent | AbilityDuration, ActiveBonusFireRate, ActiveBonusLifesteal, ActiveReloadPercent, BulletResist | POKE/enemy (damage taken); hit (accuracy); POKE (damage taken); active effect: cooldown/uptime not priced
+Silencer | retained | 6400 | +0 | via realloc | -98 | -50 | direct -147 + reallocation -3 = -150 [LOW COVERAGE 0/7 stats modelled: a negative value here is an under-count, not a finding] | -0.6 | - | TechResist, TechDamageReduction, SilenceDuration, DebuffDuration, ImmunityDuration, BuildUpPerShot, BuildUpDuration | POKE/enemy (damage taken); hit (accuracy)
+Healing Tempo | retained | 6400 | +0 | via realloc | +306 | +162 | direct +467 + reallocation +28 = +495 | +3.4 | BonusFireRate, BonusMoveSpeed, BonusHealthRegen, OutOfCombatHealthRegen | AbilityCooldown, BuffDuration, MinimumHealAmount, TechResist, HealAmpCastPercent, HealAmpRegenPercent | hit (accuracy); POKE/enemy (damage taken)
+
+LEDGER CHECK (phase deltas add up to the total souls difference for every item; no double counting): OK for all 18 items
+
+## READING GUIDE (items whose profile is dominated by one phase)
+  Active Reload: largest modelled effect is fights (+1939 souls); total +2739 souls, window trade ratio +23.0%
+  Titanic Magazine: largest modelled effect is fights (+1102 souls); total +1852 souls, window trade ratio +11.2%
+  Vampiric Burst: largest modelled effect is fights (+1121 souls); total +1733 souls, window trade ratio +14.9%
+  Ricochet: largest modelled effect is farm (+2322 souls); total +1712 souls, window trade ratio -0.0%
+  Lucky Shot: largest modelled effect is fights (-849 souls); total -1266 souls, window trade ratio -7.3%
+  Extra Health: largest modelled effect is lane (+368 souls); total +938 souls, window trade ratio +4.2%
+  Siphon Bullets: largest modelled effect is fights (-411 souls); total -592 souls, window trade ratio -3.0%
+  Bullet Lifesteal: largest modelled effect is fights (+395 souls); total +583 souls, window trade ratio +4.6%

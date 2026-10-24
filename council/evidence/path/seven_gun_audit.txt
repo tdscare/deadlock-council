@@ -1,0 +1,42 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: seven_gun
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:13Z
+BODY-SHA: d6f8f03f2443aaaaf526001105e60bfa3820c0ae7a7ec7b2b54f8aaa45b3cf8e
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Monster Rounds, High-Velocity Rounds, Opening Rounds, Extra Spirit, Rapid Rounds, Swift Striker, Cultist Sacrifice, Duration Extender
+  Mid · L-R                -> main path (sequential): Surge of Power, Spirit Lifesteal, Sprint Boots, Enduring Speed, Improved Spirit, Tesla Bullets, Mystic Vulnerability, Toxic Bullets
+  Late · L-R               -> main path (sequential): Escalating Exposure, Spiritual Overflow, Unstoppable, Boundless Spirit
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Dispel Magic, Spirit Resilience
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Superior Duration, Spirit Burn, Ricochet, Lightning Scroll, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Juggernaut
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Spirit Burn, sell Opening Rounds
+    function of Opening Rounds: stats only; replacement Spirit Burn: range; roles lost: none  [VERIFIED GAME MECHANIC]
+    Opening Rounds is a component of later items: no
+    held for 48800 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 19200/8000/17600 -> 17600/8000/24000; thresholds lost: none
+    trade ratio after the sale 0.22; selling Swift Striker instead: 0.22 (-0.0%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Ricochet, sell Toxic Bullets
+    function of Toxic Bullets: bullet_proc; replacement Ricochet: fire_rate; roles lost: bullet_proc  [VERIFIED GAME MECHANIC]
+    Toxic Bullets is a component of later items: no
+    held for 27200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 19200/8000/17600 -> 22400/8000/17600; thresholds lost: none
+    trade ratio after the sale 0.24; selling Opening Rounds instead: 0.23 (-2.8%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Lightning Scroll, sell Cultist Sacrifice
+    function of Cultist Sacrifice: charges, range; replacement Lightning Scroll: slow, stun; roles lost: charges, range  [VERIFIED GAME MECHANIC]
+    Cultist Sacrifice is a component of later items: no
+    held for 44000 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 19200/8000/17600 -> 16000/8000/24000; thresholds lost: none
+    trade ratio after the sale 0.22; selling Opening Rounds instead: 0.22 (+1.8%)  [MODELLED ESTIMATE]
+    model limit: Cultist Sacrifice has an active effect (PRESS) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

@@ -1,0 +1,109 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: apollo
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:12:52Z
+BODY-SHA: 1209cc2914e1c194da4767dceaba7dec5387d1de547c424e213a857bc89f7c6f
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Spirit Lifesteal: retained-or-upgraded (-> Leech)
+  Extra Regen: retained-or-upgraded (-> Healing Booster)
+  Healing Booster: retained
+  Enchanter's Emblem: retained
+  Tankbuster: retained
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Greater Expansion: retained
+  Extra Stamina: retained-or-upgraded (-> Stamina Mastery)
+  Stamina Mastery: retained
+  Torment Pulse: retained
+  Superior Cooldown: retained
+  Boundless Spirit: retained
+  Leech: retained
+  Spirit Burn: retained
+  Mystic Reverb: retained
+  Escalating Exposure: retained
+  Grit: conditional branch (lane alternative)
+  Dispel Magic: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Healbane: conditional branch (counter menu)
+  Witchmail: situational-luxury
+  Echo Shard: situational-luxury
+  Divine Barrier: situational-luxury
+  Ethereal Shift: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+  Healing Tempo: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Grit
+  Early · L-R                -> main path (sequential): Extra Spirit, Mystic Burst, Mystic Expansion, Compress Cooldown, Improved Spirit, Spirit Lifesteal, Extra Regen, Healing Booster
+  Mid · L-R                  -> main path (sequential): Enchanter's Emblem, Tankbuster, Mystic Vulnerability, Greater Expansion, Extra Stamina, Stamina Mastery, Torment Pulse, Superior Cooldown
+  Late · L-R                 -> main path (sequential): Boundless Spirit, Leech, Spirit Burn, Mystic Reverb, Escalating Exposure
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Dispel Magic, Counterspell, Plated Armor, Metal Skin, Spirit Resilience, Unstoppable, Healbane
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Witchmail, Echo Shard, Divine Barrier, Ethereal Shift
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown, Healing Tempo
+
+## Enchanter's Emblem: sold when buying Witchmail (I'm rich as fuck, luxury)
+  role of Enchanter's Emblem: retained; role of Witchmail: situational-luxury
+  Enchanter's Emblem: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 9600 souls (~10.0 min), replaced at ~52.0 min -> owned ~42.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/19200/38400 -> after 0/17600/38400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 85 min | window TR | key purchase times (min)
+  as built                                    |          82790 |      0.91 | Enchanter's Emblem 10, Witchmail 52
+  keep Enchanter's Emblem (slot cap ignored)  |          84437 |      0.98 | Enchanter's Emblem 10, Witchmail 53
+  skip Enchanter's Emblem                     |          79849 |      0.81 | Witchmail 54
+  sell Tankbuster instead                     |          84542 |      0.98 | Enchanter's Emblem 10, Witchmail 51
+  keep Enchanter's Emblem (slot cap ignored) vs as built: d souls +1289, d window TR +7.3% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Enchanter's Emblem vs as built: d souls -574, d window TR -10.8% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Tankbuster instead vs as built: d souls +1269, d window TR +7.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Enchanter's Emblem (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Tankbuster instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Tankbuster: sold when buying Echo Shard (I'm rich as fuck, luxury)
+  role of Tankbuster: retained; role of Echo Shard: situational-luxury
+  Tankbuster: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 12000 souls (~11.8 min), replaced at ~51.2 min -> owned ~39.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/12800/44800 -> after 0/12800/41600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 85 min | window TR | key purchase times (min)
+  as built                                    |          82507 |      0.88 | Tankbuster 12, Echo Shard 51
+  keep Tankbuster (slot cap ignored)          |          82547 |      0.88 | Tankbuster 12, Echo Shard 53
+  skip Tankbuster                             |          83680 |      0.93 | Echo Shard 50
+  sell Enchanter's Emblem instead             |          81081 |      0.82 | Tankbuster 12, Echo Shard 52
+  keep Tankbuster (slot cap ignored) vs as built: d souls +37, d window TR +0.2% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Tankbuster vs as built: d souls +210, d window TR +3.6% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Enchanter's Emblem instead vs as built: d souls -1421, d window TR -7.1% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Tankbuster'] differ from 'as built' only through items with no modelled stat (Echo Shard contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Echo Shard has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Echo Shard (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Enchanter's Emblem instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Torment Pulse: sold when buying Ethereal Shift (I'm rich as fuck, luxury)
+  role of Torment Pulse: retained; role of Ethereal Shift: situational-luxury
+  Torment Pulse: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 22400 souls (~20.5 min), replaced at ~51.2 min -> owned ~30.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/12800/44800 -> after 0/12800/41600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 85 min | window TR | key purchase times (min)
+  as built                                    |          84024 |      0.88 | Torment Pulse 20, Ethereal Shift 51
+  keep Torment Pulse (slot cap ignored)       |          84078 |      0.88 | Torment Pulse 20, Ethereal Shift 53
+  skip Torment Pulse                          |          85779 |      0.95 | Ethereal Shift 48
+  sell Enchanter's Emblem instead             |          82484 |      0.81 | Torment Pulse 20, Ethereal Shift 52
+  keep Torment Pulse (slot cap ignored) vs as built: d souls +41, d window TR +0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Torment Pulse vs as built: d souls +242, d window TR +5.0% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Enchanter's Emblem instead vs as built: d souls -1251, d window TR -7.4% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Ethereal Shift has an active effect (INSTANT_CAST) not priced
+  FINDINGS: a computed alternative sequence is better: skip Torment Pulse
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Torment Pulse; evidence tier: MODEL-ONLY; flipping assumptions: sell Enchanter's Emblem instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

@@ -1,0 +1,233 @@
+{
+ "id": "violet",
+ "hero": "Violet",
+ "tag": "Fix",
+ "name": "Rizuhble's Bob Ross Has A Glock",
+ "desc": "Gun hybrid Violet",
+ "hk": "hero_artist",
+ "abil": [
+  "Living Ink",
+  "Flow State",
+  "Still Life",
+  "Abstract Landscape"
+ ],
+ "order": [
+  1,
+  1,
+  3,
+  2,
+  1,
+  4,
+  1,
+  3,
+  3,
+  4,
+  4,
+  2,
+  2,
+  2,
+  3,
+  4
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "High-Velocity Rounds",
+      ""
+     ],
+     [
+      "Opening Rounds",
+      ""
+     ],
+     [
+      "Extra Charge",
+      ""
+     ],
+     [
+      "Surge of Power",
+      "",
+      "1"
+     ],
+     [
+      "Mystic Burst",
+      ""
+     ],
+     [
+      "Mystic Shot",
+      ""
+     ],
+     [
+      "Recharging Rush",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Enchanter's Emblem",
+      ""
+     ],
+     [
+      "Healbane",
+      ""
+     ],
+     [
+      "Spirit Lifesteal",
+      ""
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Mercurial Magnum",
+      "",
+      "1"
+     ],
+     [
+      "Rapid Recharge",
+      ""
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Tankbuster",
+      ""
+     ],
+     [
+      "Spirit Burn",
+      ""
+     ],
+     [
+      "Infuser",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Infuser if needed. Ahead? Skip it until you're dying. Sell Opening Rounds for it.",
+    true,
+    [
+     [
+      "Spirit Resilience",
+      "Spirit damage that keeps hurting you after the hit: Infernus, Seven, Vyper, Lady Geist."
+     ],
+     [
+      "Bullet Resilience",
+      "Most of their damage is gun."
+     ],
+     [
+      "Counterspell",
+      "Lash ult, Infernus ult. Anything big you can see coming."
+     ],
+     [
+      "Dispel Magic",
+      "Knockdown, Slowing Hex, Disarming Hex and slows."
+     ],
+     [
+      "Knockdown",
+      "Flyers like Vindicta and Grey Talon keep getting away."
+     ],
+     [
+      "Cursed Relic",
+      "Shut their carry down before a fight."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Escalating Exposure",
+      "Sell Healbane for this."
+     ],
+     [
+      "Spellslinger",
+      "You cast so often that it stays at full stacks. Sell Mystic Shot for this."
+     ],
+     [
+      "Witchmail",
+      "Sell Enchanter's Emblem for this."
+     ],
+     [
+      "Spiritual Overflow",
+      "Sell Recharging Rush for this."
+     ],
+     [
+      "Refresher",
+      "Sell Tankbuster for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Base = Kieran's in-game Ink Cycler Violet. Items, boxes and notes kept; no Quicksilver Reload (Mercurial Magnum bought straight, per his latest call). Fixes are spike maths, the imbue target, slot count and the 48k total.",
+  "Mercurial Magnum now has its imbue target: Living Ink (1). He spams it, so every cast reloads and re-arms the spirit bullets.",
+  "Spirit spike was false: Extra Spirit + Extra Charge + Surge (upgrade, +2400) = 4000, not 4.8k. Added Mystic Burst (800) right after Surge, so spirit lands exactly 4.8k at 6.4k souls, and Tankbuster becomes a true upgrade (+2400, same total cost as before). Gun 4.8k on Recharging Rush at 9.6k unchanged.",
+  "Health spike pulled earlier inside his Mid box: Spirit Lifesteal moved before Rapid Recharge/Improved Spirit, so health 4.8k lands at 16.8k souls (was 20.8k with spirit already at 11.2k, which the overshoot rule calls wrong). Spirit sits at 7.2k when health spikes.",
+  "Improved Spirit note said 'Upgrade' but Extra Spirit is consumed by Surge, so it's a fresh 1600; note now 'Upgrades to Boundless Spirit'. Spirit Burn note said 'Upgrade' but it has no components; reworded. Witchmail reworded (no components).",
+  "Core ends at exactly 12 at Infuser, 44.0k (was 62.4k with Lucky Shot at slot 13 and no sell). His three late swap-ins (Lucky Shot, Spiritual Overflow, Escalating Exposure) moved to the top of the rich box with his own sells kept; they're all T4 extras of what the build already does. Superior Duration (T3) stays in rich per his explicit call for Infuser uptime. Every rich item names a sell. Counters box uses the standard wording.",
+  "Public check: lockbuilds official and deadlocked Violet are pure spirit (Extra Spirit > Improved > Boundless, Rapid Recharge, Spirit Lifesteal, Tankbuster, Superior Cooldown, Spirit Burn, Escalating Exposure, Spiritual Overflow), which this build has. They go greens first (Extra Regen/Mystic Regeneration/Radiant Regen); his gun-hybrid opener (HV > Opening, Mystic Shot, Recharging Rush, Mercurial Magnum) is his style, so kept.",
+  "Ability order: Kieran's order (Living Ink T1, T2, Still Life T1, T2, Living Ink T3, Still Life T3, ult x2, Flow State, Flow State T3 last) over the data order (mobalytics most-likely path 3124313311422442, which maxes Still Life first). His gets Living Ink T3 (+0.4 scaling, +30% bullet multiplier, +1s cooldown per hit) at 9.6k souls instead of 13.6k: each Ink bullet hits 141-160 instead of 103-115 in that window, about +137 per cast. The data order's earlier Still Life T3 (35s to 24s cooldown) is worth roughly +5 damage per second from the sketch; the Ink upgrade is worth about +15.",
+  "Item fit: kept every item. All are in Kieran's own in-game Violet (Ink Cycler); kit check: Living Ink 2 charges x 3 shots at 7s between charges and the tether ticking every 0.15s give Infuser and Escalating Exposure lots of separate spirit hits, Flow State max hit 100+1.8x clears Tankbuster's 165, 15-round 0.65s gun with heavy bullets suits Mercurial Magnum on the 1. Public: tracklock Violet probuild Mystic Shot 47%, Tankbuster 68%, Improved Spirit 91%, Rapid Recharge 79%; Healbane/Enchanter's in tracklock situational.",
+  "Notes: Mystic Shot, Enchanter's Emblem and Healbane notes no longer restate the card; Enchanter's note no longer claims it upgrades to Witchmail (Witchmail has no component).",
+  "Threshold: Mystic Burst was bought at 4.0k souls with 40.8 spirit, so Living Ink hit for 64 vs the 80 it needs. Moved it to right after Surge of Power (imbued on the 1): at 6.4k souls Living Ink hits 35 + 0.7 x (57.1 + 28) = 95 vs 80 (100 with Extra Charge's +7 on charged abilities). Tankbuster was at 12.0k souls with Living Ink at 35 + 0.7 x 106.8 = 110 vs 165; moved it after Enchanter's Emblem, landing at 13.6k with the 1's T3 scaling: 35 + 1.1 x 122.9 = 170 vs 165. Recharging Rush at 9.6k: your gun does 38 base x 1.64 (4.8k gun, Opening Rounds, Rush) = 63 a bullet, 6 bullets in 3.5s = 376 vs 200 before Living Ink's empowered bullets. Spirit Burn at 38.4k: one Living Ink bullet alone 301, three = ~900 vs 500. Witchmail stays a rich-box late buy.",
+  "Round 10: Tankbuster moved from before Healbane/Spirit Lifesteal to after them, so the 4.8k health spike lands at 14.4k instead of 16.8k (Violet's only kit sustain is Still Life T1's short regen). Tracklock pro Violet (last 30 days, 78 games) buys Tankbuster late (68%) and takes greens early. Tankbuster still clears its 165 at 16.8k (Living Ink T3 scaling, more spirit than at 13.6k).",
+  "Round 11: tier 4 run fixed: was Mercurial Magnum → Boundless → Spirit Burn → Infuser from 27.2k. Rapid Recharge and Tankbuster moved between them, so it's Mercurial, Rapid Recharge, Boundless, Tankbuster, then Spirit Burn and Infuser at the end. No pivot: her damage is bullets from her 1 either way, so there's no second job.",
+  "Round 12: Lucky Shot out of the rich box. It procs on bullets, but most of Violet's damage is Living Ink, and the game blocks normal bullets while Ink is up (MODIFIER_STATE_ARTIST_PREVENT_BULLET_CREATION; Ink shots are ability projectiles), so Ink shots can't roll it. That leaves her plain gun: 30 a bullet every 0.65s, so 25% for +100% is about +25% on roughly 46 DPS before items, around +12 DPS for 6.4k. No public Violet list has it (tracklock pro, last 30 days, 78 games; tracklock build, 284 matches), and none has a T4 gun item to put there instead, so nothing replaces it.",
+  "Round 13: notes emptied per UPDATE 3 (only sells, swaps, slot locked, counters and verified tips kept); desc shortened to a style label (UPDATE 4).",
+  "Round 14: Superior Duration out of rich (T3; the rich box holds T4 only). Transcendent Cooldown now sells Healbane (Spirit Burn already does the anti-heal by then), so every T2 left in the last 12 has a named sell (Escalating Exposure keeps Kieran's Recharging Rush sell). Infuser note emptied and Mystic Regeneration's sell fixed (Infuser is an upgrade, it frees no slot). Bullet Resilience note now a plain condition (it adds resist, it doesn't stop shred). Divine Barrier added as Dispel Magic's pricier version. Sell notes now all read 'for this'.",
+  "Round 15: Knockdown note said Violet 'can't sketch' flyers, which nothing in Still Life supports (25m cast, it tethers any hero you look at); now the plain condition: flyers like Vindicta and Grey Talon keep getting away (Knockdown's stun lasts longer on airborne targets and pulls them down).",
+  "Round 17: Transcendent Cooldown out of rich (no Superior Cooldown in the build, so it isn't a pricier version of anything here). Healbane keeps a named sell: Divine Barrier now 'If you bought Dispel Magic, sell it for this. Otherwise sell Healbane.' (Spirit Burn covers anti-heal by then). Lane sell 'Sell it once you're out of slots.'.",
+  "Round 20: lane Mystic Regeneration → Extra Regen. Late list Escalating Exposure, Witchmail, Spiritual Overflow, Transcendent Cooldown, Refresher; core+late 75.2k.",
+  "Round 23: Spellslinger in at #2 of the late list (sells Mystic Shot): casting any ability refreshes Flow State and every Living Ink hit cuts all cooldowns, so ability and item casts keep its 6 stacks up. Transcendent Cooldown out (Living Ink hits already cut ability cooldowns 1.5-2.5s each and item cooldowns by half that). Overflow now sells Recharging Rush and Refresher sells Tankbuster, since Counters already sell Opening Rounds.",
+  "Round 25: ability order 3124113313442242 -> 1132141334422234 (worked out from the kit for this build's playstyle)."
+ ]
+}

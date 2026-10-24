@@ -1,0 +1,130 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: rem
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:11:34Z
+BODY-SHA: 294e46423bedd6bf19586ab58614ef4e92dd1d6e30e2c28c042386eb307a246b
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Grit: retained-or-upgraded (-> Guardian Ward)
+  High-Velocity Rounds: retained-or-upgraded (-> Opening Rounds)
+  Opening Rounds: retained
+  Guardian Ward: retained-or-upgraded (-> Divine Barrier)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Healing Nova: retained
+  Trophy Collector: retained
+  Rapid Recharge: retained
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Healing Booster: retained
+  Echo Shard: retained
+  Divine Barrier: retained
+  Tankbuster: retained
+  Heroic Aura: retained
+  Superior Cooldown: retained
+  Greater Expansion: retained
+  Boundless Spirit: retained
+  Extra Regen: conditional branch (lane alternative)
+  Extra Health: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Spirit Rend: conditional branch (alternative/optional)
+  Scourge: situational-luxury
+  Lightning Scroll: situational-luxury
+  Witchmail: situational-luxury
+  Refresher: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+  Healing Tempo: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen, Extra Health
+  Early · L-R                -> main path (sequential): Extra Charge, Grit, High-Velocity Rounds, Opening Rounds, Guardian Ward, Extra Spirit, Mystic Burst, Improved Spirit
+  Mid · L-R                  -> main path (sequential): Compress Cooldown, Healing Nova, Trophy Collector, Rapid Recharge, Mystic Expansion, Healing Booster, Echo Shard
+  Late · L-R                 -> main path (sequential): Divine Barrier, Tankbuster, Heroic Aura, Superior Cooldown, Greater Expansion, Boundless Spirit
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Counterspell, Dispel Magic, Spirit Resilience, Unstoppable
+  Swap for Heroic Aura       -> alternative/optional (branch): Spirit Rend
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Scourge, Lightning Scroll, Witchmail, Refresher
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown, Healing Tempo
+  3+ gun heroes on your team -> alternative/optional (branch): 
+
+## Tankbuster: sold when buying Scourge (I'm rich as fuck, luxury)
+  role of Tankbuster: retained; role of Scourge: situational-luxury
+  Tankbuster: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 31200 souls (~30.8 min), replaced at ~48.8 min -> owned ~18.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/12800/32000 -> after 4800/12800/28800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 74 min | window TR | key purchase times (min)
+  as built                                    |          69133 |      0.14 | Tankbuster 31, Scourge 49
+  keep Tankbuster (slot cap ignored)          |          69124 |      0.14 | Tankbuster 31, Scourge 51
+  skip Tankbuster                             |          69243 |      0.14 | Scourge 48
+  sell Opening Rounds instead                 |          68763 |      0.13 | Tankbuster 31, Scourge 50
+  keep Tankbuster (slot cap ignored) vs as built: d souls -1, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Tankbuster vs as built: d souls +99, d window TR +1.0% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: INSUFFICIENT (effect within model noise)
+  sell Opening Rounds instead vs as built: d souls -248, d window TR -4.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Scourge has an active effect (PRESS) not priced
+  FINDINGS: a computed alternative sequence is better: skip Tankbuster
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Tankbuster; evidence tier: MODEL-ONLY; flipping assumptions: sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Echo Shard: sold when buying Lightning Scroll (I'm rich as fuck, luxury)
+  role of Echo Shard: retained; role of Lightning Scroll: situational-luxury
+  Echo Shard: price 6400, resale 3200, net cost of owning it 3200 souls (3.2 min of reference income); first bought at 24000 souls (~23.5 min), replaced at ~47.0 min -> owned ~23.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/12800/32000 -> after 4800/12800/25600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 74 min | window TR | key purchase times (min)
+  as built                                    |          68865 |      0.12 | Echo Shard 24, Lightning Scroll 47
+  keep Echo Shard (slot cap ignored)          |          69003 |      0.13 | Echo Shard 24, Lightning Scroll 51
+  skip Echo Shard                             |          69159 |      0.13 | Lightning Scroll 43
+  sell Opening Rounds instead                 |          68658 |      0.12 | Echo Shard 24, Lightning Scroll 50
+  keep Echo Shard (slot cap ignored) vs as built: d souls +286, d window TR +4.9% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Echo Shard vs as built: d souls +253, d window TR +3.7% | souls: MODEL-ONLY (sign robust in 97% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Opening Rounds instead vs as built: d souls -4, d window TR +0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  note: the variants ['skip Echo Shard'] differ from 'as built' only through items with no modelled stat (Echo Shard contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Echo Shard has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: no modelled stat for Echo Shard (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Echo Shard (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | skip Echo Shard: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Trophy Collector: sold when buying Witchmail (I'm rich as fuck, luxury)
+  role of Trophy Collector: retained; role of Witchmail: situational-luxury
+  Trophy Collector: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 12800 souls (~12.8 min), replaced at ~49.8 min -> owned ~37.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/19200/25600 -> after 4800/17600/25600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 74 min | window TR | key purchase times (min)
+  as built                                    |          69115 |      0.14 | Trophy Collector 13, Witchmail 50
+  keep Trophy Collector (slot cap ignored)    |          69011 |      0.14 | Trophy Collector 13, Witchmail 51
+  skip Trophy Collector                       |          69523 |      0.15 | Witchmail 48
+  sell Opening Rounds instead                 |          68650 |      0.14 | Trophy Collector 13, Witchmail 50
+  keep Trophy Collector (slot cap ignored) vs as built: d souls -103, d window TR -0.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  skip Trophy Collector vs as built: d souls +343, d window TR +2.0% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Opening Rounds instead vs as built: d souls -450, d window TR -3.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: a computed alternative sequence is better: skip Trophy Collector
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Trophy Collector; evidence tier: MODEL-ONLY; flipping assumptions: keep Trophy Collector (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | skip Trophy Collector: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Rapid Recharge: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Rapid Recharge: retained; role of Refresher: situational-luxury
+  Rapid Recharge: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 15200 souls (~15.0 min), replaced at ~48.8 min -> owned ~33.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/12800/32000 -> after 4800/12800/28800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 74 min | window TR | key purchase times (min)
+  as built                                    |          69082 |      0.14 | Rapid Recharge 15, Refresher 49
+  keep Rapid Recharge (slot cap ignored)      |          69117 |      0.14 | Rapid Recharge 15, Refresher 51
+  skip Rapid Recharge                         |          69214 |      0.15 | Refresher 48
+  sell Opening Rounds instead                 |          68757 |      0.14 | Rapid Recharge 15, Refresher 50
+  keep Rapid Recharge (slot cap ignored) vs as built: d souls +34, d window TR +0.4% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Rapid Recharge vs as built: d souls +118, d window TR +3.3% | souls: MODEL-ONLY (sign robust in 97% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 82% of cells; no measured inputs)
+  sell Opening Rounds instead vs as built: d souls -317, d window TR -2.8% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Rapid Recharge'] differ from 'as built' only through items with no modelled stat (Rapid Recharge, Refresher contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Rapid Recharge, Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

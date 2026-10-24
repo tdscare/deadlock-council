@@ -1,0 +1,103 @@
+{
+ "id": "greytalon_rain_t3_arrow_lifesteal",
+ "title": "Grey Talon: Charged Shot during Rain of Arrows T3 (30% airborne spirit lifesteal)",
+ "hero": "Grey Talon",
+ "playstyle": "One Shot Grey Talon",
+ "builds": [
+  "greytalon"
+ ],
+ "question": "Does an arrow fired while airborne in Rain of Arrows T3 heal for ~30% of its damage, making rival order O5 (Rain maxed before Owl: Rain T3 @13.8k instead of 26.9k) a sustain engine?",
+ "hypothesis": "Heal in R3 >= 25% of arrow damage in the block; R2 and G heal < 5%. Timeline: at 13.8k an arrow does ~365, so ~110 HP per airborne arrow, ~220-330 per Rain cast (cd 13s at T2).",
+ "arms": [
+  {
+   "name": "R2_rainT2",
+   "items": [],
+   "ability_order": null,
+   "abil_bits": [
+    15,
+    7,
+    0,
+    0
+   ],
+   "imbues": {},
+   "souls": "n/a",
+   "notes": "Rain T2"
+  },
+  {
+   "name": "R3_rainT3",
+   "items": [],
+   "ability_order": null,
+   "abil_bits": [
+    15,
+    15,
+    0,
+    0
+   ],
+   "imbues": {},
+   "souls": "n/a",
+   "notes": "Rain T3"
+  },
+  {
+   "name": "G_grounded",
+   "items": [],
+   "ability_order": null,
+   "abil_bits": [
+    15,
+    15,
+    0,
+    0
+   ],
+   "imbues": {},
+   "souls": "n/a",
+   "notes": "no jump"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "sandbox default",
+  "souls": 50000,
+  "position": "mid lane, Haze bot 350u",
+  "enemies": [
+   {
+    "hero": "Haze bot",
+    "count": 1,
+    "items": "none",
+    "behaviour": "stands",
+    "hp": "egod"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 50 clamp",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "hardreset + abil per block, abilist logged",
+  "same cast/hold sequence",
+  "lowhp 50 so heals are not capped"
+ ],
+ "procedure": [
+  "run autorun/scenarios/gt_rain_t3_arrow_lifesteal.txt",
+  "read healsum/healDiffObserved per block and arrow damage per mark",
+  "5 runs"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "heal_pct_of_arrow_damage",
+   "unit": "%",
+   "how": "healDiffObserved / sum(ability_charged_shot damage) per block",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "heal_pct_of_arrow_damage",
+  "min_effect_pct": 20,
+  "min_trials": 5,
+  "rule": "SUPPORTED if R3 - max(R2,G) >= 20 points in >=4/5 runs (then O5 becomes a candidate second playstyle, still UNTESTABLE-HIGH-RISK for aiming while gliding); REFUTED if R3 within 5 points of R2; else INCONCLUSIVE. Caveat: hold/cast sequencing may land before the arrow fires: check the arrow hit happened while airborne (samples z)."
+ },
+ "verdict_use": "inconclusive until run; current order kept"
+}

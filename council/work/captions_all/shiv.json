@@ -1,0 +1,3383 @@
+{
+ "schema": 1,
+ "id": "shiv",
+ "hero": "Shiv",
+ "name": "Rizuhble's Stabby McStabface",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Getting poked out in lane. Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-5,600 (levels 1-11). Abilities gained (both point models agree): Bloodletting T1. 4.8k spikes: spirit 4.8k at Compress Cooldown.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "shiv:3:phase_range:6742",
+    "shiv:3:phase_abilities:6743",
+    "shiv:3:phase_spikes:6748"
+   ],
+   "items": [
+    {
+     "name": "Mystic Regeneration",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 4,800 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Compress Cooldown completes 4.8k spirit in 4800 souls (~4.8 min), 3 purchases",
+     "claim_ids": [
+      "shiv:0:spike_progress:6732"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:0:spike_progress:6732",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Extra Charge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Serrated Knives (2 to 3).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:1:charges:6736"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:1:charges:6736",
+       true,
+       "[1]"
+      ]
+     ]
+    },
+    {
+     "name": "Radiant Regeneration",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 1,600 souls on. Upgrade of Mystic Regeneration (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "b",
+     "why": "imminent: Compress Cooldown completes 4.8k spirit in 1600 souls (~1.6 min), 1 purchases",
+     "claim_ids": [
+      "shiv:2:spike_progress:6737",
+      "shiv:2:upgrade_of:6738"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:2:spike_progress:6737",
+       true,
+       "4000"
+      ],
+      [
+       "shiv:2:upgrade_of:6738",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "2",
+     "caption": "Completes the 4.8k spirit tier (4,000 to 5,600 invested): bonus 19 to 38 spirit power. Imbued on Slice and Dice: takes 18% off its 10s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:3:spike_complete:6739",
+      "shiv:3:imbue_cooldown:6740"
+     ],
+     "lint": [],
+     "legacy_note": "On Slice and Dice.",
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:3:spike_complete:6739",
+       true,
+       "inventory spirit: before 4000, after 5600, threshold 4800"
+      ],
+      [
+       "shiv:3:imbue_cooldown:6740",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 5,600-19,200 (levels 11-25). Abilities gained (both point models agree): Serrated Knives T3, Slice and Dice T3. Your biggest single spirit hit (Slice and Dice, impact damage) grows from 134 to 235. 4.8k spikes: vitality 4.8k at Spirit Shielding.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "shiv:11:phase_range:6765",
+    "shiv:11:phase_abilities:6766",
+    "shiv:11:phase_power:6767",
+    "shiv:11:phase_spikes:6774"
+   ],
+   "items": [
+    {
+     "name": "Enchanter's Emblem",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Spirit Shielding, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Spirit Shielding completes 1,600 souls on.",
+     "cls": "b",
+     "why": "imminent: Spirit Shielding completes 4.8k vitality in 1600 souls (~1.6 min), 2 purchases",
+     "claim_ids": [
+      "shiv:5:spike_progress:6751"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:5:spike_progress:6751",
+       true,
+       "3200"
+      ]
+     ]
+    },
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Spirit Shielding completes 800 souls on.",
+     "cls": "b",
+     "why": "imminent: Spirit Shielding completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "shiv:6:spike_progress:6753"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:6:spike_progress:6753",
+       true,
+       "4000"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Shielding",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus. Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:7:spike_complete:6755",
+      "shiv:7:upgrade_of:6756"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:7:spike_complete:6755",
+       true,
+       "inventory vitality: before 4000, after 4800, threshold 4800"
+      ],
+      [
+       "shiv:7:upgrade_of:6756",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Torment Pulse",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 5,600 to 8,800 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Vulnerability",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 10,400 to 12,000 invested: bonus 52 to 59 spirit power. | With 4 abilities trained their base cooldowns total 156s; 20% off is 31.2s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Rapid Recharge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Serrated Knives (5 to 6). Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:11:charges:6764",
+      "shiv:11:upgrade_of:6763"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:11:charges:6764",
+       true,
+       "[1]"
+      ],
+      [
+       "shiv:11:upgrade_of:6763",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 cont.",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 19,200-32,000 (levels 25-30).",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "shiv:15:phase_range:6784"
+   ],
+   "items": [
+    {
+     "name": "Healbane",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus. | Temporary, sold when you buy Spirit Burn later.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Decay",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 14,400 to 17,600 invested: bonus 59 to 66 spirit power. | +8 spirit adds about 9.6 to Slice and Dice's impact damage (1.20x scaling).",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Leech",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 6,400 to 11,200 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:15:defence_purge:6783"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:15:defence_purge:6783",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 32,000-49,600 (levels 30-36). Abilities gained (both point models agree): Bloodletting T3, Killing Blow T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "shiv:18:phase_range:6794",
+    "shiv:18:phase_abilities:6795"
+   ],
+   "items": [
+    {
+     "name": "Mystic Reverb",
+     "imbue": "2",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 17,600 to 24,000 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "On Slice and Dice.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 24,000 to 28,800 invested: bonus 75 to 100 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Healbane for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Spirit Shielding? Buy what is killing you, cheapest first. Not dying? Skip. Sell Decay.",
+   "desc": "Dying after Spirit Shielding? Buy what is killing you, cheapest first. Not dying? Skip. Sell Decay.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:19:defence_bullet:6798"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry melts you when you dash in.",
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:19:defence_bullet:6798",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:19:defence_gun:6799"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:19:defence_gun:6799",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:19:defence_spirit:6800"
+     ],
+     "lint": [],
+     "legacy_note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:19:defence_spirit:6800",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spellbreaker",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Big spirit bursts drop you before Bloodletting helps.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:19:defence_parry:6801"
+     ],
+     "lint": [],
+     "legacy_note": "A big ult or stun you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:19:defence_parry:6801",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Serrated Knives (channelled) and Slice and Dice (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:19:cc_exposure:6802"
+     ],
+     "lint": [],
+     "legacy_note": "Stuns keep catching you before you can dash.",
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:19:cc_exposure:6802",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Ethereal Shift",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They jump you and you've no dash left.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 36 to Slice and Dice's impact damage (1.20x scaling), your steepest spirit scaling. Replaces Enchanter's Emblem: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:19:spirit_scaling:6803",
+      "shiv:19:sell_swap:6804"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Enchanter's Emblem for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:19:spirit_scaling:6803",
+       true,
+       ""
+      ],
+      [
+       "shiv:19:sell_swap:6804",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 12,800 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Spirit Shielding for this.",
+     "temporary": true,
+     "verify": []
+    },
+    {
+     "name": "Cheat Death",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 12,800 to 19,200 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Decay for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun. Takes vitality from 12,800 to 16,000 invested: bonus 50 to 54 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:19:defence_barrier:6810",
+      "shiv:19:invest_step:6809"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Dispel Magic for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:19:defence_barrier:6810",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "shiv:19:invest_step:6809",
+       true,
+       "inventory vitality: before 12800, after 16000, threshold 16000"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "shiv:19:upgrade_delta:6812"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "shiv:19:upgrade_delta:6812",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "shiv:0:spike_progress:6732": {
+   "id": "shiv:0:spike_progress:6732",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 4,800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Mystic Regeneration",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4800,
+    "event": "Compress Cooldown completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "shiv:0:component_for:6733": {
+   "id": "shiv:0:component_for:6733",
+   "kind": "component_for",
+   "phrase": "From Radiant Regeneration: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Mystic Regeneration",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 3200,
+    "event": "Radiant Regeneration"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Radiant Regeneration"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:1:spike_progress:6734": {
+   "id": "shiv:1:spike_progress:6734",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Extra Charge",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "shiv:1:component_for:6735": {
+   "id": "shiv:1:component_for:6735",
+   "kind": "component_for",
+   "phrase": "From Rapid Recharge: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Extra Charge",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 17600,
+    "event": "Rapid Recharge"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Rapid Recharge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:1:charges:6736": {
+   "id": "shiv:1:charges:6736",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Serrated Knives (2 to 3).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_extra_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_shiv_dagger"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 1,
+    "item": "Extra Charge",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "1",
+    "2",
+    "3"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "shiv:2:spike_progress:6737": {
+   "id": "shiv:2:spike_progress:6737",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Radiant Regeneration",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Compress Cooldown completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "shiv:2:upgrade_of:6738": {
+   "id": "shiv:2:upgrade_of:6738",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Regeneration (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 2,
+    "item": "Radiant Regeneration",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Regeneration"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:3:spike_complete:6739": {
+   "id": "shiv:3:spike_complete:6739",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (4,000 to 5,600 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 3,
+    "item": "Compress Cooldown",
+    "souls": 5600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "5600",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "shiv:3:imbue_cooldown:6740": {
+   "id": "shiv:3:imbue_cooldown:6740",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Slice and Dice: takes 18% off its 10s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_shiv_dash"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 3,
+    "item": "Compress Cooldown",
+    "souls": 5600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 2
+   },
+   "numbers": [
+    "18.0",
+    "10.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "shiv:3:component_for:6741": {
+   "id": "shiv:3:component_for:6741",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Compress Cooldown",
+    "souls": 5600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 11200,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:3:phase_range:6742": {
+   "id": "shiv:3:phase_range:6742",
+   "kind": "phase_range",
+   "phrase": "Souls 0-5,600 (levels 1-11).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Compress Cooldown",
+    "souls": 5600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "5,600",
+    "1",
+    "11"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:3:phase_abilities:6743": {
+   "id": "shiv:3:phase_abilities:6743",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Bloodletting T1.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Compress Cooldown",
+    "souls": 5600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:3:phase_spikes:6748": {
+   "id": "shiv:3:phase_spikes:6748",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Compress Cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Compress Cooldown",
+    "souls": 5600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:4:spike_progress:6749": {
+   "id": "shiv:4:spike_progress:6749",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Enchanter's Emblem",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "shiv:4:swap_candidate:6750": {
+   "id": "shiv:4:swap_candidate:6750",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Boundless Spirit later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 4,
+    "item": "Enchanter's Emblem",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Enchanter's Emblem",
+    "buyer": "Boundless Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:5:spike_progress:6751": {
+   "id": "shiv:5:spike_progress:6751",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Spirit Shielding completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Spirit Lifesteal",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Spirit Shielding completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "shiv:5:component_for:6752": {
+   "id": "shiv:5:component_for:6752",
+   "kind": "component_for",
+   "phrase": "From Leech: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Spirit Lifesteal",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 20000,
+    "event": "Leech"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Leech"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:6:spike_progress:6753": {
+   "id": "shiv:6:spike_progress:6753",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Spirit Shielding completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Grit",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Spirit Shielding completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "shiv:6:component_for:6754": {
+   "id": "shiv:6:component_for:6754",
+   "kind": "component_for",
+   "phrase": "From Spirit Shielding: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Grit",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Spirit Shielding"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Shielding"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:7:spike_complete:6755": {
+   "id": "shiv:7:spike_complete:6755",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "shiv:7:upgrade_of:6756": {
+   "id": "shiv:7:upgrade_of:6756",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Grit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:7:swap_candidate:6757": {
+   "id": "shiv:7:swap_candidate:6757",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Witchmail later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Shielding",
+    "buyer": "Witchmail"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:8:invest_step:6758": {
+   "id": "shiv:8:invest_step:6758",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 5,600 to 8,800 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 8,
+    "item": "Torment Pulse",
+    "souls": 13600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "8800",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "shiv:9:component_for:6759": {
+   "id": "shiv:9:component_for:6759",
+   "kind": "component_for",
+   "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Mystic Vulnerability",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 28000,
+    "event": "Escalating Exposure"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:10:invest_step:6760": {
+   "id": "shiv:10:invest_step:6760",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 10,400 to 12,000 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Superior Cooldown",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "10400",
+    "12000",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "shiv:10:upgrade_of:6761": {
+   "id": "shiv:10:upgrade_of:6761",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Superior Cooldown",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:10:cdr_rotation:6762": {
+   "id": "shiv:10:cdr_rotation:6762",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 156s; 20% off is 31.2s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_shiv_dagger",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_shiv_dash",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_shiv_defer_damage",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_shiv_killing_blow"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 10,
+    "item": "Superior Cooldown",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "156",
+    "20.0",
+    "31.2"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "shiv:11:upgrade_of:6763": {
+   "id": "shiv:11:upgrade_of:6763",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Rapid Recharge",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Charge"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:11:charges:6764": {
+   "id": "shiv:11:charges:6764",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Serrated Knives (5 to 6).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_rapid_recharge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_shiv_dagger"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 11,
+    "item": "Rapid Recharge",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "1",
+    "5",
+    "6"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "shiv:11:phase_range:6765": {
+   "id": "shiv:11:phase_range:6765",
+   "kind": "phase_range",
+   "phrase": "Souls 5,600-19,200 (levels 11-25).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Rapid Recharge",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Rapid Recharge",
+    "keys": []
+   },
+   "numbers": [
+    "5,600",
+    "19,200",
+    "11",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:11:phase_abilities:6766": {
+   "id": "shiv:11:phase_abilities:6766",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Serrated Knives T3, Slice and Dice T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Rapid Recharge",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Rapid Recharge",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:11:phase_power:6767": {
+   "id": "shiv:11:phase_power:6767",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Slice and Dice, impact damage) grows from 134 to 235.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_shiv_dash",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Rapid Recharge",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Rapid Recharge",
+    "keys": []
+   },
+   "numbers": [
+    "134",
+    "235"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:11:phase_spikes:6774": {
+   "id": "shiv:11:phase_spikes:6774",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Spirit Shielding.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Rapid Recharge",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Rapid Recharge",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:12:invest_step:6775": {
+   "id": "shiv:12:invest_step:6775",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Healbane",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "shiv:12:temporary_sold:6776": {
+   "id": "shiv:12:temporary_sold:6776",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Spirit Burn later.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 34,
+   "point": {
+    "idx": 12,
+    "item": "Healbane",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Healbane",
+    "buyer": "Spirit Burn"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:13:invest_step:6777": {
+   "id": "shiv:13:invest_step:6777",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 14,400 to 17,600 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Decay",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "17600",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "shiv:13:swap_candidate:6778": {
+   "id": "shiv:13:swap_candidate:6778",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Cheat Death later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 13,
+    "item": "Decay",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Decay",
+    "buyer": "Cheat Death"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:13:spirit_scaling:6779": {
+   "id": "shiv:13:spirit_scaling:6779",
+   "kind": "spirit_scaling",
+   "phrase": "+8 spirit adds about 9.6 to Slice and Dice's impact damage (1.20x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_rupture",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_shiv_dash"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Decay",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "ImpactDamage"
+   },
+   "numbers": [
+    "8.0",
+    "9.6",
+    "1.20"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "shiv:14:invest_step:6780": {
+   "id": "shiv:14:invest_step:6780",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 11,200 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Leech",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "11200",
+    "42.0",
+    "50.0",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "shiv:14:upgrade_of:6781": {
+   "id": "shiv:14:upgrade_of:6781",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 14,
+    "item": "Leech",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:15:swap_candidate:6782": {
+   "id": "shiv:15:swap_candidate:6782",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Divine Barrier later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 15,
+    "item": "Dispel Magic",
+    "souls": 32000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Dispel Magic",
+    "buyer": "Divine Barrier"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:15:defence_purge:6783": {
+   "id": "shiv:15:defence_purge:6783",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 15,
+    "item": "Dispel Magic",
+    "souls": 32000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:15:phase_range:6784": {
+   "id": "shiv:15:phase_range:6784",
+   "kind": "phase_range",
+   "phrase": "Souls 19,200-32,000 (levels 25-30).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Dispel Magic",
+    "souls": 32000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": []
+   },
+   "numbers": [
+    "19,200",
+    "32,000",
+    "25",
+    "30"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:16:invest_step:6788": {
+   "id": "shiv:16:invest_step:6788",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 17,600 to 24,000 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Mystic Reverb",
+    "souls": 38400,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "24000",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "shiv:16:threshold_now:6789": {
+   "id": "shiv:16:threshold_now:6789",
+   "kind": "threshold_now",
+   "phrase": "Slice and Dice (290) clears its 100-damage trigger.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_shiv_dash"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 16,
+    "item": "Mystic Reverb",
+    "souls": 38400,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 100.0,
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "100.0",
+    "290"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 2.9,
+   "caveat": "item has no localisation text; trigger semantics are modelled",
+   "contradiction": false
+  },
+  "shiv:17:invest_step:6790": {
+   "id": "shiv:17:invest_step:6790",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 24,000 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Escalating Exposure",
+    "souls": 43200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "24000",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "shiv:17:upgrade_of:6791": {
+   "id": "shiv:17:upgrade_of:6791",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Vulnerability (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Escalating Exposure",
+    "souls": 43200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Vulnerability"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "shiv:18:burn_trigger_modelled:6792": {
+   "id": "shiv:18:burn_trigger_modelled:6792",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Slice and Dice (315) = 315 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 18,
+    "item": "Spirit Burn",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "315",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "shiv:18:sell_swap:6793": {
+   "id": "shiv:18:sell_swap:6793",
+   "kind": "sell_swap",
+   "phrase": "Replaces Healbane: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Spirit Burn",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Healbane",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Healbane"
+  },
+  "shiv:18:phase_range:6794": {
+   "id": "shiv:18:phase_range:6794",
+   "kind": "phase_range",
+   "phrase": "Souls 32,000-49,600 (levels 30-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Spirit Burn",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": []
+   },
+   "numbers": [
+    "32,000",
+    "49,600",
+    "30",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:18:phase_abilities:6795": {
+   "id": "shiv:18:phase_abilities:6795",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Bloodletting T3, Killing Blow T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Spirit Burn",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:19:defence_bullet:6798": {
+   "id": "shiv:19:defence_bullet:6798",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Metal Skin",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry melts you when you dash in."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:19:defence_gun:6799": {
+   "id": "shiv:19:defence_gun:6799",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Plated Armor",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:19:defence_spirit:6800": {
+   "id": "shiv:19:defence_spirit:6800",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Resilience",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:19:defence_parry:6801": {
+   "id": "shiv:19:defence_parry:6801",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Counterspell",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ult or stun you can see coming."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:19:cc_exposure:6802": {
+   "id": "shiv:19:cc_exposure:6802",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Serrated Knives (channelled) and Slice and Dice (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 19,
+    "item": "Unstoppable",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Stuns keep catching you before you can dash."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     1,
+     2
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "shiv:19:spirit_scaling:6803": {
+   "id": "shiv:19:spirit_scaling:6803",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 36 to Slice and Dice's impact damage (1.20x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_shiv_dash"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 19,
+    "item": "Boundless Spirit",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "ImpactDamage"
+   },
+   "numbers": [
+    "30.0",
+    "36",
+    "1.20"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "shiv:19:sell_swap:6804": {
+   "id": "shiv:19:sell_swap:6804",
+   "kind": "sell_swap",
+   "phrase": "Replaces Enchanter's Emblem: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Boundless Spirit",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Enchanter's Emblem",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Enchanter's Emblem"
+  },
+  "shiv:19:invest_step:6805": {
+   "id": "shiv:19:invest_step:6805",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 12,800 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Witchmail",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Shielding for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "17600",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "shiv:19:sell_swap:6806": {
+   "id": "shiv:19:sell_swap:6806",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Shielding: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Witchmail",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Shielding for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Shielding",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Shielding"
+  },
+  "shiv:19:invest_step:6807": {
+   "id": "shiv:19:invest_step:6807",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 12,800 to 19,200 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Cheat Death",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Decay for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "19200",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "shiv:19:sell_swap:6808": {
+   "id": "shiv:19:sell_swap:6808",
+   "kind": "sell_swap",
+   "phrase": "Replaces Decay: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Cheat Death",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Decay for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Decay",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Decay"
+  },
+  "shiv:19:invest_step:6809": {
+   "id": "shiv:19:invest_step:6809",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 12,800 to 16,000 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_shiv m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Dispel Magic for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "16000",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "shiv:19:defence_barrier:6810": {
+   "id": "shiv:19:defence_barrier:6810",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Dispel Magic for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:19:sell_swap:6811": {
+   "id": "shiv:19:sell_swap:6811",
+   "kind": "sell_swap",
+   "phrase": "Replaces Dispel Magic: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Dispel Magic for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Dispel Magic",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Dispel Magic"
+  },
+  "shiv:19:upgrade_delta:6812": {
+   "id": "shiv:19:upgrade_delta:6812",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Transcendent Cooldown",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "shiv:19:upgrade_of:6813": {
+   "id": "shiv:19:upgrade_of:6813",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Transcendent Cooldown",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "shiv",
+   "item": "Extra Regen",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 49600.0,
+   "unpublished": []
+  },
+  {
+   "build": "shiv",
+   "item": "Extra Regen",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Getting poked out in lane. Sell it once you're out of slots."
+  },
+  {
+   "build": "shiv",
+   "item": "Mystic Regeneration",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Compress Cooldown completes 4.8k spirit in 4800 souls (~4.8 min), 3 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "shiv:0:spike_progress:6732",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 4,800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4800,
+      "event": "Compress Cooldown completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "shiv:0:component_for:6733",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Radiant Regeneration: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 3200,
+      "event": "Radiant Regeneration"
+     }
+    }
+   ]
+  },
+  {
+   "build": "shiv",
+   "item": "Radiant Regeneration",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Compress Cooldown completes 4.8k spirit in 1600 souls (~1.6 min), 1 purchases",
+   "souls": 4000,
+   "unpublished": [
+    {
+     "id": "shiv:2:spike_progress:6737",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Compress Cooldown completes the 4.8k spirit tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "shiv",
+   "item": "Compress Cooldown",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Slice and Dice."
+  },
+  {
+   "build": "shiv",
+   "item": "Enchanter's Emblem",
+   "section": "mid",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Spirit Shielding, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 7200,
+   "unpublished": []
+  },
+  {
+   "build": "shiv",
+   "item": "Spirit Lifesteal",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Spirit Shielding completes 4.8k vitality in 1600 souls (~1.6 min), 2 purchases",
+   "souls": 8800,
+   "unpublished": [
+    {
+     "id": "shiv:5:spike_progress:6751",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Spirit Shielding completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Spirit Shielding completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "shiv:5:component_for:6752",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Leech: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 20000,
+      "event": "Leech"
+     }
+    }
+   ]
+  },
+  {
+   "build": "shiv",
+   "item": "Grit",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Spirit Shielding completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+   "souls": 9600,
+   "unpublished": [
+    {
+     "id": "shiv:6:spike_progress:6753",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Spirit Shielding completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Spirit Shielding completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "shiv:6:component_for:6754",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spirit Shielding: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Spirit Shielding"
+     }
+    }
+   ]
+  },
+  {
+   "build": "shiv",
+   "item": "Mystic Vulnerability",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+   "souls": 15200,
+   "unpublished": [
+    {
+     "id": "shiv:9:component_for:6759",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 28000,
+      "event": "Escalating Exposure"
+     }
+    }
+   ]
+  },
+  {
+   "build": "shiv",
+   "item": "Mystic Reverb",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Slice and Dice."
+  },
+  {
+   "build": "shiv",
+   "item": "Spirit Burn",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 49600.0,
+   "unpublished": [
+    {
+     "id": "shiv:18:burn_trigger_modelled:6792",
+     "tier": "MODELLED",
+     "phrase": "One rotation of Slice and Dice (315) = 315 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "shiv",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry melts you when you dash in."
+  },
+  {
+   "build": "shiv",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "shiv",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+  },
+  {
+   "build": "shiv",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 49600.0,
+   "unpublished": []
+  },
+  {
+   "build": "shiv",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Big spirit bursts drop you before Bloodletting helps."
+  },
+  {
+   "build": "shiv",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ult or stun you can see coming."
+  },
+  {
+   "build": "shiv",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep catching you before you can dash."
+  },
+  {
+   "build": "shiv",
+   "item": "Ethereal Shift",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 49600.0,
+   "unpublished": []
+  },
+  {
+   "build": "shiv",
+   "item": "Ethereal Shift",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They jump you and you've no dash left."
+  }
+ ],
+ "stats": {
+  "d": 5,
+  "b": 4,
+  "a": 13,
+  "c": 1,
+  "g": 9
+ }
+}

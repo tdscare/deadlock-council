@@ -1,0 +1,123 @@
+{
+"Dynamo": {"hero":"Dynamo","file":"audit/hero_dynamo.txt",
+ "setup":[
+  {"ability":"1 Kinetic Pulse","effect":"bullet-resist-shred","duration_s":4,"radius_m":5.5,"range_m":16,"cooldown_s":5,"needs_partner_to":"nothing; line skillshot (StompWidth 5.5m, 16m, T3 20m). Debuff only at T2: -15% bullet resist and 24% slow for 4s (SlowDuration 4)","notes":"T2 desc 'BulletResistReduction -15, SlowPercent 24, SlowDuration 4'; AbilityCooldownBetweenCharge 5; T1 +1 charge. Damage value not in file (desc blank)"},
+  {"ability":"4 Singularity (ult)","effect":"pull","duration_s":2.75,"radius_m":7,"range_m":0,"cooldown_s":0,"needs_partner_to":"nothing; pulls enemies within VacuumRadius 7m (T1 +2m =9m) for AbilityChannelTime 2.75s (T2 +0.75 = 3.5s). File does NOT list a stun or cooldown; desc 'dealing , applying ,' is blank -> whether it stuns/slows is unverified (need ab.py citadel_ability_self_vacuum)","notes":"TickRate 0.25, AbilityCastDelay 0.2. Cast in hands (toss 350 speed) so Dynamo is channeling and probably stationary"}],
+ "payoff":[
+  {"ability_or_item":"Singularity AoE damage","needs":"clumped","window":"enemies stay within 7-9m of him for up to 2.75-3.5s","numbers":"damage value not in file; tick 0.25s (unverified)"},
+  {"ability_or_item":"Kinetic Pulse damage","needs":"in line","window":"16-20m line 5.5m wide, target must not sidestep 0.42s cast delay","numbers":"not in file"}],
+ "ally_effects":[
+  {"ability":"3 Rejuvenating Aurora","what":"heal","range_m":8,"duration_s":5,"numbers":"HealingPerSecond 30 (+0.4x spirit) to him and allies within ShareWithFriendsRadius 8m; T1 +4m/s move speed; T2 shorter CD, +duration; T3 can move/cast freely and +2.5% max HP/s"},
+  {"ability":"2 Quantum Entanglement","what":"teleport","range_m":13,"duration_s":1.4,"numbers":"brings nearby allies (AllyDistance 13m), untargetable 1.4s, cast range 10m (T1 +6m); T3 removes 50% non-ult debuffs"}],
+ "item_hooks":[
+  {"item":"Spirit power / Heal amp items","why":"Aurora heals 30 +0.4x spirit to allies in 8m; value scales with allies standing in it"},
+  {"item":"Range / radius items","why":"Singularity 7m radius pull is small; any radius bonus widens the catch zone"}],
+ "extends_or_is_extended_by":"Singularity radius 7m (+2m T1) and 3.5s max channel are the window; a partner must already have enemies within that radius or be able to push them in. Whether any partner CC 'extends' it is unverified because Singularity's stun/slow is not in the file."},
+
+"Infernus": {"hero":"Infernus","file":"audit/hero_infernus.txt",
+ "setup":[
+  {"ability":"1 Napalm","effect":"debuff","duration_s":8,"radius_m":0,"range_m":20,"cooldown_s":6,"needs_partner_to":"nothing; T3: target takes +16% (+17 upgrade) damage from caster and -33% healing; 28% slow for 4s","notes":"DebuffDuration 8, SlowPercent 28, SlowDuration 4, IncomingDamagePercentFromCaster 16, TickRate 0.5. Amp is 'FromCaster' i.e. may apply only to Infernus damage - unverified for allies"},
+  {"ability":"4 Concussive Combustion","effect":"stun","duration_s":1.25,"radius_m":12,"range_m":0,"cooldown_s":0,"needs_partner_to":"enemies within 12m at detonation after ExplodeDelay 3.25s; partner could keep targets inside (hold/tether) or follow with burst during the stun. Uninterruptible once cast","notes":"StunDuration 1.25 (+0.9 T3 = 2.15s), Radius 12m (+10m T3 = 22m), Damage 100 upgrade; cooldown not in file"}],
+ "payoff":[
+  {"ability_or_item":"Afterburn","needs":"debuffed|stationary","window":"burn 3s base, refreshes by abilities, extended by weapon hits","numbers":"DPS 16 upgrade; spirit 35% penalty variant; hits build 8.1% per bullet over 17s"},
+  {"ability_or_item":"Flame Dash trail","needs":"in zone","window":"trail 3s(+4s T2) radius 4.5m","numbers":"DoT damage value not in file"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Damage-over-time / burn items","why":"Napalm 0.5s tick, Afterburn 0.5s tick, Flame Dash trail all stack burn on one target"},{"item":"Anything that makes targets stay in 4.5m trail","why":"Trail is the only zone; slows/holds from a partner keep enemies in it"}],
+ "extends_or_is_extended_by":"Ult stun 1.25-2.15s over 12-22m radius is the big window for a partner burst; 3.25s fuse is a tell, a partner must time CC/burst to land on detonation."},
+
+"Rem": {"hero":"Rem","file":"audit/hero_rem.txt",
+ "setup":[
+  {"ability":"4 Naptime (ult)","effect":"sleep","duration_s":1.9,"radius_m":19,"range_m":24,"cooldown_s":0,"needs_partner_to":"nothing to start; channel 1.9s (AbilityChannelTime) slows 20% and blocks movement abilities, then sleep (T2 +0.75s, +3m radius = 22m). Sleep breaks on damage >= SleepDamageThreshold 100 (+3.1x ELevelUpBoons), so partner burst must stay under that threshold until wake or it wakes them early","notes":"MinSleepTime 0.5; AwakeDamage 120 (+1.6x spirit); pierces walls. T3 CD -55 and unstoppable while channeling. Sleep duration base value not in file"},
+  {"ability":"1 Pillow Toss","effect":"slow","duration_s":3,"radius_m":5,"range_m":40,"cooldown_s":8,"needs_partner_to":"nothing; 36% fading slow; T2 -35% fire rate; landing hit reduces other ability CDs by 5s","notes":"Damage 75 (+1.6x spirit), T3 +100 dmg, +1 charge"}],
+ "payoff":[{"ability_or_item":"Naptime wake damage","needs":"asleep","window":"sleep ends by time or by damage >=100 threshold","numbers":"120 (+1.6x spirit)"}],
+ "ally_effects":[
+  {"ability":"2 Tag Along","what":"heal","range_m":23,"duration_s":2,"numbers":"burst 15% (+0.03x spirit) missing HP + 42/s (+0.4x spirit) for 2s to both; T2 +35% item range/duration/barrier; T3 +15% spirit +35 SP; rider uses ally for items/self-casts; knocked off by ultimate stuns"},
+  {"ability":"3 Lil Helpers","what":"heal","range_m":45,"duration_s":0,"numbers":"hero follow: short burst heal + fading; trooper infest heal 8 (+0.14x spirit) per 2s, 15s helper nap; T3 +15 spirit resist"}],
+ "item_hooks":[{"item":"Range/duration/barrier boost items","why":"Tag Along T2 gives +35% item range/duration/barrier while napping, so ally-support or aura items on Rem are amplified"},{"item":"Spirit power","why":"every ally effect and Pillow/Naptime damage scale 0.03-1.6x spirit"}],
+ "extends_or_is_extended_by":"Naptime 19-22m radius wall-piercing, sleep is fragile (100 dmg threshold) so it pairs poorly with partner burst/DoT that ticks; works with partners that hit AFTER wake or that need targets inert. Rem rides an ally (cast range 23m); a partner's ult stun knocks her off."},
+
+"Wraith": {"hero":"Wraith","file":"audit/hero_wraith.txt",
+ "setup":[
+  {"ability":"4 Telekinesis (ult)","effect":"lift","duration_s":2.25,"radius_m":0,"range_m":10,"cooldown_s":150,"needs_partner_to":"nothing; AbilityDuration 2.25s (T3 +1.5s), LiftDuration 2, channel 1.25s; lifted target is thrown TossDistance 13m (+6m T3); slam prevents stamina/movement abilities; 32% slow. Whether lifted target is stunned vs just helpless: unverified","notes":"Damage 100 (+1.0x spirit) (+100 T1); LiftChainRadius 20m; CD -45 upgrade; range +6m T3"},
+  {"ability":"1 Card Trick","effect":"bullet-resist-shred","duration_s":5,"radius_m":4,"range_m":500,"cooldown_s":0.6,"needs_partner_to":"nothing; Diamond -7% resist 5s (+4 upgrade), Club 24% slow 3s, Spade +60 dmg, Heart heal 60 (+0.5x spirit)","notes":"Damage 45 (+0.55x spirit); 2 charges, 0.5s between cards; random suit"}],
+ "payoff":[{"ability_or_item":"Full Auto","needs":"any","window":"5s (+3s) 20% fire rate +10%","numbers":"2 (+0.045x spirit) per bullet"}],
+ "ally_effects":[
+  {"ability":"1 Card Trick Heart","what":"heal","range_m":4,"duration_s":0,"numbers":"60 (+0.5x spirit) (+75 upgrade) heal on hit, 0.5 ratio vs non-hero"},
+  {"ability":"2 Project Mind","what":"shield","range_m":25,"duration_s":5,"numbers":"self teleport 25m (+15m); T2 300 barrier 5s, self only"}],
+ "item_hooks":[{"item":"Spirit damage/DoT items","why":"Card, Telekinesis slam and Full Auto scale with spirit"},{"item":"Resist shred partners","why":"Diamond shred 7-11% stacks with partner shred on one target"}],
+ "extends_or_is_extended_by":"Telekinesis throws 13-19m, so a partner's zone/DoT/ult radius should sit at throw landing point; the lift 2.25-3.75s is the window for a partner ult cast. Ult CD 150s."},
+
+"The Doorman": {"hero":"The Doorman","file":"new/hero_hero_doorman.txt",
+ "setup":[
+  {"ability":"2 Doorway","effect":"zone","duration_s":15,"radius_m":0,"range_m":50,"cooldown_s":45,"needs_partner_to":"allies/enemies must walk through; two doors within 65m (+40m T3), 15s (+20s upgrade), cast range 50m (+30m), most projectiles pass through; T2 250 barrier first travel","notes":"DoorwayCloseCooldown 8"},
+  {"ability":"3 Luggage Cart","effect":"stun","duration_s":1.25,"radius_m":0,"range_m":20,"cooldown_s":30,"needs_partner_to":"wall behind target for stun (wall impact T3 1.25s + T2 75 dmg); alt-cast to carry friendly heroes","notes":"CartDamage 60 (+0.75x), path 6s duration"},
+  {"ability":"1 Call Bell","effect":"debuff","duration_s":4,"radius_m":5.5,"range_m":0,"cooldown_s":18,"needs_partner_to":"nothing; -40% accuracy and 28% slow in aura, fuse 3s, can be shot to detonate","notes":"Impact 40 (+0.7x), explosion 55 (+1.2x); T1 charge, T3 +4.5m radius"},
+  {"ability":"4 Hotel Guest (ult)","effect":"hold","duration_s":6.5,"radius_m":0,"range_m":7,"cooldown_s":140,"needs_partner_to":"removes ONE enemy from fight for 6.5s (can be used on enemy; ally use unverified); partner then fights 4v5 or targets rest; failure to check out: 125 (+1.5x) + stun 1.5s T2","notes":"channel 1s, Damage 75 (+1.0x) (+150), TimeSlow 100% 1.0s"}],
+ "payoff":[{"ability_or_item":"Call Bell","needs":"clumped|stationary","window":"3s fuse, 5.5-10m radius","numbers":"55 (+1.2x spirit) + 40 impact"}],
+ "ally_effects":[
+  {"ability":"3 Luggage Cart alt-cast","what":"lift","range_m":20,"duration_s":6,"numbers":"carries a friendly hero along its path, 20m (+25m)"},
+  {"ability":"2 Doorway","what":"teleport","range_m":65,"duration_s":15,"numbers":"allies pass doors; T2 250 barrier 12s (first use, probably per traveller, unverified)"}],
+ "item_hooks":[{"item":"Spirit power","why":"bell scales 0.7/1.2x, cart 0.75x, ult 1.0/1.5x"},{"item":"Cooldown reduction","why":"Doorway 45s, Cart 30s, ult 140s all long"}],
+ "extends_or_is_extended_by":"Doorway extends any partner's mobility/ambush across 65-105m; Cart extends a partner's engage; bell gives partner's burst slow+accuracy debuff zone. Doors accept 'most projectiles' so partner ranged abilities could be bent, unverified."},
+
+"Drifter": {"hero":"Drifter","file":"new/hero_hero_drifter.txt",
+ "setup":[
+  {"ability":"2 Stalker's Mark","effect":"debuff","duration_s":5,"radius_m":0,"range_m":0,"cooldown_s":26,"needs_partner_to":"nothing; bleeds first target, -8% bullet resist (T1), -40% incoming healing (T3), recast teleports behind target. Duration 5s (+3s T2)","notes":"DotHealthPercent 2.0% (+0.015x) max HP, tick 0.5s, T3 +1.5%; CD -10"},
+  {"ability":"1 Rend","effect":"silence","duration_s":2,"radius_m":0,"range_m":16,"cooldown_s":16,"needs_partner_to":"within 8m for silence/bonus damage; cone 50 degrees up to 30 targets","notes":"Bonus 40 (+1.4x), T3 silence 2s, 55% heavy melee; CD -8"},
+  {"ability":"4 Eternal Night (ult)","effect":"blind","duration_s":6.5,"radius_m":40,"range_m":100,"cooldown_s":145,"needs_partner_to":"nothing; enemy vision limited to SmallVisionDistance 15m; makes targets 'isolated' (grants Drifter +15% dmg amp); up to 2 targets (+1), 6.5s (+2.5)","notes":"Revealed to Drifter 3s; Drifter +sprint; DrifterNearbyRangeCheck 40m. Only targets near Drifter?? unverified"}],
+ "payoff":[{"ability_or_item":"Bloodscent","needs":"isolated|low hp","window":"isolated = no ally within 20m of target; 15% amp (30% hp threshold); +3 weapon dmg per isolation kill","numbers":"AmpDamagePercent 15; T2 heals 24% missing HP on kill"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Heal-reduction / bullet-resist-shred items","why":"Stalker's Mark already shreds and cuts healing; stacks"},{"item":"Melee/bleed items","why":"heavy melee Rend and bleed"}],
+ "extends_or_is_extended_by":"Bloodscent amp needs the target isolated (IsolationRange 20m): a partner standing within 20m of the victim likely turns the amp off (unverified), so duo works by partner staying away or by Eternal Night, which forces isolated state. Teleport behind the mark can put him by a partner's pull/CC."},
+
+"Apollo": {"hero":"Apollo","file":"new/hero_hero_fencer.txt",
+ "setup":[
+  {"ability":"4 Itani Lo Sahn (ult)","effect":"hold","duration_s":1.8,"radius_m":7,"range_m":27,"cooldown_s":145,"needs_partner_to":"enemies cannot act or heal, TimeScale -70% slow motion for DebuffDuration 1.8s; then delayed damage; 'incoming damage reduction 70%' means partner burst during the 1.8s is cut (IncomingDamageReductionPercent 70); partner burst should land AFTER 1.8s or add delayed-damage amp","notes":"Impact 70 (+0.77x), delayed 200 (+2.6x), +60% (+50) vs under 50% HP. Apollo invulnerable 1.8s"},
+  {"ability":"2 Riposte","effect":"stun","duration_s":0.8,"radius_m":6,"range_m":35,"cooldown_s":22,"needs_partner_to":"nothing; needs an incoming hero attack to parry (0.3s window); stun 0.8s (+0.4), -25% melee resist (T2 -50% total?) 3s","notes":"Slash radius 6m, slow 40% 4s"},
+  {"ability":"1 Disengaging Sigil","effect":"slow","duration_s":4,"radius_m":6.5,"range_m":0,"cooldown_s":12,"needs_partner_to":"nothing; 24% slow, 85 (+1.3x) dmg","notes":"leaps backwards"}],
+ "payoff":[{"ability_or_item":"Ult delayed damage","needs":"low hp|healing blocked","window":"1.8s","numbers":"200 (+2.6x spirit) + 70 (+0.77x) and +60% below 50% HP"},{"ability_or_item":"Flawless Advance","needs":"melee range","window":"perfect window 0.25s","numbers":"65 (+1.55x) perfect, 25 base"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Spirit power","why":"delayed damage 2.6x scaling"},{"item":"Melee resist shred partners","why":"Riposte already -25%"}],
+ "extends_or_is_extended_by":"Ult freeze 1.8s over 7m radius is short; partner must have an effect that lands on the delayed-damage frame. 70% damage reduction applies on victims during freeze (reduces ally burst) - cuts against combo."},
+
+"Lady Geist": {"hero":"Lady Geist","file":"new/hero_hero_ghost.txt",
+ "setup":[
+  {"ability":"3 Malice","effect":"debuff","duration_s":9,"radius_m":0,"range_m":0,"cooldown_s":6,"needs_partner_to":"nothing; up to 5 stacks, -12% move speed and +7% (+8) damage taken per stack from Geist (FROM HER; ally benefit unverified), slow 4s","notes":"HealthToDamage 23 (+0.558x), 3 (+1) shards, self damage 9%"},
+  {"ability":"4 Soul Exchange (ult)","effect":"silence","duration_s":3,"radius_m":25,"range_m":5.5,"cooldown_s":220,"needs_partner_to":"nothing; T2 silences enemies within 25m 3s; 56% slow; swaps HP with target (min enemy 30% HP)","notes":"T3 +60 spirit, +40% fire rate, +50% spirit resist for 8s"},
+  {"ability":"1 Essence Bomb","effect":"zone","duration_s":6,"radius_m":7,"range_m":0,"cooldown_s":14,"needs_partner_to":"enemies stay on ground; T3 spill 30% of 90 (+1.22x) dps for 6s","notes":"Radius 7m (+2), self-damage 30%"}],
+ "payoff":[{"ability_or_item":"Malice amp","needs":"debuffed","window":"9s duration","numbers":"up to 35-40% more damage from her"}],
+ "ally_effects":[{"ability":"2 Life Drain","what":"heal","range_m":18,"duration_s":2.5,"numbers":"24/s (+0.3225x) drain, heals allies by alt-cast ('to give health to friendly Heroes' text), 3 charges T3"}],
+ "item_hooks":[{"item":"Lifesteal / heal items","why":"she pays health for abilities (30% bomb, 9% shards)"},{"item":"DoT items","why":"Bomb spill and Life Drain ticks 0.1s"}],
+ "extends_or_is_extended_by":"Soul Exchange 25m silence pairs with burst windows; Bomb 7-9m zone is a zone to hold enemies in."},
+
+"Sinclair": {"hero":"Sinclair","file":"new/hero_hero_magician.txt",
+ "setup":[
+  {"ability":"3 Rabbit Hex","effect":"debuff","duration_s":2,"radius_m":6,"range_m":24,"cooldown_s":26,"needs_partner_to":"enemies become rabbits: cannot perform most actions, move faster (+36%, capped at 6m/s limit), take +15% (+7) damage; partner burst should land inside 2-3s; hex does not interrupt abilities","notes":"HexDuration 2 (+1), radius 6m (+2), detonation delay 0.9s"},
+  {"ability":"1 Vexing Bolt","effect":"debuff","duration_s":5,"radius_m":3.25,"range_m":500,"cooldown_s":24,"needs_partner_to":"nothing; -25% fire rate 5s","notes":"60-120 (+0.93-1.86x) grows with distance, 2s to max"}],
+ "payoff":[{"ability_or_item":"Audience Participation","needs":"enemy ult to copy","window":"copied ult for 9s, 60% of its cooldown","numbers":"copy window 9s, cooldown 85s, range 20m. Partner enemy ult data needed"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Spirit power","why":"bolt 1.86x, hex amp 0.0558x"},{"item":"Reload/fire-rate","why":"Assistant fires with his weapon, 15 (+0.36x) per shot"}],
+ "extends_or_is_extended_by":"Hex 2-3s over 6-8m is the window; rabbit moves faster so does not hold targets in place for partner zone or pull-based combos (unverified). Assistant swap 2 times, leash 20m."},
+
+"Billy": {"hero":"Billy","file":"new/hero_hero_punkgoat.txt",
+ "setup":[
+  {"ability":"4 Chain Gang (ult)","effect":"tether","duration_s":2.8,"radius_m":12,"range_m":12,"cooldown_s":175,"needs_partner_to":"enemies near Billy; pulls everyone to him after delay (PullDistance 4m, 0.8s), no movement abilities; LOS breaks chain; T3 +5m range","notes":"Damage 120 (+0.7x), DPS 45 (+0.9x), slow 25-35%; CD -40"},
+  {"ability":"1 Bashdown","effect":"knockdown","duration_s":0.75,"radius_m":8,"range_m":4,"cooldown_s":35,"needs_partner_to":"nothing; pulls down 0.75s, wave to 8m (+2m)","notes":"Damage 35 (+1.1x); charges 2 and 8s recharge"},
+  {"ability":"2 Rising Ram","effect":"lift","duration_s":1.5,"radius_m":2.54,"range_m":0,"cooldown_s":32,"needs_partner_to":"target gets 1.5s reduced air control (dash -70%)","notes":"Damage 40 (+1.9x)"}],
+ "payoff":[{"ability_or_item":"Blasted wrecked","needs":"wrecked (melee'd)","window":"7s","numbers":"+10% (+7) bullet damage amp"}],
+ "ally_effects":[],
+ "item_hooks":[{"item":"Bullet damage partners","why":"Wrecked bullet amp 10-17% for 7s benefits anyone shooting the target (unverified for allies)"}],
+ "extends_or_is_extended_by":"Chain Gang gathers enemies to a point for 2.8s -> partner AoE zones. Pull moves enemies, so a stationary-based partner payoff is fed."},
+
+"Ivy": {"hero":"Ivy","file":"new/hero_hero_tengu.txt",
+ "setup":[
+  {"ability":"1 Entangling Thorns","effect":"zone","duration_s":4,"radius_m":6,"range_m":0,"cooldown_s":32,"needs_partner_to":"nothing; 28% slow, 40 (+0.55x) DPS; T3 enemies in thorns 2s get immobilised 1.6s","notes":"Radius +2m T2"},
+  {"ability":"3 Stone Form","effect":"stun","duration_s":0.75,"radius_m":5.75,"range_m":0,"cooldown_s":40,"needs_partner_to":"nothing","notes":"Damage 75 (+0.6x), T3 +0.75s"},
+  {"ability":"4 Air Drop (ult)","effect":"lift","duration_s":21,"radius_m":20,"range_m":22,"cooldown_s":100,"needs_partner_to":"carries an ALLY (not an enemy) for up to 21s; ally cannot attack and deals -20% damage while lifted; drop causes explosion 115 (+0.7x) over 16-20m, slow 32%, T3 silence 3s","notes":"Cooldown -30% on allies; taking damage disables briefly 3.5s; both get +20% damage 8s after; T1 barrier 300"}],
+ "payoff":[],
+ "ally_effects":[
+  {"ability":"2 Kudzu Connection","what":"buff","range_m":16,"duration_s":12,"numbers":"+10% (+0.18x) fire rate, +15% bullet lifesteal, replicated healing 35% share; no move-while-shoot penalty; 50% of bonuses when disconnected; CD 37"},
+  {"ability":"4 Air Drop","what":"lift","range_m":22,"duration_s":21,"numbers":"ally ult-lift: partner with enemy-targeted effects can deal 80%"}],
+ "item_hooks":[{"item":"Lifesteal/heal items","why":"Kudzu replicates healing to partner"},{"item":"Fire rate","why":"tether bonus fire rate"}],
+ "extends_or_is_extended_by":"Air Drop is ally transport + AoE drop (20m radius). Because lifted ally cannot attack, it cannot be paired with a partner whose ult needs to be cast during flight unless casting is allowed (unverified). Entangle immobilise needs 2s in thorns, 4s duration: little room (T3 immobilise at 2s mark, 1.6s hold)."}
+}

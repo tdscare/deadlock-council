@@ -1,0 +1,25 @@
+SCOPE: build-context
+NOTE: FIXTURE edited by hand for the gate test (alt narrowed to catalog item to show an item-wins context unblocking)
+KIND: context
+VALID: yes (CALCULATED from game data by abtimeline.py --context; not a sandbox measurement)
+BUILD: wraith
+CHECKPOINT: at_buy (souls 8000)
+ITEM: Spellslinger
+WITH: complete build at the checkpoint incl. the item (owned items, ability tiers, imbues; see sources below)
+WITHOUT: same build with the item removed and its components held
+ALT: Mercurial Magnum (listed in this build); also [('Mercurial Magnum', 28.3), ('Ricochet', 12.9), ('Leech', 7.4)] [('Armor Piercer', 4.9)]
+ESTIMATE: Spellslinger | item=11.7% | alt=Armor Piercer 4.9%
+METRIC: gun damage over 20 s, use=0.5; same-tier items already listed in this build, bought instead of the item
+VERDICT-BASIS: ADDS-VALUE at at_buy
+ESTIMATE-AT at_buy: verdict ADDS-VALUE, whole item 11.712511091393086
+ESTIMATE-AT core_end: verdict REDUNDANT-LIKELY, whole item 6.586270871985156
+GROUP ammo: REDUNDANT-LIKELY - overlapped role adds +2.8% (threshold 8.0%), remaining roles of the item are valued separately (whole item +11.7%)
+  assumption: continuous fire at 100% accuracy on a stationary target; reload 2.82 s (measured 2.82 s in council/sandbox/results/wraith_gun_PR-W1.md)
+  assumption: refill/unlimited sources are used at a rate of `use` (1.0 = every time off cooldown, 0.5 = every other); first use available at fight start
+  assumption: cooldown reduction from owned items applied to hero abilities; item active intervals = AbilityChargeUpTime|AbilityCooldown from data
+  source: Extended Magazine.BonusClipSizePercent=30
+GROUP fire_rate: COMPLEMENTS - overlapped role matters in a different window length (10/20/60 s: +10%, +8%, +8%)
+  assumption: continuous fire at 100% accuracy on a stationary target; reload 2.82 s (measured 2.82 s in council/sandbox/results/wraith_gun_PR-W1.md)
+  assumption: refill/unlimited sources are used at a rate of `use` (1.0 = every time off cooldown, 0.5 = every other); first use available at fight start
+  assumption: cooldown reduction from owned items applied to hero abilities; item active intervals = AbilityChargeUpTime|AbilityCooldown from data
+  source: ability3 Full Auto T2: BonusFireRate=30

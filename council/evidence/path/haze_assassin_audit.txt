@@ -1,0 +1,62 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: haze_assassin
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:13Z
+BODY-SHA: 5d1f6f20cb0df0421cccecc093306eb143914b28c67545ccd34c2ba280ed9577
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Extra Spirit, Rapid Rounds, Active Reload, Swift Striker, Fleetfoot, Sprint Boots, Enduring Speed, Veil Walker
+  Mid · L-R                -> main path (sequential): Surge of Power, Bullet Resist Shredder, Recharging Rush, Tesla Bullets, Burst Fire
+  Late · L-R               -> main path (sequential): Capacitor, Lucky Shot, Unstoppable, Ricochet
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Spirit Resilience, Armor Piercer
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Siphon Bullets, Crippling Headshot, Silencer, Spellslinger
+  Slot locked              -> optional upgrade (branch): Juggernaut
+
+## SALE CHECKLIST (computed)
+- Late · L-R (main path): buy Unstoppable, sell Fleetfoot
+    function of Fleetfoot: bullet_resist, move_speed; replacement Unstoppable: cleanse; roles lost: bullet_resist, move_speed  [VERIFIED GAME MECHANIC]
+    Fleetfoot is a component of later items: no
+    held for 32000.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 22400/4800/4800 -> 20800/11200/4800; thresholds lost: none
+    trade ratio after the sale 0.44; selling Recharging Rush instead: 0.45 (+2.5%)  [MODELLED ESTIMATE]
+    model limit: Fleetfoot has an active effect (INSTANT_CAST) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Siphon Bullets, sell Recharging Rush
+    function of Recharging Rush: ammo; replacement Siphon Bullets: bullet_resist; roles lost: ammo  [VERIFIED GAME MECHANIC]
+    Recharging Rush is a component of later items: no
+    held for 34400.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/11200/4800 -> 25600/17600/4800; thresholds lost: none
+    trade ratio after the sale 0.38; selling Active Reload instead: 0.33 (-14.5%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Recharging Rush): 20 s 269 bullets (clip 82, 3.3 magazines, 34% not firing; refill items used every other charge) | 60 s 774 bullets, 37% not firing | damage 60 s 17044  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Recharging Rush, sell Active Reload: 20 s 247 bullets (clip 82, 3.0 magazines, 31% not firing; refill items used every other charge) | 60 s 714 bullets, 34% not firing | damage 60 s 16430  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Recharging Rush, no Siphon Bullets): 20 s 280 bullets (clip 94, 3.0 magazines, 31% not firing; refill items used every other charge) | 60 s 809 bullets, 34% not firing | damage 60 s 17420  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Crippling Headshot, sell Swift Striker
+    function of Swift Striker: fire_rate; replacement Crippling Headshot: resist_shred; roles lost: fire_rate  [VERIFIED GAME MECHANIC]
+    Swift Striker is a component of later items: no
+    held for 46400.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/11200/4800 -> 32000/11200/4800; thresholds lost: none
+    trade ratio after the sale 0.35; selling Recharging Rush instead: 0.36 (+2.5%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Silencer, sell Active Reload
+    function of Active Reload: ammo, fire_rate, move_speed, sustain; replacement Silencer: bullet_proc, silence, spirit_resist; roles lost: ammo, fire_rate, move_speed, sustain  [VERIFIED GAME MECHANIC]
+    Active Reload is a component of later items: no
+    held for 47200.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/11200/4800 -> 32000/11200/4800; thresholds lost: none
+    trade ratio after the sale 0.31; selling Recharging Rush instead: 0.36 (+16.5%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Active Reload): 20 s 247 bullets (clip 82, 3.0 magazines, 31% not firing; refill items used every other charge) | 60 s 714 bullets, 34% not firing | damage 60 s 16430  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Active Reload, sell Recharging Rush: 20 s 269 bullets (clip 82, 3.3 magazines, 34% not firing; refill items used every other charge) | 60 s 774 bullets, 37% not firing | damage 60 s 17044  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Active Reload, no Silencer): 20 s 280 bullets (clip 94, 3.0 magazines, 31% not firing; refill items used every other charge) | 60 s 809 bullets, 34% not firing | damage 60 s 17420  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Spellslinger, sell Swift Striker
+    function of Swift Striker: fire_rate; replacement Spellslinger: ammo, cooldown, fire_rate; roles lost: none  [VERIFIED GAME MECHANIC]
+    Swift Striker is a component of later items: no
+    held for 46400.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/11200/4800 -> 32000/11200/4800; thresholds lost: none
+    trade ratio after the sale 0.36; selling Recharging Rush instead: 0.37 (+3.8%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

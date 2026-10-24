@@ -1,0 +1,142 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: ivy_carry
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:14:44Z
+BODY-SHA: 4770f9e0f1ff8c7f8dc0e3215cfe1a7ac2399a60e994ae108d232b44c2f14f47
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extended Magazine: retained-or-upgraded (-> Titanic Magazine)
+  Titanic Magazine: retained
+  Tesla Bullets: retained-or-upgraded (-> Capacitor)
+  Monster Rounds: temporary (bought to be sold)
+  Intensifying Magazine: retained
+  Headshot Booster: retained-or-upgraded (-> Headhunter)
+  Active Reload: retained
+  Extra Health: retained-or-upgraded (-> Fortitude)
+  Fortitude: retained
+  Stamina Mastery: retained
+  Headhunter: retained
+  Capacitor: retained
+  Bullet Resist Shredder: retained
+  Siphon Bullets: retained
+  Silencer: retained
+  Inhibitor: retained
+  Ricochet: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Warp Stone: conditional branch (counter menu)
+  Crippling Headshot: situational-luxury
+  Spellslinger: situational-luxury
+  Indomitable: situational-luxury
+  Armor Piercer: situational-luxury
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Extended Magazine, Titanic Magazine, Tesla Bullets, Monster Rounds, Intensifying Magazine, Headshot Booster, Active Reload, Extra Health
+  Mid · L-R                  -> main path (sequential): Fortitude, Stamina Mastery, Headhunter, Capacitor, Bullet Resist Shredder, Siphon Bullets
+  Late · L-R                 -> main path (sequential): Silencer, Inhibitor, Ricochet
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Spirit Resilience, Counterspell, Unstoppable, Warp Stone
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Crippling Headshot, Spellslinger, Indomitable, Armor Piercer
+
+## Monster Rounds: sold when buying Ricochet (Late · L-R, main)
+  role of Monster Rounds: temporary (bought to be sold); role of Ricochet: retained
+  Monster Rounds: price 800, resale 400, net cost of owning it 400 souls (0.4 min of reference income); first bought at 5600 souls (~6.2 min), replaced at ~41.2 min -> owned ~35.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 28000/19200/1600 -> after 27200/19200/1600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 68 min | window TR | key purchase times (min)
+  as built                                    |          73880 |      0.57 | Monster Rounds 6, Ricochet 41
+  keep Monster Rounds                         |          73871 |      0.57 | Monster Rounds 6, Ricochet 42
+  skip Monster Rounds                         |          74279 |      0.58 | Ricochet 41
+  sell Titanic Magazine instead               |          72780 |      0.52 | Monster Rounds 6, Ricochet 41
+  keep Monster Rounds vs as built: d souls +7, d window TR -0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Monster Rounds vs as built: d souls +72, d window TR +2.2% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: -, 0.5: +)) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Titanic Magazine instead vs as built: d souls -469, d window TR -7.1% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: a computed alternative sequence is better: skip Monster Rounds
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Monster Rounds; evidence tier: MODEL-ONLY; flipping assumptions: skip Monster Rounds: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: -, 0.5: +)) | sell Titanic Magazine instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Bullet Resist Shredder: sold when buying Crippling Headshot (I'm rich as fuck, luxury)
+  role of Bullet Resist Shredder: retained; role of Crippling Headshot: situational-luxury
+  Bullet Resist Shredder: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 23200 souls (~20.2 min), replaced at ~46.5 min -> owned ~26.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 33600/19200/1600 -> after 33600/19200/0; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 76 min | window TR | key purchase times (min)
+  as built                                    |          79798 |      0.44 | Bullet Resist Shredder 20, Crippling Headshot 46
+  keep Bullet Resist Shredder (slot cap ignored)|          80546 |      0.48 | Bullet Resist Shredder 20, Crippling Headshot 47
+  skip Bullet Resist Shredder                 |          78544 |      0.41 | Crippling Headshot 47
+  sell Titanic Magazine instead               |          79465 |      0.43 | Bullet Resist Shredder 20, Crippling Headshot 46
+  keep Bullet Resist Shredder (slot cap ignored) vs as built: d souls +286, d window TR +8.4% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Bullet Resist Shredder vs as built: d souls -476, d window TR -6.5% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Titanic Magazine instead vs as built: d souls -145, d window TR -0.9% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Bullet Resist Shredder (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Titanic Magazine instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Active Reload: sold when buying Spellslinger (I'm rich as fuck, luxury)
+  role of Active Reload: retained; role of Spellslinger: situational-luxury
+  Active Reload: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 9600 souls (~9.8 min), replaced at ~46.5 min -> owned ~36.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 33600/19200/1600 -> after 32000/19200/1600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 76 min | window TR | key purchase times (min)
+  as built                                    |          79742 |      0.49 | Active Reload 10, Spellslinger 46
+  keep Active Reload (slot cap ignored)       |          81032 |      0.55 | Active Reload 10, Spellslinger 47
+  skip Active Reload                          |          76982 |      0.43 | Spellslinger 48
+  sell Titanic Magazine instead               |          79480 |      0.48 | Active Reload 10, Spellslinger 46
+  keep Active Reload (slot cap ignored) vs as built: d souls +531, d window TR +8.9% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Active Reload vs as built: d souls -1221, d window TR -9.9% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Titanic Magazine instead vs as built: d souls -79, d window TR -0.7% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  ammo mechanics (clip 33, reload 2.444 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Active Reload): 8 s trade 106 bullets (27% not firing), 20 s 247 bullets (32% not firing, 3.4 magazines), damage 20 s 4648, refill uses 0.0
+    keep Active Reload: 8 s trade 126 bullets (27% not firing), 20 s 283 bullets (34% not firing, 3.6 magazines), damage 20 s 5325, refill uses 0.0
+    without Spellslinger (keep Active Reload): 8 s trade 112 bullets (30% not firing), 20 s 264 bullets (34% not firing, 3.3 magazines), damage 20 s 4690, refill uses 0.0
+    sell Titanic Magazine instead: 8 s trade 94 bullets (45% not firing), 20 s 223 bullets (48% not firing, 4.8 magazines), damage 20 s 3971, refill uses 0.0
+    sustained 20 s gun damage: selling Active Reload costs 13% vs keeping it (both with Spellslinger); Spellslinger adds +14% on top of Active Reload; selling Titanic Magazine instead: -25% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: the sale of Active Reload lowers modelled sustained gun damage by 13% (ammo mechanics)
+  VERDICT: REVIEW: selling Active Reload costs sustained gun output; Spellslinger does not replace its ammo role (quantified above). Alternatives for the slot: sell Titanic Magazine (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED); flipping assumptions: keep Active Reload (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Titanic Magazine instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Stamina Mastery: sold when buying Indomitable (I'm rich as fuck, luxury)
+  role of Stamina Mastery: retained; role of Indomitable: situational-luxury
+  Stamina Mastery: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 16000 souls (~14.8 min), replaced at ~45.8 min -> owned ~31.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 27200/25600/1600 -> after 27200/22400/1600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 76 min | window TR | key purchase times (min)
+  as built                                    |          81119 |      0.53 | Stamina Mastery 15, Indomitable 46
+  keep Stamina Mastery (slot cap ignored)     |          81047 |      0.53 | Stamina Mastery 15, Indomitable 47
+  skip Stamina Mastery                        |          81714 |      0.55 | Indomitable 44
+  sell Titanic Magazine instead               |          79818 |      0.48 | Stamina Mastery 15, Indomitable 46
+  keep Stamina Mastery (slot cap ignored) vs as built: d souls -24, d window TR -0.4% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Stamina Mastery vs as built: d souls +322, d window TR +2.4% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Titanic Magazine instead vs as built: d souls -605, d window TR -8.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Stamina Mastery'] differ from 'as built' only through items with no modelled stat (Stamina Mastery contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: no modelled stat for Stamina Mastery (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Titanic Magazine instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Titanic Magazine: sold when buying Armor Piercer (I'm rich as fuck, luxury)
+  role of Titanic Magazine: retained; role of Armor Piercer: situational-luxury
+  Titanic Magazine: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 1600 souls (~2.0 min), replaced at ~46.5 min -> owned ~44.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 33600/19200/1600 -> after 32000/19200/1600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 76 min | window TR | key purchase times (min)
+  as built                                    |          79435 |      0.49 | Titanic Magazine 2, Armor Piercer 46
+  keep Titanic Magazine (slot cap ignored)    |          80511 |      0.54 | Titanic Magazine 2, Armor Piercer 47
+  skip Titanic Magazine                       |          79980 |      0.52 | Armor Piercer 47
+  sell Intensifying Magazine instead          |          80511 |      0.54 | Titanic Magazine 2, Armor Piercer 46
+  keep Titanic Magazine (slot cap ignored) vs as built: d souls +511, d window TR +7.1% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Titanic Magazine vs as built: d souls +191, d window TR +4.4% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  sell Intensifying Magazine instead vs as built: d souls +504, d window TR +7.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  ammo mechanics (clip 33, reload 2.444 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Titanic Magazine): 8 s trade 91 bullets (43% not firing), 20 s 207 bullets (49% not firing, 4.5 magazines), damage 20 s 3794, refill uses 0.0
+    keep Titanic Magazine: 8 s trade 112 bullets (30% not firing), 20 s 264 bullets (34% not firing, 3.3 magazines), damage 20 s 5116, refill uses 0.0
+    without Armor Piercer (keep Titanic Magazine): 8 s trade 112 bullets (30% not firing), 20 s 264 bullets (34% not firing, 3.3 magazines), damage 20 s 4690, refill uses 0.0
+    sell Intensifying Magazine instead: 8 s trade 112 bullets (30% not firing), 20 s 253 bullets (37% not firing, 3.5 magazines), damage 20 s 4900, refill uses 0.0
+    sustained 20 s gun damage: selling Titanic Magazine costs 26% vs keeping it (both with Armor Piercer); Armor Piercer adds +9% on top of Titanic Magazine; selling Intensifying Magazine instead: -4% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: the sale of Titanic Magazine lowers modelled sustained gun damage by 26% (ammo mechanics)
+  VERDICT: REVIEW: selling Titanic Magazine costs sustained gun output; Armor Piercer does not replace its ammo role (quantified above). Alternatives for the slot: sell Intensifying Magazine (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED); flipping assumptions: keep Titanic Magazine (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | skip Titanic Magazine: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Intensifying Magazine instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

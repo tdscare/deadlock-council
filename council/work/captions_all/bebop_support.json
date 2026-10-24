@@ -1,0 +1,3456 @@
+{
+ "schema": 1,
+ "id": "bebop_support",
+ "hero": "Bebop",
+ "name": "Rizuhble's Wingman Bebop",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "swap",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, for Unstoppable.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it for Unstoppable.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-7,200 (levels 1-13). Abilities gained (both point models agree): Hyper Beam unlocked. 4.8k spikes: spirit 4.8k at Compress Cooldown. Ultimate (Hyper Beam) is available from Improved Spirit.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "bebop_support:6:phase_range:357",
+    "bebop_support:6:phase_abilities:358",
+    "bebop_support:6:phase_spikes:366",
+    "bebop_support:6:phase_ult:367"
+   ],
+   "items": [
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 6 to Exploding Uppercut's landing damage (0.60x scaling).",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Compress Cooldown completes 4.8k spirit in 6400 souls (~6.4 min), 6 purchases",
+     "claim_ids": [
+      "bebop_support:0:spirit_scaling:341"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:0:spirit_scaling:341",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Bullet Resist Shredder",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 4,800 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Compress Cooldown completes 4.8k spirit in 4800 souls (~4.8 min), 5 purchases",
+     "claim_ids": [
+      "bebop_support:1:spike_progress:342"
+     ],
+     "lint": [],
+     "legacy_note": "Hook them in, then uppercut: the landing hit drops their bullet resist for your whole team.",
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:1:spike_progress:342",
+       true,
+       "2400"
+      ]
+     ]
+    },
+    {
+     "name": "Extra Health",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Fortitude, 6400 souls (~6.4 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Sprint Boots",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Fortitude, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Trophy Collector",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Fortitude, 4800 souls (~4.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 45.2 per second to Hyper Beam's damage per second (2.51x scaling), your steepest spirit scaling. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:5:spirit_scaling:353",
+      "bebop_support:5:upgrade_of:352"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:5:spirit_scaling:353",
+       true,
+       ""
+      ],
+      [
+       "bebop_support:5:upgrade_of:352",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "3",
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power. Imbued on Grapple Arm: takes 18% off its 23s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:6:spike_complete:354",
+      "bebop_support:6:imbue_cooldown:355"
+     ],
+     "lint": [],
+     "legacy_note": "On Grapple Arm.",
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:6:spike_complete:354",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ],
+      [
+       "bebop_support:6:imbue_cooldown:355",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 7,200-24,000 (levels 13-27). Abilities gained (both point models agree): Exploding Uppercut T3, Grapple Arm T3. 4.8k spikes: vitality 4.8k at Fortitude, weapon 4.8k at Hunter's Aura.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "bebop_support:13:phase_range:380",
+    "bebop_support:13:phase_abilities:381",
+    "bebop_support:13:phase_spikes:388"
+   ],
+   "items": [
+    {
+     "name": "Fortitude",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus. Upgrade of Extra Health (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:7:spike_complete:368",
+      "bebop_support:7:upgrade_of:369"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:7:spike_complete:368",
+       true,
+       "inventory vitality: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "bebop_support:7:upgrade_of:369",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Heroic Aura",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only; its 4.8k tier completes at Hunter's Aura, 6400 souls (~6.4 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Only if your team has gun heroes.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Strike",
+     "imbue": null,
+     "caption": "Builds toward the 6.4k spirit tier, which Spirit Snatch completes 2,400 souls on.",
+     "cls": "b",
+     "why": "imminent: Spirit Snatch completes 6.4k spirit in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "bebop_support:9:spike_progress:372"
+     ],
+     "lint": [],
+     "legacy_note": "Works on your uppercut.",
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:9:spike_progress:372",
+       true,
+       "5600"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Snatch",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 5,600 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Hunter's Aura",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (3,200 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 18 to 54% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:11:spike_complete:376"
+     ],
+     "lint": [],
+     "legacy_note": "Hook them into your team and stay within 15m of them.",
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:11:spike_complete:376",
+       true,
+       "inventory weapon: before 3200, after 6400, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Slowing Hex",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Veil Walker",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 24,000-48,000 (levels 27-35). Abilities gained (both point models agree): Hyper Beam T3. Your biggest single spirit hit (Sticky Bomb, damage) grows from 327 to 435.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "bebop_support:18:phase_range:398",
+    "bebop_support:18:phase_abilities:399",
+    "bebop_support:18:phase_power:400"
+   ],
+   "items": [
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 9,600 to 11,200 invested: bonus 52 to 59 spirit power. | With 4 abilities trained their base cooldowns total 132s; 20% off is 26.5s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 75.3 per second to Hyper Beam's damage per second (2.51x scaling), your steepest spirit scaling. Takes spirit from 11,200 to 16,000 invested: bonus 59 to 66 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:15:spirit_scaling:394",
+      "bebop_support:15:invest_step:392",
+      "bebop_support:15:upgrade_of:393"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:15:spirit_scaling:394",
+       true,
+       ""
+      ],
+      [
+       "bebop_support:15:invest_step:392",
+       true,
+       "inventory spirit: before 11200, after 16000, threshold 16000"
+      ],
+      [
+       "bebop_support:15:upgrade_of:393",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 8,000 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Vortex Web",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 14,400 to 20,800 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Pop it before you walk in, so they can't stun you out of the hook.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Fortitude? Buy what is killing you, cheapest first. Not dying? Skip. Sell Veil Walker.",
+   "desc": "Dying after Fortitude? Buy what is killing you, cheapest first. Not dying? Skip. Sell Veil Walker.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:19:defence_parry:405"
+     ],
+     "lint": [],
+     "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow.",
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:19:defence_parry:405",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:19:defence_bullet:406"
+     ],
+     "lint": [],
+     "legacy_note": "One gun hero is deleting you: Haze, Wraith, Vindicta.",
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:19:defence_bullet:406",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:19:defence_purge:407"
+     ],
+     "lint": [],
+     "legacy_note": "Knockdown before it lands, Slowing Hex, Disarming Hex.",
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:19:defence_purge:407",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:19:defence_gun:408"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun and Metal Skin isn't enough.",
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:19:defence_gun:408",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:19:defence_spirit:409"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist.",
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:19:defence_spirit:409",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "swap",
+   "label": "Optional swap / pivot",
+   "box_title": "Swap for Heroic Aura",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Spirit Rend",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Instead of Heroic Aura when your team has no gun heroes.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Echo Shard",
+     "imbue": "3",
+     "caption": "Imbued on Grapple Arm: resets its 11.5s cooldown for a second cast; the shard's own 30s cooldown grows by that ability's cooldown. Takes spirit from 20,800 to 25,600 invested: bonus 66 to 75 spirit power. Replaces Bullet Resist Shredder: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:19:imbue_reset:411",
+      "bebop_support:19:invest_step:410",
+      "bebop_support:19:sell_swap:412"
+     ],
+     "lint": [],
+     "legacy_note": "On Grapple Arm. Sell Bullet Resist Shredder for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:19:imbue_reset:411",
+       true,
+       ""
+      ],
+      [
+       "bebop_support:19:invest_step:410",
+       true,
+       "inventory spirit: before 20800, after 25600, threshold 22400"
+      ],
+      [
+       "bebop_support:19:sell_swap:412",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Scourge",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 20,800 to 27,200 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Cast it on your carry. Sell Trophy Collector for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun. Takes vitality from 20,800 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:19:defence_barrier:416",
+      "bebop_support:19:invest_step:415"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Fortitude for this, or Dispel Magic if you bought it.",
+     "temporary": true,
+     "verify": [
+      [
+       "bebop_support:19:defence_barrier:416",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "bebop_support:19:invest_step:415",
+       true,
+       "inventory vitality: before 20800, after 24000, threshold 22400"
+      ]
+     ]
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 132s of base cooldown across your kit, 100s of it the ultimate; the item has its own cooldown of 300s. Takes spirit from 20,800 to 27,200 invested: bonus 66 to 75 spirit power. Replaces Veil Walker: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:19:refresher:418",
+      "bebop_support:19:invest_step:419",
+      "bebop_support:19:sell_swap:420"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Veil Walker for this, or Boundless Spirit if a counter took it.",
+     "temporary": true,
+     "verify": [
+      [
+       "bebop_support:19:refresher:418",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "bebop_support:19:invest_step:419",
+       true,
+       "inventory spirit: before 20800, after 27200, threshold 22400"
+      ],
+      [
+       "bebop_support:19:sell_swap:420",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "bebop_support:19:upgrade_delta:421"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "bebop_support:19:upgrade_delta:421",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "bebop_support:19:temporary_sold:338": {
+   "id": "bebop_support:19:temporary_sold:338",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, for Unstoppable.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 19,
+    "item": "Extra Regen",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it for Unstoppable."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:0:spike_progress:339": {
+   "id": "bebop_support:0:spike_progress:339",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 6,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 6400,
+    "event": "Compress Cooldown completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    6400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "bebop_support:0:component_for:340": {
+   "id": "bebop_support:0:component_for:340",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 4800,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:0:spirit_scaling:341": {
+   "id": "bebop_support:0:spirit_scaling:341",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 6 to Exploding Uppercut's landing damage (0.60x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_uppercut"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "LandingDamage"
+   },
+   "numbers": [
+    "10.0",
+    "6",
+    "0.60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "bebop_support:1:spike_progress:342": {
+   "id": "bebop_support:1:spike_progress:342",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 4,800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Bullet Resist Shredder",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4800,
+    "event": "Compress Cooldown completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    4800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "bebop_support:1:swap_candidate:343": {
+   "id": "bebop_support:1:swap_candidate:343",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Echo Shard later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 1,
+    "item": "Bullet Resist Shredder",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Bullet Resist Shredder",
+    "buyer": "Echo Shard"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:2:spike_progress:344": {
+   "id": "bebop_support:2:spike_progress:344",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Extra Health",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "bebop_support:2:component_for:345": {
+   "id": "bebop_support:2:component_for:345",
+   "kind": "component_for",
+   "phrase": "From Fortitude: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Extra Health",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 6400,
+    "event": "Fortitude"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Fortitude"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:3:spike_progress:346": {
+   "id": "bebop_support:3:spike_progress:346",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Sprint Boots",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "bebop_support:3:component_for:347": {
+   "id": "bebop_support:3:component_for:347",
+   "kind": "component_for",
+   "phrase": "From Trophy Collector: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Sprint Boots",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Trophy Collector"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Trophy Collector"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:4:spike_progress:348": {
+   "id": "bebop_support:4:spike_progress:348",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Trophy Collector",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "bebop_support:4:upgrade_of:349": {
+   "id": "bebop_support:4:upgrade_of:349",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 4,
+    "item": "Trophy Collector",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Sprint Boots"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:4:swap_candidate:350": {
+   "id": "bebop_support:4:swap_candidate:350",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Scourge later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 4,
+    "item": "Trophy Collector",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Trophy Collector",
+    "buyer": "Scourge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:5:spike_progress:351": {
+   "id": "bebop_support:5:spike_progress:351",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Improved Spirit",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "bebop_support:5:upgrade_of:352": {
+   "id": "bebop_support:5:upgrade_of:352",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 5,
+    "item": "Improved Spirit",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:5:spirit_scaling:353": {
+   "id": "bebop_support:5:spirit_scaling:353",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 45.2 per second to Hyper Beam's damage per second (2.51x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bebop_laser_beam"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 5,
+    "item": "Improved Spirit",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "DPS"
+   },
+   "numbers": [
+    "18.0",
+    "45.2",
+    "2.51"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "bebop_support:6:spike_complete:354": {
+   "id": "bebop_support:6:spike_complete:354",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 6,
+    "item": "Compress Cooldown",
+    "souls": 7200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "bebop_support:6:imbue_cooldown:355": {
+   "id": "bebop_support:6:imbue_cooldown:355",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Grapple Arm: takes 18% off its 23s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hook"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 6,
+    "item": "Compress Cooldown",
+    "souls": 7200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 3
+   },
+   "numbers": [
+    "18.0",
+    "23.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "bebop_support:6:component_for:356": {
+   "id": "bebop_support:6:component_for:356",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Compress Cooldown",
+    "souls": 7200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 18400,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:6:phase_range:357": {
+   "id": "bebop_support:6:phase_range:357",
+   "kind": "phase_range",
+   "phrase": "Souls 0-7,200 (levels 1-13).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Compress Cooldown",
+    "souls": 7200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "7,200",
+    "1",
+    "13"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:6:phase_abilities:358": {
+   "id": "bebop_support:6:phase_abilities:358",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Hyper Beam unlocked.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Compress Cooldown",
+    "souls": 7200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:6:phase_spikes:366": {
+   "id": "bebop_support:6:phase_spikes:366",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Compress Cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Compress Cooldown",
+    "souls": 7200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:6:phase_ult:367": {
+   "id": "bebop_support:6:phase_ult:367",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Hyper Beam) is available from Improved Spirit.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Compress Cooldown",
+    "souls": 7200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:7:spike_complete:368": {
+   "id": "bebop_support:7:spike_complete:368",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 7,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "bebop_support:7:upgrade_of:369": {
+   "id": "bebop_support:7:upgrade_of:369",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Health (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Health"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:7:swap_candidate:370": {
+   "id": "bebop_support:7:swap_candidate:370",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Divine Barrier later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 7,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Fortitude",
+    "buyer": "Divine Barrier"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:8:spike_progress:371": {
+   "id": "bebop_support:8:spike_progress:371",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 8,
+    "item": "Heroic Aura",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "bebop_support:9:spike_progress:372": {
+   "id": "bebop_support:9:spike_progress:372",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 6.4k spirit tier, which Spirit Snatch completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 9,
+    "item": "Spirit Strike",
+    "souls": 13600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Spirit Snatch completes the 6.4k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k",
+    2400,
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 6400
+  },
+  "bebop_support:9:component_for:373": {
+   "id": "bebop_support:9:component_for:373",
+   "kind": "component_for",
+   "phrase": "From Spirit Snatch: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Spirit Strike",
+    "souls": 13600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Spirit Snatch"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Snatch"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:10:invest_step:374": {
+   "id": "bebop_support:10:invest_step:374",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 5,600 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Spirit Snatch",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "8000",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "bebop_support:10:upgrade_of:375": {
+   "id": "bebop_support:10:upgrade_of:375",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Strike (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Spirit Snatch",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Strike"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:11:spike_complete:376": {
+   "id": "bebop_support:11:spike_complete:376",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (3,200 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 18 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 11,
+    "item": "Hunter's Aura",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "6400",
+    "18.0",
+    "54.0",
+    "4.8k",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "bebop_support:12:component_for:377": {
+   "id": "bebop_support:12:component_for:377",
+   "kind": "component_for",
+   "phrase": "From Vortex Web: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Slowing Hex",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 20800,
+    "event": "Vortex Web"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Vortex Web"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:13:invest_step:378": {
+   "id": "bebop_support:13:invest_step:378",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Veil Walker",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "8000",
+    "38.0",
+    "46.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "bebop_support:13:swap_candidate:379": {
+   "id": "bebop_support:13:swap_candidate:379",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Refresher later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 13,
+    "item": "Veil Walker",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Veil Walker",
+    "buyer": "Refresher"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:13:phase_range:380": {
+   "id": "bebop_support:13:phase_range:380",
+   "kind": "phase_range",
+   "phrase": "Souls 7,200-24,000 (levels 13-27).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Veil Walker",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Veil Walker",
+    "keys": []
+   },
+   "numbers": [
+    "7,200",
+    "24,000",
+    "13",
+    "27"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:13:phase_abilities:381": {
+   "id": "bebop_support:13:phase_abilities:381",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Exploding Uppercut T3, Grapple Arm T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Veil Walker",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Veil Walker",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:13:phase_spikes:388": {
+   "id": "bebop_support:13:phase_spikes:388",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Fortitude, weapon 4.8k at Hunter's Aura.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Veil Walker",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Veil Walker",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:14:invest_step:389": {
+   "id": "bebop_support:14:invest_step:389",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 9,600 to 11,200 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Superior Cooldown",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "11200",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "bebop_support:14:upgrade_of:390": {
+   "id": "bebop_support:14:upgrade_of:390",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 14,
+    "item": "Superior Cooldown",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:14:cdr_rotation:391": {
+   "id": "bebop_support:14:cdr_rotation:391",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 132s; 20% off is 26.5s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_uppercut",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_sticky_bomb",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hook",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bebop_laser_beam"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 14,
+    "item": "Superior Cooldown",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "132",
+    "20.0",
+    "26.5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "bebop_support:15:invest_step:392": {
+   "id": "bebop_support:15:invest_step:392",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 11,200 to 16,000 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "16000",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "bebop_support:15:upgrade_of:393": {
+   "id": "bebop_support:15:upgrade_of:393",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:15:spirit_scaling:394": {
+   "id": "bebop_support:15:spirit_scaling:394",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 75.3 per second to Hyper Beam's damage per second (2.51x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bebop_laser_beam"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "DPS"
+   },
+   "numbers": [
+    "30.0",
+    "75.3",
+    "2.51"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "bebop_support:16:invest_step:395": {
+   "id": "bebop_support:16:invest_step:395",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 8,000 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Witchmail",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "14400",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "bebop_support:17:upgrade_of:396": {
+   "id": "bebop_support:17:upgrade_of:396",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Slowing Hex (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Vortex Web",
+    "souls": 41600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Slowing Hex"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "bebop_support:18:invest_step:397": {
+   "id": "bebop_support:18:invest_step:397",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 14,400 to 20,800 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Unstoppable",
+    "souls": 48000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "20800",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "bebop_support:18:phase_range:398": {
+   "id": "bebop_support:18:phase_range:398",
+   "kind": "phase_range",
+   "phrase": "Souls 24,000-48,000 (levels 27-35).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Unstoppable",
+    "souls": 48000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Unstoppable",
+    "keys": []
+   },
+   "numbers": [
+    "24,000",
+    "48,000",
+    "27",
+    "35"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:18:phase_abilities:399": {
+   "id": "bebop_support:18:phase_abilities:399",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Hyper Beam T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Unstoppable",
+    "souls": 48000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Unstoppable",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:18:phase_power:400": {
+   "id": "bebop_support:18:phase_power:400",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Sticky Bomb, damage) grows from 327 to 435.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_sticky_bomb",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Unstoppable",
+    "souls": 48000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Unstoppable",
+    "keys": []
+   },
+   "numbers": [
+    "327",
+    "435"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:19:defence_parry:405": {
+   "id": "bebop_support:19:defence_parry:405",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Counterspell",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:19:defence_bullet:406": {
+   "id": "bebop_support:19:defence_bullet:406",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Metal Skin",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "One gun hero is deleting you: Haze, Wraith, Vindicta."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:19:defence_purge:407": {
+   "id": "bebop_support:19:defence_purge:407",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Dispel Magic",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Knockdown before it lands, Slowing Hex, Disarming Hex."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:19:defence_gun:408": {
+   "id": "bebop_support:19:defence_gun:408",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Plated Armor",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun and Metal Skin isn't enough."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:19:defence_spirit:409": {
+   "id": "bebop_support:19:defence_spirit:409",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Resilience",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:19:invest_step:410": {
+   "id": "bebop_support:19:invest_step:410",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 20,800 to 25,600 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Echo Shard",
+    "souls": 48000,
+    "noncore": true,
+    "imb": 3,
+    "note": "On Grapple Arm. Sell Bullet Resist Shredder for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "20800",
+    "25600",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "bebop_support:19:imbue_reset:411": {
+   "id": "bebop_support:19:imbue_reset:411",
+   "kind": "imbue_reset",
+   "phrase": "Imbued on Grapple Arm: resets its 11.5s cooldown for a second cast; the shard's own 30s cooldown grows by that ability's cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_power_shard",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hook"
+   ],
+   "score": 55,
+   "point": {
+    "idx": 19,
+    "item": "Echo Shard",
+    "souls": 48000,
+    "noncore": true,
+    "imb": 3,
+    "note": "On Grapple Arm. Sell Bullet Resist Shredder for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_nonult",
+    "slot": 3
+   },
+   "numbers": [
+    "11.5",
+    "30"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "bebop_support:19:sell_swap:412": {
+   "id": "bebop_support:19:sell_swap:412",
+   "kind": "sell_swap",
+   "phrase": "Replaces Bullet Resist Shredder: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Echo Shard",
+    "souls": 48000,
+    "noncore": true,
+    "imb": 3,
+    "note": "On Grapple Arm. Sell Bullet Resist Shredder for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Bullet Resist Shredder",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Bullet Resist Shredder"
+  },
+  "bebop_support:19:invest_step:413": {
+   "id": "bebop_support:19:invest_step:413",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 20,800 to 27,200 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Scourge",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Cast it on your carry. Sell Trophy Collector for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "20800",
+    "27200",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "bebop_support:19:sell_swap:414": {
+   "id": "bebop_support:19:sell_swap:414",
+   "kind": "sell_swap",
+   "phrase": "Replaces Trophy Collector: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Scourge",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Cast it on your carry. Sell Trophy Collector for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Trophy Collector",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Trophy Collector"
+  },
+  "bebop_support:19:invest_step:415": {
+   "id": "bebop_support:19:invest_step:415",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 20,800 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Fortitude for this, or Dispel Magic if you bought it."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 22400
+   },
+   "numbers": [
+    "20800",
+    "24000",
+    "54.0",
+    "60.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 22400
+  },
+  "bebop_support:19:defence_barrier:416": {
+   "id": "bebop_support:19:defence_barrier:416",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Fortitude for this, or Dispel Magic if you bought it."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:19:sell_swap:417": {
+   "id": "bebop_support:19:sell_swap:417",
+   "kind": "sell_swap",
+   "phrase": "Replaces Fortitude: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Fortitude for this, or Dispel Magic if you bought it."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Fortitude",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Fortitude"
+  },
+  "bebop_support:19:refresher:418": {
+   "id": "bebop_support:19:refresher:418",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 132s of base cooldown across your kit, 100s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_uppercut",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_sticky_bomb",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hook",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bebop_laser_beam"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 19,
+    "item": "Refresher",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Veil Walker for this, or Boundless Spirit if a counter took it."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "132",
+    "100",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "bebop_support:19:invest_step:419": {
+   "id": "bebop_support:19:invest_step:419",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 20,800 to 27,200 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_bebop m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Refresher",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Veil Walker for this, or Boundless Spirit if a counter took it."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "20800",
+    "27200",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "bebop_support:19:sell_swap:420": {
+   "id": "bebop_support:19:sell_swap:420",
+   "kind": "sell_swap",
+   "phrase": "Replaces Veil Walker: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Refresher",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Veil Walker for this, or Boundless Spirit if a counter took it."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Veil Walker",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Veil Walker"
+  },
+  "bebop_support:19:upgrade_delta:421": {
+   "id": "bebop_support:19:upgrade_delta:421",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Transcendent Cooldown",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "bebop_support:19:upgrade_of:422": {
+   "id": "bebop_support:19:upgrade_of:422",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Transcendent Cooldown",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "bebop_support",
+   "item": "Extra Spirit",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Compress Cooldown completes 4.8k spirit in 6400 souls (~6.4 min), 6 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "bebop_support:0:spike_progress:339",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 6,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 6400,
+      "event": "Compress Cooldown completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "bebop_support:0:component_for:340",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 4800,
+      "event": "Improved Spirit"
+     }
+    }
+   ]
+  },
+  {
+   "build": "bebop_support",
+   "item": "Bullet Resist Shredder",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Compress Cooldown completes 4.8k spirit in 4800 souls (~4.8 min), 5 purchases",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "bebop_support:1:spike_progress:342",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 4,800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4800,
+      "event": "Compress Cooldown completes the 4.8k spirit tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "bebop_support",
+   "item": "Bullet Resist Shredder",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Hook them in, then uppercut: the landing hit drops their bullet resist for your whole team."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Extra Health",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Fortitude, 6400 souls (~6.4 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "bebop_support:2:component_for:345",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Fortitude: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 6400,
+      "event": "Fortitude"
+     }
+    }
+   ]
+  },
+  {
+   "build": "bebop_support",
+   "item": "Sprint Boots",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Fortitude, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 4000,
+   "unpublished": [
+    {
+     "id": "bebop_support:3:component_for:347",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Trophy Collector: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Trophy Collector"
+     }
+    }
+   ]
+  },
+  {
+   "build": "bebop_support",
+   "item": "Trophy Collector",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Fortitude, 4800 souls (~4.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 4800,
+   "unpublished": []
+  },
+  {
+   "build": "bebop_support",
+   "item": "Compress Cooldown",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Grapple Arm."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Heroic Aura",
+   "section": "mid",
+   "cls": "c",
+   "why": "weapon investment only; its 4.8k tier completes at Hunter's Aura, 6400 souls (~6.4 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 12800,
+   "unpublished": []
+  },
+  {
+   "build": "bebop_support",
+   "item": "Heroic Aura",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Only if your team has gun heroes."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Spirit Strike",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Spirit Snatch completes 6.4k spirit in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 13600,
+   "unpublished": [
+    {
+     "id": "bebop_support:9:spike_progress:372",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 6.4k spirit tier, which Spirit Snatch completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Spirit Snatch completes the 6.4k spirit tier"
+     }
+    },
+    {
+     "id": "bebop_support:9:component_for:373",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spirit Snatch: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Spirit Snatch"
+     }
+    }
+   ]
+  },
+  {
+   "build": "bebop_support",
+   "item": "Spirit Strike",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Works on your uppercut."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Hunter's Aura",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Hook them into your team and stay within 15m of them."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Slowing Hex",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+   "souls": 20800,
+   "unpublished": [
+    {
+     "id": "bebop_support:12:component_for:377",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Vortex Web: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 20800,
+      "event": "Vortex Web"
+     }
+    }
+   ]
+  },
+  {
+   "build": "bebop_support",
+   "item": "Vortex Web",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 41600,
+   "unpublished": []
+  },
+  {
+   "build": "bebop_support",
+   "item": "Unstoppable",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Pop it before you walk in, so they can't stun you out of the hook."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "One gun hero is deleting you: Haze, Wraith, Vindicta."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Knockdown before it lands, Slowing Hex, Disarming Hex."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun and Metal Skin isn't enough."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Spirit Rend",
+   "section": "swap",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 48000,
+   "unpublished": []
+  },
+  {
+   "build": "bebop_support",
+   "item": "Echo Shard",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Grapple Arm. Sell Bullet Resist Shredder for this."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Scourge",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Cast it on your carry. Sell Trophy Collector for this."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Divine Barrier",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Sell Fortitude for this, or Dispel Magic if you bought it."
+  },
+  {
+   "build": "bebop_support",
+   "item": "Refresher",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Sell Veil Walker for this, or Boundless Spirit if a counter took it."
+  }
+ ],
+ "stats": {
+  "g": 7,
+  "b": 3,
+  "c": 4,
+  "a": 14,
+  "d": 3
+ }
+}

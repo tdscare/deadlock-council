@@ -1,0 +1,3713 @@
+{
+ "schema": 1,
+ "id": "pocket",
+ "hero": "Pocket",
+ "name": "Rizuhble's Pocket Sized War Crimes",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Getting poked out. Sell it when slots fill.",
+     "temporary": true,
+     "verify": []
+    },
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Their burst wins your trades. Sell it when slots fill.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-9,600 (levels 1-16). 4.8k spikes: weapon 4.8k at Cultist Sacrifice.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "pocket:7:phase_range:4853",
+    "pocket:7:phase_spikes:4862"
+   ],
+   "items": [
+    {
+     "name": "Restorative Shot",
+     "imbue": null,
+     "caption": "Temporary, sold when you buy Diviner's Kevlar later.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 6400 souls (~6.4 min), 5 purchases",
+     "claim_ids": [
+      "pocket:0:temporary_sold:4836"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:0:temporary_sold:4836",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Monster Rounds",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 5,600 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 5600 souls (~5.6 min), 4 purchases",
+     "claim_ids": [
+      "pocket:1:spike_progress:4837"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:1:spike_progress:4837",
+       true,
+       "1600"
+      ]
+     ]
+    },
+    {
+     "name": "Battle Vest",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Majestic Leap, 12000 souls (~12.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Enchanter's Satchel (172), Flying Cloak (151) clear its 80-damage trigger; Barrage stays under it.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:3:threshold_now:4842"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:3:threshold_now:4842",
+       true,
+       "instances above: [(2, 150.54), (3, 172.38)]"
+      ]
+     ]
+    },
+    {
+     "name": "Rapid Rounds",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 2,400 souls on.",
+     "cls": "b",
+     "why": "imminent: Cultist Sacrifice completes 4.8k weapon in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "pocket:4:spike_progress:4844"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:4:spike_progress:4844",
+       true,
+       "2400"
+      ]
+     ]
+    },
+    {
+     "name": "Cultist Sacrifice",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (2,400 to 4,800 invested): bonus 15 to 46% weapon damage. Upgrade of Monster Rounds (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:5:spike_complete:4846",
+      "pocket:5:upgrade_of:4847"
+     ],
+     "lint": [],
+     "legacy_note": "Use it on the biggest camp monster you can find.",
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:5:spike_complete:4846",
+       true,
+       "inventory weapon: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "pocket:5:upgrade_of:4847",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Swift Striker",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only and the build never reaches the 6.4k weapon tier through the core: timing review",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "2",
+     "caption": "Imbued on Flying Cloak: takes 18% off its 26s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:7:imbue_cooldown:4851"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:7:imbue_cooldown:4851",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 9,600-30,400 (levels 16-30). Abilities gained (both point models agree): Barrage T3, Affliction T3. Your biggest single spirit hit (Enchanter's Satchel, damage) grows from 190 to 263. 4.8k spikes: spirit 4.8k at Tankbuster, vitality 4.8k at Majestic Leap.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "pocket:15:phase_range:4886",
+    "pocket:15:phase_abilities:4887",
+    "pocket:15:phase_power:4888",
+    "pocket:15:phase_spikes:4897"
+   ],
+   "items": [
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power. Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:8:spike_complete:4863",
+      "pocket:8:upgrade_of:4865"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:8:spike_complete:4863",
+       true,
+       "inventory spirit: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "pocket:8:upgrade_of:4865",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Majestic Leap",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:9:spike_complete:4867"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:9:spike_complete:4867",
+       true,
+       "inventory vitality: before 1600, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Expansion",
+     "imbue": "1",
+     "caption": "Imbued on Barrage: widens its range.",
+     "cls": "b",
+     "why": "imminent: Superior Cooldown completes 6.4k spirit in 1600 souls (~1.6 min), 1 purchases",
+     "claim_ids": [
+      "pocket:10:imbue_reach:4869"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:10:imbue_reach:4869",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 5,600 to 7,200 invested: bonus 38 to 45 spirit power. | With 4 abilities trained their base cooldowns total 189s; 20% off is 37.8s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you. Takes vitality from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:12:defence_purge:4876",
+      "pocket:12:invest_step:4874"
+     ],
+     "lint": [],
+     "legacy_note": "It doesn't remove ult effects.",
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:12:defence_purge:4876",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "pocket:12:invest_step:4874",
+       true,
+       "inventory vitality: before 4800, after 8000, threshold 6400"
+      ]
+     ]
+    },
+    {
+     "name": "Duration Extender",
+     "imbue": "4",
+     "caption": "Imbued on Affliction: its duration-scaled parts (debuff duration 13s) get +22%. Takes spirit from 7,200 to 8,800 invested: bonus 45 to 52 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:13:imbue_duration:4878",
+      "pocket:13:invest_step:4877"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:13:imbue_duration:4878",
+       true,
+       ""
+      ],
+      [
+       "pocket:13:invest_step:4877",
+       true,
+       "inventory spirit: before 7200, after 8800, threshold 8000"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 8,800 to 15,200 invested: bonus 52 to 59 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Superior Duration",
+     "imbue": null,
+     "caption": "+28% to every duration-scaled effect you have: Affliction debuff duration (13s), Barrage amp duration (15s), Flying Cloak weapon damage bonus duration (6s). Takes spirit from 15,200 to 16,800 invested: bonus 59 to 66 spirit power. Upgrade of Duration Extender (already owned): costs 1,600 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:15:dur_global:4885",
+      "pocket:15:invest_step:4882",
+      "pocket:15:upgrade_of:4883"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:15:dur_global:4885",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "pocket:15:invest_step:4882",
+       true,
+       "inventory spirit: before 15200, after 16800, threshold 16000"
+      ],
+      [
+       "pocket:15:upgrade_of:4883",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 30,400-45,600 (levels 30-35). Abilities gained (both point models agree): Flying Cloak T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "pocket:18:phase_range:4905",
+    "pocket:18:phase_abilities:4906"
+   ],
+   "items": [
+    {
+     "name": "Greater Expansion",
+     "imbue": null,
+     "caption": "+30% range and radius on everything that scales with them: Affliction radius (13m), Enchanter's Satchel radius (12m), Barrage radius (7.5m). Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:16:global_reach:4898",
+      "pocket:16:upgrade_of:4899"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:16:global_reach:4898",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "pocket:16:upgrade_of:4899",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Ethereal Shift",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 19,200 to 25,600 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Diviner's Kevlar",
+     "imbue": null,
+     "caption": "Casting Affliction gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (135s at your current ultimate tier), so it is a once-per-fight burst of defence. Takes vitality from 8,000 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:18:ult_trigger:4902",
+      "pocket:18:invest_step:4903"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Restorative Shot for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:18:ult_trigger:4902",
+       true,
+       ""
+      ],
+      [
+       "pocket:18:invest_step:4903",
+       true,
+       "inventory vitality: before 8000, after 14400, threshold 11200"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Majestic Leap? Buy what is killing you, cheapest first. Not dying? Skip. Sell Battle Vest.",
+   "desc": "Dying after Majestic Leap? Buy what is killing you, cheapest first. Not dying? Skip. Sell Battle Vest.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:19:defence_bullet:4909"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry is melting you.",
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:19:defence_bullet:4909",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:19:defence_gun:4910"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:19:defence_gun:4910",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Shielding",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Their spirit burst catches you mid combo.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Barrage (channelled) and Enchanter's Satchel (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:19:cc_exposure:4911"
+     ],
+     "lint": [],
+     "legacy_note": "Stuns keep cancelling Barrage and the ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:19:cc_exposure:4911",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:19:defence_parry:4912"
+     ],
+     "lint": [],
+     "legacy_note": "A big ability you can see coming, like Bebop's hook or Apollo's ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:19:defence_parry:4912",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 25,600 to 28,800 invested: bonus 75 to 100 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Greater Expansion for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun. Takes vitality from 14,400 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:19:defence_barrier:4916",
+      "pocket:19:invest_step:4915"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Dispel Magic for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:19:defence_barrier:4916",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "pocket:19:invest_step:4915",
+       true,
+       "inventory vitality: before 14400, after 17600, threshold 16000"
+      ]
+     ]
+    },
+    {
+     "name": "Arctic Blast",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 25,600 to 32,000 invested: bonus 75 to 100 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Battle Vest for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Reverb",
+     "imbue": "3",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 25,600 to 28,800 invested: bonus 75 to 100 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "On Enchanter's Satchel. Sell Superior Duration for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 179s of base cooldown across your kit, 135s of it the ultimate; the item has its own cooldown of 300s. Takes spirit from 25,600 to 28,800 invested: bonus 75 to 100 spirit power. Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:19:refresher:4923",
+      "pocket:19:invest_step:4924",
+      "pocket:19:sell_swap:4925"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Tankbuster for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:19:refresher:4923",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "pocket:19:invest_step:4924",
+       true,
+       "inventory spirit: before 25600, after 28800, threshold 28800"
+      ],
+      [
+       "pocket:19:sell_swap:4925",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "pocket:19:upgrade_delta:4926"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "pocket:19:upgrade_delta:4926",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "pocket:0:spike_progress:4835": {
+   "id": "pocket:0:spike_progress:4835",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 6,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Restorative Shot",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 6400,
+    "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    6400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "pocket:0:temporary_sold:4836": {
+   "id": "pocket:0:temporary_sold:4836",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Diviner's Kevlar later.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 34,
+   "point": {
+    "idx": 0,
+    "item": "Restorative Shot",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Restorative Shot",
+    "buyer": "Diviner's Kevlar"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:1:spike_progress:4837": {
+   "id": "pocket:1:spike_progress:4837",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 5,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Monster Rounds",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 5600,
+    "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    5600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "pocket:1:component_for:4838": {
+   "id": "pocket:1:component_for:4838",
+   "kind": "component_for",
+   "phrase": "From Cultist Sacrifice: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Monster Rounds",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Cultist Sacrifice"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Cultist Sacrifice"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:2:spike_progress:4839": {
+   "id": "pocket:2:spike_progress:4839",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Battle Vest",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "pocket:2:swap_candidate:4840": {
+   "id": "pocket:2:swap_candidate:4840",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Arctic Blast later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 2,
+    "item": "Battle Vest",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Battle Vest",
+    "buyer": "Arctic Blast"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:3:spike_progress:4841": {
+   "id": "pocket:3:spike_progress:4841",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Burst",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "pocket:3:threshold_now:4842": {
+   "id": "pocket:3:threshold_now:4842",
+   "kind": "threshold_now",
+   "phrase": "Enchanter's Satchel (172), Flying Cloak (151) clear its 80-damage trigger; Barrage stays under it.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_barrage",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_plasma_flux",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_pulse"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Burst",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "80.0",
+    "172",
+    "151"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 2.15,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "pocket:3:component_for:4843": {
+   "id": "pocket:3:component_for:4843",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Burst",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 8000,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:4:spike_progress:4844": {
+   "id": "pocket:4:spike_progress:4844",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Rapid Rounds",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "pocket:4:component_for:4845": {
+   "id": "pocket:4:component_for:4845",
+   "kind": "component_for",
+   "phrase": "From Swift Striker: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Rapid Rounds",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 3200,
+    "event": "Swift Striker"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Swift Striker"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:5:spike_complete:4846": {
+   "id": "pocket:5:spike_complete:4846",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (2,400 to 4,800 invested): bonus 15 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 5,
+    "item": "Cultist Sacrifice",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "pocket:5:upgrade_of:4847": {
+   "id": "pocket:5:upgrade_of:4847",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Monster Rounds (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 5,
+    "item": "Cultist Sacrifice",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Monster Rounds"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:6:spike_progress:4848": {
+   "id": "pocket:6:spike_progress:4848",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 5,600 of the 6.4k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Swift Striker",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 6400
+  },
+  "pocket:6:upgrade_of:4849": {
+   "id": "pocket:6:upgrade_of:4849",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Rapid Rounds (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 6,
+    "item": "Swift Striker",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Rapid Rounds"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:7:spike_progress:4850": {
+   "id": "pocket:7:spike_progress:4850",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Compress Cooldown",
+    "souls": 9600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "pocket:7:imbue_cooldown:4851": {
+   "id": "pocket:7:imbue_cooldown:4851",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Flying Cloak: takes 18% off its 26s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_plasma_flux"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 7,
+    "item": "Compress Cooldown",
+    "souls": 9600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 2
+   },
+   "numbers": [
+    "18.0",
+    "26.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "pocket:7:component_for:4852": {
+   "id": "pocket:7:component_for:4852",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Compress Cooldown",
+    "souls": 9600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 8000,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:7:phase_range:4853": {
+   "id": "pocket:7:phase_range:4853",
+   "kind": "phase_range",
+   "phrase": "Souls 0-9,600 (levels 1-16).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Compress Cooldown",
+    "souls": 9600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "9,600",
+    "1",
+    "16"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:7:phase_spikes:4862": {
+   "id": "pocket:7:phase_spikes:4862",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Cultist Sacrifice.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Compress Cooldown",
+    "souls": 9600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:8:spike_complete:4863": {
+   "id": "pocket:8:spike_complete:4863",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 8,
+    "item": "Tankbuster",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "pocket:8:threshold_marginal:4864": {
+   "id": "pocket:8:threshold_marginal:4864",
+   "kind": "threshold_marginal",
+   "phrase": "Flying Cloak (205) is within 50% of the 165-damage trigger; resist handling unverified.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_barrage",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_plasma_flux",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_pulse"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 8,
+    "item": "Tankbuster",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "pocket:8:upgrade_of:4865": {
+   "id": "pocket:8:upgrade_of:4865",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 8,
+    "item": "Tankbuster",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:8:swap_candidate:4866": {
+   "id": "pocket:8:swap_candidate:4866",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Refresher later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 8,
+    "item": "Tankbuster",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Tankbuster",
+    "buyer": "Refresher"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:9:spike_complete:4867": {
+   "id": "pocket:9:spike_complete:4867",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 9,
+    "item": "Majestic Leap",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "pocket:10:spike_progress:4868": {
+   "id": "pocket:10:spike_progress:4868",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 6.4k spirit tier, which Superior Cooldown completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 10,
+    "item": "Mystic Expansion",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Superior Cooldown completes the 6.4k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k",
+    1600,
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 6400
+  },
+  "pocket:10:imbue_reach:4869": {
+   "id": "pocket:10:imbue_reach:4869",
+   "kind": "imbue_reach",
+   "phrase": "Imbued on Barrage: widens its range.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_reach",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_barrage"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 10,
+    "item": "Mystic Expansion",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 1,
+    "stats": [
+     "ETechRange",
+     "ETechRadius"
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "pocket:10:component_for:4870": {
+   "id": "pocket:10:component_for:4870",
+   "kind": "component_for",
+   "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 10,
+    "item": "Mystic Expansion",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 16800,
+    "event": "Greater Expansion"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Greater Expansion"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:11:invest_step:4871": {
+   "id": "pocket:11:invest_step:4871",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 5,600 to 7,200 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Superior Cooldown",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "7200",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "pocket:11:upgrade_of:4872": {
+   "id": "pocket:11:upgrade_of:4872",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Superior Cooldown",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:11:cdr_rotation:4873": {
+   "id": "pocket:11:cdr_rotation:4873",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 189s; 20% off is 37.8s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_barrage",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_plasma_flux",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_pulse",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_affliction"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 11,
+    "item": "Superior Cooldown",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "189",
+    "20.0",
+    "37.8"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "pocket:12:invest_step:4874": {
+   "id": "pocket:12:invest_step:4874",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Dispel Magic",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "8000",
+    "38.0",
+    "46.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "pocket:12:swap_candidate:4875": {
+   "id": "pocket:12:swap_candidate:4875",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Divine Barrier later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 12,
+    "item": "Dispel Magic",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Dispel Magic",
+    "buyer": "Divine Barrier"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:12:defence_purge:4876": {
+   "id": "pocket:12:defence_purge:4876",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 12,
+    "item": "Dispel Magic",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:13:invest_step:4877": {
+   "id": "pocket:13:invest_step:4877",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 7,200 to 8,800 invested: bonus 45 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Duration Extender",
+    "souls": 22400,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "8800",
+    "45.0",
+    "52.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "pocket:13:imbue_duration:4878": {
+   "id": "pocket:13:imbue_duration:4878",
+   "kind": "imbue_duration",
+   "phrase": "Imbued on Affliction: its duration-scaled parts (debuff duration 13s) get +22%.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_arcane_extension",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_affliction"
+   ],
+   "score": 58,
+   "point": {
+    "idx": 13,
+    "item": "Duration Extender",
+    "souls": 22400,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 4,
+    "stats": [
+     "ETechDuration"
+    ]
+   },
+   "numbers": [
+    "22.0",
+    "13"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "pocket:13:component_for:4879": {
+   "id": "pocket:13:component_for:4879",
+   "kind": "component_for",
+   "phrase": "From Superior Duration: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Duration Extender",
+    "souls": 22400,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 8000,
+    "event": "Superior Duration"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Duration"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:14:burn_trigger_modelled:4880": {
+   "id": "pocket:14:burn_trigger_modelled:4880",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Barrage (89.8) + Flying Cloak (247) + Enchanter's Satchel (254) = 590 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 14,
+    "item": "Spirit Burn",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "590",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "pocket:14:invest_step:4881": {
+   "id": "pocket:14:invest_step:4881",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 8,800 to 15,200 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Spirit Burn",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8800",
+    "15200",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "pocket:15:invest_step:4882": {
+   "id": "pocket:15:invest_step:4882",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 15,200 to 16,800 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Superior Duration",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "15200",
+    "16800",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "pocket:15:upgrade_of:4883": {
+   "id": "pocket:15:upgrade_of:4883",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Duration Extender (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Superior Duration",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Duration Extender"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:15:swap_candidate:4884": {
+   "id": "pocket:15:swap_candidate:4884",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Mystic Reverb later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 15,
+    "item": "Superior Duration",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Superior Duration",
+    "buyer": "Mystic Reverb"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:15:dur_global:4885": {
+   "id": "pocket:15:dur_global:4885",
+   "kind": "dur_global",
+   "phrase": "+28% to every duration-scaled effect you have: Affliction debuff duration (13s), Barrage amp duration (15s), Flying Cloak weapon damage bonus duration (6s).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_imbued_duration_extender",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_barrage",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_plasma_flux",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_pulse",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_affliction"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 15,
+    "item": "Superior Duration",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "dur_global"
+   },
+   "numbers": [
+    "28.0",
+    "13",
+    "15",
+    "6"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "pocket:15:phase_range:4886": {
+   "id": "pocket:15:phase_range:4886",
+   "kind": "phase_range",
+   "phrase": "Souls 9,600-30,400 (levels 16-30).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Superior Duration",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Duration",
+    "keys": []
+   },
+   "numbers": [
+    "9,600",
+    "30,400",
+    "16",
+    "30"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:15:phase_abilities:4887": {
+   "id": "pocket:15:phase_abilities:4887",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Barrage T3, Affliction T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Superior Duration",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Duration",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:15:phase_power:4888": {
+   "id": "pocket:15:phase_power:4888",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Enchanter's Satchel, damage) grows from 190 to 263.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_pulse",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Superior Duration",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Duration",
+    "keys": []
+   },
+   "numbers": [
+    "190",
+    "263"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:15:phase_spikes:4897": {
+   "id": "pocket:15:phase_spikes:4897",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Tankbuster, vitality 4.8k at Majestic Leap.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Superior Duration",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Duration",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:16:global_reach:4898": {
+   "id": "pocket:16:global_reach:4898",
+   "kind": "global_reach",
+   "phrase": "+30% range and radius on everything that scales with them: Affliction radius (13m), Enchanter's Satchel radius (12m), Barrage radius (7.5m).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_range",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_barrage",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_plasma_flux",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_pulse",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_affliction"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 16,
+    "item": "Greater Expansion",
+    "souls": 32800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "global_reach"
+   },
+   "numbers": [
+    "30",
+    "13",
+    "12",
+    "7.5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "pocket:16:upgrade_of:4899": {
+   "id": "pocket:16:upgrade_of:4899",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Greater Expansion",
+    "souls": 32800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Expansion"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:16:swap_candidate:4900": {
+   "id": "pocket:16:swap_candidate:4900",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Escalating Exposure later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 16,
+    "item": "Greater Expansion",
+    "souls": 32800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Greater Expansion",
+    "buyer": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "pocket:17:invest_step:4901": {
+   "id": "pocket:17:invest_step:4901",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 19,200 to 25,600 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Ethereal Shift",
+    "souls": 39200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "19200",
+    "25600",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "pocket:18:ult_trigger:4902": {
+   "id": "pocket:18:ult_trigger:4902",
+   "kind": "ult_trigger",
+   "phrase": "Casting Affliction gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (135s at your current ultimate tier), so it is a once-per-fight burst of defence.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_diviners_kevlar",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_affliction"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 18,
+    "item": "Diviner's Kevlar",
+    "souls": 45600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "ult_tier",
+    "min_tier": 3
+   },
+   "numbers": [
+    "1,000",
+    "40",
+    "20",
+    "135"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "pocket:18:invest_step:4903": {
+   "id": "pocket:18:invest_step:4903",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 8,000 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Diviner's Kevlar",
+    "souls": 45600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "14400",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "pocket:18:sell_swap:4904": {
+   "id": "pocket:18:sell_swap:4904",
+   "kind": "sell_swap",
+   "phrase": "Replaces Restorative Shot: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Diviner's Kevlar",
+    "souls": 45600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Restorative Shot",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Restorative Shot"
+  },
+  "pocket:18:phase_range:4905": {
+   "id": "pocket:18:phase_range:4905",
+   "kind": "phase_range",
+   "phrase": "Souls 30,400-45,600 (levels 30-35).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Diviner's Kevlar",
+    "souls": 45600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Diviner's Kevlar",
+    "keys": []
+   },
+   "numbers": [
+    "30,400",
+    "45,600",
+    "30",
+    "35"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:18:phase_abilities:4906": {
+   "id": "pocket:18:phase_abilities:4906",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Flying Cloak T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Diviner's Kevlar",
+    "souls": 45600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Diviner's Kevlar",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:19:defence_bullet:4909": {
+   "id": "pocket:19:defence_bullet:4909",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Metal Skin",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry is melting you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:19:defence_gun:4910": {
+   "id": "pocket:19:defence_gun:4910",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Plated Armor",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:19:cc_exposure:4911": {
+   "id": "pocket:19:cc_exposure:4911",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Barrage (channelled) and Enchanter's Satchel (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 19,
+    "item": "Unstoppable",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Stuns keep cancelling Barrage and the ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     1,
+     3
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "pocket:19:defence_parry:4912": {
+   "id": "pocket:19:defence_parry:4912",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Counterspell",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ability you can see coming, like Bebop's hook or Apollo's ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:19:invest_step:4913": {
+   "id": "pocket:19:invest_step:4913",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 25,600 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Escalating Exposure",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Greater Expansion for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "25600",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "pocket:19:sell_swap:4914": {
+   "id": "pocket:19:sell_swap:4914",
+   "kind": "sell_swap",
+   "phrase": "Replaces Greater Expansion: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Escalating Exposure",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Greater Expansion for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Greater Expansion",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Greater Expansion"
+  },
+  "pocket:19:invest_step:4915": {
+   "id": "pocket:19:invest_step:4915",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 14,400 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Dispel Magic for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "17600",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "pocket:19:defence_barrier:4916": {
+   "id": "pocket:19:defence_barrier:4916",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Dispel Magic for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:19:sell_swap:4917": {
+   "id": "pocket:19:sell_swap:4917",
+   "kind": "sell_swap",
+   "phrase": "Replaces Dispel Magic: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Dispel Magic for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Dispel Magic",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Dispel Magic"
+  },
+  "pocket:19:invest_step:4918": {
+   "id": "pocket:19:invest_step:4918",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 25,600 to 32,000 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Arctic Blast",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Battle Vest for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "25600",
+    "32000",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "pocket:19:sell_swap:4919": {
+   "id": "pocket:19:sell_swap:4919",
+   "kind": "sell_swap",
+   "phrase": "Replaces Battle Vest: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Arctic Blast",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Battle Vest for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Battle Vest",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Battle Vest"
+  },
+  "pocket:19:invest_step:4920": {
+   "id": "pocket:19:invest_step:4920",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 25,600 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Mystic Reverb",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": 3,
+    "note": "On Enchanter's Satchel. Sell Superior Duration for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "25600",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "pocket:19:threshold_now:4921": {
+   "id": "pocket:19:threshold_now:4921",
+   "kind": "threshold_now",
+   "phrase": "Enchanter's Satchel (350) clears its 100-damage trigger.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_pulse"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 19,
+    "item": "Mystic Reverb",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": 3,
+    "note": "On Enchanter's Satchel. Sell Superior Duration for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 100.0,
+    "slots": [
+     3
+    ]
+   },
+   "numbers": [
+    "100.0",
+    "350"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 3.5,
+   "caveat": "item has no localisation text; trigger semantics are modelled",
+   "contradiction": false
+  },
+  "pocket:19:sell_swap:4922": {
+   "id": "pocket:19:sell_swap:4922",
+   "kind": "sell_swap",
+   "phrase": "Replaces Superior Duration: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Mystic Reverb",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": 3,
+    "note": "On Enchanter's Satchel. Sell Superior Duration for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Superior Duration",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Superior Duration"
+  },
+  "pocket:19:refresher:4923": {
+   "id": "pocket:19:refresher:4923",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 179s of base cooldown across your kit, 135s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_barrage",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_plasma_flux",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_pulse",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:synth_affliction"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 19,
+    "item": "Refresher",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "179",
+    "135",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "pocket:19:invest_step:4924": {
+   "id": "pocket:19:invest_step:4924",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 25,600 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_synth m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Refresher",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "25600",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "pocket:19:sell_swap:4925": {
+   "id": "pocket:19:sell_swap:4925",
+   "kind": "sell_swap",
+   "phrase": "Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Refresher",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Tankbuster",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Tankbuster"
+  },
+  "pocket:19:upgrade_delta:4926": {
+   "id": "pocket:19:upgrade_delta:4926",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Transcendent Cooldown",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "pocket:19:upgrade_of:4927": {
+   "id": "pocket:19:upgrade_of:4927",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Transcendent Cooldown",
+    "souls": 45600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "pocket",
+   "item": "Extra Regen",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 45600.0,
+   "unpublished": []
+  },
+  {
+   "build": "pocket",
+   "item": "Extra Regen",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Getting poked out. Sell it when slots fill."
+  },
+  {
+   "build": "pocket",
+   "item": "Grit",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 45600.0,
+   "unpublished": []
+  },
+  {
+   "build": "pocket",
+   "item": "Grit",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their burst wins your trades. Sell it when slots fill."
+  },
+  {
+   "build": "pocket",
+   "item": "Restorative Shot",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 6400 souls (~6.4 min), 5 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "pocket:0:spike_progress:4835",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 6,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 6400,
+      "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "pocket",
+   "item": "Monster Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 5600 souls (~5.6 min), 4 purchases",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "pocket:1:spike_progress:4837",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 5,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 5600,
+      "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "pocket:1:component_for:4838",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Cultist Sacrifice: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Cultist Sacrifice"
+     }
+    }
+   ]
+  },
+  {
+   "build": "pocket",
+   "item": "Battle Vest",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Majestic Leap, 12000 souls (~12.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 3200,
+   "unpublished": []
+  },
+  {
+   "build": "pocket",
+   "item": "Rapid Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Cultist Sacrifice completes 4.8k weapon in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 4800,
+   "unpublished": [
+    {
+     "id": "pocket:4:spike_progress:4844",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "pocket:4:component_for:4845",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Swift Striker: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 3200,
+      "event": "Swift Striker"
+     }
+    }
+   ]
+  },
+  {
+   "build": "pocket",
+   "item": "Cultist Sacrifice",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Use it on the biggest camp monster you can find."
+  },
+  {
+   "build": "pocket",
+   "item": "Swift Striker",
+   "section": "early",
+   "cls": "c",
+   "why": "weapon investment only and the build never reaches the 6.4k weapon tier through the core: timing review",
+   "souls": 8000,
+   "unpublished": []
+  },
+  {
+   "build": "pocket",
+   "item": "Mystic Expansion",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Superior Cooldown completes 6.4k spirit in 1600 souls (~1.6 min), 1 purchases",
+   "souls": 16000,
+   "unpublished": [
+    {
+     "id": "pocket:10:spike_progress:4868",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 6.4k spirit tier, which Superior Cooldown completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Superior Cooldown completes the 6.4k spirit tier"
+     }
+    },
+    {
+     "id": "pocket:10:component_for:4870",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 16800,
+      "event": "Greater Expansion"
+     }
+    }
+   ]
+  },
+  {
+   "build": "pocket",
+   "item": "Dispel Magic",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "It doesn't remove ult effects."
+  },
+  {
+   "build": "pocket",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry is melting you."
+  },
+  {
+   "build": "pocket",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "pocket",
+   "item": "Spirit Shielding",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 45600.0,
+   "unpublished": []
+  },
+  {
+   "build": "pocket",
+   "item": "Spirit Shielding",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their spirit burst catches you mid combo."
+  },
+  {
+   "build": "pocket",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep cancelling Barrage and the ult."
+  },
+  {
+   "build": "pocket",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ability you can see coming, like Bebop's hook or Apollo's ult."
+  },
+  {
+   "build": "pocket",
+   "item": "Mystic Reverb",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Enchanter's Satchel. Sell Superior Duration for this."
+  }
+ ],
+ "stats": {
+  "d": 3,
+  "b": 4,
+  "c": 2,
+  "a": 17,
+  "g": 6
+ }
+}

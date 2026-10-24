@@ -1,0 +1,72 @@
+SCOPE: build-context
+KIND: situational
+BUILD: haze
+ITEM: Tankbuster
+ARGS: --situational haze Tankbuster
+GENERATED: 2026-10-24T16:27:44Z
+BODY-SHA: 0e24a6bc5f278e1dacf0ce633b90087c9154a9505133de260c940c9a07ea3cea
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+MARGIN (pre-registered): swap must beat the default by >= 5% trade ratio at both enemy-healing readings (0%, 30% of their pool)
+ENEMY MODEL: reference enemy (--strategy) with its health pool scaled by the roster spread of heroes.vdata base health (CALCULATED) and x1.5/x2.0 for health-stacked tanks (ASSUMED); resists and healing ASSUMED; target choice = the enemy you fight
+VERDICT: SITUATIONAL - swap when the target's health pool is >= the trigger below; earliest worthwhile checkpoint 10000
+GRADE: CALCULATED item numbers + ASSUMED enemy composition/healing/hit rate
+
+## TRIGGERS (derived): checkpoint | replaces | health-pool multiplier from which swap wins by margin | gain range %
+   10000 | Fortitude | x2 of median hero health (1560 base hp) | -5.3 .. +19.5
+   15000 | Fortitude | x3.83 of median hero health (2987 base hp) | -7.4 .. +19.9
+   20000 | Fortitude | x2 of median hero health (1560 base hp) | -5.6 .. +29.4
+   25000 | Fortitude | x0.65 of median hero health (507 base hp) | +15.1 .. +62.2
+
+## TABLE: checkpoint | replaces | health mult | enemy healing | gain %
+   10000 | Fortitude | x0.65 | 0.0 |   -5.3
+   10000 | Fortitude | x0.65 | 0.3 |   -5.3
+   10000 | Fortitude | x0.94 | 0.0 |   -3.1
+   10000 | Fortitude | x0.94 | 0.3 |   -3.1
+   10000 | Fortitude | x1.0  | 0.0 |   -2.6
+   10000 | Fortitude | x1.0  | 0.3 |   -2.6
+   10000 | Fortitude | x1.5  | 0.0 |   +1.3
+   10000 | Fortitude | x1.5  | 0.3 |   +1.3
+   10000 | Fortitude | x2.0  | 0.0 |   +5.2
+   10000 | Fortitude | x2.0  | 0.3 |   +5.2
+   10000 | Fortitude | x3.83 | 0.0 |  +19.5
+   10000 | Fortitude | x3.83 | 0.3 |  +19.5
+   15000 | Fortitude | x0.65 | 0.0 |   -7.4
+   15000 | Fortitude | x0.65 | 0.3 |   -7.4
+   15000 | Fortitude | x0.94 | 0.0 |   -4.9
+   15000 | Fortitude | x0.94 | 0.3 |   -4.9
+   15000 | Fortitude | x1.0  | 0.0 |   -4.4
+   15000 | Fortitude | x1.0  | 0.3 |   -4.4
+   15000 | Fortitude | x1.5  | 0.0 |   -0.1
+   15000 | Fortitude | x1.5  | 0.3 |   -0.1
+   15000 | Fortitude | x2.0  | 0.0 |   +4.2
+   15000 | Fortitude | x2.0  | 0.3 |   +4.2
+   15000 | Fortitude | x3.83 | 0.0 |  +19.9
+   15000 | Fortitude | x3.83 | 0.3 |  +19.9
+   20000 | Fortitude | x0.65 | 0.0 |   -5.6
+   20000 | Fortitude | x0.65 | 0.3 |   -5.6
+   20000 | Fortitude | x0.94 | 0.0 |   -2.4
+   20000 | Fortitude | x0.94 | 0.3 |   -2.4
+   20000 | Fortitude | x1.0  | 0.0 |   -1.7
+   20000 | Fortitude | x1.0  | 0.3 |   -1.7
+   20000 | Fortitude | x1.5  | 0.0 |   +3.8
+   20000 | Fortitude | x1.5  | 0.3 |   +3.8
+   20000 | Fortitude | x2.0  | 0.0 |   +9.3
+   20000 | Fortitude | x2.0  | 0.3 |   +9.3
+   20000 | Fortitude | x3.83 | 0.0 |  +29.4
+   20000 | Fortitude | x3.83 | 0.3 |  +29.4
+   25000 | Fortitude | x0.65 | 0.0 |  +15.1
+   25000 | Fortitude | x0.65 | 0.3 |  +15.1
+   25000 | Fortitude | x0.94 | 0.0 |  +19.4
+   25000 | Fortitude | x0.94 | 0.3 |  +19.4
+   25000 | Fortitude | x1.0  | 0.0 |  +20.3
+   25000 | Fortitude | x1.0  | 0.3 |  +20.3
+   25000 | Fortitude | x1.5  | 0.0 |  +27.7
+   25000 | Fortitude | x1.5  | 0.3 |  +27.7
+   25000 | Fortitude | x2.0  | 0.0 |  +35.1
+   25000 | Fortitude | x2.0  | 0.3 |  +35.1
+   25000 | Fortitude | x3.83 | 0.0 |  +62.2
+   25000 | Fortitude | x3.83 | 0.3 |  +62.2
+
+## COST / WHAT BREAKS: selling the replaced item refunds an unknown share (not in data, ASSUMED 50%); check --investment for spike loss; the replaced item's other roles (sustain/mobility) are lost (see the interaction matrix of the replaced item)
+
+## HOW IT WOULD BE RECORDED (read-only design, data.js untouched): an optional box ['Situational', '<trigger in plain words>', '', [['Tankbuster', 'Swap for Fortitude when <trigger>.']]]

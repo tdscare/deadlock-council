@@ -1,0 +1,116 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: graves_tank
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:14:12Z
+BODY-SHA: 2465d3adc4cd542b53dd9a0f6a50760ace22fe5a5975e9b1177fff022286bfd2
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Stamina: retained-or-upgraded (-> Stamina Mastery)
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Torment Pulse: retained
+  Enchanter's Emblem: retained
+  Stamina Mastery: retained
+  Extra Regen: temporary (bought to be sold)
+  Spirit Shredder: retained
+  Toxic Bullets: retained
+  Spirit Lifesteal: retained-or-upgraded (-> Leech)
+  Spirit Resilience: retained
+  Escalating Resilience: retained
+  Escalating Exposure: retained
+  Superior Cooldown: retained
+  Siphon Bullets: retained
+  Scourge: retained
+  Leech: retained
+  Grit: conditional branch (lane alternative)
+  Plated Armor: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Reactive Barrier: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Spirit Rend: situational-luxury
+  Witchmail: situational-luxury
+  Indomitable: situational-luxury
+  Boundless Spirit: situational-luxury
+  Divine Barrier: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Grit
+  Early · L-R                -> main path (sequential): Extra Stamina, Mystic Vulnerability, Torment Pulse, Enchanter's Emblem, Stamina Mastery, Extra Regen
+  Mid · L-R                  -> main path (sequential): Spirit Shredder, Toxic Bullets, Spirit Lifesteal, Spirit Resilience, Escalating Resilience, Escalating Exposure, Superior Cooldown
+  Late · L-R                 -> main path (sequential): Siphon Bullets, Scourge, Leech
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Plated Armor, Counterspell, Dispel Magic, Reactive Barrier, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Spirit Rend, Witchmail, Indomitable, Boundless Spirit, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+
+## Extra Regen: sold when buying Spirit Resilience (Mid · L-R, main)
+  role of Extra Regen: temporary (bought to be sold); role of Spirit Resilience: retained
+  Extra Regen: price 800, resale 400, net cost of owning it 400 souls (0.4 min of reference income); first bought at 10400 souls (~10.5 min), replaced at ~18.5 min -> owned ~8.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/10400/4800 -> after 4800/9600/4800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 66 min | window TR | key purchase times (min)
+  as built                                    |          62725 |      0.74 | Extra Regen 10, Spirit Resilience 18
+  keep Extra Regen                            |          62906 |      0.75 | Extra Regen 10, Spirit Resilience 19
+  skip Extra Regen                            |          63209 |      0.76 | Spirit Resilience 18
+  sell Enchanter's Emblem instead             |          60434 |      0.66 | Extra Regen 10, Spirit Resilience 18
+  keep Extra Regen vs as built: d souls +176, d window TR +1.0% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  skip Extra Regen vs as built: d souls +120, d window TR +1.9% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Enchanter's Emblem instead vs as built: d souls -1436, d window TR -11.3% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  FINDINGS: a computed alternative sequence is better: skip Extra Regen
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Extra Regen; evidence tier: MODEL-ONLY; flipping assumptions: keep Extra Regen: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+
+## Enchanter's Emblem: sold when buying Witchmail (I'm rich as fuck, luxury)
+  role of Enchanter's Emblem: retained; role of Witchmail: situational-luxury
+  Enchanter's Emblem: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 7200 souls (~7.8 min), replaced at ~54.0 min -> owned ~46.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 8000/27200/19200 -> after 8000/25600/19200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 74 min | window TR | key purchase times (min)
+  as built                                    |          67665 |      0.71 | Enchanter's Emblem 8, Witchmail 54
+  keep Enchanter's Emblem (slot cap ignored)  |          68388 |      0.74 | Enchanter's Emblem 8, Witchmail 55
+  skip Enchanter's Emblem                     |          64896 |      0.64 | Witchmail 56
+  sell Torment Pulse instead                  |          68371 |      0.74 | Enchanter's Emblem 8, Witchmail 53
+  keep Enchanter's Emblem (slot cap ignored) vs as built: d souls +722, d window TR +3.2% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  skip Enchanter's Emblem vs as built: d souls -677, d window TR -8.0% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Torment Pulse instead vs as built: d souls +706, d window TR +3.2% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Enchanter's Emblem (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Torment Pulse instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+
+## Spirit Resilience: sold when buying Indomitable (I'm rich as fuck, luxury)
+  role of Spirit Resilience: retained; role of Indomitable: situational-luxury
+  Spirit Resilience: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 19600.0 souls (~18.5 min), replaced at ~53.0 min -> owned ~34.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 8000/27200/19200 -> after 8000/24000/19200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 74 min | window TR | key purchase times (min)
+  as built                                    |          68132 |      0.66 | Spirit Resilience 18, Indomitable 53
+  keep Spirit Resilience (slot cap ignored)   |          68678 |      0.68 | Spirit Resilience 18, Indomitable 55
+  skip Spirit Resilience                      |          68151 |      0.66 | Indomitable 52
+  sell Enchanter's Emblem instead             |          67847 |      0.65 | Spirit Resilience 18, Indomitable 54
+  keep Spirit Resilience (slot cap ignored) vs as built: d souls +546, d window TR +2.9% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  skip Spirit Resilience vs as built: d souls +84, d window TR -1.5% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -))
+  sell Enchanter's Emblem instead vs as built: d souls -285, d window TR -1.3% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Spirit Resilience (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | skip Spirit Resilience: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -)) | sell Enchanter's Emblem instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Stamina Mastery: sold when buying Boundless Spirit (I'm rich as fuck, luxury)
+  role of Stamina Mastery: retained; role of Boundless Spirit: situational-luxury
+  Stamina Mastery: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 9600 souls (~9.8 min), replaced at ~53.0 min -> owned ~43.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 8000/20800/25600 -> after 8000/17600/25600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 74 min | window TR | key purchase times (min)
+  as built                                    |          70914 |      0.79 | Stamina Mastery 10, Boundless Spirit 53
+  keep Stamina Mastery (slot cap ignored)     |          70394 |      0.78 | Stamina Mastery 10, Boundless Spirit 55
+  skip Stamina Mastery                        |          74139 |      0.89 | Boundless Spirit 50
+  sell Enchanter's Emblem instead             |          69392 |      0.75 | Stamina Mastery 10, Boundless Spirit 54
+  keep Stamina Mastery (slot cap ignored) vs as built: d souls -44, d window TR -1.1% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Stamina Mastery vs as built: d souls +582, d window TR +6.4% | souls: MODEL-ONLY (sign robust in 88% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 97% of cells; no measured inputs)
+  sell Enchanter's Emblem instead vs as built: d souls -1050, d window TR -5.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Stamina Mastery'] differ from 'as built' only through items with no modelled stat (Stamina Mastery contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: no modelled stat for Stamina Mastery (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Stamina Mastery (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Enchanter's Emblem instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

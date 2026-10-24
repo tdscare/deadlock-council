@@ -1,0 +1,85 @@
+{
+ "id": "duo_ivy_bebop_mv",
+ "title": "Ivy + Bebop: Mystic Vulnerability on the drop",
+ "hero": "Bebop",
+ "playstyle": "Bomb Bebop",
+ "builds": [
+  "bebop_bomb",
+  "ivy_duo_bebop"
+ ],
+ "question": "Does Ivy's Mystic Vulnerability raise beam damage?",
+ "hypothesis": "H-IS2.1/2.2",
+ "arms": [
+  {
+   "name": "healbane",
+   "items": [
+    "Healbane"
+   ],
+   "bots": 3
+  },
+  {
+   "name": "mystic_vuln",
+   "items": [
+    "Mystic Vulnerability"
+   ]
+  }
+ ],
+ "setup": {
+  "level_or_boons": "~25k",
+  "souls": 25000,
+  "position": "partner within 5m",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "ivy_duo_bebop",
+    "count": 1,
+    "role": "setup/shred"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "bot HP",
+   "debuffs"
+  ]
+ },
+ "procedure": [
+  "Beam cast 1s before drop",
+  "Ivy Thorns on landing",
+  "Sum beam damage 11s"
+ ],
+ "metrics": [
+  {
+   "name": "beam_total",
+   "unit": "hp",
+   "how": "damage numbers / health delta",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "beam_total",
+  "min_effect_pct": 6,
+  "min_trials": 5,
+  "rule": "SUPPORTS if arm B beats arm A by the effect with non-overlapping ranges"
+ },
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists"
+ ],
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

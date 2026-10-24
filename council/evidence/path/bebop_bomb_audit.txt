@@ -1,0 +1,40 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: bebop_bomb
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:12Z
+BODY-SHA: 9d00ff39c68bee17e7d20971649a19e421bef79f7c1b6927408d6e426bd2e2fd
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Early · L-R              -> main path (sequential): Mystic Burst, Spirit Strike, Sprint Boots, Extra Spirit, Improved Spirit, Compress Cooldown, Enduring Speed
+  Mid · L-R                -> main path (sequential): Spirit Snatch, Veil Walker, Trophy Collector, Tankbuster, Mystic Expansion, Superior Cooldown, Echo Shard
+  Late · L-R               -> main path (sequential): Witchmail, Boundless Spirit, Greater Expansion, Mystic Reverb, Spirit Burn
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Counterspell, Metal Skin, Dispel Magic, Plated Armor, Bullet Resilience, Spirit Resilience, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Escalating Exposure, Magic Carpet, Divine Barrier, Cheat Death
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown, Juggernaut
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Escalating Exposure, sell Veil Walker
+    function of Veil Walker: move_speed; replacement Escalating Exposure: spirit_resist; roles lost: move_speed  [VERIFIED GAME MECHANIC]
+    Veil Walker is a component of later items: no
+    held for 45600 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 0/12800/38400 -> 0/9600/44800; thresholds lost: none
+    trade ratio after the sale 0.41; selling Trophy Collector instead: 0.44 (+7.7%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Magic Carpet, sell Trophy Collector
+    function of Trophy Collector: stats only; replacement Magic Carpet: duration; roles lost: none  [VERIFIED GAME MECHANIC]
+    Trophy Collector is a component of later items: no
+    held for 44000 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 0/12800/38400 -> 0/11200/44800; thresholds lost: none
+    trade ratio after the sale 0.46; selling Spirit Snatch instead: 0.45 (-2.2%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Cheat Death, sell Tankbuster
+    function of Tankbuster: stats only; replacement Cheat Death: bullet_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Tankbuster is a component of later items: no
+    held for 41600 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 0/12800/38400 -> 0/19200/35200; thresholds lost: none
+    trade ratio after the sale 0.51; selling Trophy Collector instead: 0.52 (+1.1%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

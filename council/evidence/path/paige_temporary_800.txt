@@ -1,0 +1,120 @@
+SCOPE: build-context
+KIND: path
+MODE: temporary
+BUILD: paige
+CHECKPOINT: 800 (after High-Velocity Rounds; owned ['High-Velocity Rounds'])
+ARGS: --path paige temporary --at 800 --queue
+GENERATED: 2026-10-24T15:08:10Z
+BODY-SHA: bb16e787f88421ba684422e659aac7ed28543776986c83741f5868f42aad1d78
+INPUT-SHA: b9029455fb528215cf9193c3a5585eaaf2facd5ca0ac6c255f8205ae6840df8e
+CANDIDATES: every unowned tier-1 catalog item with a modelled stat (14), each held for 3 windows; reference = no purchase (souls stay in the build path)
+METHOD: complete paths through the --strategy soul-income walk; value = ledger difference of souls earned (one owner per mechanism) + trade-ratio difference; resale refund applied at the sale (REFUND, UNVERIFIED HYPOTHESIS)
+VERDICT CLASSES: SUPPORTED needs measured inputs (none exist for this build: no shoot-back, no lane economy measurements) -> every row below is at best MODEL-ONLY
+
+## RESULTS (median over grid cells; sign robustness; central-cell ledger)
+candidate | hold | d souls @10 | d souls @20 | d trade ratio % | verdict (souls @20) | verdict (trade ratio)
+Extra Regen | kept (never sold) | +549 | +659 | +7.9 | MODEL-ONLY (sign robust in 95% of cells; no measured inputs) | MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+Extra Regen | sold +8k souls later | +532 | +619 | +6.7 | MODEL-ONLY (sign robust in 93% of cells; no measured inputs) | MODEL-ONLY (sign robust in 96% of cells; no measured inputs)
+Extra Regen | sold +4k souls later | +420 | +452 | +4.7 | MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | MODEL-ONLY (sign robust in 91% of cells; no measured inputs)
+Rebuttal | kept (never sold) | +228 | +348 | +7.6 | MODEL-ONLY (sign robust in 93% of cells; no measured inputs) | MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+Rebuttal | sold +8k souls later | +202 | +260 | +5.1 | MODEL-ONLY (sign robust in 90% of cells; no measured inputs) | MODEL-ONLY (sign robust in 94% of cells; no measured inputs)
+Melee Lifesteal | kept (never sold) | +181 | +227 | +4.8 | MODEL-ONLY (sign robust in 93% of cells; no measured inputs) | MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+Extended Magazine | kept (never sold) | +79 | +203 | +5.6 | MODEL-ONLY (sign robust in 94% of cells; no measured inputs) | MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+Rebuttal | sold +4k souls later | +182 | +202 | +3.1 | MODEL-ONLY (sign robust in 82% of cells; no measured inputs) | MODEL-ONLY (sign robust in 83% of cells; no measured inputs)
+Melee Lifesteal | sold +8k souls later | +169 | +187 | +3.3 | MODEL-ONLY (sign robust in 90% of cells; no measured inputs) | MODEL-ONLY (sign robust in 93% of cells; no measured inputs)
+Rusted Barrel | kept (never sold) | +131 | +157 | +3.6 | MODEL-ONLY (sign robust in 90% of cells; no measured inputs) | MODEL-ONLY (sign robust in 99% of cells; no measured inputs)
+Melee Lifesteal | sold +4k souls later | +145 | +136 | +2.2 | MODEL-ONLY, assumption-sensitive (flips with several parameters together) | MODEL-ONLY, assumption-sensitive (flips with POKE (0.06: -, 0.12: +, 0.2: +))
+Rusted Barrel | sold +8k souls later | +127 | +118 | +2.5 | MODEL-ONLY, assumption-sensitive (flips with several parameters together) | MODEL-ONLY (sign robust in 82% of cells; no measured inputs)
+Mystic Regeneration | kept (never sold) | +111 | +117 | +2.7 | MODEL-ONLY (sign robust in 85% of cells; no measured inputs) | MODEL-ONLY (sign robust in 92% of cells; no measured inputs)
+Mystic Regeneration | sold +8k souls later | +110 | +88 | +1.9 | MODEL-ONLY, assumption-sensitive (flips with several parameters together) | MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.0: +, 1.6: +))
+Rusted Barrel | sold +4k souls later | +107 | +87 | +1.7 | MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.0: +, 1.6: +); beta (0.0: -, 0.25: +, 0.5: +); POKE (0.06: -, 0.12: +, 0.2: +)) | MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.0: +, 1.6: +); beta (0.0: -, 0.25: +, 0.5: +); POKE (0.06: -, 0.12: +, 0.2: +))
+Healing Rite | sold +8k souls later | +92 | +69 | +1.0 | MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.0: +, 1.6: +); POKE (0.06: -, 0.12: +, 0.2: +)) | INSUFFICIENT (effect within model noise)
+Mystic Regeneration | sold +4k souls later | +89 | +68 | +1.2 | MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.0: +, 1.6: +); beta (0.0: -, 0.25: +, 0.5: +); POKE (0.06: -, 0.12: +, 0.2: +)) | MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.0: +, 1.6: +); beta (0.0: -, 0.25: +, 0.5: +); POKE (0.06: -, 0.12: +, 0.2: +); lost (0: -, 1: +))
+Healing Rite | kept (never sold) | +94 | +64 | +1.0 | MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.0: +, 1.6: +); POKE (0.06: -, 0.12: +, 0.2: +)) | MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.55: +, 0.75: +); enemy (0.6: -, 1.0: +, 1.6: +); beta (0.0: -, 0.25: +, 0.5: +); POKE (0.06: -, 0.12: +, 0.2: +); lost (0: -, 1: +))
+Extended Magazine | sold +8k souls later | +65 | +60 | +2.4 | MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.55: +, 0.75: +); enemy (0.6: +, 1.0: +, 1.6: -); beta (0.0: -, 0.25: +, 0.5: +); POKE (0.06: +, 0.12: -, 0.2: +)) | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+Healing Rite | sold +4k souls later | +73 | +51 | +0.5 | MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.55: +, 0.75: +); enemy (0.6: -, 1.0: +, 1.6: +); beta (0.0: -, 0.25: -, 0.5: +); POKE (0.06: -, 0.12: +, 0.2: +); lost (0: -, 1: +)) | INSUFFICIENT (effect within model noise)
+  ... 22 more rows in the full list below
+
+## LEDGER (central cell, souls earned 0-25 min by mechanism, candidate minus no purchase; each effect has exactly one owner; MODELLED ESTIMATE)
+- Extra Regen | kept (never sold): lane: forced recalls (HP budget) +847, lane: trade advantage +320, fights: trade advantage +301, time dead +110, kills +110, camps/waves farmed +28 | sum +1715 = total +1715
+- Extra Regen | sold +8k souls later: lane: forced recalls (HP budget) +672, lane: trade advantage +260, fights: trade advantage +226, kills +86, time dead +80, camps/waves farmed +27 | sum +1350 = total +1350
+- Extra Regen | sold +4k souls later: lane: forced recalls (HP budget) +398, lane: trade advantage +171, fights: trade advantage +131, kills +51, time dead +45, camps/waves farmed +19 | sum +815 = total +815
+- Rebuttal | kept (never sold): lane: trade advantage +268, fights: trade advantage +188, lane: forced recalls (HP budget) +160, time dead +85, kills +61, camps/waves farmed +5 | sum +766 = total +766
+- Rebuttal | sold +8k souls later: lane: trade advantage +220, lane: forced recalls (HP budget) +136, fights: trade advantage +50, time dead +29, kills +26, camps/waves farmed +2 | sum +463 = total +463
+LEDGER CHECK: Extra Regen | kept (never sold) parts +1715.4 vs total +1715.4 (OK); Extra Regen | sold +8k souls later parts +1350.0 vs total +1350.0 (OK); Extra Regen | sold +4k souls later parts +814.8 vs total +814.8 (OK); Rebuttal | kept (never sold) parts +766.1 vs total +766.1 (OK); Rebuttal | sold +8k souls later parts +462.7 vs total +462.7 (OK)
+
+## PROVENANCE (top 3 candidates): input | tier | how it enters the model
+  Extra Regen.BonusHealthRegen = 2.5 | VERIFIED GAME MECHANIC | regen -> lane HP budget -> forced recalls (lane troopers lost) and trade time-to-die
+  Extra Regen.OutOfCombatHealthRegen = 1.5 | VERIFIED GAME MECHANIC | out-of-combat regen x OOC_SHARE -> lane HP budget -> forced recalls
+  Rebuttal.BonusHealth = 75 | VERIFIED GAME MECHANIC | max health -> time-to-die (trade ratio -> lane/fight income via beta, deaths) and HP budget
+  Rebuttal.ParryCooldownReduction = 1.75 | VERIFIED GAME MECHANIC | not used by the model (no mechanism encoded) -> contributes 0 here
+  Rebuttal.BuffDuration = 6 | VERIFIED GAME MECHANIC | not used by the model (no mechanism encoded) -> contributes 0 here
+  Rebuttal.BonusDamagePercent = 30 | VERIFIED GAME MECHANIC | not used by the model (no mechanism encoded) -> contributes 0 here
+  Rebuttal.ParrySuccessHealPercentage = 100 | VERIFIED GAME MECHANIC | not used by the model (no mechanism encoded) -> contributes 0 here
+  Rebuttal.MeleeResistPercent = 18 | VERIFIED GAME MECHANIC | not used by the model (no mechanism encoded) -> contributes 0 here
+  Melee Lifesteal.AbilityCooldown = 8 | VERIFIED GAME MECHANIC | not used by the model (no mechanism encoded) -> contributes 0 here
+  Melee Lifesteal.LightMeleeCooldownMult = 1.5 | VERIFIED GAME MECHANIC | not used by the model (no mechanism encoded) -> contributes 0 here
+  Melee Lifesteal.BonusMeleeDamagePercent = 12 | VERIFIED GAME MECHANIC | not used by the model (no mechanism encoded) -> contributes 0 here
+  Melee Lifesteal.LifestrikeHeal = 100 | VERIFIED GAME MECHANIC | melee heal -> time-to-die
+  Melee Lifesteal.NonHeroHealPct = 30 | VERIFIED GAME MECHANIC | not used by the model (no mechanism encoded) -> contributes 0 here
+  REFUND 0.5 | UNVERIFIED HYPOTHESIS | resale share at the sale
+  POKE = 0.12 | MODELLED ESTIMATE | share of lane time you are being hit (HP budget -> forced backs)
+  E_D0 = 70.0 | MODELLED ESTIMATE | reference enemy effective dps on you at 0 souls (after their hit rate)
+  LANE_SPM = 700.0 | MODELLED ESTIMATE | lane souls/min with an even lane (troopers + passive), before trade/back/death effects
+  BACK_S = 45.0 | MODELLED ESTIMATE | seconds of lost income per forced back (walk to base and return)
+  beta = 0.25 | MODELLED ESTIMATE | how much winning trades raises lane/fight income: x(1+beta*tanh(ln TR)); 0 = trades never change income
+  hit = 0.55 | MODELLED ESTIMATE | share of your bullets that hit the enemy hero
+  enemy = 1.0 | MODELLED ESTIMATE | enemy power scale (poke dps and burst) vs the reference enemy
+  OOC_SHARE = 0.4 | MODELLED ESTIMATE | share of lane time out of combat long enough for out-of-combat regen
+  kappa = 1.768 | MODELLED ESTIMATE | income calibrated to ~1000 souls/min (RULES_KIERAN anchor) on the no-purchase path
+
+## SENSITIVITY: which grid parameter flips the sign is shown in each verdict; parameters not in the grid (enemy model shape, POKE->recall link, trade model) are structural and untested
+
+## FULL LIST
+  Extra Regen | kept (never sold): d@20 +659, dTR +7.9% | MODEL-ONLY (sign robust in 95% of cells; no measured inputs)
+  Extra Regen | sold +8k souls later: d@20 +619, dTR +6.7% | MODEL-ONLY (sign robust in 93% of cells; no measured inputs)
+  Extra Regen | sold +4k souls later: d@20 +452, dTR +4.7% | MODEL-ONLY (sign robust in 91% of cells; no measured inputs)
+  Rebuttal | kept (never sold): d@20 +348, dTR +7.6% | MODEL-ONLY (sign robust in 93% of cells; no measured inputs)
+  Rebuttal | sold +8k souls later: d@20 +260, dTR +5.1% | MODEL-ONLY (sign robust in 90% of cells; no measured inputs)
+  Melee Lifesteal | kept (never sold): d@20 +227, dTR +4.8% | MODEL-ONLY (sign robust in 93% of cells; no measured inputs)
+  Extended Magazine | kept (never sold): d@20 +203, dTR +5.6% | MODEL-ONLY (sign robust in 94% of cells; no measured inputs)
+  Rebuttal | sold +4k souls later: d@20 +202, dTR +3.1% | MODEL-ONLY (sign robust in 82% of cells; no measured inputs)
+  Melee Lifesteal | sold +8k souls later: d@20 +187, dTR +3.3% | MODEL-ONLY (sign robust in 90% of cells; no measured inputs)
+  Rusted Barrel | kept (never sold): d@20 +157, dTR +3.6% | MODEL-ONLY (sign robust in 90% of cells; no measured inputs)
+  Melee Lifesteal | sold +4k souls later: d@20 +136, dTR +2.2% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Rusted Barrel | sold +8k souls later: d@20 +118, dTR +2.5% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Mystic Regeneration | kept (never sold): d@20 +117, dTR +2.7% | MODEL-ONLY (sign robust in 85% of cells; no measured inputs)
+  Mystic Regeneration | sold +8k souls later: d@20 +88, dTR +1.9% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Rusted Barrel | sold +4k souls later: d@20 +87, dTR +1.7% | MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.0: +, 1.6: +); beta (0.0: -, 0.25: +, 0.5: +); POKE (0.06: -, 0.12: +, 0.2: +))
+  Healing Rite | sold +8k souls later: d@20 +69, dTR +1.0% | MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.0: +, 1.6: +); POKE (0.06: -, 0.12: +, 0.2: +))
+  Mystic Regeneration | sold +4k souls later: d@20 +68, dTR +1.2% | MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.0: +, 1.6: +); beta (0.0: -, 0.25: +, 0.5: +); POKE (0.06: -, 0.12: +, 0.2: +))
+  Healing Rite | kept (never sold): d@20 +64, dTR +1.0% | MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.0: +, 1.6: +); POKE (0.06: -, 0.12: +, 0.2: +))
+  Extended Magazine | sold +8k souls later: d@20 +60, dTR +2.4% | MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.55: +, 0.75: +); enemy (0.6: +, 1.0: +, 1.6: -); beta (0.0: -, 0.25: +, 0.5: +); POKE (0.06: +, 0.12: -, 0.2: +))
+  Healing Rite | sold +4k souls later: d@20 +51, dTR +0.5% | MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.55: +, 0.75: +); enemy (0.6: -, 1.0: +, 1.6: +); beta (0.0: -, 0.25: -, 0.5: +); POKE (0.06: -, 0.12: +, 0.2: +); lost (0: -, 1: +))
+  Monster Rounds | kept (never sold): d@20 +33, dTR -3.4% | INSUFFICIENT (effect within model noise)
+  Extended Magazine | sold +4k souls later: d@20 +31, dTR +1.5% | INSUFFICIENT (effect within model noise)
+  Golden Goose Egg | sold +8k souls later: d@20 +31, dTR -0.5% | INSUFFICIENT (effect within model noise)
+  Golden Goose Egg | sold +4k souls later: d@20 +22, dTR -0.4% | INSUFFICIENT (effect within model noise)
+  Golden Goose Egg | kept (never sold): d@20 +10, dTR -1.2% | INSUFFICIENT (effect within model noise)
+  Monster Rounds | sold +8k souls later: d@20 +8, dTR -2.3% | INSUFFICIENT (effect within model noise)
+  Monster Rounds | sold +4k souls later: d@20 +0, dTR -1.7% | INSUFFICIENT (effect within model noise)
+  Spirit Strike | sold +4k souls later: d@20 -38, dTR -1.0% | INSUFFICIENT (effect within model noise)
+  Headshot Booster | sold +4k souls later: d@20 -44, dTR -1.3% | INSUFFICIENT (effect within model noise)
+  Spirit Strike | sold +8k souls later: d@20 -44, dTR -1.1% | INSUFFICIENT (effect within model noise)
+  Headshot Booster | sold +8k souls later: d@20 -50, dTR -1.7% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Close Quarters | sold +4k souls later: d@20 -58, dTR -1.7% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Headshot Booster | kept (never sold): d@20 -65, dTR -2.1% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Restorative Shot | sold +4k souls later: d@20 -65, dTR -1.8% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Spirit Strike | kept (never sold): d@20 -69, dTR -1.8% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Close Quarters | sold +8k souls later: d@20 -76, dTR -2.2% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Rapid Rounds | sold +4k souls later: d@20 -76, dTR -2.2% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Restorative Shot | sold +8k souls later: d@20 -85, dTR -2.3% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Rapid Rounds | sold +8k souls later: d@20 -90, dTR -2.9% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Close Quarters | kept (never sold): d@20 -91, dTR -2.7% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Restorative Shot | kept (never sold): d@20 -101, dTR -3.0% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  Rapid Rounds | kept (never sold): d@20 -106, dTR -3.9% | MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## QUEUED TESTS (to turn MODEL-ONLY inputs into measured ones)
+  council/sandbox/autorun/scenarios/interaction/int_paige_path_Extra_Regen_800.txt
+  council/sandbox/autorun/scenarios/interaction/int_paige_path_Rebuttal_800.txt
+  council/sandbox/autorun/scenarios/interaction/int_paige_path_Melee_Lifesteal_800.txt

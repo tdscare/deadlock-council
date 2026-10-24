@@ -1,0 +1,3931 @@
+{
+ "schema": 1,
+ "id": "viscous_damage",
+ "hero": "Viscous",
+ "name": "Rizuhble's Goo Punch Viscous",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, once you're out of slots.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-8,000 (levels 1-14). Abilities gained (both point models agree): Goo Ball unlocked. 4.8k spikes: spirit 4.8k at Compress Cooldown. Ultimate (Goo Ball) is available from Compress Cooldown.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "viscous_damage:7:phase_range:2826",
+    "viscous_damage:7:phase_abilities:2827",
+    "viscous_damage:7:phase_spikes:2836",
+    "viscous_damage:7:phase_ult:2837"
+   ],
+   "items": [
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 4,000 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Compress Cooldown completes 4.8k spirit in 4000 souls (~4.0 min), 4 purchases",
+     "claim_ids": [
+      "viscous_damage:0:spike_progress:2806"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:0:spike_progress:2806",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 7 to Splatter's damage (0.70x scaling).",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Compress Cooldown completes 4.8k spirit in 3200 souls (~3.2 min), 3 purchases",
+     "claim_ids": [
+      "viscous_damage:1:spirit_scaling:2811"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:1:spirit_scaling:2811",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Expansion",
+     "imbue": "1",
+     "caption": "Imbued on Splatter: widens its range.",
+     "cls": "b",
+     "why": "imminent: Compress Cooldown completes 4.8k spirit in 2400 souls (~2.4 min), 2 purchases",
+     "claim_ids": [
+      "viscous_damage:2:imbue_reach:2813"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:2:imbue_reach:2813",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Strike",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 1,600 souls on.",
+     "cls": "b",
+     "why": "imminent: Compress Cooldown completes 4.8k spirit in 1600 souls (~1.6 min), 1 purchases",
+     "claim_ids": [
+      "viscous_damage:3:spike_progress:2815"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:3:spike_progress:2815",
+       true,
+       "3200"
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "1",
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power. Imbued on Splatter: takes 18% off its 12s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:4:spike_complete:2817",
+      "viscous_damage:4:imbue_cooldown:2818"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:4:spike_complete:2817",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ],
+      [
+       "viscous_damage:4:imbue_cooldown:2818",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Melee Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Grit, 6400 souls (~6.4 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Health",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Grit, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Melee Charge",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only; its 4.8k tier completes at Crushing Fists, 19200 souls (~19.2 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Puddle Punch's damage scales with your melee damage.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 8,000-20,000 (levels 14-25). Abilities gained (both point models agree): Splatter T3, Puddle Punch T3. Your biggest single spirit hit (Splatter, damage) grows from 136 to 264. 4.8k spikes: vitality 4.8k at Grit.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "viscous_damage:15:phase_range:2859",
+    "viscous_damage:15:phase_abilities:2860",
+    "viscous_damage:15:phase_power:2861",
+    "viscous_damage:15:phase_spikes:2868"
+   ],
+   "items": [
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 18 to Goo Ball's damage (1.00x scaling), your steepest spirit scaling. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:8:spirit_scaling:2840",
+      "viscous_damage:8:upgrade_of:2839"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:8:spirit_scaling:2840",
+       true,
+       ""
+      ],
+      [
+       "viscous_damage:8:upgrade_of:2839",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Lifestrike",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Grit completes 800 souls on. Upgrade of Melee Lifesteal (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "b",
+     "why": "imminent: Grit completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "viscous_damage:9:spike_progress:2841",
+      "viscous_damage:9:upgrade_of:2842"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:9:spike_progress:2841",
+       true,
+       "4000"
+      ],
+      [
+       "viscous_damage:9:upgrade_of:2842",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:10:spike_complete:2844"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:10:spike_complete:2844",
+       true,
+       "inventory vitality: before 4000, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Snatch",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 5,600 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": "Splatter (249) clears its 165-damage trigger; Puddle Punch stays under it. Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:12:threshold_now:2849",
+      "viscous_damage:12:upgrade_of:2850"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:12:threshold_now:2849",
+       true,
+       "instances above: [(1, 248.76)]"
+      ],
+      [
+       "viscous_damage:12:upgrade_of:2850",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 10,400 to 12,000 invested: bonus 52 to 59 spirit power. | With 4 abilities trained their base cooldowns total 189s; 20% off is 37.8s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Shielding",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 6.4k tier completes at Fortitude, 10400 souls (~10.4 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Charge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Puddle Punch (2 to 3).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:15:charges:2858"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:15:charges:2858",
+       true,
+       "[3]"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 20,000-49,600 (levels 25-36). Abilities gained (both point models agree): The Cube T3, Goo Ball T3. Your biggest single spirit hit (Splatter, damage) grows from 264 to 414. 4.8k spikes: weapon 4.8k at Crushing Fists.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "viscous_damage:22:phase_range:2884",
+    "viscous_damage:22:phase_abilities:2885",
+    "viscous_damage:22:phase_power:2886",
+    "viscous_damage:22:phase_spikes:2892"
+   ],
+   "items": [
+    {
+     "name": "Greater Expansion",
+     "imbue": null,
+     "caption": "+30% range and radius on everything that scales with them: Goo Ball ball hit radius (1.8m), Goo Ball ball radius (1.4m), Splatter radius (6.5m). Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:16:global_reach:2869",
+      "viscous_damage:16:upgrade_of:2870"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:16:global_reach:2869",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "viscous_damage:16:upgrade_of:2870",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Crushing Fists",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (1,600 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 12 to 54% weapon damage. Upgrade of Melee Charge (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:17:spike_complete:2871",
+      "viscous_damage:17:upgrade_of:2872"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:17:spike_complete:2871",
+       true,
+       "inventory weapon: before 1600, after 6400, threshold 4800"
+      ],
+      [
+       "viscous_damage:17:upgrade_of:2872",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Fortitude",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 5,600 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Rapid Recharge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Puddle Punch (3 to 4). Takes spirit from 15,200 to 17,600 invested: bonus 59 to 66 spirit power. Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:19:charges:2877",
+      "viscous_damage:19:invest_step:2875",
+      "viscous_damage:19:upgrade_of:2876"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:19:charges:2877",
+       true,
+       "[3]"
+      ],
+      [
+       "viscous_damage:19:invest_step:2875",
+       true,
+       "inventory spirit: before 15200, after 17600, threshold 16000"
+      ],
+      [
+       "viscous_damage:19:upgrade_of:2876",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 48 to Splatter's damage (1.60x scaling), your steepest spirit scaling. Takes spirit from 17,600 to 22,400 invested: bonus 66 to 75 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:20:spirit_scaling:2880",
+      "viscous_damage:20:invest_step:2878",
+      "viscous_damage:20:upgrade_of:2879"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:20:spirit_scaling:2880",
+       true,
+       ""
+      ],
+      [
+       "viscous_damage:20:invest_step:2878",
+       true,
+       "inventory spirit: before 17600, after 22400, threshold 22400"
+      ],
+      [
+       "viscous_damage:20:upgrade_of:2879",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Reverb",
+     "imbue": "1",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 22,400 to 28,800 invested: bonus 75 to 100 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Grit? Buy what is killing you, cheapest first. Not dying? Skip. Sell Rapid Recharge.",
+   "desc": "Dying after Grit? Buy what is killing you, cheapest first. Not dying? Skip. Sell Rapid Recharge.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:23:defence_bullet:2893"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry is melting you.",
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:23:defence_bullet:2893",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:23:defence_gun:2894"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:23:defence_gun:2894",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:23:defence_parry:2895"
+     ],
+     "lint": [],
+     "legacy_note": "A big ult you can see coming, like Lash's or Infernus's.",
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:23:defence_parry:2895",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:23:defence_spirit:2896"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:23:defence_spirit:2896",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Stuns keep you from punching in fights.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Spirit Shielding for this.",
+     "temporary": true,
+     "verify": []
+    },
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 8,000 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Spirit Snatch for this.",
+     "temporary": true,
+     "verify": []
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 169s of base cooldown across your kit, 125s of it the ultimate; the item has its own cooldown of 300s. Replaces Lifestrike: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:23:refresher:2900",
+      "viscous_damage:23:sell_swap:2901"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Lifestrike for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:23:refresher:2900",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "viscous_damage:23:sell_swap:2901",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "viscous_damage:23:upgrade_delta:2902"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "viscous_damage:23:upgrade_delta:2902",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "viscous_damage:23:temporary_sold:2805": {
+   "id": "viscous_damage:23:temporary_sold:2805",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, once you're out of slots.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 23,
+    "item": "Extra Regen",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it once you're out of slots."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:0:spike_progress:2806": {
+   "id": "viscous_damage:0:spike_progress:2806",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Mystic Burst",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Compress Cooldown completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "viscous_damage:0:threshold_marginal:2807": {
+   "id": "viscous_damage:0:threshold_marginal:2807",
+   "kind": "threshold_marginal",
+   "phrase": "Splatter (97.7) is within 50% of the 80-damage trigger; resist handling unverified.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_restorative_goo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_telepunch"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 0,
+    "item": "Mystic Burst",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:0:component_for:2808": {
+   "id": "viscous_damage:0:component_for:2808",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Mystic Burst",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 16000,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:1:spike_progress:2809": {
+   "id": "viscous_damage:1:spike_progress:2809",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 3,200 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 3200,
+    "event": "Compress Cooldown completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    3200,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "viscous_damage:1:component_for:2810": {
+   "id": "viscous_damage:1:component_for:2810",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 7200,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:1:spirit_scaling:2811": {
+   "id": "viscous_damage:1:spirit_scaling:2811",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 7 to Splatter's damage (0.70x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "10.0",
+    "7",
+    "0.70"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:2:spike_progress:2812": {
+   "id": "viscous_damage:2:spike_progress:2812",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Expansion",
+    "souls": 2400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Compress Cooldown completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "viscous_damage:2:imbue_reach:2813": {
+   "id": "viscous_damage:2:imbue_reach:2813",
+   "kind": "imbue_reach",
+   "phrase": "Imbued on Splatter: widens its range.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_reach",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Expansion",
+    "souls": 2400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 1,
+    "stats": [
+     "ETechRange",
+     "ETechRadius"
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:2:component_for:2814": {
+   "id": "viscous_damage:2:component_for:2814",
+   "kind": "component_for",
+   "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Expansion",
+    "souls": 2400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 20000,
+    "event": "Greater Expansion"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Greater Expansion"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:3:spike_progress:2815": {
+   "id": "viscous_damage:3:spike_progress:2815",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Spirit Strike",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Compress Cooldown completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "viscous_damage:3:component_for:2816": {
+   "id": "viscous_damage:3:component_for:2816",
+   "kind": "component_for",
+   "phrase": "From Spirit Snatch: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Spirit Strike",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 11200,
+    "event": "Spirit Snatch"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Snatch"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:4:spike_complete:2817": {
+   "id": "viscous_damage:4:spike_complete:2817",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 4,
+    "item": "Compress Cooldown",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "viscous_damage:4:imbue_cooldown:2818": {
+   "id": "viscous_damage:4:imbue_cooldown:2818",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Splatter: takes 18% off its 12s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 4,
+    "item": "Compress Cooldown",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 1
+   },
+   "numbers": [
+    "18.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:4:component_for:2819": {
+   "id": "viscous_damage:4:component_for:2819",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Compress Cooldown",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 13600,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:5:spike_progress:2820": {
+   "id": "viscous_damage:5:spike_progress:2820",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Melee Lifesteal",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "viscous_damage:5:component_for:2821": {
+   "id": "viscous_damage:5:component_for:2821",
+   "kind": "component_for",
+   "phrase": "From Lifestrike: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Melee Lifesteal",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Lifestrike"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Lifestrike"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:6:spike_progress:2822": {
+   "id": "viscous_damage:6:spike_progress:2822",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Extra Health",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "viscous_damage:6:component_for:2823": {
+   "id": "viscous_damage:6:component_for:2823",
+   "kind": "component_for",
+   "phrase": "From Fortitude: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Extra Health",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 23200,
+    "event": "Fortitude"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Fortitude"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:7:spike_progress:2824": {
+   "id": "viscous_damage:7:spike_progress:2824",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Melee Charge",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "viscous_damage:7:component_for:2825": {
+   "id": "viscous_damage:7:component_for:2825",
+   "kind": "component_for",
+   "phrase": "From Crushing Fists: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Melee Charge",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 19200,
+    "event": "Crushing Fists"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Crushing Fists"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:7:phase_range:2826": {
+   "id": "viscous_damage:7:phase_range:2826",
+   "kind": "phase_range",
+   "phrase": "Souls 0-8,000 (levels 1-14).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Melee Charge",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Melee Charge",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "8,000",
+    "1",
+    "14"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:7:phase_abilities:2827": {
+   "id": "viscous_damage:7:phase_abilities:2827",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Goo Ball unlocked.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Melee Charge",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Melee Charge",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:7:phase_spikes:2836": {
+   "id": "viscous_damage:7:phase_spikes:2836",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Compress Cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Melee Charge",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Melee Charge",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:7:phase_ult:2837": {
+   "id": "viscous_damage:7:phase_ult:2837",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Goo Ball) is available from Compress Cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Melee Charge",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Melee Charge",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:8:spike_progress:2838": {
+   "id": "viscous_damage:8:spike_progress:2838",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 5,600 of the 6.4k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 8,
+    "item": "Improved Spirit",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 6400
+  },
+  "viscous_damage:8:upgrade_of:2839": {
+   "id": "viscous_damage:8:upgrade_of:2839",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 8,
+    "item": "Improved Spirit",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:8:spirit_scaling:2840": {
+   "id": "viscous_damage:8:spirit_scaling:2840",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 18 to Goo Ball's damage (1.00x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_bowling_ball"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 8,
+    "item": "Improved Spirit",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "18.0",
+    "18",
+    "1.00"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:9:spike_progress:2841": {
+   "id": "viscous_damage:9:spike_progress:2841",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Grit completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 9,
+    "item": "Lifestrike",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Grit completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "viscous_damage:9:upgrade_of:2842": {
+   "id": "viscous_damage:9:upgrade_of:2842",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Melee Lifesteal (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 9,
+    "item": "Lifestrike",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Melee Lifesteal"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:9:swap_candidate:2843": {
+   "id": "viscous_damage:9:swap_candidate:2843",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Refresher later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 9,
+    "item": "Lifestrike",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Lifestrike",
+    "buyer": "Refresher"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:10:spike_complete:2844": {
+   "id": "viscous_damage:10:spike_complete:2844",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 10,
+    "item": "Grit",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "viscous_damage:10:component_for:2845": {
+   "id": "viscous_damage:10:component_for:2845",
+   "kind": "component_for",
+   "phrase": "From Spirit Shielding: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 10,
+    "item": "Grit",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 7200,
+    "event": "Spirit Shielding"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Shielding"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:11:invest_step:2846": {
+   "id": "viscous_damage:11:invest_step:2846",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 5,600 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Snatch",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "8000",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "viscous_damage:11:upgrade_of:2847": {
+   "id": "viscous_damage:11:upgrade_of:2847",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Strike (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Snatch",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Strike"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:11:swap_candidate:2848": {
+   "id": "viscous_damage:11:swap_candidate:2848",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Witchmail later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Snatch",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Snatch",
+    "buyer": "Witchmail"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:12:threshold_now:2849": {
+   "id": "viscous_damage:12:threshold_now:2849",
+   "kind": "threshold_now",
+   "phrase": "Splatter (249) clears its 165-damage trigger; Puddle Punch stays under it.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_restorative_goo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_telepunch"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 12,
+    "item": "Tankbuster",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "165.0",
+    "249"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 1.51,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "viscous_damage:12:upgrade_of:2850": {
+   "id": "viscous_damage:12:upgrade_of:2850",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 12,
+    "item": "Tankbuster",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:13:invest_step:2851": {
+   "id": "viscous_damage:13:invest_step:2851",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 10,400 to 12,000 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Superior Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "10400",
+    "12000",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "viscous_damage:13:upgrade_of:2852": {
+   "id": "viscous_damage:13:upgrade_of:2852",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Superior Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:13:cdr_rotation:2853": {
+   "id": "viscous_damage:13:cdr_rotation:2853",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 189s; 20% off is 37.8s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_restorative_goo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_telepunch",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_bowling_ball"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 13,
+    "item": "Superior Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "189",
+    "20.0",
+    "37.8"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:14:spike_progress:2854": {
+   "id": "viscous_damage:14:spike_progress:2854",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 5,600 of the 6.4k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 14,
+    "item": "Spirit Shielding",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 6400
+  },
+  "viscous_damage:14:upgrade_of:2855": {
+   "id": "viscous_damage:14:upgrade_of:2855",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 14,
+    "item": "Spirit Shielding",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Grit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:14:swap_candidate:2856": {
+   "id": "viscous_damage:14:swap_candidate:2856",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Escalating Exposure later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 14,
+    "item": "Spirit Shielding",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Shielding",
+    "buyer": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:15:component_for:2857": {
+   "id": "viscous_damage:15:component_for:2857",
+   "kind": "component_for",
+   "phrase": "From Rapid Recharge: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Extra Charge",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12000,
+    "event": "Rapid Recharge"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Rapid Recharge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:15:charges:2858": {
+   "id": "viscous_damage:15:charges:2858",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Puddle Punch (2 to 3).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_extra_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_telepunch"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 15,
+    "item": "Extra Charge",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     3
+    ]
+   },
+   "numbers": [
+    "1",
+    "2",
+    "3"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:15:phase_range:2859": {
+   "id": "viscous_damage:15:phase_range:2859",
+   "kind": "phase_range",
+   "phrase": "Souls 8,000-20,000 (levels 14-25).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Extra Charge",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Charge",
+    "keys": []
+   },
+   "numbers": [
+    "8,000",
+    "20,000",
+    "14",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:15:phase_abilities:2860": {
+   "id": "viscous_damage:15:phase_abilities:2860",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Splatter T3, Puddle Punch T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Extra Charge",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Charge",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:15:phase_power:2861": {
+   "id": "viscous_damage:15:phase_power:2861",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Splatter, damage) grows from 136 to 264.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Extra Charge",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Charge",
+    "keys": []
+   },
+   "numbers": [
+    "136",
+    "264"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:15:phase_spikes:2868": {
+   "id": "viscous_damage:15:phase_spikes:2868",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Grit.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Extra Charge",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Charge",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:16:global_reach:2869": {
+   "id": "viscous_damage:16:global_reach:2869",
+   "kind": "global_reach",
+   "phrase": "+30% range and radius on everything that scales with them: Goo Ball ball hit radius (1.8m), Goo Ball ball radius (1.4m), Splatter radius (6.5m).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_range",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_telepunch",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_bowling_ball"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 16,
+    "item": "Greater Expansion",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "global_reach"
+   },
+   "numbers": [
+    "30",
+    "1.8",
+    "1.4",
+    "6.5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:16:upgrade_of:2870": {
+   "id": "viscous_damage:16:upgrade_of:2870",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Greater Expansion",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Expansion"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:17:spike_complete:2871": {
+   "id": "viscous_damage:17:spike_complete:2871",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (1,600 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 12 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 17,
+    "item": "Crushing Fists",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "6400",
+    "12.0",
+    "54.0",
+    "4.8k",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "viscous_damage:17:upgrade_of:2872": {
+   "id": "viscous_damage:17:upgrade_of:2872",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Melee Charge (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Crushing Fists",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Melee Charge"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:18:invest_step:2873": {
+   "id": "viscous_damage:18:invest_step:2873",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 5,600 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Fortitude",
+    "souls": 29600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "8000",
+    "38.0",
+    "46.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "viscous_damage:18:upgrade_of:2874": {
+   "id": "viscous_damage:18:upgrade_of:2874",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Health (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Fortitude",
+    "souls": 29600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Health"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:19:invest_step:2875": {
+   "id": "viscous_damage:19:invest_step:2875",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 15,200 to 17,600 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Rapid Recharge",
+    "souls": 32000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "15200",
+    "17600",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "viscous_damage:19:upgrade_of:2876": {
+   "id": "viscous_damage:19:upgrade_of:2876",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Rapid Recharge",
+    "souls": 32000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Charge"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:19:charges:2877": {
+   "id": "viscous_damage:19:charges:2877",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Puddle Punch (3 to 4).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_rapid_recharge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_telepunch"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 19,
+    "item": "Rapid Recharge",
+    "souls": 32000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     3
+    ]
+   },
+   "numbers": [
+    "1",
+    "3",
+    "4"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:20:invest_step:2878": {
+   "id": "viscous_damage:20:invest_step:2878",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 17,600 to 22,400 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Boundless Spirit",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "22400",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "viscous_damage:20:upgrade_of:2879": {
+   "id": "viscous_damage:20:upgrade_of:2879",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Boundless Spirit",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "viscous_damage:20:spirit_scaling:2880": {
+   "id": "viscous_damage:20:spirit_scaling:2880",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 48 to Splatter's damage (1.60x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 20,
+    "item": "Boundless Spirit",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "30.0",
+    "48",
+    "1.60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:21:invest_step:2881": {
+   "id": "viscous_damage:21:invest_step:2881",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 22,400 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 21,
+    "item": "Mystic Reverb",
+    "souls": 43200,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "22400",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "viscous_damage:21:threshold_now:2882": {
+   "id": "viscous_damage:21:threshold_now:2882",
+   "kind": "threshold_now",
+   "phrase": "Splatter (409) clears its 100-damage trigger.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 21,
+    "item": "Mystic Reverb",
+    "souls": 43200,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 100.0,
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "100.0",
+    "409"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 4.09,
+   "caveat": "item has no localisation text; trigger semantics are modelled",
+   "contradiction": false
+  },
+  "viscous_damage:22:burn_trigger_modelled:2883": {
+   "id": "viscous_damage:22:burn_trigger_modelled:2883",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Splatter (414) + Puddle Punch (40) = 454 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 22,
+    "item": "Spirit Burn",
+    "souls": 49600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "454",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:22:phase_range:2884": {
+   "id": "viscous_damage:22:phase_range:2884",
+   "kind": "phase_range",
+   "phrase": "Souls 20,000-49,600 (levels 25-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 22,
+    "item": "Spirit Burn",
+    "souls": 49600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": []
+   },
+   "numbers": [
+    "20,000",
+    "49,600",
+    "25",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:22:phase_abilities:2885": {
+   "id": "viscous_damage:22:phase_abilities:2885",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): The Cube T3, Goo Ball T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 22,
+    "item": "Spirit Burn",
+    "souls": 49600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:22:phase_power:2886": {
+   "id": "viscous_damage:22:phase_power:2886",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Splatter, damage) grows from 264 to 414.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 22,
+    "item": "Spirit Burn",
+    "souls": 49600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": []
+   },
+   "numbers": [
+    "264",
+    "414"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:22:phase_spikes:2892": {
+   "id": "viscous_damage:22:phase_spikes:2892",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Crushing Fists.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 22,
+    "item": "Spirit Burn",
+    "souls": 49600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:23:defence_bullet:2893": {
+   "id": "viscous_damage:23:defence_bullet:2893",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Metal Skin",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry is melting you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:23:defence_gun:2894": {
+   "id": "viscous_damage:23:defence_gun:2894",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Plated Armor",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:23:defence_parry:2895": {
+   "id": "viscous_damage:23:defence_parry:2895",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Counterspell",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ult you can see coming, like Lash's or Infernus's."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:23:defence_spirit:2896": {
+   "id": "viscous_damage:23:defence_spirit:2896",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Spirit Resilience",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:23:sell_swap:2897": {
+   "id": "viscous_damage:23:sell_swap:2897",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Shielding: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 23,
+    "item": "Escalating Exposure",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Shielding for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Shielding",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Shielding"
+  },
+  "viscous_damage:23:invest_step:2898": {
+   "id": "viscous_damage:23:invest_step:2898",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 8,000 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_viscous m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 23,
+    "item": "Witchmail",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Snatch for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "14400",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "viscous_damage:23:sell_swap:2899": {
+   "id": "viscous_damage:23:sell_swap:2899",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Snatch: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 23,
+    "item": "Witchmail",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Snatch for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Snatch",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Snatch"
+  },
+  "viscous_damage:23:refresher:2900": {
+   "id": "viscous_damage:23:refresher:2900",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 169s of base cooldown across your kit, 125s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_grenade",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_restorative_goo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_telepunch",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:viscous_goo_bowling_ball"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 23,
+    "item": "Refresher",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Lifestrike for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "169",
+    "125",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "viscous_damage:23:sell_swap:2901": {
+   "id": "viscous_damage:23:sell_swap:2901",
+   "kind": "sell_swap",
+   "phrase": "Replaces Lifestrike: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 23,
+    "item": "Refresher",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Lifestrike for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Lifestrike",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Lifestrike"
+  },
+  "viscous_damage:23:upgrade_delta:2902": {
+   "id": "viscous_damage:23:upgrade_delta:2902",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 23,
+    "item": "Transcendent Cooldown",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "viscous_damage:23:upgrade_of:2903": {
+   "id": "viscous_damage:23:upgrade_of:2903",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 23,
+    "item": "Transcendent Cooldown",
+    "souls": 49600,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "viscous_damage",
+   "item": "Mystic Burst",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Compress Cooldown completes 4.8k spirit in 4000 souls (~4.0 min), 4 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "viscous_damage:0:spike_progress:2806",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Compress Cooldown completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "viscous_damage:0:threshold_marginal:2807",
+     "tier": "MODELLED",
+     "phrase": "Splatter (97.7) is within 50% of the 80-damage trigger; resist handling unverified.",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    },
+    {
+     "id": "viscous_damage:0:component_for:2808",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 16000,
+      "event": "Tankbuster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Extra Spirit",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Compress Cooldown completes 4.8k spirit in 3200 souls (~3.2 min), 3 purchases",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "viscous_damage:1:spike_progress:2809",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 3,200 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 3200,
+      "event": "Compress Cooldown completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "viscous_damage:1:component_for:2810",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 7200,
+      "event": "Improved Spirit"
+     }
+    }
+   ]
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Mystic Expansion",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Compress Cooldown completes 4.8k spirit in 2400 souls (~2.4 min), 2 purchases",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "viscous_damage:2:spike_progress:2812",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Compress Cooldown completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "viscous_damage:2:component_for:2814",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 20000,
+      "event": "Greater Expansion"
+     }
+    }
+   ]
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Spirit Strike",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Compress Cooldown completes 4.8k spirit in 1600 souls (~1.6 min), 1 purchases",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "viscous_damage:3:spike_progress:2815",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Compress Cooldown completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "viscous_damage:3:component_for:2816",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spirit Snatch: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 11200,
+      "event": "Spirit Snatch"
+     }
+    }
+   ]
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Melee Lifesteal",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Grit, 6400 souls (~6.4 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 5600,
+   "unpublished": [
+    {
+     "id": "viscous_damage:5:component_for:2821",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Lifestrike: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Lifestrike"
+     }
+    }
+   ]
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Extra Health",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Grit, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 6400,
+   "unpublished": [
+    {
+     "id": "viscous_damage:6:component_for:2823",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Fortitude: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 23200,
+      "event": "Fortitude"
+     }
+    }
+   ]
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Melee Charge",
+   "section": "early",
+   "cls": "c",
+   "why": "weapon investment only; its 4.8k tier completes at Crushing Fists, 19200 souls (~19.2 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 8000,
+   "unpublished": [
+    {
+     "id": "viscous_damage:7:component_for:2825",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Crushing Fists: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 19200,
+      "event": "Crushing Fists"
+     }
+    }
+   ]
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Melee Charge",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Puddle Punch's damage scales with your melee damage."
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Lifestrike",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Grit completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+   "souls": 11200,
+   "unpublished": [
+    {
+     "id": "viscous_damage:9:spike_progress:2841",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Grit completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Grit completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Spirit Shielding",
+   "section": "mid",
+   "cls": "c",
+   "why": "vitality investment only; its 6.4k tier completes at Fortitude, 10400 souls (~10.4 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 19200,
+   "unpublished": []
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Spirit Burn",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 49600,
+   "unpublished": [
+    {
+     "id": "viscous_damage:22:burn_trigger_modelled:2883",
+     "tier": "MODELLED",
+     "phrase": "One rotation of Splatter (414) + Puddle Punch (40) = 454 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry is melting you."
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ult you can see coming, like Lash's or Infernus's."
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit."
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 49600,
+   "unpublished": []
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep you from punching in fights."
+  },
+  {
+   "build": "viscous_damage",
+   "item": "Escalating Exposure",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 49600,
+   "unpublished": []
+  }
+ ],
+ "stats": {
+  "g": 6,
+  "b": 5,
+  "a": 15,
+  "c": 4,
+  "d": 3
+ }
+}

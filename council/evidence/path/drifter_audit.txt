@@ -1,0 +1,58 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: drifter
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:16Z
+BODY-SHA: d2d269dc92e522fd57763da4646bda39f6bf8a4ccf59b79288e69c6e020eca7a
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Melee Lifesteal, Stalker, Rapid Rounds, Swift Striker, Kinetic Dash, Sprint Boots, Trophy Collector
+  Mid · L-R                -> main path (sequential): Bullet Lifesteal, Lifestrike, Battle Vest, Close Quarters, Point Blank, Hunter's Aura, Hollow Point, Vampiric Burst
+  Late · L-R               -> main path (sequential): Lucky Shot, Silencer
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Spirit Resilience, Counterspell, Dispel Magic, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Crippling Headshot, Leech, Armor Piercer, Divine Barrier, Siphon Bullets, Frenzy
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Crippling Headshot, sell Battle Vest
+    function of Battle Vest: bullet_resist, fire_rate; replacement Crippling Headshot: resist_shred; roles lost: bullet_resist, fire_rate  [VERIFIED GAME MECHANIC]
+    Battle Vest is a component of later items: no
+    held for 33600 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/12800/0 -> 33600/11200/0; thresholds lost: none
+    trade ratio after the sale 0.98; selling Trophy Collector instead: 1.21 (+23.7%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Leech, sell Stalker
+    function of Stalker: move_speed, resist_shred; replacement Leech: sustain; roles lost: move_speed, resist_shred  [VERIFIED GAME MECHANIC]
+    Stalker is a component of later items: no
+    held for 44000 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/12800/0 -> 25600/19200/0; thresholds lost: none
+    trade ratio after the sale 20.00; selling Trophy Collector instead: 20.00 (+0.0%)  [MODELLED ESTIMATE]
+    model limit: trade ratio saturates at the cap (20) in one state -> comparison not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Armor Piercer, sell Swift Striker
+    function of Swift Striker: fire_rate; replacement Armor Piercer: bullet_proc; roles lost: fire_rate  [VERIFIED GAME MECHANIC]
+    Swift Striker is a component of later items: no
+    held for 42400 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/12800/0 -> 32000/12800/0; thresholds lost: none
+    trade ratio after the sale 1.13; selling Trophy Collector instead: 1.23 (+8.4%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Siphon Bullets, sell Hollow Point
+    function of Hollow Point: resist_shred; replacement Siphon Bullets: bullet_resist; roles lost: resist_shred  [VERIFIED GAME MECHANIC]
+    Hollow Point is a component of later items: no
+    held for 24000 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 27200/12800/0 -> 24000/19200/0; thresholds lost: none
+    trade ratio after the sale 1.18; selling Trophy Collector instead: 1.38 (+16.5%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Frenzy, sell Kinetic Dash
+    function of Kinetic Dash: ammo, fire_rate; replacement Frenzy: fire_rate, sustain; roles lost: ammo  [VERIFIED GAME MECHANIC]
+    Kinetic Dash is a component of later items: no
+    held for 40800 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/12800/0 -> 32000/12800/0; thresholds lost: none
+    trade ratio after the sale 1.86; selling Trophy Collector instead: 2.02 (+9.0%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Kinetic Dash): 20 s 49 bullets (clip 16, 3.2 magazines, 25% not firing; refill items used every other charge) | 60 s 134 bullets, 32% not firing | damage 60 s 38791  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Kinetic Dash, sell Trophy Collector: 20 s 54 bullets (clip 16, 3.5 magazines, 30% not firing; refill items used every other charge) | 60 s 149 bullets, 35% not firing | damage 60 s 43212  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Kinetic Dash, no Frenzy): 20 s 51 bullets (clip 16, 3.3 magazines, 27% not firing; refill items used every other charge) | 60 s 140 bullets, 33% not firing | damage 60 s 38347  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)

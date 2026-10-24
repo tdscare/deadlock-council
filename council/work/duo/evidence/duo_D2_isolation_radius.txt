@@ -1,0 +1,8 @@
+KIND: duo-evidence
+SCENARIO: duo_D2_isolation_radius
+STATUS: RUNNABLE on the current runner source (PC build state UNVERIFIED)
+NOTE: D2 NOW (single player). How 'only one enemy hero nearby' is counted (radius, who is the centre). Ring distance of the 2nd enemy is the scanned variable.
+QUESTION: Checking how far away a second enemy must stand before Hunter's Aura stops halving its shred.
+MECHANICS: Hunter's Aura text doubles its effect with a single enemy hero nearby; GAPS 19 measured halving with a second enemy in a 5-bot ring but not the counting radius
+MODEL USE: duo engine isolation rule (STATE isolated)
+RESULT RULE: WORKS (counting radius read from the distance where per-hit damage drops) if damage steps down at some ring distance; DOES NOT WORK if flat

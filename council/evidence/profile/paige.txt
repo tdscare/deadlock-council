@@ -1,0 +1,56 @@
+SCOPE: build-context
+KIND: profile
+BUILD: paige
+HERO: Paige
+ARGS: --profile haze nurse paige
+GENERATED: 2026-10-24T16:15:35Z
+BODY-SHA: 11e955cc9815ba5f15a6801f0f50c551d5fa1abbc2692070d0f4f302c15f8c28
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+WINDOW: 0-55 min of the soul-income walk, central parameters (MODELLED ESTIMATE); value of X = AS BUILT minus WITHOUT X (X's souls flow to the following purchases, so this is the value of X net of its best in-path alternative use)
+PHASES: lane / farm / fights / survive are ledger groups (one owner per effect; lane: lane troopers (base), lane: trade advantage, lane: forced recalls (HP budget); farm: camps/waves farmed, Cultist-type bonus souls; fights: fights/objectives (base), fights: trade advantage, kills; survive: time dead)
+TIERS per cell: VERIFIED GAME MECHANIC (a stat the item has in game data) | CONTROLLED SANDBOX RESULT (none ingested for profiles yet) | MODELLED ESTIMATE (the number below) | ASSUMED (activation frequency parameters listed per item)
+DECISION USE: this is a contribution profile, not a verdict; an item with a low total can still be worth buying for a phase the model does not price (see NOT MODELLED), a high total never proves the item beats an unlisted alternative. Compare through --strategy/--path/--seq files.
+KNOWN MODEL LIMITS: camp respawn / wave spawn caps and contested lanes are NOT modelled (camps/min = share of time x (hp/clear speed + travel)); extra souls from faster clearing therefore appear only through F_LANE/F_MID, travel, hscale and the omega elasticity (omega=0 means saved seconds never become souls)
+
+## RELEVANCE (activities scored only where they matter for this hero/build; basis stated)
+  lane: RELEVANT - every build starts in lane (lane ends at minute 9 in the walk)
+  farm: RELEVANT - the build owns farm-affecting stats: econ, npc
+  fights: RELEVANT - every build fights; fight income and kills come from the trade ratio
+  survive: RELEVANT - time dead and forced recalls cost income in every build
+MEASURED vs MODELLED: measured inputs ingested for this hero: none. Every number in the table is a MODELLED ESTIMATE; "direct" = ledger effect in the phases the item's stats feed, "reallocation" = the remainder, caused by the following purchases arriving earlier (not a property of the item). VERIFIED stats are named in the stat columns.
+
+item | role | price | d souls lane | farm | fights | survive | d souls total | d window TR % | modelled stats | NOT MODELLED stats | activation assumptions (labelled)
+High-Velocity Rounds | retained-or-upgraded | 800 | +33 | via realloc | +18 | via realloc | direct +51 + reallocation +12 = +63 | +0.3 | BaseAttackDamagePercent | BonusBulletSpeedPercent | NOT MODELLED; hit (accuracy)
+Opening Rounds | retained | 1600 | -74 | via realloc | +428 | via realloc | direct +355 + reallocation +533 = +888 | +4.2 | TechPower, BaseAttackDamagePercent | EnemyLifeThreshold, BonusBulletSpeedPercent, BaseAttackDamagePercentBonus | spirit scaling; NOT MODELLED; hit (accuracy)
+Express Shot | retained | 3200 | -621 | via realloc | -507 | via realloc | direct -1128 + reallocation +145 = -982 [LOW COVERAGE 1/7 stats modelled: a negative value here is an under-count, not a finding] | -5.1 | BaseAttackDamagePercent | AbilityCooldown, BonusBulletSpeedPercent, ProcAmmoConsumed, ProcBulletVelocity, ProcBaseAttackDamagePercent, ProcBaseAttackDamagePercentAltFire | NOT MODELLED; hit (accuracy); ICD: one empowered shot per cooldown
+Extra Charge | retained-or-upgraded | 800 | via realloc | via realloc | via realloc | via realloc | direct +0 + reallocation +4 = +4 | +0.0 | - | BonusAbilityCharges, BonusSpiritForChargedAbilities | -
+Extra Spirit | retained-or-upgraded | 800 | +5 | via realloc | +36 | via realloc | direct +41 + reallocation +22 = +63 | +0.4 | TechPower | - | spirit scaling
+Mystic Expansion | retained-or-upgraded | 800 | via realloc | via realloc | -88 | via realloc | direct -88 + reallocation -69 = -157 [LOW COVERAGE 0/2 stats modelled: a negative value here is an under-count, not a finding] | -0.8 | - | TechRangeMultiplier, TechRadiusMultiplier | NOT MODELLED (ability range/radius)
+Sprint Boots | retained-or-upgraded | 800 | via realloc | via realloc | via realloc | via realloc | direct +0 + reallocation +81 = +81 | +0.3 | BonusSprintSpeed, OutOfCombatHealthRegen | - | -
+Trophy Collector | retained | 1600 | via realloc | -203 | via realloc | via realloc | direct -203 + reallocation +227 = +23 | +1.3 | BonusSprintSpeed, OutOfCombatHealthRegen, StackingGoldPerMinute, NonPlayerBonusWeaponPower | StackingBonusSprintSpeed, StackingTechRangeMultiplier, StackingTechRadiusMultiplier, ThinkRate, MaxStacks | NPC_SOULS / uptime; N_NPC; F_LANE/F_MID (farming time share); hscale (camp hp); omega (clear speed -> income elasticity)
+Improved Spirit | retained-or-upgraded | 1600 | +0 | via realloc | +507 | +149 | direct +656 + reallocation +74 = +730 | +4.1 | TechPower, BonusSprintSpeed, BonusHealth, OutOfCombatHealthRegen | - | spirit scaling; POKE/enemy (damage taken)
+Compress Cooldown | retained-or-upgraded | 1600 | via realloc | via realloc | via realloc | via realloc | direct +0 + reallocation -188 = -188 [LOW COVERAGE 0/1 stats modelled: a negative value here is an under-count, not a finding] | -1.1 | - | CooldownReduction | -
+Extra Health | retained-or-upgraded | 800 | +0 | via realloc | +94 | +28 | direct +122 + reallocation +2 = +124 | +0.7 | BonusHealth | - | POKE/enemy (damage taken)
+Fortitude | retained | 3200 | +0 | via realloc | +1042 | +417 | direct +1458 + reallocation -37 = +1421 | +12.0 | BonusMoveSpeed, BonusHealth | RestoreDelay, HealLifePercentOutOfCombat, HealthThreshold | POKE/enemy (damage taken)
+Mystic Burst | retained-or-upgraded | 800 | via realloc | via realloc | via realloc | via realloc | direct +0 + reallocation +6 = +6 | +0.0 | - | AbilityCooldown, Damage, MinimumDamage, AbilityChargeUpTime | -
+Rapid Recharge | retained | 3200 | via realloc | via realloc | via realloc | via realloc | direct +0 + reallocation +149 = +149 | +1.9 | - | CooldownBetweenChargeReduction, BonusAbilityCharges, CooldownReductionOnChargedAbilities, BonusSpiritForChargedAbilities | -
+Tankbuster | retained | 3200 | +0 | via realloc | +92 | +30 | direct +122 + reallocation +24 = +146 | +2.0 | BonusHealth | AbilityCooldown, MinimumDamage, ReProcLockoutTime, WatcherMaxDuration, CurrentHealthDamage, Damage, AbilityChargeUpTime | POKE/enemy (damage taken)
+Surge of Power | retained | 3200 | +0 | via realloc | +444 | via realloc | direct +444 + reallocation +380 = +824 | +5.5 | BonusMoveSpeed | ImbuedTechPower, FireRateBonus, MovementSpeedBonusDuration, MoveWhileShootingSpeedPenaltyReductionPercent, MoveWhileZoomedSpeedPenaltyReductionPercent | hit (accuracy)
+Grit | retained-or-upgraded | 800 | +0 | via realloc | +6 | +2 | direct +8 + reallocation -0 = +8 | +0.0 | CombatBarrier, OutOfCombatHealthRegen | AbilityCooldown, BarrierDuration | NOT MODELLED (active effect); active effect: cooldown/uptime not priced
+Guardian Ward | retained | 1600 | +0 | via realloc | +100 | +47 | direct +146 + reallocation -9 = +137 | +1.2 | OutOfCombatHealthRegen, BonusMoveSpeed | AbilityCooldown, AbilityCastRange, AbilityCastDelay, CooldownReductionPctOnOthers, BuffDuration, GuardianWardCombatBarrier, TechRangeMultiplier, TechRadiusMultiplier | NOT MODELLED (active effect); NOT MODELLED (ability range/radius); active effect: cooldown/uptime not priced
+Greater Expansion | retained | 3200 | +0 | via realloc | +268 | +92 | direct +359 + reallocation +49 = +409 | +3.6 | - | TechRangeMultiplier, TechRadiusMultiplier, TechResist | NOT MODELLED (ability range/radius); POKE/enemy (damage taken)
+Superior Cooldown | retained | 3200 | via realloc | via realloc | via realloc | via realloc | direct +0 + reallocation +171 = +171 | +1.7 | OutOfCombatHealthRegen | CooldownReduction | -
+Escalating Exposure | retained | 6400 | +0 | via realloc | +148 | +60 | direct +208 + reallocation +19 = +226 | +2.9 | - | AbilityDuration, ProcCooldown, MagicIncreasePerStack, TechResist, MaxStacks, TechArmorDamageReduction | POKE/enemy (damage taken); enemy resists
+Boundless Spirit | retained | 6400 | +0 | via realloc | +344 | +95 | direct +438 + reallocation +119 = +558 | +5.4 | TechPower, BonusHealth, OutOfCombatHealthRegen | TechPowerPercent | spirit scaling; POKE/enemy (damage taken)
+
+LEDGER CHECK (phase deltas add up to the total souls difference for every item; no double counting): OK for all 22 items
+
+## READING GUIDE (items whose profile is dominated by one phase)
+  Fortitude: largest modelled effect is fights (+1042 souls); total +1421 souls, window trade ratio +12.0%
+  Express Shot: largest modelled effect is lane (-621 souls); total -982 souls, window trade ratio -5.1%
+  Opening Rounds: largest modelled effect is farm (+489 souls); total +888 souls, window trade ratio +4.2%
+  Surge of Power: largest modelled effect is fights (+444 souls); total +824 souls, window trade ratio +5.5%
+  Improved Spirit: largest modelled effect is fights (+507 souls); total +730 souls, window trade ratio +4.1%
+  Boundless Spirit: largest modelled effect is fights (+344 souls); total +558 souls, window trade ratio +5.4%
+  Greater Expansion: largest modelled effect is fights (+268 souls); total +409 souls, window trade ratio +3.6%
+  Escalating Exposure: largest modelled effect is fights (+148 souls); total +226 souls, window trade ratio +2.9%

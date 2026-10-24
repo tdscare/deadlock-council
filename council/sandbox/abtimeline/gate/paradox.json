@@ -1,0 +1,359 @@
+{
+ "id": "paradox",
+ "hero": "Paradox",
+ "order": "1133234423242411",
+ "status": "WARN",
+ "errors": [],
+ "warnings": [
+  {
+   "item": "Mystic Burst",
+   "souls": 15200,
+   "kind": "hit",
+   "flag": "ULT-ONLY",
+   "gap": 16900,
+   "verdict": "delay to ~32100 or reorder/buy enabler first",
+   "grade": "CALCULATED",
+   "model_B": null,
+   "if_1charge_counts": "ULT-ONLY",
+   "rule": "one ability damage instance > 80 (any ability); scaled by spirit at hit time; procs at most every 14s",
+   "value": "best Paradoxical Swap.SwapDamage 190 at spirit 36",
+   "enabler": "met by a non-ult ability @32100 (Pulse Grenade T2)",
+   "code": "ULT-ONLY"
+  },
+  {
+   "item": "Mystic Burst",
+   "souls": 15200,
+   "kind": "hit",
+   "flag": "ULT-ONLY",
+   "gap": 16900,
+   "verdict": "delay to ~32100 or reorder/buy enabler first",
+   "grade": "CALCULATED",
+   "model_B": null,
+   "if_1charge_counts": "ULT-ONLY",
+   "rule": "one ability damage instance > 80 (any ability); scaled by spirit at hit time; procs at most every 14s",
+   "value": "best Paradoxical Swap.SwapDamage 190 at spirit 36",
+   "enabler": "met by a non-ult ability @32100 (Pulse Grenade T2)",
+   "code": "MODEL-DEPENDENT",
+   "note": "model A ULT-ONLY vs model B OK"
+  },
+  {
+   "item": "Tankbuster",
+   "souls": 17600,
+   "kind": "hit",
+   "flag": "ULT-ONLY",
+   "gap": null,
+   "verdict": "skip/swap",
+   "grade": "CALCULATED",
+   "model_B": "ULT-ONLY",
+   "if_1charge_counts": "ULT-ONLY",
+   "rule": "one ability damage instance > 165 (any ability); scaled by spirit at hit time; procs at most every 14s",
+   "value": "best Paradoxical Swap.SwapDamage 205 at spirit 50",
+   "enabler": "never met in this build",
+   "code": "ULT-ONLY"
+  },
+  {
+   "item": "Mystic Reverb",
+   "souls": 33600,
+   "kind": "hitimb",
+   "flag": "UNCOMPUTED-WEAPON-SCALED",
+   "gap": null,
+   "verdict": "check by hand / sandbox",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "model_B": "UNCOMPUTED-WEAPON-SCALED",
+   "if_1charge_counts": "UNCOMPUTED-WEAPON-SCALED",
+   "rule": "one ability damage instance > 100 (imbued ability only); scaled by spirit at hit time; procs at most every 6s",
+   "value": "best -.None 0 at spirit 98",
+   "enabler": "",
+   "code": "UNCOMPUTED-WEAPON-SCALED"
+  },
+  {
+   "code": "SPIKE-OVERSHOOT",
+   "colour": "gun",
+   "souls": 6400,
+   "item": "Headhunter",
+   "value": "gun lands at 6400 (4.8k + 1600)"
+  }
+ ],
+ "spikes": {
+  "gun": {
+   "4800": 6400,
+   "6400": 6400,
+   "overshoot4800": 1600,
+   "at_item": "Headhunter"
+  },
+  "vitality": {
+   "4800": 11200,
+   "6400": 27200,
+   "overshoot4800": 0,
+   "at_item": "Veil Walker"
+  },
+  "spirit": {
+   "4800": 19200,
+   "6400": 24800,
+   "overshoot4800": 0,
+   "at_item": "Compress Cooldown"
+  }
+ },
+ "timeline_A": [
+  {
+   "souls": 0,
+   "level": 1,
+   "ability": "Pulse Grenade",
+   "tier": "U"
+  },
+  {
+   "souls": 200,
+   "level": 2,
+   "ability": "Pulse Grenade",
+   "tier": "T1"
+  },
+  {
+   "souls": 500,
+   "level": 3,
+   "ability": "Kinetic Carbine",
+   "tier": "U"
+  },
+  {
+   "souls": 900,
+   "level": 4,
+   "ability": "Kinetic Carbine",
+   "tier": "T1"
+  },
+  {
+   "souls": 1400,
+   "level": 5,
+   "ability": "Time Wall",
+   "tier": "U"
+  },
+  {
+   "souls": 2600,
+   "level": 7,
+   "ability": "Kinetic Carbine",
+   "tier": "T2"
+  },
+  {
+   "souls": 3200,
+   "level": 8,
+   "ability": "Paradoxical Swap",
+   "tier": "U"
+  },
+  {
+   "souls": 3900,
+   "level": 9,
+   "ability": "Paradoxical Swap",
+   "tier": "T1"
+  },
+  {
+   "souls": 4600,
+   "level": 10,
+   "ability": "Time Wall",
+   "tier": "T1"
+  },
+  {
+   "souls": 8400,
+   "level": 15,
+   "ability": "Kinetic Carbine",
+   "tier": "T3"
+  },
+  {
+   "souls": 10100,
+   "level": 17,
+   "ability": "Time Wall",
+   "tier": "T2"
+  },
+  {
+   "souls": 11900,
+   "level": 19,
+   "ability": "Paradoxical Swap",
+   "tier": "T2"
+  },
+  {
+   "souls": 17400,
+   "level": 24,
+   "ability": "Time Wall",
+   "tier": "T3"
+  },
+  {
+   "souls": 26900,
+   "level": 29,
+   "ability": "Paradoxical Swap",
+   "tier": "T3"
+  },
+  {
+   "souls": 32100,
+   "level": 31,
+   "ability": "Pulse Grenade",
+   "tier": "T2"
+  },
+  {
+   "souls": 48600,
+   "level": 36,
+   "ability": "Pulse Grenade",
+   "tier": "T3"
+  }
+ ],
+ "rows": [
+  {
+   "item": "Long Range",
+   "souls": 2400,
+   "kind": "range",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Sharpshooter",
+   "souls": 3200,
+   "kind": "range",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Headshot Booster",
+   "souls": 4000,
+   "kind": "proc",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Headhunter",
+   "souls": 6400,
+   "kind": "proc",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Express Shot",
+   "souls": 14400,
+   "kind": "proc",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Mystic Burst",
+   "souls": 15200,
+   "kind": "hit",
+   "flag": "ULT-ONLY",
+   "verdict": "delay to ~32100 or reorder/buy enabler first",
+   "grade": "CALCULATED",
+   "margin": "+137%",
+   "gap": 16900,
+   "B": null,
+   "F7": "ULT-ONLY"
+  },
+  {
+   "item": "Tankbuster",
+   "souls": 17600,
+   "kind": "hit",
+   "flag": "ULT-ONLY",
+   "verdict": "skip/swap",
+   "grade": "CALCULATED",
+   "margin": "+24%",
+   "gap": null,
+   "B": "ULT-ONLY",
+   "F7": "ULT-ONLY"
+  },
+  {
+   "item": "Compress Cooldown",
+   "souls": 19200,
+   "kind": "imbue",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Hollow Point",
+   "souls": 23200,
+   "kind": "selfhp",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Superior Cooldown",
+   "souls": 24800,
+   "kind": "cast",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Mystic Reverb",
+   "souls": 33600,
+   "kind": "hitimb",
+   "flag": "UNCOMPUTED-WEAPON-SCALED",
+   "verdict": "check by hand / sandbox",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "-100%",
+   "gap": null,
+   "B": "UNCOMPUTED-WEAPON-SCALED",
+   "F7": "UNCOMPUTED-WEAPON-SCALED"
+  },
+  {
+   "item": "Glass Cannon",
+   "souls": 44800,
+   "kind": "stack",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Crippling Headshot",
+   "souls": 51200,
+   "kind": "proc",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  }
+ ],
+ "assumptions": {
+  "game_build": "6801 (gt repo); installed client 6819 unverified",
+  "point_model": "A (unlock currency separate, 1/2/5 AP)",
+  "charge_rule": "2+ charges (Kieran); F7 alternative reported",
+  "walk": "core boxes L-R, components consumed, sells dropped"
+ }
+}

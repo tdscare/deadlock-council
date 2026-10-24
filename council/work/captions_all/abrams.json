@@ -1,0 +1,3581 @@
+{
+ "schema": 1,
+ "id": "abrams",
+ "hero": "Abrams",
+ "name": "Rizuhble's Human Shield Abrams",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-9,600 (levels 1-16). Abilities gained (both point models agree): Seismic Impact T3. 4.8k spikes: spirit 4.8k at Extra Spirit, vitality 4.8k at Enduring Speed.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "abrams:7:phase_range:5737",
+    "abrams:7:phase_abilities:5738",
+    "abrams:7:phase_spikes:5747"
+   ],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Strike",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Extra Spirit completes 4,000 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Extra Spirit completes 4.8k spirit in 4000 souls (~4.0 min), 3 purchases",
+     "claim_ids": [
+      "abrams:1:spike_progress:5721"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:1:spike_progress:5721",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Arcane Surge",
+     "imbue": null,
+     "caption": "+20 spirit adds about 28 to Shoulder Charge's damage (1.40x scaling), your steepest spirit scaling.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:2:spirit_scaling:5725"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:2:spirit_scaling:5725",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Duration Extender",
+     "imbue": "1",
+     "caption": "Imbued on Siphon Life: its duration-scaled parts (duration 4s) get +22%.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:3:imbue_duration:5727"
+     ],
+     "lint": [],
+     "legacy_note": "On Siphon Life.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:3:imbue_duration:5727",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (4,000 to 4,800 invested): bonus 19 to 38 spirit power. +10 spirit adds about 23.2 to Seismic Impact's damage (2.33x scaling), your steepest spirit scaling.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:4:spike_complete:5729",
+      "abrams:4:spirit_scaling:5731"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:4:spike_complete:5729",
+       true,
+       "inventory spirit: before 4000, after 4800, threshold 4800"
+      ],
+      [
+       "abrams:4:spirit_scaling:5731",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Healing Booster",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Healbane",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on.",
+     "cls": "b",
+     "why": "imminent: Enduring Speed completes 4.8k vitality in 1600 souls (~1.6 min), 1 purchases",
+     "claim_ids": [
+      "abrams:6:spike_progress:5734"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:6:spike_progress:5734",
+       true,
+       "3200"
+      ]
+     ]
+    },
+    {
+     "name": "Enduring Speed",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (3,200 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:7:spike_complete:5736"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:7:spike_complete:5736",
+       true,
+       "inventory vitality: before 3200, after 4800, threshold 4800"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 9,600-22,400 (levels 16-26). Abilities gained (both point models agree): Siphon Life T3. Your biggest single spirit hit (Shoulder Charge, damage) grows from 130 to 196.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "abrams:15:phase_range:5768",
+    "abrams:15:phase_abilities:5769",
+    "abrams:15:phase_power:5770"
+   ],
+   "items": [
+    {
+     "name": "Mystic Expansion",
+     "imbue": "1",
+     "caption": "Imbued on Siphon Life: widens its radius.",
+     "cls": "b",
+     "why": "imminent: Compress Cooldown completes 6.4k spirit in 1600 souls (~1.6 min), 1 purchases",
+     "claim_ids": [
+      "abrams:8:imbue_reach:5749"
+     ],
+     "lint": [],
+     "legacy_note": "On Siphon Life.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:8:imbue_reach:5749",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "1",
+     "caption": "Imbued on Siphon Life: takes 18% off its 22s base cooldown. Takes spirit from 5,600 to 7,200 invested: bonus 38 to 45 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:9:imbue_cooldown:5752",
+      "abrams:9:invest_step:5751"
+     ],
+     "lint": [],
+     "legacy_note": "On Siphon Life.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:9:imbue_cooldown:5752",
+       true,
+       ""
+      ],
+      [
+       "abrams:9:invest_step:5751",
+       true,
+       "inventory spirit: before 5600, after 7200, threshold 6400"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Snatch",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 7,200 to 9,600 invested: bonus 45 to 52 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 41.9 to Seismic Impact's damage (2.33x scaling), your steepest spirit scaling. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:11:spirit_scaling:5758",
+      "abrams:11:upgrade_of:5757"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:11:spirit_scaling:5758",
+       true,
+       ""
+      ],
+      [
+       "abrams:11:upgrade_of:5757",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Superior Duration",
+     "imbue": null,
+     "caption": "+28% to every duration-scaled effect you have: Seismic Impact immunity duration (5s), Seismic Impact stun duration (2.4s), Siphon Life duration (6s). Takes spirit from 10,400 to 12,000 invested: bonus 52 to 59 spirit power. Upgrade of Duration Extender (already owned): costs 1,600 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:12:dur_global:5761",
+      "abrams:12:invest_step:5759",
+      "abrams:12:upgrade_of:5760"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:12:dur_global:5761",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "abrams:12:invest_step:5759",
+       true,
+       "inventory spirit: before 10400, after 12000, threshold 11200"
+      ],
+      [
+       "abrams:12:upgrade_of:5760",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: With 3 abilities trained their base cooldowns total 240s; 20% off is 48s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Vulnerability",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Greater Expansion",
+     "imbue": null,
+     "caption": "+30% range and radius on everything that scales with them: Seismic Impact impact radius (15m), Siphon Life radius (10m). Takes spirit from 15,200 to 17,600 invested: bonus 59 to 66 spirit power. Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:15:global_reach:5765",
+      "abrams:15:invest_step:5766",
+      "abrams:15:upgrade_of:5767"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:15:global_reach:5765",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "abrams:15:invest_step:5766",
+       true,
+       "inventory spirit: before 15200, after 17600, threshold 16000"
+      ],
+      [
+       "abrams:15:upgrade_of:5767",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 22,400-44,800 (levels 26-34). Abilities gained (both point models agree): Infernal Resilience T3. Your biggest single spirit hit (Shoulder Charge, damage) grows from 196 to 332.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "abrams:19:phase_range:5782",
+    "abrams:19:phase_abilities:5783",
+    "abrams:19:phase_power:5784"
+   ],
+   "items": [
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 11,200 invested, crossing the 6.4k, 8k, 11.2k tiers: bonus 38 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Scourge",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 17,600 to 24,000 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Cast it on yourself as you ult in.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 69.8 to Seismic Impact's damage (2.33x scaling), your steepest spirit scaling. Takes spirit from 24,000 to 28,800 invested: bonus 75 to 100 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:18:spirit_scaling:5780",
+      "abrams:18:invest_step:5778",
+      "abrams:18:upgrade_of:5779"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:18:spirit_scaling:5780",
+       true,
+       ""
+      ],
+      [
+       "abrams:18:invest_step:5778",
+       true,
+       "inventory spirit: before 24000, after 28800, threshold 28800"
+      ],
+      [
+       "abrams:18:upgrade_of:5779",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Healbane? Buy what is killing you, cheapest first. Not dying? Skip. Sell Arcane Surge.",
+   "desc": "Dying after Healbane? Buy what is killing you, cheapest first. Not dying? Skip. Sell Arcane Surge.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:20:defence_gun:5788"
+     ],
+     "lint": [],
+     "legacy_note": "Against gun heroes: Haze, Wraith, Vindicta, Infernus.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:20:defence_gun:5788",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:20:defence_bullet:5789"
+     ],
+     "lint": [],
+     "legacy_note": "Against gun heroes who stand still and shoot you: Wraith, Haze, Bebop.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:20:defence_bullet:5789",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Bullet Resilience",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Two or more gun heroes keep hitting you.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:20:defence_spirit:5790"
+     ],
+     "lint": [],
+     "legacy_note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:20:defence_spirit:5790",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spellbreaker",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Against spirit heroes: Seven, Geist, Pocket, Kelvin.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:20:defence_parry:5791"
+     ],
+     "lint": [],
+     "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:20:defence_parry:5791",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:20:defence_purge:5792"
+     ],
+     "lint": [],
+     "legacy_note": "Slowing Hex, Infernus burn, Knockdown before it lands.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:20:defence_purge:5792",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Infuser",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 11,200 to 16,000 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Siphon Life hits many times a second, so the lifesteal heals a lot. Sell Healbane for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Arcane Surge for this, or Superior Duration if it's gone.",
+     "temporary": true,
+     "verify": []
+    },
+    {
+     "name": "Colossus",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Spirit Snatch for this.",
+     "temporary": true,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:20:defence_barrier:5799"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:20:defence_barrier:5799",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Healing Tempo",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:20:upgrade_delta:5800"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Healing Booster.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:20:upgrade_delta:5800",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Juggernaut",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:20:upgrade_delta:5802"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Enduring Speed.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:20:upgrade_delta:5802",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams:20:upgrade_delta:5804"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams:20:upgrade_delta:5804",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "abrams:0:spike_progress:5719": {
+   "id": "abrams:0:spike_progress:5719",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Extra Regen",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "abrams:0:component_for:5720": {
+   "id": "abrams:0:component_for:5720",
+   "kind": "component_for",
+   "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Extra Regen",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Healing Booster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Healing Booster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:1:spike_progress:5721": {
+   "id": "abrams:1:spike_progress:5721",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Extra Spirit completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Spirit Strike",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Extra Spirit completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "abrams:1:component_for:5722": {
+   "id": "abrams:1:component_for:5722",
+   "kind": "component_for",
+   "phrase": "From Spirit Snatch: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Spirit Strike",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12800,
+    "event": "Spirit Snatch"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Snatch"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:2:spike_progress:5723": {
+   "id": "abrams:2:spike_progress:5723",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Arcane Surge",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "abrams:2:swap_candidate:5724": {
+   "id": "abrams:2:swap_candidate:5724",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Spirit Burn later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 2,
+    "item": "Arcane Surge",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Arcane Surge",
+    "buyer": "Spirit Burn"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:2:spirit_scaling:5725": {
+   "id": "abrams:2:spirit_scaling:5725",
+   "kind": "spirit_scaling",
+   "phrase": "+20 spirit adds about 28 to Shoulder Charge's damage (1.40x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_arcane_surge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_charge"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 2,
+    "item": "Arcane Surge",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "20.0",
+    "28",
+    "1.40"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams:3:spike_progress:5726": {
+   "id": "abrams:3:spike_progress:5726",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 4,000 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Duration Extender",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "abrams:3:imbue_duration:5727": {
+   "id": "abrams:3:imbue_duration:5727",
+   "kind": "imbue_duration",
+   "phrase": "Imbued on Siphon Life: its duration-scaled parts (duration 4s) get +22%.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_arcane_extension",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_heal"
+   ],
+   "score": 58,
+   "point": {
+    "idx": 3,
+    "item": "Duration Extender",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 1,
+    "stats": [
+     "ETechDuration"
+    ]
+   },
+   "numbers": [
+    "22.0",
+    "4"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams:3:component_for:5728": {
+   "id": "abrams:3:component_for:5728",
+   "kind": "component_for",
+   "phrase": "From Superior Duration: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Duration Extender",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12000,
+    "event": "Superior Duration"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Duration"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:4:spike_complete:5729": {
+   "id": "abrams:4:spike_complete:5729",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (4,000 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 4,
+    "item": "Extra Spirit",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "abrams:4:component_for:5730": {
+   "id": "abrams:4:component_for:5730",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Extra Spirit",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 9600,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:4:spirit_scaling:5731": {
+   "id": "abrams:4:spirit_scaling:5731",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 23.2 to Seismic Impact's damage (2.33x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_leap"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 4,
+    "item": "Extra Spirit",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "10.0",
+    "23.2",
+    "2.33"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams:5:spike_progress:5732": {
+   "id": "abrams:5:spike_progress:5732",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Healing Booster",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "abrams:5:upgrade_of:5733": {
+   "id": "abrams:5:upgrade_of:5733",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Regen (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 5,
+    "item": "Healing Booster",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Regen"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:6:spike_progress:5734": {
+   "id": "abrams:6:spike_progress:5734",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Healbane",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Enduring Speed completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "abrams:6:swap_candidate:5735": {
+   "id": "abrams:6:swap_candidate:5735",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Infuser later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 6,
+    "item": "Healbane",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Healbane",
+    "buyer": "Infuser"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:7:spike_complete:5736": {
+   "id": "abrams:7:spike_complete:5736",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (3,200 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "abrams:7:phase_range:5737": {
+   "id": "abrams:7:phase_range:5737",
+   "kind": "phase_range",
+   "phrase": "Souls 0-9,600 (levels 1-16).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Enduring Speed",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "9,600",
+    "1",
+    "16"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:7:phase_abilities:5738": {
+   "id": "abrams:7:phase_abilities:5738",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Seismic Impact T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Enduring Speed",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:7:phase_spikes:5747": {
+   "id": "abrams:7:phase_spikes:5747",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Extra Spirit, vitality 4.8k at Enduring Speed.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Enduring Speed",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:8:spike_progress:5748": {
+   "id": "abrams:8:spike_progress:5748",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 6.4k spirit tier, which Compress Cooldown completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 8,
+    "item": "Mystic Expansion",
+    "souls": 10400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Compress Cooldown completes the 6.4k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k",
+    1600,
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 6400
+  },
+  "abrams:8:imbue_reach:5749": {
+   "id": "abrams:8:imbue_reach:5749",
+   "kind": "imbue_reach",
+   "phrase": "Imbued on Siphon Life: widens its radius.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_reach",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_heal"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 8,
+    "item": "Mystic Expansion",
+    "souls": 10400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 1,
+    "stats": [
+     "ETechRange",
+     "ETechRadius"
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams:8:component_for:5750": {
+   "id": "abrams:8:component_for:5750",
+   "kind": "component_for",
+   "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 8,
+    "item": "Mystic Expansion",
+    "souls": 10400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12000,
+    "event": "Greater Expansion"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Greater Expansion"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:9:invest_step:5751": {
+   "id": "abrams:9:invest_step:5751",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 5,600 to 7,200 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Compress Cooldown",
+    "souls": 12000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "7200",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "abrams:9:imbue_cooldown:5752": {
+   "id": "abrams:9:imbue_cooldown:5752",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Siphon Life: takes 18% off its 22s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_heal"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 9,
+    "item": "Compress Cooldown",
+    "souls": 12000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 1
+   },
+   "numbers": [
+    "18.0",
+    "22.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams:9:component_for:5753": {
+   "id": "abrams:9:component_for:5753",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Compress Cooldown",
+    "souls": 12000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 6400,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:10:invest_step:5754": {
+   "id": "abrams:10:invest_step:5754",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 7,200 to 9,600 invested: bonus 45 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Spirit Snatch",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "9600",
+    "45.0",
+    "52.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "abrams:10:upgrade_of:5755": {
+   "id": "abrams:10:upgrade_of:5755",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Strike (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Spirit Snatch",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Strike"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:10:swap_candidate:5756": {
+   "id": "abrams:10:swap_candidate:5756",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Colossus later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 10,
+    "item": "Spirit Snatch",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Snatch",
+    "buyer": "Colossus"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:11:upgrade_of:5757": {
+   "id": "abrams:11:upgrade_of:5757",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Improved Spirit",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:11:spirit_scaling:5758": {
+   "id": "abrams:11:spirit_scaling:5758",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 41.9 to Seismic Impact's damage (2.33x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_leap"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 11,
+    "item": "Improved Spirit",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "18.0",
+    "41.9",
+    "2.33"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams:12:invest_step:5759": {
+   "id": "abrams:12:invest_step:5759",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 10,400 to 12,000 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Superior Duration",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "10400",
+    "12000",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "abrams:12:upgrade_of:5760": {
+   "id": "abrams:12:upgrade_of:5760",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Duration Extender (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 12,
+    "item": "Superior Duration",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Duration Extender"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:12:dur_global:5761": {
+   "id": "abrams:12:dur_global:5761",
+   "kind": "dur_global",
+   "phrase": "+28% to every duration-scaled effect you have: Seismic Impact immunity duration (5s), Seismic Impact stun duration (2.4s), Siphon Life duration (6s).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_imbued_duration_extender",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_heal",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_leap"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 12,
+    "item": "Superior Duration",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "dur_global"
+   },
+   "numbers": [
+    "28.0",
+    "5",
+    "2.4",
+    "6"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams:13:upgrade_of:5762": {
+   "id": "abrams:13:upgrade_of:5762",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Superior Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:13:cdr_rotation:5763": {
+   "id": "abrams:13:cdr_rotation:5763",
+   "kind": "cdr_rotation",
+   "phrase": "With 3 abilities trained their base cooldowns total 240s; 20% off is 48s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_heal",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_leap"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 13,
+    "item": "Superior Cooldown",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     4
+    ]
+   },
+   "numbers": [
+    "3",
+    "240",
+    "20.0",
+    "48"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams:14:component_for:5764": {
+   "id": "abrams:14:component_for:5764",
+   "kind": "component_for",
+   "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Mystic Vulnerability",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 24800,
+    "event": "Escalating Exposure"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:15:global_reach:5765": {
+   "id": "abrams:15:global_reach:5765",
+   "kind": "global_reach",
+   "phrase": "+30% range and radius on everything that scales with them: Seismic Impact impact radius (15m), Siphon Life radius (10m).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_range",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_heal",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_leap"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 15,
+    "item": "Greater Expansion",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "global_reach"
+   },
+   "numbers": [
+    "30",
+    "15",
+    "10"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams:15:invest_step:5766": {
+   "id": "abrams:15:invest_step:5766",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 15,200 to 17,600 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Greater Expansion",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "15200",
+    "17600",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "abrams:15:upgrade_of:5767": {
+   "id": "abrams:15:upgrade_of:5767",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Greater Expansion",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Expansion"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:15:phase_range:5768": {
+   "id": "abrams:15:phase_range:5768",
+   "kind": "phase_range",
+   "phrase": "Souls 9,600-22,400 (levels 16-26).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Greater Expansion",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Greater Expansion",
+    "keys": []
+   },
+   "numbers": [
+    "9,600",
+    "22,400",
+    "16",
+    "26"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:15:phase_abilities:5769": {
+   "id": "abrams:15:phase_abilities:5769",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Siphon Life T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Greater Expansion",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Greater Expansion",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:15:phase_power:5770": {
+   "id": "abrams:15:phase_power:5770",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Shoulder Charge, damage) grows from 130 to 196.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_charge",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Greater Expansion",
+    "souls": 22400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Greater Expansion",
+    "keys": []
+   },
+   "numbers": [
+    "130",
+    "196"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:16:invest_step:5776": {
+   "id": "abrams:16:invest_step:5776",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 11,200 invested, crossing the 6.4k, 8k, 11.2k tiers: bonus 38 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Witchmail",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "11200",
+    "38.0",
+    "50.0",
+    "6.4k",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "abrams:17:invest_step:5777": {
+   "id": "abrams:17:invest_step:5777",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 17,600 to 24,000 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Scourge",
+    "souls": 35200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "24000",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "abrams:18:invest_step:5778": {
+   "id": "abrams:18:invest_step:5778",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 24,000 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Boundless Spirit",
+    "souls": 40000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "24000",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "abrams:18:upgrade_of:5779": {
+   "id": "abrams:18:upgrade_of:5779",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Boundless Spirit",
+    "souls": 40000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:18:spirit_scaling:5780": {
+   "id": "abrams:18:spirit_scaling:5780",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 69.8 to Seismic Impact's damage (2.33x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_leap"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 18,
+    "item": "Boundless Spirit",
+    "souls": 40000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "30.0",
+    "69.8",
+    "2.33"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams:19:upgrade_of:5781": {
+   "id": "abrams:19:upgrade_of:5781",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Vulnerability (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Escalating Exposure",
+    "souls": 44800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Vulnerability"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:19:phase_range:5782": {
+   "id": "abrams:19:phase_range:5782",
+   "kind": "phase_range",
+   "phrase": "Souls 22,400-44,800 (levels 26-34).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Escalating Exposure",
+    "souls": 44800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Escalating Exposure",
+    "keys": []
+   },
+   "numbers": [
+    "22,400",
+    "44,800",
+    "26",
+    "34"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:19:phase_abilities:5783": {
+   "id": "abrams:19:phase_abilities:5783",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Infernal Resilience T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Escalating Exposure",
+    "souls": 44800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Escalating Exposure",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:19:phase_power:5784": {
+   "id": "abrams:19:phase_power:5784",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Shoulder Charge, damage) grows from 196 to 332.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_charge",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Escalating Exposure",
+    "souls": 44800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Escalating Exposure",
+    "keys": []
+   },
+   "numbers": [
+    "196",
+    "332"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:20:defence_gun:5788": {
+   "id": "abrams:20:defence_gun:5788",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Plated Armor",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Against gun heroes: Haze, Wraith, Vindicta, Infernus."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:20:defence_bullet:5789": {
+   "id": "abrams:20:defence_bullet:5789",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Metal Skin",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Against gun heroes who stand still and shoot you: Wraith, Haze, Bebop."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:20:defence_spirit:5790": {
+   "id": "abrams:20:defence_spirit:5790",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Resilience",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:20:defence_parry:5791": {
+   "id": "abrams:20:defence_parry:5791",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Counterspell",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Lash ult, Infernus ult. Anything big you can see coming."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:20:defence_purge:5792": {
+   "id": "abrams:20:defence_purge:5792",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Dispel Magic",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Slowing Hex, Infernus burn, Knockdown before it lands."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:20:invest_step:5793": {
+   "id": "abrams:20:invest_step:5793",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 11,200 to 16,000 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Infuser",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Siphon Life hits many times a second, so the lifesteal heals a lot. Sell Healbane for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "16000",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "abrams:20:sell_swap:5794": {
+   "id": "abrams:20:sell_swap:5794",
+   "kind": "sell_swap",
+   "phrase": "Replaces Healbane: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Infuser",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Siphon Life hits many times a second, so the lifesteal heals a lot. Sell Healbane for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Healbane",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Healbane"
+  },
+  "abrams:20:burn_trigger_modelled:5795": {
+   "id": "abrams:20:burn_trigger_modelled:5795",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Shoulder Charge (332) = 332 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Burn",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Arcane Surge for this, or Superior Duration if it's gone."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "332",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams:20:sell_swap:5796": {
+   "id": "abrams:20:sell_swap:5796",
+   "kind": "sell_swap",
+   "phrase": "Replaces Arcane Surge: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Burn",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Arcane Surge for this, or Superior Duration if it's gone."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Arcane Surge",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Arcane Surge"
+  },
+  "abrams:20:invest_step:5797": {
+   "id": "abrams:20:invest_step:5797",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Colossus",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Snatch for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "17600",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "abrams:20:sell_swap:5798": {
+   "id": "abrams:20:sell_swap:5798",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Snatch: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Colossus",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Snatch for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Snatch",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Snatch"
+  },
+  "abrams:20:defence_barrier:5799": {
+   "id": "abrams:20:defence_barrier:5799",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Divine Barrier",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:20:upgrade_delta:5800": {
+   "id": "abrams:20:upgrade_delta:5800",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healbuff",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healing_booster"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Healing Tempo",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Healing Booster"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "35",
+    "0",
+    "10"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:20:upgrade_of:5801": {
+   "id": "abrams:20:upgrade_of:5801",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Healing Booster (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Healing Tempo",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Healing Booster"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:20:upgrade_delta:5802": {
+   "id": "abrams:20:upgrade_delta:5802",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_juggernaut",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cardio_calibrator"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Juggernaut",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Enduring Speed"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "40",
+    "25",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:20:upgrade_of:5803": {
+   "id": "abrams:20:upgrade_of:5803",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Enduring Speed (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Juggernaut",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Enduring Speed"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams:20:upgrade_delta:5804": {
+   "id": "abrams:20:upgrade_delta:5804",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams:20:upgrade_of:5805": {
+   "id": "abrams:20:upgrade_of:5805",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 44800,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "abrams",
+   "item": "Extra Regen",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "abrams:0:component_for:5720",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Healing Booster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams",
+   "item": "Spirit Strike",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Extra Spirit completes 4.8k spirit in 4000 souls (~4.0 min), 3 purchases",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "abrams:1:spike_progress:5721",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Extra Spirit completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Extra Spirit completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "abrams:1:component_for:5722",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spirit Snatch: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 12800,
+      "event": "Spirit Snatch"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams",
+   "item": "Duration Extender",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Siphon Life."
+  },
+  {
+   "build": "abrams",
+   "item": "Healing Booster",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 6400,
+   "unpublished": []
+  },
+  {
+   "build": "abrams",
+   "item": "Healbane",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Enduring Speed completes 4.8k vitality in 1600 souls (~1.6 min), 1 purchases",
+   "souls": 8000,
+   "unpublished": [
+    {
+     "id": "abrams:6:spike_progress:5734",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Enduring Speed completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams",
+   "item": "Mystic Expansion",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Compress Cooldown completes 6.4k spirit in 1600 souls (~1.6 min), 1 purchases",
+   "souls": 10400,
+   "unpublished": [
+    {
+     "id": "abrams:8:spike_progress:5748",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 6.4k spirit tier, which Compress Cooldown completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Compress Cooldown completes the 6.4k spirit tier"
+     }
+    },
+    {
+     "id": "abrams:8:component_for:5750",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 12000,
+      "event": "Greater Expansion"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams",
+   "item": "Mystic Expansion",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Siphon Life."
+  },
+  {
+   "build": "abrams",
+   "item": "Compress Cooldown",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Siphon Life."
+  },
+  {
+   "build": "abrams",
+   "item": "Mystic Vulnerability",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+   "souls": 20000,
+   "unpublished": [
+    {
+     "id": "abrams:14:component_for:5764",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 24800,
+      "event": "Escalating Exposure"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams",
+   "item": "Scourge",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Cast it on yourself as you ult in."
+  },
+  {
+   "build": "abrams",
+   "item": "Escalating Exposure",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 44800,
+   "unpublished": []
+  },
+  {
+   "build": "abrams",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Against gun heroes: Haze, Wraith, Vindicta, Infernus."
+  },
+  {
+   "build": "abrams",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Against gun heroes who stand still and shoot you: Wraith, Haze, Bebop."
+  },
+  {
+   "build": "abrams",
+   "item": "Bullet Resilience",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 44800,
+   "unpublished": []
+  },
+  {
+   "build": "abrams",
+   "item": "Bullet Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Two or more gun heroes keep hitting you."
+  },
+  {
+   "build": "abrams",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+  },
+  {
+   "build": "abrams",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 44800,
+   "unpublished": []
+  },
+  {
+   "build": "abrams",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Against spirit heroes: Seven, Geist, Pocket, Kelvin."
+  },
+  {
+   "build": "abrams",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming."
+  },
+  {
+   "build": "abrams",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Slowing Hex, Infernus burn, Knockdown before it lands."
+  },
+  {
+   "build": "abrams",
+   "item": "Infuser",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Siphon Life hits many times a second, so the lifesteal heals a lot. Sell Healbane for this."
+  },
+  {
+   "build": "abrams",
+   "item": "Spirit Burn",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 44800,
+   "unpublished": [
+    {
+     "id": "abrams:20:burn_trigger_modelled:5795",
+     "tier": "MODELLED",
+     "phrase": "One rotation of Shoulder Charge (332) = 332 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams",
+   "item": "Spirit Burn",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Sell Arcane Surge for this, or Superior Duration if it's gone."
+  }
+ ],
+ "stats": {
+  "c": 2,
+  "b": 3,
+  "a": 18,
+  "g": 6,
+  "d": 5
+ }
+}

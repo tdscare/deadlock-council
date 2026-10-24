@@ -1,0 +1,96 @@
+{
+ "id": "graves_ult_refresher_second_stone",
+ "title": "Refresher right after Borrowed Decree: second gravestone at the same time?",
+ "hero": "Graves",
+ "playstyle": "Ult Graves",
+ "builds": [
+  "graves_ult"
+ ],
+ "question": "The old Refresher note claimed a third gravestone with Echo Shard. Echo can't go on the ult; does Refresher alone give two live gravestones, and can a natural recast add a third late?",
+ "hypothesis": "H-GU-3: after Refresher, two gravestones are alive together. Late (Superior Cooldown, Enchanter's, Kevlar) the ult cooldown (~81-85s, additive vs multiplicative) stays longer than its duration (~60s), so a third live stone needs both a natural recast inside the duration, which this predicts does NOT happen.",
+ "arms": [
+  {
+   "name": "refresher",
+   "items": [
+    "Refresher",
+    "Superior Cooldown",
+    "Superior Duration",
+    "Diviner's Kevlar",
+    "Enchanter's Emblem"
+   ],
+   "ability_order": "1123444224231133",
+   "imbues": {},
+   "souls": 54400,
+   "notes": ""
+  },
+  {
+   "name": "no_refresher",
+   "items": [
+    "Superior Cooldown",
+    "Superior Duration",
+    "Diviner's Kevlar",
+    "Enchanter's Emblem"
+   ],
+   "ability_order": "1123444224231133",
+   "imbues": {},
+   "souls": 54400,
+   "notes": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "max",
+  "souls": 54400,
+  "position": "open ground",
+  "enemies": [],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Cast Decree, then Refresher, then Decree; count live gravestones",
+  "Record Decree duration and cooldown from the HUD"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "live_stones",
+   "unit": "count",
+   "how": "count",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "decree_cd",
+   "unit": "s",
+   "how": "HUD",
+   "grade_target": "A",
+   "better": "lower",
+   "primary": false
+  },
+  {
+   "name": "decree_duration",
+   "unit": "s",
+   "how": "stopwatch",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "live_stones",
+  "min_effect_pct": 50,
+  "min_trials": 5,
+  "rule": "If refresher arm shows 2 live stones, SUPPORTS the note 'Use it right after your ult to cast it again'. If decree_cd < decree_duration, the note may add a third stone."
+ },
+ "blockedIfNo": []
+}

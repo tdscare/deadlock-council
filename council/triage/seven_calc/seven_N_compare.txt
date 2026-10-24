@@ -1,0 +1,107 @@
+# seven: whole-path comparison (WEAKNESS_PROCESS N), CALCULATED from game data (6801 = 6819 stats). Model-only, unvalidated.
+# spikes (walk1): CUR spirit 13.6k / health 11.2k; PROPOSED spirit 5.6k / health 12.8k; G spirit 5.6k / health 10.4k / Cultist 12.8k; H health 6.4k / spirit 10.4k / Cultist 12.8k; S spirit 5.6k / Cultist 8.8k / health 13.6k; C spirit 8.0k / Cultist 5.6k / health 12.8k
+# 'PS tier dmg/proc(no-dash)': Power Surge primary hit with Surge of Power imbued; first number counts Arcane Surge's +20 (needs a dash-jump), bracket = without it.
+## CUR_datajs (seven_cur.json)
+souls | last buy | inv g/s/v | HP | wpn% fr% | gun DPS sust | PS tier dmg/proc(no-dash) | PS window s | gun+PS dmg in window (cap) | storm DPS
+  2400 | Extra Stamina       | 800/800/800 | 1019 | 9 0 | 78 | T1 13(13) | 10.0 | 1036 | locked
+  4000 | Extra Stamina       | 800/800/800 | 1153 | 9 0 | 82 | T2 28(28) | 10.0 | 1368 | 110
+  5600 | Surge of Power      | 800/3200/800 | 1243 | 9 0 | 85 | T2 39(39) | 10.0 | 1758 | 113
+  7200 | Cultist Sacrifice   | 3200/3200/800 | 1382 | 28 0 | 104 | T2 40(40) | 10.0 | 1975 | 114
+  8800 | Spirit Lifesteal    | 3200/3200/2400 | 1640 | 28 0 | 108 | T2 43(43) | 10.0 | 2079 | 119
+ 10400 | Sprint Boots        | 3200/3200/3200 | 1803 | 28 0 | 111 | T2 44(44) | 10.0 | 2135 | 186
+ 12000 | Enduring Speed      | 3200/3200/5600 | 2166 | 28 0 | 115 | T2 48(48) | 10.0 | 2247 | 191
+ 12800 | Enduring Speed      | 3200/3200/5600 | 2222 | 28 0 | 117 | T2 48(48) | 10.0 | 2275 | 192
+ 13600 | Mystic Vulnerabilit | 3200/4800/5600 | 2222 | 28 0 | 117 | T2 55(55) | 10.0 | 2425 | 203
+ 16000 | Duration Extender   | 3200/6400/5600 | 2336 | 28 0 | 120 | T3 58(58) | 20.0 | 4894 | 209
+ 19200 | Arcane Surge        | 3200/10400/4800 | 2505 | 28 0 | 126 | T3 70(62) | 20.0 | 5164 | 215
+ 24000 | Escalating Exposure | 3200/15200/4800 | 2618 | 28 0 | 129 | T3 73(66) | 20.0 | 5380 | 220
+ 28800 | Superior Duration   | 3200/16800/4800 | 2732 | 28 0 | 133 | T3 76(69) | 25.6 | 7105 | 226
+ 40000 | Greater Expansion   | 3200/20800/16000 | 3420 | 28 0 | 140 | T3 78(71) | 25.6 | 7382 | 229
+ 46400 | Diviner's Kevlar    | 3200/20800/22400 | 3673 | 28 0 | 144 | T3 94(86) | 25.6 | 8292 | 254
+## PROPOSED (seven.js)
+souls | last buy | inv g/s/v | HP | wpn% fr% | gun DPS sust | PS tier dmg/proc(no-dash) | PS window s | gun+PS dmg in window (cap) | storm DPS
+  2400 | Extra Stamina       | 800/800/800 | 1019 | 9 0 | 78 | T1 13(13) | 10.0 | 1036 | locked
+  4000 | Arcane Surge        | 800/2400/0 | 1058 | 9 0 | 82 | T2 38(31) | 10.0 | 1426 | 115
+  5600 | Surge of Power      | 800/4800/0 | 1140 | 9 0 | 85 | T2 54(46) | 10.0 | 1908 | 124
+  7200 | Surge of Power      | 800/4800/0 | 1222 | 9 0 | 88 | T2 55(47) | 10.0 | 1959 | 126
+  8800 | Cultist Sacrifice   | 3200/4800/0 | 1354 | 28 0 | 108 | T2 56(48) | 10.0 | 2181 | 127
+ 10400 | Sprint Boots        | 3200/4800/2400 | 1734 | 28 0 | 111 | T2 59(51) | 10.0 | 2285 | 197
+ 12000 | Healbane            | 3200/4800/4000 | 1902 | 28 0 | 115 | T2 62(55) | 10.0 | 2397 | 202
+ 12800 | Enduring Speed      | 3200/4800/4800 | 2222 | 28 0 | 117 | T2 62(55) | 10.0 | 2425 | 203
+ 13600 | Enduring Speed      | 3200/4800/4800 | 2222 | 28 0 | 117 | T2 62(55) | 10.0 | 2425 | 203
+ 16000 | Duration Extender   | 3200/8000/4800 | 2336 | 28 0 | 120 | T3 68(61) | 20.0 | 5001 | 213
+ 19200 | Mystic Expansion    | 3200/10400/4800 | 2505 | 28 0 | 126 | T3 70(62) | 20.0 | 5164 | 215
+ 24000 | Escalating Exposure | 3200/15200/4800 | 2618 | 28 0 | 129 | T3 73(66) | 20.0 | 5380 | 220
+ 28800 | Superior Duration   | 3200/16800/4800 | 2732 | 28 0 | 133 | T3 76(69) | 25.6 | 7105 | 226
+ 40000 | Greater Expansion   | 3200/20800/16000 | 3420 | 28 0 | 140 | T3 78(71) | 25.6 | 7382 | 229
+ 46400 | Diviner's Kevlar    | 3200/20800/22400 | 3673 | 28 0 | 144 | T3 94(86) | 25.6 | 8292 | 254
+## G_greens_before_Cultist (s_G.json)
+souls | last buy | inv g/s/v | HP | wpn% fr% | gun DPS sust | PS tier dmg/proc(no-dash) | PS window s | gun+PS dmg in window (cap) | storm DPS
+  2400 | Extra Stamina       | 800/800/800 | 1019 | 9 0 | 78 | T1 13(13) | 10.0 | 1036 | locked
+  4000 | Arcane Surge        | 800/2400/0 | 1058 | 9 0 | 82 | T2 38(31) | 10.0 | 1426 | 115
+  5600 | Surge of Power      | 800/4800/0 | 1140 | 9 0 | 85 | T2 54(46) | 10.0 | 1908 | 124
+  7200 | Spirit Lifesteal    | 800/4800/1600 | 1459 | 9 0 | 88 | T2 57(50) | 10.0 | 2006 | 129
+  8800 | Sprint Boots        | 800/4800/2400 | 1590 | 9 0 | 92 | T2 58(50) | 10.0 | 2057 | 131
+ 10400 | Enduring Speed      | 800/4800/4800 | 2003 | 9 0 | 95 | T2 61(54) | 10.0 | 2162 | 201
+ 12000 | Enduring Speed      | 800/4800/4800 | 2116 | 9 0 | 98 | T2 62(55) | 10.0 | 2213 | 202
+ 12800 | Cultist Sacrifice   | 3200/4800/4800 | 2222 | 28 0 | 117 | T2 62(55) | 10.0 | 2425 | 203
+ 13600 | Cultist Sacrifice   | 3200/4800/4800 | 2222 | 28 0 | 117 | T2 62(55) | 10.0 | 2425 | 203
+ 16000 | Duration Extender   | 3200/8000/4800 | 2336 | 28 0 | 120 | T3 68(61) | 20.0 | 5001 | 213
+ 19200 | Mystic Expansion    | 3200/10400/4800 | 2505 | 28 0 | 126 | T3 70(62) | 20.0 | 5164 | 215
+ 24000 | Escalating Exposure | 3200/15200/4800 | 2618 | 28 0 | 129 | T3 73(66) | 20.0 | 5380 | 220
+ 28800 | Superior Duration   | 3200/16800/4800 | 2732 | 28 0 | 133 | T3 76(69) | 25.6 | 7105 | 226
+ 40000 | Greater Expansion   | 3200/20800/16000 | 3420 | 28 0 | 140 | T3 78(71) | 25.6 | 7382 | 229
+ 46400 | Diviner's Kevlar    | 3200/20800/22400 | 3673 | 28 0 | 144 | T3 94(86) | 25.6 | 8292 | 254
+## H_health_first (s_H.json)
+souls | last buy | inv g/s/v | HP | wpn% fr% | gun DPS sust | PS tier dmg/proc(no-dash) | PS window s | gun+PS dmg in window (cap) | storm DPS
+  2400 | Extra Stamina       | 800/800/800 | 1019 | 9 0 | 78 | T1 13(13) | 10.0 | 1036 | locked
+  4000 | Spirit Lifesteal    | 800/800/2400 | 1307 | 9 0 | 82 | T2 30(30) | 10.0 | 1412 | 114
+  5600 | Sprint Boots        | 800/800/3200 | 1458 | 9 0 | 85 | T2 31(31) | 10.0 | 1459 | 115
+  7200 | Enduring Speed      | 800/800/5600 | 1776 | 9 0 | 88 | T2 34(34) | 10.0 | 1557 | 121
+  8800 | Arcane Surge        | 800/2400/4800 | 1890 | 9 0 | 92 | T2 45(38) | 10.0 | 1663 | 127
+ 10400 | Surge of Power      | 800/4800/4800 | 2003 | 9 0 | 95 | T2 61(54) | 10.0 | 2162 | 201
+ 12000 | Surge of Power      | 800/4800/4800 | 2116 | 9 0 | 98 | T2 62(55) | 10.0 | 2213 | 202
+ 12800 | Cultist Sacrifice   | 3200/4800/4800 | 2222 | 28 0 | 117 | T2 62(55) | 10.0 | 2425 | 203
+ 13600 | Cultist Sacrifice   | 3200/4800/4800 | 2222 | 28 0 | 117 | T2 62(55) | 10.0 | 2425 | 203
+ 16000 | Duration Extender   | 3200/8000/4800 | 2336 | 28 0 | 120 | T3 68(61) | 20.0 | 5001 | 213
+ 19200 | Mystic Expansion    | 3200/10400/4800 | 2505 | 28 0 | 126 | T3 70(62) | 20.0 | 5164 | 215
+ 24000 | Escalating Exposure | 3200/15200/4800 | 2618 | 28 0 | 129 | T3 73(66) | 20.0 | 5380 | 220
+ 28800 | Superior Duration   | 3200/16800/4800 | 2732 | 28 0 | 133 | T3 76(69) | 25.6 | 7105 | 226
+ 40000 | Greater Expansion   | 3200/20800/16000 | 3420 | 28 0 | 140 | T3 78(71) | 25.6 | 7382 | 229
+ 46400 | Diviner's Kevlar    | 3200/20800/22400 | 3673 | 28 0 | 144 | T3 94(86) | 25.6 | 8292 | 254
+## S_SoP_then_Arcane (s_S.json)
+souls | last buy | inv g/s/v | HP | wpn% fr% | gun DPS sust | PS tier dmg/proc(no-dash) | PS window s | gun+PS dmg in window (cap) | storm DPS
+  2400 | Extra Stamina       | 800/800/800 | 1019 | 9 0 | 78 | T1 13(13) | 10.0 | 1036 | locked
+  4000 | Extra Stamina       | 800/800/800 | 1153 | 9 0 | 82 | T2 28(28) | 10.0 | 1368 | 110
+  5600 | Arcane Surge        | 800/4800/0 | 1140 | 9 0 | 85 | T2 54(46) | 10.0 | 1908 | 124
+  7200 | Arcane Surge        | 800/4800/0 | 1222 | 9 0 | 88 | T2 55(47) | 10.0 | 1959 | 126
+  8800 | Cultist Sacrifice   | 3200/4800/0 | 1354 | 28 0 | 108 | T2 56(48) | 10.0 | 2181 | 127
+ 10400 | Sprint Boots        | 3200/4800/2400 | 1734 | 28 0 | 111 | T2 59(51) | 10.0 | 2285 | 197
+ 12000 | Healbane            | 3200/4800/4000 | 1902 | 28 0 | 115 | T2 62(55) | 10.0 | 2397 | 202
+ 12800 | Enduring Speed      | 3200/4800/4800 | 2222 | 28 0 | 117 | T2 62(55) | 10.0 | 2425 | 203
+ 13600 | Enduring Speed      | 3200/4800/4800 | 2222 | 28 0 | 117 | T2 62(55) | 10.0 | 2425 | 203
+ 16000 | Duration Extender   | 3200/8000/4800 | 2336 | 28 0 | 120 | T3 68(61) | 20.0 | 5001 | 213
+ 19200 | Mystic Expansion    | 3200/10400/4800 | 2505 | 28 0 | 126 | T3 70(62) | 20.0 | 5164 | 215
+ 24000 | Escalating Exposure | 3200/15200/4800 | 2618 | 28 0 | 129 | T3 73(66) | 20.0 | 5380 | 220
+ 28800 | Superior Duration   | 3200/16800/4800 | 2732 | 28 0 | 133 | T3 76(69) | 25.6 | 7105 | 226
+ 40000 | Greater Expansion   | 3200/20800/16000 | 3420 | 28 0 | 140 | T3 78(71) | 25.6 | 7382 | 229
+ 46400 | Diviner's Kevlar    | 3200/20800/22400 | 3673 | 28 0 | 144 | T3 94(86) | 25.6 | 8292 | 254
+## C_Cultist_before_SoP (s_C.json)
+souls | last buy | inv g/s/v | HP | wpn% fr% | gun DPS sust | PS tier dmg/proc(no-dash) | PS window s | gun+PS dmg in window (cap) | storm DPS
+  2400 | Extra Stamina       | 800/800/800 | 1019 | 9 0 | 78 | T1 13(13) | 10.0 | 1036 | locked
+  4000 | Arcane Surge        | 800/2400/0 | 1058 | 9 0 | 82 | T2 38(31) | 10.0 | 1426 | 115
+  5600 | Cultist Sacrifice   | 3200/2400/0 | 1190 | 28 0 | 100 | T2 39(31) | 10.0 | 1622 | 117
+  7200 | Cultist Sacrifice   | 3200/2400/0 | 1272 | 28 0 | 104 | T2 40(32) | 10.0 | 1675 | 118
+  8800 | Surge of Power      | 3200/4800/0 | 1354 | 28 0 | 108 | T2 56(48) | 10.0 | 2181 | 127
+ 10400 | Sprint Boots        | 3200/4800/2400 | 1734 | 28 0 | 111 | T2 59(51) | 10.0 | 2285 | 197
+ 12000 | Healbane            | 3200/4800/4000 | 1902 | 28 0 | 115 | T2 62(55) | 10.0 | 2397 | 202
+ 12800 | Enduring Speed      | 3200/4800/4800 | 2222 | 28 0 | 117 | T2 62(55) | 10.0 | 2425 | 203
+ 13600 | Enduring Speed      | 3200/4800/4800 | 2222 | 28 0 | 117 | T2 62(55) | 10.0 | 2425 | 203
+ 16000 | Duration Extender   | 3200/8000/4800 | 2336 | 28 0 | 120 | T3 68(61) | 20.0 | 5001 | 213
+ 19200 | Mystic Expansion    | 3200/10400/4800 | 2505 | 28 0 | 126 | T3 70(62) | 20.0 | 5164 | 215
+ 24000 | Escalating Exposure | 3200/15200/4800 | 2618 | 28 0 | 129 | T3 73(66) | 20.0 | 5380 | 220
+ 28800 | Superior Duration   | 3200/16800/4800 | 2732 | 28 0 | 133 | T3 76(69) | 25.6 | 7105 | 226
+ 40000 | Greater Expansion   | 3200/20800/16000 | 3420 | 28 0 | 140 | T3 78(71) | 25.6 | 7382 | 229
+ 46400 | Diviner's Kevlar    | 3200/20800/22400 | 3673 | 28 0 | 144 | T3 94(86) | 25.6 | 8292 | 254
+
+# VERDICT (CALCULATED): PROPOSED vs CUR, Power Surge per proc (no dash / with dash): +18%/+38% at 5.6k, +18%/+38% at 7.2k, +12%/+30% at 8.8k, +15%/+29% at 12.0k, equal at 13.6k (CUR buys Mystic Vulnerability there). Storm DPS without dash +10% at 5.6k, +6% at 10.4k. Cost: health 4.8k at 12.8k instead of 11.2k: HP -4% at 10.4k, -12% at 12.0k, equal from 12.8k. G (greens before Cultist) = same damage, health 4.8k at 10.4k, Cultist 4.8k souls later (one 270 s Cultist cycle, +1 ball charge and +12% radius/range later); rejected: Kieran's Seven rule puts Cultist early (farm style) and the build's own Oct line says greens come straight after Cultist. Kept as rival hypothesis seven_N1. H (health first) delays spirit 4.8k to 10.4k and Cultist to 12.8k: rejected. S/C: same or later spikes, no gain.

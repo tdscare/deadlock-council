@@ -1,0 +1,242 @@
+{
+ "id": "bebop_support",
+ "hk": "hero_bebop",
+ "hero": "Bebop",
+ "tag": "Fix",
+ "name": "Rizuhble's Wingman Bebop",
+ "desc": "Support Bebop",
+ "tg": [
+  "utility",
+  "debuff",
+  "Heroic Aura"
+ ],
+ "abil": [
+  "Exploding Uppercut",
+  "Sticky Bomb",
+  "Grapple Arm",
+  "Hyper Beam"
+ ],
+ "order": [
+  3,
+  3,
+  1,
+  1,
+  2,
+  3,
+  4,
+  2,
+  2,
+  3,
+  4,
+  4,
+  1,
+  1,
+  4,
+  2
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Sell it for Unstoppable."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Spirit Strike",
+      "Works on your uppercut."
+     ],
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Bullet Resist Shredder",
+      "Hook, uppercut: the Spirit Strike hit drops their bullet resist for your whole team."
+     ],
+     [
+      "Extra Health",
+      ""
+     ],
+     [
+      "Sprint Boots",
+      ""
+     ],
+     [
+      "Trophy Collector",
+      ""
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ],
+     [
+      "Compress Cooldown",
+      "On Grapple Arm.",
+      "3"
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Fortitude",
+      ""
+     ],
+     [
+      "Heroic Aura",
+      "Only if your team has gun heroes."
+     ],
+     [
+      "Spirit Snatch",
+      ""
+     ],
+     [
+      "Hunter's Aura",
+      "Hook them into your team and stay within 15m of them."
+     ],
+     [
+      "Slowing Hex",
+      ""
+     ],
+     [
+      "Veil Walker",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Witchmail",
+      ""
+     ],
+     [
+      "Vortex Web",
+      ""
+     ],
+     [
+      "Unstoppable",
+      "Pop it before you walk in, so they can't stun you out of the hook."
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Fortitude if needed. Ahead? Skip it until you're dying. Sell Veil Walker for it.",
+    true,
+    [
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+     ],
+     [
+      "Metal Skin",
+      "One gun hero is deleting you: Haze, Wraith, Vindicta."
+     ],
+     [
+      "Dispel Magic",
+      "Knockdown before it lands, Slowing Hex, Disarming Hex."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun and Metal Skin isn't enough."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Swap for Heroic Aura",
+    "",
+    true,
+    [
+     [
+      "Spirit Rend",
+      "Instead of Heroic Aura when your team has no gun heroes."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Echo Shard",
+      "On Grapple Arm. Sell Bullet Resist Shredder for this.",
+      "3"
+     ],
+     [
+      "Scourge",
+      "Cast it on your carry. Sell Trophy Collector for this."
+     ],
+     [
+      "Divine Barrier",
+      "Sell Fortitude for this, or Dispel Magic if you bought it."
+     ],
+     [
+      "Refresher",
+      "Sell Veil Walker for this, or Boundless Spirit if a counter took it."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Round 13: new support build from Kieran's spec (Heroic Aura + Hunter's Aura, hook enemies to your carry, keep Bullet Resist Shredder and Spirit Snatch, early spirit invest) and kit numbers; no public support-Bebop build exists to copy (the in-game/lockbuilds/tracklock Bebop builds are gun or bomb). Kit: uppercut counts as melee so Spirit Strike/Snatch proc on it, the Strike hit is spirit damage so Shredder's -10% bullet resist applies, hook and uppercut both work on allies, hook 23s cooldown (Compress Cooldown target). Health items are the ones deadlocked.gg's in-game Bebop build uses for a hook-in Bebop (Sprint Boots, Trophy Collector, Fortitude, Veil Walker, Witchmail, Unstoppable). Order: seemeta highest-WR order 1324122131332444 (65.9% WR, 819 games; uppercut and hook maxed). No Rescue Beam: the hook already moves teammates.",
+  "Round 14: Divine Barrier added to rich (Dispel Magic is in Counters). Counters now sell Trophy Collector (Echo Shard also sold Shredder). Notes: Slowing Hex emptied ('can't dash away' was false: the hex doesn't stop stamina dashes), Vortex Web emptied ('pulls their whole team' overclaims a 12m capture), Heroic Aura emptied (explanation/how-to), Hunter's Aura cut to how it changes your play, Echo Shard cut to the imbue and sell. Lane box caption 'Losing lane?' and its sell names Unstoppable (the 12th slot). Dispel Magic no longer lists Yamato's grapple.",
+  "Round 15: ability order is now seemeta's highest-win-rate Bebop order exactly (the log claimed it but the build had moved all unlocks first). Counters now sell Veil Walker (description was 114 characters, over the game's 112 limit). Spirit Strike note 'Works on your uppercut.' (no proc jargon).",
+  "Round 17: Heroic Aura says 'Only if your team has gun heroes.'; new 'Swap for Heroic Aura' box: Knockdown (same 3.2k; the uppercut launches them, and Knockdown's stun lasts longer on airborne targets). Lane box caption 'Losing lane? Buy 1'.",
+  "Round 21: put back (Kieran's spec, he likes it); style unchanged. Slowing Hex out of lane (catching people isn't a lane problem) into Mid; Compress Cooldown on the hook moves into lane in its place (more hooks in lane now; spirit 4.8k and health 4.8k land at the same souls as before). New full late list to ~72k net: Echo Shard on the hook, Transcendent Cooldown (moved up from Slot locked), Scourge cast on your carry (40% spirit resist, debuff resist and a 10m damage aura on them), Divine Barrier as a real support buy (barrier + cleanse on a teammate, half cooldown on others), Refresher as the luxury last. Counters caption in the required format.",
+  "Round 23: kit re-read item by item; no change (see log).",
+  "Round 25: ability order 1132224131332444 → 3311234223441142 (kit-based for this playstyle, no idle early points).",
+  "Slot locked: Transcendent Cooldown moved out of the rich box (Kieran rule: tiny-gain expensive upgrades are Slot locked).",
+  "Cost pass: Spirit Rend (gun) replaces Knockdown in the Heroic Aura swap so gun 4.8k holds."
+ ]
+}

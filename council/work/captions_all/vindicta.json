@@ -1,0 +1,3257 @@
+{
+ "schema": 1,
+ "id": "vindicta",
+ "hero": "Vindicta",
+ "name": "Rizuhble's Drive-By Vindicta",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Healing Rite",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Getting poked out in lane. Back off before you use it. Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-9,600 (levels 1-16). Abilities gained (both point models agree): Flight T3, Assassinate T1. 4.8k spikes: weapon 4.8k at Extended Magazine.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "vindicta:7:phase_range:3289",
+    "vindicta:7:phase_abilities:3290",
+    "vindicta:7:phase_spikes:3299"
+   ],
+   "items": [
+    {
+     "name": "High-Velocity Rounds",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 4,000 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Extended Magazine completes 4.8k weapon in 4000 souls (~4.0 min), 4 purchases",
+     "claim_ids": [
+      "vindicta:0:spike_progress:3271"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:0:spike_progress:3271",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Long Range",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 2,400 souls on.",
+     "cls": "b",
+     "why": "imminent: Extended Magazine completes 4.8k weapon in 2400 souls (~2.4 min), 3 purchases",
+     "claim_ids": [
+      "vindicta:1:spike_progress:3273"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:1:spike_progress:3273",
+       true,
+       "2400"
+      ]
+     ]
+    },
+    {
+     "name": "Sharpshooter",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 1,600 souls on. Upgrade of Long Range, High-Velocity Rounds (already owned): costs 800 souls more, not 3,200.",
+     "cls": "b",
+     "why": "imminent: Extended Magazine completes 4.8k weapon in 1600 souls (~1.6 min), 2 purchases",
+     "claim_ids": [
+      "vindicta:2:spike_progress:3275",
+      "vindicta:2:upgrade_of:3276"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:2:spike_progress:3275",
+       true,
+       "3200"
+      ],
+      [
+       "vindicta:2:upgrade_of:3276",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Rapid Rounds",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 800 souls on.",
+     "cls": "b",
+     "why": "imminent: Extended Magazine completes 4.8k weapon in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "vindicta:3:spike_progress:3277"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:3:spike_progress:3277",
+       true,
+       "4000"
+      ]
+     ]
+    },
+    {
+     "name": "Extended Magazine",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (4,000 to 4,800 invested): bonus 18 to 46% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:4:spike_complete:3279"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:4:spike_complete:3279",
+       true,
+       "inventory weapon: before 4000, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Extra Charge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Assassinate (2 to 3).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:5:charges:3283"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:5:charges:3283",
+       true,
+       "[4]"
+      ]
+     ]
+    },
+    {
+     "name": "Bullet Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Counterspell, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Rapid Recharge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Assassinate (3 to 4). Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:7:charges:3288",
+      "vindicta:7:upgrade_of:3287"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:7:charges:3288",
+       true,
+       "[4]"
+      ],
+      [
+       "vindicta:7:upgrade_of:3287",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 9,600-24,000 (levels 16-27). Abilities gained (both point models agree): Crow Familiar T3. Your biggest single spirit hit (Stake, damage) grows from 66.4 to 142. 4.8k spikes: vitality 4.8k at Counterspell, spirit 4.8k at Quicksilver Reload.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "vindicta:15:phase_range:3320",
+    "vindicta:15:phase_abilities:3321",
+    "vindicta:15:phase_power:3322",
+    "vindicta:15:phase_spikes:3331"
+   ],
+   "items": [
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus. Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:8:spike_complete:3300",
+      "vindicta:8:defence_parry:3301"
+     ],
+     "lint": [],
+     "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:8:spike_complete:3300",
+       true,
+       "inventory vitality: before 1600, after 4800, threshold 4800"
+      ],
+      [
+       "vindicta:8:defence_parry:3301",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Sprint Boots",
+     "imbue": null,
+     "caption": "Builds toward the 6.4k vitality tier, which Enduring Speed completes 800 souls on.",
+     "cls": "b",
+     "why": "imminent: Enduring Speed completes 6.4k vitality in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "vindicta:9:spike_progress:3302"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:9:spike_progress:3302",
+       true,
+       "5600"
+      ]
+     ]
+    },
+    {
+     "name": "Enduring Speed",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 5,600 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Quicksilver Reload",
+     "imbue": "3",
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power. Imbued on Crow Familiar: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:11:spike_complete:3306",
+      "vindicta:11:imbue_reload:3307"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:11:spike_complete:3306",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ],
+      [
+       "vindicta:11:imbue_reload:3307",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Swift Striker",
+     "imbue": null,
+     "caption": "Builds toward the 6.4k weapon tier, which Titanic Magazine completes 800 souls on. Upgrade of Rapid Rounds (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "imminent: Titanic Magazine completes 6.4k weapon in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "vindicta:12:spike_progress:3309",
+      "vindicta:12:upgrade_of:3310"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:12:spike_progress:3309",
+       true,
+       "5600"
+      ],
+      [
+       "vindicta:12:upgrade_of:3310",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Titanic Magazine",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 5,600 to 6,400 invested: bonus 46 to 54% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it for a counter.",
+     "temporary": true,
+     "verify": []
+    },
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 6,400 to 8,000 invested: bonus 42 to 46 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mercurial Magnum",
+     "imbue": "3",
+     "caption": "Imbued on Crow Familiar: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s. Takes spirit from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power. Upgrade of Quicksilver Reload (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:15:imbue_reload:3318",
+      "vindicta:15:invest_step:3317",
+      "vindicta:15:upgrade_of:3319"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:15:imbue_reload:3318",
+       true,
+       ""
+      ],
+      [
+       "vindicta:15:invest_step:3317",
+       true,
+       "inventory spirit: before 4800, after 9600, threshold 6400"
+      ],
+      [
+       "vindicta:15:upgrade_of:3319",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 24,000-46,400 (levels 27-35). Abilities gained (both point models agree): Assassinate T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "vindicta:20:phase_range:3337",
+    "vindicta:20:phase_abilities:3338"
+   ],
+   "items": [
+    {
+     "name": "Burst Fire",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 6,400 to 9,600 invested: bonus 54 to 62% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Leech",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 8,000 to 11,200 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Ricochet",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 9,600 to 16,000 invested, crossing the 11.2k, 16k tiers: bonus 62 to 86% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Blood Tribute",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Lucky Shot",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 19,200 to 25,600 invested: bonus 86 to 100% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Leech? Buy what is killing you, cheapest first. Not dying? Skip. Sell Swift Striker.",
+   "desc": "Dying after Leech? Buy what is killing you, cheapest first. Not dying? Skip. Sell Swift Striker.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:21:defence_bullet:3343"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun heroes shoot you out of the sky.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:21:defence_bullet:3343",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:21:defence_gun:3344"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:21:defence_gun:3344",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:21:defence_spirit:3345"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:21:defence_spirit:3345",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Flight (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:21:cc_exposure:3346"
+     ],
+     "lint": [],
+     "legacy_note": "Stuns and Knockdown keep dropping you out of Flight.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:21:cc_exposure:3346",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:21:defence_purge:3347"
+     ],
+     "lint": [],
+     "legacy_note": "Slows and hexes keep landing on you.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:21:defence_purge:3347",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Spiritual Overflow",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 25,600 to 30,400 invested: bonus 100 to 115% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Swift Striker for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Vampiric Burst",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Titanic Magazine for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:21:defence_barrier:3352"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:21:defence_barrier:3352",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Juggernaut",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta:21:upgrade_delta:3353"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Enduring Speed.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta:21:upgrade_delta:3353",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "vindicta:0:spike_progress:3271": {
+   "id": "vindicta:0:spike_progress:3271",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Extended Magazine completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "vindicta:0:component_for:3272": {
+   "id": "vindicta:0:component_for:3272",
+   "kind": "component_for",
+   "phrase": "From Sharpshooter: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Sharpshooter"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Sharpshooter"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:1:spike_progress:3273": {
+   "id": "vindicta:1:spike_progress:3273",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Long Range",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Extended Magazine completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "vindicta:1:component_for:3274": {
+   "id": "vindicta:1:component_for:3274",
+   "kind": "component_for",
+   "phrase": "From Sharpshooter: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Long Range",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Sharpshooter"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Sharpshooter"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:2:spike_progress:3275": {
+   "id": "vindicta:2:spike_progress:3275",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Sharpshooter",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Extended Magazine completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "vindicta:2:upgrade_of:3276": {
+   "id": "vindicta:2:upgrade_of:3276",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Long Range, High-Velocity Rounds (already owned): costs 800 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 2,
+    "item": "Sharpshooter",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Long Range",
+     "High-Velocity Rounds"
+    ]
+   },
+   "numbers": [
+    "800",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:3:spike_progress:3277": {
+   "id": "vindicta:3:spike_progress:3277",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Rapid Rounds",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Extended Magazine completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "vindicta:3:component_for:3278": {
+   "id": "vindicta:3:component_for:3278",
+   "kind": "component_for",
+   "phrase": "From Swift Striker: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Rapid Rounds",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12800,
+    "event": "Swift Striker"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Swift Striker"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:4:spike_complete:3279": {
+   "id": "vindicta:4:spike_complete:3279",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (4,000 to 4,800 invested): bonus 18 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 4,
+    "item": "Extended Magazine",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "18.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "vindicta:4:component_for:3280": {
+   "id": "vindicta:4:component_for:3280",
+   "kind": "component_for",
+   "phrase": "From Titanic Magazine: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Extended Magazine",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12800,
+    "event": "Titanic Magazine"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Titanic Magazine"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:5:spike_progress:3281": {
+   "id": "vindicta:5:spike_progress:3281",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Extra Charge",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "vindicta:5:component_for:3282": {
+   "id": "vindicta:5:component_for:3282",
+   "kind": "component_for",
+   "phrase": "From Rapid Recharge: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Extra Charge",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 4000,
+    "event": "Rapid Recharge"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Rapid Recharge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:5:charges:3283": {
+   "id": "vindicta:5:charges:3283",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Assassinate (2 to 3).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_extra_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 5,
+    "item": "Extra Charge",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     4
+    ]
+   },
+   "numbers": [
+    "1",
+    "2",
+    "3"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta:6:spike_progress:3284": {
+   "id": "vindicta:6:spike_progress:3284",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Bullet Lifesteal",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "vindicta:6:component_for:3285": {
+   "id": "vindicta:6:component_for:3285",
+   "kind": "component_for",
+   "phrase": "From Leech: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Bullet Lifesteal",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 23200,
+    "event": "Leech"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Leech"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:7:spike_progress:3286": {
+   "id": "vindicta:7:spike_progress:3286",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Rapid Recharge",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "vindicta:7:upgrade_of:3287": {
+   "id": "vindicta:7:upgrade_of:3287",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Rapid Recharge",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Charge"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:7:charges:3288": {
+   "id": "vindicta:7:charges:3288",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Assassinate (3 to 4).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_rapid_recharge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 7,
+    "item": "Rapid Recharge",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     4
+    ]
+   },
+   "numbers": [
+    "1",
+    "3",
+    "4"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta:7:phase_range:3289": {
+   "id": "vindicta:7:phase_range:3289",
+   "kind": "phase_range",
+   "phrase": "Souls 0-9,600 (levels 1-16).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Rapid Recharge",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Rapid Recharge",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "9,600",
+    "1",
+    "16"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:7:phase_abilities:3290": {
+   "id": "vindicta:7:phase_abilities:3290",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Flight T3, Assassinate T1.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Rapid Recharge",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Rapid Recharge",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:7:phase_spikes:3299": {
+   "id": "vindicta:7:phase_spikes:3299",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Extended Magazine.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Rapid Recharge",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Rapid Recharge",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:8:spike_complete:3300": {
+   "id": "vindicta:8:spike_complete:3300",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 8,
+    "item": "Counterspell",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "vindicta:8:defence_parry:3301": {
+   "id": "vindicta:8:defence_parry:3301",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 8,
+    "item": "Counterspell",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:9:spike_progress:3302": {
+   "id": "vindicta:9:spike_progress:3302",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 6.4k vitality tier, which Enduring Speed completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 9,
+    "item": "Sprint Boots",
+    "souls": 13600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Enduring Speed completes the 6.4k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k",
+    800,
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 6400
+  },
+  "vindicta:9:component_for:3303": {
+   "id": "vindicta:9:component_for:3303",
+   "kind": "component_for",
+   "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Sprint Boots",
+    "souls": 13600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Enduring Speed"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Enduring Speed"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:10:invest_step:3304": {
+   "id": "vindicta:10:invest_step:3304",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 5,600 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Enduring Speed",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "vindicta:10:upgrade_of:3305": {
+   "id": "vindicta:10:upgrade_of:3305",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Enduring Speed",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Sprint Boots"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:11:spike_complete:3306": {
+   "id": "vindicta:11:spike_complete:3306",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 11,
+    "item": "Quicksilver Reload",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "vindicta:11:imbue_reload:3307": {
+   "id": "vindicta:11:imbue_reload:3307",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Crow Familiar: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_quick_silver",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_sting"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 11,
+    "item": "Quicksilver Reload",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 3
+   },
+   "numbers": [
+    "18.0",
+    "10.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta:11:component_for:3308": {
+   "id": "vindicta:11:component_for:3308",
+   "kind": "component_for",
+   "phrase": "From Mercurial Magnum: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Quicksilver Reload",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 8000,
+    "event": "Mercurial Magnum"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Mercurial Magnum"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:12:spike_progress:3309": {
+   "id": "vindicta:12:spike_progress:3309",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 6.4k weapon tier, which Titanic Magazine completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 12,
+    "item": "Swift Striker",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Titanic Magazine completes the 6.4k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k",
+    800,
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 6400
+  },
+  "vindicta:12:upgrade_of:3310": {
+   "id": "vindicta:12:upgrade_of:3310",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Rapid Rounds (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 12,
+    "item": "Swift Striker",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Rapid Rounds"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:12:swap_candidate:3311": {
+   "id": "vindicta:12:swap_candidate:3311",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Spiritual Overflow later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 12,
+    "item": "Swift Striker",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Swift Striker",
+    "buyer": "Spiritual Overflow"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:13:invest_step:3312": {
+   "id": "vindicta:13:invest_step:3312",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 5,600 to 6,400 invested: bonus 46 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Titanic Magazine",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "6400",
+    "46.0",
+    "54.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 6400
+  },
+  "vindicta:13:upgrade_of:3313": {
+   "id": "vindicta:13:upgrade_of:3313",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extended Magazine (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Titanic Magazine",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extended Magazine"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:13:swap_candidate:3314": {
+   "id": "vindicta:13:swap_candidate:3314",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Vampiric Burst later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 13,
+    "item": "Titanic Magazine",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Titanic Magazine",
+    "buyer": "Vampiric Burst"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:14:invest_step:3315": {
+   "id": "vindicta:14:invest_step:3315",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 8,000 invested: bonus 42 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Spirit Lifesteal",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "8000",
+    "42.0",
+    "46.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "vindicta:14:component_for:3316": {
+   "id": "vindicta:14:component_for:3316",
+   "kind": "component_for",
+   "phrase": "From Leech: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Spirit Lifesteal",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 11200,
+    "event": "Leech"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Leech"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:15:invest_step:3317": {
+   "id": "vindicta:15:invest_step:3317",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Mercurial Magnum",
+    "souls": 24000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "9600",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "vindicta:15:imbue_reload:3318": {
+   "id": "vindicta:15:imbue_reload:3318",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Crow Familiar: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ethereal_bullets",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_sting"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 15,
+    "item": "Mercurial Magnum",
+    "souls": 24000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 3
+   },
+   "numbers": [
+    "14.0",
+    "22.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta:15:upgrade_of:3319": {
+   "id": "vindicta:15:upgrade_of:3319",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Quicksilver Reload (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Mercurial Magnum",
+    "souls": 24000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Quicksilver Reload"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:15:phase_range:3320": {
+   "id": "vindicta:15:phase_range:3320",
+   "kind": "phase_range",
+   "phrase": "Souls 9,600-24,000 (levels 16-27).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mercurial Magnum",
+    "souls": 24000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mercurial Magnum",
+    "keys": []
+   },
+   "numbers": [
+    "9,600",
+    "24,000",
+    "16",
+    "27"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:15:phase_abilities:3321": {
+   "id": "vindicta:15:phase_abilities:3321",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Crow Familiar T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mercurial Magnum",
+    "souls": 24000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mercurial Magnum",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:15:phase_power:3322": {
+   "id": "vindicta:15:phase_power:3322",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Stake, damage) grows from 66.4 to 142.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_chain",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mercurial Magnum",
+    "souls": 24000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mercurial Magnum",
+    "keys": []
+   },
+   "numbers": [
+    "66.4",
+    "142"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:15:phase_spikes:3331": {
+   "id": "vindicta:15:phase_spikes:3331",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Counterspell, spirit 4.8k at Quicksilver Reload.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mercurial Magnum",
+    "souls": 24000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mercurial Magnum",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:16:invest_step:3332": {
+   "id": "vindicta:16:invest_step:3332",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 6,400 to 9,600 invested: bonus 54 to 62% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Burst Fire",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "9600",
+    "54.0",
+    "62.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 8000
+  },
+  "vindicta:17:invest_step:3333": {
+   "id": "vindicta:17:invest_step:3333",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 8,000 to 11,200 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Leech",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "11200",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "vindicta:17:upgrade_of:3334": {
+   "id": "vindicta:17:upgrade_of:3334",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Bullet Lifesteal, Spirit Lifesteal (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Leech",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Bullet Lifesteal",
+     "Spirit Lifesteal"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta:18:invest_step:3335": {
+   "id": "vindicta:18:invest_step:3335",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 9,600 to 16,000 invested, crossing the 11.2k, 16k tiers: bonus 62 to 86% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Ricochet",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "16000",
+    "62.0",
+    "86.0",
+    "11.2k",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 11200
+  },
+  "vindicta:20:invest_step:3336": {
+   "id": "vindicta:20:invest_step:3336",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 19,200 to 25,600 invested: bonus 86 to 100% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Lucky Shot",
+    "souls": 46400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 22400
+   },
+   "numbers": [
+    "19200",
+    "25600",
+    "86.0",
+    "100.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 22400
+  },
+  "vindicta:20:phase_range:3337": {
+   "id": "vindicta:20:phase_range:3337",
+   "kind": "phase_range",
+   "phrase": "Souls 24,000-46,400 (levels 27-35).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Lucky Shot",
+    "souls": 46400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Lucky Shot",
+    "keys": []
+   },
+   "numbers": [
+    "24,000",
+    "46,400",
+    "27",
+    "35"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:20:phase_abilities:3338": {
+   "id": "vindicta:20:phase_abilities:3338",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Assassinate T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Lucky Shot",
+    "souls": 46400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Lucky Shot",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:21:defence_bullet:3343": {
+   "id": "vindicta:21:defence_bullet:3343",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Metal Skin",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun heroes shoot you out of the sky."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:21:defence_gun:3344": {
+   "id": "vindicta:21:defence_gun:3344",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Plated Armor",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:21:defence_spirit:3345": {
+   "id": "vindicta:21:defence_spirit:3345",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Spirit Resilience",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:21:cc_exposure:3346": {
+   "id": "vindicta:21:cc_exposure:3346",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Flight (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 21,
+    "item": "Unstoppable",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Stuns and Knockdown keep dropping you out of Flight."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta:21:defence_purge:3347": {
+   "id": "vindicta:21:defence_purge:3347",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Dispel Magic",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Slows and hexes keep landing on you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:21:invest_step:3348": {
+   "id": "vindicta:21:invest_step:3348",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 25,600 to 30,400 invested: bonus 100 to 115% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 21,
+    "item": "Spiritual Overflow",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Swift Striker for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 28800
+   },
+   "numbers": [
+    "25600",
+    "30400",
+    "100.0",
+    "115.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 28800
+  },
+  "vindicta:21:sell_swap:3349": {
+   "id": "vindicta:21:sell_swap:3349",
+   "kind": "sell_swap",
+   "phrase": "Replaces Swift Striker: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Spiritual Overflow",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Swift Striker for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Swift Striker",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Swift Striker"
+  },
+  "vindicta:21:invest_step:3350": {
+   "id": "vindicta:21:invest_step:3350",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 21,
+    "item": "Vampiric Burst",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Titanic Magazine for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "17600",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "vindicta:21:sell_swap:3351": {
+   "id": "vindicta:21:sell_swap:3351",
+   "kind": "sell_swap",
+   "phrase": "Replaces Titanic Magazine: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Vampiric Burst",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Titanic Magazine for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Titanic Magazine",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Titanic Magazine"
+  },
+  "vindicta:21:defence_barrier:3352": {
+   "id": "vindicta:21:defence_barrier:3352",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Divine Barrier",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:21:upgrade_delta:3353": {
+   "id": "vindicta:21:upgrade_delta:3353",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_juggernaut",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cardio_calibrator"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Juggernaut",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Enduring Speed"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "40",
+    "25",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta:21:upgrade_of:3354": {
+   "id": "vindicta:21:upgrade_of:3354",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Enduring Speed (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 21,
+    "item": "Juggernaut",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Enduring Speed"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "vindicta",
+   "item": "Healing Rite",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 46400,
+   "unpublished": []
+  },
+  {
+   "build": "vindicta",
+   "item": "Healing Rite",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Getting poked out in lane. Back off before you use it. Sell it once you're out of slots."
+  },
+  {
+   "build": "vindicta",
+   "item": "High-Velocity Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Extended Magazine completes 4.8k weapon in 4000 souls (~4.0 min), 4 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "vindicta:0:spike_progress:3271",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Extended Magazine completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "vindicta:0:component_for:3272",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Sharpshooter: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Sharpshooter"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta",
+   "item": "Long Range",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Extended Magazine completes 4.8k weapon in 2400 souls (~2.4 min), 3 purchases",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "vindicta:1:spike_progress:3273",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Extended Magazine completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "vindicta:1:component_for:3274",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Sharpshooter: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Sharpshooter"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta",
+   "item": "Sharpshooter",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Extended Magazine completes 4.8k weapon in 1600 souls (~1.6 min), 2 purchases",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "vindicta:2:spike_progress:3275",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Extended Magazine completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta",
+   "item": "Rapid Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Extended Magazine completes 4.8k weapon in 800 souls (~0.8 min), 1 purchases",
+   "souls": 4000,
+   "unpublished": [
+    {
+     "id": "vindicta:3:spike_progress:3277",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Extended Magazine completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Extended Magazine completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "vindicta:3:component_for:3278",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Swift Striker: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 12800,
+      "event": "Swift Striker"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta",
+   "item": "Bullet Lifesteal",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Counterspell, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 7200,
+   "unpublished": [
+    {
+     "id": "vindicta:6:component_for:3285",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Leech: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 23200,
+      "event": "Leech"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta",
+   "item": "Counterspell",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming."
+  },
+  {
+   "build": "vindicta",
+   "item": "Sprint Boots",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Enduring Speed completes 6.4k vitality in 800 souls (~0.8 min), 1 purchases",
+   "souls": 13600,
+   "unpublished": [
+    {
+     "id": "vindicta:9:spike_progress:3302",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 6.4k vitality tier, which Enduring Speed completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Enduring Speed completes the 6.4k vitality tier"
+     }
+    },
+    {
+     "id": "vindicta:9:component_for:3303",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Enduring Speed"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta",
+   "item": "Swift Striker",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Titanic Magazine completes 6.4k weapon in 800 souls (~0.8 min), 1 purchases",
+   "souls": 16800,
+   "unpublished": [
+    {
+     "id": "vindicta:12:spike_progress:3309",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 6.4k weapon tier, which Titanic Magazine completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Titanic Magazine completes the 6.4k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta",
+   "item": "Blood Tribute",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 40000,
+   "unpublished": []
+  },
+  {
+   "build": "vindicta",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun heroes shoot you out of the sky."
+  },
+  {
+   "build": "vindicta",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "vindicta",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit."
+  },
+  {
+   "build": "vindicta",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns and Knockdown keep dropping you out of Flight."
+  },
+  {
+   "build": "vindicta",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Slows and hexes keep landing on you."
+  }
+ ],
+ "stats": {
+  "d": 2,
+  "b": 6,
+  "a": 13,
+  "c": 1,
+  "g": 9
+ }
+}

@@ -1,0 +1,3372 @@
+{
+ "schema": 1,
+ "id": "paradox",
+ "hero": "Paradox",
+ "name": "Rizuhble's Clock Sniper Paradox",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Getting poked out in lane. Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-11,200 (levels 1-18). Abilities gained (both point models agree): Kinetic Carbine T3. 4.8k spikes: weapon 4.8k at Headhunter, vitality 4.8k at Veil Walker. Ultimate (Paradoxical Swap) is available from Headhunter.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "paradox:7:phase_range:3911",
+    "paradox:7:phase_abilities:3912",
+    "paradox:7:phase_spikes:3921",
+    "paradox:7:phase_ult:3922"
+   ],
+   "items": [
+    {
+     "name": "High-Velocity Rounds",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Headhunter completes 5,600 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Headhunter completes 4.8k weapon in 5600 souls (~5.6 min), 4 purchases",
+     "claim_ids": [
+      "paradox:0:spike_progress:3895"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:0:spike_progress:3895",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Long Range",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Headhunter completes 4,000 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Headhunter completes 4.8k weapon in 4000 souls (~4.0 min), 3 purchases",
+     "claim_ids": [
+      "paradox:1:spike_progress:3897"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:1:spike_progress:3897",
+       true,
+       "2400"
+      ]
+     ]
+    },
+    {
+     "name": "Sharpshooter",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Headhunter completes 3,200 souls on. Upgrade of Long Range, High-Velocity Rounds (already owned): costs 800 souls more, not 3,200.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Headhunter completes 4.8k weapon in 3200 souls (~3.2 min), 2 purchases",
+     "claim_ids": [
+      "paradox:2:spike_progress:3899",
+      "paradox:2:upgrade_of:3900"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:2:spike_progress:3899",
+       true,
+       "3200"
+      ],
+      [
+       "paradox:2:upgrade_of:3900",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Headshot Booster",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Headhunter completes 2,400 souls on.",
+     "cls": "b",
+     "why": "imminent: Headhunter completes 4.8k weapon in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "paradox:3:spike_progress:3901"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:3:spike_progress:3901",
+       true,
+       "4000"
+      ]
+     ]
+    },
+    {
+     "name": "Headhunter",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (4,000 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 18 to 54% weapon damage. Upgrade of Headshot Booster (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "paradox:4:spike_complete:3903",
+      "paradox:4:upgrade_of:3904"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:4:spike_complete:3903",
+       true,
+       "inventory weapon: before 4000, after 6400, threshold 4800"
+      ],
+      [
+       "paradox:4:upgrade_of:3904",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Veil Walker, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Reactive Barrier",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Veil Walker, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Veil Walker",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "paradox:7:spike_complete:3910"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:7:spike_complete:3910",
+       true,
+       "inventory vitality: before 1600, after 4800, threshold 4800"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 11,200-27,200 (levels 18-29). Abilities gained (both point models agree): Time Wall T3, Paradoxical Swap T3. Your biggest single spirit hit (Pulse Grenade, pulse damage) grows from 42.4 to 59.5. 4.8k spikes: spirit 4.8k at Compress Cooldown.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "paradox:15:phase_range:3943",
+    "paradox:15:phase_abilities:3944",
+    "paradox:15:phase_power:3945",
+    "paradox:15:phase_spikes:3954"
+   ],
+   "items": [
+    {
+     "name": "Express Shot",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 6,400 to 9,600 invested: bonus 54 to 62% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "spirit investment only; its 4.8k tier completes at Compress Cooldown, 4000 souls (~4.0 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 1,600 souls on. Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "b",
+     "why": "imminent: Compress Cooldown completes 4.8k spirit in 1600 souls (~1.6 min), 1 purchases",
+     "claim_ids": [
+      "paradox:10:spike_progress:3928",
+      "paradox:10:upgrade_of:3930"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:10:spike_progress:3928",
+       true,
+       "3200"
+      ],
+      [
+       "paradox:10:upgrade_of:3930",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "3",
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power. Imbued on Kinetic Carbine: takes 18% off its 16s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "paradox:11:spike_complete:3931",
+      "paradox:11:imbue_cooldown:3932"
+     ],
+     "lint": [],
+     "legacy_note": "On Kinetic Carbine.",
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:11:spike_complete:3931",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ],
+      [
+       "paradox:11:imbue_cooldown:3932",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Extra Stamina",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 6.4k tier completes at Stamina Mastery, 7200 souls (~7.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Hollow Point",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 9,600 to 12,800 invested: bonus 62 to 74% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power. | With 4 abilities trained their base cooldowns total 141s; 20% off is 28.2s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Stamina Mastery",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 5,600 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 27,200-51,200 (levels 29-36). Abilities gained (both point models agree): Pulse Grenade T3. Your biggest single spirit hit (Pulse Grenade, pulse damage) grows from 59.5 to 138.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "paradox:19:phase_range:3961",
+    "paradox:19:phase_abilities:3962",
+    "paradox:19:phase_power:3963"
+   ],
+   "items": [
+    {
+     "name": "Mystic Reverb",
+     "imbue": "3",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 45 to 59 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Indomitable",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 8,000 to 12,800 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Glass Cannon",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 12,800 to 19,200 invested: bonus 74 to 86% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Crippling Headshot",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 19,200 to 25,600 invested: bonus 86 to 100% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Veil Walker? Buy what is killing you, cheapest first. Not dying? Skip. Sell Hollow Point.",
+   "desc": "Dying after Veil Walker? Buy what is killing you, cheapest first. Not dying? Skip. Sell Hollow Point.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "paradox:20:defence_gun:3968"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:20:defence_gun:3968",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "paradox:20:defence_spirit:3969"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:20:defence_spirit:3969",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "paradox:20:defence_purge:3970"
+     ],
+     "lint": [],
+     "legacy_note": "Slows and hexes keep landing on you.",
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:20:defence_purge:3970",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "paradox:20:defence_parry:3971"
+     ],
+     "lint": [],
+     "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow.",
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:20:defence_parry:3971",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Warp Stone",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They dive you and you can't get back to range.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 12,800 to 19,200 invested: bonus 59 to 66 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Express Shot for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Lucky Shot",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 25,600 to 28,800 invested: bonus 100 to 115% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Headhunter for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "paradox:20:defence_barrier:3977"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this. Otherwise sell Veil Walker.",
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:20:defence_barrier:3977",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Cheat Death",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 12,800 to 16,000 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Stamina Mastery for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "paradox:20:upgrade_delta:3980"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "paradox:20:upgrade_delta:3980",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "paradox:0:spike_progress:3895": {
+   "id": "paradox:0:spike_progress:3895",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Headhunter completes 5,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 5600,
+    "event": "Headhunter completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    5600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "paradox:0:component_for:3896": {
+   "id": "paradox:0:component_for:3896",
+   "kind": "component_for",
+   "phrase": "From Sharpshooter: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Sharpshooter"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Sharpshooter"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:1:spike_progress:3897": {
+   "id": "paradox:1:spike_progress:3897",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Headhunter completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Long Range",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Headhunter completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "paradox:1:component_for:3898": {
+   "id": "paradox:1:component_for:3898",
+   "kind": "component_for",
+   "phrase": "From Sharpshooter: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Long Range",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Sharpshooter"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Sharpshooter"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:2:spike_progress:3899": {
+   "id": "paradox:2:spike_progress:3899",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Headhunter completes 3,200 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Sharpshooter",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 3200,
+    "event": "Headhunter completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    3200,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "paradox:2:upgrade_of:3900": {
+   "id": "paradox:2:upgrade_of:3900",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Long Range, High-Velocity Rounds (already owned): costs 800 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 2,
+    "item": "Sharpshooter",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Long Range",
+     "High-Velocity Rounds"
+    ]
+   },
+   "numbers": [
+    "800",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:3:spike_progress:3901": {
+   "id": "paradox:3:spike_progress:3901",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Headhunter completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Headshot Booster",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Headhunter completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "paradox:3:component_for:3902": {
+   "id": "paradox:3:component_for:3902",
+   "kind": "component_for",
+   "phrase": "From Headhunter: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Headshot Booster",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Headhunter"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Headhunter"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:4:spike_complete:3903": {
+   "id": "paradox:4:spike_complete:3903",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (4,000 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 18 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 4,
+    "item": "Headhunter",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "6400",
+    "18.0",
+    "54.0",
+    "4.8k",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "paradox:4:upgrade_of:3904": {
+   "id": "paradox:4:upgrade_of:3904",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Headshot Booster (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 4,
+    "item": "Headhunter",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Headshot Booster"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:4:swap_candidate:3905": {
+   "id": "paradox:4:swap_candidate:3905",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Lucky Shot later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 4,
+    "item": "Headhunter",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Headhunter",
+    "buyer": "Lucky Shot"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:5:spike_progress:3906": {
+   "id": "paradox:5:spike_progress:3906",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Grit",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "paradox:5:component_for:3907": {
+   "id": "paradox:5:component_for:3907",
+   "kind": "component_for",
+   "phrase": "From Reactive Barrier: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Grit",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Reactive Barrier"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Reactive Barrier"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:6:spike_progress:3908": {
+   "id": "paradox:6:spike_progress:3908",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Reactive Barrier",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "paradox:6:upgrade_of:3909": {
+   "id": "paradox:6:upgrade_of:3909",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 6,
+    "item": "Reactive Barrier",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Grit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:7:spike_complete:3910": {
+   "id": "paradox:7:spike_complete:3910",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 7,
+    "item": "Veil Walker",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "paradox:7:phase_range:3911": {
+   "id": "paradox:7:phase_range:3911",
+   "kind": "phase_range",
+   "phrase": "Souls 0-11,200 (levels 1-18).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Veil Walker",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Veil Walker",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "11,200",
+    "1",
+    "18"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:7:phase_abilities:3912": {
+   "id": "paradox:7:phase_abilities:3912",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Kinetic Carbine T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Veil Walker",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Veil Walker",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:7:phase_spikes:3921": {
+   "id": "paradox:7:phase_spikes:3921",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Headhunter, vitality 4.8k at Veil Walker.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Veil Walker",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Veil Walker",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:7:phase_ult:3922": {
+   "id": "paradox:7:phase_ult:3922",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Paradoxical Swap) is available from Headhunter.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Veil Walker",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Veil Walker",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:8:invest_step:3923": {
+   "id": "paradox:8:invest_step:3923",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 6,400 to 9,600 invested: bonus 54 to 62% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 8,
+    "item": "Express Shot",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "9600",
+    "54.0",
+    "62.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 8000
+  },
+  "paradox:8:swap_candidate:3924": {
+   "id": "paradox:8:swap_candidate:3924",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Spirit Burn later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 8,
+    "item": "Express Shot",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Express Shot",
+    "buyer": "Spirit Burn"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:9:spike_progress:3925": {
+   "id": "paradox:9:spike_progress:3925",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 9,
+    "item": "Mystic Burst",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "paradox:9:threshold_later:3926": {
+   "id": "paradox:9:threshold_later:3926",
+   "kind": "threshold_later",
+   "phrase": "From Pulse Grenade T2: first ability hit above its 80-damage trigger (nothing clears it at this purchase).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_pulse_grenade",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_time_wall",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_kinetic_carbine"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Mystic Burst",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 16900,
+    "event": "Pulse Grenade T2"
+   },
+   "check": {
+    "kind": "threshold_later",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "80.0"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "best_now": 45.83
+  },
+  "paradox:9:component_for:3927": {
+   "id": "paradox:9:component_for:3927",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Mystic Burst",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:10:spike_progress:3928": {
+   "id": "paradox:10:spike_progress:3928",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 10,
+    "item": "Tankbuster",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Compress Cooldown completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "paradox:10:threshold_unverified:3929": {
+   "id": "paradox:10:threshold_unverified:3929",
+   "kind": "threshold_unverified",
+   "phrase": "Only Paradoxical Swap (swap damage, 264) reaches the 165-damage trigger, and whether an ultimate or damage-over-time tick counts is not established.",
+   "tier": "UNVERIFIED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_pulse_grenade",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_time_wall",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_kinetic_carbine"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 10,
+    "item": "Tankbuster",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "never",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold_later",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "165.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "paradox:10:upgrade_of:3930": {
+   "id": "paradox:10:upgrade_of:3930",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Tankbuster",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:11:spike_complete:3931": {
+   "id": "paradox:11:spike_complete:3931",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 11,
+    "item": "Compress Cooldown",
+    "souls": 19200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "paradox:11:imbue_cooldown:3932": {
+   "id": "paradox:11:imbue_cooldown:3932",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Kinetic Carbine: takes 18% off its 16s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_kinetic_carbine"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 11,
+    "item": "Compress Cooldown",
+    "souls": 19200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 3
+   },
+   "numbers": [
+    "18.0",
+    "16.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "paradox:11:component_for:3933": {
+   "id": "paradox:11:component_for:3933",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Compress Cooldown",
+    "souls": 19200,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:12:spike_progress:3934": {
+   "id": "paradox:12:spike_progress:3934",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 5,600 of the 6.4k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 12,
+    "item": "Extra Stamina",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 6400
+  },
+  "paradox:12:component_for:3935": {
+   "id": "paradox:12:component_for:3935",
+   "kind": "component_for",
+   "phrase": "From Stamina Mastery: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Extra Stamina",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 7200,
+    "event": "Stamina Mastery"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Stamina Mastery"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:13:invest_step:3936": {
+   "id": "paradox:13:invest_step:3936",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 9,600 to 12,800 invested: bonus 62 to 74% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Hollow Point",
+    "souls": 23200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "12800",
+    "62.0",
+    "74.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 11200
+  },
+  "paradox:14:invest_step:3937": {
+   "id": "paradox:14:invest_step:3937",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Superior Cooldown",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "paradox:14:upgrade_of:3938": {
+   "id": "paradox:14:upgrade_of:3938",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 14,
+    "item": "Superior Cooldown",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:14:cdr_rotation:3939": {
+   "id": "paradox:14:cdr_rotation:3939",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 141s; 20% off is 28.2s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_pulse_grenade",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_time_wall",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_kinetic_carbine",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_swap"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 14,
+    "item": "Superior Cooldown",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "141",
+    "20.0",
+    "28.2"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "paradox:15:invest_step:3940": {
+   "id": "paradox:15:invest_step:3940",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 5,600 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Stamina Mastery",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "8000",
+    "38.0",
+    "46.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "paradox:15:upgrade_of:3941": {
+   "id": "paradox:15:upgrade_of:3941",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Stamina (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Stamina Mastery",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Stamina"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:15:swap_candidate:3942": {
+   "id": "paradox:15:swap_candidate:3942",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Cheat Death later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 15,
+    "item": "Stamina Mastery",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Stamina Mastery",
+    "buyer": "Cheat Death"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:15:phase_range:3943": {
+   "id": "paradox:15:phase_range:3943",
+   "kind": "phase_range",
+   "phrase": "Souls 11,200-27,200 (levels 18-29).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Stamina Mastery",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Stamina Mastery",
+    "keys": []
+   },
+   "numbers": [
+    "11,200",
+    "27,200",
+    "18",
+    "29"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:15:phase_abilities:3944": {
+   "id": "paradox:15:phase_abilities:3944",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Time Wall T3, Paradoxical Swap T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Stamina Mastery",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Stamina Mastery",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:15:phase_power:3945": {
+   "id": "paradox:15:phase_power:3945",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Pulse Grenade, pulse damage) grows from 42.4 to 59.5.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_pulse_grenade",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Stamina Mastery",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Stamina Mastery",
+    "keys": []
+   },
+   "numbers": [
+    "42.4",
+    "59.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:15:phase_spikes:3954": {
+   "id": "paradox:15:phase_spikes:3954",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Compress Cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Stamina Mastery",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Stamina Mastery",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:16:invest_step:3955": {
+   "id": "paradox:16:invest_step:3955",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 45 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Mystic Reverb",
+    "souls": 33600,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "12800",
+    "45.0",
+    "59.0",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "paradox:16:threshold_never:3956": {
+   "id": "paradox:16:threshold_never:3956",
+   "kind": "threshold_never",
+   "phrase": "Nothing in the kit (ultimate and damage-over-time ticks included) reaches the 100-damage trigger even at max ability tiers.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_kinetic_carbine"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 16,
+    "item": "Mystic Reverb",
+    "souls": 33600,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "never",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold_later",
+    "thr": 100.0,
+    "slots": [
+     3
+    ]
+   },
+   "numbers": [
+    "100.0"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "contradiction": false,
+   "caveat": "item has no localisation text; trigger semantics are modelled"
+  },
+  "paradox:17:invest_step:3957": {
+   "id": "paradox:17:invest_step:3957",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 8,000 to 12,800 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Indomitable",
+    "souls": 38400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "12800",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "paradox:17:upgrade_of:3958": {
+   "id": "paradox:17:upgrade_of:3958",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Reactive Barrier (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Indomitable",
+    "souls": 38400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Reactive Barrier"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "paradox:18:invest_step:3959": {
+   "id": "paradox:18:invest_step:3959",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 12,800 to 19,200 invested: bonus 74 to 86% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Glass Cannon",
+    "souls": 44800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "19200",
+    "74.0",
+    "86.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 16000
+  },
+  "paradox:19:invest_step:3960": {
+   "id": "paradox:19:invest_step:3960",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 19,200 to 25,600 invested: bonus 86 to 100% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Crippling Headshot",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 22400
+   },
+   "numbers": [
+    "19200",
+    "25600",
+    "86.0",
+    "100.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 22400
+  },
+  "paradox:19:phase_range:3961": {
+   "id": "paradox:19:phase_range:3961",
+   "kind": "phase_range",
+   "phrase": "Souls 27,200-51,200 (levels 29-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Crippling Headshot",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Crippling Headshot",
+    "keys": []
+   },
+   "numbers": [
+    "27,200",
+    "51,200",
+    "29",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:19:phase_abilities:3962": {
+   "id": "paradox:19:phase_abilities:3962",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Pulse Grenade T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Crippling Headshot",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Crippling Headshot",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:19:phase_power:3963": {
+   "id": "paradox:19:phase_power:3963",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Pulse Grenade, pulse damage) grows from 59.5 to 138.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_chrono_pulse_grenade",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Crippling Headshot",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Crippling Headshot",
+    "keys": []
+   },
+   "numbers": [
+    "59.5",
+    "138"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:20:defence_gun:3968": {
+   "id": "paradox:20:defence_gun:3968",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Plated Armor",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:20:defence_spirit:3969": {
+   "id": "paradox:20:defence_spirit:3969",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Resilience",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:20:defence_purge:3970": {
+   "id": "paradox:20:defence_purge:3970",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Dispel Magic",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Slows and hexes keep landing on you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:20:defence_parry:3971": {
+   "id": "paradox:20:defence_parry:3971",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Counterspell",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:20:burn_trigger_modelled:3972": {
+   "id": "paradox:20:burn_trigger_modelled:3972",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Pulse Grenade (143) = 143 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Burn",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Express Shot for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "143",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "paradox:20:invest_step:3973": {
+   "id": "paradox:20:invest_step:3973",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 12,800 to 19,200 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Burn",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Express Shot for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "19200",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "paradox:20:sell_swap:3974": {
+   "id": "paradox:20:sell_swap:3974",
+   "kind": "sell_swap",
+   "phrase": "Replaces Express Shot: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Burn",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Express Shot for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Express Shot",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Express Shot"
+  },
+  "paradox:20:invest_step:3975": {
+   "id": "paradox:20:invest_step:3975",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 25,600 to 28,800 invested: bonus 100 to 115% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Lucky Shot",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Headhunter for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 28800
+   },
+   "numbers": [
+    "25600",
+    "28800",
+    "100.0",
+    "115.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 28800
+  },
+  "paradox:20:sell_swap:3976": {
+   "id": "paradox:20:sell_swap:3976",
+   "kind": "sell_swap",
+   "phrase": "Replaces Headhunter: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Lucky Shot",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Headhunter for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Headhunter",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Headhunter"
+  },
+  "paradox:20:defence_barrier:3977": {
+   "id": "paradox:20:defence_barrier:3977",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Divine Barrier",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this. Otherwise sell Veil Walker."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:20:invest_step:3978": {
+   "id": "paradox:20:invest_step:3978",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 12,800 to 16,000 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_chrono m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Cheat Death",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Stamina Mastery for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "16000",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "paradox:20:sell_swap:3979": {
+   "id": "paradox:20:sell_swap:3979",
+   "kind": "sell_swap",
+   "phrase": "Replaces Stamina Mastery: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Cheat Death",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Stamina Mastery for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Stamina Mastery",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Stamina Mastery"
+  },
+  "paradox:20:upgrade_delta:3980": {
+   "id": "paradox:20:upgrade_delta:3980",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "paradox:20:upgrade_of:3981": {
+   "id": "paradox:20:upgrade_of:3981",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "paradox",
+   "item": "Extra Regen",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 51200,
+   "unpublished": []
+  },
+  {
+   "build": "paradox",
+   "item": "Extra Regen",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Getting poked out in lane. Sell it once you're out of slots."
+  },
+  {
+   "build": "paradox",
+   "item": "High-Velocity Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Headhunter completes 4.8k weapon in 5600 souls (~5.6 min), 4 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "paradox:0:spike_progress:3895",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Headhunter completes 5,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 5600,
+      "event": "Headhunter completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "paradox:0:component_for:3896",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Sharpshooter: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Sharpshooter"
+     }
+    }
+   ]
+  },
+  {
+   "build": "paradox",
+   "item": "Long Range",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Headhunter completes 4.8k weapon in 4000 souls (~4.0 min), 3 purchases",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "paradox:1:spike_progress:3897",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Headhunter completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Headhunter completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "paradox:1:component_for:3898",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Sharpshooter: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Sharpshooter"
+     }
+    }
+   ]
+  },
+  {
+   "build": "paradox",
+   "item": "Sharpshooter",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Headhunter completes 4.8k weapon in 3200 souls (~3.2 min), 2 purchases",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "paradox:2:spike_progress:3899",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Headhunter completes 3,200 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 3200,
+      "event": "Headhunter completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "paradox",
+   "item": "Headshot Booster",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Headhunter completes 4.8k weapon in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 4000,
+   "unpublished": [
+    {
+     "id": "paradox:3:spike_progress:3901",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Headhunter completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Headhunter completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "paradox:3:component_for:3902",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Headhunter: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Headhunter"
+     }
+    }
+   ]
+  },
+  {
+   "build": "paradox",
+   "item": "Grit",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Veil Walker, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 7200,
+   "unpublished": [
+    {
+     "id": "paradox:5:component_for:3907",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Reactive Barrier: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Reactive Barrier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "paradox",
+   "item": "Reactive Barrier",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Veil Walker, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 8000,
+   "unpublished": []
+  },
+  {
+   "build": "paradox",
+   "item": "Mystic Burst",
+   "section": "mid",
+   "cls": "c",
+   "why": "spirit investment only; its 4.8k tier completes at Compress Cooldown, 4000 souls (~4.0 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 15200,
+   "unpublished": [
+    {
+     "id": "paradox:9:threshold_later:3926",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Pulse Grenade T2: first ability hit above its 80-damage trigger (nothing clears it at this purchase).",
+     "timing": {
+      "when": "future",
+      "delta_souls": 16900,
+      "event": "Pulse Grenade T2"
+     }
+    },
+    {
+     "id": "paradox:9:component_for:3927",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Tankbuster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "paradox",
+   "item": "Tankbuster",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Compress Cooldown completes 4.8k spirit in 1600 souls (~1.6 min), 1 purchases",
+   "souls": 17600,
+   "unpublished": [
+    {
+     "id": "paradox:10:spike_progress:3928",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Compress Cooldown completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Compress Cooldown completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "paradox:10:threshold_unverified:3929",
+     "tier": "UNVERIFIED",
+     "phrase": "Only Paradoxical Swap (swap damage, 264) reaches the 165-damage trigger, and whether an ultimate or damage-over-time tick counts is not established.",
+     "timing": {
+      "when": "never",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "paradox",
+   "item": "Compress Cooldown",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Kinetic Carbine."
+  },
+  {
+   "build": "paradox",
+   "item": "Extra Stamina",
+   "section": "mid",
+   "cls": "c",
+   "why": "vitality investment only; its 6.4k tier completes at Stamina Mastery, 7200 souls (~7.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 20000,
+   "unpublished": [
+    {
+     "id": "paradox:12:component_for:3935",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Stamina Mastery: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 7200,
+      "event": "Stamina Mastery"
+     }
+    }
+   ]
+  },
+  {
+   "build": "paradox",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "paradox",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit."
+  },
+  {
+   "build": "paradox",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Slows and hexes keep landing on you."
+  },
+  {
+   "build": "paradox",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+  },
+  {
+   "build": "paradox",
+   "item": "Warp Stone",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 51200,
+   "unpublished": []
+  },
+  {
+   "build": "paradox",
+   "item": "Warp Stone",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They dive you and you can't get back to range."
+  },
+  {
+   "build": "paradox",
+   "item": "Divine Barrier",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "If you bought Dispel Magic, sell it for this. Otherwise sell Veil Walker."
+  }
+ ],
+ "stats": {
+  "d": 2,
+  "b": 5,
+  "a": 9,
+  "c": 4,
+  "g": 11
+ }
+}

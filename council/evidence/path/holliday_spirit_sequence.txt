@@ -1,0 +1,154 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: holliday_spirit
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:14:00Z
+BODY-SHA: 2fbfce8b742b7458b4f5f3b51f9014dcbb7900dcd107da8481e773ada41c55c9
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Headshot Booster: temporary (bought to be sold)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Extra Stamina: retained-or-upgraded (-> Stamina Mastery)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Rapid Recharge: retained
+  Sprint Boots: retained-or-upgraded (-> Trophy Collector)
+  Trophy Collector: retained
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Recharging Rush: retained
+  Stamina Mastery: retained
+  Duration Extender: retained-or-upgraded (-> Superior Duration)
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Tankbuster: retained
+  Superior Duration: retained
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Boundless Spirit: retained
+  Superior Cooldown: retained
+  Spirit Burn: retained
+  Extra Health: retained-or-upgraded (-> Fortitude)
+  Fortitude: retained
+  Escalating Exposure: retained
+  Cursed Relic: retained
+  Extra Regen: conditional branch (lane alternative)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Diviner's Kevlar: situational-luxury
+  Mystic Reverb: situational-luxury
+  Crippling Headshot: situational-luxury
+  Refresher: situational-luxury
+  Divine Barrier: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Extra Charge, Headshot Booster, Extra Spirit, Extra Stamina, Improved Spirit, Rapid Recharge, Sprint Boots, Trophy Collector
+  Mid · L-R                  -> main path (sequential): Mystic Burst, Recharging Rush, Stamina Mastery, Duration Extender, Mystic Vulnerability, Tankbuster, Superior Duration, Compress Cooldown
+  Mid · cont.                -> main path (sequential): Boundless Spirit, Superior Cooldown
+  Late · L-R                 -> main path (sequential): Spirit Burn, Extra Health, Fortitude, Escalating Exposure, Cursed Relic
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Counterspell, Dispel Magic, Metal Skin, Spirit Resilience, Plated Armor
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Diviner's Kevlar, Mystic Reverb, Crippling Headshot, Refresher, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+
+## Headshot Booster: sold when buying Spirit Burn (Late · L-R, main)
+  role of Headshot Booster: temporary (bought to be sold); role of Spirit Burn: retained
+  Headshot Booster: price 800, resale 400, net cost of owning it 400 souls (0.4 min of reference income); first bought at 1600 souls (~2.0 min), replaced at ~34.0 min -> owned ~32.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 2400/4800/27200 -> after 1600/4800/27200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 75 min | window TR | key purchase times (min)
+  as built                                    |          61640 |      0.29 | Headshot Booster 2, Spirit Burn 34
+  keep Headshot Booster                       |          61689 |      0.29 | Headshot Booster 2, Spirit Burn 34
+  skip Headshot Booster                       |          61695 |      0.29 | Spirit Burn 34
+  sell Trophy Collector instead               |          61761 |      0.29 | Headshot Booster 2, Spirit Burn 34
+  keep Headshot Booster vs as built: d souls +55, d window TR +0.5% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: INSUFFICIENT (effect within model noise)
+  skip Headshot Booster vs as built: d souls +14, d window TR +0.2% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Trophy Collector instead vs as built: d souls +69, d window TR -0.9% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: INSUFFICIENT (effect within model noise)
+  model limit: no modelled stat for Spirit Burn (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Headshot Booster: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | sell Trophy Collector instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -))
+
+## Trophy Collector: sold when buying Diviner's Kevlar (I'm rich as fuck, luxury)
+  role of Trophy Collector: retained; role of Diviner's Kevlar: situational-luxury
+  Trophy Collector: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 8000 souls (~8.5 min), replaced at ~61.2 min -> owned ~52.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 1600/14400/38400 -> after 1600/12800/38400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 83 min | window TR | key purchase times (min)
+  as built                                    |          65809 |      0.27 | Trophy Collector 8, Diviner's Kevlar 61
+  keep Trophy Collector (slot cap ignored)    |          65720 |      0.27 | Trophy Collector 8, Diviner's Kevlar 63
+  skip Trophy Collector                       |          65564 |      0.26 | Diviner's Kevlar 62
+  sell Recharging Rush instead                |          65583 |      0.27 | Trophy Collector 8, Diviner's Kevlar 61
+  keep Trophy Collector (slot cap ignored) vs as built: d souls -77, d window TR -0.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  skip Trophy Collector vs as built: d souls -194, d window TR -3.4% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.6: +); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Recharging Rush instead vs as built: d souls -214, d window TR -1.3% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Trophy Collector (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | skip Trophy Collector: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: -, 1.6: +); beta (0.0: +, 0.5: -)) | sell Recharging Rush instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Recharging Rush: sold when buying Mystic Reverb (I'm rich as fuck, luxury)
+  role of Recharging Rush: retained; role of Mystic Reverb: situational-luxury
+  Recharging Rush: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 10400 souls (~10.5 min), replaced at ~61.2 min -> owned ~50.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 1600/8000/44800 -> after 0/8000/44800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 83 min | window TR | key purchase times (min)
+  as built                                    |          65192 |      0.24 | Recharging Rush 10, Mystic Reverb 61
+  keep Recharging Rush (slot cap ignored)     |          65349 |      0.24 | Recharging Rush 10, Mystic Reverb 63
+  skip Recharging Rush                        |          64643 |      0.23 | Mystic Reverb 61
+  sell Trophy Collector instead               |          65389 |      0.24 | Recharging Rush 10, Mystic Reverb 61
+  keep Recharging Rush (slot cap ignored) vs as built: d souls +151, d window TR +1.4% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Recharging Rush vs as built: d souls -437, d window TR -2.0% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Trophy Collector instead vs as built: d souls +0, d window TR +0.6% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  ammo mechanics (clip 10, reload 2.75 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Recharging Rush): 8 s trade 12 bullets (31% not firing), 20 s 29 bullets (31% not firing, 2.9 magazines), damage 20 s 1633, refill uses 0.0
+    keep Recharging Rush: 8 s trade 12 bullets (27% not firing), 20 s 31 bullets (27% not firing, 2.6 magazines), damage 20 s 2120, refill uses 0.0
+    without Mystic Reverb (keep Recharging Rush): 8 s trade 12 bullets (27% not firing), 20 s 31 bullets (27% not firing, 2.6 magazines), damage 20 s 2120, refill uses 0.0
+    sell Trophy Collector instead: 8 s trade 12 bullets (27% not firing), 20 s 31 bullets (27% not firing, 2.6 magazines), damage 20 s 2120, refill uses 0.0
+    sustained 20 s gun damage: selling Recharging Rush costs 23% vs keeping it (both with Mystic Reverb); Mystic Reverb adds +0% on top of Recharging Rush; selling Trophy Collector instead: +0% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  model limit: no modelled stat for Mystic Reverb (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: the sale of Recharging Rush lowers modelled sustained gun damage by 23% (ammo mechanics)
+  VERDICT: REVIEW: selling Recharging Rush costs sustained gun output; Mystic Reverb does not replace its ammo role (quantified above). Alternatives for the slot: sell Trophy Collector (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED); flipping assumptions: keep Recharging Rush (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | skip Recharging Rush: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Recharging Rush: sold when buying Crippling Headshot (I'm rich as fuck, luxury)
+  role of Recharging Rush: retained; role of Crippling Headshot: situational-luxury
+  Recharging Rush: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 10400 souls (~10.5 min), replaced at ~61.2 min -> owned ~50.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 8000/8000/38400 -> after 6400/8000/38400; thresholds lost: gun 8000; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 83 min | window TR | key purchase times (min)
+  as built                                    |          65471 |      0.24 | Recharging Rush 10, Crippling Headshot 61
+  keep Recharging Rush (slot cap ignored)     |          65576 |      0.25 | Recharging Rush 10, Crippling Headshot 63
+  skip Recharging Rush                        |          64925 |      0.24 | Crippling Headshot 61
+  sell Trophy Collector instead               |          65620 |      0.25 | Recharging Rush 10, Crippling Headshot 61
+  keep Recharging Rush (slot cap ignored) vs as built: d souls +100, d window TR +1.2% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Recharging Rush vs as built: d souls -433, d window TR -2.0% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Trophy Collector instead vs as built: d souls +149, d window TR +0.5% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: INSUFFICIENT (effect within model noise)
+  ammo mechanics (clip 10, reload 2.75 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Recharging Rush): 8 s trade 12 bullets (31% not firing), 20 s 29 bullets (31% not firing, 2.9 magazines), damage 20 s 2515, refill uses 0.0
+    keep Recharging Rush: 8 s trade 12 bullets (27% not firing), 20 s 31 bullets (27% not firing, 2.6 magazines), damage 20 s 2989, refill uses 0.0
+    without Crippling Headshot (keep Recharging Rush): 8 s trade 12 bullets (27% not firing), 20 s 31 bullets (27% not firing, 2.6 magazines), damage 20 s 2120, refill uses 0.0
+    sell Trophy Collector instead: 8 s trade 12 bullets (27% not firing), 20 s 31 bullets (27% not firing, 2.6 magazines), damage 20 s 2989, refill uses 0.0
+    sustained 20 s gun damage: selling Recharging Rush costs 16% vs keeping it (both with Crippling Headshot); Crippling Headshot adds +41% on top of Recharging Rush; selling Trophy Collector instead: +0% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: established 4.8k lost; the sale of Recharging Rush lowers modelled sustained gun damage by 16% (ammo mechanics)
+  VERDICT: REVIEW: selling Recharging Rush costs sustained gun output; Crippling Headshot does not replace its ammo role (quantified above). Alternatives for the slot: sell Trophy Collector (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED); flipping assumptions: keep Recharging Rush (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | skip Recharging Rush: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Trophy Collector instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+
+## Stamina Mastery: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Stamina Mastery: retained; role of Refresher: situational-luxury
+  Stamina Mastery: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 12800 souls (~12.8 min), replaced at ~60.0 min -> owned ~47.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 1600/8000/44800 -> after 1600/4800/44800; thresholds lost: vitality 6400, vitality 8000; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 83 min | window TR | key purchase times (min)
+  as built                                    |          65420 |      0.24 | Stamina Mastery 13, Refresher 60
+  keep Stamina Mastery (slot cap ignored)     |          65447 |      0.24 | Stamina Mastery 13, Refresher 63
+  skip Stamina Mastery                        |          64900 |      0.23 | Refresher 60
+  sell Trophy Collector instead               |          65493 |      0.24 | Stamina Mastery 13, Refresher 61
+  keep Stamina Mastery (slot cap ignored) vs as built: d souls +27, d window TR +1.4% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Stamina Mastery vs as built: d souls -413, d window TR -4.3% | souls: MODEL-ONLY (sign robust in 85% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Trophy Collector instead vs as built: d souls +97, d window TR +0.8% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Stamina Mastery, Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: established 4.8k lost
+  VERDICT: KEEP AS WRITTEN (as-built sequence is not beaten robustly by the alternatives); evidence tier: VERIFIED GAME MECHANIC (walk arithmetic) + MODEL-ONLY value; flipping assumptions: keep Stamina Mastery (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Trophy Collector instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))

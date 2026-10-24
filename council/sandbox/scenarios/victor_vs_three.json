@@ -1,0 +1,125 @@
+{
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the item/order under test",
+  "Same enemy hero, level, items, behaviour"
+ ],
+ "builds": [
+  "victor",
+  "victor_gun"
+ ],
+ "id": "victor_vs_three",
+ "title": "Victor brawling three enemies",
+ "hero": "Victor",
+ "playstyle": "Aura Brawler / gun hybrid",
+ "question": "Does Victor survive and win a 1v3 face-to-face fight better on the spirit Aura Brawler core or the gun hybrid core?",
+ "hypothesis": "Aura Brawler (Torment Pulse, Infuser) out-survives gun hybrid in 1v3 close fights; gun hybrid kills the first target faster.",
+ "arms": [
+  {
+   "name": "aura_brawler",
+   "items": "build:victor core 12",
+   "ability_order": null,
+   "imbues": {},
+   "souls": "equal to core cost"
+  },
+  {
+   "name": "gun_hybrid",
+   "items": "build:victor_gun core 12",
+   "ability_order": null,
+   "imbues": {},
+   "souls": "equal to core cost"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "mid-game (~25k souls)",
+  "enemies": [
+   {
+    "hero": "3 different ranged/melee mix (e.g. Haze, Seven, Abrams)",
+    "count": 3,
+    "behaviour": "attack, no retreat"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "hp",
+   "cooldowns",
+   "enemy positions"
+  ]
+ },
+ "conditions": [
+  {
+   "name": "vs 3 enemies"
+  }
+ ],
+ "procedure": [
+  "Start 30m from enemies, all standing at spawn spots",
+  "Engage: Victor walks in and fights with normal rotation (1,2,3 as appropriate, ult when available)",
+  "Run until Victor dies, all enemies dead, or 40s",
+  "Record metrics at end"
+ ],
+ "metrics": [
+  {
+   "name": "survival_time",
+   "unit": "s",
+   "how": "time until death or 40s cap",
+   "category": "survivability",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "enemies_killed",
+   "unit": "count",
+   "how": "kill count by end",
+   "category": "sustained damage",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "time_to_first_kill",
+   "unit": "s",
+   "how": "",
+   "category": "burst damage",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": false
+  },
+  {
+   "name": "hp_lost_total",
+   "unit": "hp",
+   "how": "sum of damage taken incl. healed",
+   "category": "survivability",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": false
+  },
+  {
+   "name": "hp_healed",
+   "unit": "hp",
+   "how": "total healing/lifesteal received",
+   "category": "healing",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "damage_dealt",
+   "unit": "hp",
+   "how": "total damage to enemies",
+   "category": "sustained damage",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "enemies_killed then survival_time",
+  "min_effect_pct": 20,
+  "min_trials": 5,
+  "rule": "arm B beats A on primary metrics with non-overlapping ranges"
+ }
+}

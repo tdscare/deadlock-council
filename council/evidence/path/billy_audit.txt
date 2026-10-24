@@ -1,0 +1,36 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: billy
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:15Z
+BODY-SHA: 3b4405de6d486ef0078d9bb529df8d53b47121e01ee5866b7b543bf2d28e656c
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Melee Lifesteal, Monster Rounds, Grit, Extra Health, Lifestrike, Cultist Sacrifice, Sprint Boots
+  Mid · L-R                -> main path (sequential): Enduring Speed, Fortitude, Melee Charge, Extra Charge, Rapid Recharge, Spirit Resilience, Reactive Barrier, Crushing Fists
+  Late · L-R               -> main path (sequential): Close Quarters, Colossus, Siphon Bullets, Cheat Death, Unstoppable
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Bullet Resilience, Plated Armor, Metal Skin, Dispel Magic, Counterspell, Warp Stone
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Indomitable, Witchmail, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Juggernaut
+  Lost lane?               -> lane alternative (branch): 
+
+## SALE CHECKLIST (computed)
+- Late · L-R (main path): buy Cheat Death, sell Cultist Sacrifice
+    function of Cultist Sacrifice: charges, range; replacement Cheat Death: bullet_resist; roles lost: charges, range  [VERIFIED GAME MECHANIC]
+    Cultist Sacrifice is a component of later items: no
+    held for 36000.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 10400/25600/3200 -> 7200/32000/3200; thresholds lost: none
+    trade ratio after the sale 0.59; selling Close Quarters instead: 0.61 (+2.4%)  [MODELLED ESTIMATE]
+    model limit: Cultist Sacrifice has an active effect (PRESS) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Witchmail, sell Spirit Resilience
+    function of Spirit Resilience: spirit_resist; replacement Witchmail: cooldown, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Spirit Resilience is a component of later items: no
+    held for 36800.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 7200/38400/3200 -> 7200/41600/3200; thresholds lost: none
+    trade ratio after the sale 0.45; selling Close Quarters instead: 0.49 (+9.5%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)

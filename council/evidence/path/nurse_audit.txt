@@ -1,0 +1,58 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: nurse
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:16Z
+BODY-SHA: c17b63b8cc97c8afea21ccc7cbfbe4dc5d3b130ac9b98a5ebd4813d4263fa8f5
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Early · L-R              -> main path (sequential): Extra Spirit, Extended Magazine, Extra Regen, Rapid Rounds, Healing Booster, Titanic Magazine, Compress Cooldown, Surge of Power
+  Mid · L-R                -> main path (sequential): Burst Fire, Spirit Lifesteal, Debuff Reducer, Improved Spirit, Superior Cooldown, Toxic Bullets, Guardian Ward, Boundless Spirit
+  Late · L-R               -> main path (sequential): Unstoppable, Vampiric Burst, Spiritual Overflow, Healing Tempo, Ricochet, Escalating Exposure
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Counterspell, Spirit Resilience, Dispel Magic
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Echo Shard, Mercurial Magnum, Divine Barrier, Refresher
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown
+
+## SALE CHECKLIST (computed)
+- Late · L-R (main path): buy Ricochet, sell Guardian Ward
+    function of Guardian Ward: move_speed, range, sustain; replacement Ricochet: fire_rate; roles lost: move_speed, range, sustain  [VERIFIED GAME MECHANIC]
+    Guardian Ward is a component of later items: Divine Barrier -> selling now and rebuying costs 1600 again later (net extra 800 vs keeping, UNVERIFIED HYPOTHESIS refund)
+    held for 31200.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 14400/20800/12800 -> 20800/19200/12800; thresholds lost: none
+    trade ratio after the sale 0.21; selling Titanic Magazine instead: 0.18 (-16.4%)  [MODELLED ESTIMATE]
+    model limit: Guardian Ward has an active effect (PRESS) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: component sold before its planned upgrade; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Echo Shard, sell Burst Fire
+    function of Burst Fire: fire_rate, move_speed; replacement Echo Shard: bullet_resist, cooldown, spirit_resist; roles lost: fire_rate, move_speed  [VERIFIED GAME MECHANIC]
+    Burst Fire is a component of later items: no
+    held for 55200.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 20800/19200/19200 -> 17600/19200/25600; thresholds lost: none
+    trade ratio after the sale 0.18; selling Titanic Magazine instead: 0.15 (-18.2%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Mercurial Magnum, sell Titanic Magazine
+    function of Titanic Magazine: ammo; replacement Mercurial Magnum: ammo, fire_rate; roles lost: none  [VERIFIED GAME MECHANIC]
+    Titanic Magazine is a component of later items: no
+    held for 61600.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 20800/19200/19200 -> 19200/19200/25600; thresholds lost: none
+    trade ratio after the sale 0.17; selling Toxic Bullets instead: 0.21 (+24.8%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Titanic Magazine): 20 s 69 bullets (clip 13, 5.3 magazines, 40% not firing; refill items used every other charge) | 60 s 190 bullets, 46% not firing | damage 60 s 9783  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Titanic Magazine, sell Toxic Bullets: 20 s 93 bullets (clip 24, 3.8 magazines, 20% not firing; refill items used every other charge) | 60 s 247 bullets, 29% not firing | damage 60 s 13655  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Titanic Magazine, no Mercurial Magnum): 20 s 79 bullets (clip 22, 3.6 magazines, 29% not firing; refill items used every other charge) | 60 s 217 bullets, 35% not firing | damage 60 s 11997  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Divine Barrier, sell Toxic Bullets
+    function of Toxic Bullets: bullet_proc; replacement Divine Barrier: move_speed, range, sustain; roles lost: bullet_proc  [VERIFIED GAME MECHANIC]
+    Toxic Bullets is a component of later items: no
+    held for 45600.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 20800/19200/19200 -> 17600/25600/19200; thresholds lost: none
+    trade ratio after the sale 0.20; selling Titanic Magazine instead: 0.16 (-19.6%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Refresher, sell Escalating Exposure
+    function of Escalating Exposure: spirit_resist; replacement Refresher: bullet_resist, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Escalating Exposure is a component of later items: no
+    held for 6400.0 souls of purchases; resale 3200, net cost of having owned it 3200
+    investment before/after gun/vit/spirit 20800/19200/19200 -> 20800/19200/19200; thresholds lost: none
+    trade ratio after the sale 0.19; selling Titanic Magazine instead: 0.17 (-12.8%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

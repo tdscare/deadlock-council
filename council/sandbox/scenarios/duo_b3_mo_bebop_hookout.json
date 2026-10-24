@@ -1,0 +1,110 @@
+{
+ "id": "duo_b3_mo_bebop_hookout",
+ "title": "Mo & Krill + Bebop: hook Mo out mid-Combo",
+ "hero": "Mo & Krill",
+ "playstyle": "Duo Mo for Bebop / Duo Bebop for Mo",
+ "builds": [
+  "mokrill_duo_bebophook",
+  "bebop_duo_mohook"
+ ],
+ "question": "Does hooking Mo during Combo keep the hold and bring the target, and is that better than hooking the target (Kieran's wording) or no hook?",
+ "hypothesis": "H-B3-1.1 Combo survives a hook on Mo (no stun flag on the hook restriction; Combo breaks only on stun). H-B3-1.2 the held target arrives within 4m of Mo at Bebop. H-B3-1.3 Mo survives and the target dies within Combo + 3s kill check in >=4/5 trials vs <=1/5 without a hook. H-B3-1.4 hooking the TARGET instead fights Combo's spring drag and ends or shortens the hold.",
+ "arms": [
+  {
+   "name": "no_hook",
+   "items": [],
+   "ability_order": "1132124424421333",
+   "souls": 20000,
+   "notes": "Mo Combos alone inside 3 bots"
+  },
+  {
+   "name": "hook_mo",
+   "items": [],
+   "ability_order": "1132124424421333",
+   "souls": 20000,
+   "notes": "Bebop 15m behind Mo hooks Mo 0.3s after Combo starts"
+  },
+  {
+   "name": "hook_target",
+   "items": [],
+   "ability_order": "1132124424421333",
+   "souls": 20000,
+   "notes": "Bebop hooks the held enemy instead"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "20k souls both",
+  "souls": 20000,
+  "position": "3 bots clumped; Mo bursts in; Bebop 15m behind Mo, then repeat at 20m and 25m",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 3,
+    "items": [],
+    "behaviour": "shoot Mo",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "Bebop",
+    "count": 1,
+    "role": "hooks"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "HP"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Mo Burrows in and Combos the middle bot (Combo T3, 3.1s)",
+  "Bebop presses hook at Combo start + 0.3s per arm",
+  "Record: Combo channel still running after the pull (bool), distance Mo-target on arrival (m), time from Combo press to arrival (s), Mo HP left, target dead within Combo+3s (bool)",
+  "Repeat hook_mo at 15/20/25m to find the max distance with >=1.5s hold left"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "combo_kept",
+   "unit": "bool",
+   "how": "channel bar visible after arrival",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "hold_left_on_arrival",
+   "unit": "s",
+   "how": "channel bar / video frames",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "mo_survived_and_kill",
+   "unit": "bool",
+   "how": "kill feed + Mo alive at Combo+3s",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "mo_survived_and_kill",
+  "min_effect_pct": 50,
+  "min_trials": 5,
+  "rule": "SUPPORTS if hook_mo succeeds in >=4/5 and beats no_hook by >=3 trials. If hook_target beats hook_mo, switch both combo texts to 'hook the target'. If combo_kept is false in hook_mo, REFUTED: change the combo to hooking Mo after Combo ends (escape only) and revert Mo's Spirit Burn to Colossus."
+ },
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

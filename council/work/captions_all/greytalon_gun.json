@@ -1,0 +1,3295 @@
+{
+ "schema": 1,
+ "id": "greytalon_gun",
+ "hero": "Grey Talon",
+ "name": "Rizuhble's Bow Optional Grey Talon",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, once you're out of slots.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-8,800 (levels 1-15). Abilities gained (both point models agree): Rain of Arrows T3. 4.8k spikes: weapon 4.8k at Hollow Point. Ultimate (Guided Owl) is available from Hollow Point.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "greytalon_gun:5:phase_range:724",
+    "greytalon_gun:5:phase_abilities:725",
+    "greytalon_gun:5:phase_spikes:732",
+    "greytalon_gun:5:phase_ult:733"
+   ],
+   "items": [
+    {
+     "name": "High-Velocity Rounds",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Hollow Point completes 5,600 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Hollow Point completes 4.8k weapon in 5600 souls (~5.6 min), 3 purchases",
+     "claim_ids": [
+      "greytalon_gun:0:spike_progress:710"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:0:spike_progress:710",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Extra Stamina",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 11200 souls (~11.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Swift Striker",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Hollow Point completes 3,200 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Hollow Point completes 4.8k weapon in 3200 souls (~3.2 min), 1 purchases",
+     "claim_ids": [
+      "greytalon_gun:2:spike_progress:714"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:2:spike_progress:714",
+       true,
+       "2400"
+      ]
+     ]
+    },
+    {
+     "name": "Hollow Point",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (2,400 to 5,600 invested): bonus 15 to 46% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:3:spike_complete:716"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:3:spike_complete:716",
+       true,
+       "inventory weapon: before 2400, after 5600, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 10 to Charged Shot's damage (1.00x scaling), your steepest spirit scaling.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:4:spirit_scaling:720"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:4:spirit_scaling:720",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Quicksilver Reload",
+     "imbue": "2",
+     "caption": "Imbued on Rain of Arrows: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:5:imbue_reload:722"
+     ],
+     "lint": [],
+     "legacy_note": "On Rain of Arrows.",
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:5:imbue_reload:722",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 8,800-20,800 (levels 15-26). Abilities gained (both point models agree): Guided Owl T3. Your biggest single spirit hit (Charged Shot, damage) grows from 127 to 164. 4.8k spikes: vitality 4.8k at Stamina Mastery, spirit 4.8k at Surge of Power.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "greytalon_gun:13:phase_range:752",
+    "greytalon_gun:13:phase_abilities:753",
+    "greytalon_gun:13:phase_power:754",
+    "greytalon_gun:13:phase_spikes:763"
+   ],
+   "items": [
+    {
+     "name": "Sprint Boots",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Enduring Speed",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Stamina Mastery completes 2,400 souls on. Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "imminent: Stamina Mastery completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "greytalon_gun:7:spike_progress:736",
+      "greytalon_gun:7:upgrade_of:737"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:7:spike_progress:736",
+       true,
+       "2400"
+      ],
+      [
+       "greytalon_gun:7:upgrade_of:737",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Stamina Mastery",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus. Upgrade of Extra Stamina (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:8:spike_complete:738",
+      "greytalon_gun:8:upgrade_of:739"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:8:spike_complete:738",
+       true,
+       "inventory vitality: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "greytalon_gun:8:upgrade_of:739",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Long Range",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 5,600 to 7,200 invested: bonus 46 to 54% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Sharpshooter",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 7,200 to 8,000 invested: bonus 54 to 62% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Surge of Power",
+     "imbue": "2",
+     "caption": null,
+     "cls": "x",
+     "why": "contradiction: Rain of Arrows has no spirit-scaled effect at any tier, so the imbued spirit has nothing to raise there (the item's move-speed and fire-rate part still works).",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "On Rain of Arrows.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Bullet Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 6,400 to 8,000 invested: bonus 42 to 46 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 20,800-51,200 (levels 26-36). Abilities gained (both point models agree): Charged Shot T3, Spirit Snare T3. Your biggest single spirit hit (Charged Shot, damage) grows from 164 to 376.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "greytalon_gun:20:phase_range:776",
+    "greytalon_gun:20:phase_abilities:777",
+    "greytalon_gun:20:phase_power:778"
+   ],
+   "items": [
+    {
+     "name": "Rapid Rounds",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Burst Fire",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 8,800 to 11,200 invested: bonus 62 to 74% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mercurial Magnum",
+     "imbue": "2",
+     "caption": "Imbued on Rain of Arrows: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s. Takes spirit from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power. Upgrade of Quicksilver Reload (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:16:imbue_reload:768",
+      "greytalon_gun:16:invest_step:767",
+      "greytalon_gun:16:upgrade_of:769"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:16:imbue_reload:768",
+       true,
+       ""
+      ],
+      [
+       "greytalon_gun:16:invest_step:767",
+       true,
+       "inventory spirit: before 4800, after 9600, threshold 6400"
+      ],
+      [
+       "greytalon_gun:16:upgrade_of:769",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Lucky Shot",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 11,200 to 17,600 invested: bonus 74 to 86% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Vampiric Burst",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 8,000 to 12,800 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Pop it in the air during Rain of Arrows.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Ricochet",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 17,600 to 24,000 invested: bonus 86 to 100% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spiritual Overflow",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 24,000 to 30,400 invested: bonus 100 to 115% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Stamina Mastery? Buy what is killing you, cheapest first. Not dying? Skip. Sell Swift Striker.",
+   "desc": "Dying after Stamina Mastery? Buy what is killing you, cheapest first. Not dying? Skip. Sell Swift Striker.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:21:defence_bullet:785"
+     ],
+     "lint": [],
+     "legacy_note": "One gun hero is deleting you: Haze, Wraith, Vindicta.",
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:21:defence_bullet:785",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:21:defence_parry:786"
+     ],
+     "lint": [],
+     "legacy_note": "A big ability you can see coming at you, like Lash's ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:21:defence_parry:786",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:21:defence_purge:787"
+     ],
+     "lint": [],
+     "legacy_note": "Knockdown, Slowing Hex, Disarming Hex.",
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:21:defence_purge:787",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:21:defence_spirit:788"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist.",
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:21:defence_spirit:788",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Charged Shot (channelled) and Rain of Arrows (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:21:cc_exposure:789"
+     ],
+     "lint": [],
+     "legacy_note": "You keep getting stunned during Rain of Arrows.",
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:21:cc_exposure:789",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Glass Cannon",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Swift Striker for this, or Burst Fire if it's gone.",
+     "temporary": true,
+     "verify": []
+    },
+    {
+     "name": "Crippling Headshot",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Hollow Point for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Cheat Death",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Stamina Mastery for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:21:defence_barrier:793"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:21:defence_barrier:793",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Juggernaut",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "greytalon_gun:21:upgrade_delta:794"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Enduring Speed.",
+     "temporary": false,
+     "verify": [
+      [
+       "greytalon_gun:21:upgrade_delta:794",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "greytalon_gun:21:temporary_sold:709": {
+   "id": "greytalon_gun:21:temporary_sold:709",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, once you're out of slots.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 21,
+    "item": "Extra Regen",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it once you're out of slots."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:0:spike_progress:710": {
+   "id": "greytalon_gun:0:spike_progress:710",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Hollow Point completes 5,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 5600,
+    "event": "Hollow Point completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    5600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "greytalon_gun:0:component_for:711": {
+   "id": "greytalon_gun:0:component_for:711",
+   "kind": "component_for",
+   "phrase": "From Sharpshooter: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 14400,
+    "event": "Sharpshooter"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Sharpshooter"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:1:spike_progress:712": {
+   "id": "greytalon_gun:1:spike_progress:712",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Extra Stamina",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "greytalon_gun:1:component_for:713": {
+   "id": "greytalon_gun:1:component_for:713",
+   "kind": "component_for",
+   "phrase": "From Stamina Mastery: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Extra Stamina",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 11200,
+    "event": "Stamina Mastery"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Stamina Mastery"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:2:spike_progress:714": {
+   "id": "greytalon_gun:2:spike_progress:714",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Hollow Point completes 3,200 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Swift Striker",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 3200,
+    "event": "Hollow Point completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    3200,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "greytalon_gun:2:swap_candidate:715": {
+   "id": "greytalon_gun:2:swap_candidate:715",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Glass Cannon later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 2,
+    "item": "Swift Striker",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Swift Striker",
+    "buyer": "Glass Cannon"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:3:spike_complete:716": {
+   "id": "greytalon_gun:3:spike_complete:716",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (2,400 to 5,600 invested): bonus 15 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 3,
+    "item": "Hollow Point",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "5600",
+    "15.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "greytalon_gun:3:swap_candidate:717": {
+   "id": "greytalon_gun:3:swap_candidate:717",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Crippling Headshot later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 3,
+    "item": "Hollow Point",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Hollow Point",
+    "buyer": "Crippling Headshot"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:4:spike_progress:718": {
+   "id": "greytalon_gun:4:spike_progress:718",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Extra Spirit",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "greytalon_gun:4:component_for:719": {
+   "id": "greytalon_gun:4:component_for:719",
+   "kind": "component_for",
+   "phrase": "From Surge of Power: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Extra Spirit",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 10400,
+    "event": "Surge of Power"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Surge of Power"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:4:spirit_scaling:720": {
+   "id": "greytalon_gun:4:spirit_scaling:720",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 10 to Charged Shot's damage (1.00x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_charged_shot"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 4,
+    "item": "Extra Spirit",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "10.0",
+    "10",
+    "1.00"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "greytalon_gun:5:spike_progress:721": {
+   "id": "greytalon_gun:5:spike_progress:721",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Quicksilver Reload",
+    "souls": 8800,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "greytalon_gun:5:imbue_reload:722": {
+   "id": "greytalon_gun:5:imbue_reload:722",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Rain of Arrows: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_quick_silver",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_power_jump"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 5,
+    "item": "Quicksilver Reload",
+    "souls": 8800,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 2
+   },
+   "numbers": [
+    "18.0",
+    "10.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "greytalon_gun:5:component_for:723": {
+   "id": "greytalon_gun:5:component_for:723",
+   "kind": "component_for",
+   "phrase": "From Mercurial Magnum: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Quicksilver Reload",
+    "souls": 8800,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 20000,
+    "event": "Mercurial Magnum"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Mercurial Magnum"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:5:phase_range:724": {
+   "id": "greytalon_gun:5:phase_range:724",
+   "kind": "phase_range",
+   "phrase": "Souls 0-8,800 (levels 1-15).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Quicksilver Reload",
+    "souls": 8800,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Quicksilver Reload",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "8,800",
+    "1",
+    "15"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:5:phase_abilities:725": {
+   "id": "greytalon_gun:5:phase_abilities:725",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Rain of Arrows T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Quicksilver Reload",
+    "souls": 8800,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Quicksilver Reload",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:5:phase_spikes:732": {
+   "id": "greytalon_gun:5:phase_spikes:732",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Hollow Point.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Quicksilver Reload",
+    "souls": 8800,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Quicksilver Reload",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:5:phase_ult:733": {
+   "id": "greytalon_gun:5:phase_ult:733",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Guided Owl) is available from Hollow Point.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Quicksilver Reload",
+    "souls": 8800,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Quicksilver Reload",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:6:spike_progress:734": {
+   "id": "greytalon_gun:6:spike_progress:734",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Sprint Boots",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "greytalon_gun:6:component_for:735": {
+   "id": "greytalon_gun:6:component_for:735",
+   "kind": "component_for",
+   "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Sprint Boots",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Enduring Speed"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Enduring Speed"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:7:spike_progress:736": {
+   "id": "greytalon_gun:7:spike_progress:736",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Stamina Mastery completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Stamina Mastery completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "greytalon_gun:7:upgrade_of:737": {
+   "id": "greytalon_gun:7:upgrade_of:737",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Sprint Boots"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:8:spike_complete:738": {
+   "id": "greytalon_gun:8:spike_complete:738",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 8,
+    "item": "Stamina Mastery",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "greytalon_gun:8:upgrade_of:739": {
+   "id": "greytalon_gun:8:upgrade_of:739",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Stamina (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 8,
+    "item": "Stamina Mastery",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Stamina"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:8:swap_candidate:740": {
+   "id": "greytalon_gun:8:swap_candidate:740",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Cheat Death later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 8,
+    "item": "Stamina Mastery",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Stamina Mastery",
+    "buyer": "Cheat Death"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:9:invest_step:741": {
+   "id": "greytalon_gun:9:invest_step:741",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 5,600 to 7,200 invested: bonus 46 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Long Range",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "7200",
+    "46.0",
+    "54.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 6400
+  },
+  "greytalon_gun:9:component_for:742": {
+   "id": "greytalon_gun:9:component_for:742",
+   "kind": "component_for",
+   "phrase": "From Sharpshooter: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Long Range",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Sharpshooter"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Sharpshooter"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:10:invest_step:743": {
+   "id": "greytalon_gun:10:invest_step:743",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 7,200 to 8,000 invested: bonus 54 to 62% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Sharpshooter",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "8000",
+    "54.0",
+    "62.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 8000
+  },
+  "greytalon_gun:10:upgrade_of:744": {
+   "id": "greytalon_gun:10:upgrade_of:744",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Long Range, High-Velocity Rounds (already owned): costs 800 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Sharpshooter",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Long Range",
+     "High-Velocity Rounds"
+    ]
+   },
+   "numbers": [
+    "800",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:11:spike_complete:745": {
+   "id": "greytalon_gun:11:spike_complete:745",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 11,
+    "item": "Surge of Power",
+    "souls": 17600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "greytalon_gun:11:imbue_no_effect:746": {
+   "id": "greytalon_gun:11:imbue_no_effect:746",
+   "kind": "imbue_no_effect",
+   "phrase": "Rain of Arrows has no spirit-scaled effect at any tier, so the imbued spirit has nothing to raise there (the item's move-speed and fire-rate part still works).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_storm",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_power_jump"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 11,
+    "item": "Surge of Power",
+    "souls": 17600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "never",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_spirit",
+    "slot": 2
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason",
+   "contradiction": true
+  },
+  "greytalon_gun:11:upgrade_of:747": {
+   "id": "greytalon_gun:11:upgrade_of:747",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Surge of Power",
+    "souls": 17600,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:12:invest_step:748": {
+   "id": "greytalon_gun:12:invest_step:748",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Bullet Lifesteal",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "greytalon_gun:12:component_for:749": {
+   "id": "greytalon_gun:12:component_for:749",
+   "kind": "component_for",
+   "phrase": "From Vampiric Burst: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Bullet Lifesteal",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 20800,
+    "event": "Vampiric Burst"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Vampiric Burst"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:13:invest_step:750": {
+   "id": "greytalon_gun:13:invest_step:750",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 8,000 invested: bonus 42 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Lifesteal",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "8000",
+    "42.0",
+    "46.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "greytalon_gun:13:component_for:751": {
+   "id": "greytalon_gun:13:component_for:751",
+   "kind": "component_for",
+   "phrase": "From Spiritual Overflow: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Lifesteal",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 30400,
+    "event": "Spiritual Overflow"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spiritual Overflow"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:13:phase_range:752": {
+   "id": "greytalon_gun:13:phase_range:752",
+   "kind": "phase_range",
+   "phrase": "Souls 8,800-20,800 (levels 15-26).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Lifesteal",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Lifesteal",
+    "keys": []
+   },
+   "numbers": [
+    "8,800",
+    "20,800",
+    "15",
+    "26"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:13:phase_abilities:753": {
+   "id": "greytalon_gun:13:phase_abilities:753",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Guided Owl T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Lifesteal",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Lifesteal",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:13:phase_power:754": {
+   "id": "greytalon_gun:13:phase_power:754",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Charged Shot, damage) grows from 127 to 164.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_charged_shot",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Lifesteal",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Lifesteal",
+    "keys": []
+   },
+   "numbers": [
+    "127",
+    "164"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:13:phase_spikes:763": {
+   "id": "greytalon_gun:13:phase_spikes:763",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Stamina Mastery, spirit 4.8k at Surge of Power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Lifesteal",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Lifesteal",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:14:component_for:764": {
+   "id": "greytalon_gun:14:component_for:764",
+   "kind": "component_for",
+   "phrase": "From Burst Fire: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Rapid Rounds",
+    "souls": 21600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Burst Fire"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Burst Fire"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:15:invest_step:765": {
+   "id": "greytalon_gun:15:invest_step:765",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 8,800 to 11,200 invested: bonus 62 to 74% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Burst Fire",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8800",
+    "11200",
+    "62.0",
+    "74.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 11200
+  },
+  "greytalon_gun:15:upgrade_of:766": {
+   "id": "greytalon_gun:15:upgrade_of:766",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Rapid Rounds (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Burst Fire",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Rapid Rounds"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:16:invest_step:767": {
+   "id": "greytalon_gun:16:invest_step:767",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Mercurial Magnum",
+    "souls": 28800,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "9600",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "greytalon_gun:16:imbue_reload:768": {
+   "id": "greytalon_gun:16:imbue_reload:768",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Rain of Arrows: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ethereal_bullets",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_power_jump"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 16,
+    "item": "Mercurial Magnum",
+    "souls": 28800,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 2
+   },
+   "numbers": [
+    "14.0",
+    "22.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "greytalon_gun:16:upgrade_of:769": {
+   "id": "greytalon_gun:16:upgrade_of:769",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Quicksilver Reload (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Mercurial Magnum",
+    "souls": 28800,
+    "noncore": false,
+    "imb": 2,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Quicksilver Reload"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:17:invest_step:770": {
+   "id": "greytalon_gun:17:invest_step:770",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 11,200 to 17,600 invested: bonus 74 to 86% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Lucky Shot",
+    "souls": 35200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "17600",
+    "74.0",
+    "86.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 16000
+  },
+  "greytalon_gun:18:invest_step:771": {
+   "id": "greytalon_gun:18:invest_step:771",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 8,000 to 12,800 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Vampiric Burst",
+    "souls": 40000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "12800",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "greytalon_gun:18:upgrade_of:772": {
+   "id": "greytalon_gun:18:upgrade_of:772",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Bullet Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Vampiric Burst",
+    "souls": 40000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Bullet Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:19:invest_step:773": {
+   "id": "greytalon_gun:19:invest_step:773",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 17,600 to 24,000 invested: bonus 86 to 100% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Ricochet",
+    "souls": 46400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "24000",
+    "86.0",
+    "100.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 22400
+  },
+  "greytalon_gun:20:invest_step:774": {
+   "id": "greytalon_gun:20:invest_step:774",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 24,000 to 30,400 invested: bonus 100 to 115% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Spiritual Overflow",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 28800
+   },
+   "numbers": [
+    "24000",
+    "30400",
+    "100.0",
+    "115.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 28800
+  },
+  "greytalon_gun:20:upgrade_of:775": {
+   "id": "greytalon_gun:20:upgrade_of:775",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Spiritual Overflow",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "greytalon_gun:20:phase_range:776": {
+   "id": "greytalon_gun:20:phase_range:776",
+   "kind": "phase_range",
+   "phrase": "Souls 20,800-51,200 (levels 26-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_orion m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Spiritual Overflow",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spiritual Overflow",
+    "keys": []
+   },
+   "numbers": [
+    "20,800",
+    "51,200",
+    "26",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:20:phase_abilities:777": {
+   "id": "greytalon_gun:20:phase_abilities:777",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Charged Shot T3, Spirit Snare T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Spiritual Overflow",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spiritual Overflow",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:20:phase_power:778": {
+   "id": "greytalon_gun:20:phase_power:778",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Charged Shot, damage) grows from 164 to 376.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_charged_shot",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Spiritual Overflow",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spiritual Overflow",
+    "keys": []
+   },
+   "numbers": [
+    "164",
+    "376"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:21:defence_bullet:785": {
+   "id": "greytalon_gun:21:defence_bullet:785",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Metal Skin",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "One gun hero is deleting you: Haze, Wraith, Vindicta."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:21:defence_parry:786": {
+   "id": "greytalon_gun:21:defence_parry:786",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Counterspell",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ability you can see coming at you, like Lash's ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:21:defence_purge:787": {
+   "id": "greytalon_gun:21:defence_purge:787",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Dispel Magic",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Knockdown, Slowing Hex, Disarming Hex."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:21:defence_spirit:788": {
+   "id": "greytalon_gun:21:defence_spirit:788",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Spirit Resilience",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:21:cc_exposure:789": {
+   "id": "greytalon_gun:21:cc_exposure:789",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Charged Shot (channelled) and Rain of Arrows (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 21,
+    "item": "Unstoppable",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "You keep getting stunned during Rain of Arrows."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     1,
+     2
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "greytalon_gun:21:sell_swap:790": {
+   "id": "greytalon_gun:21:sell_swap:790",
+   "kind": "sell_swap",
+   "phrase": "Replaces Swift Striker: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Glass Cannon",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Swift Striker for this, or Burst Fire if it's gone."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Swift Striker",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Swift Striker"
+  },
+  "greytalon_gun:21:sell_swap:791": {
+   "id": "greytalon_gun:21:sell_swap:791",
+   "kind": "sell_swap",
+   "phrase": "Replaces Hollow Point: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Crippling Headshot",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Hollow Point for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Hollow Point",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Hollow Point"
+  },
+  "greytalon_gun:21:sell_swap:792": {
+   "id": "greytalon_gun:21:sell_swap:792",
+   "kind": "sell_swap",
+   "phrase": "Replaces Stamina Mastery: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Cheat Death",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Stamina Mastery for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Stamina Mastery",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Stamina Mastery"
+  },
+  "greytalon_gun:21:defence_barrier:793": {
+   "id": "greytalon_gun:21:defence_barrier:793",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Divine Barrier",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:21:upgrade_delta:794": {
+   "id": "greytalon_gun:21:upgrade_delta:794",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_juggernaut",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cardio_calibrator"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Juggernaut",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Enduring Speed"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "40",
+    "25",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "greytalon_gun:21:upgrade_of:795": {
+   "id": "greytalon_gun:21:upgrade_of:795",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Enduring Speed (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 21,
+    "item": "Juggernaut",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Enduring Speed"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "greytalon_gun",
+   "item": "High-Velocity Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Hollow Point completes 4.8k weapon in 5600 souls (~5.6 min), 3 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "greytalon_gun:0:spike_progress:710",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Hollow Point completes 5,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 5600,
+      "event": "Hollow Point completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "greytalon_gun:0:component_for:711",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Sharpshooter: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 14400,
+      "event": "Sharpshooter"
+     }
+    }
+   ]
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Extra Stamina",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 11200 souls (~11.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "greytalon_gun:1:component_for:713",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Stamina Mastery: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 11200,
+      "event": "Stamina Mastery"
+     }
+    }
+   ]
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Swift Striker",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Hollow Point completes 4.8k weapon in 3200 souls (~3.2 min), 1 purchases",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "greytalon_gun:2:spike_progress:714",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Hollow Point completes 3,200 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 3200,
+      "event": "Hollow Point completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Quicksilver Reload",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Rain of Arrows."
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Sprint Boots",
+   "section": "mid",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 9600,
+   "unpublished": [
+    {
+     "id": "greytalon_gun:6:component_for:735",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Enduring Speed"
+     }
+    }
+   ]
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Enduring Speed",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Stamina Mastery completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 10400,
+   "unpublished": [
+    {
+     "id": "greytalon_gun:7:spike_progress:736",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Stamina Mastery completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Stamina Mastery completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Surge of Power",
+   "section": "mid",
+   "cls": "x",
+   "why": "contradiction: Rain of Arrows has no spirit-scaled effect at any tier, so the imbued spirit has nothing to raise there (the item's move-speed and fire-rate part still works).",
+   "souls": 17600,
+   "unpublished": [
+    {
+     "id": "greytalon_gun:11:imbue_no_effect:746",
+     "tier": "VERIFIED DATA",
+     "phrase": "Rain of Arrows has no spirit-scaled effect at any tier, so the imbued spirit has nothing to raise there (the item's move-speed and fire-rate part still works).",
+     "timing": {
+      "when": "never",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Surge of Power",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Rain of Arrows."
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Rapid Rounds",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+   "souls": 21600,
+   "unpublished": [
+    {
+     "id": "greytalon_gun:14:component_for:764",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Burst Fire: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Burst Fire"
+     }
+    }
+   ]
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Vampiric Burst",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Pop it in the air during Rain of Arrows."
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "One gun hero is deleting you: Haze, Wraith, Vindicta."
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ability you can see coming at you, like Lash's ult."
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Knockdown, Slowing Hex, Disarming Hex."
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "You keep getting stunned during Rain of Arrows."
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Glass Cannon",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 51200,
+   "unpublished": []
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Glass Cannon",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Sell Swift Striker for this, or Burst Fire if it's gone."
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Crippling Headshot",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 51200,
+   "unpublished": []
+  },
+  {
+   "build": "greytalon_gun",
+   "item": "Cheat Death",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 51200,
+   "unpublished": []
+  }
+ ],
+ "stats": {
+  "g": 10,
+  "b": 3,
+  "c": 2,
+  "a": 12,
+  "x": 1,
+  "d": 4
+ }
+}

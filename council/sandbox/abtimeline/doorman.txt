@@ -1,0 +1,106 @@
+# doorman | The Doorman | Rizuhble's Early Checkout Doorman
+abilities: 1=Call Bell (ability_doorman_bomb, start_trained=false, Signature) / 2=Doorway (ability_doorman_doorway, start_trained=false, Signature) / 3=Luggage Cart (ability_doorman_luggage_cart, start_trained=false, Signature) / 4=Hotel Guest (ability_doorman_hotel, start_trained=false, Ultimate)
+order: 1132134221334442
+model A (data):  Call Bell:U@0  Call Bell:T1@200  Luggage Ca:U@500  Doorway:U@1400  Call Bell:T2@2000  Luggage Ca:T1@2600  Hotel Gues:U@3200  Doorway:T1@3900  Doorway:T2@5300  Call Bell:T3@9200  Luggage Ca:T2@11000  Luggage Ca:T3@16100  Hotel Gues:T1@17400  Hotel Gues:T2@20600  Hotel Gues:T3@32100  Doorway:T3@48600
+model B (old):   Call Bell:T1@200  Call Bell:T2@900  Luggage Ca:T1@2000  Doorway:T1@2600  Call Bell:T3@3900  Luggage Ca:T2@4600  Hotel Gues:U@5300  Doorway:T2@6000  Doorway:T3@6800  Luggage Ca:T3@8400  Hotel Gues:T1@10100  Hotel Gues:T2@11000  Hotel Gues:T3@11900
+tier upgrades: Call Bell: AbilityCharges+1 / ImpactDamage+30,ExplosionDamage+40 / ProjectileFuse+26,Radius+4.5,ImpactDamage+0.35x,ExplosionDamage+0.35x | Doorway: AbilityDuration+20 / CombatBarrier+250,BarrierDuration+12,CombatBarrier+1.5x / DoorwayDistance+40,AbilityCastRange+30,DoorwayDistance+0.15x | Luggage Cart: CartDamage+80 / AbilityCastRange+25,WallImpactDamage+75,WallImpactDamage+0.6x / StunDuration+1.25,AbilityCooldown-15 | Hotel Guest: AbilityCooldown-20,StaminaDrain+1 / Damage+150,LateCheckoutDamage+150,LateCheckoutStun+1.5 / UnstoppableWhileHotelOccupied+1,LateCheckoutCooldown+15
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  High-Velocity Rounds
+        Call Bell T1 ch2 cd18/7 d4 Explosio=58,ImpactDa=42 | Doorway L[U] | Luggage Ca U ch1 cd30 d6 CartDama=62 | Hotel Gues L
+  1600 L5   2    11  Extra Charge
+        Call Bell T1[T2] ch2 cd18/7 d4 Explosio=77,ImpactDa=53 | Doorway U ch1 cd45 d15 | Luggage Ca U ch1 cd30 d6 CartDama=69 | Hotel Gues L
+  2400 L6   3    16  Mystic Burst
+        Call Bell T2 ch2 cd18/7 d4 Explosio=123,ImpactDa=86 | Doorway U ch1 cd45 d15 | Luggage Ca U[T1] ch1 cd30 d6 CartDama=72 | Hotel Gues L
+  3200 L8   4    26  Opening Rounds
+        Call Bell T2 ch2 cd18/7 d4 Explosio=134,ImpactDa=93 | Doorway U[T1] ch1 cd45 d15 | Luggage Ca T1 ch1 cd30 d6 CartDama=159 | Hotel Gues U[L] ch1 cd140 d6.5 Damage=101,LateChec=164
+  4000 L9   5    31  Mystic Expansion [imbue Call Bell]
+        Call Bell T2[T3] ch2 cd18/7 d4 Explosio=140,ImpactDa=96 | Doorway T1 ch1 cd45 d35 | Luggage Ca T1 ch1 cd30 d6 CartDama=163 | Hotel Gues U[L] ch1 cd140 d6.5 Damage=106,LateChec=171
+  6400 L12  8    57  Rapid Recharge
+        Call Bell T2[T3] ch2 cd18/7 d4 Explosio=180,ImpactDa=120 | Doorway T2 ch1 cd45 d35 | Luggage Ca T1[T2] ch1 cd30 d6 CartDama=183 | Hotel Gues U ch1 cd140 d6.5 Damage=132,LateChec=211
+  7200 L13  9    58  Grit
+        Call Bell T2[T3] ch2 cd18/7 d4 Explosio=182,ImpactDa=121 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T1[T2] ch1 cd30 d6 CartDama=184 | Hotel Gues U ch1 cd140 d6.5 Damage=133,LateChec=212
+  8800 L15 11    66  Spirit Lifesteal
+        Call Bell T2[T3] ch2 cd18/7 d4 Explosio=191,ImpactDa=126 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T1[T3] ch1 cd30 d6 CartDama=190 | Hotel Gues U ch1 cd140 d6.5 Damage=141,LateChec=225
+ 10400 L17 13    84  Enchanter's Emblem
+        Call Bell T3 ch2 cd18/7 d4 Explosio=246,ImpactDa=172 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T1[T3] ch1 cd30 d6 CartDama=203 | Hotel Gues U[T1] ch1 cd140 d6.5 Damage=159,LateChec=250
+ 11200 L18 14    85  Guardian Ward
+        Call Bell T3 ch2 cd18/7 d4 Explosio=248,ImpactDa=174 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T2[T3] ch1 cd30 d6 CartDama=204,WallImpa=126 | Hotel Gues U[T2] ch1 cd140 d6.5 Damage=160,LateChec=252
+ 12800 L20 16    94  Slowing Hex
+        Call Bell T3 ch2 cd18/7 d4 Explosio=262,ImpactDa=183 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T2[T3] ch1 cd30 d6 CartDama=210,WallImpa=131 | Hotel Gues U[T3] ch1 cd140 d6.5 Damage=169,LateChec=266
+ 13600 L20 16   104  Extra Spirit
+        Call Bell T3 ch2 cd18/7 d4 Explosio=278,ImpactDa=194 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T2[T3] ch1 cd30 d6 CartDama=218,WallImpa=137 | Hotel Gues U[T3] ch1 cd140 d6.5 Damage=179,LateChec=281
+ 14400 L21 17   120  Improved Spirit
+        Call Bell T3 ch2 cd18/7 d4 Explosio=303,ImpactDa=211 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T2[T3] ch1 cd30 d6 CartDama=230,WallImpa=147 | Hotel Gues U[T3] ch1 cd140 d6.5 Damage=195,LateChec=305
+ 16800 L23 19   122  Tankbuster
+        Call Bell T3 ch2 cd18/7 d4 Explosio=306,ImpactDa=213 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T3 ch1 cd15 d6 CartDama=232,WallImpa=148 | Hotel Gues U[T3] ch1 cd140 d6.5 Damage=197,LateChec=308
+ 18400 L24 20   130  Compress Cooldown [imbue Call Bell]
+        Call Bell T3 ch2 cd18/7 d4 Explosio=319,ImpactDa=222 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T3 ch1 cd15 d6 CartDama=238,WallImpa=153 | Hotel Gues T1[T3] ch1 cd120 d6.5 Damage=205,LateChec=320
+ 23200 L27 23   175  Boundless Spirit
+        Call Bell T3 ch2 cd18/7 d4 Explosio=389,ImpactDa=269 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T3 ch1 cd15 d6 CartDama=272,WallImpa=180 | Hotel Gues T2[T3] ch1 cd120 d6.5 Damage=400,LateChec=538
+ 24800 L28 24   177  Superior Cooldown
+        Call Bell T3 ch2 cd18/7 d4 Explosio=391,ImpactDa=270 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T3 ch1 cd15 d6 CartDama=273,WallImpa=181 | Hotel Gues T2[T3] ch1 cd120 d6.5 Damage=402,LateChec=540
+ 31200 L30 26   190  Spirit Burn
+        Call Bell T3 ch2 cd18/7 d4 Explosio=411,ImpactDa=284 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T3 ch1 cd15 d6 CartDama=282,WallImpa=189 | Hotel Gues T2[T3] ch1 cd120 d6.5 Damage=415,LateChec=559
+ 33600 L31 27   191  Greater Expansion
+        Call Bell T3 ch2 cd18/7 d4 Explosio=413,ImpactDa=285 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T3 ch1 cd15 d6 CartDama=283,WallImpa=190 | Hotel Gues T3 ch1 cd120 d6.5 Damage=416,LateChec=561
+ 38400 L33 29   222  Vortex Web
+        Call Bell T3 ch2 cd18/7 d4 Explosio=461,ImpactDa=318 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T3 ch1 cd15 d6 CartDama=307,WallImpa=208 | Hotel Gues T3 ch1 cd120 d6.5 Damage=447,LateChec=608
+ 44800 L34 30   223  Cheat Death
+        Call Bell T3 ch2 cd18/7 d4 Explosio=463,ImpactDa=319 | Doorway T2[T3] ch1 cd45 d35 | Luggage Ca T3 ch1 cd15 d6 CartDama=308,WallImpa=209 | Hotel Gues T3 ch1 cd120 d6.5 Damage=448,LateChec=610
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @1600 Extra Charge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Adds one to your ability max charges.
+    at buy: Call Bell 2->3 charges; Call Bell shots in 5s 1->1 (between-charge 7s)
+    unverified: F7 1-charge abilities
+- @2400 Mystic Burst [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 80 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcByOtherObjects=true
+    at buy: best Call Bell.ExplosionDamage 123 at spirit 16
+    margin: +54%
+    reliability: procs from Call Bell.ExplosionDamage 123 (cd 18), Call Bell.ImpactDamage 86 (cd 18); below threshold: Luggage Cart.CartDamage 72
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @3200 Opening Rounds [enemyhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on enemy health % (EnemyLifeThreshold=50)
+    game text: Your attacks have additional Weapon Damage against enemies above {s:EnemyLifeThreshold}% health.
+    at buy: not computed (needs play data)
+- @4000 Mystic Expansion [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Call Bell; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its range and effect radius.
+    at buy: Call Bell T2: cd 18s, duration 4s, charges 2
+- @6400 Rapid Recharge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: (no game text)
+    at buy: Call Bell 2->4 charges; Call Bell shots in 5s 1->2 (between-charge 7s) (cd 18->15.5s, between 7->4.90s)
+    unverified: F7 1-charge abilities
+- @10400 Enchanter's Emblem [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: While you are above {s:LifeThreshold}% health, gain bonus {g:citadel_inline_attribute:'Spirit'} and Cooldown Reduction.
+    at buy: not computed (needs play data)
+    reliability: its spirit is conditional: only above 65% health
+- @16800 Tankbuster [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 165 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcFromItems=false, IgnoreResists=true, CanProcByOtherObjects=true
+    at buy: best Hotel Guest.LateCheckoutDamage 308 at spirit 122 (286 without conditional spirit)
+    margin: +87%
+    reliability: procs from Call Bell.ExplosionDamage 306 (cd 18), Call Bell.ImpactDamage 213 (cd 18), Luggage Cart.CartDamage 232 (cd 15), Hotel Guest.Damage 197 (cd 140), Hotel Guest.LateCheckoutDamage 308 (cd 140); below threshold: Luggage Cart.WallImpactDamage 148
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @18400 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Call Bell; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Call Bell T3: cd 18s, duration 4s, charges 2; saves 3.2s/cast (3.33->4.07 casts/min)
+- @24800 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 198s; 20% saves 39.6s per rotation
+- @31200 Spirit Burn [win] -> OK | verdict: buy now | UNTESTABLE-HIGH-RISK
+    rule: 500 spirit damage to one enemy within 5s (game text: 'significant spirit damage'); per-enemy cooldown
+    game text: Dealing significant {g:citadel_inline_attribute:'SpiritDamage'} to an enemy within {s:DamageThresholdDuration}s causes an explosion dealing damage and...
+    at buy: all abilities in 5s ~2140 (Call Bell 694x1; Luggage Cart 471x1; Hotel Guest 974x1), without ult 1165
+    margin: +133% without ult, +328% with
+    reliability: needs the whole combo on one target (hit rate, travel time)
+    unverified: pre/post resist; item and DoT damage count (text says any spirit damage)
+
+no trigger condition (plain stats/actives): High-Velocity Rounds, Grit, Spirit Lifesteal, Guardian Ward, Slowing Hex, Extra Spirit, Improved Spirit, Boundless Spirit, Greater Expansion, Vortex Web, Cheat Death

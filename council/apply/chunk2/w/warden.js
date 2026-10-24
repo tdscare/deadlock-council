@@ -1,0 +1,243 @@
+{
+ "id": "warden",
+ "hk": "hero_warden",
+ "hero": "Warden",
+ "tag": "New",
+ "name": "Rizuhble's No Witnesses Warden",
+ "desc": "Gun Warden",
+ "abil": [
+  "Alchemical Flask",
+  "Willpower",
+  "Binding Word",
+  "Last Stand"
+ ],
+ "order": [
+  1,
+  1,
+  2,
+  3,
+  1,
+  4,
+  3,
+  1,
+  2,
+  2,
+  4,
+  4,
+  3,
+  4,
+  3,
+  2
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "High-Velocity Rounds",
+      ""
+     ],
+     [
+      "Rapid Rounds",
+      ""
+     ],
+     [
+      "Extended Magazine",
+      ""
+     ],
+     [
+      "Opening Rounds",
+      ""
+     ],
+     [
+      "Titanic Magazine",
+      ""
+     ],
+     [
+      "Swift Striker",
+      ""
+     ],
+     [
+      "Quicksilver Reload",
+      "",
+      "1"
+     ],
+     [
+      "Battle Vest",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Sprint Boots",
+      ""
+     ],
+     [
+      "Bullet Lifesteal",
+      ""
+     ],
+     [
+      "Enduring Speed",
+      ""
+     ],
+     [
+      "Fleetfoot",
+      ""
+     ],
+     [
+      "Spirit Lifesteal",
+      ""
+     ],
+     [
+      "Bullet Resist Shredder",
+      ""
+     ],
+     [
+      "Mercurial Magnum",
+      "",
+      "1"
+     ],
+     [
+      "Spirit Resilience",
+      "Get Bullet Resilience instead if most of their damage is gun."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Vampiric Burst",
+      "Pop it while they're stuck in Binding Word."
+     ],
+     [
+      "Spiritual Overflow",
+      ""
+     ],
+     [
+      "Siphon Bullets",
+      ""
+     ],
+     [
+      "Spellslinger",
+      "Sell Battle Vest for this."
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Enduring Speed if needed. Ahead? Skip it until you're dying. Sell Fleetfoot for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "Their gun carry is out-shooting you up front."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming, like Bebop's hook or Apollo's ult."
+     ],
+     [
+      "Dispel Magic",
+      "Slows and hexes keep you off them."
+     ],
+     [
+      "Unstoppable",
+      "Stuns keep catching you as you walk in."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Frenzy",
+      "Sell Swift Striker for this."
+     ],
+     [
+      "Lucky Shot",
+      "Sell Titanic Magazine for this."
+     ],
+     [
+      "Crippling Headshot",
+      "Sell Bullet Resist Shredder for this."
+     ],
+     [
+      "Armor Piercer",
+      "Sell Opening Rounds for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Juggernaut",
+      "Upgrade of Enduring Speed."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Battle Vest added in lane (8k) as in crayon's build Kieran plays (3rd item there), and it's the first sell when slots fill (Spellslinger at 46.4k takes its slot). Health 4.8k now lands on Enduring Speed at 11.2k with Battle Vest + Bullet Lifesteal (was Spirit Lifesteal at 11.2k).",
+  "Fleetfoot added mid (12.8k): crayon core and 83% of pro Warden builds. It's the counter sell. Bullet Resist Shredder added (crayon core; Flask, Binding Word and Last Stand are all spirit damage so it applies before the gun) and sells for Crippling Headshot in rich.",
+  "Late unchanged in role: Vampiric Burst 28.8k, Spiritual Overflow 33.6k (pro 69%), Siphon 40k (crayon core, pro 28%), Spellslinger 46.4k. Mercurial Magnum now at 24k (was 25.6k).",
+  "Core 12 slots, 46.4k (was 48k). No note talks about proc conditions.",
+  "Ability order: Exact mobalytics grid (Flask 99/100/95/90% at 1,5-7; Binding Word 8-10; Willpower 11-13; Last Stand 14-16), which is Kieran's crayon order with the ult unlocked at 4 instead of 5; Flask maxed first for Quicksilver/Mercurial on it, Binding Word T1 +20% bullet damage to trapped heroes before Willpower.",
+  "Toxic Bullets out (no Warden build we checked buys it, crayon included) → Spirit Resilience, which crayon does buy.",
+  "Item fit: all items kept. Warden's gun is 17 rounds at 3.8 shots/s with slow bullets (11,417 speed), so HV (100% pro) → Opening (100%), Rapid → Swift Striker (85%), Ext → Titanic (81%) all fit; Flask is 12s (5s at T3) so Quicksilver (89% pro) → Mercurial (70%) reloads every throw. Battle Vest 59%, Fleetfoot 78%, Spirit Resilience 70%, Enduring Speed 56%, Spirit Lifesteal 48% → Spiritual Overflow 56%, Bullet Resist Shredder 37%, Siphon 19% (tracklock pro, 27 games). Bullet Lifesteal (lockbuilds META core, deadlocked mid core), Vampiric Burst and Spellslinger (deadlocked late core) kept on that. Spirit Resilience note reworded so it doesn't restate the card.",
+  "Order: a7 data-first order 1234111333222444 (same as before).",
+  "Threshold: no damage-threshold items in the build. Quicksilver Reload (6.4k) and Mercurial Magnum (24.0k) are on Alchemical Flask, which is T3 (5s cooldown) by 6.4k, so the reload is up every trade. Nothing moved.",
+  "Round 8: Mercurial Magnum and Spiritual Overflow kept (both nerfed Sep 16). Mercurial now 20+0.38 per bullet = 58 spirit per bullet at our 24k buy point (SP 100.6), was 74 (-22%); Overflow 25% fire rate / 30 spirit, builds 35% slower. Post-patch Warden players still buy both: tracklock.gg probuild, last 30 days (Sep 19-Oct 19), 27 games: Mercurial 70%, Overflow 56%; mobalytics build-stats, current patch, Archon+: Mercurial 46% mid / 44% late, Overflow 59% late (both read Oct 19). Mercurial note 'Every bullet hits way harder' overclaimed → reworded to what it does.",
+  "Round 8: Frenzy note fixed — since Jul 28 its 10% bullet lifesteal is always on (game files: BulletLifestealPercent 10, +15% fire rate; below 50% health +40% fire rate); 'lifesteal when they get you low' was false.",
+  "Round 11: T4 fix — Spirit Resilience moved after Mercurial Magnum, so Mercurial (20.8k) no longer starts a five-T4 run; the run now starts at Vampiric Burst after 30k. Added 'Team full of gun heroes?' + '· late' (spirit Warden: Binding Word 110 + 2.44 per spirit, Last Stand 70 + 1.3 DPS healing 75%): Extra Spirit → Improved → Boundless, Mystic Vulnerability → Escalating Exposure, Infuser.",
+  "Round 12: 'Team full of gun heroes?' and its late box removed: spirit Warden becomes its own build next round.",
+  "Round 13 (notes policy): notes that restated the item, said 'Upgrades to X' or marked spikes are now empty; kept only tips, situational calls and sells, each checked in the game files.",
+  "Round 14: renamed 'Don't Move Warden' to 'Gun Carry Warden' (the old name restated Binding Word, not the style) and desc emptied ('Tanky' was false: 11.2k health of 46.4k; gun is how he's played). Armor Piercer added to rich, selling Opening Rounds (crayon's own swap 'instead of opening'), so Opening Rounds has a named sell. Bullet Resist Shredder note emptied (proc explanation). Spirit Resilience gets an explicit note (an empty note shows the site default, which misspells Vyper and lists Haze): swap to Bullet Resilience vs gun-heavy teams, same 3.2k green. Extra Regen note cut to the sell. Counterspell example fixed. Order checked: identical to mobalytics Archon+ Warden grid.",
+  "Round 15: desc 'Gun Warden'. Divine Barrier added to rich (Dispel Magic is in Counters). Counters desc matches the other builds' shortened sell line.",
+  "Round 17: Lane sell note unified ('Sell it once you're out of slots.'). Desc 'Gun Warden' kept (Kieran).",
+  "Round 20: checked, no change (late list already reaches 76.8k).",
+  "Round 23: kit re-read, no item change (see log).",
+  "Round 25: ability order 1234111333222444 -> 1123143122443432 (worked out from the kit for this build's playstyle)."
+ ]
+}

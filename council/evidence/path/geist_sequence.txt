@@ -1,0 +1,130 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: geist
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:12:33Z
+BODY-SHA: 99251f923cb79b628f1efcc859b4ccace8ba0949aa73172afeb41c09c6660646
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Monster Rounds: retained-or-upgraded (-> Cultist Sacrifice)
+  Extra Regen: retained-or-upgraded (-> Healing Booster)
+  Mystic Regeneration: retained-or-upgraded (-> Radiant Regeneration)
+  Extra Stamina: retained-or-upgraded (-> Kinetic Dash)
+  Kinetic Dash: retained
+  Cultist Sacrifice: retained
+  Radiant Regeneration: retained
+  Spirit Resilience: retained
+  Berserker: retained
+  Bullet Resist Shredder: retained
+  Bullet Lifesteal: retained-or-upgraded (-> Leech)
+  Spirit Lifesteal: retained-or-upgraded (-> Leech)
+  Healing Booster: retained
+  Spellslinger: retained
+  Blood Tribute: retained
+  Leech: retained
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Rapid Recharge: retained
+  Refresher: retained
+  Extra Health: conditional branch (lane alternative)
+  Warp Stone: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Spellbreaker: conditional branch (counter menu)
+  Cheat Death: conditional branch (counter menu)
+  Inhibitor: situational-luxury
+  Silencer: situational-luxury
+  Crippling Headshot: situational-luxury
+  Ricochet: situational-luxury
+  Divine Barrier: situational-luxury
+  Healing Tempo: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Health
+  Early · L-R                -> main path (sequential): Monster Rounds, Extra Regen, Mystic Regeneration, Extra Stamina, Kinetic Dash, Cultist Sacrifice
+  Mid · L-R                  -> main path (sequential): Radiant Regeneration, Spirit Resilience, Berserker, Bullet Resist Shredder, Bullet Lifesteal, Spirit Lifesteal
+  Mid · cont.                -> main path (sequential): Healing Booster, Spellslinger, Blood Tribute
+  Late · L-R                 -> main path (sequential): Leech, Extra Charge, Rapid Recharge, Refresher
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Warp Stone, Dispel Magic, Counterspell, Metal Skin, Plated Armor, Unstoppable, Spellbreaker, Cheat Death
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Inhibitor, Silencer, Crippling Headshot, Ricochet, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Healing Tempo
+
+## Cultist Sacrifice: sold when buying Inhibitor (I'm rich as fuck, luxury)
+  role of Cultist Sacrifice: retained; role of Inhibitor: situational-luxury
+  Cultist Sacrifice: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 6400 souls (~7.2 min), replaced at ~37.8 min -> owned ~30.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 17600/17600/14400 -> after 14400/17600/14400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 71 min | window TR | key purchase times (min)
+  as built                                    |          84664 |      1.32 | Cultist Sacrifice 7, Inhibitor 38
+  keep Cultist Sacrifice (slot cap ignored)   |          87217 |      1.39 | Cultist Sacrifice 7, Inhibitor 39
+  skip Cultist Sacrifice                      |          84092 |      1.35 | Inhibitor 38
+  sell Kinetic Dash instead                   |          86594 |      1.36 | Cultist Sacrifice 7, Inhibitor 38
+  keep Cultist Sacrifice (slot cap ignored) vs as built: d souls +1508, d window TR +3.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Cultist Sacrifice vs as built: d souls -1004, d window TR +1.9% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  sell Kinetic Dash instead vs as built: d souls +1201, d window TR +2.1% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  model limit: Cultist Sacrifice has an active effect (PRESS) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Cultist Sacrifice (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | skip Cultist Sacrifice: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Kinetic Dash instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+
+## Blood Tribute: sold when buying Silencer (I'm rich as fuck, luxury)
+  role of Blood Tribute: retained; role of Silencer: situational-luxury
+  Blood Tribute: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 30400 souls (~26.0 min), replaced at ~37.8 min -> owned ~11.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 24000/11200/14400 -> after 20800/11200/14400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 71 min | window TR | key purchase times (min)
+  as built                                    |          85145 |      1.33 | Blood Tribute 26, Silencer 38
+  keep Blood Tribute (slot cap ignored)       |          87568 |      1.48 | Blood Tribute 26, Silencer 39
+  skip Blood Tribute                          |          85603 |      1.38 | Silencer 36
+  sell Kinetic Dash instead                   |          86931 |      1.44 | Blood Tribute 26, Silencer 38
+  keep Blood Tribute (slot cap ignored) vs as built: d souls +1038, d window TR +7.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Blood Tribute vs as built: d souls +35, d window TR +2.1% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Kinetic Dash instead vs as built: d souls +716, d window TR +6.0% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Blood Tribute has an active effect (INSTANT_CAST_TOGGLE) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: no modelled stat for Silencer (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Blood Tribute (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | skip Blood Tribute: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Kinetic Dash instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Bullet Resist Shredder: sold when buying Crippling Headshot (I'm rich as fuck, luxury)
+  role of Bullet Resist Shredder: retained; role of Crippling Headshot: situational-luxury
+  Bullet Resist Shredder: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 16800 souls (~15.8 min), replaced at ~38.2 min -> owned ~22.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 24000/11200/14400 -> after 24000/11200/12800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 71 min | window TR | key purchase times (min)
+  as built                                    |          84342 |      1.29 | Bullet Resist Shredder 16, Crippling Headshot 38
+  keep Bullet Resist Shredder (slot cap ignored)|          87011 |      1.44 | Bullet Resist Shredder 16, Crippling Headshot 39
+  skip Bullet Resist Shredder                 |          82494 |      1.17 | Crippling Headshot 39
+  sell Kinetic Dash instead                   |          86378 |      1.41 | Bullet Resist Shredder 16, Crippling Headshot 38
+  keep Bullet Resist Shredder (slot cap ignored) vs as built: d souls +757, d window TR +7.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Bullet Resist Shredder vs as built: d souls -538, d window TR -9.1% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Kinetic Dash instead vs as built: d souls +495, d window TR +5.8% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Bullet Resist Shredder (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Kinetic Dash instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Kinetic Dash: sold when buying Ricochet (I'm rich as fuck, luxury)
+  role of Kinetic Dash: retained; role of Ricochet: situational-luxury
+  Kinetic Dash: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 4000 souls (~4.8 min), replaced at ~38.2 min -> owned ~33.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 24000/11200/14400 -> after 22400/11200/14400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 71 min | window TR | key purchase times (min)
+  as built                                    |          88382 |      1.36 | Kinetic Dash 5, Ricochet 38
+  keep Kinetic Dash (slot cap ignored)        |          88772 |      1.38 | Kinetic Dash 5, Ricochet 39
+  skip Kinetic Dash                           |          87905 |      1.35 | Ricochet 39
+  sell Bullet Resist Shredder instead         |          85989 |      1.25 | Kinetic Dash 5, Ricochet 38
+  keep Kinetic Dash (slot cap ignored) vs as built: d souls +158, d window TR +0.7% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  skip Kinetic Dash vs as built: d souls -459, d window TR -0.8% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: INSUFFICIENT (effect within model noise)
+  sell Bullet Resist Shredder instead vs as built: d souls -646, d window TR -5.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  ammo mechanics (clip 9, reload 2.585 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Kinetic Dash): 8 s trade 18 bullets (37% not firing), 20 s 39 bullets (43% not firing, 4.4 magazines), damage 20 s 4800, refill uses 0.0
+    keep Kinetic Dash: 8 s trade 18 bullets (43% not firing), 20 s 41 bullets (48% not firing, 4.6 magazines), damage 20 s 5043, refill uses 0.0
+    without Ricochet (keep Kinetic Dash): 8 s trade 18 bullets (38% not firing), 20 s 40 bullets (45% not firing, 4.4 magazines), damage 20 s 4574, refill uses 0.0
+    sell Bullet Resist Shredder instead: 8 s trade 18 bullets (43% not firing), 20 s 41 bullets (48% not firing, 4.6 magazines), damage 20 s 4847, refill uses 0.0
+    sustained 20 s gun damage: selling Kinetic Dash costs 5% vs keeping it (both with Ricochet); Ricochet adds +10% on top of Kinetic Dash; selling Bullet Resist Shredder instead: -4% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Kinetic Dash (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Bullet Resist Shredder instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

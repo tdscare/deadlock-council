@@ -1,0 +1,56 @@
+SCOPE: build-context
+KIND: profile
+BUILD: nurse
+HERO: Nurse Harrow
+ARGS: --profile haze nurse paige
+GENERATED: 2026-10-24T16:15:39Z
+BODY-SHA: 0d78b24507fd1bd59baa9c8683e45044ee96ca7af2f0f9ef90f4cc82827d7a1e
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+WINDOW: 0-79 min of the soul-income walk, central parameters (MODELLED ESTIMATE); value of X = AS BUILT minus WITHOUT X (X's souls flow to the following purchases, so this is the value of X net of its best in-path alternative use)
+PHASES: lane / farm / fights / survive are ledger groups (one owner per effect; lane: lane troopers (base), lane: trade advantage, lane: forced recalls (HP budget); farm: camps/waves farmed, Cultist-type bonus souls; fights: fights/objectives (base), fights: trade advantage, kills; survive: time dead)
+TIERS per cell: VERIFIED GAME MECHANIC (a stat the item has in game data) | CONTROLLED SANDBOX RESULT (none ingested for profiles yet) | MODELLED ESTIMATE (the number below) | ASSUMED (activation frequency parameters listed per item)
+DECISION USE: this is a contribution profile, not a verdict; an item with a low total can still be worth buying for a phase the model does not price (see NOT MODELLED), a high total never proves the item beats an unlisted alternative. Compare through --strategy/--path/--seq files.
+KNOWN MODEL LIMITS: camp respawn / wave spawn caps and contested lanes are NOT modelled (camps/min = share of time x (hp/clear speed + travel)); extra souls from faster clearing therefore appear only through F_LANE/F_MID, travel, hscale and the omega elasticity (omega=0 means saved seconds never become souls)
+
+## RELEVANCE (activities scored only where they matter for this hero/build; basis stated)
+  lane: RELEVANT - every build starts in lane (lane ends at minute 9 in the walk)
+  farm: RELEVANT - the build owns farm-affecting stats: bounce
+  fights: RELEVANT - every build fights; fight income and kills come from the trade ratio
+  survive: RELEVANT - time dead and forced recalls cost income in every build
+MEASURED vs MODELLED: measured inputs ingested for this hero: none. Every number in the table is a MODELLED ESTIMATE; "direct" = ledger effect in the phases the item's stats feed, "reallocation" = the remainder, caused by the following purchases arriving earlier (not a property of the item). VERIFIED stats are named in the stat columns.
+
+item | role | price | d souls lane | farm | fights | survive | d souls total | d window TR % | modelled stats | NOT MODELLED stats | activation assumptions (labelled)
+Extra Spirit | retained-or-upgraded | 800 | -112 | via realloc | -31 | via realloc | direct -143 + reallocation -56 = -198 | -0.5 | TechPower | - | spirit scaling
+Extended Magazine | retained-or-upgraded | 800 | -115 | via realloc | -21 | via realloc | direct -136 + reallocation -1 = -137 | -0.4 | BonusClipSizePercent, BaseAttackDamagePercent | - | reload (VERIFIED m_reloadDuration); hit (accuracy)
+Extra Regen | retained-or-upgraded | 800 | +260 | via realloc | +67 | -21 | direct +306 + reallocation +92 = +398 | +1.6 | BonusHealthRegen, OutOfCombatHealthRegen | - | POKE/enemy (damage taken)
+Rapid Rounds | retained-or-upgraded | 800 | -23 | via realloc | +5 | via realloc | direct -18 + reallocation +39 = +21 | +0.0 | BonusFireRate | - | hit (accuracy)
+Healing Booster | retained-or-upgraded | 1600 | +65 | via realloc | +99 | -3 | direct +161 + reallocation +36 = +198 | +2.3 | BonusHealthRegen, OutOfCombatHealthRegen | HealAmpCastPercent, HealAmpRegenPercent | POKE/enemy (damage taken)
+Titanic Magazine | retained | 1600 | +48 | via realloc | +429 | via realloc | direct +477 + reallocation +1495 = +1972 | +11.6 | BonusClipSizePercent, BaseAttackDamagePercent | - | reload (VERIFIED m_reloadDuration); hit (accuracy)
+Compress Cooldown | retained-or-upgraded | 1600 | via realloc | via realloc | via realloc | via realloc | direct +0 + reallocation -169 = -169 [LOW COVERAGE 0/1 stats modelled: a negative value here is an under-count, not a finding] | -0.9 | - | CooldownReduction | -
+Surge of Power | retained | 3200 | +0 | via realloc | -109 | via realloc | direct -109 + reallocation +94 = -15 [LOW COVERAGE 1/6 stats modelled: a negative value here is an under-count, not a finding] | -1.3 | BonusMoveSpeed | ImbuedTechPower, FireRateBonus, MovementSpeedBonusDuration, MoveWhileShootingSpeedPenaltyReductionPercent, MoveWhileZoomedSpeedPenaltyReductionPercent | hit (accuracy)
+Burst Fire | retained | 3200 | +0 | via realloc | +61 | via realloc | direct +61 + reallocation +653 = +714 | +1.5 | BonusFireRate, BonusMoveSpeed | AbilityDuration, ActivatedFireRate, SlideScale | hit (accuracy)
+Spirit Lifesteal | retained-or-upgraded | 1600 | +0 | via realloc | +234 | +47 | direct +281 + reallocation +22 = +303 | +4.2 | TechPower, BonusHealth | AbilityLifestealPercentHero, NonHeroAbilityLifestealTooltipOnly | spirit scaling; POKE/enemy (damage taken)
+Debuff Reducer | retained-or-upgraded | 1600 | +0 | via realloc | +100 | +19 | direct +119 + reallocation +2 = +122 | +1.6 | BonusHealth | StatusResistancePercent | POKE/enemy (damage taken)
+Improved Spirit | retained-or-upgraded | 1600 | +0 | via realloc | +87 | +13 | direct +100 + reallocation +13 = +113 | +1.4 | TechPower, BonusSprintSpeed, BonusHealth, OutOfCombatHealthRegen | - | spirit scaling; POKE/enemy (damage taken)
+Superior Cooldown | retained | 3200 | via realloc | via realloc | via realloc | via realloc | direct +0 + reallocation -304 = -304 | -2.2 | OutOfCombatHealthRegen | CooldownReduction | -
+Toxic Bullets | retained | 3200 | +0 | via realloc | -133 | via realloc | direct -133 + reallocation -158 = -292 [LOW COVERAGE 0/8 stats modelled: a negative value here is an under-count, not a finding] | -3.0 | - | DotHealthPercent, DotDuration, BuildUpPerShot, BuildUpDuration, TickRate, HealAmpReceivePenaltyPercent, HealAmpRegenPenaltyPercent, DotMultiplerTroopers | hit (accuracy)
+Guardian Ward | temporary | 1600 | +0 | via realloc | +54 | +76 | direct +130 + reallocation -155 = -24 [LOW COVERAGE 2/10 stats modelled: a negative value here is an under-count, not a finding] | +1.1 | OutOfCombatHealthRegen, BonusMoveSpeed | AbilityCooldown, AbilityCastRange, AbilityCastDelay, CooldownReductionPctOnOthers, BuffDuration, GuardianWardCombatBarrier, TechRangeMultiplier, TechRadiusMultiplier | NOT MODELLED (active effect); NOT MODELLED (ability range/radius); active effect: cooldown/uptime not priced
+Boundless Spirit | retained | 6400 | +0 | via realloc | -17 | +260 | direct +243 + reallocation -679 = -437 | +0.2 | TechPower, BonusHealth, OutOfCombatHealthRegen | TechPowerPercent | spirit scaling; POKE/enemy (damage taken)
+Unstoppable | retained | 6400 | +0 | via realloc | -161 | +220 | direct +59 + reallocation -728 = -669 [LOW COVERAGE 1/3 stats modelled: a negative value here is an under-count, not a finding] | -3.2 | BonusHealth | AbilityDuration, StatusResistancePercent | POKE/enemy (damage taken); active effect: cooldown/uptime not priced
+Vampiric Burst | retained | 6400 | +0 | via realloc | +381 | +367 | direct +748 + reallocation -493 = +254 | +15.9 | BonusHealth, BulletLifestealPercent, BaseAttackDamagePercent | AbilityDuration, ActiveBonusFireRate, ActiveBonusLifesteal, ActiveReloadPercent, BulletResist | POKE/enemy (damage taken); hit (accuracy); POKE (damage taken); active effect: cooldown/uptime not priced
+Spiritual Overflow | retained | 6400 | +0 | via realloc | -14 | +109 | direct +95 + reallocation -319 = -225 [LOW COVERAGE 3/11 stats modelled: a negative value here is an under-count, not a finding] | -0.0 | TechPower, BonusHealth, BonusFireRate | AbilityDuration, AbilityLifestealPercentHero, NonHeroAbilityLifestealTooltipOnly, BonusSpirit, BonusSpiritLifesteal, BonusAbilityDurationPercent, BuildUpPerShot, BuildUpDuration | spirit scaling; POKE/enemy (damage taken); hit (accuracy)
+Healing Tempo | retained | 6400 | +0 | via realloc | +85 | +108 | direct +192 + reallocation -199 = -6 [LOW COVERAGE 4/10 stats modelled: a negative value here is an under-count, not a finding] | +3.1 | BonusFireRate, BonusMoveSpeed, BonusHealthRegen, OutOfCombatHealthRegen | AbilityCooldown, BuffDuration, MinimumHealAmount, TechResist, HealAmpCastPercent, HealAmpRegenPercent | hit (accuracy); POKE/enemy (damage taken)
+Ricochet | retained | 6400 | +0 | +1905 | +42 | via realloc | direct +1947 + reallocation -960 = +987 | +1.5 | BonusFireRate | RicochetDamagePercent, RicochetRadius, RicochetTargets | p2hero (second hero found by a bounce); N_NPC (NPCs per camp hit); hit (accuracy)
+Escalating Exposure | retained | 6400 | +0 | via realloc | +37 | +22 | direct +60 + reallocation +0 = +60 | +1.6 | - | AbilityDuration, ProcCooldown, MagicIncreasePerStack, TechResist, MaxStacks, TechArmorDamageReduction | POKE/enemy (damage taken); enemy resists
+
+LEDGER CHECK (phase deltas add up to the total souls difference for every item; no double counting): OK for all 22 items
+
+## READING GUIDE (items whose profile is dominated by one phase)
+  Titanic Magazine: largest modelled effect is farm (+1907 souls); total +1972 souls, window trade ratio +11.6%
+  Ricochet: largest modelled effect is farm (+1905 souls); total +987 souls, window trade ratio +1.5%
+  Burst Fire: largest modelled effect is farm (+805 souls); total +714 souls, window trade ratio +1.5%
+  Unstoppable: largest modelled effect is farm (-728 souls); total -669 souls, window trade ratio -3.2%
+  Boundless Spirit: largest modelled effect is farm (-679 souls); total -437 souls, window trade ratio +0.2%
+  Extra Regen: largest modelled effect is lane (+260 souls); total +398 souls, window trade ratio +1.6%
+  Superior Cooldown: largest modelled effect is farm (-278 souls); total -304 souls, window trade ratio -2.2%
+  Spirit Lifesteal: largest modelled effect is fights (+234 souls); total +303 souls, window trade ratio +4.2%

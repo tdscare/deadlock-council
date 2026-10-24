@@ -1,0 +1,53 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: wraith
+HERO: Wraith
+ITEM: Tesla Bullets
+CHECKPOINT: buy-point at 5600 souls (state souls 5600; item cost 3200)
+VERSION: interaction-v1
+ARGS: --interactions wraith Tesla Bullets
+GENERATED: 2026-10-24T16:49:30Z
+BODY-SHA: dc53e6e7601c0cf7a40bed9fb31250240a4645cc1fef8e045c13b66f89b5e149
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 3200, unconditional, ranked): Weighted Shots, Sharpshooter, Headhunter, Point Blank, Burst Fire; also shown, not ranked (conditional or unequal cost): Heroic Aura, Blood Tribute, Escalating Resilience
+VERDICT: Tesla Bullets delivers the most damage of the equal-soul options in every window (sustained, burst, ult)
+UNKNOWN_CELLS: 0
+SELECTION: build-decision | Tesla Bullets is bought at 5600 souls in wraith: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (3200) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.6, long_share=0.3, W_sus=10.0, W_burst=3.0; reload 2.82 s (measured 2.82 s in council/sandbox/results/wraith_gun_PR-W1.md)
+STATE: owned ['Extra Spirit', 'Swift Striker', 'Tesla Bullets'] | tiers Card Trick=T2(cards) Project Mind=T1(utility) Full Auto=T2(gun-mode) Telekinesis=U(spirit) | weapon invest bonus 46% | spirit 28
+
+## INTERACTION MATRIX (item effect x kit component)
+- on-hit proc (ProcChance=15)
+    normal shooting                              WORKS                      [CALCULATED] per-bullet proc
+    1=Card Trick T2 [cards]                      DOES NOT WORK              [CALCULATED] no matching mechanic
+    2=Project Mind T1 [utility]                  NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Full Auto T2 [gun-mode]                    WORKS                      [CALCULATED] ability fires the weapon (game text: 'Temporarily boost your fire rate and deal bonus {g:citadel_i...'); bullets take weapon bonuses
+    4=Telekinesis U (ULT) [spirit]               DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |       989              |       173              |       128              | 0
+Tesla Bullets                |       1406 (+42..+42%) |      353 (+103..+103%) |          128 (+0..+0%) | 0
+Weighted Shots               |       1220 (+23..+23%) |        273 (+57..+57%) |          128 (+0..+0%) | 0
+Heroic Aura                  |       1191 (+20..+20%) |        270 (+55..+55%) |          128 (+0..+0%) | 0  ! fire rate is a timed buff, counted as always on (upper bound)
+Sharpshooter                 |       1213 (+23..+23%) |        269 (+55..+55%) |          128 (+0..+0%) | 0
+Headhunter                   |       1171 (+18..+18%) |        251 (+45..+45%) |          128 (+0..+0%) | 0
+Point Blank                  |       1220 (+23..+23%) |        273 (+57..+57%) |          128 (+0..+0%) | 0
+Blood Tribute                |       1206 (+22..+22%) |        279 (+61..+61%) |          128 (+0..+0%) | 0  ! costs 50 health per second while on (not netted)
+Burst Fire                   |       1191 (+20..+20%) |        270 (+55..+55%) |          128 (+0..+0%) | 0
+Escalating Resilience        |       1200 (+21..+21%) |        254 (+46..+46%) |          128 (+0..+0%) | 0  ! conditional item (stack): counted as if its condition is met (upper bound)
+  candidate detail (reading 1): sustained bullets 93, gun 527, stacks 0, procs 294, spirit 585 | ult: Telekinesis damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Tesla Bullets > Weighted Shots > Point Blank > Sharpshooter > Burst Fire > Headhunter
+  burst: rank (reading 1) Tesla Bullets > Weighted Shots > Point Blank > Burst Fire > Sharpshooter > Headhunter
+  ult: rank (reading 1) Tesla Bullets > Weighted Shots > Sharpshooter > Headhunter > Point Blank > Burst Fire
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (150s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  none
+
+## NOT DETERMINED FROM DATA
+  - nothing beyond the ASSUMED shares above
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

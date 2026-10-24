@@ -1,0 +1,100 @@
+{
+ "id": "ratking_battle_vest_grenade",
+ "title": "Rat King: does Battle Vest weapon damage raise Scrap Grenade damage (and only above 65% health)?",
+ "hero": "Rat King",
+ "playstyle": "Grenade Rat King",
+ "builds": [
+  "ratking_grenade"
+ ],
+ "question": "Battle Vest BaseAttackDamagePercent 18 (ConditionallyApplied above 65% health) feeds EBaseWeaponDamageIncrease; Scrap Grenade = 70(+70 T2) + 0.6x that per detonation. Is it applied to grenade hits?",
+ "hypothesis": "Yes: +10.8 per detonation above 65% health, +0 below. REFUTED if within 3 damage above 65%.",
+ "arms": [
+  {
+   "name": "A_none_full_hp",
+   "items": [
+    "Extended Magazine",
+    "Monster Rounds",
+    "Titanic Magazine",
+    "Cultist Sacrifice"
+   ],
+   "ability_order": "1131234133444222",
+   "imbues": {},
+   "souls": "4.8k",
+   "notes": "full HP"
+  },
+  {
+   "name": "B_vest_full_hp",
+   "items": [
+    "Extended Magazine",
+    "Monster Rounds",
+    "Titanic Magazine",
+    "Cultist Sacrifice",
+    "Battle Vest"
+   ],
+   "ability_order": "1131234133444222",
+   "imbues": {},
+   "souls": "6.4k",
+   "notes": "full HP"
+  },
+  {
+   "name": "C_vest_50pct_hp",
+   "items": [
+    "Extended Magazine",
+    "Monster Rounds",
+    "Titanic Magazine",
+    "Cultist Sacrifice",
+    "Battle Vest"
+   ],
+   "ability_order": "1131234133444222",
+   "imbues": {},
+   "souls": "6.4k",
+   "notes": "hurt self to 50%"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "same level all arms (lvlhold), grenade T2 via abil bits 7",
+  "souls": "fixed",
+  "position": "target at 10m",
+  "enemies": [
+   {
+    "hero": "target dummy or idle bot",
+    "count": 1,
+    "items": [],
+    "behaviour": "stationary",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "per arm",
+  "resets": [
+   "cooldowns",
+   "target hp"
+  ]
+ },
+ "controls": [
+  "same level so the weapon investment bonus is equal (A has 4.8k gun, B/C add only health colour)",
+  "Cultist buff off"
+ ],
+ "procedure": [
+  "throw one grenade at the dummy",
+  "read first detonation number",
+  "reset, interleave A,B,C"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "first_detonation",
+   "unit": "damage",
+   "how": "on-screen number",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "first_detonation",
+  "min_effect_pct": 5,
+  "min_trials": 5,
+  "rule": "SUPPORTS Battle Vest at 6.4k if B-A is 8-14 and C-A within 3; REFUTES if B-A within 3 (then Battle Vest is resist-only and its slot is re-priced)."
+ }
+}

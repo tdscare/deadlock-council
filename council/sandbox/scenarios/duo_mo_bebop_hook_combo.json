@@ -1,0 +1,94 @@
+{
+ "id": "duo_mo_bebop_hook_combo",
+ "title": "Mo & Krill + Bebop: hook into Combo",
+ "hero": "Mo & Krill",
+ "playstyle": "Duo Mo for Bebop",
+ "builds": [
+  "mokrill",
+  "bebop_bomb"
+ ],
+ "question": "Does bomb -> hook -> Combo -> beam fit, and how much does Combo T3 add?",
+ "hypothesis": "H3.1-H3.4",
+ "arms": [
+  {
+   "name": "combo_t2",
+   "items": [],
+   "ability_order": "1132124422133434",
+   "souls": 30000,
+   "notes": "Combo T2"
+  },
+  {
+   "name": "combo_t3",
+   "items": [],
+   "ability_order": "1132124422133443",
+   "souls": 30000,
+   "notes": "Combo T3"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "~30k",
+  "souls": 30000,
+  "position": "Mo 1m beside Bebop, target bot 20m",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 1,
+    "items": [],
+    "behaviour": "walks",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "Bebop",
+    "count": 1,
+    "role": "bomb, hook, T2 beam"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "bot HP"
+  ]
+ },
+ "procedure": [
+  "Bebop bombs, hooks ~1s later",
+  "Mo Combos on landing",
+  "Bebop casts beam at Combo press",
+  "Sum damage on bot from Combo start to Combo end; repeat once with Mo 3m away (H3.1)"
+ ],
+ "metrics": [
+  {
+   "name": "in_hold_damage",
+   "unit": "hp",
+   "how": "health bar delta",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "combo_landed",
+   "unit": "bool",
+   "how": "visual",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "in_hold_damage",
+  "min_effect_pct": 25,
+  "min_trials": 5,
+  "rule": "SUPPORTS the order change if combo_t3 beats combo_t2 by >=25%"
+ },
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists"
+ ],
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

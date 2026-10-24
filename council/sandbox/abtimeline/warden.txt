@@ -1,0 +1,88 @@
+# warden | Warden | Rizuhble's No Witnesses Warden
+abilities: 1=Alchemical Flask (ability_warden_crowd_control, start_trained=false, Signature) / 2=Willpower (ability_warden_high_alert, start_trained=false, Signature) / 3=Binding Word (ability_warden_lock_down, start_trained=false, Signature) / 4=Last Stand (ability_warden_riot_protocol, start_trained=false, Ultimate)
+order: 1123143122443432
+model A (data):  Alchemical:U@0  Alchemical:T1@200  Willpower:U@500  Binding Wo:U@1400  Alchemical:T2@2000  Binding Wo:T1@2600  Last Stand:U@3200  Alchemical:T3@6800  Willpower:T1@7600  Willpower:T2@9200  Last Stand:T1@10100  Last Stand:T2@11900  Binding Wo:T2@13800  Last Stand:T3@20600  Binding Wo:T3@32100  Willpower:T3@48600
+model B (old):   Alchemical:T1@200  Alchemical:T2@900  Willpower:T1@2000  Binding Wo:T1@2600  Alchemical:T3@3900  Last Stand:U@4600  Binding Wo:T2@5300  Willpower:T2@6800  Willpower:T3@7600  Last Stand:T1@8400  Last Stand:T2@9200  Binding Wo:T3@10100  Last Stand:T3@11000
+tier upgrades: Alchemical F: StaminaReduction+1 / Damage+35,WeaponPowerDebuff-25 / FireRateSlow+30,AbilityCooldown-7,Radius+2 | Willpower: MoveSpeedBonusPct+20 / AbilityCooldown-24,AbilityDuration+2 / StatusResistancePercent+30,CombatBarrier+2.1x | Binding Word: BulletArmorReduction+20,BulletArmorReductionDuration+5 / ImmobilizeDuration+0.75 / AbilityCooldown-14,SilenceDebuff+1 | Last Stand: Radius+4 / PulseDPS+40.5,AbilityCooldown-30 / AbilityDuration+4,UnstoppableCastDelay+1,BulletResist+30,TechResist+30
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  High-Velocity Rounds
+        Alchemical T1 ch1 cd12 Damage=61 | Willpower U ch1 cd40 d5 CombatBa=127 | Binding Wo L[U] | Last Stand L
+  1600 L5   2     4  Rapid Rounds
+        Alchemical T1[T2] ch1 cd12 Damage=63 | Willpower U ch1 cd40 d5 CombatBa=129 | Binding Wo U ch1 cd34 Damage=121 | Last Stand L
+  2400 L6   3     6  Extended Magazine
+        Alchemical T2 ch1 cd12 Damage=98 | Willpower U[T1] ch1 cd40 d5 CombatBa=129 | Binding Wo U ch1 cd34 Damage=123 | Last Stand L
+  3200 L8   4    15  Opening Rounds
+        Alchemical T2 ch1 cd12 Damage=104 | Willpower U[T1] ch1 cd40 d5 CombatBa=137 | Binding Wo T1 ch1 cd34 Damage=146 | Last Stand U[L] ch1 cd180 d6 PulseDPS=89
+  4000 L9   5    16  Titanic Magazine
+        Alchemical T2[T3] ch1 cd12 Damage=105 | Willpower U[T1] ch1 cd40 d5 CombatBa=138 | Binding Wo T1 ch1 cd34 Damage=149 | Last Stand U[L] ch1 cd180 d6 PulseDPS=91
+  4800 L10  6    17  Swift Striker
+        Alchemical T2[T3] ch1 cd12 Damage=106 | Willpower U[T1] ch1 cd40 d5 CombatBa=139 | Binding Wo T1 ch1 cd34 Damage=151 | Last Stand U ch1 cd180 d6 PulseDPS=92
+  6400 L12  8    30  Quicksilver Reload [imbue Alchemical Flask]
+        Alchemical T2[T3] ch1 cd12 Damage=114 | Willpower U[T1] ch1 cd40 d5 CombatBa=149 | Binding Wo T1[T2] ch1 cd34 Damage=183 | Last Stand U ch1 cd180 d6 PulseDPS=109
+  8000 L14 10    32  Battle Vest
+        Alchemical T3 ch1 cd5 Damage=115 | Willpower T1[T3] ch1 cd40 d5 CombatBa=151 | Binding Wo T1[T2] ch1 cd34 Damage=189 | Last Stand U ch1 cd180 d6 PulseDPS=112
+  8800 L15 11    33  Sprint Boots
+        Alchemical T3 ch1 cd5 Damage=116 | Willpower T1[T3] ch1 cd40 d5 CombatBa=152 | Binding Wo T1[T2] ch1 cd34 Damage=191 | Last Stand U[T1] ch1 cd180 d6 PulseDPS=113
+ 10400 L17 13    36  Bullet Lifesteal
+        Alchemical T3 ch1 cd5 Damage=117 | Willpower T2[T3] ch1 cd16 d7 CombatBa=153 | Binding Wo T1[T3] ch1 cd34 Damage=197 | Last Stand T1[T2] ch1 cd180 d6 PulseDPS=116
+ 11200 L18 14    37  Enduring Speed
+        Alchemical T3 ch1 cd5 Damage=118 | Willpower T2[T3] ch1 cd16 d7 CombatBa=154 | Binding Wo T1[T3] ch1 cd34 Damage=199 | Last Stand T1[T3] ch1 cd180 d6 PulseDPS=118
+ 12800 L20 16    39  Fleetfoot
+        Alchemical T3 ch1 cd5 Damage=120 | Willpower T2[T3] ch1 cd16 d7 CombatBa=156 | Binding Wo T1[T3] ch1 cd34 Damage=205 | Last Stand T2[T3] ch1 cd150 d6 PulseDPS=161
+ 14400 L21 17    46  Spirit Lifesteal
+        Alchemical T3 ch1 cd5 Damage=124 | Willpower T2[T3] ch1 cd16 d7 CombatBa=162 | Binding Wo T2[T3] ch1 cd34 Damage=222 | Last Stand T2[T3] ch1 cd150 d6 PulseDPS=170
+ 16000 L22 18    55  Bullet Resist Shredder
+        Alchemical T3 ch1 cd5 Damage=130 | Willpower T2[T3] ch1 cd16 d7 CombatBa=169 | Binding Wo T2[T3] ch1 cd34 Damage=244 | Last Stand T2[T3] ch1 cd150 d6 PulseDPS=182
+ 20800 L26 22   100  Mercurial Magnum [imbue Alchemical Flask]
+        Alchemical T3 ch1 cd5 Damage=158 | Willpower T2[T3] ch1 cd16 d7 CombatBa=205 | Binding Wo T2[T3] ch1 cd34 Damage=353 | Last Stand T3 ch1 cd150 d10 PulseDPS=240
+ 24000 L27 23   101  Spirit Resilience
+        Alchemical T3 ch1 cd5 Damage=158 | Willpower T2[T3] ch1 cd16 d7 CombatBa=205 | Binding Wo T2[T3] ch1 cd34 Damage=355 | Last Stand T3 ch1 cd150 d10 PulseDPS=241
+ 28800 L29 25   103  Vampiric Burst
+        Alchemical T3 ch1 cd5 Damage=160 | Willpower T2[T3] ch1 cd16 d7 CombatBa=207 | Binding Wo T2[T3] ch1 cd34 Damage=361 | Last Stand T3 ch1 cd150 d10 PulseDPS=244
+ 33600 L31 27   105  Spiritual Overflow
+        Alchemical T3 ch1 cd5 Damage=161 | Willpower T2[T3] ch1 cd16 d7 CombatBa=209 | Binding Wo T3 ch1 cd20 Damage=366 | Last Stand T3 ch1 cd150 d10 PulseDPS=247
+ 40000 L33 29   107  Siphon Bullets
+        Alchemical T3 ch1 cd5 Damage=163 | Willpower T2[T3] ch1 cd16 d7 CombatBa=211 | Binding Wo T3 ch1 cd20 Damage=371 | Last Stand T3 ch1 cd150 d10 PulseDPS=250
+ 46400 L35 31   109  Spellslinger
+        Alchemical T3 ch1 cd5 Damage=164 | Willpower T2[T3] ch1 cd16 d7 CombatBa=213 | Binding Wo T3 ch1 cd20 Damage=377 | Last Stand T3 ch1 cd150 d10 PulseDPS=253
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @3200 Opening Rounds [enemyhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on enemy health % (EnemyLifeThreshold=50)
+    game text: Your attacks have additional Weapon Damage against enemies above {s:EnemyLifeThreshold}% health.
+    at buy: not computed (needs play data)
+- @6400 Quicksilver Reload [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Alchemical Flask; needs it trained and the stat the item raises
+    game text: Your imbued ability charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, {g:citadel_inline_attribute:'BonusFireRate'}, and relo... | vdata: proc damage types ABILITY/BULLET/MELEE, CanProcByOtherObjects=true
+    at buy: Alchemical Flask T2: cd 12s, duration 0s, charges 1
+- @8000 Battle Vest [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: While you are above {s:LifeThreshold}% health, gain {g:citadel_inline_attribute:'WeaponDamage'} and {g:citadel_inline_attribute:'BonusFireRate'}.
+    at buy: not computed (needs play data)
+- @16000 Bullet Resist Shredder [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Reduces Bullet Resist on enemies when you deal {g:citadel_inline_attribute:'SpiritDamage'}.
+    at buy: spirit sources: Alchemical Flask, Willpower, Binding Word, Last Stand
+- @20800 Mercurial Magnum [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Alchemical Flask; needs it trained and the stat the item raises
+    game text: Your imbued ability charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, {g:citadel_inline_attribute:'BonusFireRate'}, and relo... | vdata: proc damage types ABILITY/BULLET/MELEE, CanProcByOtherObjects=true
+    at buy: Alchemical Flask T3: cd 5s, duration 0s, charges 1
+- @24000 Spirit Resilience [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (HealthThreshold=50, TechResistBelowThreshold=15)
+    game text: When below {s:HealthThreshold}% health, gain additional Spirit Resist.
+    at buy: not computed (needs play data)
+- @33600 Spiritual Overflow [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack
+    game text: Gain bonus Fire Rate, Spirit Power and Spirit Lifesteal by charging up when shooting enemy heroes.
+    at buy: not computed (needs play data)
+- @40000 Siphon Bullets [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (StealPerHit=1, StealPerKill=1, MaxStacks=9999)
+    game text: (no game text) | vdata: proc damage types BULLET, CanProcByOtherObjects=true
+    at buy: not computed (needs play data)
+- @46400 Spellslinger [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (MaxStacks=6)
+    game text: While in-combat whenever you cast an ability or item, gain a stacking buff that improves fire rate and reload speed. Each stack refreshes the duration...
+    at buy: not computed (needs play data)
+
+no trigger condition (plain stats/actives): High-Velocity Rounds, Rapid Rounds, Extended Magazine, Titanic Magazine, Swift Striker, Sprint Boots, Bullet Lifesteal, Enduring Speed, Fleetfoot, Spirit Lifesteal, Vampiric Burst

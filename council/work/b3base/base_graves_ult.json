@@ -1,0 +1,241 @@
+{
+ "id": "graves_ult",
+ "hk": "hero_necro",
+ "hero": "Graves",
+ "tag": "Fix",
+ "name": "Rizuhble's Zombie Horde Graves",
+ "desc": "Ult Graves",
+ "tg": [
+  "spirit",
+  "utility",
+  "Echo Shard"
+ ],
+ "abil": [
+  "Jar of Dead",
+  "Grasping Hands",
+  "Essence Theft",
+  "Borrowed Decree"
+ ],
+ "order": [
+  1,
+  1,
+  2,
+  3,
+  4,
+  4,
+  4,
+  2,
+  2,
+  4,
+  2,
+  3,
+  1,
+  1,
+  3,
+  3
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Extra Stamina",
+      ""
+     ],
+     [
+      "Arcane Surge",
+      "Dash-jump right before you cast your ult."
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ],
+     [
+      "Grit",
+      ""
+     ],
+     [
+      "Duration Extender",
+      "On Borrowed Decree.",
+      "4"
+     ],
+     [
+      "Enchanter's Emblem",
+      "Sell it for Refresher if you get rich."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Spirit Lifesteal",
+      "Sell it for Magic Carpet."
+     ],
+     [
+      "Spirit Shielding",
+      ""
+     ],
+     [
+      "Heroic Aura",
+      "Works on your ghouls too."
+     ],
+     [
+      "Compress Cooldown",
+      "On Borrowed Decree.",
+      "4"
+     ],
+     [
+      "Superior Duration",
+      ""
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Mystic Vulnerability",
+      ""
+     ],
+     [
+      "Diviner's Kevlar",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Mid · cont.",
+    "",
+    false,
+    [
+     [
+      "Boundless Spirit",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Echo Shard",
+      "On Borrowed Decree.",
+      "4"
+     ],
+     [
+      "Escalating Exposure",
+      ""
+     ],
+     [
+      "Magic Carpet",
+      "Sell Spirit Lifesteal for this."
+     ],
+     [
+      "Spirit Burn",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Heroic Aura if needed. Ahead? Skip it until you're dying. Sell Arcane Surge for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "One gun hero is deleting you. Pop it and keep casting."
+     ],
+     [
+      "Plated Armor",
+      "Their damage is bullets."
+     ],
+     [
+      "Counterspell",
+      "Lash ult, Infernus ult."
+     ],
+     [
+      "Dispel Magic",
+      "Slows, hexes and burns like Infernus's."
+     ],
+     [
+      "Unstoppable",
+      "Stuns keep stopping you casting your ult."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Cursed Relic",
+      "Sell Arcane Surge for this, or Heroic Aura if it's gone."
+     ],
+     [
+      "Cheat Death",
+      "Sell Spirit Shielding for this."
+     ],
+     [
+      "Refresher",
+      "Use it right after Echo Shard for a third gravestone. Sell Enchanter's Emblem for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Round 13: new ult build — items from ult builds only: lockbuilds ULT SPAM GRAVES (Lockbuilds Team, Oct 19: Restorative Shot, Extra Spirit, Improved Spirit, Extra Stamina, Arcane Surge, Enchanter's Emblem; Duration Extender, Heroic Aura, Superior Duration, Magic Carpet, Boundless; Spirit Shielding situational; Spirit Burn, Refresher, Transcendent, Diviner's Kevlar; Echo Shard, Leech, Escalating Exposure optional). Spirit Lifesteal is by kit: all of Graves' ult damage is spirit (13% back) and it's the half of Leech that build lists. Ability order: that build stacks a T3 ult; mobalytics (current Graves is mostly this style: Arcane Surge 54%, Duration Extender, Echo Shard 32%) has ult at 6-8 for 25-48%, taken here before Hands.",
+  "Round 14: ability order from seemeta's most popular Graves order (Oct 5-19, 2,434 matches; its top items are this build's: Arcane Surge, Enchanter's Emblem, Heroic Aura, Duration Extender, Boundless). Counters now sell Arcane Surge (Mystic Vulnerability upgrades into Escalating Exposure). Counterspell note was false (it blocks, it doesn't send the burst back). Divine Barrier added to the rich box (Dispel Magic is in Counters).",
+  "Round 15: Restorative Shot removed (Kieran dislikes it except on shotgun heroes); core still fills 12 slots. Counters caption was 117 characters (limit 112); now after Heroic Aura.",
+  "Round 17: Arcane Surge note drops \"Upgrade.\"; Dispel Magic note drops \"DoTs\"; Divine Barrier note uses the standard wording.",
+  "Round 19: checked against current public builds of this style; it is a real style, no changes.",
+  "Round 20: late list to 76.8k: Transcendent Cooldown moved up from Slot locked (ult cooldown), Cursed Relic (farmingbip 567619) and Cheat Death (580942) added; Refresher moved last as the luxury.",
+  "Round 23 (kit): checked Borrowed Decree (16 + 0.04x spirit s, +10 at T2, up to 3 gravestones, so Echo Shard + Refresher give 3), Duration Extender/Arcane Surge both lengthen it (ETechDuration), Heroic Aura buffs ghouls (NonHeroMult 2), Jar of Dead's death cost scales with cooldown reduction (ResourceCost x ETechCooldown) so Superior Cooldown also means more jars. No changes.",
+  "Round 25: ability order 1123444222343311 -> 1123444224231133 (playstyle-based; see a25/log/graves_ult.md).",
+  "Slot locked: Transcendent Cooldown moved out of the rich box (Kieran rule: tiny-gain expensive upgrades are Slot locked)."
+ ]
+}

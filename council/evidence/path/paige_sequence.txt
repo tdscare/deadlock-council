@@ -1,0 +1,182 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: paige
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:11:15Z
+BODY-SHA: 56b7652ccb5c7479b9e0afa7440962dba9ed23fada9bf6de5032be542e76f3cb
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  High-Velocity Rounds: retained-or-upgraded (-> Opening Rounds,Express Shot)
+  Opening Rounds: retained
+  Express Shot: retained
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit,Surge of Power)
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Sprint Boots: retained-or-upgraded (-> Trophy Collector)
+  Trophy Collector: retained
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Extra Health: retained-or-upgraded (-> Fortitude)
+  Fortitude: retained
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Rapid Recharge: retained
+  Tankbuster: retained
+  Surge of Power: retained
+  Grit: retained-or-upgraded (-> Guardian Ward)
+  Guardian Ward: retained
+  Greater Expansion: retained
+  Superior Cooldown: retained
+  Escalating Exposure: retained
+  Boundless Spirit: retained
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Bullet Resilience: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Mystic Reverb: situational-luxury
+  Spirit Burn: situational-luxury
+  Divine Barrier: situational-luxury
+  Superior Duration: situational-luxury
+  Lightning Scroll: situational-luxury
+  Cheat Death: situational-luxury
+  Refresher: situational-luxury
+  Echo Shard: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+  Slowing Hex: conditional branch (alternative/optional)
+  Vortex Web: conditional branch (alternative/optional)
+  Knockdown: conditional branch (alternative/optional)
+
+## BRANCH STRUCTURE
+  Early · L-R                -> main path (sequential): High-Velocity Rounds, Opening Rounds, Express Shot, Extra Charge, Extra Spirit, Mystic Expansion, Sprint Boots
+  Mid · L-R                  -> main path (sequential): Trophy Collector, Improved Spirit, Compress Cooldown, Extra Health, Fortitude, Mystic Burst, Rapid Recharge, Tankbuster
+  Late · L-R                 -> main path (sequential): Surge of Power, Grit, Guardian Ward, Greater Expansion, Superior Cooldown, Escalating Exposure, Boundless Spirit
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Spirit Resilience, Bullet Resilience, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Mystic Reverb, Spirit Burn, Divine Barrier, Superior Duration, Lightning Scroll
+  Rich · cont.               -> luxury ending (optional branch, each item separately): Cheat Death, Refresher, Echo Shard
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+  Lots of dashers?           -> alternative/optional (branch): Slowing Hex, Vortex Web, Knockdown
+
+## Greater Expansion: sold when buying Mystic Reverb (I'm rich as fuck, luxury)
+  role of Greater Expansion: retained; role of Mystic Reverb: situational-luxury
+  Greater Expansion: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 27200 souls (~24.8 min), replaced at ~44.2 min -> owned ~19.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/6400/35200 -> after 4800/6400/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 70 min | window TR | key purchase times (min)
+  as built                                    |          61727 |      0.40 | Greater Expansion 25, Mystic Reverb 44
+  keep Greater Expansion (slot cap ignored)   |          61799 |      0.41 | Greater Expansion 25, Mystic Reverb 46
+  skip Greater Expansion                      |          61540 |      0.40 | Mystic Reverb 44
+  sell Opening Rounds instead                 |          61439 |      0.39 | Greater Expansion 25, Mystic Reverb 45
+  keep Greater Expansion (slot cap ignored) vs as built: d souls +76, d window TR +1.1% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -))
+  skip Greater Expansion vs as built: d souls -103, d window TR -1.4% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Opening Rounds instead vs as built: d souls -203, d window TR -1.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: no modelled stat for Greater Expansion, Mystic Reverb (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Greater Expansion (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -)) | skip Greater Expansion: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Escalating Exposure: sold when buying Spirit Burn (I'm rich as fuck, luxury)
+  role of Escalating Exposure: retained; role of Spirit Burn: situational-luxury
+  Escalating Exposure: price 6400, resale 3200, net cost of owning it 3200 souls (3.2 min of reference income); first bought at 35200 souls (~33.0 min), replaced at ~42.2 min -> owned ~9.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/6400/35200 -> after 4800/6400/28800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 70 min | window TR | key purchase times (min)
+  as built                                    |          61348 |      0.34 | Escalating Exposure 33, Spirit Burn 42
+  keep Escalating Exposure (slot cap ignored) |          61530 |      0.35 | Escalating Exposure 33, Spirit Burn 46
+  skip Escalating Exposure                    |          61476 |      0.34 | Spirit Burn 38
+  sell Opening Rounds instead                 |          61190 |      0.33 | Escalating Exposure 33, Spirit Burn 45
+  keep Escalating Exposure (slot cap ignored) vs as built: d souls +182, d window TR +3.4% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Escalating Exposure vs as built: d souls +74, d window TR +0.3% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  sell Opening Rounds instead vs as built: d souls -116, d window TR -0.1% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  model limit: no modelled stat for Escalating Exposure, Spirit Burn (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Escalating Exposure (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | skip Escalating Exposure: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Tankbuster: sold when buying Superior Duration (I'm rich as fuck, luxury)
+  role of Tankbuster: retained; role of Superior Duration: situational-luxury
+  Tankbuster: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 20000 souls (~18.2 min), replaced at ~40.2 min -> owned ~22.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/6400/32000 -> after 4800/6400/28800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 66 min | window TR | key purchase times (min)
+  as built                                    |          59563 |      0.46 | Tankbuster 18, Superior Duration 40
+  keep Tankbuster (slot cap ignored)          |          59591 |      0.47 | Tankbuster 18, Superior Duration 42
+  skip Tankbuster                             |          59710 |      0.47 | Superior Duration 39
+  sell Opening Rounds instead                 |          59197 |      0.45 | Tankbuster 18, Superior Duration 41
+  keep Tankbuster (slot cap ignored) vs as built: d souls +14, d window TR +0.4% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Tankbuster vs as built: d souls +64, d window TR +0.7% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  sell Opening Rounds instead vs as built: d souls -256, d window TR -2.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: no modelled stat for Superior Duration (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: skip Tankbuster: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Trophy Collector: sold when buying Lightning Scroll (I'm rich as fuck, luxury)
+  role of Trophy Collector: retained; role of Lightning Scroll: situational-luxury
+  Trophy Collector: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 8800 souls (~9.2 min), replaced at ~45.2 min -> owned ~36.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/6400/35200 -> after 4800/4800/35200; thresholds lost: vitality 6400; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 70 min | window TR | key purchase times (min)
+  as built                                    |          61560 |      0.49 | Trophy Collector 9, Lightning Scroll 45
+  keep Trophy Collector (slot cap ignored)    |          61570 |      0.49 | Trophy Collector 9, Lightning Scroll 46
+  skip Trophy Collector                       |          61545 |      0.49 | Lightning Scroll 45
+  sell Opening Rounds instead                 |          61228 |      0.48 | Trophy Collector 9, Lightning Scroll 45
+  keep Trophy Collector (slot cap ignored) vs as built: d souls +19, d window TR +0.6% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Trophy Collector vs as built: d souls +75, d window TR -0.9% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: INSUFFICIENT (effect within model noise)
+  sell Opening Rounds instead vs as built: d souls -210, d window TR -1.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: established 4.8k lost
+  VERDICT: KEEP AS WRITTEN (as-built sequence is not beaten robustly by the alternatives); evidence tier: VERIFIED GAME MECHANIC (walk arithmetic) + MODEL-ONLY value; flipping assumptions: skip Trophy Collector: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Fortitude: sold when buying Cheat Death (Rich · cont., luxury)
+  role of Fortitude: retained; role of Cheat Death: situational-luxury
+  Fortitude: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 14400 souls (~13.8 min), replaced at ~44.2 min -> owned ~30.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/12800/28800 -> after 4800/9600/28800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 70 min | window TR | key purchase times (min)
+  as built                                    |          61877 |      0.48 | Fortitude 14, Cheat Death 44
+  keep Fortitude (slot cap ignored)           |          62290 |      0.51 | Fortitude 14, Cheat Death 46
+  skip Fortitude                              |          60899 |      0.46 | Cheat Death 45
+  sell Opening Rounds instead                 |          61905 |      0.49 | Fortitude 14, Cheat Death 45
+  keep Fortitude (slot cap ignored) vs as built: d souls +185, d window TR +3.9% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Fortitude vs as built: d souls -316, d window TR -4.8% | souls: MODEL-ONLY (sign robust in 82% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 91% of cells; no measured inputs)
+  sell Opening Rounds instead vs as built: d souls +0, d window TR +1.6% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -))
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Fortitude (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -))
+
+## Surge of Power: sold when buying Refresher (Rich · cont., luxury)
+  role of Surge of Power: retained; role of Refresher: situational-luxury
+  Surge of Power: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 23200 souls (~21.2 min), replaced at ~44.2 min -> owned ~23.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/6400/35200 -> after 4800/6400/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 70 min | window TR | key purchase times (min)
+  as built                                    |          61802 |      0.43 | Surge of Power 21, Refresher 44
+  keep Surge of Power (slot cap ignored)      |          62095 |      0.45 | Surge of Power 21, Refresher 46
+  skip Surge of Power                         |          61351 |      0.42 | Refresher 43
+  sell Opening Rounds instead                 |          61720 |      0.43 | Surge of Power 21, Refresher 45
+  keep Surge of Power (slot cap ignored) vs as built: d souls +193, d window TR +2.0% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Surge of Power vs as built: d souls -316, d window TR -2.1% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 88% of cells; no measured inputs)
+  sell Opening Rounds instead vs as built: d souls -27, d window TR -0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Surge of Power (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+
+## Rapid Recharge: sold when buying Echo Shard (Rich · cont., luxury)
+  role of Rapid Recharge: retained; role of Echo Shard: situational-luxury
+  Rapid Recharge: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 17600 souls (~16.2 min), replaced at ~44.2 min -> owned ~28.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/6400/35200 -> after 4800/6400/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 70 min | window TR | key purchase times (min)
+  as built                                    |          61621 |      0.45 | Rapid Recharge 16, Echo Shard 44
+  keep Rapid Recharge (slot cap ignored)      |          61695 |      0.45 | Rapid Recharge 16, Echo Shard 46
+  skip Rapid Recharge                         |          61721 |      0.45 | Echo Shard 43
+  sell Opening Rounds instead                 |          61344 |      0.44 | Rapid Recharge 16, Echo Shard 45
+  keep Rapid Recharge (slot cap ignored) vs as built: d souls +36, d window TR +0.7% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Rapid Recharge vs as built: d souls +65, d window TR +0.6% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: -, 0.5: +)) | TR: INSUFFICIENT (effect within model noise)
+  sell Opening Rounds instead vs as built: d souls -200, d window TR -1.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Echo Shard has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Rapid Recharge, Echo Shard (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: skip Rapid Recharge: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: -, 0.5: +)) | sell Opening Rounds instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

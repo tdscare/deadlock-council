@@ -1,0 +1,98 @@
+{
+ "strategy": {
+  "trig": [
+   "greens (Melee Lifesteal,Grit,Lifestrike,Spirit Shielding,Colossus -> Melee Lifesteal,Grit,Battle Vest,Bullet Lifesteal,Lifestrike,Spirit Shielding,Colossus)",
+   "4.8k spike timing (gun 6400 -> 9600, vitality 9600 -> 7200, spirit 16000 -> 19200)"
+  ],
+  "lines": [
+   "STRATEGY BLOCK"
+  ]
+ },
+ "interaction": {
+  "lines": [
+   "INTERACTION BLOCK Battle Vest",
+   "INTERACTION BLOCK Bullet Lifesteal",
+   "INTERACTION BLOCK Silencer"
+  ]
+ },
+ "weakness": {
+  "lines": [
+   "WEAKNESS: proposal is not justified by a weakness"
+  ]
+ },
+ "overlap": {
+  "changed": [
+   "  overlap Battle Vest (added): core_end=ADDS-VALUE",
+   "  overlap Bullet Lifesteal (added): at_buy=COMPLEMENTS; core_end=COMPLEMENTS",
+   "  overlap Silencer.0 (added): no overlap-candidate",
+   "  overlap Scourge.0 (added): no overlap-candidate"
+  ],
+  "unresolved": [
+   "overlap-candidate Lifestrike [core_end=UNKNOWN]",
+   "overlap-candidate Point Blank [at_buy=UNKNOWN; core_end=UNKNOWN]",
+   "overlap-candidate Phantom Strike [core_end=UNKNOWN]",
+   "overlap-candidate Divine Barrier [core_end=UNKNOWN]"
+  ]
+ },
+ "unresolved": [
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Cultist Sacrifice: Have it by about 8 minutes and eat a big camp with it.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Lifestrike: Light punches and troopers trigger it too.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Spirit Strike: Bashdown counts as a punch for this.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Colossus: Pop it when you chain them in.",
+  "walk: Colossus: slot 13 with no sell that frees a slot",
+  "walk: Silencer.0: not a current item name",
+  "walk: Scourge.0: not a current item name"
+ ],
+ "proposal": "G3_fail_path_mismatch",
+ "id": "billy_damage",
+ "diff": [
+  "added Early · L-R|Battle Vest, Mid · L-R|Bullet Lifesteal, Mid · L-R|Cultist Sacrifice, Mid · cont.|Close Quarters, Mid · cont.|Point Blank, Late · L-R|Rapid Recharge, Late · L-R|Berserker, Late · L-R|Silencer.0, Late · L-R|Scourge.0",
+  "removed Early · L-R|Cultist Sacrifice, Mid · L-R|Close Quarters, Mid · L-R|Point Blank, Mid · cont.|Rapid Recharge, Mid · cont.|Berserker, Late · L-R|Silencer, Late · L-R|Scourge"
+ ],
+ "block": [
+  "NEW violation introduced: bc: MAIN_4.8K_LATE billy_damage: gun 4.8k at 9600",
+  "NEW violation introduced: bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Battle Vest (T2) @5600",
+  "NEW violation introduced: bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Bullet Lifesteal (T2) @7200",
+  "NEW violation introduced: bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Bullet Resist Shredder (T2) @16800",
+  "NEW violation introduced: bc: SLOTS_GT12_NO_SELL billy_damage: Colossus is slot 13",
+  "NEW violation introduced: bc: STALE_ITEM billy_damage: Silencer.0 not in current item list",
+  "NEW violation introduced: bc: STALE_ITEM billy_damage: Scourge.0 not in current item list",
+  "NEW violation introduced: bc: CORE_NOT_12 billy_damage: core ends with 13 items, 40000 souls",
+  "NEW violation introduced: walk: Colossus: slot 13 with no sell that frees a slot",
+  "NEW violation introduced: walk: Silencer.0: not a current item name",
+  "NEW violation introduced: walk: Scourge.0: not a current item name",
+  "STRATEGY: proposal changes greens (Melee Lifesteal,Grit,Lifestrike,Spirit Shielding,Colossus -> Melee Lifesteal,Grit,Battle Vest,Bullet Lifesteal,Lifestrike,Spirit Shielding,Colossus) + 4.8k spike timing (gun 6400 -> 9600, vitality 9600 -> 7200, spirit 16000 -> 19200) but council/evidence/strategy/billy_damage_lane_sustain.txt: chosen alternative A5 path differs from the proposed core at position 4 (Extra Health vs Battle Vest)",
+  "INTERACTION: Battle Vest (added) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions billy_damage \"Battle Vest\") is cited",
+  "INTERACTION: Bullet Lifesteal (added) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions billy_damage \"Bullet Lifesteal\") is cited",
+  "INTERACTION: Silencer (removed) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions billy_damage \"Silencer\") is cited"
+ ],
+ "warn": [],
+ "fixed": [
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Scourge: Cast it on yourself as you dive in."
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Cultist Sacrifice: Have it by about 8 minutes and eat a big camp with it.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Lifestrike: Light punches and troopers trigger it too.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Spirit Strike: Bashdown counts as a punch for this.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Colossus: Pop it when you chain them in."
+ ],
+ "newV": [
+  "bc: MAIN_4.8K_LATE billy_damage: gun 4.8k at 9600",
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Battle Vest (T2) @5600",
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Bullet Lifesteal (T2) @7200",
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Bullet Resist Shredder (T2) @16800",
+  "bc: SLOTS_GT12_NO_SELL billy_damage: Colossus is slot 13",
+  "bc: STALE_ITEM billy_damage: Silencer.0 not in current item list",
+  "bc: STALE_ITEM billy_damage: Scourge.0 not in current item list",
+  "bc: CORE_NOT_12 billy_damage: core ends with 13 items, 40000 souls",
+  "bc: RT_ITEMS billy_damage: Early · L-R: [[\"Melee Lifesteal\",null],[\"Monster Rounds\",null],[\"Grit\",null],[\"Stalker\",null],[\"Cultist Sacrifice\",null]] vs [[\"Melee Lifesteal\",null],[\"Monster Rounds\",null],[\"Grit\",null],[\"Stalker\",null],[\"Battle Vest\",null]]",
+  "bc: RT_ITEMS billy_damage: Mid · L-R: [[\"Lifestrike\",null],[\"Spirit Shielding\",null],[\"Melee Charge\",null],[\"Spirit Strike\",null],[\"Bullet Resist Shredder\",null],[\"Spirit Snatch\",null],[\"Close Quarters\",null],[\"Point Blank\",null]] vs [[\"Bullet Lifesteal\",null],[\"Cultist Sacrifice\",null],[\"Lifestrike\",null],[\"Spirit Shielding\",null],[\"Melee Charge\",null],[\"Spirit Strike\",null],[\"Bullet Resist Shredder\",null],[\"Spirit Snatch\",null]]",
+  "bc: RT_ITEMS billy_damage: Mid · cont.: [[\"Crushing Fists\",null],[\"Extra Charge\",null],[\"Rapid Recharge\",null],[\"Berserker\",null]] vs [[\"Close Quarters\",null],[\"Point Blank\",null],[\"Crushing Fists\",null],[\"Extra Charge\",null]]",
+  "bc: RT_ITEMS billy_damage: Late · L-R: [[\"Colossus\",null],[\"Silencer\",null],[\"Scourge\",null]] vs [[\"Rapid Recharge\",null],[\"Berserker\",null],[\"Colossus\",null],[\"Silencer.0\",null],[\"Scourge.0\",null]]",
+  "walk: Colossus: slot 13 with no sell that frees a slot",
+  "walk: Silencer.0: not a current item name",
+  "walk: Scourge.0: not a current item name"
+ ],
+ "when": "2026-10-24 16:59",
+ "line": "[2026-10-24 16:59] crafted gate test case for the strategy/interaction rules (not a real proposal) | added Early · L-R|Battle Vest, Mid · L-R|Bullet Lifesteal, Mid · L-R|Cultist Sacrifice, Mid · cont.|Close Quarters, Mid · cont.|Point Blank, Late · L-R|Rapid Recharge, Late · L-R|Berserker, Late · L-R|Silencer.0, Late · L-R|Scourge.0; removed Early · L-R|Cultist Sacrifice, Mid · L-R|Close Quarters, Mid · L-R|Point Blank, Mid · cont.|Rapid Recharge, Mid · cont.|Berserker, Late · L-R|Silencer, Late · L-R|Scourge | evidence: data:gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata, strategy:council/evidence/strategy/billy_damage_lane_sustain.txt | gate: FAIL"
+}

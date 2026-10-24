@@ -1,0 +1,27 @@
+{
+ "overlap": {
+  "changed": [
+   "  overlap Cultist Sacrifice (moved earlier): no overlap-candidate"
+  ],
+  "unresolved": [
+   "overlap-candidate Counterspell [core_end=UNKNOWN]"
+  ]
+ },
+ "unresolved": [],
+ "proposal": "venator_grenade",
+ "id": "venator_grenade",
+ "diff": [
+  "core order changed"
+ ],
+ "block": [],
+ "warn": [],
+ "fixed": [
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE venator_grenade: Recharging Rush @19200 has no \"Threshold:\" changes line naming it"
+ ],
+ "kept": [],
+ "newV": [
+  "bc: RT_ITEMS venator_grenade: Early · L-R: [[\"High-Velocity Rounds\",null],[\"Close Quarters\",null],[\"Monster Rounds\",null],[\"Battle Vest\",null],[\"Cultist Sacrifice\",null],[\"Extra Health\",null],[\"Fortitude\",null]] vs [[\"High-Velocity Rounds\",null],[\"Close Quarters\",null],[\"Monster Rounds\",null],[\"Cultist Sacrifice\",null],[\"Battle Vest\",null],[\"Extra Health\",null],[\"Fortitude\",null]]"
+ ],
+ "when": "2026-10-24 11:45",
+ "line": "[2026-10-24 11:45] Triage of the silent edit since CLEANBASE: Battle Vest moved before Cultist Sacrifice (gun 4.8k 4.8k->6.4k souls, no changes line, no waiver). Compared V0 (Cultist first), V1 (Vest first), V2 (Extra Health before Cultist), V3 (Vest before Monster Rounds) with abtimeline state at each checkpoint. Grenade = 35 + 1.0x weapon-damage bonus, Gutshot 60 + 0.7x, so the gun 4.8k (+46% vs +15%) is the build's ability damage. 4.0k-4.8k: V1 better (grenade 76 vs 58, 18% bullet resist). 4.8k-6.4k (twice as long): V0 grenade 106 vs 76 (vs 58 below 65% HP, Vest's bonus off), Gutshot 110 vs 89, gun x1.71 vs x1.51 (x1.23 below 65%), +86 HP, Cultist's bonus souls and buff 1.6k souls earlier; V1 only keeps +22% EHP vs bullets. From 6.4k all paths are identical. Verdict: the edit is a MISTAKE for a grenade build; restore Cultist before Battle Vest (calculated, unvalidated; scenario venator_grenade_cultist_vs_vest). Ability order unchanged; strict vs separate unlock queue give identical tiers. If 1-charge abilities count (open F7), Cultist's +1 charge also reaches the grenade (1 charge at T3, 6.0k model A / 3.9k model B), which only favours V0 more. Threshold: Recharging Rush @19.2k needs 200 weapon damage in 3.5s; the gun does ~1134 in 3.5s at 100% hits (5.3 body hits needed), abtimeline CALCULATED; it refills the trap (2 charges from unlock) under either reading of the 1-charge question. | core order changed | evidence: calc:council/triage/calc/venator_paths.txt, calc:council/triage/calc/paths.py, data:gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata, data:gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata, calc:council/sandbox/scenarios/venator_grenade_cultist_vs_vest.json | gate: FAIL"
+}

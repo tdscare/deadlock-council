@@ -1,0 +1,65 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: billy_damage
+HERO: Billy
+ITEM: Kinetic Dash
+CHECKPOINT: add-on-top at 7200 souls (state souls 8800; item cost 1600)
+VERSION: interaction-v1
+ARGS: --discover billy_damage --at 7200 --n 3 --queue (discover Kinetic Dash)
+GENERATED: 2026-10-24T14:27:59Z
+BODY-SHA: 5ef94c7495450ddc2074e1065cec84577b560e106ff6630f35182bb5741921fc
+INPUT-SHA: d55e5fdba113eeee1fbe9e31a2cf7e869d35a2362ec9a5117dbe08d752f109cb
+ALTERNATIVES (equal souls 1600, unconditional, ranked): Opening Rounds, Mystic Shot, Bullet Resist Shredder, Intensifying Magazine, Swift Striker, Titanic Magazine, Recharging Rush; also shown, not ranked (conditional or unequal cost): Active Reload
+VERDICT: Kinetic Dash is beaten in every window: sustained: Titanic Magazine; burst: Mystic Shot; ult: Bullet Resist Shredder
+UNKNOWN_CELLS: 2
+SELECTION: discovery | discovery: Kinetic Dash's magazine size has an UNKNOWN interaction with 3=Blasted (whether the ability consumes the magazine is not in the data (no ammo key); both readings priced); 3=Blasted is 1% of Billy's output at 7200 souls (component share, CALCULATED; support components ASSUMED top), so the answer can change a purchase
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (1600) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+CANDIDATE FLAGS: fire rate is a timed buff, counted as always on (upper bound)
+UPPER-BOUND OPTIONS THAT BEAT IT (their trigger condition decides; UNKNOWN uptime): Active Reload
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.8, long_share=0.1, W_sus=10.0, W_burst=3.0; reload 2.5 s (ASSUMED 2.5 s: reload duration is animation-defined, not in vdata)
+STATE: owned ['Melee Lifesteal', 'Grit', 'Stalker', 'Cultist Sacrifice', 'Kinetic Dash'] | tiers Bashdown=T2(melee-scaled) Rising Ram=T1(spirit) Blasted=T2(gun-mode) Chain Gang=U(spirit) | weapon invest bonus 54% | spirit 15
+
+## INTERACTION MATRIX (item effect x kit component)
+- fire rate (more bullets) (BonusFireRate=25)
+    normal shooting                              WORKS                      [CALCULATED] more bullets per second (fire-rate pool now 0%: +25 adds 25.0% bullets)
+    1=Bashdown T2 [melee-scaled]                 DOES NOT WORK              [CALCULATED] melee-scaled hit, no bullets
+    2=Rising Ram T1 [spirit]                     DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    3=Blasted T2 [gun-mode]                      WORKS                      [CALCULATED+ASSUMED] adds to the ability's own BonusFireRate=0 (additive stacking ASSUMED)
+    4=Chain Gang U (ULT) [spirit]                DOES NOT WORK              [CALCULATED] damage ['Damage', 'DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+- magazine size (BonusClipSize=6)
+    normal shooting                              WORKS                      [CALCULATED] fewer reloads in long fights
+    1=Bashdown T2 [melee-scaled]                 DOES NOT WORK              [CALCULATED] damage ['MeleeDamage', 'HeavyMeleeDamage'] scales with melee damage
+    2=Rising Ram T1 [spirit]                     DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    3=Blasted T2 [gun-mode]                      UNKNOWN                    [UNKNOWN] whether the ability consumes the magazine is not in the data (no ammo key); both readings priced
+    4=Chain Gang U (ULT) [spirit]                DOES NOT WORK              [CALCULATED] damage ['Damage', 'DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+- reload time of Billy's gun (ASSUMED 2.5 s)
+    normal shooting                              UNKNOWN                    [UNKNOWN] reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 8 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 8 UNKNOWN readings]
+(build state, nothing added) |       899              |       586              |       296              | 0
+Kinetic Dash                 |        998 (+11..+11%) |          597 (+2..+2%) |          296 (+0..+0%) | 0  ! fire rate is a timed buff, counted as always on (upper bound)
+Opening Rounds               |          962 (+7..+7%) |          622 (+6..+6%) |          318 (+8..+8%) | 0
+Mystic Shot                  |       1072 (+18..+19%) |        693 (+18..+18%) |          318 (+8..+8%) | 0
+Bullet Resist Shredder       |       1000 (+11..+12%) |        644 (+10..+10%) |        331 (+12..+12%) | 0
+Intensifying Magazine        |          983 (+5..+9%) |          631 (+8..+8%) |          296 (+0..+0%) | 0
+Swift Striker                |          983 (+9..+9%) |          597 (+2..+2%) |          296 (+0..+0%) | 0
+Titanic Magazine             |       1165 (+24..+30%) |        666 (+14..+14%) |          296 (+0..+0%) | 0
+Active Reload                |       1035 (+15..+17%) |        643 (+10..+10%) |          296 (+0..+0%) | 96  ! fire rate is a timed buff, counted as always on (upper bound)
+Recharging Rush              |        1018 (+9..+13%) |        647 (+10..+10%) |          296 (+0..+0%) | 0
+  candidate detail (reading 1): sustained bullets 74, gun 565, stacks 0, procs 0, spirit 69 | ult: Chain Gang damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Titanic Magazine > Mystic Shot > Recharging Rush > Bullet Resist Shredder > Kinetic Dash > Intensifying Magazine > Swift Striker > Opening Rounds
+  burst: rank (reading 1) Mystic Shot > Titanic Magazine > Recharging Rush > Bullet Resist Shredder > Intensifying Magazine > Opening Rounds > Kinetic Dash > Swift Striker
+  ult: rank (reading 1) Bullet Resist Shredder > Opening Rounds > Mystic Shot > Kinetic Dash > Intensifying Magazine > Swift Striker > Titanic Magazine > Recharging Rush
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (175s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_billy_damage_Kinetic_Dash_3_Blasted_T2_magazine_size.txt
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_billy_damage_reload_probe.txt
+
+## NOT DETERMINED FROM DATA
+  - magazine size (BonusClipSize=6): 3=Blasted T2 [gun-mode]: whether the ability consumes the magazine is not in the data (no ammo key); both readings priced
+  - reload time of Billy's gun (ASSUMED 2.5 s): normal shooting: reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

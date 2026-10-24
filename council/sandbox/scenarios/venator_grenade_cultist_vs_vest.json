@@ -1,0 +1,103 @@
+{
+ "id": "venator_grenade_cultist_vs_vest",
+ "title": "Grenade Venator 4k-6.4k: Cultist Sacrifice (gun 4.8k at 4.8k) or Battle Vest first?",
+ "hero": "Venator",
+ "playstyle": "Grenade Venator",
+ "builds": [
+  "venator_grenade"
+ ],
+ "question": "The silent edit put Battle Vest before Cultist, moving the gun 4.8k from 4.8k to 6.4k souls. Which order is stronger across 4k-6.4k?",
+ "hypothesis": "H-VG-1 (calc, council/triage/calc/venator_paths.txt): 4.8k-6.4k: V0 grenade hit 106 vs V1 76 (58 below 65% HP), Gutshot 110 vs 89, gun x1.71 vs x1.51 (x1.23 below 65% HP); V1 has 18% bullet resist (+22% EHP vs bullets) and wins 4.0k-4.8k (grenade 76 vs 58).",
+ "arms": [
+  {
+   "name": "V0_cultist_first",
+   "items": [
+    "High-Velocity Rounds",
+    "Close Quarters",
+    "Cultist Sacrifice"
+   ],
+   "ability_order": "1123141322443423",
+   "imbues": {},
+   "souls": 5600,
+   "notes": "real tiers at 5.6k (model A): grenade T2, Gutshot U, trap U, ult U; Cultist buff active"
+  },
+  {
+   "name": "V1_vest_first",
+   "items": [
+    "High-Velocity Rounds",
+    "Close Quarters",
+    "Monster Rounds",
+    "Battle Vest"
+   ],
+   "ability_order": "1123141322443423",
+   "imbues": {},
+   "souls": 5600,
+   "notes": "same tiers"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "L11",
+  "souls": 5600,
+  "position": "lane",
+  "enemies": [
+   {
+    "hero": "bot gun hero",
+    "count": 1,
+    "items": [],
+    "behaviour": "shoots back",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "hp"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Throw grenade, Gutshot, shoot until magazine empty; record grenade hit number, total damage and own HP lost",
+  "Repeat starting at 60% HP (Battle Vest bonus off)"
+ ],
+ "trials": 6,
+ "metrics": [
+  {
+   "name": "grenade_hit",
+   "unit": "damage",
+   "how": "damage number",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "damage_mag",
+   "unit": "damage",
+   "how": "bot HP lost",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "hp_lost",
+   "unit": "hp",
+   "how": "own HP lost",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "damage_mag",
+  "min_effect_pct": 10,
+  "min_trials": 6,
+  "rule": "SUPPORTS V0 if damage_mag >=10% higher at full HP and higher at 60% HP; REFUTES (keep V1 with a waiver) if V1 is within 5% damage and loses >=20% less HP; else INCONCLUSIVE (rule default V0)."
+ },
+ "blockedIfNo": []
+}

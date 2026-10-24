@@ -1,0 +1,22 @@
+# Kieran build rules (working notes)
+- Every stat the build uses hits 4.8k EARLY (most important spike). No scattered 800s. Supports: gun/spirit spike first, healing later (sustain not needed in lane).
+- Gun lane route usually HV Rounds -> Opening Rounds, then Rapid Rounds->Swift Striker->Mystic Shot OR Opening->Express Shot.
+- Check Build Browser public builds + seemeta before each build. Think for myself; audit slot count (12), sell notes past 12, max gun invest.
+- Layout: Lane box first (top-left, "Losing lane? Buy 1"), Early beside. Every box ONE row; split if long. Counters box right of Late, desc "After X. Pick 1 or 2." Only include counters the hero actually needs (mobile heroes: Dispel/Counterspell maybe Unstoppable).
+- Rich = T4 luxury upgrades, ordered by priority. Note: "Expensive late upgrade to X" (never "dear version").
+- Slot locked = overpriced minor upgrades only (e.g. Healing Tempo, Juggernaut, Boundless when not needed). Not core items.
+- Names: build-fitting, UK, e.g. "Victor cosplayer". Descriptions: short playstyle label ("super agile gun Holliday", "speedy AoE damage dealer Paige").
+- Notes: short, general, no explaining the item, no listing abilities. "barrel" not keg, "dive" not flop, "your gun". 
+- Don't remove+re-add items; park in spare box and drag.
+- Ability order = 16 clicks; sensible.
+- Specific: Holliday: Glass Cannon/Lucky Shot/Merc Mag late, Ricochet+Silencer rich, no Sup Duration, counters Dispel(Slowing/Disarming Hex)+Counterspell. Recharging Rush = barrels & bounce pads; Fortitude = never go back to base; Sharpshooter = stay in air out of fight. Tankbuster > Esc Exposure there.
+- Abrams: Spirit Snatch core, Slot locked=Juggernaut only, Spirit Burn note re charge+siphon procs later. Drop US names (Drywall).
+- Bebop: Veil Walker before Spirit Snatch; Siphon into Late; Vampiric Burst in; Fortitude out; rich Spellslinger, Inhibitor, Colossus. Spellslinger note generic.
+- Danny: Opening Rounds 2nd, Sharpshooter core; Cursed Relic->counters; Silence Wave core pre-slam; Slowing Hex cast before; Focus Lens rich; pivot box "Can't land the dive?" Toxic Bullets, Spiritual Overflow (max 3). slot locked emptied.
+- Dynamo: support: gun spike in lane (Headshot Booster/Recharging Rush/Opening Rounds early), Rescue Beam + Heroic Aura, Boundless core, Echo Shard on 2, rich Witchmail>Colossus>Echo. rename.
+- Grey Talon: Stamina Mastery + Recharging Rush core, counters Dispel/Counterspell/Unstoppable(CC out of air e.g. Phantom Strike), Echo Shard on 3 or 1 "only when out of arrows".
+- Graves: spirit 4.8k early.
+- Infernus: hit spikes earlier.
+- Rat King: no Extra Charge, no Glass Cannon; tanky; rename.
+- Paige: speedy AoE 1, Express Shot/gun spike early.
+- To make: Rem, Seven(ult), Solomon(support), Venator, Victor(hybrid gun), Violet, Viscous(support), Wraith, Yamato, Mina, Haze restructure.

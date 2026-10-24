@@ -1,0 +1,124 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: violet_spirit
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:12:07Z
+BODY-SHA: 6d8fdf3c7b5e84413efc9b67cba0867e11a6dfa51adc1724b9177f58fd57386e
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Spirit: retained-or-upgraded (-> Surge of Power,Improved Spirit)
+  Extra Regen: retained-or-upgraded (-> Healing Booster)
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Mystic Regeneration: retained-or-upgraded (-> Radiant Regeneration)
+  Surge of Power: retained
+  Grit: retained-or-upgraded (-> Spirit Shielding)
+  Healing Booster: retained
+  Spirit Shielding: retained
+  Spirit Lifesteal: retained-or-upgraded (-> Infuser)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Radiant Regeneration: retained
+  Enchanter's Emblem: retained
+  Rapid Recharge: retained
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Tankbuster: retained
+  Superior Cooldown: retained
+  Escalating Exposure: retained
+  Boundless Spirit: retained
+  Spirit Burn: retained
+  Infuser: retained
+  Extra Health: conditional branch (lane alternative)
+  Spirit Resilience: conditional branch (counter menu)
+  Bullet Resilience: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Knockdown: conditional branch (counter menu)
+  Mystic Reverb: situational-luxury
+  Diviner's Kevlar: situational-luxury
+  Spiritual Overflow: situational-luxury
+  Refresher: situational-luxury
+  Divine Barrier: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Health
+  Early · L-R                -> main path (sequential): Extra Spirit, Extra Regen, Extra Charge, Mystic Regeneration, Surge of Power, Grit, Healing Booster, Spirit Shielding
+  Mid · L-R                  -> main path (sequential): Spirit Lifesteal, Improved Spirit, Mystic Burst, Radiant Regeneration, Enchanter's Emblem, Rapid Recharge, Compress Cooldown, Mystic Vulnerability
+  Mid · cont.                -> main path (sequential): Tankbuster
+  Late · L-R                 -> main path (sequential): Superior Cooldown, Escalating Exposure, Boundless Spirit, Spirit Burn, Infuser
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Spirit Resilience, Bullet Resilience, Counterspell, Dispel Magic, Knockdown
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Mystic Reverb, Diviner's Kevlar, Spiritual Overflow, Refresher, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+
+## Healing Booster: sold when buying Mystic Reverb (I'm rich as fuck, luxury)
+  role of Healing Booster: retained; role of Mystic Reverb: situational-luxury
+  Healing Booster: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 7200 souls (~7.5 min), replaced at ~56.0 min -> owned ~48.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/11200/41600 -> after 0/9600/41600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 80 min | window TR | key purchase times (min)
+  as built                                    |          67560 |      0.52 | Healing Booster 8, Mystic Reverb 56
+  keep Healing Booster (slot cap ignored)     |          67727 |      0.52 | Healing Booster 8, Mystic Reverb 57
+  skip Healing Booster                        |          67627 |      0.52 | Mystic Reverb 56
+  sell Enchanter's Emblem instead             |          66529 |      0.49 | Healing Booster 8, Mystic Reverb 56
+  keep Healing Booster (slot cap ignored) vs as built: d souls +285, d window TR +0.9% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: INSUFFICIENT (effect within model noise)
+  skip Healing Booster vs as built: d souls +107, d window TR +0.3% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  sell Enchanter's Emblem instead vs as built: d souls -977, d window TR -4.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: no modelled stat for Mystic Reverb (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Healing Booster (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | skip Healing Booster: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Enchanter's Emblem instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Enchanter's Emblem: sold when buying Diviner's Kevlar (I'm rich as fuck, luxury)
+  role of Enchanter's Emblem: retained; role of Diviner's Kevlar: situational-luxury
+  Enchanter's Emblem: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 16000 souls (~15.2 min), replaced at ~56.0 min -> owned ~40.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/17600/35200 -> after 0/16000/35200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 80 min | window TR | key purchase times (min)
+  as built                                    |          69998 |      0.55 | Enchanter's Emblem 15, Diviner's Kevlar 56
+  keep Enchanter's Emblem (slot cap ignored)  |          71605 |      0.58 | Enchanter's Emblem 15, Diviner's Kevlar 57
+  skip Enchanter's Emblem                     |          68401 |      0.50 | Diviner's Kevlar 57
+  sell Healing Booster instead                |          71744 |      0.58 | Enchanter's Emblem 15, Diviner's Kevlar 56
+  keep Enchanter's Emblem (slot cap ignored) vs as built: d souls +345, d window TR +4.4% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -))
+  skip Enchanter's Emblem vs as built: d souls -763, d window TR -5.8% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 88% of cells; no measured inputs)
+  sell Healing Booster instead vs as built: d souls +391, d window TR +4.8% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Enchanter's Emblem (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | sell Healing Booster instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+
+## Tankbuster: sold when buying Spiritual Overflow (I'm rich as fuck, luxury)
+  role of Tankbuster: retained; role of Spiritual Overflow: situational-luxury
+  Tankbuster: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 24000 souls (~23.0 min), replaced at ~55.0 min -> owned ~32.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/11200/35200 -> after 6400/11200/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 80 min | window TR | key purchase times (min)
+  as built                                    |          70329 |      0.53 | Tankbuster 23, Spiritual Overflow 55
+  keep Tankbuster (slot cap ignored)          |          69854 |      0.52 | Tankbuster 23, Spiritual Overflow 57
+  skip Tankbuster                             |          71886 |      0.57 | Spiritual Overflow 53
+  sell Enchanter's Emblem instead             |          68167 |      0.47 | Tankbuster 23, Spiritual Overflow 56
+  keep Tankbuster (slot cap ignored) vs as built: d souls -16, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Tankbuster vs as built: d souls +414, d window TR +6.5% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Enchanter's Emblem instead vs as built: d souls -1003, d window TR -6.9% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: skip Tankbuster: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Enchanter's Emblem instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Radiant Regeneration: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Radiant Regeneration: retained; role of Refresher: situational-luxury
+  Radiant Regeneration: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 14400 souls (~14.0 min), replaced at ~55.0 min -> owned ~41.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/11200/41600 -> after 0/11200/38400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 80 min | window TR | key purchase times (min)
+  as built                                    |          69764 |      0.55 | Radiant Regeneration 14, Refresher 55
+  keep Radiant Regeneration (slot cap ignored)|          69486 |      0.54 | Radiant Regeneration 14, Refresher 57
+  skip Radiant Regeneration                   |          71510 |      0.59 | Refresher 53
+  sell Enchanter's Emblem instead             |          67838 |      0.50 | Radiant Regeneration 14, Refresher 56
+  keep Radiant Regeneration (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Radiant Regeneration vs as built: d souls +559, d window TR +5.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Enchanter's Emblem instead vs as built: d souls -1347, d window TR -5.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: skip Radiant Regeneration: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Enchanter's Emblem instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

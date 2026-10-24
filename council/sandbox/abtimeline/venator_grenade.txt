@@ -1,0 +1,104 @@
+# venator_grenade | Venator | Rizuhble's Holy Hand Grenade
+abilities: 1=Consecrating Grenade (ability_priest_flashbang, start_trained=false, Signature) / 2=Gutshot (ability_priest_knockback, start_trained=false, Signature) / 3=Hex-Lined Snap Trap (ability_priest_beartrap, start_trained=false, Signature) / 4=Ira Domini (ability_priest_weaponswap, start_trained=false, Ultimate)
+order: 1123141322443423
+model A (data):  Consecrati:U@0  Consecrati:T1@200  Gutshot:U@500  Hex-Lined :U@1400  Consecrati:T2@2000  Ira Domini:U@3200  Consecrati:T3@6000  Hex-Lined :T1@6800  Gutshot:T1@7600  Gutshot:T2@9200  Ira Domini:T1@10100  Ira Domini:T2@11900  Hex-Lined :T2@13800  Ira Domini:T3@20600  Gutshot:T3@32100  Hex-Lined :T3@48600
+model B (old):   Consecrati:T1@200  Consecrati:T2@900  Gutshot:T1@2000  Hex-Lined :T1@2600  Consecrati:T3@3900  Ira Domini:U@4600  Hex-Lined :T2@6000  Gutshot:T2@6800  Gutshot:T3@7600  Ira Domini:T1@8400  Ira Domini:T2@9200  Hex-Lined :T3@10100  Ira Domini:T3@11000
+tier upgrades: Consecrating: AbilityCooldown-5 / Radius+1.5,BurnRadius+1.5,BurnDuration+1 / HealAmpReceivePenaltyPercent-20,HealAmpRegenPenaltyPercent-20,AbilityCharges+1,AbilityCooldownBetweenCharge+3 | Gutshot: Damage+25 / AbilityCooldown-10,StunDuration+0.4 / BuffDuration+5 | Hex-Lined Sn: AbilityCooldown-11 / ImmobilizeDuration+1 / IncomingDamagePercentFromCaster+30,AbilityCharges+1 | Ira Domini: BonusMoveSpeed+1.2 / BonusDamage+65,AbilityCooldown-15 / AllStakesBlessed+1
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  High-Velocity Rounds
+        Consecrati T1 ch1 cd20 | Gutshot U ch1 cd23 | Hex-Lined  L[U] | Ira Domini L
+  1600 L5   2     4  Close Quarters
+        Consecrati T1[T2] ch1 cd20 | Gutshot U ch1 cd23 | Hex-Lined  U ch2 cd28/8 Damage=90 | Ira Domini L
+  2400 L6   3     6  Monster Rounds
+        Consecrati T2 ch1 cd20 | Gutshot U[T1] ch1 cd23 | Hex-Lined  U ch2 cd28/8 Damage=92 | Ira Domini L
+  4000 L9   5     9  Battle Vest
+        Consecrati T2[T3] ch1 cd20 | Gutshot U[T1] ch1 cd23 | Hex-Lined  U[T1] ch2 cd28/8 Damage=99 | Ira Domini U[L] ch1 cd160 d15
+  6400 L12  8    12  Cultist Sacrifice
+        Consecrati T3 ch1 cd20/3 | Gutshot U[T1] ch1 cd23 | Hex-Lined  U[T2] ch2 cd28/8 Damage=107 | Ira Domini U ch1 cd160 d15
+  7200 L13  9    13  Extra Health
+        Consecrati T3 ch1 cd20/3 | Gutshot U[T2] ch1 cd23 | Hex-Lined  T1[T2] ch2 cd17/8 Damage=109 | Ira Domini U ch1 cd160 d15
+  9600 L16 12    16  Fortitude
+        Consecrati T3 ch1 cd20/3 | Gutshot T2[T3] ch1 cd13 | Hex-Lined  T1[T2] ch2 cd17/8 Damage=116 | Ira Domini U[T2] ch1 cd160 d15
+ 12800 L20 16    21  Berserker
+        Consecrati T3 ch1 cd20/3 | Gutshot T2[T3] ch1 cd13 | Hex-Lined  T1[T3] ch2 cd17/8 Damage=126 | Ira Domini T2[T3] ch1 cd145 d15
+ 16000 L22 18    23  Hollow Point
+        Consecrati T3 ch1 cd20/3 | Gutshot T2[T3] ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=131 | Ira Domini T2[T3] ch1 cd145 d15
+ 17600 L24 20    25  Bullet Lifesteal
+        Consecrati T3 ch1 cd20/3 | Gutshot T2[T3] ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=136 | Ira Domini T2[T3] ch1 cd145 d15
+ 19200 L25 21    26  Recharging Rush
+        Consecrati T3 ch1 cd20/3 | Gutshot T2[T3] ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=138 | Ira Domini T2[T3] ch1 cd145 d15
+ 20000 L25 21    33  Extra Charge
+        Consecrati T3 ch1 cd20/3 | Gutshot T2[T3] ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=169 | Ira Domini T2[T3] ch1 cd145 d15
+ 23200 L27 23    36  Ballistic Enchantment [imbue Consecrating Grenade]
+        Consecrati T3 ch1 cd20/3 | Gutshot T2[T3] ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=174 | Ira Domini T3 ch1 cd145 d15
+ 25600 L28 24    49  Rapid Recharge
+        Consecrati T3 ch1 cd20/3 | Gutshot T2[T3] ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=218 | Ira Domini T3 ch1 cd145 d15
+ 30400 L30 26    51  Vampiric Burst
+        Consecrati T3 ch1 cd20/3 | Gutshot T2[T3] ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=223 | Ira Domini T3 ch1 cd145 d15
+ 36800 L32 28    53  Silencer
+        Consecrati T3 ch1 cd20/3 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=228 | Ira Domini T3 ch1 cd145 d15
+ 43200 L34 30    55  Inhibitor
+        Consecrati T3 ch1 cd20/3 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=232 | Ira Domini T3 ch1 cd145 d15
+ 49600 L36 32    58  Crippling Headshot
+        Consecrati T3 ch1 cd20/3 | Gutshot T3 ch1 cd13 | Hex-Lined  T3 ch3 cd17/8 Damage=237 | Ira Domini T3 ch1 cd145 d15
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @1600 Close Quarters [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (CloseRangeBonusDamageRange=15m)
+    game text: Deal additional Weapon Damage when in close range to your target.
+    at buy: not computed (needs play data)
+- @2400 Monster Rounds [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: (no game text)
+    at buy: not computed (needs play data)
+- @4000 Battle Vest [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: While you are above {s:LifeThreshold}% health, gain {g:citadel_inline_attribute:'WeaponDamage'} and {g:citadel_inline_attribute:'BonusFireRate'}.
+    at buy: not computed (needs play data)
+- @6400 Cultist Sacrifice [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Target an enemy NPC and consume it for {s:BonusSoulsPct}% Bonus Souls and grants a powerful long lasting buff.
+    at buy: not computed (needs play data)
+- @9600 Fortitude [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (HealthThreshold=75)
+    game text: After not taking damage for a period, gain health regen.
+    at buy: not computed (needs play data)
+- @12800 Berserker [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (DamageToStack=120, MaxStacks=10)
+    game text: Your Weapon Damage increases as you take sustained damage.
+    at buy: not computed (needs play data)
+- @16000 Hollow Point [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: When you are above {s:LifeThreshold}% health, deal additional Weapon Damage and your bullets reduce enemy Bullet Resist.
+    at buy: not computed (needs play data)
+- @19200 Recharging Rush [gunwin+charged] -> OK | verdict: buy now | CALCULATED
+    rule: 200 weapon damage within 3.5s (game text: 'significant weapon damage'), refills one charge per charged ability; cd 25s; needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Dealing significant {g:citadel_inline_attribute:'WeaponDamage'} replenishes a charge for each of your charged abilities.
+    at buy: gun 38/bullet x 30 shots = 1134 in 3.5s (100% hits, base + level + weapon-invest + item weapon damage); Hex-Lined Snap Trap 2->2 charges; Hex-Lined Snap Trap shots in 5s 1->1 (between-charge 8s)
+    margin: +467% at 100% hits; needs 5.3 hits
+    unverified: falloff, headshots, accuracy; whether ability weapon-damage counts; F7 1-charge abilities
+- @20000 Extra Charge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Adds one to your ability max charges.
+    at buy: Hex-Lined Snap Trap 2->3 charges; Hex-Lined Snap Trap shots in 5s 1->1 (between-charge 8s)
+    unverified: F7 1-charge abilities
+- @23200 Ballistic Enchantment [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Consecrating Grenade; needs it trained and the stat the item raises
+    game text: Imbue an ability with increased range. Dealing damage with that ability grants you increased weapon damage per unique hero hit. Has reduced effect on ... | vdata: proc damage types ABILITY/BULLET/MELEE/PURE, CanProcByOtherObjects=true
+    at buy: Consecrating Grenade T3: cd 20s, duration 0s, charges 1
+- @25600 Rapid Recharge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: (no game text)
+    at buy: Hex-Lined Snap Trap 2->4 charges; Hex-Lined Snap Trap shots in 5s 1->1 (between-charge 8s) (cd 17->14.6s, between 8->5.60s)
+    unverified: F7 1-charge abilities
+- @36800 Silencer [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Your bullets build up to a Silence. Victims are immune to the build up for {s:ImmunityDuration}s after silence expires.
+    at buy: not computed (needs play data)
+- @49600 Crippling Headshot [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: (no game text)
+    at buy: not computed (needs play data)
+
+no trigger condition (plain stats/actives): High-Velocity Rounds, Extra Health, Bullet Lifesteal, Vampiric Burst, Inhibitor

@@ -1,0 +1,133 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: sinclair
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:13:33Z
+BODY-SHA: 891bccd607a697deaed47e34eaffbb69f889c1223268777adac85d5c11bdcb96
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Monster Rounds: retained-or-upgraded (-> Cultist Sacrifice)
+  Extra Health: retained-or-upgraded (-> Fortitude,Colossus)
+  Stalker: temporary (bought to be sold)
+  Grit: retained-or-upgraded (-> Reactive Barrier)
+  Cultist Sacrifice: retained
+  Fortitude: retained
+  Reactive Barrier: retained
+  Melee Charge: retained-or-upgraded (-> Crushing Fists)
+  Enduring Speed: retained
+  Sprint Boots: retained-or-upgraded (-> Shadow Weave)
+  Shadow Weave: retained
+  Duration Extender: retained-or-upgraded (-> Superior Duration)
+  Superior Duration: retained
+  Cold Front: retained-or-upgraded (-> Arctic Blast)
+  Point Blank: retained
+  Hollow Point: retained
+  Crushing Fists: retained
+  Arctic Blast: retained
+  Alchemical Fire: retained
+  Colossus: retained
+  Extra Regen: conditional branch (lane alternative)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Knockdown: conditional branch (counter menu)
+  Warp Stone: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Hunter's Aura: conditional branch (alternative/optional)
+  Lifestrike: conditional branch (alternative/optional)
+  Diviner's Kevlar: situational-luxury
+  Indomitable: situational-luxury
+  Echo Shard: situational-luxury
+  Phantom Strike: situational-luxury
+  Divine Barrier: situational-luxury
+  Juggernaut: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Monster Rounds, Extra Health, Stalker, Grit, Cultist Sacrifice
+  Mid · L-R                  -> main path (sequential): Fortitude, Reactive Barrier, Melee Charge, Enduring Speed, Sprint Boots, Shadow Weave, Duration Extender
+  Mid · cont.                -> main path (sequential): Superior Duration, Cold Front, Point Blank, Hollow Point
+  Late · L-R                 -> main path (sequential): Crushing Fists, Arctic Blast, Alchemical Fire, Colossus
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Counterspell, Dispel Magic, Knockdown, Warp Stone, Unstoppable, Plated Armor
+  Swap for Hollow Point      -> alternative/optional (branch): Hunter's Aura
+  Swap for Alchemical Fire   -> alternative/optional (branch): Lifestrike
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Diviner's Kevlar, Indomitable, Echo Shard, Phantom Strike, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Juggernaut
+
+## Stalker: sold when buying Alchemical Fire (Late · L-R, main)
+  role of Stalker: temporary (bought to be sold); role of Alchemical Fire: retained
+  Stalker: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 3200 souls (~3.8 min), replaced at ~40.8 min -> owned ~37.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 24000/6400/9600 -> after 22400/6400/9600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 68 min | window TR | key purchase times (min)
+  as built                                    |          58173 |      0.29 | Stalker 4, Alchemical Fire 41
+  keep Stalker                                |          58211 |      0.29 | Stalker 4, Alchemical Fire 42
+  skip Stalker                                |          58672 |      0.29 | Alchemical Fire 39
+  sell Fortitude instead                      |          57999 |      0.27 | Stalker 4, Alchemical Fire 40
+  keep Stalker vs as built: d souls +15, d window TR +1.2% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Stalker vs as built: d souls +129, d window TR -0.9% | souls: MODEL-ONLY (sign robust in 82% of cells; no measured inputs) | TR: INSUFFICIENT (effect within model noise)
+  sell Fortitude instead vs as built: d souls -315, d window TR -5.3% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY (sign robust in 82% of cells; no measured inputs)
+  note: the variants ['skip Stalker'] differ from 'as built' only through items with no modelled stat (Alchemical Fire contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Alchemical Fire has an active effect (PRESS) not priced
+  model limit: no modelled stat for Alchemical Fire (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Stalker: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Fortitude instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Hollow Point: sold when buying Diviner's Kevlar (I'm rich as fuck, luxury)
+  role of Hollow Point: retained; role of Diviner's Kevlar: situational-luxury
+  Hollow Point: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 27200 souls (~27.2 min), replaced at ~55.8 min -> owned ~28.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 22400/19200/9600 -> after 19200/19200/9600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 76 min | window TR | key purchase times (min)
+  as built                                    |          62737 |      0.22 | Hollow Point 27, Diviner's Kevlar 56
+  keep Hollow Point (slot cap ignored)        |          62818 |      0.22 | Hollow Point 27, Diviner's Kevlar 58
+  skip Hollow Point                           |          62606 |      0.21 | Diviner's Kevlar 54
+  sell Fortitude instead                      |          62772 |      0.22 | Hollow Point 27, Diviner's Kevlar 56
+  keep Hollow Point (slot cap ignored) vs as built: d souls +63, d window TR +1.9% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Hollow Point vs as built: d souls -109, d window TR -1.8% | souls: MODEL-ONLY (sign robust in 85% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Fortitude instead vs as built: d souls +23, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Hollow Point (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | skip Hollow Point: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Alchemical Fire: sold when buying Echo Shard (I'm rich as fuck, luxury)
+  role of Alchemical Fire: retained; role of Echo Shard: situational-luxury
+  Alchemical Fire: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 39200.0 souls (~40.8 min), replaced at ~55.8 min -> owned ~15.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 22400/12800/16000 -> after 19200/12800/16000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 76 min | window TR | key purchase times (min)
+  as built                                    |          62502 |      0.18 | Alchemical Fire 41, Echo Shard 56
+  keep Alchemical Fire (slot cap ignored)     |          62555 |      0.18 | Alchemical Fire 41, Echo Shard 58
+  skip Alchemical Fire                        |          62526 |      0.18 | Echo Shard 55
+  sell Fortitude instead                      |          62461 |      0.17 | Alchemical Fire 41, Echo Shard 56
+  keep Alchemical Fire (slot cap ignored) vs as built: d souls +44, d window TR +1.9% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Alchemical Fire vs as built: d souls +43, d window TR +3.0% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY (sign robust in 82% of cells; no measured inputs)
+  sell Fortitude instead vs as built: d souls -56, d window TR -5.7% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Alchemical Fire'] differ from 'as built' only through items with no modelled stat (Alchemical Fire, Echo Shard contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Alchemical Fire has an active effect (PRESS) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Echo Shard has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Alchemical Fire, Echo Shard (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Alchemical Fire (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Fortitude instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Cultist Sacrifice: sold when buying Phantom Strike (I'm rich as fuck, luxury)
+  role of Cultist Sacrifice: retained; role of Phantom Strike: situational-luxury
+  Cultist Sacrifice: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 6400 souls (~6.8 min), replaced at ~55.8 min -> owned ~49.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 22400/19200/9600 -> after 19200/19200/9600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 76 min | window TR | key purchase times (min)
+  as built                                    |          62095 |      0.25 | Cultist Sacrifice 7, Phantom Strike 56
+  keep Cultist Sacrifice (slot cap ignored)   |          62549 |      0.26 | Cultist Sacrifice 7, Phantom Strike 58
+  skip Cultist Sacrifice                      |          61062 |      0.25 | Phantom Strike 56
+  sell Fortitude instead                      |          62476 |      0.25 | Cultist Sacrifice 7, Phantom Strike 56
+  keep Cultist Sacrifice (slot cap ignored) vs as built: d souls +560, d window TR +1.8% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Cultist Sacrifice vs as built: d souls -1486, d window TR -2.8% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Fortitude instead vs as built: d souls +323, d window TR -1.0% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Cultist Sacrifice has an active effect (PRESS) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Phantom Strike has an active effect (PRESS) not priced
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Cultist Sacrifice (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Fortitude instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

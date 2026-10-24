@@ -1,0 +1,110 @@
+{
+ "id": "seven_gun_N2_fire_rate_vs_emblem",
+ "title": "Gun Seven: Swift Striker (fire rate) vs Enchanter's Emblem in the same slot",
+ "hero": "Seven",
+ "playstyle": "Gun Seven",
+ "builds": [
+  "seven_gun"
+ ],
+ "question": "Does +20% fire rate (more Power Surge procs, one per burst) beat Enchanter's Emblem's +15 spirit, 18% spirit resist, 5% CDR and 1.6k health invest for this build?",
+ "hypothesis": "H-N2: at 12k souls, gun+Power Surge damage in one Power Surge window is ~+22% with Swift Striker (calculated 7052 vs 5492-6307), but time to death vs a spirit bot is >= 15% shorter (HP 1518 vs 2166 calculated). Also tests whether Power Surge procs cap at ChainTickRate 0.2 s.",
+ "arms": [
+  {
+   "name": "EMBLEM",
+   "items": [
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_pristine_emblem",
+    "upgrade_magic_shield",
+    "upgrade_arcane_extension",
+    "upgrade_health_stealing_magic",
+    "upgrade_sprint_booster"
+   ],
+   "ability_order": "1133234324141224",
+   "imbues": {
+    "upgrade_arcane_extension": 3
+   },
+   "souls": 12000,
+   "notes": "proposed at 12k (Enduring Speed approximated by Sprint Boots)"
+  },
+  {
+   "name": "SWIFT",
+   "items": [
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_pristine_emblem",
+    "upgrade_blitz_bullets",
+    "upgrade_arcane_extension",
+    "upgrade_magic_storm"
+   ],
+   "ability_order": "1133234324141224",
+   "imbues": {
+    "upgrade_arcane_extension": 3,
+    "upgrade_magic_storm": 3
+   },
+   "souls": 12000,
+   "notes": "data.js (current) at 12k"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "souls 12000",
+  "souls": 12000,
+  "position": "4 bots on a 300 u ring, main target 350 u",
+  "enemies": [
+   {
+    "hero": "Haze (bot)",
+    "count": 4,
+    "items": [],
+    "behaviour": "stand",
+    "hp": "ekeep 0.9"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "hardreset"
+  ]
+ },
+ "controls": [
+  "Arms interleaved A,B,A,B; A/A floor run first",
+  "hardreset between blocks",
+  "Same souls/level per arm; ability tiers set with abil ops per FOUNDATIONS F9 (unlocked 1, T1 3, T2 7, T3 15), logged before each block",
+  "Same bot heroes, positions, HP keep-alive and resists"
+ ],
+ "procedure": [
+  "cast 3; fire for the whole Power Surge window with reloads",
+  "count Power Surge procs per second from the damage csv",
+  "separate block: spirit bot casts at the player, time to death"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "window_damage_main",
+   "unit": "hp",
+   "how": "damage csv, main target, gun + Power Surge",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "ps_procs_per_s",
+   "unit": "1/s",
+   "how": "damage csv",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "time_to_death_spirit",
+   "unit": "s",
+   "how": "timer",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "window_damage_main",
+  "min_effect_pct": 15,
+  "min_trials": 5,
+  "rule": "SWIFT >= +15% damage AND time_to_death loss < 15% would reopen Swift Striker; otherwise keep Enchanter's Emblem"
+ }
+}

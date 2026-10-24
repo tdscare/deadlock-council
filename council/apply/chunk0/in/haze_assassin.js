@@ -1,0 +1,219 @@
+{
+ "id": "haze_assassin",
+ "hk": "hero_haze",
+ "hero": "Haze",
+ "tag": "Fix",
+ "name": "Rizuhble's Sleepy Stabby Haze",
+ "desc": "Assassin Haze",
+ "tg": [
+  "weapon",
+  "damage",
+  "Capacitor"
+ ],
+ "abil": [
+  "Sleep Dagger",
+  "Smoke Bomb",
+  "Fixation",
+  "Bullet Dance"
+ ],
+ "order": [
+  3,
+  3,
+  1,
+  1,
+  2,
+  3,
+  4,
+  4,
+  2,
+  2,
+  1,
+  4,
+  1,
+  4,
+  3,
+  2
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Rapid Rounds",
+      ""
+     ],
+     [
+      "Active Reload",
+      ""
+     ],
+     [
+      "Swift Striker",
+      ""
+     ],
+     [
+      "Fleetfoot",
+      ""
+     ],
+     [
+      "Sprint Boots",
+      ""
+     ],
+     [
+      "Enduring Speed",
+      ""
+     ],
+     [
+      "Veil Walker",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Surge of Power",
+      "On Sleep Dagger.",
+      "1"
+     ],
+     [
+      "Bullet Resist Shredder",
+      ""
+     ],
+     [
+      "Recharging Rush",
+      "Sell it for a second counter."
+     ],
+     [
+      "Tesla Bullets",
+      ""
+     ],
+     [
+      "Burst Fire",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Capacitor",
+      "Fire it at whoever you're about to ult: they can't dash or use movement items."
+     ],
+     [
+      "Lucky Shot",
+      ""
+     ],
+     [
+      "Unstoppable",
+      "Sell Fleetfoot for this."
+     ],
+     [
+      "Ricochet",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Veil Walker if needed. Ahead? Skip it until you're dying. Sell Active Reload for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "Their gun carry wins the 1v1: Wraith, Vindicta, Grey Talon."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun and Metal Skin isn't enough."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+     ],
+     [
+      "Armor Piercer",
+      "Their frontline stacks bullet resist, like Bullet Resilience, and your gun stops doing damage."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Siphon Bullets",
+      "Sell Recharging Rush for this."
+     ],
+     [
+      "Crippling Headshot",
+      "Sell Bullet Resist Shredder for this."
+     ],
+     [
+      "Silencer",
+      "Sell Active Reload for this, or Burst Fire if it's gone."
+     ],
+     [
+      "Spellslinger",
+      "Sell Swift Striker for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Juggernaut",
+      "Upgrade of Enduring Speed."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Round 13: new assassin build from Kieran's spec (very early Tesla Bullets to farm instead of Ricochet, upgrade to Capacitor, then ult people to death) — style source: lockbuilds 'haze 2 electric boogaloo (kifer's haze)' (Sep 11; the Oct 14 patch changed no Haze numbers): early Extra Spirit, Active Reload, Swift Striker, Slowing Hex, Surge of Power, Enduring Speed; mid Capacitor first, Burst Fire; Extra Health/Sprint Boots as its health core; late options Silencer, Lucky Shot, Unstoppable. lockbuilds SwoleBenji 'FAST FARM Roaming Ganker' (Oct 4, 'dump your ult into the enemy'): Surge of Power on Sleep Dagger, Fortitude, Enduring Speed, Bullet Lifesteal into Vampiric Burst, Unstoppable, Capacitor late. Kieran's Weakening Headshot and Fury Trance from kifer's build are left out (he dislikes Weakening Headshot). Order: same as the main Haze build (mobalytics Archon+ most-likely path, seemeta most popular 58.2% WR over 12,361 games); neither assassin source shows a level-by-level order.",
+  "Round 14: Slowing Hex note fixed (it does not stop stamina dashes, only movement abilities/items); Counterspell example changed to Grey Talon's charged arrow (Seven's stun isn't a clean parry); Armor Piercer note no longer claims it beats Plated Armor; Swift Striker (dead-end T2) now has a named sell. Order re-sourced: mobalytics Haze Archon+ most-likely path (dagger maxed first, 34.8K games 55% WR; Bullet Dance first only 2.3K, 48%).",
+  "Round 15: verified, no changes.",
+  "Round 19: rebuilt to the real assassin Haze (zerggy's builds 828282/809232): Sprint Boots → Enduring Speed, Fleetfoot, Veil Walker, Surge of Power on the dagger, Bullet Resist Shredder, Recharging Rush, Burst Fire, Capacitor, Lucky Shot, Ricochet. Dropped the items it shared with the tanky healer main (Bullet Lifesteal, Fortitude, Extra Health, Vampiric Burst, Silencer, Slowing Hex, core Unstoppable). Order now maxes Smoke Bomb second (charges for Recharging Rush). Second health step: Unstoppable (6.4k green, Zerggy 809232 'chud' box) after Lucky Shot, health 4.8k → 11.2k; it sells Fleetfoot.",
+  "Round 20: late list to 75.2k: Siphon Bullets and Silencer added (zerggy 809232 late T4s), Juggernaut moved in as the health step, Phantom Strike dropped (no same-style build uses it).",
+  "Round 23 (kit): checked Sleep Dagger (doesn't break invisibility, T2 15 Fixation stacks, 13s at T3), Smoke Bomb (2 charges at T2, so Recharging Rush refunds a smoke), items usable in smoke without breaking it (Capacitor from stealth). Ballistic Enchantment on the dagger considered as a swap for Bullet Resist Shredder and rejected: walked, it loses the 4.8k spirit spike the dagger and Surge rely on. No changes.",
+  "Round 25: ability order 3124332221113444 -> 3311234422141432 (playstyle-based; see a25/log/haze_assassin.md).",
+  "Slot locked: Juggernaut moved out of the rich box (Kieran rule: tiny-gain expensive upgrades are Slot locked)."
+ ]
+}

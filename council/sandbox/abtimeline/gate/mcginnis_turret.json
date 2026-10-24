@@ -1,0 +1,309 @@
+{
+ "id": "mcginnis_turret",
+ "hero": "McGinnis",
+ "order": "1312141332232444",
+ "status": "WARN",
+ "errors": [],
+ "warnings": [
+  {
+   "item": "Extra Charge",
+   "souls": 1600,
+   "kind": "charged",
+   "flag": "DEAD-AT-BUY",
+   "gap": 400,
+   "verdict": "delay / reorder points",
+   "grade": "CALCULATED",
+   "model_B": "DEAD-AT-BUY",
+   "if_1charge_counts": null,
+   "rule": "needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)",
+   "value": "no ability with charges now: Mini Turret 1, Medicinal Specter 0, Spectral Wall 0",
+   "enabler": "Mini Turret T2 @2000 (+400)",
+   "code": "CHARGE-BEFORE-CHARGES",
+   "depends": "F7"
+  },
+  {
+   "item": "Spirit Burn",
+   "souls": 37600,
+   "kind": "win",
+   "flag": "KIT-ONLY-BELOW",
+   "gap": null,
+   "verdict": "check by hand: abilities alone < threshold, item/proc spirit damage not counted",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "model_B": "KIT-ONLY-BELOW",
+   "if_1charge_counts": "KIT-ONLY-BELOW",
+   "rule": "500 spirit damage to one enemy within 5s (game text: 'significant spirit damage'); per-enemy cooldown",
+   "value": "all abilities in 5s ~356 (Mini Turret 57x2; Spectral Wal 187x1; Heavy Barrag 56x1), without ult 300",
+   "enabler": "",
+   "code": "KIT-ONLY-BELOW"
+  }
+ ],
+ "spikes": {
+  "gun": {
+   "4800": null,
+   "6400": null,
+   "overshoot4800": null
+  },
+  "vitality": {
+   "4800": 10400,
+   "6400": 15200,
+   "overshoot4800": 0,
+   "at_item": "Stamina Mastery"
+  },
+  "spirit": {
+   "4800": 5600,
+   "6400": 12000,
+   "overshoot4800": 0,
+   "at_item": "Compress Cooldown"
+  }
+ },
+ "timeline_A": [
+  {
+   "souls": 0,
+   "level": 1,
+   "ability": "Mini Turret",
+   "tier": "U"
+  },
+  {
+   "souls": 200,
+   "level": 2,
+   "ability": "Mini Turret",
+   "tier": "T1"
+  },
+  {
+   "souls": 500,
+   "level": 3,
+   "ability": "Spectral Wall",
+   "tier": "U"
+  },
+  {
+   "souls": 1400,
+   "level": 5,
+   "ability": "Medicinal Specter",
+   "tier": "U"
+  },
+  {
+   "souls": 2000,
+   "level": 6,
+   "ability": "Mini Turret",
+   "tier": "T2"
+  },
+  {
+   "souls": 3200,
+   "level": 8,
+   "ability": "Heavy Barrage",
+   "tier": "U"
+  },
+  {
+   "souls": 6000,
+   "level": 12,
+   "ability": "Mini Turret",
+   "tier": "T3"
+  },
+  {
+   "souls": 6800,
+   "level": 13,
+   "ability": "Spectral Wall",
+   "tier": "T1"
+  },
+  {
+   "souls": 8400,
+   "level": 15,
+   "ability": "Spectral Wall",
+   "tier": "T2"
+  },
+  {
+   "souls": 9200,
+   "level": 16,
+   "ability": "Medicinal Specter",
+   "tier": "T1"
+  },
+  {
+   "souls": 11000,
+   "level": 18,
+   "ability": "Medicinal Specter",
+   "tier": "T2"
+  },
+  {
+   "souls": 16100,
+   "level": 23,
+   "ability": "Spectral Wall",
+   "tier": "T3"
+  },
+  {
+   "souls": 24600,
+   "level": 28,
+   "ability": "Medicinal Specter",
+   "tier": "T3"
+  },
+  {
+   "souls": 26900,
+   "level": 29,
+   "ability": "Heavy Barrage",
+   "tier": "T1"
+  },
+  {
+   "souls": 32100,
+   "level": 31,
+   "ability": "Heavy Barrage",
+   "tier": "T2"
+  },
+  {
+   "souls": 48600,
+   "level": 36,
+   "ability": "Heavy Barrage",
+   "tier": "T3"
+  }
+ ],
+ "rows": [
+  {
+   "item": "Monster Rounds",
+   "souls": 800,
+   "kind": "proc",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Extra Charge",
+   "souls": 1600,
+   "kind": "charged",
+   "flag": "DEAD-AT-BUY",
+   "verdict": "delay / reorder points",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": 400,
+   "B": "DEAD-AT-BUY",
+   "F7": null
+  },
+  {
+   "item": "Mystic Expansion",
+   "souls": 4000,
+   "kind": "imbue",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Compress Cooldown",
+   "souls": 5600,
+   "kind": "imbue",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Enchanter's Emblem",
+   "souls": 7200,
+   "kind": "selfhp",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Mystic Vulnerability",
+   "souls": 13600,
+   "kind": "spiritsrc",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Rapid Recharge",
+   "souls": 17600,
+   "kind": "charged",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Mystic Regeneration",
+   "souls": 20000,
+   "kind": "spiritsrc",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Superior Cooldown",
+   "souls": 21600,
+   "kind": "cast",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Radiant Regeneration",
+   "souls": 24000,
+   "kind": "cast",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Escalating Exposure",
+   "souls": 28800,
+   "kind": "spiritsrc+stack",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Spirit Burn",
+   "souls": 37600,
+   "kind": "win",
+   "flag": "KIT-ONLY-BELOW",
+   "verdict": "check by hand: abilities alone < threshold, item/proc spirit damage not counted",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "-40% without ult, -29% with",
+   "gap": null,
+   "B": "KIT-ONLY-BELOW",
+   "F7": "KIT-ONLY-BELOW"
+  }
+ ],
+ "assumptions": {
+  "game_build": "6801 (gt repo); installed client 6819 unverified",
+  "point_model": "A (unlock currency separate, 1/2/5 AP)",
+  "charge_rule": "2+ charges (Kieran); F7 alternative reported",
+  "walk": "core boxes L-R, components consumed, sells dropped"
+ }
+}

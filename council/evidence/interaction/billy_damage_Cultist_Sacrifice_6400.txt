@@ -1,0 +1,72 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: billy_damage
+HERO: Billy
+ITEM: Cultist Sacrifice
+CHECKPOINT: buy-point at 6400 souls (state souls 6400; item cost 2400)
+VERSION: interaction-v1
+ARGS: --interactions billy_damage Cultist Sacrifice
+GENERATED: 2026-10-24T16:47:11Z
+BODY-SHA: e504474b062ab31c009669f379af1bc99f3c9f67062d2ae372519a8f545d5bb5
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 2400, unconditional, ranked): 
+VERDICT: Cultist Sacrifice delivers the most damage of the equal-soul options in every window (sustained, burst, ult) (no permanent equal-soul fire-rate item exists at this checkpoint)
+UNKNOWN_CELLS: 2
+SELECTION: build-decision | Cultist Sacrifice is bought at 6400 souls in billy_damage: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (2400) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.8, long_share=0.1, W_sus=10.0, W_burst=3.0; reload 2.9 s (VERIFIED GAME MECHANIC m_reloadDuration (weapon vdata; Wraith value equals its sandbox measurement))
+STATE: owned ['Melee Lifesteal', 'Grit', 'Stalker', 'Cultist Sacrifice'] | tiers Bashdown=T2(melee-scaled) Rising Ram=T1(spirit) Blasted=T2(gun-mode) Chain Gang=U(spirit) | weapon invest bonus 46% | spirit 12
+
+## INTERACTION MATRIX (item effect x kit component)
+- damage vs NPCs (NonPlayerBonusWeaponPower=17.7778)
+    normal shooting                              DOES NOT WORK (vs heroes)  [CALCULATED] NPC-only bonus; farming value priced in --strategy
+    1=Bashdown T2 [melee-scaled]                 DOES NOT WORK              [CALCULATED] damage ['MeleeDamage', 'HeavyMeleeDamage'] scales with melee damage
+    2=Rising Ram T1 [spirit]                     DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    3=Blasted T2 [gun-mode]                      DOES NOT WORK              [CALCULATED] no matching mechanic
+    4=Chain Gang U (ULT) [spirit]                DOES NOT WORK              [CALCULATED] damage ['Damage', 'DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+- soul income (BonusSoulsPct=170)
+    normal shooting                              n/a                        [CALCULATED] soul income: ECONOMY section
+    1=Bashdown T2 [melee-scaled]                 n/a                        [CALCULATED] no interaction with this ability
+    2=Rising Ram T1 [spirit]                     n/a                        [CALCULATED] no interaction with this ability
+    3=Blasted T2 [gun-mode]                      n/a                        [CALCULATED] no interaction with this ability
+    4=Chain Gang U (ULT) [spirit]                n/a                        [CALCULATED] no interaction with this ability
+- defence (not damage) (BonusHealth=29.6296)
+    normal shooting                              n/a                        [CALCULATED] defensive stat; valued by --strategy (survival), not damage
+    1=Bashdown T2 [melee-scaled]                 n/a                        [CALCULATED] defensive stat
+    2=Rising Ram T1 [spirit]                     n/a                        [CALCULATED] defensive stat
+    3=Blasted T2 [gun-mode]                      n/a                        [CALCULATED] defensive stat
+    4=Chain Gang U (ULT) [spirit]                n/a                        [CALCULATED] defensive stat
+- weapon damage % (BaseAttackDamagePercent=5.92593)
+    normal shooting                              WORKS                      [CALCULATED] multiplies every bullet (weapon % pool now 46%: +5.92593 adds 4.1% relative)
+    1=Bashdown T2 [melee-scaled]                 UNKNOWN                    [UNKNOWN] damage ['MeleeDamage', 'HeavyMeleeDamage'] scales with melee damage; whether weapon-% bonuses also apply is not in data
+    2=Rising Ram T1 [spirit]                     DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    3=Blasted T2 [gun-mode]                      WORKS                      [CALCULATED] ability fires the weapon (game text: 'Passive: Melee hits restore ammo and inflict wrecked on the ...'); bullets take weapon bonuses
+    4=Chain Gang U (ULT) [spirit]                DOES NOT WORK              [CALCULATED] damage ['Damage', 'DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    melee (light/heavy)                          UNKNOWN                    [UNKNOWN] melee damage is ELightMeleeDamage/EHeavyMeleeDamage; whether weapon-% (incl. range-conditional) bonuses apply to melee is not in data
+    other weapon % items                         WORKS (diminishing)        [CALCULATED] additive pool 46% (incl. invest bonus): relative gain 4.1%
+- ability range/radius (TechRangeMultiplier=12)
+    normal shooting                              n/a                        [CALCULATED] ability range/radius only
+    1=Bashdown T2 [melee-scaled]                 WORKS                      [CALCULATED] scales AbilityCastRange=4m, WaveEndRadius=8.0m; value in IMBUE/RANGE section
+    2=Rising Ram T1 [spirit]                     DOES NOT WORK              [CALCULATED] ability has no range/radius property (no ETechRange/ETechRadius stat)
+    3=Blasted T2 [gun-mode]                      DOES NOT WORK              [CALCULATED] ability has no range/radius property (no ETechRange/ETechRadius stat)
+    4=Chain Gang U (ULT) [spirit]                WORKS                      [CALCULATED] scales AbilityCastRange=12.0m; value in IMBUE/RANGE section
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |       725              |       504              |       285              | 0
+Cultist Sacrifice            |        827 (+14..+14%) |        554 (+10..+10%) |          285 (+0..+0%) | 0
+  candidate detail (reading 1): sustained bullets 61, gun 421, stacks 0, procs 0, spirit 63 | ult: Chain Gang damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Cultist Sacrifice
+  burst: rank (reading 1) Cultist Sacrifice
+  ult: rank (reading 1) Cultist Sacrifice
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (175s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  none
+
+## NOT DETERMINED FROM DATA
+  - weapon damage % (BaseAttackDamagePercent=5.92593): 1=Bashdown T2 [melee-scaled]: damage ['MeleeDamage', 'HeavyMeleeDamage'] scales with melee damage; whether weapon-% bonuses also apply is not in data
+  - weapon damage % (BaseAttackDamagePercent=5.92593): melee (light/heavy): melee damage is ELightMeleeDamage/EHeavyMeleeDamage; whether weapon-% (incl. range-conditional) bonuses apply to melee is not in data
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

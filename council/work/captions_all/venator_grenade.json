@@ -1,0 +1,2848 @@
+{
+ "schema": 1,
+ "id": "venator_grenade",
+ "hero": "Venator",
+ "name": "Rizuhble's Holy Hand Grenade",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, once you're out of slots.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-9,600 (levels 1-16). Abilities gained (both point models agree): Consecrating Grenade T3. 4.8k spikes: weapon 4.8k at Cultist Sacrifice, vitality 4.8k at Fortitude. Ultimate (Ira Domini) is available from Cultist Sacrifice.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "venator_grenade:6:phase_range:2197",
+    "venator_grenade:6:phase_abilities:2198",
+    "venator_grenade:6:phase_spikes:2206",
+    "venator_grenade:6:phase_ult:2207"
+   ],
+   "items": [
+    {
+     "name": "High-Velocity Rounds",
+     "imbue": null,
+     "caption": "Temporary, sold when you buy Crippling Headshot later.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 5600 souls (~5.6 min), 4 purchases",
+     "claim_ids": [
+      "venator_grenade:0:temporary_sold:2183"
+     ],
+     "lint": [],
+     "legacy_note": "Sell it for Crippling Headshot later.",
+     "temporary": true,
+     "verify": [
+      [
+       "venator_grenade:0:temporary_sold:2183",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Close Quarters",
+     "imbue": null,
+     "caption": "Temporary, sold when you buy Silencer later.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 4800 souls (~4.8 min), 3 purchases",
+     "claim_ids": [
+      "venator_grenade:1:temporary_sold:2185"
+     ],
+     "lint": [],
+     "legacy_note": "Sell it for Silencer later.",
+     "temporary": true,
+     "verify": [
+      [
+       "venator_grenade:1:temporary_sold:2185",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Monster Rounds",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 4,000 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 4000 souls (~4.0 min), 2 purchases",
+     "claim_ids": [
+      "venator_grenade:2:spike_progress:2186"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "venator_grenade:2:spike_progress:2186",
+       true,
+       "2400"
+      ]
+     ]
+    },
+    {
+     "name": "Battle Vest",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Fortitude, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Cultist Sacrifice",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (2,400 to 4,800 invested): bonus 15 to 46% weapon damage. Upgrade of Monster Rounds (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "venator_grenade:4:spike_complete:2189",
+      "venator_grenade:4:upgrade_of:2190"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "venator_grenade:4:spike_complete:2189",
+       true,
+       "inventory weapon: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "venator_grenade:4:upgrade_of:2190",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Extra Health",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Fortitude completes 2,400 souls on.",
+     "cls": "b",
+     "why": "imminent: Fortitude completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "venator_grenade:5:spike_progress:2192"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "venator_grenade:5:spike_progress:2192",
+       true,
+       "2400"
+      ]
+     ]
+    },
+    {
+     "name": "Fortitude",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus. Upgrade of Extra Health (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "venator_grenade:6:spike_complete:2194",
+      "venator_grenade:6:upgrade_of:2195"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "venator_grenade:6:spike_complete:2194",
+       true,
+       "inventory vitality: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "venator_grenade:6:upgrade_of:2195",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 9,600-30,400 (levels 16-30). Abilities gained (both point models agree): Ira Domini T3. Your biggest single spirit hit (Hex-Lined Snap Trap, damage) grows from 116 to 223.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "venator_grenade:14:phase_range:2224",
+    "venator_grenade:14:phase_abilities:2225",
+    "venator_grenade:14:phase_power:2226"
+   ],
+   "items": [
+    {
+     "name": "Berserker",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 46 to 62% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Hollow Point",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 8,000 to 11,200 invested: bonus 62 to 74% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Bullet Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Recharging Rush",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: swap_candidate)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Charge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Consecrating Grenade (1 to 2), Hex-Lined Snap Trap (2 to 3).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "venator_grenade:11:charges:2216"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "venator_grenade:11:charges:2216",
+       true,
+       "[1, 3]"
+      ]
+     ]
+    },
+    {
+     "name": "Ballistic Enchantment",
+     "imbue": "1",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 12,800 to 16,000 invested: bonus 74 to 86% weapon damage. | Imbued on Consecrating Grenade.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Rapid Recharge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Consecrating Grenade (2 to 3), Hex-Lined Snap Trap (3 to 4). Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "venator_grenade:13:charges:2221",
+      "venator_grenade:13:upgrade_of:2220"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "venator_grenade:13:charges:2221",
+       true,
+       "[1, 3]"
+      ],
+      [
+       "venator_grenade:13:upgrade_of:2220",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Vampiric Burst",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 6,400 to 11,200 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 30,400-49,600 (levels 30-36). Abilities gained (both point models agree): Gutshot T3, Hex-Lined Snap Trap T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "venator_grenade:17:phase_range:2238",
+    "venator_grenade:17:phase_abilities:2239"
+   ],
+   "items": [
+    {
+     "name": "Silencer",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Close Quarters for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Inhibitor",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Crippling Headshot",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 21,600 to 27,200 invested: bonus 86 to 100% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell High-Velocity Rounds for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Fortitude? Buy what is killing you, cheapest first. Not dying? Skip. Sell Battle Vest.",
+   "desc": "Dying after Fortitude? Buy what is killing you, cheapest first. Not dying? Skip. Sell Battle Vest.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "venator_grenade:18:defence_spirit:2242"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "venator_grenade:18:defence_spirit:2242",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "venator_grenade:18:defence_bullet:2243"
+     ],
+     "lint": [],
+     "legacy_note": "Their carry dives you while you throw.",
+     "temporary": false,
+     "verify": [
+      [
+       "venator_grenade:18:defence_bullet:2243",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "venator_grenade:18:defence_parry:2244"
+     ],
+     "lint": [],
+     "legacy_note": "A big ult or stun you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "venator_grenade:18:defence_parry:2244",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "venator_grenade:18:defence_purge:2245"
+     ],
+     "lint": [],
+     "legacy_note": "Hexes and slows keep landing on you.",
+     "temporary": false,
+     "verify": [
+      [
+       "venator_grenade:18:defence_purge:2245",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Warp Stone",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They dive you and you've got no way out.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They chain stuns on you every time you go in.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Ricochet",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 27,200 to 32,000 invested: bonus 100 to 115% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Recharging Rush for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Siphon Bullets",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 17,600 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Cultist Sacrifice for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Glass Cannon",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 27,200 to 30,400 invested: bonus 100 to 115% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Your grenade, Gutshot and ult all scale with weapon damage. Sell Hollow Point for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Colossus",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Fortitude for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "venator_grenade:18:defence_barrier:2253"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "venator_grenade:18:defence_barrier:2253",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "venator_grenade:18:temporary_sold:2181": {
+   "id": "venator_grenade:18:temporary_sold:2181",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, once you're out of slots.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 18,
+    "item": "Extra Regen",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it once you're out of slots."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:0:spike_progress:2182": {
+   "id": "venator_grenade:0:spike_progress:2182",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 5,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 5600,
+    "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    5600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "venator_grenade:0:temporary_sold:2183": {
+   "id": "venator_grenade:0:temporary_sold:2183",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Crippling Headshot later.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 34,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "High-Velocity Rounds",
+    "buyer": "Crippling Headshot"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:1:spike_progress:2184": {
+   "id": "venator_grenade:1:spike_progress:2184",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 4,800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Close Quarters",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4800,
+    "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    4800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "venator_grenade:1:temporary_sold:2185": {
+   "id": "venator_grenade:1:temporary_sold:2185",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Silencer later.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 34,
+   "point": {
+    "idx": 1,
+    "item": "Close Quarters",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Close Quarters",
+    "buyer": "Silencer"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:2:spike_progress:2186": {
+   "id": "venator_grenade:2:spike_progress:2186",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Monster Rounds",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "venator_grenade:2:component_for:2187": {
+   "id": "venator_grenade:2:component_for:2187",
+   "kind": "component_for",
+   "phrase": "From Cultist Sacrifice: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Monster Rounds",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 4000,
+    "event": "Cultist Sacrifice"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Cultist Sacrifice"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:3:spike_progress:2188": {
+   "id": "venator_grenade:3:spike_progress:2188",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Battle Vest",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "venator_grenade:4:spike_complete:2189": {
+   "id": "venator_grenade:4:spike_complete:2189",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (2,400 to 4,800 invested): bonus 15 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 4,
+    "item": "Cultist Sacrifice",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "venator_grenade:4:upgrade_of:2190": {
+   "id": "venator_grenade:4:upgrade_of:2190",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Monster Rounds (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 4,
+    "item": "Cultist Sacrifice",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Monster Rounds"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:4:swap_candidate:2191": {
+   "id": "venator_grenade:4:swap_candidate:2191",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Siphon Bullets later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 4,
+    "item": "Cultist Sacrifice",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Cultist Sacrifice",
+    "buyer": "Siphon Bullets"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:5:spike_progress:2192": {
+   "id": "venator_grenade:5:spike_progress:2192",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Fortitude completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Extra Health",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Fortitude completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "venator_grenade:5:component_for:2193": {
+   "id": "venator_grenade:5:component_for:2193",
+   "kind": "component_for",
+   "phrase": "From Fortitude: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Extra Health",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Fortitude"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Fortitude"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:6:spike_complete:2194": {
+   "id": "venator_grenade:6:spike_complete:2194",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 6,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "venator_grenade:6:upgrade_of:2195": {
+   "id": "venator_grenade:6:upgrade_of:2195",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Health (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 6,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Health"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:6:swap_candidate:2196": {
+   "id": "venator_grenade:6:swap_candidate:2196",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Colossus later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 6,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Fortitude",
+    "buyer": "Colossus"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:6:phase_range:2197": {
+   "id": "venator_grenade:6:phase_range:2197",
+   "kind": "phase_range",
+   "phrase": "Souls 0-9,600 (levels 1-16).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Fortitude",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "9,600",
+    "1",
+    "16"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:6:phase_abilities:2198": {
+   "id": "venator_grenade:6:phase_abilities:2198",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Consecrating Grenade T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Fortitude",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:6:phase_spikes:2206": {
+   "id": "venator_grenade:6:phase_spikes:2206",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Cultist Sacrifice, vitality 4.8k at Fortitude.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Fortitude",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:6:phase_ult:2207": {
+   "id": "venator_grenade:6:phase_ult:2207",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Ira Domini) is available from Cultist Sacrifice.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Fortitude",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Fortitude",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:7:invest_step:2208": {
+   "id": "venator_grenade:7:invest_step:2208",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 46 to 62% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 7,
+    "item": "Berserker",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "8000",
+    "46.0",
+    "62.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 6400
+  },
+  "venator_grenade:8:invest_step:2209": {
+   "id": "venator_grenade:8:invest_step:2209",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 8,000 to 11,200 invested: bonus 62 to 74% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 8,
+    "item": "Hollow Point",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "11200",
+    "62.0",
+    "74.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 11200
+  },
+  "venator_grenade:8:swap_candidate:2210": {
+   "id": "venator_grenade:8:swap_candidate:2210",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Glass Cannon later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 8,
+    "item": "Hollow Point",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Hollow Point",
+    "buyer": "Glass Cannon"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:9:invest_step:2211": {
+   "id": "venator_grenade:9:invest_step:2211",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Bullet Lifesteal",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "venator_grenade:9:component_for:2212": {
+   "id": "venator_grenade:9:component_for:2212",
+   "kind": "component_for",
+   "phrase": "From Vampiric Burst: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Bullet Lifesteal",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12800,
+    "event": "Vampiric Burst"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Vampiric Burst"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:10:swap_candidate:2213": {
+   "id": "venator_grenade:10:swap_candidate:2213",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Ricochet later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 10,
+    "item": "Recharging Rush",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Recharging Rush",
+    "buyer": "Ricochet"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:11:spike_progress:2214": {
+   "id": "venator_grenade:11:spike_progress:2214",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 11,
+    "item": "Extra Charge",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "venator_grenade:11:component_for:2215": {
+   "id": "venator_grenade:11:component_for:2215",
+   "kind": "component_for",
+   "phrase": "From Rapid Recharge: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Extra Charge",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Rapid Recharge"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Rapid Recharge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:11:charges:2216": {
+   "id": "venator_grenade:11:charges:2216",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Consecrating Grenade (1 to 2), Hex-Lined Snap Trap (2 to 3).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_extra_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_priest_flashbang",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_priest_beartrap"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 11,
+    "item": "Extra Charge",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1,
+     3
+    ]
+   },
+   "numbers": [
+    "1",
+    "1",
+    "2",
+    "2",
+    "3"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "venator_grenade:12:invest_step:2217": {
+   "id": "venator_grenade:12:invest_step:2217",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 12,800 to 16,000 invested: bonus 74 to 86% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Ballistic Enchantment",
+    "souls": 23200,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "16000",
+    "74.0",
+    "86.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 16000
+  },
+  "venator_grenade:12:imbue_generic:2218": {
+   "id": "venator_grenade:12:imbue_generic:2218",
+   "kind": "imbue_generic",
+   "phrase": "Imbued on Consecrating Grenade.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_bulletshredimbue",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_priest_flashbang"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 12,
+    "item": "Ballistic Enchantment",
+    "souls": 23200,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 1
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "venator_grenade:13:spike_progress:2219": {
+   "id": "venator_grenade:13:spike_progress:2219",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 13,
+    "item": "Rapid Recharge",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "venator_grenade:13:upgrade_of:2220": {
+   "id": "venator_grenade:13:upgrade_of:2220",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Rapid Recharge",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Charge"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:13:charges:2221": {
+   "id": "venator_grenade:13:charges:2221",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Consecrating Grenade (2 to 3), Hex-Lined Snap Trap (3 to 4).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_rapid_recharge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_priest_flashbang",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_priest_beartrap"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 13,
+    "item": "Rapid Recharge",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1,
+     3
+    ]
+   },
+   "numbers": [
+    "1",
+    "2",
+    "3",
+    "3",
+    "4"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "venator_grenade:14:invest_step:2222": {
+   "id": "venator_grenade:14:invest_step:2222",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 11,200 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Vampiric Burst",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "11200",
+    "42.0",
+    "50.0",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "venator_grenade:14:upgrade_of:2223": {
+   "id": "venator_grenade:14:upgrade_of:2223",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Bullet Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 14,
+    "item": "Vampiric Burst",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Bullet Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "venator_grenade:14:phase_range:2224": {
+   "id": "venator_grenade:14:phase_range:2224",
+   "kind": "phase_range",
+   "phrase": "Souls 9,600-30,400 (levels 16-30).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Vampiric Burst",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Vampiric Burst",
+    "keys": []
+   },
+   "numbers": [
+    "9,600",
+    "30,400",
+    "16",
+    "30"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:14:phase_abilities:2225": {
+   "id": "venator_grenade:14:phase_abilities:2225",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Ira Domini T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Vampiric Burst",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Vampiric Burst",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:14:phase_power:2226": {
+   "id": "venator_grenade:14:phase_power:2226",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Hex-Lined Snap Trap, damage) grows from 116 to 223.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_priest_beartrap",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Vampiric Burst",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Vampiric Burst",
+    "keys": []
+   },
+   "numbers": [
+    "116",
+    "223"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:15:sell_swap:2234": {
+   "id": "venator_grenade:15:sell_swap:2234",
+   "kind": "sell_swap",
+   "phrase": "Replaces Close Quarters: sell it when you buy this.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 15,
+    "item": "Silencer",
+    "souls": 36800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Close Quarters",
+    "slots_full": false
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Close Quarters"
+  },
+  "venator_grenade:16:invest_step:2235": {
+   "id": "venator_grenade:16:invest_step:2235",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Inhibitor",
+    "souls": 43200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "17600",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "venator_grenade:17:invest_step:2236": {
+   "id": "venator_grenade:17:invest_step:2236",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 21,600 to 27,200 invested: bonus 86 to 100% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Crippling Headshot",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 22400
+   },
+   "numbers": [
+    "21600",
+    "27200",
+    "86.0",
+    "100.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 22400
+  },
+  "venator_grenade:17:sell_swap:2237": {
+   "id": "venator_grenade:17:sell_swap:2237",
+   "kind": "sell_swap",
+   "phrase": "Replaces High-Velocity Rounds: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 17,
+    "item": "Crippling Headshot",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "High-Velocity Rounds",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "High-Velocity Rounds"
+  },
+  "venator_grenade:17:phase_range:2238": {
+   "id": "venator_grenade:17:phase_range:2238",
+   "kind": "phase_range",
+   "phrase": "Souls 30,400-49,600 (levels 30-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 17,
+    "item": "Crippling Headshot",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Crippling Headshot",
+    "keys": []
+   },
+   "numbers": [
+    "30,400",
+    "49,600",
+    "30",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:17:phase_abilities:2239": {
+   "id": "venator_grenade:17:phase_abilities:2239",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Gutshot T3, Hex-Lined Snap Trap T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 17,
+    "item": "Crippling Headshot",
+    "souls": 49600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Crippling Headshot",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:18:defence_spirit:2242": {
+   "id": "venator_grenade:18:defence_spirit:2242",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Spirit Resilience",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:18:defence_bullet:2243": {
+   "id": "venator_grenade:18:defence_bullet:2243",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Metal Skin",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their carry dives you while you throw."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:18:defence_parry:2244": {
+   "id": "venator_grenade:18:defence_parry:2244",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Counterspell",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ult or stun you can see coming."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:18:defence_purge:2245": {
+   "id": "venator_grenade:18:defence_purge:2245",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Dispel Magic",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Hexes and slows keep landing on you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "venator_grenade:18:invest_step:2246": {
+   "id": "venator_grenade:18:invest_step:2246",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 27,200 to 32,000 invested: bonus 100 to 115% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Ricochet",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Recharging Rush for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 28800
+   },
+   "numbers": [
+    "27200",
+    "32000",
+    "100.0",
+    "115.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 28800
+  },
+  "venator_grenade:18:sell_swap:2247": {
+   "id": "venator_grenade:18:sell_swap:2247",
+   "kind": "sell_swap",
+   "phrase": "Replaces Recharging Rush: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Ricochet",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Recharging Rush for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Recharging Rush",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Recharging Rush"
+  },
+  "venator_grenade:18:invest_step:2248": {
+   "id": "venator_grenade:18:invest_step:2248",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 17,600 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Siphon Bullets",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Cultist Sacrifice for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 22400
+   },
+   "numbers": [
+    "17600",
+    "24000",
+    "54.0",
+    "60.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 22400
+  },
+  "venator_grenade:18:sell_swap:2249": {
+   "id": "venator_grenade:18:sell_swap:2249",
+   "kind": "sell_swap",
+   "phrase": "Replaces Cultist Sacrifice: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Siphon Bullets",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Cultist Sacrifice for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Cultist Sacrifice",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Cultist Sacrifice"
+  },
+  "venator_grenade:18:invest_step:2250": {
+   "id": "venator_grenade:18:invest_step:2250",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 27,200 to 30,400 invested: bonus 100 to 115% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_priest m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Glass Cannon",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Your grenade, Gutshot and ult all scale with weapon damage. Sell Hollow Point for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 28800
+   },
+   "numbers": [
+    "27200",
+    "30400",
+    "100.0",
+    "115.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 28800
+  },
+  "venator_grenade:18:sell_swap:2251": {
+   "id": "venator_grenade:18:sell_swap:2251",
+   "kind": "sell_swap",
+   "phrase": "Replaces Hollow Point: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Glass Cannon",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Your grenade, Gutshot and ult all scale with weapon damage. Sell Hollow Point for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Hollow Point",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Hollow Point"
+  },
+  "venator_grenade:18:sell_swap:2252": {
+   "id": "venator_grenade:18:sell_swap:2252",
+   "kind": "sell_swap",
+   "phrase": "Replaces Fortitude: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Colossus",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Fortitude for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Fortitude",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Fortitude"
+  },
+  "venator_grenade:18:defence_barrier:2253": {
+   "id": "venator_grenade:18:defence_barrier:2253",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Divine Barrier",
+    "souls": 49600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  }
+ },
+ "review": [
+  {
+   "build": "venator_grenade",
+   "item": "High-Velocity Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 5600 souls (~5.6 min), 4 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "venator_grenade:0:spike_progress:2182",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 5,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 5600,
+      "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Close Quarters",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 4800 souls (~4.8 min), 3 purchases",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "venator_grenade:1:spike_progress:2184",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 4,800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4800,
+      "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Monster Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Cultist Sacrifice completes 4.8k weapon in 4000 souls (~4.0 min), 2 purchases",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "venator_grenade:2:spike_progress:2186",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Cultist Sacrifice completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Cultist Sacrifice completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "venator_grenade:2:component_for:2187",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Cultist Sacrifice: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 4000,
+      "event": "Cultist Sacrifice"
+     }
+    }
+   ]
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Battle Vest",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Fortitude, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 4000,
+   "unpublished": []
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Extra Health",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Fortitude completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 7200,
+   "unpublished": [
+    {
+     "id": "venator_grenade:5:spike_progress:2192",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Fortitude completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Fortitude completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "venator_grenade:5:component_for:2193",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Fortitude: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Fortitude"
+     }
+    }
+   ]
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Recharging Rush",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: swap_candidate)",
+   "souls": 19200,
+   "unpublished": []
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Silencer",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 36800.0,
+   "unpublished": []
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit."
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their carry dives you while you throw."
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ult or stun you can see coming."
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Hexes and slows keep landing on you."
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Warp Stone",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 49600.0,
+   "unpublished": []
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Warp Stone",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They dive you and you've got no way out."
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 49600.0,
+   "unpublished": []
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They chain stuns on you every time you go in."
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Glass Cannon",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Your grenade, Gutshot and ult all scale with weapon damage. Sell Hollow Point for this."
+  },
+  {
+   "build": "venator_grenade",
+   "item": "Colossus",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 49600.0,
+   "unpublished": []
+  }
+ ],
+ "stats": {
+  "g": 11,
+  "b": 4,
+  "c": 1,
+  "a": 9,
+  "d": 5
+ }
+}

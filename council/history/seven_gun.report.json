@@ -1,0 +1,54 @@
+{
+ "overlap": {
+  "changed": [
+   "  overlap Enchanter's Emblem (added): core_end=ADDS-VALUE",
+   "  overlap Spirit Lifesteal (moved earlier): no overlap-candidate",
+   "  overlap Sprint Boots (moved earlier): no overlap-candidate",
+   "  overlap Enduring Speed (moved earlier): no overlap-candidate",
+   "  overlap Mystic Vulnerability (moved earlier): at_buy=ADDS-VALUE",
+   "  overlap Unstoppable (moved earlier): no overlap-candidate",
+   "  overlap Superior Duration (moved optional->core): at_buy=ADDS-VALUE; core_end=ADDS-VALUE",
+   "  overlap Witchmail (added (optional)): core_end=ADDS-VALUE"
+  ],
+  "unresolved": [
+   "overlap-candidate Spiritual Overflow [at_buy=REDUNDANT-LIKELY(6.8% whole item); core_end=REDUNDANT-LIKELY(6.8% whole item)]",
+   "overlap-candidate Lightning Scroll [core_end=UNKNOWN]"
+  ]
+ },
+ "unresolved": [
+  "bc: CORE_NOTE_NONEMPTY seven_gun: Unstoppable: Pop it before you ult so nobody cancels the storm."
+ ],
+ "proposal": "seven_gun",
+ "id": "seven_gun",
+ "diff": [
+  "added Early · L-R|Enchanter's Emblem, Early · L-R|Spirit Lifesteal, Mid · L-R|Escalating Exposure, Late · L-R|Superior Duration, I'm rich as fuck|Witchmail",
+  "removed Early · L-R|Rapid Rounds, Early · L-R|Swift Striker, Mid · L-R|Spirit Lifesteal, Late · L-R|Escalating Exposure, I'm rich as fuck|Superior Duration",
+  "ability order 1331234324141224 -> 1133234324141224"
+ ],
+ "block": [],
+ "warn": [
+  "WAIVED bc: MAIN_4.8K_LATE seven_gun: spirit 4.8k at 14400 because: Gun is the main colour (gun 4.8k at 5.6k, tg weapon first); the checker picks spirit by late T4 cost. Spirit 4.8k is delayed to 14.4k on purpose so the health 4.8k lands at 12.0k (Kieran: damage spike, then health spike); computed path comparison in the evidence file."
+ ],
+ "fixed": [
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD seven_gun: Swift Striker (T2) @4800",
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE seven_gun: Spiritual Overflow @33600 has no \"Threshold:\" changes line naming it",
+  "bc: FRESH_T2_LATE seven_gun: Mystic Vulnerability @20800",
+  "bc: RICH_NOT_T4 seven_gun: Superior Duration T3",
+  "bc: OVERSHOOT_GUN_BEFORE_HEALTH seven_gun: gun 19200 at health 4.8k @40000",
+  "bc: HEALTH_4.8K_AFTER_16K seven_gun: at 40000",
+  "bc: OVERSHOOT_SPIRIT_BEFORE_HEALTH seven_gun: spirit 12800 when health first hits 4.8k at 40000"
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY seven_gun: Unstoppable: Pop it before you ult so nobody cancels the storm."
+ ],
+ "newV": [
+  "bc: MAIN_4.8K_LATE seven_gun: spirit 4.8k at 14400",
+  "bc: RT_ITEMS seven_gun: Early · L-R: [[\"Monster Rounds\",null],[\"High-Velocity Rounds\",null],[\"Opening Rounds\",null],[\"Extra Spirit\",null],[\"Rapid Rounds\",null],[\"Swift Striker\",null],[\"Cultist Sacrifice\",null],[\"Duration Extender\",3]] vs [[\"Monster Rounds\",null],[\"High-Velocity Rounds\",null],[\"Opening Rounds\",null],[\"Extra Spirit\",null],[\"Cultist Sacrifice\",null],[\"Enchanter's Emblem\",null],[\"Duration Extender\",3],[\"Spirit Lifesteal\",null]]",
+  "bc: RT_ITEMS seven_gun: Mid · L-R: [[\"Surge of Power\",3],[\"Spirit Lifesteal\",null],[\"Sprint Boots\",null],[\"Enduring Speed\",null],[\"Improved Spirit\",null],[\"Tesla Bullets\",null],[\"Mystic Vulnerability\",null],[\"Toxic Bullets\",null]] vs [[\"Sprint Boots\",null],[\"Enduring Speed\",null],[\"Surge of Power\",3],[\"Improved Spirit\",null],[\"Mystic Vulnerability\",null],[\"Tesla Bullets\",null],[\"Toxic Bullets\",null],[\"Escalating Exposure\",null]]",
+  "bc: RT_ITEMS seven_gun: Late · L-R: [[\"Escalating Exposure\",null],[\"Spiritual Overflow\",null],[\"Unstoppable\",null],[\"Boundless Spirit\",null]] vs [[\"Unstoppable\",null],[\"Superior Duration\",null],[\"Spiritual Overflow\",null],[\"Boundless Spirit\",null]]",
+  "bc: RT_ITEMS seven_gun: I'm rich as fuck: [[\"Superior Duration\",null],[\"Spirit Burn\",null],[\"Ricochet\",null],[\"Lightning Scroll\",null],[\"Divine Barrier\",null]] vs [[\"Spirit Burn\",null],[\"Ricochet\",null],[\"Witchmail\",null],[\"Lightning Scroll\",null],[\"Divine Barrier\",null]]",
+  "bc: RT_ORDER seven_gun: 1331234324141224 vs 1133234324141224"
+ ],
+ "when": "2026-10-24 11:45",
+ "line": "[2026-10-24 11:45] TRIAGE seven_gun (vs CLEANBASE data_pre_spikefix): the silent sevengun pass (Enchanter's Emblem out, Rapid Rounds -> Swift Striker in, Spiritual Overflow before Unstoppable) is a MISTAKE as done: health 4.8k 14.4k -> 40.0k, gun 4.8k 5.6k -> 7.2k, Swift Striker a dead-end T2 with no sell. Its fire-rate idea is real (Power Surge procs once per burst) but in a slot it only adds +2..+5% gun+Power Surge damage for -7..-10% storm and less HP (hypothesis seven_gun_N2), so it stays out. Health 4.8k moved before the spirit spike (12.0k; Kieran priority damage spike -> health spike), Superior Duration moved from the rich box (T3, rule violation) into Late as the Duration Extender upgrade, Mystic Vulnerability before Tesla Bullets (no fresh T2 after 20k), ability order 1133 (see seven). Threshold: Spiritual Overflow charges from shooting heroes; build-up 1.08 per shot, decay after 2 s, unit unverified (8-24 s of hero hits), kept from the same-style public build. CALCULATED, unvalidated. | added Early · L-R|Enchanter's Emblem, Early · L-R|Spirit Lifesteal, Mid · L-R|Escalating Exposure, Late · L-R|Superior Duration, I'm rich as fuck|Witchmail; removed Early · L-R|Rapid Rounds, Early · L-R|Swift Striker, Mid · L-R|Spirit Lifesteal, Late · L-R|Escalating Exposure, I'm rich as fuck|Superior Duration; ability order 1331234324141224 -> 1133234324141224 | evidence: calc:council/triage/seven_calc/seven_gun_N_compare.txt, calc:council/triage/seven_calc/seven_gun_paths_hero.txt, calc:council/triage/seven_calc/early_orders.txt, calc:council/triage/seven_gun.md | gate: FAIL"
+}

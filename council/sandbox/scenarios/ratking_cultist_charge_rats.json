@@ -1,0 +1,97 @@
+{
+ "id": "ratking_cultist_charge_rats",
+ "title": "F7 probe: does the Cultist buff (+1 ability charges) add a charge to Rat Swarm at 1 base charge?",
+ "hero": "Rat King",
+ "playstyle": "Grenade Rat King",
+ "builds": [
+  "ratking_grenade",
+  "ratking"
+ ],
+ "question": "Rat Swarm has AbilityCharges 1 at unlock (2 at T1). Cultist Sacrifice buff carries MODIFIER_VALUE_BONUS_ABILITY_CHARGES 1, the same modifier as Extra Charge. Does a 1-charge ability count as charged (F7)?",
+ "hypothesis": "If 1-charge counts: Rat Swarm shows 2 charges at unlock with the buff (3 at T1). If not: 1 at unlock, 3 at T1 only if 2+ counts. Answers F7 for every build with 1-charge abilities.",
+ "arms": [
+  {
+   "name": "A_unlock_no_buff",
+   "items": [],
+   "ability_order": "1131234133444222",
+   "imbues": {},
+   "souls": "Rat Swarm unlocked (bits 1)",
+   "notes": ""
+  },
+  {
+   "name": "B_unlock_buff",
+   "items": [
+    "Cultist Sacrifice"
+   ],
+   "ability_order": "1131234133444222",
+   "imbues": {},
+   "souls": "bits 1, Cultist used",
+   "notes": ""
+  },
+  {
+   "name": "C_T1_buff",
+   "items": [
+    "Cultist Sacrifice"
+   ],
+   "ability_order": "1131234133444222",
+   "imbues": {},
+   "souls": "bits 3, Cultist used",
+   "notes": ""
+  },
+  {
+   "name": "D_unlock_extra_charge",
+   "items": [
+    "Extra Charge"
+   ],
+   "ability_order": "1131234133444222",
+   "imbues": {},
+   "souls": "bits 1",
+   "notes": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "level 10",
+  "souls": "n/a",
+  "position": "any",
+  "enemies": [
+   {
+    "hero": "target dummy or idle bot",
+    "count": 1,
+    "items": [],
+    "behaviour": "stationary",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "charges",
+   "buffs"
+  ]
+ },
+ "controls": [
+  "tier logged before each arm"
+ ],
+ "procedure": [
+  "set tier",
+  "give items / consume camp",
+  "read Rat Swarm charge counter"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "rat_charges",
+   "unit": "count",
+   "how": "charge counter",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "rat_charges",
+  "min_effect_pct": 1,
+  "min_trials": 5,
+  "rule": "B or D showing 2 = 1-charge counts (F7 resolved: 1 counts); 1 = only 2+ counts. Recompute every F7-DEPENDENT row in council/sandbox/abtimeline."
+ }
+}

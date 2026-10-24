@@ -1,0 +1,40 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: celeste
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:15Z
+BODY-SHA: 544dd300f6ace85a35a75a358fad5f6ed1e568ba382e270434c927b9ed036d91
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Early · L-R              -> main path (sequential): High-Velocity Rounds, Opening Rounds, Extra Regen, Mystic Regeneration, Mystic Expansion, Radiant Regeneration, Mystic Burst, Healing Booster
+  Mid · L-R                -> main path (sequential): Grit, Spirit Shielding, Enchanter's Emblem, Torment Pulse, Greater Expansion, Spirit Lifesteal, Suppressor, Mystic Vulnerability
+  Late · L-R               -> main path (sequential): Tankbuster, Superior Cooldown, Witchmail, Escalating Exposure, Spiritual Overflow
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Ethereal Shift, Metal Skin, Plated Armor, Dispel Magic, Unstoppable, Counterspell
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Boundless Spirit, Divine Barrier, Refresher
+  Slot locked              -> optional upgrade (branch): Healing Tempo, Transcendent Cooldown
+
+## SALE CHECKLIST (computed)
+- Late · L-R (main path): buy Witchmail, sell Opening Rounds
+    function of Opening Rounds: stats only; replacement Witchmail: cooldown, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Opening Rounds is a component of later items: no
+    held for 31200.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 1600/6400/19200 -> 0/12800/19200; thresholds lost: none
+    trade ratio after the sale 0.29; selling Suppressor instead: 0.28 (-3.4%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Boundless Spirit, sell Enchanter's Emblem
+    function of Enchanter's Emblem: cooldown, spirit_resist; replacement Boundless Spirit: stats only; roles lost: cooldown, spirit_resist  [VERIFIED GAME MECHANIC]
+    Enchanter's Emblem is a component of later items: no
+    held for 37600.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 6400/11200/24000 -> 6400/9600/30400; thresholds lost: none
+    trade ratio after the sale 0.23; selling Suppressor instead: 0.23 (-1.1%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Refresher, sell Spirit Shielding
+    function of Spirit Shielding: spirit_resist, sustain; replacement Refresher: bullet_resist, spirit_resist; roles lost: sustain  [VERIFIED GAME MECHANIC]
+    Spirit Shielding is a component of later items: no
+    held for 39200.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 6400/11200/24000 -> 6400/9600/30400; thresholds lost: none
+    trade ratio after the sale 0.21; selling Suppressor instead: 0.23 (+7.7%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)

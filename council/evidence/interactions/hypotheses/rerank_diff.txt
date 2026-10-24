@@ -1,0 +1,82 @@
+RE-RANK DIFF driven only by validated/measured.json (2 measured entries, 2 with links)
+rule: see apply_measured(); BOOST={'same_item_other_ability_type_match': 0.6, 'same_ability_other_item': 0.3, 'reject_same_item': -1.5, 'reject_same_ability': -1.0}
+
+measured log:
+  M-drifter-rend-crushing-fists -> T5-77785e7cae : measured
+  M-drifter-rend-crushing-fists -> T5-f79ed2915a : +0.6 sibling: upgrade_crushing_fists confirmed on drifter_blood_blast
+  M-drifter-rend-crushing-fists -> T5-2f170e43b3 : +0.6 sibling: upgrade_crushing_fists confirmed on drifter_blood_blast
+  M-drifter-rend-crushing-fists -> T5-55cb278ed0 : +0.3 ability drifter_blood_blast confirmed to deliver heavy_melee
+
+moved hypotheses (id | rank before -> after | score before -> after | title):
+  T5-f79ed2915a | 44 -> 38 | 2.79 -> 3.39 | Punkgoat: does Bashdown (heavy_melee) count for Crushing Fists (BonusHeavyMeleeDamage)?
+  T5-160e0f1232 | 38 -> 39 | 3.37 -> 3.37 | Necro: does Essence Theft (summon) count for Magic Carpet (SummonDuration)?
+  T5-d2d186ed33 | 39 -> 40 | 3.33 -> 3.33 | Gigawatt: does Power Surge (chain) count for Capacitor (DamagePerChain)?
+  T4-d69dce6b1e | 40 -> 41 | 3.29 -> 3.29 | Familiar: Naptime disables item actives (during channel): item must be used before the cas
+  T5-1cc2ead8a8 | 41 -> 42 | 3.28 -> 3.28 | Ghost: does Soul Exchange (silence) count for Silencer (SilenceDuration)?
+  T5-4e3be0a34d | 42 -> 43 | 3.22 -> 3.22 | Necro: does Borrowed Decree (death) count for Cheat Death (DeathImmunityDuration)?
+  T5-eeaf98a603 | 43 -> 44 | 3.22 -> 3.22 | Tengu: does Air Drop (silence) count for Silencer (SilenceDuration)?
+  T5-2f170e43b3 | 46 -> 45 | 2.57 -> 3.17 | Viscous: does Puddle Punch (heavy_melee) count for Crushing Fists (BonusHeavyMeleeDamage)?
+  T2-97edcd8e6a | 45 -> 46 | 2.75 -> 2.75 | Viscous: Echo Shard imbued on The Cube (cast, reset, cast again)
+  T5-55cb278ed0 | 56 -> 47 | 2.3 -> 2.6 | Drifter: does Rend (heavy_melee) count for Melee Charge (BonusHeavyMeleeDamage)?
+  T4-da3e1d605b | 57 -> 56 | 2.29 -> 2.29 | Nurse: Lurking Terrors disables item actives (during channel, during precast): item must b
+  T5-2d31f12a62 | 58 -> 57 | 2.19 -> 2.19 | Priest: does Gutshot (heavy_melee) count for Melee Charge (BonusHeavyMeleeDamage)?
+  T2-d60634061a | 59 -> 58 | 2.05 -> 2.05 | Familiar: Echo Shard imbued on Tag Along (cast, reset, cast again)
+  T2-5df9664a75 | 60 -> 59 | 2.03 -> 2.03 | Forge: Echo Shard imbued on Medicinal Specter (cast, reset, cast again)
+  T2-8495478690 | 61 -> 60 | 2.02 -> 2.02 | Bookworm: Echo Shard imbued on Plot Armor (cast, reset, cast again)
+  T2-58f7064f84 | 62 -> 61 | 1.99 -> 1.99 | Kelvin: Echo Shard imbued on Frost Grenade (cast, reset, cast again)
+  T2-c77eccdaea | 63 -> 62 | 1.99 -> 1.99 | Doorman: Echo Shard imbued on Doorway (cast, reset, cast again)
+  T2-20350292bb | 64 -> 63 | 1.95 -> 1.95 | Nano: Echo Shard imbued on Ava (cast, reset, cast again)
+  T5-77785e7cae | 47 -> 64 | 2.57 -> 0.0 | Drifter: does Rend (heavy_melee) count for Crushing Fists (BonusHeavyMeleeDamage)?
+
+top 25 BEFORE:
+   1 T5-00208e11e3 Yamato: does Power Slash (charged) count for Omnicharge Signet (BonusSpiritForChargedAbilities)?
+   2 T5-2121068eb6 Yamato: does Power Slash (charged) count for Extra Charge (BonusSpiritForChargedAbilities)?
+   3 T5-264b98a234 Orion: does Spirit Snare (charged) count for Omnicharge Signet (BonusSpiritForChargedAbilities)?
+   4 T5-5ad3a9c0a5 Orion: does Spirit Snare (charged) count for Extra Charge (BonusSpiritForChargedAbilities)?
+   5 T5-8632c89930 Deadpack: does Strix Salvo (charged) count for Omnicharge Signet (BonusSpiritForChargedAbilities)?
+   6 T5-d723fd443a Deadpack: does Strix Salvo (charged) count for Extra Charge (BonusSpiritForChargedAbilities)?
+   7 T5-5b33acaf80 Yamato: does Power Slash (charged) count for Rapid Recharge (BonusSpiritForChargedAbilities)?
+   8 T5-652e952a53 Astro: does Crackshot (headshot) count for Headhunter (HealPercentPerHeadshot)?
+   9 T5-838d68eea3 Orion: does Spirit Snare (charged) count for Rapid Recharge (BonusSpiritForChargedAbilities)?
+  10 T5-a081e81f23 Deadpack: does Strix Salvo (charged) count for Rapid Recharge (BonusSpiritForChargedAbilities)?
+  11 T5-208f895b22 Kelvin: does Frost Grenade (freeze) count for Frostbite Charm (FreezeDuration)?
+  12 T5-246c545249 Deadpack: does Chimera Mk1 (death) count for Cheat Death (DeathImmunityDuration)?
+  13 T5-62f855eacc Unicorn: does Dazzling Trick (silence) count for Silencer (SilenceDuration)?
+  14 T5-7d123b6dc8 Wraith: does Card Trick (summon) count for Magic Carpet (SummonDuration)?
+  15 T5-a370502d5e Nurse: does Leech Therapy (death) count for Cheat Death (DeathImmunityDuration)?
+  16 T5-cf4613d771 Orion: does Spirit Snare (silence) count for Silencer (SilenceDuration)?
+  17 T5-ebe809be71 Necro: does Grasping Hands (summon) count for Magic Carpet (SummonDuration)?
+  18 T5-b5fb4edee6 Haze: does Fixation (headshot) count for Headhunter (HealPercentPerHeadshot)?
+  19 T5-37bbd3ed2d Chrono: does Time Wall (silence) count for Silencer (SilenceDuration)?
+  20 T5-fb752a3cb8 Kelvin: does Frost Grenade (freeze) count for Arctic Blast (FreezeDuration)?
+  21 T5-0ac6853d0c Magician: does Spectral Assistant (summon) count for Magic Carpet (SummonDuration)?
+  22 T5-0e484e04fb Drifter: does Bloodscent (death) count for Cheat Death (DeathImmunityDuration)?
+  23 T5-318d57fbd3 Necro: does Jar of Dead (death) count for Cheat Death (DeathImmunityDuration)?
+  24 T5-44186f6541 Kelvin: does Frozen Shelter (freeze) count for Frostbite Charm (FreezeDuration)?
+  25 T5-5379c4996d Tengu: does Entangling Thorns (summon) count for Magic Carpet (SummonDuration)?
+top 25 AFTER:
+   1 T5-00208e11e3 Yamato: does Power Slash (charged) count for Omnicharge Signet (BonusSpiritForChargedAbilities)?
+   2 T5-2121068eb6 Yamato: does Power Slash (charged) count for Extra Charge (BonusSpiritForChargedAbilities)?
+   3 T5-264b98a234 Orion: does Spirit Snare (charged) count for Omnicharge Signet (BonusSpiritForChargedAbilities)?
+   4 T5-5ad3a9c0a5 Orion: does Spirit Snare (charged) count for Extra Charge (BonusSpiritForChargedAbilities)?
+   5 T5-8632c89930 Deadpack: does Strix Salvo (charged) count for Omnicharge Signet (BonusSpiritForChargedAbilities)?
+   6 T5-d723fd443a Deadpack: does Strix Salvo (charged) count for Extra Charge (BonusSpiritForChargedAbilities)?
+   7 T5-5b33acaf80 Yamato: does Power Slash (charged) count for Rapid Recharge (BonusSpiritForChargedAbilities)?
+   8 T5-652e952a53 Astro: does Crackshot (headshot) count for Headhunter (HealPercentPerHeadshot)?
+   9 T5-838d68eea3 Orion: does Spirit Snare (charged) count for Rapid Recharge (BonusSpiritForChargedAbilities)?
+  10 T5-a081e81f23 Deadpack: does Strix Salvo (charged) count for Rapid Recharge (BonusSpiritForChargedAbilities)?
+  11 T5-208f895b22 Kelvin: does Frost Grenade (freeze) count for Frostbite Charm (FreezeDuration)?
+  12 T5-246c545249 Deadpack: does Chimera Mk1 (death) count for Cheat Death (DeathImmunityDuration)?
+  13 T5-62f855eacc Unicorn: does Dazzling Trick (silence) count for Silencer (SilenceDuration)?
+  14 T5-7d123b6dc8 Wraith: does Card Trick (summon) count for Magic Carpet (SummonDuration)?
+  15 T5-a370502d5e Nurse: does Leech Therapy (death) count for Cheat Death (DeathImmunityDuration)?
+  16 T5-cf4613d771 Orion: does Spirit Snare (silence) count for Silencer (SilenceDuration)?
+  17 T5-ebe809be71 Necro: does Grasping Hands (summon) count for Magic Carpet (SummonDuration)?
+  18 T5-b5fb4edee6 Haze: does Fixation (headshot) count for Headhunter (HealPercentPerHeadshot)?
+  19 T5-37bbd3ed2d Chrono: does Time Wall (silence) count for Silencer (SilenceDuration)?
+  20 T5-fb752a3cb8 Kelvin: does Frost Grenade (freeze) count for Arctic Blast (FreezeDuration)?
+  21 T5-0ac6853d0c Magician: does Spectral Assistant (summon) count for Magic Carpet (SummonDuration)?
+  22 T5-0e484e04fb Drifter: does Bloodscent (death) count for Cheat Death (DeathImmunityDuration)?
+  23 T5-318d57fbd3 Necro: does Jar of Dead (death) count for Cheat Death (DeathImmunityDuration)?
+  24 T5-44186f6541 Kelvin: does Frozen Shelter (freeze) count for Frostbite Charm (FreezeDuration)?
+  25 T5-5379c4996d Tengu: does Entangling Thorns (summon) count for Magic Carpet (SummonDuration)?

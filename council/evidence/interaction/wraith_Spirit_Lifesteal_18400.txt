@@ -1,0 +1,60 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: wraith
+HERO: Wraith
+ITEM: Spirit Lifesteal
+CHECKPOINT: buy-point at 18400 souls (state souls 18400; item cost 1600)
+VERSION: interaction-v1
+ARGS: --interactions wraith Spirit Lifesteal
+GENERATED: 2026-10-24T14:28:55Z
+BODY-SHA: 9eeb8a4c34706bb103f4dddaddd40c1779e00853f81dc3a3fce46ec5338d5bfc
+INPUT-SHA: d55e5fdba113eeee1fbe9e31a2cf7e869d35a2362ec9a5117dbe08d752f109cb
+ALTERNATIVES (equal souls 1600, unconditional, ranked): Opening Rounds, Long Range, Mystic Shot, Bullet Resist Shredder, Titanic Magazine; also shown, not ranked (conditional or unequal cost): Battle Vest, Kinetic Dash, Active Reload
+VERDICT: Spirit Lifesteal is beaten in every window: sustained: Bullet Resist Shredder; burst: Mystic Shot; ult: Opening Rounds (no permanent equal-soul fire-rate item exists at this checkpoint)
+UNKNOWN_CELLS: 0
+SELECTION: build-decision | Spirit Lifesteal is bought at 18400 souls in wraith: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (1600) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+UPPER-BOUND OPTIONS THAT BEAT IT (their trigger condition decides; UNKNOWN uptime): Active Reload, Battle Vest, Kinetic Dash
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.6, long_share=0.3, W_sus=10.0, W_burst=3.0; reload 2.82 s (measured 2.82 s in council/sandbox/results/wraith_gun_PR-W1.md)
+STATE: owned ['Swift Striker', 'Tesla Bullets', 'Monster Rounds', 'Quicksilver Reload', 'Surge of Power', 'Ricochet', 'Spirit Lifesteal'] | tiers Card Trick=T3(cards) Project Mind=T2(utility) Full Auto=T3(gun-mode) Telekinesis=T1(spirit) | weapon invest bonus 74% | spirit 69
+
+## INTERACTION MATRIX (item effect x kit component)
+- spirit power (TechPower=6)
+    normal shooting                              DOES NOT WORK              [CALCULATED] weapon damage does not scale with spirit power (gun has no spirit-scaled property)
+    1=Card Trick T3 [cards]                      WORKS                      [CALCULATED] card damage scales with spirit power
+    2=Project Mind T2 [utility]                  NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Full Auto T3 [gun-mode]                    DOES NOT WORK              [CALCULATED] no spirit-scaled property
+    4=Telekinesis T1 (ULT) [spirit]              WORKS                      [CALCULATED] spirit-scaled damage ['Damage']
+- defence (not damage) (BonusHealth=90)
+    normal shooting                              n/a                        [CALCULATED] defensive stat; valued by --strategy (survival), not damage
+    1=Card Trick T3 [cards]                      n/a                        [CALCULATED] defensive stat
+    2=Project Mind T2 [utility]                  n/a                        [CALCULATED] defensive stat
+    3=Full Auto T3 [gun-mode]                    n/a                        [CALCULATED] defensive stat
+    4=Telekinesis T1 (ULT) [spirit]              n/a                        [CALCULATED] defensive stat
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |      3759              |       650              |       263              | 0
+Spirit Lifesteal             |         3851 (+2..+2%) |          655 (+1..+1%) |          269 (+2..+2%) | 0
+Opening Rounds               |         3935 (+5..+5%) |          676 (+4..+4%) |          270 (+3..+3%) | 0
+Long Range                   |         3862 (+3..+3%) |          681 (+5..+5%) |          263 (+0..+0%) | 0
+Mystic Shot                  |         4099 (+9..+9%) |        798 (+23..+23%) |          270 (+3..+3%) | 0
+Battle Vest                  |         3900 (+4..+4%) |          676 (+4..+4%) |          263 (+0..+0%) | 0  ! stats only above a health threshold; conditional item (selfhp): counted as if its condition is met (upper bound)
+Bullet Resist Shredder       |       4137 (+10..+10%) |        737 (+14..+14%) |          270 (+3..+3%) | 0
+Kinetic Dash                 |       4270 (+14..+14%) |        744 (+14..+14%) |          263 (+0..+0%) | 0  ! fire rate is a timed buff, counted as always on (upper bound)
+Titanic Magazine             |         3879 (+3..+3%) |          686 (+6..+6%) |          263 (+0..+0%) | 0
+Active Reload                |       4270 (+14..+14%) |        744 (+14..+14%) |          263 (+0..+0%) | 275  ! fire rate is a timed buff, counted as always on (upper bound)
+  candidate detail (reading 1): sustained bullets 176, gun 1496, stacks 0, procs 672, spirit 1683 | ult: Telekinesis damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Bullet Resist Shredder > Mystic Shot > Opening Rounds > Titanic Magazine > Long Range > Spirit Lifesteal
+  burst: rank (reading 1) Mystic Shot > Bullet Resist Shredder > Titanic Magazine > Long Range > Opening Rounds > Spirit Lifesteal
+  ult: rank (reading 1) Opening Rounds > Mystic Shot > Bullet Resist Shredder > Spirit Lifesteal > Long Range > Titanic Magazine
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (150s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  none
+
+## NOT DETERMINED FROM DATA
+  - nothing beyond the ASSUMED shares above
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

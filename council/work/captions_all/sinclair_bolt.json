@@ -1,0 +1,3547 @@
+{
+ "schema": 1,
+ "id": "sinclair_bolt",
+ "hero": "Sinclair",
+ "name": "Rizuhble's Abracadabolt Sinclair",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, once you're out of slots.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-9,600 (levels 1-16). Abilities gained (both point models agree): Vexing Bolt T3. 4.8k spikes: spirit 4.8k at Duration Extender, vitality 4.8k at Veil Walker. Ultimate (Audience Participation) is available from Duration Extender.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "sinclair_bolt:7:phase_range:5295",
+    "sinclair_bolt:7:phase_abilities:5296",
+    "sinclair_bolt:7:phase_spikes:5305",
+    "sinclair_bolt:7:phase_ult:5306"
+   ],
+   "items": [
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 18.6 to Vexing Bolt's max damage (1.86x scaling), your steepest spirit scaling.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:0:spirit_scaling:5276"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:0:spirit_scaling:5276",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Extra Charge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Vexing Bolt (1 to 2).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:1:charges:5279"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:1:charges:5279",
+       true,
+       "[1]"
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Vexing Bolt (179) clears its 80-damage trigger; Spectral Assistant stays under it.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:2:threshold_now:5281"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:2:threshold_now:5281",
+       true,
+       "instances above: [(1, 178.59)]"
+      ]
+     ]
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 33.5 to Vexing Bolt's max damage (1.86x scaling), your steepest spirit scaling. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:3:spirit_scaling:5285",
+      "sinclair_bolt:3:upgrade_of:5284"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:3:spirit_scaling:5285",
+       true,
+       ""
+      ],
+      [
+       "sinclair_bolt:3:upgrade_of:5284",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Duration Extender",
+     "imbue": "3",
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power. Imbued on Rabbit Hex: its duration-scaled parts (hex duration 2s) get +22%.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:4:spike_complete:5286",
+      "sinclair_bolt:4:imbue_duration:5287"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:4:spike_complete:5286",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ],
+      [
+       "sinclair_bolt:4:imbue_duration:5287",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Sprint Boots",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Veil Walker, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Trophy Collector",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Veil Walker, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Bolt fights in other lanes from range to pick up assists.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Veil Walker",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:7:spike_complete:5294"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:7:spike_complete:5294",
+       true,
+       "inventory vitality: before 1600, after 4800, threshold 4800"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 9,600-28,800 (levels 16-29). Abilities gained (both point models agree): Audience Participation T3. Your biggest single spirit hit (Vexing Bolt, max damage) grows from 398 to 556.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "sinclair_bolt:15:phase_range:5328",
+    "sinclair_bolt:15:phase_abilities:5329",
+    "sinclair_bolt:15:phase_power:5330"
+   ],
+   "items": [
+    {
+     "name": "Rapid Recharge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Vexing Bolt (2 to 3). Takes spirit from 4,800 to 7,200 invested: bonus 38 to 45 spirit power. Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:8:charges:5309",
+      "sinclair_bolt:8:invest_step:5307",
+      "sinclair_bolt:8:upgrade_of:5308"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:8:charges:5309",
+       true,
+       "[1]"
+      ],
+      [
+       "sinclair_bolt:8:invest_step:5307",
+       true,
+       "inventory spirit: before 4800, after 7200, threshold 6400"
+      ],
+      [
+       "sinclair_bolt:8:upgrade_of:5308",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Expansion",
+     "imbue": "3",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 7,200 to 8,000 invested: bonus 45 to 52 spirit power. | Imbued on Rabbit Hex: widens its range.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Superior Duration",
+     "imbue": null,
+     "caption": "+28% to every duration-scaled effect you have: Audience Participation copied ult window (9s), Spectral Assistant duration (13s), Vexing Bolt debuff duration (5s). Upgrade of Duration Extender (already owned): costs 1,600 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:10:dur_global:5314",
+      "sinclair_bolt:10:upgrade_of:5313"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:10:dur_global:5314",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "sinclair_bolt:10:upgrade_of:5313",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": "Vexing Bolt (454) clears its 165-damage trigger; Spectral Assistant stays under it. Takes spirit from 9,600 to 12,000 invested: bonus 52 to 59 spirit power. Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:11:threshold_now:5316",
+      "sinclair_bolt:11:invest_step:5315",
+      "sinclair_bolt:11:upgrade_of:5317"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:11:threshold_now:5316",
+       true,
+       "instances above: [(1, 453.576)]"
+      ],
+      [
+       "sinclair_bolt:11:invest_step:5315",
+       true,
+       "inventory spirit: before 9600, after 12000, threshold 11200"
+      ],
+      [
+       "sinclair_bolt:11:upgrade_of:5317",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Enchanter's Emblem",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Greater Expansion",
+     "imbue": null,
+     "caption": "+30% range and radius on everything that scales with them: Spectral Assistant leash radius (25m), Rabbit Hex radius (6m), Vexing Bolt radius (3.2m). Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:13:global_reach:5321",
+      "sinclair_bolt:13:upgrade_of:5322"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:13:global_reach:5321",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "sinclair_bolt:13:upgrade_of:5322",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "1",
+     "caption": "Imbued on Vexing Bolt: takes 18% off its 11s base cooldown. Takes spirit from 14,400 to 16,000 invested: bonus 59 to 66 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:14:imbue_cooldown:5324",
+      "sinclair_bolt:14:invest_step:5323"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:14:imbue_cooldown:5324",
+       true,
+       ""
+      ],
+      [
+       "sinclair_bolt:14:invest_step:5323",
+       true,
+       "inventory spirit: before 14400, after 16000, threshold 16000"
+      ]
+     ]
+    },
+    {
+     "name": "Diviner's Kevlar",
+     "imbue": null,
+     "caption": "Casting Audience Participation gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (85s at your current ultimate tier), so it is a once-per-fight burst of defence. Takes vitality from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:15:ult_trigger:5326",
+      "sinclair_bolt:15:invest_step:5327"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:15:ult_trigger:5326",
+       true,
+       ""
+      ],
+      [
+       "sinclair_bolt:15:invest_step:5327",
+       true,
+       "inventory vitality: before 6400, after 12800, threshold 8000"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 28,800-48,000 (levels 29-35). Abilities gained (both point models agree): Rabbit Hex T3. Your biggest single spirit hit (Vexing Bolt, max damage) grows from 556 to 717.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "sinclair_bolt:19:phase_range:5344",
+    "sinclair_bolt:19:phase_abilities:5345",
+    "sinclair_bolt:19:phase_power:5346"
+   ],
+   "items": [
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 55.8 to Vexing Bolt's max damage (1.86x scaling), your steepest spirit scaling. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:16:spirit_scaling:5338",
+      "sinclair_bolt:16:upgrade_of:5337"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:16:spirit_scaling:5338",
+       true,
+       ""
+      ],
+      [
+       "sinclair_bolt:16:upgrade_of:5337",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Vortex Web",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 20,800 to 27,200 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Pull them together, Rabbit Hex the lot, then bolt them.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 27,200 to 28,800 invested: bonus 75 to 100 spirit power. | With 4 abilities trained their base cooldowns total 142s; 20% off is 28.4s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Veil Walker? Buy what is killing you, cheapest first. Not dying? Skip. Sell Enchanter's Emblem.",
+   "desc": "Dying after Veil Walker? Buy what is killing you, cheapest first. Not dying? Skip. Sell Enchanter's Emblem.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:20:defence_gun:5349"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:20:defence_gun:5349",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:20:defence_spirit:5350"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:20:defence_spirit:5350",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:20:defence_purge:5351"
+     ],
+     "lint": [],
+     "legacy_note": "Slows and hexes keep landing on you.",
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:20:defence_purge:5351",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:20:defence_parry:5352"
+     ],
+     "lint": [],
+     "legacy_note": "A big ult or stun you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:20:defence_parry:5352",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:20:defence_bullet:5353"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry dives you.",
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:20:defence_bullet:5353",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Warp Stone",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They dive you and you can't get back to range.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Mystic Reverb",
+     "imbue": "1",
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "On the bolt. Sell Trophy Collector for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Enchanter's Emblem for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Echo Shard",
+     "imbue": "3",
+     "caption": "Imbued on Rabbit Hex: resets its 16s cooldown for a second cast; the shard's own 30s cooldown grows by that ability's cooldown. Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:20:imbue_reset:5357",
+      "sinclair_bolt:20:sell_swap:5358"
+     ],
+     "lint": [],
+     "legacy_note": "On Rabbit Hex. Sell Tankbuster for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:20:imbue_reset:5357",
+       true,
+       ""
+      ],
+      [
+       "sinclair_bolt:20:sell_swap:5358",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:20:defence_barrier:5359"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:20:defence_barrier:5359",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "sinclair_bolt:20:upgrade_delta:5360"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "sinclair_bolt:20:upgrade_delta:5360",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "sinclair_bolt:20:temporary_sold:5273": {
+   "id": "sinclair_bolt:20:temporary_sold:5273",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, once you're out of slots.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 20,
+    "item": "Extra Regen",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it once you're out of slots."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:0:spike_progress:5274": {
+   "id": "sinclair_bolt:0:spike_progress:5274",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "sinclair_bolt:0:component_for:5275": {
+   "id": "sinclair_bolt:0:component_for:5275",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:0:spirit_scaling:5276": {
+   "id": "sinclair_bolt:0:spirit_scaling:5276",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 18.6 to Vexing Bolt's max damage (1.86x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "MaxDamage"
+   },
+   "numbers": [
+    "10.0",
+    "18.6",
+    "1.86"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:1:spike_progress:5277": {
+   "id": "sinclair_bolt:1:spike_progress:5277",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Extra Charge",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "sinclair_bolt:1:component_for:5278": {
+   "id": "sinclair_bolt:1:component_for:5278",
+   "kind": "component_for",
+   "phrase": "From Rapid Recharge: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Extra Charge",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 10400,
+    "event": "Rapid Recharge"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Rapid Recharge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:1:charges:5279": {
+   "id": "sinclair_bolt:1:charges:5279",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Vexing Bolt (1 to 2).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_extra_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 1,
+    "item": "Extra Charge",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "1",
+    "1",
+    "2"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:2:spike_progress:5280": {
+   "id": "sinclair_bolt:2:spike_progress:5280",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Burst",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "sinclair_bolt:2:threshold_now:5281": {
+   "id": "sinclair_bolt:2:threshold_now:5281",
+   "kind": "threshold_now",
+   "phrase": "Vexing Bolt (179) clears its 80-damage trigger; Spectral Assistant stays under it.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_cloneturret",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_animalhexarea"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Burst",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "80.0",
+    "179"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 2.23,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "sinclair_bolt:2:component_for:5282": {
+   "id": "sinclair_bolt:2:component_for:5282",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Mystic Burst",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 14400,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:3:spike_progress:5283": {
+   "id": "sinclair_bolt:3:spike_progress:5283",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Improved Spirit",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "sinclair_bolt:3:upgrade_of:5284": {
+   "id": "sinclair_bolt:3:upgrade_of:5284",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 3,
+    "item": "Improved Spirit",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:3:spirit_scaling:5285": {
+   "id": "sinclair_bolt:3:spirit_scaling:5285",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 33.5 to Vexing Bolt's max damage (1.86x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 3,
+    "item": "Improved Spirit",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "MaxDamage"
+   },
+   "numbers": [
+    "18.0",
+    "33.5",
+    "1.86"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:4:spike_complete:5286": {
+   "id": "sinclair_bolt:4:spike_complete:5286",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 4,
+    "item": "Duration Extender",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "sinclair_bolt:4:imbue_duration:5287": {
+   "id": "sinclair_bolt:4:imbue_duration:5287",
+   "kind": "imbue_duration",
+   "phrase": "Imbued on Rabbit Hex: its duration-scaled parts (hex duration 2s) get +22%.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_arcane_extension",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_animalhexarea"
+   ],
+   "score": 58,
+   "point": {
+    "idx": 4,
+    "item": "Duration Extender",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 3,
+    "stats": [
+     "ETechDuration"
+    ]
+   },
+   "numbers": [
+    "22.0",
+    "2"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:4:component_for:5288": {
+   "id": "sinclair_bolt:4:component_for:5288",
+   "kind": "component_for",
+   "phrase": "From Superior Duration: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Duration Extender",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 9600,
+    "event": "Superior Duration"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Duration"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:5:spike_progress:5289": {
+   "id": "sinclair_bolt:5:spike_progress:5289",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Sprint Boots",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "sinclair_bolt:5:component_for:5290": {
+   "id": "sinclair_bolt:5:component_for:5290",
+   "kind": "component_for",
+   "phrase": "From Trophy Collector: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Sprint Boots",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Trophy Collector"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Trophy Collector"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:6:spike_progress:5291": {
+   "id": "sinclair_bolt:6:spike_progress:5291",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Trophy Collector",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "sinclair_bolt:6:upgrade_of:5292": {
+   "id": "sinclair_bolt:6:upgrade_of:5292",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 6,
+    "item": "Trophy Collector",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Sprint Boots"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:6:swap_candidate:5293": {
+   "id": "sinclair_bolt:6:swap_candidate:5293",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Mystic Reverb later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 6,
+    "item": "Trophy Collector",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Trophy Collector",
+    "buyer": "Mystic Reverb"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:7:spike_complete:5294": {
+   "id": "sinclair_bolt:7:spike_complete:5294",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 7,
+    "item": "Veil Walker",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "sinclair_bolt:7:phase_range:5295": {
+   "id": "sinclair_bolt:7:phase_range:5295",
+   "kind": "phase_range",
+   "phrase": "Souls 0-9,600 (levels 1-16).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Veil Walker",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Veil Walker",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "9,600",
+    "1",
+    "16"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:7:phase_abilities:5296": {
+   "id": "sinclair_bolt:7:phase_abilities:5296",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Vexing Bolt T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Veil Walker",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Veil Walker",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:7:phase_spikes:5305": {
+   "id": "sinclair_bolt:7:phase_spikes:5305",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Duration Extender, vitality 4.8k at Veil Walker.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Veil Walker",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Veil Walker",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:7:phase_ult:5306": {
+   "id": "sinclair_bolt:7:phase_ult:5306",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Audience Participation) is available from Duration Extender.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Veil Walker",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Veil Walker",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:8:invest_step:5307": {
+   "id": "sinclair_bolt:8:invest_step:5307",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 7,200 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 8,
+    "item": "Rapid Recharge",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "7200",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "sinclair_bolt:8:upgrade_of:5308": {
+   "id": "sinclair_bolt:8:upgrade_of:5308",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 8,
+    "item": "Rapid Recharge",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Charge"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:8:charges:5309": {
+   "id": "sinclair_bolt:8:charges:5309",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Vexing Bolt (2 to 3).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_rapid_recharge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 8,
+    "item": "Rapid Recharge",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "1",
+    "2",
+    "3"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:9:invest_step:5310": {
+   "id": "sinclair_bolt:9:invest_step:5310",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 7,200 to 8,000 invested: bonus 45 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Mystic Expansion",
+    "souls": 12800,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "8000",
+    "45.0",
+    "52.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "sinclair_bolt:9:imbue_reach:5311": {
+   "id": "sinclair_bolt:9:imbue_reach:5311",
+   "kind": "imbue_reach",
+   "phrase": "Imbued on Rabbit Hex: widens its range.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_reach",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_animalhexarea"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 9,
+    "item": "Mystic Expansion",
+    "souls": 12800,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 3,
+    "stats": [
+     "ETechRange",
+     "ETechRadius"
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:9:component_for:5312": {
+   "id": "sinclair_bolt:9:component_for:5312",
+   "kind": "component_for",
+   "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Mystic Expansion",
+    "souls": 12800,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 8000,
+    "event": "Greater Expansion"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Greater Expansion"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:10:upgrade_of:5313": {
+   "id": "sinclair_bolt:10:upgrade_of:5313",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Duration Extender (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Superior Duration",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Duration Extender"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:10:dur_global:5314": {
+   "id": "sinclair_bolt:10:dur_global:5314",
+   "kind": "dur_global",
+   "phrase": "+28% to every duration-scaled effect you have: Audience Participation copied ult window (9s), Spectral Assistant duration (13s), Vexing Bolt debuff duration (5s).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_imbued_duration_extender",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_cloneturret",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_animalhexarea",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_copyult"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 10,
+    "item": "Superior Duration",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "dur_global"
+   },
+   "numbers": [
+    "28.0",
+    "9",
+    "13",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:11:invest_step:5315": {
+   "id": "sinclair_bolt:11:invest_step:5315",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 9,600 to 12,000 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Tankbuster",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "12000",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "sinclair_bolt:11:threshold_now:5316": {
+   "id": "sinclair_bolt:11:threshold_now:5316",
+   "kind": "threshold_now",
+   "phrase": "Vexing Bolt (454) clears its 165-damage trigger; Spectral Assistant stays under it.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_cloneturret",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_animalhexarea"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 11,
+    "item": "Tankbuster",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "165.0",
+    "454"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 2.75,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "sinclair_bolt:11:upgrade_of:5317": {
+   "id": "sinclair_bolt:11:upgrade_of:5317",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Tankbuster",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:11:swap_candidate:5318": {
+   "id": "sinclair_bolt:11:swap_candidate:5318",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Echo Shard later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 11,
+    "item": "Tankbuster",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Tankbuster",
+    "buyer": "Echo Shard"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:12:invest_step:5319": {
+   "id": "sinclair_bolt:12:invest_step:5319",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Enchanter's Emblem",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "sinclair_bolt:12:swap_candidate:5320": {
+   "id": "sinclair_bolt:12:swap_candidate:5320",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Escalating Exposure later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 12,
+    "item": "Enchanter's Emblem",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Enchanter's Emblem",
+    "buyer": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:13:global_reach:5321": {
+   "id": "sinclair_bolt:13:global_reach:5321",
+   "kind": "global_reach",
+   "phrase": "+30% range and radius on everything that scales with them: Spectral Assistant leash radius (25m), Rabbit Hex radius (6m), Vexing Bolt radius (3.2m).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_range",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_cloneturret",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_animalhexarea"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 13,
+    "item": "Greater Expansion",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "global_reach"
+   },
+   "numbers": [
+    "30",
+    "25",
+    "6",
+    "3.2"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:13:upgrade_of:5322": {
+   "id": "sinclair_bolt:13:upgrade_of:5322",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Greater Expansion",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Expansion"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:14:invest_step:5323": {
+   "id": "sinclair_bolt:14:invest_step:5323",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 14,400 to 16,000 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Compress Cooldown",
+    "souls": 22400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "16000",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "sinclair_bolt:14:imbue_cooldown:5324": {
+   "id": "sinclair_bolt:14:imbue_cooldown:5324",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Vexing Bolt: takes 18% off its 11s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 14,
+    "item": "Compress Cooldown",
+    "souls": 22400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 1
+   },
+   "numbers": [
+    "18.0",
+    "11.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:14:component_for:5325": {
+   "id": "sinclair_bolt:14:component_for:5325",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Compress Cooldown",
+    "souls": 22400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 19200,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:15:ult_trigger:5326": {
+   "id": "sinclair_bolt:15:ult_trigger:5326",
+   "kind": "ult_trigger",
+   "phrase": "Casting Audience Participation gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (85s at your current ultimate tier), so it is a once-per-fight burst of defence.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_diviners_kevlar",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_copyult"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 15,
+    "item": "Diviner's Kevlar",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "ult_tier",
+    "min_tier": 3
+   },
+   "numbers": [
+    "1,000",
+    "40",
+    "20",
+    "85"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:15:invest_step:5327": {
+   "id": "sinclair_bolt:15:invest_step:5327",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Diviner's Kevlar",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "12800",
+    "42.0",
+    "50.0",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "sinclair_bolt:15:phase_range:5328": {
+   "id": "sinclair_bolt:15:phase_range:5328",
+   "kind": "phase_range",
+   "phrase": "Souls 9,600-28,800 (levels 16-29).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Diviner's Kevlar",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Diviner's Kevlar",
+    "keys": []
+   },
+   "numbers": [
+    "9,600",
+    "28,800",
+    "16",
+    "29"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:15:phase_abilities:5329": {
+   "id": "sinclair_bolt:15:phase_abilities:5329",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Audience Participation T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Diviner's Kevlar",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Diviner's Kevlar",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:15:phase_power:5330": {
+   "id": "sinclair_bolt:15:phase_power:5330",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Vexing Bolt, max damage) grows from 398 to 556.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Diviner's Kevlar",
+    "souls": 28800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Diviner's Kevlar",
+    "keys": []
+   },
+   "numbers": [
+    "398",
+    "556"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:16:upgrade_of:5337": {
+   "id": "sinclair_bolt:16:upgrade_of:5337",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Boundless Spirit",
+    "souls": 33600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:16:spirit_scaling:5338": {
+   "id": "sinclair_bolt:16:spirit_scaling:5338",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 55.8 to Vexing Bolt's max damage (1.86x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 16,
+    "item": "Boundless Spirit",
+    "souls": 33600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "MaxDamage"
+   },
+   "numbers": [
+    "30.0",
+    "55.8",
+    "1.86"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:17:invest_step:5339": {
+   "id": "sinclair_bolt:17:invest_step:5339",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 20,800 to 27,200 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Vortex Web",
+    "souls": 40000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "20800",
+    "27200",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "sinclair_bolt:18:invest_step:5340": {
+   "id": "sinclair_bolt:18:invest_step:5340",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 27,200 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Superior Cooldown",
+    "souls": 41600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "27200",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "sinclair_bolt:18:upgrade_of:5341": {
+   "id": "sinclair_bolt:18:upgrade_of:5341",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Superior Cooldown",
+    "souls": 41600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "sinclair_bolt:18:cdr_rotation:5342": {
+   "id": "sinclair_bolt:18:cdr_rotation:5342",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 142s; 20% off is 28.4s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_cloneturret",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_animalhexarea",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_copyult"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 18,
+    "item": "Superior Cooldown",
+    "souls": 41600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "142",
+    "20.0",
+    "28.4"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:19:burn_trigger_modelled:5343": {
+   "id": "sinclair_bolt:19:burn_trigger_modelled:5343",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Vexing Bolt (717) + Spectral Assistant (106) = 823 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Burn",
+    "souls": 48000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "823",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:19:phase_range:5344": {
+   "id": "sinclair_bolt:19:phase_range:5344",
+   "kind": "phase_range",
+   "phrase": "Souls 28,800-48,000 (levels 29-35).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_magician m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Burn",
+    "souls": 48000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": []
+   },
+   "numbers": [
+    "28,800",
+    "48,000",
+    "29",
+    "35"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:19:phase_abilities:5345": {
+   "id": "sinclair_bolt:19:phase_abilities:5345",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Rabbit Hex T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Burn",
+    "souls": 48000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:19:phase_power:5346": {
+   "id": "sinclair_bolt:19:phase_power:5346",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Vexing Bolt, max damage) grows from 556 to 717.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Burn",
+    "souls": 48000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": []
+   },
+   "numbers": [
+    "556",
+    "717"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:20:defence_gun:5349": {
+   "id": "sinclair_bolt:20:defence_gun:5349",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Plated Armor",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:20:defence_spirit:5350": {
+   "id": "sinclair_bolt:20:defence_spirit:5350",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Resilience",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:20:defence_purge:5351": {
+   "id": "sinclair_bolt:20:defence_purge:5351",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Dispel Magic",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Slows and hexes keep landing on you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:20:defence_parry:5352": {
+   "id": "sinclair_bolt:20:defence_parry:5352",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Counterspell",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ult or stun you can see coming."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:20:defence_bullet:5353": {
+   "id": "sinclair_bolt:20:defence_bullet:5353",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Metal Skin",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry dives you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:20:threshold_now:5354": {
+   "id": "sinclair_bolt:20:threshold_now:5354",
+   "kind": "threshold_now",
+   "phrase": "Vexing Bolt (717) clears its 100-damage trigger.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_magicbolt"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 20,
+    "item": "Mystic Reverb",
+    "souls": 48000,
+    "noncore": true,
+    "imb": 1,
+    "note": "On the bolt. Sell Trophy Collector for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 100.0,
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "100.0",
+    "717"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 7.17,
+   "caveat": "item has no localisation text; trigger semantics are modelled",
+   "contradiction": false
+  },
+  "sinclair_bolt:20:sell_swap:5355": {
+   "id": "sinclair_bolt:20:sell_swap:5355",
+   "kind": "sell_swap",
+   "phrase": "Replaces Trophy Collector: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Mystic Reverb",
+    "souls": 48000,
+    "noncore": true,
+    "imb": 1,
+    "note": "On the bolt. Sell Trophy Collector for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Trophy Collector",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Trophy Collector"
+  },
+  "sinclair_bolt:20:sell_swap:5356": {
+   "id": "sinclair_bolt:20:sell_swap:5356",
+   "kind": "sell_swap",
+   "phrase": "Replaces Enchanter's Emblem: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Escalating Exposure",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Enchanter's Emblem",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Enchanter's Emblem"
+  },
+  "sinclair_bolt:20:imbue_reset:5357": {
+   "id": "sinclair_bolt:20:imbue_reset:5357",
+   "kind": "imbue_reset",
+   "phrase": "Imbued on Rabbit Hex: resets its 16s cooldown for a second cast; the shard's own 30s cooldown grows by that ability's cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_power_shard",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_magician_animalhexarea"
+   ],
+   "score": 55,
+   "point": {
+    "idx": 20,
+    "item": "Echo Shard",
+    "souls": 48000,
+    "noncore": true,
+    "imb": 3,
+    "note": "On Rabbit Hex. Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_nonult",
+    "slot": 3
+   },
+   "numbers": [
+    "16.0",
+    "30"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "sinclair_bolt:20:sell_swap:5358": {
+   "id": "sinclair_bolt:20:sell_swap:5358",
+   "kind": "sell_swap",
+   "phrase": "Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Echo Shard",
+    "souls": 48000,
+    "noncore": true,
+    "imb": 3,
+    "note": "On Rabbit Hex. Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Tankbuster",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Tankbuster"
+  },
+  "sinclair_bolt:20:defence_barrier:5359": {
+   "id": "sinclair_bolt:20:defence_barrier:5359",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Divine Barrier",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:20:upgrade_delta:5360": {
+   "id": "sinclair_bolt:20:upgrade_delta:5360",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "sinclair_bolt:20:upgrade_of:5361": {
+   "id": "sinclair_bolt:20:upgrade_of:5361",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 48000,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "sinclair_bolt",
+   "item": "Sprint Boots",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Veil Walker, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 5600,
+   "unpublished": [
+    {
+     "id": "sinclair_bolt:5:component_for:5290",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Trophy Collector: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Trophy Collector"
+     }
+    }
+   ]
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Trophy Collector",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Veil Walker, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 6400,
+   "unpublished": []
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Trophy Collector",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Bolt fights in other lanes from range to pick up assists."
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Vortex Web",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Pull them together, Rabbit Hex the lot, then bolt them."
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Spirit Burn",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 48000,
+   "unpublished": [
+    {
+     "id": "sinclair_bolt:19:burn_trigger_modelled:5343",
+     "tier": "MODELLED",
+     "phrase": "One rotation of Vexing Bolt (717) + Spectral Assistant (106) = 823 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit."
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Slows and hexes keep landing on you."
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ult or stun you can see coming."
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry dives you."
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Warp Stone",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 48000,
+   "unpublished": []
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Warp Stone",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They dive you and you can't get back to range."
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Mystic Reverb",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 48000,
+   "unpublished": [
+    {
+     "id": "sinclair_bolt:20:threshold_now:5354",
+     "tier": "MODELLED",
+     "phrase": "Vexing Bolt (717) clears its 100-damage trigger.",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Mystic Reverb",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On the bolt. Sell Trophy Collector for this."
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Escalating Exposure",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 48000,
+   "unpublished": []
+  },
+  {
+   "build": "sinclair_bolt",
+   "item": "Echo Shard",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Rabbit Hex. Sell Tankbuster for this."
+  }
+ ],
+ "stats": {
+  "g": 5,
+  "a": 21,
+  "c": 2,
+  "d": 4
+ }
+}

@@ -1,0 +1,184 @@
+{
+ "id": "greytalon_charge_tiers_f7_f9",
+ "title": "Grey Talon: tier bits, 1-charge Extra Charge, Extra Charge value at Charged Shot T2 vs T3",
+ "hero": "Grey Talon",
+ "playstyle": "One Shot Grey Talon",
+ "builds": [
+  "greytalon",
+  "rem",
+  "paige_support",
+  "baba",
+  "baba_tank",
+  "lash",
+  "infernus_dash",
+  "viscous",
+  "mcginnis_turret",
+  "sinclair_bolt",
+  "yamato_brawler"
+ ],
+ "question": "(F9) Do abil bits 1/3/7/15 give unlocked/T1/T2/T3, i.e. was `unlock 7` only T2? (F7) Does Extra Charge add a charge to an ability whose base AbilityCharges is 1 (Kieran's reading: no, needs 2+)? (M) Does Extra Charge add burst before Charged Shot T3?",
+ "hypothesis": "F9: bits 3 gives 2 charges 4s apart; bits 15 gives between-charge 1s. F7 (60% prior, 1-charge counts): bits 1 + EC gives 2 shots, 2nd >= 4s after the 1st. M: at bits 7 + EC the 3rd shot does not land inside a 6s window; at bits 15 + EC 3 shots land inside it.",
+ "arms": [
+  {
+   "name": "A_bits1_noEC",
+   "items": [],
+   "ability_order": null,
+   "abil_bits": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "imbues": {},
+   "souls": "n/a",
+   "notes": "control: 1 charge"
+  },
+  {
+   "name": "B_bits1_EC",
+   "items": [
+    "Extra Charge"
+   ],
+   "ability_order": null,
+   "abil_bits": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "imbues": {},
+   "souls": "n/a",
+   "notes": "F7"
+  },
+  {
+   "name": "C_bits3_noEC",
+   "items": [],
+   "ability_order": null,
+   "abil_bits": [
+    3,
+    0,
+    0,
+    0
+   ],
+   "imbues": {},
+   "souls": "n/a",
+   "notes": "F9: T1 = +1 charge"
+  },
+  {
+   "name": "D_bits7_EC",
+   "items": [
+    "Extra Charge"
+   ],
+   "ability_order": null,
+   "abil_bits": [
+    7,
+    0,
+    0,
+    0
+   ],
+   "imbues": {},
+   "souls": "~800-6000 state (Charged Shot T2)",
+   "notes": "timeline state of greytalon at 800-5999 souls"
+  },
+  {
+   "name": "E_bits15_EC",
+   "items": [
+    "Extra Charge"
+   ],
+   "ability_order": null,
+   "abil_bits": [
+    15,
+    0,
+    0,
+    0
+   ],
+   "imbues": {},
+   "souls": ">=6000 state (Charged Shot T3)",
+   "notes": "after the upgrade"
+  },
+  {
+   "name": "F_bits15_noEC",
+   "items": [],
+   "ability_order": null,
+   "abil_bits": [
+    15,
+    0,
+    0,
+    0
+   ],
+   "imbues": {},
+   "souls": "n/a",
+   "notes": "control for E"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "sandbox default (50k souls, level from setup); tiers forced with abil",
+  "souls": 50000,
+  "position": "mid lane, enemy Haze bot 350u (fetch default)",
+  "enemies": [
+   {
+    "hero": "Haze bot",
+    "count": 1,
+    "items": "none",
+    "behaviour": "stands, attacks disabled",
+    "hp": "egod keep-alive"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "hardreset before every block",
+   "abil set after hardreset (hardreset re-issues unlock 7)"
+  ]
+ },
+ "controls": [
+  "hardreset between blocks (fresh pawn, cooldowns 0/0)",
+  "abilist logged before each block: bits must read 1/3/7/15 or the block is void",
+  "same 4 presses: hold 1 0.6 then wait 0.9",
+  "aimoff 5.5 3 at 350u",
+  "only Extra Charge differs inside each pair"
+ ],
+ "procedure": [
+  "run autorun/scenarios/gt_f7_f9_charge_bits.txt (copy to E:\\deadworks-server\\scenarios\\)",
+  "python3 autorun/tools/analyze.py damage.csv samples.csv",
+  "count ability_charged_shot damage rows per mark and the time from first to last hit",
+  "repeat 5 runs (one run = all six blocks, so arms interleave)"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "arrow_hits_in_block",
+   "unit": "count",
+   "how": "damage csv rows with ability ability_charged_shot, victim enemy, per mark",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "first_to_second_hit_s",
+   "unit": "s",
+   "how": "timestamp diff",
+   "grade_target": "A",
+   "better": "lower",
+   "primary": false
+  },
+  {
+   "name": "damage_per_arrow",
+   "unit": "hp",
+   "how": "mean damage per arrow row (T2 adds 54, T3 adds 1.0x spirit)",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "arrow_hits_in_block",
+  "min_effect_pct": 50,
+  "min_trials": 5,
+  "rule": "F9 SUPPORTED if C has 2 hits >=3.5s apart and E/F show <=1.5s between hits; else F9 REFUTED (bits mean something else) and every sandbox result run at unlock 7 must be re-labelled. F7 SUPPORTED (1-charge counts) if B has 2 hits in >=4/5 trials while A has 1; REFUTED if B == A. M SUPPORTED if E has more hits than D in the same window in >=4/5 trials."
+ },
+ "predictions_from_timeline": {
+  "source": "council/tools/abtimeline.py greytalon",
+  "D_vs_E": "shots in 5s 2 -> 2 at T2, 2 -> 3 at T3 (EC gain starts at Charged Shot T3 @6000, +5200 souls after the EC buy)"
+ },
+ "verdict_use": "F7 result decides 14 CHARGE-BEFORE-CHARGES rows (gate/*.json). Until run: inconclusive, keep current builds (FREEZE)."
+}

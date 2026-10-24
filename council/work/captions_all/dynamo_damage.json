@@ -1,0 +1,3472 @@
+{
+ "schema": 1,
+ "id": "dynamo_damage",
+ "hero": "Dynamo",
+ "name": "Rizuhble's Dyson Dynamo",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, for Unstoppable.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it for Unstoppable.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-10,400 (levels 1-17). Abilities gained (both point models agree): Kinetic Pulse T3. 4.8k spikes: weapon 4.8k at Recharging Rush, vitality 4.8k at Warp Stone. Ultimate (Singularity) is available from Sprint Boots.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "dynamo_damage:6:phase_range:537",
+    "dynamo_damage:6:phase_abilities:538",
+    "dynamo_damage:6:phase_spikes:546",
+    "dynamo_damage:6:phase_ult:547"
+   ],
+   "items": [
+    {
+     "name": "Headshot Booster",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Recharging Rush completes 5,600 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Recharging Rush completes 4.8k weapon in 5600 souls (~5.6 min), 4 purchases",
+     "claim_ids": [
+      "dynamo_damage:0:spike_progress:524"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:0:spike_progress:524",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Kinetic Pulse (133) clears its 80-damage trigger.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:1:threshold_now:527"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:1:threshold_now:527",
+       true,
+       "instances above: [(1, 132.67000000000002)]"
+      ]
+     ]
+    },
+    {
+     "name": "Headhunter",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Recharging Rush completes 2,400 souls on. Upgrade of Headshot Booster (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "b",
+     "why": "imminent: Recharging Rush completes 4.8k weapon in 2400 souls (~2.4 min), 2 purchases",
+     "claim_ids": [
+      "dynamo_damage:2:spike_progress:529",
+      "dynamo_damage:2:upgrade_of:530"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:2:spike_progress:529",
+       true,
+       "3200"
+      ],
+      [
+       "dynamo_damage:2:upgrade_of:530",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Sprint Boots",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Warp Stone, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Recharging Rush",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (3,200 to 4,800 invested): bonus 18 to 46% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:4:spike_complete:533"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:4:spike_complete:533",
+       true,
+       "inventory weapon: before 3200, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Enduring Speed",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Warp Stone, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Warp Stone",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:6:spike_complete:536"
+     ],
+     "lint": [],
+     "legacy_note": "Teleport into the middle of them, then ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:6:spike_complete:536",
+       true,
+       "inventory vitality: before 1600, after 4800, threshold 4800"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 10,400-20,800 (levels 17-26). Abilities gained (both point models agree): Singularity T3. Your biggest single spirit hit (Kinetic Pulse, damage) grows from 288 to 406. 4.8k spikes: spirit 4.8k at Compress Cooldown.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "dynamo_damage:12:phase_range:568",
+    "dynamo_damage:12:phase_abilities:569",
+    "dynamo_damage:12:phase_power:570",
+    "dynamo_damage:12:phase_spikes:577"
+   ],
+   "items": [
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": "Kinetic Pulse (312) clears its 165-damage trigger. Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:7:threshold_now:549",
+      "dynamo_damage:7:upgrade_of:550"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:7:threshold_now:549",
+       true,
+       "instances above: [(1, 311.845)]"
+      ],
+      [
+       "dynamo_damage:7:upgrade_of:550",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "1",
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power. Imbued on Kinetic Pulse: takes 18% off its 26s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:8:spike_complete:551",
+      "dynamo_damage:8:imbue_cooldown:552"
+     ],
+     "lint": [],
+     "legacy_note": "On Kinetic Pulse.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:8:spike_complete:551",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ],
+      [
+       "dynamo_damage:8:imbue_cooldown:552",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Quicksilver Reload",
+     "imbue": "1",
+     "caption": "Imbued on Kinetic Pulse: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s. Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:9:imbue_reload:555",
+      "dynamo_damage:9:invest_step:554"
+     ],
+     "lint": [],
+     "legacy_note": "On Kinetic Pulse.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:9:imbue_reload:555",
+       true,
+       ""
+      ],
+      [
+       "dynamo_damage:9:invest_step:554",
+       true,
+       "inventory spirit: before 4800, after 6400, threshold 6400"
+      ]
+     ]
+    },
+    {
+     "name": "Extra Charge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Kinetic Pulse (2 to 3).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:10:charges:559"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:10:charges:559",
+       true,
+       "[1]"
+      ]
+     ]
+    },
+    {
+     "name": "Rapid Recharge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Kinetic Pulse (3 to 4). Takes spirit from 7,200 to 9,600 invested: bonus 45 to 52 spirit power. Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:11:charges:563",
+      "dynamo_damage:11:invest_step:560",
+      "dynamo_damage:11:upgrade_of:561"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:11:charges:563",
+       true,
+       "[1]"
+      ],
+      [
+       "dynamo_damage:11:invest_step:560",
+       true,
+       "inventory spirit: before 7200, after 9600, threshold 8000"
+      ],
+      [
+       "dynamo_damage:11:upgrade_of:561",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 9,600 to 11,200 invested: bonus 52 to 59 spirit power. | With 4 abilities trained their base cooldowns total 318s; 20% off is 63.6s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 20,800-51,200 (levels 26-36). Abilities gained (both point models agree): Quantum Entanglement T3, Rejuvenating Aurora T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "dynamo_damage:17:phase_range:588",
+    "dynamo_damage:17:phase_abilities:589"
+   ],
+   "items": [
+    {
+     "name": "Mercurial Magnum",
+     "imbue": "1",
+     "caption": "Imbued on Kinetic Pulse: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s. Takes spirit from 11,200 to 16,000 invested: bonus 59 to 66 spirit power. Upgrade of Quicksilver Reload (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:13:imbue_reload:579",
+      "dynamo_damage:13:invest_step:578",
+      "dynamo_damage:13:upgrade_of:580"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:13:imbue_reload:579",
+       true,
+       ""
+      ],
+      [
+       "dynamo_damage:13:invest_step:578",
+       true,
+       "inventory spirit: before 11200, after 16000, threshold 16000"
+      ],
+      [
+       "dynamo_damage:13:upgrade_of:580",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Quantum Entanglement (movement) and Rejuvenating Aurora (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:14:cc_exposure:582"
+     ],
+     "lint": [],
+     "legacy_note": "Pop it before you ult so they can't stun you out of it.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:14:cc_exposure:582",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Reverb",
+     "imbue": "1",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 16,000 to 22,400 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "On Kinetic Pulse.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 22,400 to 28,800 invested: bonus 75 to 100 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 318s of base cooldown across your kit, 250s of it the ultimate; the item has its own cooldown of 300s.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:17:refresher:587"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:17:refresher:587",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Warp Stone? Buy what is killing you, cheapest first. Not dying? Skip. Sell Rapid Recharge.",
+   "desc": "Dying after Warp Stone? Buy what is killing you, cheapest first. Not dying? Skip. Sell Rapid Recharge.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:18:defence_bullet:594"
+     ],
+     "lint": [],
+     "legacy_note": "One gun hero is deleting you: Haze, Wraith, Vindicta.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:18:defence_bullet:594",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:18:defence_gun:595"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun and Metal Skin isn't enough.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:18:defence_gun:595",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:18:defence_spirit:596"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:18:defence_spirit:596",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:18:defence_parry:597"
+     ],
+     "lint": [],
+     "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:18:defence_parry:597",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:18:defence_purge:598"
+     ],
+     "lint": [],
+     "legacy_note": "Knockdown before it lands, Slowing Hex, Disarming Hex.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:18:defence_purge:598",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Reactive Barrier",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They stun you as you walk in.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 46.5 to Kinetic Pulse's damage (1.55x scaling), your steepest spirit scaling. Replaces Rapid Recharge: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:18:spirit_scaling:599",
+      "dynamo_damage:18:sell_swap:600"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Rapid Recharge for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:18:spirit_scaling:599",
+       true,
+       ""
+      ],
+      [
+       "dynamo_damage:18:sell_swap:600",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Superior Cooldown for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Echo Shard",
+     "imbue": "1",
+     "caption": "Imbued on Kinetic Pulse: resets its 26s cooldown for a second cast; the shard's own 30s cooldown grows by that ability's cooldown. Replaces Rapid Recharge: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:18:imbue_reset:603",
+      "dynamo_damage:18:sell_swap:604"
+     ],
+     "lint": [],
+     "legacy_note": "On Kinetic Pulse. Sell Rapid Recharge for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:18:imbue_reset:603",
+       true,
+       ""
+      ],
+      [
+       "dynamo_damage:18:sell_swap:604",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:18:defence_barrier:605"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:18:defence_barrier:605",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:18:upgrade_delta:606"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:18:upgrade_delta:606",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Juggernaut",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "dynamo_damage:18:upgrade_delta:608"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Enduring Speed.",
+     "temporary": false,
+     "verify": [
+      [
+       "dynamo_damage:18:upgrade_delta:608",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "dynamo_damage:18:temporary_sold:523": {
+   "id": "dynamo_damage:18:temporary_sold:523",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, for Unstoppable.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 18,
+    "item": "Extra Regen",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it for Unstoppable."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:0:spike_progress:524": {
+   "id": "dynamo_damage:0:spike_progress:524",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Recharging Rush completes 5,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Headshot Booster",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 5600,
+    "event": "Recharging Rush completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    5600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "dynamo_damage:0:component_for:525": {
+   "id": "dynamo_damage:0:component_for:525",
+   "kind": "component_for",
+   "phrase": "From Headhunter: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Headshot Booster",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 3200,
+    "event": "Headhunter"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Headhunter"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:1:spike_progress:526": {
+   "id": "dynamo_damage:1:spike_progress:526",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "dynamo_damage:1:threshold_now:527": {
+   "id": "dynamo_damage:1:threshold_now:527",
+   "kind": "threshold_now",
+   "phrase": "Kinetic Pulse (133) clears its 80-damage trigger.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_void_sphere",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_nikuman"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "80.0",
+    "133"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 1.66,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "dynamo_damage:1:component_for:528": {
+   "id": "dynamo_damage:1:component_for:528",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 11200,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:2:spike_progress:529": {
+   "id": "dynamo_damage:2:spike_progress:529",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Recharging Rush completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Headhunter",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Recharging Rush completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "dynamo_damage:2:upgrade_of:530": {
+   "id": "dynamo_damage:2:upgrade_of:530",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Headshot Booster (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 2,
+    "item": "Headhunter",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Headshot Booster"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:3:spike_progress:531": {
+   "id": "dynamo_damage:3:spike_progress:531",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Sprint Boots",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "dynamo_damage:3:component_for:532": {
+   "id": "dynamo_damage:3:component_for:532",
+   "kind": "component_for",
+   "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Sprint Boots",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Enduring Speed"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Enduring Speed"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:4:spike_complete:533": {
+   "id": "dynamo_damage:4:spike_complete:533",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (3,200 to 4,800 invested): bonus 18 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 4,
+    "item": "Recharging Rush",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "18.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "dynamo_damage:5:spike_progress:534": {
+   "id": "dynamo_damage:5:spike_progress:534",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Enduring Speed",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "dynamo_damage:5:upgrade_of:535": {
+   "id": "dynamo_damage:5:upgrade_of:535",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 5,
+    "item": "Enduring Speed",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Sprint Boots"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:6:spike_complete:536": {
+   "id": "dynamo_damage:6:spike_complete:536",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 6,
+    "item": "Warp Stone",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "dynamo_damage:6:phase_range:537": {
+   "id": "dynamo_damage:6:phase_range:537",
+   "kind": "phase_range",
+   "phrase": "Souls 0-10,400 (levels 1-17).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Warp Stone",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Warp Stone",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "10,400",
+    "1",
+    "17"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:6:phase_abilities:538": {
+   "id": "dynamo_damage:6:phase_abilities:538",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Kinetic Pulse T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Warp Stone",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Warp Stone",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:6:phase_spikes:546": {
+   "id": "dynamo_damage:6:phase_spikes:546",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Recharging Rush, vitality 4.8k at Warp Stone.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Warp Stone",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Warp Stone",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:6:phase_ult:547": {
+   "id": "dynamo_damage:6:phase_ult:547",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Singularity) is available from Sprint Boots.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Warp Stone",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Warp Stone",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:7:spike_progress:548": {
+   "id": "dynamo_damage:7:spike_progress:548",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Tankbuster",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "dynamo_damage:7:threshold_now:549": {
+   "id": "dynamo_damage:7:threshold_now:549",
+   "kind": "threshold_now",
+   "phrase": "Kinetic Pulse (312) clears its 165-damage trigger.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_void_sphere",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_nikuman"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 7,
+    "item": "Tankbuster",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "165.0",
+    "312"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 1.89,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "dynamo_damage:7:upgrade_of:550": {
+   "id": "dynamo_damage:7:upgrade_of:550",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Tankbuster",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:8:spike_complete:551": {
+   "id": "dynamo_damage:8:spike_complete:551",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 8,
+    "item": "Compress Cooldown",
+    "souls": 14400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "dynamo_damage:8:imbue_cooldown:552": {
+   "id": "dynamo_damage:8:imbue_cooldown:552",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Kinetic Pulse: takes 18% off its 26s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 8,
+    "item": "Compress Cooldown",
+    "souls": 14400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 1
+   },
+   "numbers": [
+    "18.0",
+    "26.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "dynamo_damage:8:component_for:553": {
+   "id": "dynamo_damage:8:component_for:553",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 8,
+    "item": "Compress Cooldown",
+    "souls": 14400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 6400,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:9:invest_step:554": {
+   "id": "dynamo_damage:9:invest_step:554",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Quicksilver Reload",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "dynamo_damage:9:imbue_reload:555": {
+   "id": "dynamo_damage:9:imbue_reload:555",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Kinetic Pulse: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_quick_silver",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 9,
+    "item": "Quicksilver Reload",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 1
+   },
+   "numbers": [
+    "18.0",
+    "10.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "dynamo_damage:9:component_for:556": {
+   "id": "dynamo_damage:9:component_for:556",
+   "kind": "component_for",
+   "phrase": "From Mercurial Magnum: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Quicksilver Reload",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 9600,
+    "event": "Mercurial Magnum"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Mercurial Magnum"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:10:spike_progress:557": {
+   "id": "dynamo_damage:10:spike_progress:557",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 7,200 of the 8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 10,
+    "item": "Extra Charge",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 7200
+   },
+   "numbers": [
+    "7200",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 8000
+  },
+  "dynamo_damage:10:component_for:558": {
+   "id": "dynamo_damage:10:component_for:558",
+   "kind": "component_for",
+   "phrase": "From Rapid Recharge: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 10,
+    "item": "Extra Charge",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Rapid Recharge"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Rapid Recharge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:10:charges:559": {
+   "id": "dynamo_damage:10:charges:559",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Kinetic Pulse (2 to 3).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_extra_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 10,
+    "item": "Extra Charge",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "1",
+    "2",
+    "3"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "dynamo_damage:11:invest_step:560": {
+   "id": "dynamo_damage:11:invest_step:560",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 7,200 to 9,600 invested: bonus 45 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Rapid Recharge",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "9600",
+    "45.0",
+    "52.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "dynamo_damage:11:upgrade_of:561": {
+   "id": "dynamo_damage:11:upgrade_of:561",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Rapid Recharge",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Charge"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:11:swap_candidate:562": {
+   "id": "dynamo_damage:11:swap_candidate:562",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Boundless Spirit later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 11,
+    "item": "Rapid Recharge",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Rapid Recharge",
+    "buyer": "Boundless Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:11:charges:563": {
+   "id": "dynamo_damage:11:charges:563",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Kinetic Pulse (3 to 4).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_rapid_recharge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 11,
+    "item": "Rapid Recharge",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "1",
+    "3",
+    "4"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "dynamo_damage:12:invest_step:564": {
+   "id": "dynamo_damage:12:invest_step:564",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 9,600 to 11,200 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "11200",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "dynamo_damage:12:upgrade_of:565": {
+   "id": "dynamo_damage:12:upgrade_of:565",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:12:swap_candidate:566": {
+   "id": "dynamo_damage:12:swap_candidate:566",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Witchmail later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Superior Cooldown",
+    "buyer": "Witchmail"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:12:cdr_rotation:567": {
+   "id": "dynamo_damage:12:cdr_rotation:567",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 318s; 20% off is 63.6s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_void_sphere",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_nikuman",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_self_vacuum"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "318",
+    "20.0",
+    "63.6"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "dynamo_damage:12:phase_range:568": {
+   "id": "dynamo_damage:12:phase_range:568",
+   "kind": "phase_range",
+   "phrase": "Souls 10,400-20,800 (levels 17-26).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "10,400",
+    "20,800",
+    "17",
+    "26"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:12:phase_abilities:569": {
+   "id": "dynamo_damage:12:phase_abilities:569",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Singularity T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Cooldown",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:12:phase_power:570": {
+   "id": "dynamo_damage:12:phase_power:570",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Kinetic Pulse, damage) grows from 288 to 406.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "288",
+    "406"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:12:phase_spikes:577": {
+   "id": "dynamo_damage:12:phase_spikes:577",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Compress Cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Superior Cooldown",
+    "souls": 20800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Superior Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:13:invest_step:578": {
+   "id": "dynamo_damage:13:invest_step:578",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 11,200 to 16,000 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Mercurial Magnum",
+    "souls": 25600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "16000",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "dynamo_damage:13:imbue_reload:579": {
+   "id": "dynamo_damage:13:imbue_reload:579",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Kinetic Pulse: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ethereal_bullets",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 13,
+    "item": "Mercurial Magnum",
+    "souls": 25600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 1
+   },
+   "numbers": [
+    "14.0",
+    "22.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "dynamo_damage:13:upgrade_of:580": {
+   "id": "dynamo_damage:13:upgrade_of:580",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Quicksilver Reload (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Mercurial Magnum",
+    "souls": 25600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Quicksilver Reload"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:14:invest_step:581": {
+   "id": "dynamo_damage:14:invest_step:581",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 11,200 invested, crossing the 6.4k, 8k, 11.2k tiers: bonus 38 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Unstoppable",
+    "souls": 32000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "11200",
+    "38.0",
+    "50.0",
+    "6.4k",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "dynamo_damage:14:cc_exposure:582": {
+   "id": "dynamo_damage:14:cc_exposure:582",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Quantum Entanglement (movement) and Rejuvenating Aurora (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 14,
+    "item": "Unstoppable",
+    "souls": 32000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "dynamo_damage:15:invest_step:583": {
+   "id": "dynamo_damage:15:invest_step:583",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 16,000 to 22,400 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Mystic Reverb",
+    "souls": 38400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "16000",
+    "22400",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "dynamo_damage:15:threshold_now:584": {
+   "id": "dynamo_damage:15:threshold_now:584",
+   "kind": "threshold_now",
+   "phrase": "Kinetic Pulse (453) clears its 100-damage trigger.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 15,
+    "item": "Mystic Reverb",
+    "souls": 38400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 100.0,
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "100.0",
+    "453"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 4.53,
+   "caveat": "item has no localisation text; trigger semantics are modelled",
+   "contradiction": false
+  },
+  "dynamo_damage:16:burn_trigger_modelled:585": {
+   "id": "dynamo_damage:16:burn_trigger_modelled:585",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Kinetic Pulse (494) = 494 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 16,
+    "item": "Spirit Burn",
+    "souls": 44800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "494",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "dynamo_damage:16:invest_step:586": {
+   "id": "dynamo_damage:16:invest_step:586",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 22,400 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Spirit Burn",
+    "souls": 44800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "22400",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "dynamo_damage:17:refresher:587": {
+   "id": "dynamo_damage:17:refresher:587",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 318s of base cooldown across your kit, 250s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_void_sphere",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_nikuman",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_self_vacuum"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 17,
+    "item": "Refresher",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "318",
+    "250",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "dynamo_damage:17:phase_range:588": {
+   "id": "dynamo_damage:17:phase_range:588",
+   "kind": "phase_range",
+   "phrase": "Souls 20,800-51,200 (levels 26-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 17,
+    "item": "Refresher",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Refresher",
+    "keys": []
+   },
+   "numbers": [
+    "20,800",
+    "51,200",
+    "26",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:17:phase_abilities:589": {
+   "id": "dynamo_damage:17:phase_abilities:589",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Quantum Entanglement T3, Rejuvenating Aurora T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 17,
+    "item": "Refresher",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Refresher",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:18:defence_bullet:594": {
+   "id": "dynamo_damage:18:defence_bullet:594",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Metal Skin",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "One gun hero is deleting you: Haze, Wraith, Vindicta."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:18:defence_gun:595": {
+   "id": "dynamo_damage:18:defence_gun:595",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Plated Armor",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun and Metal Skin isn't enough."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:18:defence_spirit:596": {
+   "id": "dynamo_damage:18:defence_spirit:596",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Spirit Resilience",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:18:defence_parry:597": {
+   "id": "dynamo_damage:18:defence_parry:597",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Counterspell",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:18:defence_purge:598": {
+   "id": "dynamo_damage:18:defence_purge:598",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Dispel Magic",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Knockdown before it lands, Slowing Hex, Disarming Hex."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:18:spirit_scaling:599": {
+   "id": "dynamo_damage:18:spirit_scaling:599",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 46.5 to Kinetic Pulse's damage (1.55x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 18,
+    "item": "Boundless Spirit",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Rapid Recharge for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "30.0",
+    "46.5",
+    "1.55"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "dynamo_damage:18:sell_swap:600": {
+   "id": "dynamo_damage:18:sell_swap:600",
+   "kind": "sell_swap",
+   "phrase": "Replaces Rapid Recharge: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Boundless Spirit",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Rapid Recharge for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Rapid Recharge",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Rapid Recharge"
+  },
+  "dynamo_damage:18:invest_step:601": {
+   "id": "dynamo_damage:18:invest_step:601",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 11,200 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_dynamo m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Witchmail",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Superior Cooldown for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "17600",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "dynamo_damage:18:sell_swap:602": {
+   "id": "dynamo_damage:18:sell_swap:602",
+   "kind": "sell_swap",
+   "phrase": "Replaces Superior Cooldown: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Witchmail",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Superior Cooldown for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Superior Cooldown",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Superior Cooldown"
+  },
+  "dynamo_damage:18:imbue_reset:603": {
+   "id": "dynamo_damage:18:imbue_reset:603",
+   "kind": "imbue_reset",
+   "phrase": "Imbued on Kinetic Pulse: resets its 26s cooldown for a second cast; the shard's own 30s cooldown grows by that ability's cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_power_shard",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_stomp"
+   ],
+   "score": 55,
+   "point": {
+    "idx": 18,
+    "item": "Echo Shard",
+    "souls": 51200,
+    "noncore": true,
+    "imb": 1,
+    "note": "On Kinetic Pulse. Sell Rapid Recharge for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_nonult",
+    "slot": 1
+   },
+   "numbers": [
+    "26.0",
+    "30"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "dynamo_damage:18:sell_swap:604": {
+   "id": "dynamo_damage:18:sell_swap:604",
+   "kind": "sell_swap",
+   "phrase": "Replaces Rapid Recharge: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Echo Shard",
+    "souls": 51200,
+    "noncore": true,
+    "imb": 1,
+    "note": "On Kinetic Pulse. Sell Rapid Recharge for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Rapid Recharge",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Rapid Recharge"
+  },
+  "dynamo_damage:18:defence_barrier:605": {
+   "id": "dynamo_damage:18:defence_barrier:605",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Divine Barrier",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:18:upgrade_delta:606": {
+   "id": "dynamo_damage:18:upgrade_delta:606",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Transcendent Cooldown",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:18:upgrade_of:607": {
+   "id": "dynamo_damage:18:upgrade_of:607",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Transcendent Cooldown",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "dynamo_damage:18:upgrade_delta:608": {
+   "id": "dynamo_damage:18:upgrade_delta:608",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_juggernaut",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cardio_calibrator"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Juggernaut",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Enduring Speed"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "40",
+    "25",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "dynamo_damage:18:upgrade_of:609": {
+   "id": "dynamo_damage:18:upgrade_of:609",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Enduring Speed (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Juggernaut",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Enduring Speed"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "dynamo_damage",
+   "item": "Headshot Booster",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Recharging Rush completes 4.8k weapon in 5600 souls (~5.6 min), 4 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "dynamo_damage:0:spike_progress:524",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Recharging Rush completes 5,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 5600,
+      "event": "Recharging Rush completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "dynamo_damage:0:component_for:525",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Headhunter: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 3200,
+      "event": "Headhunter"
+     }
+    }
+   ]
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Headhunter",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Recharging Rush completes 4.8k weapon in 2400 souls (~2.4 min), 2 purchases",
+   "souls": 4000,
+   "unpublished": [
+    {
+     "id": "dynamo_damage:2:spike_progress:529",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Recharging Rush completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Recharging Rush completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Sprint Boots",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Warp Stone, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 4800,
+   "unpublished": [
+    {
+     "id": "dynamo_damage:3:component_for:532",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Enduring Speed"
+     }
+    }
+   ]
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Enduring Speed",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Warp Stone, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 7200,
+   "unpublished": []
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Warp Stone",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Teleport into the middle of them, then ult."
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Compress Cooldown",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Kinetic Pulse."
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Quicksilver Reload",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Kinetic Pulse."
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Unstoppable",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Pop it before you ult so they can't stun you out of it."
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Mystic Reverb",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Kinetic Pulse."
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "One gun hero is deleting you: Haze, Wraith, Vindicta."
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun and Metal Skin isn't enough."
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Knockdown before it lands, Slowing Hex, Disarming Hex."
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Reactive Barrier",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 51200,
+   "unpublished": []
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Reactive Barrier",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They stun you as you walk in."
+  },
+  {
+   "build": "dynamo_damage",
+   "item": "Echo Shard",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Kinetic Pulse. Sell Rapid Recharge for this."
+  }
+ ],
+ "stats": {
+  "g": 5,
+  "b": 2,
+  "a": 21,
+  "c": 2,
+  "d": 1
+ }
+}

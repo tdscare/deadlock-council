@@ -1,0 +1,47 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: celeste_carry
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:15Z
+BODY-SHA: 0500389889f738ec9faa3248408c693230a940c42ff89167dec89607b1356659
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Early · L-R              -> main path (sequential): High-Velocity Rounds, Extra Regen, Opening Rounds, Kinetic Dash, Swift Striker, Extra Health, Quicksilver Reload, Mystic Regeneration
+  Mid · L-R                -> main path (sequential): Radiant Regeneration, Healing Booster, Fortitude, Mercurial Magnum, Extra Charge, Rapid Recharge, Spirit Lifesteal
+  Late · L-R               -> main path (sequential): Spiritual Overflow, Spirit Rend, Unstoppable, Toxic Bullets, Witchmail, Spellslinger
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Ethereal Shift, Metal Skin, Plated Armor, Bullet Resilience, Spirit Resilience, Dispel Magic, Counterspell
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Ricochet, Inhibitor, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Healing Tempo
+
+## SALE CHECKLIST (computed)
+- Late · L-R (main path): buy Witchmail, sell Opening Rounds
+    function of Opening Rounds: stats only; replacement Witchmail: cooldown, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Opening Rounds is a component of later items: no
+    held for 44800.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 17600/11200/12800 -> 16000/17600/12800; thresholds lost: none
+    trade ratio after the sale 0.22; selling Kinetic Dash instead: 0.23 (+3.0%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- Late · L-R (main path): buy Spellslinger, sell Swift Striker
+    function of Swift Striker: fire_rate; replacement Spellslinger: ammo, cooldown, fire_rate; roles lost: none  [VERIFIED GAME MECHANIC]
+    Swift Striker is a component of later items: no
+    held for 47200.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 16000/17600/12800 -> 20800/17600/12800; thresholds lost: none
+    trade ratio after the sale 0.20; selling Kinetic Dash instead: 0.20 (-0.4%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Ricochet, sell Spirit Rend
+    function of Spirit Rend: resist_shred, sustain; replacement Ricochet: fire_rate; roles lost: resist_shred, sustain  [VERIFIED GAME MECHANIC]
+    Spirit Rend is a component of later items: no
+    held for 27200.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 20800/17600/12800 -> 24000/17600/12800; thresholds lost: none
+    trade ratio after the sale 0.17; selling Kinetic Dash instead: 0.18 (+2.8%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Inhibitor, sell Toxic Bullets
+    function of Toxic Bullets: bullet_proc; replacement Inhibitor: bullet_proc; roles lost: none  [VERIFIED GAME MECHANIC]
+    Toxic Bullets is a component of later items: no
+    held for 17600.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 20800/17600/12800 -> 17600/24000/12800; thresholds lost: none
+    trade ratio after the sale 0.18; selling Kinetic Dash instead: 0.18 (-1.5%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

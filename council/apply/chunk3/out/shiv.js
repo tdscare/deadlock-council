@@ -1,0 +1,260 @@
+{
+ "id": "shiv",
+ "hk": "hero_shiv",
+ "hero": "Shiv",
+ "tag": "New",
+ "name": "Rizuhble's Stabby McStabface",
+ "desc": "Spirit Shiv",
+ "abil": [
+  "Serrated Knives",
+  "Slice and Dice",
+  "Bloodletting",
+  "Killing Blow"
+ ],
+ "order": [
+  1,
+  1,
+  2,
+  2,
+  3,
+  1,
+  4,
+  3,
+  4,
+  4,
+  2,
+  2,
+  1,
+  3,
+  3,
+  4
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Getting poked out in lane. Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Mystic Regeneration",
+      ""
+     ],
+     [
+      "Extra Charge",
+      ""
+     ],
+     [
+      "Radiant Regeneration",
+      ""
+     ],
+     [
+      "Compress Cooldown",
+      "On Slice and Dice.",
+      "2"
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Enchanter's Emblem",
+      ""
+     ],
+     [
+      "Spirit Lifesteal",
+      ""
+     ],
+     [
+      "Grit",
+      ""
+     ],
+     [
+      "Spirit Shielding",
+      ""
+     ],
+     [
+      "Torment Pulse",
+      ""
+     ],
+     [
+      "Mystic Vulnerability",
+      ""
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Rapid Recharge",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Mid · cont.",
+    "",
+    false,
+    [
+     [
+      "Healbane",
+      ""
+     ],
+     [
+      "Decay",
+      ""
+     ],
+     [
+      "Leech",
+      ""
+     ],
+     [
+      "Dispel Magic",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Mystic Reverb",
+      "On Slice and Dice.",
+      "2"
+     ],
+     [
+      "Escalating Exposure",
+      ""
+     ],
+     [
+      "Spirit Burn",
+      "Sell Healbane for this."
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Spirit Shielding if needed. Ahead? Skip it until you're dying. Sell Decay for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "Their gun carry melts you when you dash in."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun."
+     ],
+     [
+      "Spirit Resilience",
+      "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+     ],
+     [
+      "Spellbreaker",
+      "Big spirit bursts drop you before Bloodletting helps."
+     ],
+     [
+      "Counterspell",
+      "A big ult or stun you can see coming."
+     ],
+     [
+      "Unstoppable",
+      "Stuns keep catching you before you can dash."
+     ],
+     [
+      "Ethereal Shift",
+      "They jump you and you've no dash left."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Boundless Spirit",
+      "Sell Enchanter's Emblem for this."
+     ],
+     [
+      "Witchmail",
+      "Sell Spirit Shielding for this."
+     ],
+     [
+      "Cheat Death",
+      "Sell Decay for this."
+     ],
+     [
+      "Superior Duration",
+      "Full rage, bleeds and deferred damage all last longer. Sell Torment Pulse for this."
+     ],
+     [
+      "Divine Barrier",
+      "Sell Dispel Magic for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Style change: spirit-knife bleed build to a Slice and Dice dash build. Renamed. Slice and Dice is maxed first (T1 takes the cooldown from 16s to 10s, T3 adds +50 impact and -2s per hero hit); knives are maxed last. No mine/shiv.txt exists, so the style reference is the public dash build (lockbuilds 'MONK LORD SHIV': Cold Front, Radiant Regeneration, Torment Pulse core; Spirit Lifesteal, Compress Cooldown, Ethereal Shift, Mystic Reverb; Escalating Exposure, Transcendent Cooldown, Arctic Blast as upgrades) plus tracklock item rates.",
+  "Out: Extra Charge/Rapid Recharge (knife charges, not needed for dashes), Bullet Lifesteal/Leech, Veil Walker, Spirit Burn. In: Mystic Burst to Tankbuster on the dash (impact 75 + 1.2x spirit clears both thresholds with Extra Spirit, and 75 + 50 + 1.2x spirit at T3), Cold Front to Arctic Blast (public dash core; 9% pick, 51% WR), Grit to Reactive Barrier, Infuser, Improved to Boundless (54% WR). Mystic Reverb moves from last to mid-late (56% WR, highest-WR Shiv item at 16.6% pick).",
+  "Spikes: spirit 4.8k at 4.8k souls (Mystic Regen, Extra Spirit, Mystic Burst, Radiant Regen), health 4.8k at 9.6k (Enduring Speed, Spirit Lifesteal, Reactive Barrier; before it was 12k), spirit 6.4k and 8k land exactly on Cold Front and Compress Cooldown, 16k exactly on Tankbuster at 20.8k. Infuser at 25.6k takes health to 9.6k before the first fresh 6.4k (Reverb at 36.8k).",
+  "Core 12 slots at 51.2k (was 52.8k): Radiant, Boundless, Tankbuster, Enduring Speed, Infuser, Reactive Barrier, Arctic Blast, Superior Cooldown, Torment Pulse, Escalating Exposure, Mystic Reverb, Decay. Decay kept as the 12th/sell slot (16.7% pick) for the Killing Blow threshold. Counters sell Decay; Ethereal Shift (55% WR, 13% pick) added to counters as the no-dash-left escape. Echo Shard on the dash and Refresher in rich, Transcendent Cooldown and Juggernaut slot locked.",
+  "Ability order: Dash style: Slice and Dice maxed first (T1 -6s CD, T3 +50 dmg and CD refund per hero hit), knives T1 kept cheap for bleed uptime, Killing Blow T1/T2 by 10 like the mobalytics grid (ult T2 at 9 = 83%), Bloodletting and remaining knife points last; public grid is knife-build dominated (knives 5-7) so only its unlock order and ult timing were used. Note cur_shiv.js is still the spirit-knife item plan.",
+  "Item fit: Extra Spirit + Mystic Burst (early 800s) → Cold Front moved into lane. Dash impact is 75 +1.2x spirit, so Mystic Burst/Tankbuster and the Extra/Improved/Boundless line aren't what the public dash builds buy: neither MONK LORD dash (17.8k) nor Spirit Shiv Perfected has them, and none appear in tracklock's pro top-24. MONK LORD's core is Cold Front + Radiant Regen; Mystic Regen + Cold Front + Radiant still lands 4.8k spirit at 4.8k souls.",
+  "Item fit: Cold Front's old mid slot → Healbane (1600). Both public dash builds have it core (MONK 'main 4.8', Perfected lane), tracklock pro 44%; Killing Blow executes and the heal on kill fires off it.",
+  "Item fit: Improved Spirit + Tankbuster upgrades → Dispel Magic (3200, mid). Tracklock pro 80% (mid), MONK LORD core; dash range is 12m, so slows/hexes/silences stop him getting in. Divine Barrier added to rich as its pricier version.",
+  "Item fit: Infuser → Leech (same Spirit Lifesteal upgrade, same +4800). His spirit damage comes in bursts (one dash every ~10s after cooldowns, knife bleed 1/s), so a 7s window on a 30s cooldown is mostly wasted; Leech is always on and is late core in Spirit Shiv Perfected (Infuser is only an optional there).",
+  "Item fit: Boundless Spirit removed (no public dash build has it core, and it took the build to 51.2k); total now 46.4k. Rich Echo Shard and Refresher → Spirit Burn (Perfected late core) and Scourge (MONK upgrades): neither old item shows in any public Shiv build. Indomitable kept (MONK), note fixed to the rich wording.",
+  "Spikes now: spirit 4.8k at 4.8k (Mystic Regen, Cold Front, Radiant), health 4.8k at 9.6k (Reactive Barrier), spirit 11.2k on Mystic Vulnerability, 16k on Decay, health 14.4k after Leech.",
+  "Threshold: Mystic Reverb on Slice and Dice at 36.8k: dash T2 75+1.2x136 = 238 vs 100. Spirit Burn (rich, after core, SP 164+): dash 272 + Reverb echo 136 + knife bleeds vs 500 in 5s. No change.",
+  "Round 8: Decay kept, note fixed. Sep 16 cut Decay's DPS 25%: now 1.95% +0.003x spirit of current health per second for 12s, non-lethal, so at its 22.4k buy (114 spirit) it takes about 24% of their current health and can't take them under Killing Blow's 28% (T3) on its own. Old note 'Gets them low enough for Killing Blow' was false. Still mid core in lockbuilds 'Spirit Shiv Perfected' (updated Oct 17, after Shiv's last change Sep 16).",
+  "Round 8: Spirit Burn (rich) note fixed. Since Jul 28 it hits one target (explosion 50), so 'whoever you dash through' was false.",
+  "Round 8: Radiant Regeneration kept after its Aug 22 / Sep 16 / Oct 14 nerfs (65 +1.7 per boon heal, 6s cooldown): tracklock pro Shiv, last 30 days (Sep 19-Oct 19, 358 games) buys it in 100% of games; MONK LORD dash build (Sep 20) has it core. Healbane (tracklock 44%) and Dispel Magic (80%) also confirmed.",
+  "Round 9: kept the spirit dash build (Kieran: Spirit Shiv). Same-style check against Spirit Shiv Perfected (lockbuilds 800426, Oct 17) and MONK LORD (339573, Sep 20): Mystic Regen → Radiant, Healbane, Decay, Torment Pulse, Compress → Superior Cooldown, Mystic Vulnerability → Escalating Exposure, Mystic Reverb and Leech all match; no token items or early items that do nothing.",
+  "Round 11: Leech now before Dispel Magic, so the 6.4k buys from 25.6k are no longer four in a row (Leech 27.2k, Dispel Magic 30.4k, then Mystic Reverb, Escalating Exposure, Arctic Blast late). No pivot: dash assassin, no other job in the kit.",
+  "Round 13: notes cut to niche tips, timings, imbue targets, sells and upgrades only (Kieran 00:05); desc is now just the style label.",
+  "Round 13: items not in spirit Shiv builds swapped for ones that are, from Spirit Shiv Perfected (lockbuilds, Lockbuilds Team, Oct 17, top Shiv players: Monster Rounds, Mystic Regeneration, Extra Charge, Healbane, Enchanter's Emblem, Radiant Regeneration; Healing Booster, Decay, Torment Pulse, Compress Cooldown, Mystic Vulnerability, Superior Cooldown; Spirit Shielding, Dispel Magic optional; Escalating Exposure, Mystic Reverb, Spirit Burn, Transcendent, Leech). Cold Front→Arctic Blast out (Extra Charge on Serrated Knives, which has 2 charges, plus Compress Cooldown take its spirit; Spirit Burn takes Arctic Blast's late slot), Sprint Boots→Enduring Speed out for Enchanter's Emblem, Grit→Reactive Barrier now Grit→Spirit Shielding. Indomitable, Scourge, Spirit Burn (now core) and Juggernaut left the optional boxes.",
+  "Round 14: notes cut to the allowed kinds (\"Upgrade.\" notes, Extra Charge's duplicate sell note, Mystic Reverb's card restatement and Divine Barrier's item explanation emptied; sells and imbue targets kept). Counterspell note: unverified 'lift or long channel' dropped. Items re-checked against Spirit Shiv Perfected (Oct 17/18), PREDATOR HUNTER SHIV (Oct 16) and MONK LORD (Sep 20): all in at least one; no item changes.",
+  "Round 15: ability order now seemeta's most popular Shiv order through point 10 (Knives, Knives, Slice, Bloodletting, Knives, Slice, ult, Knives, ult, ult; 3,319 matches, Oct 5-19), then Slice T2/T3 before Bloodletting because Compress Cooldown and Mystic Reverb sit on Slice. The old order unlocked the ult at point 4 and left Slice locked at tier 0 until 9.6k souls, and its log claim that it followed seemeta was false.",
+  "Round 17: Spirit Resilience note drops 'ticking'. Lane sell note unified ('Sell it once you're out of slots.'). Dispel Magic note left empty (the site no longer fills empty notes).",
+  "Round 20: Extra Charge now upgrades to Rapid Recharge (knives have 2 charges) instead of being sold; Spirit Burn sells Healbane. Late list: Boundless, Witchmail, Cheat Death (Spirit Shiv Perfected late box), Divine Barrier last. Total ~78k.",
+  "Round 23: kit check. Killing Blow's rage hold (12s), the knife bleed (7s at T1), Bloodletting's deferred damage (6s) and Slice and Dice's spirit resist debuff (14s) all scale with duration, so Superior Duration goes into the late list before Divine Barrier, selling Torment Pulse.",
+  "Round 25: points reordered for spirit dash Shiv: Slice T1 at L4, Bloodletting T1 (-15s) and Killing Blow T1/T2 (+16% all damage in full rage) before Slice T2/T3, Knives T3 after, Bloodletting T2/T3 and ult T3 last.",
+  "Round 26 (cost): Rapid Recharge moved up after Superior Cooldown (Extra Charge sat idle until the last buy; spirit 16k now at 24.0k); Healbane to Mid cont."
+ ]
+}

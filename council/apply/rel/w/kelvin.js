@@ -1,0 +1,256 @@
+{
+ "id": "kelvin",
+ "hero": "Kelvin",
+ "tag": "Fix",
+ "name": "Rizuhble's Fridge Tank Kelvin",
+ "desc": "Tanky damage Kelvin",
+ "hk": "hero_kelvin",
+ "abil": [
+  "Frost Grenade",
+  "Ice Path",
+  "Arctic Beam",
+  "Frozen Shelter"
+ ],
+ "order": [
+  1,
+  1,
+  3,
+  2,
+  1,
+  2,
+  4,
+  3,
+  3,
+  2,
+  3,
+  1,
+  2,
+  4,
+  4,
+  4
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Health",
+      "Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Charge",
+      ""
+     ],
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Torment Pulse",
+      ""
+     ],
+     [
+      "Extra Regen",
+      ""
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Healing Booster",
+      ""
+     ],
+     [
+      "Spirit Lifesteal",
+      ""
+     ],
+     [
+      "Healbane",
+      ""
+     ],
+     [
+      "Mystic Vulnerability",
+      ""
+     ],
+     [
+      "Compress Cooldown",
+      "On the beam.",
+      "3"
+     ],
+     [
+      "Mystic Expansion",
+      "On Frost Grenade.",
+      "1"
+     ],
+     [
+      "Duration Extender",
+      "On the beam.",
+      "3"
+     ],
+     [
+      "Infuser",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Rapid Recharge",
+      ""
+     ],
+     [
+      "Escalating Exposure",
+      ""
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Bullet Resilience",
+      ""
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Witchmail",
+      ""
+     ],
+     [
+      "Greater Expansion",
+      ""
+     ],
+     [
+      "Superior Duration",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Healbane if needed. Ahead? Skip it until you're dying. Sell Healing Booster for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "One gun hero is deleting you: Haze, Wraith, Vindicta."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun and Metal Skin isn't enough."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult."
+     ],
+     [
+      "Dispel Magic",
+      "Knockdown, Slowing Hex, Disarming Hex."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit: Seven, Infernus, Geist, Vyper."
+     ],
+     [
+      "Unstoppable",
+      "Stuns keep cancelling your beam."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Spirit Burn",
+      "Sell Healbane for this."
+     ],
+     [
+      "Mystic Reverb",
+      "On the grenade. Sell Torment Pulse for this.",
+      "1"
+     ],
+     [
+      "Scourge",
+      "Cast it on yourself before you walk in. Sell Bullet Resilience for this."
+     ],
+     [
+      "Echo Shard",
+      "On the beam. Sell Superior Duration for this.",
+      "3"
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ],
+     [
+      "Healing Tempo",
+      "Upgrade of Healing Booster."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Divine Barrier (fresh T4 at 49.6k, a support item) swapped for Spirit Burn at the same price: this is a damage build and Spirit Burn is the last core item on both tracklock's and deadlocked.gg's Kelvin build. Divine Barrier moves to Counters (pro Kelvin buys it 52% mid, so it's there when the team needs it).",
+  "Spirit Burn is no longer in rich, so Healbane stays core as the 4.8k green piece (its note now says it gets sold for a counter). Rich is now Echo Shard on the beam (sell Enchanter's) and Mystic Reverb on the grenade (sell Healbane), both from Kieran's in-game rich box.",
+  "No other item changes: Extra Spirit → Improved Spirit (pro 96%/89%), Healing Booster (93%), Healbane (59%), Mystic Expansion and Compress Cooldown (56%), Superior Cooldown (63%), Boundless (52%), Greater Expansion (44%), Superior Duration (33%) all match tracklock pro. Pro also likes Arcane Surge (59% early) and tracklock's core has Torment Pulse; both left out, Torment Pulse because it wants you in melee range and Arcane Surge because Enchanter's already fills that slot.",
+  "Spikes unchanged: spirit 4.8k at 4.8k, health 4.8k at 9.6k. Core 12 slots, 49.6k.",
+  "Suppressor dropped from Counters to keep the box at 8 after adding Divine Barrier: the beam already cuts fire rate by 20% on its own.",
+  "Ability order: Consensus: unlock 1, 3, 2, ult, Grenade T1/T2, then the cheap Beam T1 and Ice Path T1/T2, Grenade max at point 10, Beam T2/T3, ult last. Ours is that path exactly.",
+  "Round 9: Mystic Expansion moved out of lane (2.4k) to Mid (~12.8k); Compress Cooldown on the beam moved into its lane slot (13.6k to 3.2k). +20% range on a 25m beam doesn't win lane trades, a 28s beam coming back faster does. tracklock.gg pro builds, last 30 days, checked 2026-10-19: Mystic Expansion 56% mid. Spirit still 4.8k at 4.8k (Extra Spirit, Improved, Compress Cooldown, Mystic Vulnerability); Extra Charge moves to after the health spike, right before its Rapid Recharge upgrade. Same items, same 49.6k total.",
+  "Round 11: 6.4k run fixed: Escalating Exposure 24k, Boundless 28.8k and Refresher were three in a row from 24k, so Superior Duration (the 1.6k upgrade) now sits between Boundless and Refresher. New pivot 'No other support?': healer Kelvin (grenade heals 60+0.8x spirit, dome 90+0.2x regen) with Rescue Beam instead of Healbane, Healing Tempo instead of Escalating Exposure (moved out of Slot locked, no duplicate), Healing Nova instead of Spirit Burn.",
+  "Round 12: 'No other support?' role pivot removed (healer Kelvin becomes its own build next round). Duration Extender note: the beam itself lasts longer (5s to 6.1s), which is more damage, not only a longer slow. Refresher note: also resets the beam. Vyper spelt right. Checked all 10 types: Compress/Mystic Expansion/Duration Extender/Echo Shard on Arctic Beam (the damage, cast every 28s), Mystic Reverb on the grenade (only ability clearing its 100 per hit), Healbane fed by beam and grenade, no duplicates, no late 800s.",
+  "Round 13: notes cut to what a player wouldn't know (UPDATE 3), desc is a short style label (UPDATE 4), Counters notes name the right heroes (Spirit Resilience: real spirit-damage heroes, no Haze; Counterspell: a parryable ability). Extra Charge checked: Frost Grenade has 2 charges in the files, so it makes 3.",
+  "Round 14: rebuilt as the tank damage-dealer Kelvin Kieran asked for (old build ended at 11.2k health). Base: the current tanky beam builds on lockbuilds, Julien 'Carry Beam Kelvin' (Oct 2: Extra Charge, Extra Spirit, Torment Pulse, Healing Booster, Healbane, Spirit Lifesteal, then Mystic Vulnerability, Escalating Exposure, Mystic Expansion, Rapid Recharge, Improved/Boundless, Greater Expansion, Superior Cooldown, Infuser, Spirit Burn, Transcendent, greens) and Radinal's carry beam (Oct 1: Extra Charge, Extra Spirit, Extra Regen, Torment Pulse, Healing Booster, Healbane, Mystic Expansion, Rapid Recharge, Superior Cooldown, Escalating Exposure, Spirit Lifesteal, Boundless, Greater Expansion, Superior Duration, Infuser, Duration Extender, Compress Cooldown), plus Witchmail and Bullet Resilience from Aspartagoose's tank Kelvin (Sep 29). Spikes: spirit 4.8k at 4.8k (Extra Charge, Extra Spirit, Torment Pulse), health 4.8k at 10.4k, then Infuser, Witchmail and Bullet Resilience take health to 19.2k. Out: Enchanter's Emblem (needs you above 65% health, wrong for a tank), Refresher, Spirit Burn moved to rich as Healbane's pricier version, Mystic Slow and Divine Barrier out of Counters (Divine Barrier is now Dispel Magic's rich upgrade), Echo Shard and Mystic Reverb out of rich (not pricier versions of anything in the build). Ability order: seemeta's highest-win-rate Kelvin order (63.4% WR, 1,084 matches, Oct 5-19), which maxes the beam first and takes Ice Path T1 (35% bullet resist for Kelvin on the path) at point 6. Name/desc now say tanky.",
+  "Round 15: Tankier mid game for the tank damage-dealer: Infuser moved ahead of Rapid Recharge (8k health at 20.8k, was 23.2k after 12.8k of straight spirit buys) and Bullet Resilience ahead of Boundless (11.2k health at 32.8k, was 40.8k); Duration Extender before Infuser so no fresh T2 comes after 16k; Spirit Lifesteal before Healbane (health 4.8k still at 10.4k). Counters desc was 120 characters (limit 112): now 'Get after Healbane ... Sell Healing Booster for it.' (112). Same items and totals.",
+  "Round 17: Divine Barrier rich note unified: 'If you bought Dispel Magic, sell it for this.' (Dispel Magic is in Counters).",
+  "Round 19: checked against current public builds of this style; it is a real style, no changes.",
+  "Round 20: Late list filled to ~75k: rich is now Spirit Burn, Mystic Reverb on the grenade, Scourge, Echo Shard on the beam, then Divine Barrier, each selling the weakest item left; Healing Tempo added to Slot locked so Healing Booster upgrades.",
+  "Round 23: Mystic Expansion moved from Arctic Beam to Frost Grenade: beam range (25m) rarely matters for a Kelvin standing in them, a bigger grenade (+44% area) hits more of them and heals more mates on every charge.",
+  "Round 25: order 1132124333212444 → 1132124332312444: Ice Path T2 (cd 50→25, more uptime of its 35% bullet resist) before Arctic Beam T3.",
+  "Cost pass: renamed Fridge Tank Kelvin; no item changes."
+ ]
+}

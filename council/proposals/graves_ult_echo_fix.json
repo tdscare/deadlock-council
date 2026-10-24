@@ -1,0 +1,22 @@
+{
+ "id": "graves_ult",
+ "buildFile": "council/work/graves_ult_echo_fix.js",
+ "reason": "Echo Shard is imbued on Borrowed Decree, which is Graves' ultimate, but the item's imbue type is IMBUE_ACTIVE_NON_ULT and its text says 'Reset the cooldown of the imbued non-ultimate ability' (data fact, citations in the evidence file). Move the imbue to Grasping Hands, the only other Graves ability that has a plain cooldown (34 s, 20 s at T4), and correct the Refresher note that claimed an Echo Shard + ult interaction. Nothing else in the build changes: no item added, removed or reordered.",
+ "evidence": [
+  {
+   "path": "council/evidence/interactions/imbue_audit/graves_ult_echo_shard.txt",
+   "kind": "data",
+   "note": "abilities.vdata line 223097 IMBUE_ACTIVE_NON_ULT, line 275318 EAbilityType_Ultimate, heroes.vdata line 108517, item text"
+  },
+  {
+   "path": "gt6819/game/citadel/pak01_dir/scripts/abilities.vdata",
+   "kind": "data",
+   "note": "upgrade_ability_power_shard m_TargetAbilityEffectsToApply (line 223097); ability_necro_gravestone m_eAbilityType Ultimate (line 275318); Grasping Hands cooldown fields"
+  },
+  {
+   "path": "council/evidence/interactions/imbue_audit/imbue_audit.json",
+   "kind": "data",
+   "note": "all-81-build scan: this is the only ACTIVE_NON_ULT item on an ultimate"
+  }
+ ]
+}

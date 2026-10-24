@@ -1,0 +1,75 @@
+# solomon_support | Solomon | Rizuhble's Protect The King
+abilities: 1=Setup Bishop (ability_chessmaster_throwbishop, start_trained=false, Signature) / 2=Kingside Knight (ability_chessmaster_knightbuff, start_trained=false, Signature) / 3=Rook Battery (ability_chessmaster_forkpiece, start_trained=false, Signature) / 4=Develop Queen (ability_chessmaster_queen, start_trained=false, Ultimate)
+order: 1122324432413431
+model A (data):  Setup Bish:U@0  Setup Bish:T1@200  Kingside K:U@500  Kingside K:T1@900  Rook Batte:U@1400  Kingside K:T2@2600  Develop Qu:U@3200  Develop Qu:T1@3900  Rook Batte:T1@4600  Kingside K:T3@8400  Develop Qu:T2@10100  Setup Bish:T2@11900  Rook Batte:T2@13800  Develop Qu:T3@20600  Rook Batte:T3@32100  Setup Bish:T3@48600
+model B (old):   Setup Bish:T1@200  Setup Bish:T2@900  Kingside K:T1@2000  Kingside K:T2@2600  Rook Batte:T1@3900  Kingside K:T3@4600  Develop Qu:U@5300  Develop Qu:T1@6000  Rook Batte:T2@6800  Develop Qu:T2@8400  Setup Bish:T3@9200  Rook Batte:T3@10100  Develop Qu:T3@11000
+tier upgrades: Setup Bishop: MoveDistance+5,FadingSlowPercent+15 / MaxPieces+1,RecastWindow+8 / TechArmorDamageReductionPerStack-2.5,MaxStacks+10,StackDuration+10,TileSteps+1 | Kingside Kni: AbilityCooldown-8 / Stamina+1,CombatBarrier+80 / MaxPieces+1,BonusTargetRadius+20,RemoveDebuffs+1 | Rook Battery: FireRateSlow+25,DebuffDuration+5 / CurrentHealthPercent+5 / AbilityCooldown-12,ImmobilizeDuration+0.5,MaxReflectCount+1 | Develop Quee: AbilityCooldown-40 / CheckmateThreshold+200,CheckmateThreshold+5x,SlowPercent+15 / TileSteps+1,QueenBonusMoves+2
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1    19  Extra Spirit
+        Setup Bish T1 ch1 cd12 ImpactDa=108,Damage=37 | Kingside K U ch1 cd25 | Rook Batte L[U] | Develop Qu L
+  1600 L5   2    21  Healing Rite
+        Setup Bish T1[T2] ch1 cd12 ImpactDa=113,Damage=39 | Kingside K T1[U] ch1 cd17 | Rook Batte U ch1 cd33 Damage=78 | Develop Qu L
+  2400 L6   3    22  High-Velocity Rounds
+        Setup Bish T1[T2] ch1 cd12 ImpactDa=115,Damage=39 | Kingside K T1 ch1 cd17 | Rook Batte U ch1 cd33 Damage=79 | Develop Qu L
+  3200 L8   4    32  Opening Rounds
+        Setup Bish T1[T2] ch1 cd12 ImpactDa=133,Damage=45 | Kingside K T2 ch1 cd17 | Rook Batte U ch1 cd33 Damage=91 | Develop Qu U[L] ch1 cd210 Damage=164,DPS=72
+  4000 L9   5    33  Grit
+        Setup Bish T1[T2] ch1 cd12 ImpactDa=136,Damage=46 | Kingside K T2 ch1 cd17 | Rook Batte U[T1] ch1 cd33 Damage=93 | Develop Qu T1[L] ch1 cd170 Damage=166,DPS=73
+  4800 L10  6    34  Extra Stamina
+        Setup Bish T1[T2] ch1 cd12 ImpactDa=138,Damage=47 | Kingside K T2[T3] ch1 cd17 | Rook Batte T1 ch1 cd33 Damage=94 | Develop Qu T1[L] ch1 cd170 Damage=167,DPS=74
+  5600 L11  7    47  Improved Spirit
+        Setup Bish T1[T2] ch1 cd12 ImpactDa=164,Damage=55 | Kingside K T2[T3] ch1 cd17 | Rook Batte T1 ch1 cd33 Damage=111 | Develop Qu T1[U] ch1 cd170 Damage=186,DPS=83
+  7200 L13  9    57  Compress Cooldown [imbue Kingside Knight]
+        Setup Bish T1[T2] ch1 cd12 ImpactDa=184,Damage=62 | Kingside K T2[T3] ch1 cd17 | Rook Batte T1[T2] ch1 cd33 Damage=124 | Develop Qu T1 ch1 cd170 Damage=200,DPS=90
+  8800 L15 11    78  Superior Cooldown
+        Setup Bish T1[T2] ch1 cd12 ImpactDa=227,Damage=75 | Kingside K T3 ch1 cd17 | Rook Batte T1[T2] ch1 cd33 Damage=152 | Develop Qu T1[T2] ch1 cd170 Damage=230,DPS=105
+ 11200 L18 14    90  Healing Nova
+        Setup Bish T1[T3] ch1 cd12 ImpactDa=249,Damage=82 | Kingside K T3 ch1 cd17 | Rook Batte T1[T3] ch1 cd33 Damage=167 | Develop Qu T2[T3] ch1 cd170 Damage=246,DPS=113
+ 12800 L20 16    92  Healing Booster
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=254,Damage=84 | Kingside K T3 ch1 cd17 | Rook Batte T1[T3] ch1 cd33 Damage=169 | Develop Qu T2[T3] ch1 cd170 Damage=249,DPS=114
+ 13600 L20 16    92  Sprint Boots
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=254,Damage=84 | Kingside K T3 ch1 cd17 | Rook Batte T1[T3] ch1 cd33 Damage=169 | Develop Qu T2[T3] ch1 cd170 Damage=249,DPS=114
+ 14400 L21 17    93  Trophy Collector
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=256,Damage=85 | Kingside K T3 ch1 cd17 | Rook Batte T2[T3] ch1 cd33 Damage=171 | Develop Qu T2[T3] ch1 cd170 Damage=250,DPS=115
+ 15200 L22 18    94  Guardian Ward
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=258,Damage=85 | Kingside K T3 ch1 cd17 | Rook Batte T2[T3] ch1 cd33 Damage=172 | Develop Qu T2[T3] ch1 cd170 Damage=252,DPS=116
+ 18400 L24 20    96  Heroic Aura
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=263,Damage=87 | Kingside K T3 ch1 cd17 | Rook Batte T2[T3] ch1 cd33 Damage=175 | Develop Qu T2[T3] ch1 cd170 Damage=255,DPS=117
+ 20000 L25 21   112  Enchanter's Emblem
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=295,Damage=97 | Kingside K T3 ch1 cd17 | Rook Batte T2[T3] ch1 cd33 Damage=196 | Develop Qu T2[T3] ch1 cd170 Damage=277,DPS=129
+ 26400 L28 24   137  Cursed Relic
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=343,Damage=112 | Kingside K T3 ch1 cd17 | Rook Batte T2[T3] ch1 cd33 Damage=228 | Develop Qu T3 ch1 cd170 Damage=311,DPS=146
+ 29600 L30 26   139  Warp Stone
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=348,Damage=114 | Kingside K T3 ch1 cd17 | Rook Batte T2[T3] ch1 cd33 Damage=231 | Develop Qu T3 ch1 cd170 Damage=314,DPS=147
+ 34400 L31 27   183  Boundless Spirit
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=436,Damage=142 | Kingside K T3 ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=288 | Develop Qu T3 ch1 cd170 Damage=376,DPS=178
+ 36800 L32 28   184  Stamina Mastery
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=438,Damage=143 | Kingside K T3 ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=289 | Develop Qu T3 ch1 cd170 Damage=378,DPS=179
+ 41600 L34 30   187  Divine Barrier
+        Setup Bish T2[T3] ch1 cd12 ImpactDa=443,Damage=144 | Kingside K T3 ch1 cd17 | Rook Batte T3 ch1 cd21 Damage=293 | Develop Qu T3 ch1 cd170 Damage=381,DPS=181
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @3200 Opening Rounds [enemyhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on enemy health % (EnemyLifeThreshold=50)
+    game text: Your attacks have additional Weapon Damage against enemies above {s:EnemyLifeThreshold}% health.
+    at buy: not computed (needs play data)
+- @7200 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Kingside Knight; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Kingside Knight T2: cd 17s, duration 0s, charges 1; saves 3.1s/cast (3.53->4.30 casts/min)
+- @8800 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 232s; 20% saves 46.4s per rotation
+- @14400 Trophy Collector [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (MaxStacks=16)
+    game text: Whenever you score an assist or kill, gain extra sprint, ability range and passive soul generation. This effect stacks and persists through death.
+    at buy: not computed (needs play data)
+- @20000 Enchanter's Emblem [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: While you are above {s:LifeThreshold}% health, gain bonus {g:citadel_inline_attribute:'Spirit'} and Cooldown Reduction.
+    at buy: not computed (needs play data)
+    reliability: its spirit is conditional: only above 65% health
+
+no trigger condition (plain stats/actives): Extra Spirit, Healing Rite, High-Velocity Rounds, Grit, Extra Stamina, Improved Spirit, Healing Nova, Healing Booster, Sprint Boots, Guardian Ward, Heroic Aura, Cursed Relic, Warp Stone, Boundless Spirit, Stamina Mastery, Divine Barrier

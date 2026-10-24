@@ -1,0 +1,116 @@
+{
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the item/order under test",
+  "Same enemy hero, level, items, behaviour",
+  "Run every arm at each condition (1, 2, 3 targets in the cluster)"
+ ],
+ "builds": [
+  "wraith"
+ ],
+ "id": "wraith_leech_vs_vampiric",
+ "title": "Wraith sustain: Leech vs Vampiric Burst with Ricochet",
+ "hero": "Wraith",
+ "playstyle": "Early farm then AoE gun",
+ "question": "When Wraith shoots three targets with Ricochet bouncing, does Leech or Vampiric Burst give more sustain over a real fight window?",
+ "hypothesis": "Vampiric Burst gives more burst sustain per use (30s cooldown) but Leech gives more over a 30s window with sustained AoE bounces; the answer depends on target count.",
+ "arms": [
+  {
+   "name": "leech",
+   "items": [
+    "Leech",
+    "Ricochet"
+   ],
+   "souls": "same spend; Vampiric Burst slot replaced with equal-cost filler",
+   "notes": "no Vampiric Burst"
+  },
+  {
+   "name": "vampiric_burst",
+   "items": [
+    "Vampiric Burst",
+    "Ricochet"
+   ],
+   "souls": "same spend",
+   "notes": "no Leech; use Vampiric Burst on cooldown"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "late (~35k souls)",
+  "enemies": [
+   {
+    "hero": "bot hero w/ guns",
+    "count": 3,
+    "behaviour": "stand in cluster within 12m, fire back"
+   }
+  ],
+  "allies": [],
+  "start_hp": "60% so healing is measurable",
+  "resets": [
+   "hp to 60%",
+   "cooldowns"
+  ]
+ },
+ "conditions": [
+  {
+   "name": "1 target"
+  },
+  {
+   "name": "2 targets"
+  },
+  {
+   "name": "3 targets"
+  }
+ ],
+ "procedure": [
+  "Start at 60% HP",
+  "Shoot the cluster with normal ability rotation for 30s",
+  "Use Vampiric Burst on cooldown in its arm only",
+  "Record"
+ ],
+ "metrics": [
+  {
+   "name": "hp_healed_30s",
+   "unit": "hp",
+   "how": "total heal over 30s",
+   "category": "healing",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "net_hp_change_30s",
+   "unit": "hp",
+   "how": "end HP minus start HP",
+   "category": "healing",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "damage_dealt_30s",
+   "unit": "hp",
+   "how": "",
+   "category": "sustained damage",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "heal_per_damage",
+   "unit": "ratio",
+   "how": "healed/damage",
+   "category": "healing",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "net_hp_change_30s",
+  "min_effect_pct": 15,
+  "min_trials": 5,
+  "rule": "run at targets=1,2,3 and report the crossover"
+ }
+}

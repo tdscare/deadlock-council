@@ -1,0 +1,41 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: greytalon_gun
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:12Z
+BODY-SHA: 829fe57c37e20af5e5ac5e4602c7c7c26848445d4c98a712f1d46d34b59dc4eb
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): High-Velocity Rounds, Extra Stamina, Swift Striker, Hollow Point, Extra Spirit, Quicksilver Reload
+  Mid · L-R                -> main path (sequential): Sprint Boots, Enduring Speed, Stamina Mastery, Long Range, Sharpshooter, Surge of Power, Bullet Lifesteal, Spirit Lifesteal
+  Late · L-R               -> main path (sequential): Rapid Rounds, Burst Fire, Mercurial Magnum, Lucky Shot, Vampiric Burst, Ricochet, Spiritual Overflow
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Counterspell, Dispel Magic, Spirit Resilience, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Glass Cannon, Crippling Headshot, Cheat Death, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Juggernaut
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Glass Cannon, sell Swift Striker
+    function of Swift Striker: fire_rate; replacement Glass Cannon: ammo, bullet_proc, fire_rate, slow; roles lost: none  [VERIFIED GAME MECHANIC]
+    Swift Striker is a component of later items: no
+    held for 54400 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 30400/11200/9600 -> 35200/11200/9600; thresholds lost: none
+    trade ratio after the sale 0.89; selling Stamina Mastery instead: 1.11 (+25.1%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Crippling Headshot, sell Hollow Point
+    function of Hollow Point: resist_shred; replacement Crippling Headshot: resist_shred; roles lost: none  [VERIFIED GAME MECHANIC]
+    Hollow Point is a component of later items: no
+    held for 51200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 30400/11200/9600 -> 33600/11200/9600; thresholds lost: none
+    trade ratio after the sale 0.54; selling Swift Striker instead: 0.54 (-0.3%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Cheat Death, sell Stamina Mastery
+    function of Stamina Mastery: stats only; replacement Cheat Death: bullet_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Stamina Mastery is a component of later items: no
+    held for 44800 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 30400/11200/9600 -> 30400/14400/9600; thresholds lost: none
+    trade ratio after the sale 0.83; selling Swift Striker instead: 0.70 (-15.6%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

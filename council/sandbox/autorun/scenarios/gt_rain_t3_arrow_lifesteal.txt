@@ -1,0 +1,51 @@
+# Grey Talon: does a Charged Shot fired while airborne in Rain of Arrows T3 heal (30% spirit lifesteal, ability_power_jump_t3_desc)?
+# Rival point order O5 (Rain maxed before Owl) rests on this. Heal measured by healDiffObserved (plugin.log HEALSRC / healsum).
+setup Orion Haze
+aimoff 5.5 3
+egod
+# --- R2: Charged Shot T3 + Rain T2 (no airborne lifesteal). Predict ~0 heal beyond regen
+mark none
+hardreset
+abil 15 7 0 0
+abilist
+lowhp 50
+healreset
+mark R2_rainT2
+cast 2 0.3
+hold 1 0.6
+wait 0.6
+hold 1 0.6
+wait 3
+healsum
+lowhp 0
+# --- R3: Charged Shot T3 + Rain T3. Predict heal >= 25% of the arrow damage logged in this block
+mark none
+hardreset
+abil 15 15 0 0
+abilist
+lowhp 50
+healreset
+mark R3_rainT3
+cast 2 0.3
+hold 1 0.6
+wait 0.6
+hold 1 0.6
+wait 3
+healsum
+lowhp 0
+# --- G: grounded control, Rain T3 but no jump. Predict ~0 heal
+mark none
+hardreset
+abil 15 15 0 0
+abilist
+lowhp 50
+healreset
+mark G_grounded
+hold 1 0.6
+wait 0.6
+hold 1 0.6
+wait 3
+healsum
+lowhp 0
+mark none
+end

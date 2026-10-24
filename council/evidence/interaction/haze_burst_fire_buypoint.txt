@@ -1,0 +1,68 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: haze
+HERO: Haze
+ITEM: Burst Fire
+CHECKPOINT: buy-point at 25600 souls (state souls 25600; item cost 3200)
+VERSION: interaction-v1
+ARGS: --interactions haze Burst Fire --vs Point Blank
+GENERATED: 2026-10-24T16:49:31Z
+BODY-SHA: 36cb52e78e498ab6a60d3390c181804fe60bbebbac5b2c65e78ca0da154dcf68
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 3200, unconditional, ranked): Tesla Bullets, Weighted Shots, Sharpshooter, Point Blank, Fury Trance; also shown, not ranked (conditional or unequal cost): Hollow Point, Heroic Aura, Blood Tribute, Escalating Resilience
+VERDICT: INSUFFICIENT EVIDENCE: the best item in the sustained, burst window depends on UNKNOWN cells (see test requests)
+UNKNOWN_CELLS: 0
+SELECTION: build-decision | Burst Fire is bought at 25600 souls in haze: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (3200) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage; plus requested ['Point Blank']
+PAIRWISE: Burst Fire vs Point Blank: sustained: Burst Fire -4..+1% vs Point Blank -> DEPENDS on UNKNOWN cells | burst: Burst Fire +4..+4% vs Point Blank -> WINS in every reading | ult: Burst Fire -18..-10% vs Point Blank -> LOSES in every reading
+UPPER-BOUND OPTIONS THAT BEAT IT (their trigger condition decides; UNKNOWN uptime): Blood Tribute, Heroic Aura
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.8, long_share=0.1, W_sus=10.0, W_burst=3.0; reload 2.35 s (VERIFIED GAME MECHANIC m_reloadDuration (weapon vdata; Wraith value equals its sandbox measurement))
+STATE: owned ['Active Reload', 'Swift Striker', 'Titanic Magazine', 'Fortitude', 'Ricochet', 'Healing Booster', 'Siphon Bullets', 'Burst Fire'] | tiers Sleep Dagger=T2(spirit) Smoke Bomb=T3(utility) Fixation=T3(stacks) Bullet Dance=T1(gun-mode) | weapon invest bonus 74% | spirit 14
+
+## INTERACTION MATRIX (item effect x kit component)
+- fire rate (more bullets) (BonusFireRate=10)
+    normal shooting                              WORKS                      [CALCULATED] more bullets per second (fire-rate pool now 63%: +10 adds 6.1% bullets)
+    1=Sleep Dagger T2 [spirit]                   DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Smoke Bomb T3 [utility]                    WORKS (sustain)            [CALCULATED] tier adds BulletLifesteal after use: more bullet damage -> more healing
+    3=Fixation T3 [stacks]                       WORKS                      [CALCULATED] stacks per bullet hit (game text; HeadshotStacks=3): more bullets -> max stacks sooner; also more ProcDamage procs per 20 stacks
+    4=Bullet Dance T1 (ULT) [gun-mode]           WORKS                      [CALCULATED+ASSUMED] adds to the ability's own BonusFireRate=25; floor MinRoundsPerSecond=5 (additive stacking ASSUMED)
+    owned proc Siphon Bullets                    WORKS                      [CALCULATED] more bullets -> more procs/build-up (capped by cooldown 1.2)
+    lifesteal Active Reload                      WORKS                      [CALCULATED] heal = bullet damage x lifesteal %
+    other fire-rate items                        WORKS (diminishing)        [CALCULATED] additive pool 63%: relative gain 6.1%
+- fire rate (more bullets) (ActivatedFireRate=32)
+    normal shooting                              WORKS                      [CALCULATED] more bullets per second (fire-rate pool now 63%: +32 adds 19.6% bullets)
+    1=Sleep Dagger T2 [spirit]                   DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Smoke Bomb T3 [utility]                    WORKS (sustain)            [CALCULATED] tier adds BulletLifesteal after use: more bullet damage -> more healing
+    3=Fixation T3 [stacks]                       WORKS                      [CALCULATED] stacks per bullet hit (game text; HeadshotStacks=3): more bullets -> max stacks sooner; also more ProcDamage procs per 20 stacks
+    4=Bullet Dance T1 (ULT) [gun-mode]           WORKS                      [CALCULATED+ASSUMED] adds to the ability's own BonusFireRate=25; floor MinRoundsPerSecond=5 (additive stacking ASSUMED)
+    owned proc Siphon Bullets                    WORKS                      [CALCULATED] more bullets -> more procs/build-up (capped by cooldown 1.2)
+    lifesteal Active Reload                      WORKS                      [CALCULATED] heal = bullet damage x lifesteal %
+    other fire-rate items                        WORKS (diminishing)        [CALCULATED] additive pool 63%: relative gain 19.6%
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |      3205              |       870              |      4758              | 465
+Burst Fire                   |       3625 (+11..+13%) |       1057 (+18..+22%) |         5110 (+0..+7%) | 532
+Tesla Bullets                |       3553 (+11..+15%) |       1007 (+16..+19%) |        5131 (+8..+10%) | 465
+Hollow Point                 |         3364 (+5..+7%) |          933 (+7..+8%) |         4758 (+0..+0%) | 491  ! stats only above a health threshold; conditional item (selfhp): counted as if its condition is met (upper bound)
+Weighted Shots               |        3634 (+8..+13%) |         977 (+9..+12%) |       5461 (+12..+15%) | 534
+Heroic Aura                  |       3625 (+11..+13%) |       1057 (+18..+22%) |        5674 (+0..+19%) | 532  ! fire rate is a timed buff, counted as always on (upper bound)
+Sharpshooter                 |         3434 (+4..+7%) |          927 (+5..+7%) |         4992 (+4..+5%) | 502
+Point Blank                  |       3778 (+10..+18%) |       1012 (+13..+16%) |       5788 (+18..+22%) | 557
+Blood Tribute                |       3753 (+15..+17%) |       1159 (+30..+33%) |        5982 (+0..+26%) | 553  ! costs 50 health per second while on (not netted)
+Fury Trance                  |         3432 (+5..+7%) |          931 (+6..+7%) |         4899 (+2..+3%) | 940
+Escalating Resilience        |         3471 (+5..+8%) |          934 (+6..+7%) |        5180 (+7..+31%) | 508  ! conditional item (stack): counted as if its condition is met (upper bound)
+  candidate detail (reading 1): sustained bullets 130, gun 1327, stacks 2203, procs 0, spirit 95, time to max stacks 8.6s | ult: 74 bullets in 3.9s, close-range share 0.88
+  sustained: rank (reading 1) Point Blank > Weighted Shots > Burst Fire > Tesla Bullets > Sharpshooter > Fury Trance  <- changes with UNKNOWN readings: Point Blank / Point Blank / Tesla Bullets / Tesla Bullets
+  burst: rank (reading 1) Burst Fire > Point Blank > Tesla Bullets > Weighted Shots > Fury Trance > Sharpshooter  <- changes with UNKNOWN readings: Burst Fire / Burst Fire / Tesla Bullets / Tesla Bullets
+  ult: rank (reading 1) Point Blank > Weighted Shots > Tesla Bullets > Burst Fire > Sharpshooter > Fury Trance
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (165s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  none
+
+## NOT DETERMINED FROM DATA
+  - nothing beyond the ASSUMED shares above
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

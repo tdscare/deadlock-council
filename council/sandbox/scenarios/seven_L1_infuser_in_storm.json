@@ -1,0 +1,155 @@
+{
+ "id": "seven_L1_infuser_in_storm",
+ "title": "Infuser during Storm Cloud: heal per enemy in the cloud, and does an item cast keep the channel",
+ "hero": "Seven",
+ "playstyle": "Ult Seven",
+ "builds": [
+  "seven"
+ ],
+ "question": "Does Infuser's active (70% spirit lifesteal, +30 spirit, 7 s x duration) heal ~0.70 x storm damage per hero in the cloud, scaling with hero count, and can it be popped during the channel without ending it?",
+ "hypothesis": "H-L1a: heal(3 bots) / heal(1 bot) >= 2.5 (no AoE lifesteal cut). H-L1b: Infuser cast after the storm starts leaves storm damage within 10% of the pre-pop arm. Prediction at 24.8k state: heal over the Infuser window ~1.8k per bot (model wx7/model.py).",
+ "arms": [
+  {
+   "name": "SL_1bot",
+   "items": [
+    "upgrade_magic_storm",
+    "upgrade_arcane_surge",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_healbane",
+    "upgrade_cardio_calibrator",
+    "upgrade_escalating_exposure",
+    "upgrade_imbued_duration_extender",
+    "upgrade_cooldown_reduction",
+    "upgrade_magic_reach",
+    "upgrade_health_stealing_magic"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 24800,
+   "notes": "Spirit Lifesteal only, enemies 1"
+  },
+  {
+   "name": "INF_1bot",
+   "items": [
+    "upgrade_magic_storm",
+    "upgrade_arcane_surge",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_healbane",
+    "upgrade_cardio_calibrator",
+    "upgrade_escalating_exposure",
+    "upgrade_imbued_duration_extender",
+    "upgrade_cooldown_reduction",
+    "upgrade_magic_reach",
+    "upgrade_infuser"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 24800,
+   "notes": "cast i1 then cast 4, enemies 1"
+  },
+  {
+   "name": "INF_3bot",
+   "items": [
+    "upgrade_magic_storm",
+    "upgrade_arcane_surge",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_healbane",
+    "upgrade_cardio_calibrator",
+    "upgrade_escalating_exposure",
+    "upgrade_imbued_duration_extender",
+    "upgrade_cooldown_reduction",
+    "upgrade_magic_reach",
+    "upgrade_infuser"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 24800,
+   "notes": "cast i1 then cast 4, enemies 3"
+  },
+  {
+   "name": "INF_mid",
+   "items": [
+    "upgrade_magic_storm",
+    "upgrade_arcane_surge",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_healbane",
+    "upgrade_cardio_calibrator",
+    "upgrade_escalating_exposure",
+    "upgrade_imbued_duration_extender",
+    "upgrade_cooldown_reduction",
+    "upgrade_magic_reach",
+    "upgrade_infuser"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 24800,
+   "notes": "cast 4, wait 2, cast i1 (during channel), enemies 3"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "souls 24800 (levels.json)",
+  "souls": 24800,
+  "position": "mid lane, bots on a 300 u ring (inside the 40 m storm)",
+  "enemies": [
+   {
+    "hero": "Haze (bot)",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand, attacks disabled",
+    "hp": "ekeep 0.9"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 50 (heals never capped)",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance (enemies 3 at 300 u ring, main target 350 u)",
+  "hardreset between blocks (fresh cooldowns, no items)",
+  "Same souls/level/ability tiers (unlock 7) in every arm except the thing under test",
+  "Same bot heroes, HP keep-alive (ekeep 0.9) and resists",
+  "Arms interleaved A,B,A,B; A/A floor run first"
+ ],
+ "procedure": [
+  "setup Gigawatt Haze; souls 24800; unlock 7; give arm items; basemods",
+  "enemies N 300 8; fetch 350; lowhp 50; healreset; mark storm",
+  "arm order of casts; wait 22 (whole channel)",
+  "mark none; record healDiffObserved and storm damage rows per bot per second"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "heal_storm",
+   "unit": "hp",
+   "how": "healDiffObserved during mark storm",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "storm_dmg_per_bot",
+   "unit": "hp",
+   "how": "damage csv, ability Storm Cloud, per victim",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "storm_seconds",
+   "unit": "s",
+   "how": "last minus first storm tick",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "heal_storm",
+  "min_effect_pct": 15,
+  "min_trials": 5,
+  "rule": "INF_3bot/INF_1bot >= 2.5 supports full AoE lifesteal; INF_mid storm_seconds within 10% of INF_1bot supports in-channel use; else REFUTES the 'pop it once they're all in the storm' note"
+ }
+}

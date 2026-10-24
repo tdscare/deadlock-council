@@ -1,0 +1,105 @@
+{
+ "id": "seven_N1_greens_before_cultist",
+ "title": "Ult Seven: greens before Cultist (health 4.8k 10.4k, Cultist 12.8k) vs Cultist first (Cultist 8.0k, health 12.8k)",
+ "hero": "Seven",
+ "playstyle": "Ult Seven",
+ "builds": [
+  "seven"
+ ],
+ "question": "Is the 2.4k-earlier health spike worth a 4.8k-later Cultist Sacrifice on the farm ult build?",
+ "hypothesis": "H-N1: souls at 16 min are >= 600 higher with Cultist first (one extra Cultist cast at 170% bonus souls, +1 ball charge, +12% radius on farm), while survival time vs a gun bot at 10.4k is ~10-15% shorter (HP 1734 vs ~2053 calculated).",
+ "arms": [
+  {
+   "name": "CULTIST_FIRST",
+   "items": [
+    "upgrade_arcane_surge",
+    "upgrade_magic_storm",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_sprint_booster"
+   ],
+   "ability_order": "1133234442431122",
+   "imbues": {
+    "upgrade_magic_storm": 3
+   },
+   "souls": 10400,
+   "notes": "proposed build at 10.4k"
+  },
+  {
+   "name": "GREENS_FIRST",
+   "items": [
+    "upgrade_arcane_surge",
+    "upgrade_magic_storm",
+    "upgrade_health_stealing_magic",
+    "upgrade_sprint_booster",
+    "upgrade_healbane"
+   ],
+   "ability_order": "1133234442431122",
+   "imbues": {
+    "upgrade_magic_storm": 3
+   },
+   "souls": 10400,
+   "notes": "variant G at 10.4k (Enduring Speed still 800 short in this snapshot)"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "souls 10400 (levels.json)",
+  "souls": 10400,
+  "position": "jungle camp route, then 1v1 vs gun bot",
+  "enemies": [
+   {
+    "hero": "Haze (bot)",
+    "count": 1,
+    "items": [
+     "gun 4.8k"
+    ],
+    "behaviour": "shoots player",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "Arms interleaved A,B,A,B; A/A floor run first",
+  "hardreset between blocks",
+  "Same souls/level per arm; ability tiers set with abil ops per FOUNDATIONS F9 (unlocked 1, T1 3, T2 7, T3 15), logged before each block",
+  "Same bot heroes, positions, HP keep-alive and resists"
+ ],
+ "procedure": [
+  "farm the same 3-camp route for 180 s, record souls",
+  "duel phase: time to death vs the shooting bot, no abilities used by player except Power Surge"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "souls_180s",
+   "unit": "souls",
+   "how": "soul counter",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "time_to_death",
+   "unit": "s",
+   "how": "timer",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "souls_180s",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "CULTIST_FIRST farming >= +10% with time_to_death loss < 15% supports keeping Cultist first; otherwise reopen G"
+ },
+ "blockedIfNo": [
+  "Cultist active consume op",
+  "bot that shoots the player"
+ ]
+}

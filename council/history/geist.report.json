@@ -1,0 +1,46 @@
+{
+ "overlap": {
+  "changed": [
+   "  overlap Healing Booster (moved earlier): at_buy=UNKNOWN; core_end=UNKNOWN",
+   "  overlap Extra Charge (moved earlier): no overlap-candidate"
+  ],
+  "unresolved": [
+   "overlap-candidate Mystic Regeneration [at_buy=UNKNOWN]",
+   "overlap-candidate Radiant Regeneration [at_buy=UNKNOWN; core_end=UNKNOWN]",
+   "overlap-candidate Spellslinger [at_buy=ADDS-VALUE(9.6% whole item); core_end=REDUNDANT-LIKELY(6.8% whole item)]",
+   "overlap-candidate Rapid Recharge [at_buy=UNKNOWN; core_end=UNKNOWN]",
+   "overlap-candidate Counterspell [core_end=UNKNOWN]",
+   "overlap-candidate Unstoppable [core_end=UNKNOWN]"
+  ]
+ },
+ "unresolved": [
+  "bc: CORE_NOTE_NONEMPTY geist: Spirit Resilience: Your own bombs hurt you with spirit damage, so this cuts that too."
+ ],
+ "proposal": "geist",
+ "id": "geist",
+ "diff": [
+  "added Mid · L-R|Healing Booster, Mid · L-R|Extra Charge",
+  "removed Mid · cont.|Healing Booster, Late · L-R|Extra Charge"
+ ],
+ "block": [
+  "OVERLAP: Healing Booster (moved earlier) is an overlap-candidate with a low/unknown in-build marginal (at_buy=UNKNOWN; core_end=UNKNOWN) and no `context` evidence file (SCOPE: build-context, BUILD: geist, ITEM: Healing Booster) compares the complete build with/without it vs the alternative use of the same souls"
+ ],
+ "warn": [
+  "WAIVED bc: FRESH_T2_LATE geist: Spirit Lifesteal @21600 because: Spirit Lifesteal at 21.6k is a Leech component, not a dead-end late T2; every order that puts all T2s under 20k either delays the Geist health spike to 18.4k or the main gun 8k to 21.6k (computed)."
+ ],
+ "fixed": [
+  "bc: OVERSHOOT_GUN_BEFORE_HEALTH geist: gun 8000 at health 4.8k @18400",
+  "bc: HEALTH_4.8K_AFTER_16K geist: at 18400"
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY geist: Spirit Resilience: Your own bombs hurt you with spirit damage, so this cuts that too."
+ ],
+ "newV": [
+  "bc: FRESH_T2_LATE geist: Spirit Lifesteal @21600",
+  "bc: RT_ITEMS geist: Mid · L-R: [[\"Radiant Regeneration\",null],[\"Spirit Resilience\",null],[\"Berserker\",null],[\"Bullet Resist Shredder\",null],[\"Bullet Lifesteal\",null],[\"Spirit Lifesteal\",null]] vs [[\"Radiant Regeneration\",null],[\"Healing Booster\",null],[\"Spirit Resilience\",null],[\"Berserker\",null],[\"Extra Charge\",null],[\"Bullet Resist Shredder\",null],[\"Bullet Lifesteal\",null],[\"Spirit Lifesteal\",null]]",
+  "bc: RT_ITEMS geist: Mid · cont.: [[\"Healing Booster\",null],[\"Spellslinger\",null],[\"Blood Tribute\",null]] vs [[\"Spellslinger\",null],[\"Blood Tribute\",null]]",
+  "bc: RT_ITEMS geist: Late · L-R: [[\"Leech\",null],[\"Extra Charge\",null],[\"Rapid Recharge\",null],[\"Refresher\",null]] vs [[\"Leech\",null],[\"Rapid Recharge\",null],[\"Refresher\",null]]"
+ ],
+ "when": "2026-10-24 11:45",
+ "line": "[2026-10-24 11:45] Revert two silent edits since CLEANBASE that were mistakes on computed paths: Healing Booster back to right after Radiant Regeneration (9.6k; health 4.8k 18.4k -> 12.8k, +20% heal on Life Drain/Radiant from 9.6k), Extra Charge back to 16.8k (Life Drain has 3 charges from 6.8k under every point model, so a 4th charge works there). Extra Charge note stays empty. | added Mid · L-R|Healing Booster, Mid · L-R|Extra Charge; removed Mid · cont.|Healing Booster, Late · L-R|Extra Charge | evidence: calc:council/work/tri2/geist_paths.txt, calc:council/work/tri2/ap_models.txt, data:gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata, calc:council/work/tri2/geist_waiver_fresh_t2.txt, data:gt/repo/game/citadel/resource/localization/citadel_heroes/citadel_heroes_english.txt | gate: FAIL"
+}

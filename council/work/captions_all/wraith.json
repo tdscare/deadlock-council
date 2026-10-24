@@ -1,0 +1,3645 @@
+{
+ "schema": 1,
+ "id": "wraith",
+ "hero": "Wraith",
+ "name": "Rizuhble's Pinball Wraith",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, once you're out of slots.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-10,400 (levels 1-17). 4.8k spikes: weapon 4.8k at Tesla Bullets, spirit 4.8k at Surge of Power. Ultimate (Telekinesis) is available from Tesla Bullets.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "wraith:6:phase_range:2921",
+    "wraith:6:phase_spikes:2929",
+    "wraith:6:phase_ult:2930"
+   ],
+   "items": [
+    {
+     "name": "Rapid Rounds",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 4,800 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Tesla Bullets completes 4.8k weapon in 4800 souls (~4.8 min), 3 purchases",
+     "claim_ids": [
+      "wraith:0:spike_progress:2905"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:0:spike_progress:2905",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "spirit investment only; its 4.8k tier completes at Surge of Power, 8800 souls (~8.8 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Swift Striker",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 3,200 souls on. Upgrade of Rapid Rounds (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Tesla Bullets completes 4.8k weapon in 3200 souls (~3.2 min), 1 purchases",
+     "claim_ids": [
+      "wraith:2:spike_progress:2910",
+      "wraith:2:upgrade_of:2911"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:2:spike_progress:2910",
+       true,
+       "1600"
+      ],
+      [
+       "wraith:2:upgrade_of:2911",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Tesla Bullets",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:3:spike_complete:2912"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:3:spike_complete:2912",
+       true,
+       "inventory weapon: before 1600, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Monster Rounds",
+     "imbue": null,
+     "caption": "Temporary, sold when you buy Spirit Lifesteal later. Until then it speeds up camps: +25% weapon damage and +25% bullet resist against non-hero targets.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:4:temporary_sold:2914"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:4:temporary_sold:2914",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Quicksilver Reload",
+     "imbue": "1",
+     "caption": "Imbued on Card Trick: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:5:imbue_reload:2916"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:5:imbue_reload:2916",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Surge of Power",
+     "imbue": "1",
+     "caption": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power. Imbued on Card Trick: +28 spirit on that ability only, about +26.6 on its damage (0.95x scaling). Upgrade of Extra Spirit (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:6:spike_complete:2918",
+      "wraith:6:imbue_spirit:2919",
+      "wraith:6:upgrade_of:2920"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:6:spike_complete:2918",
+       true,
+       "inventory spirit: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "wraith:6:imbue_spirit:2919",
+       true,
+       ""
+      ],
+      [
+       "wraith:6:upgrade_of:2920",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 10,400-24,800 (levels 17-28). Abilities gained (both point models agree): Card Trick T3, Full Auto T3. 4.8k spikes: vitality 4.8k at Enduring Speed.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "wraith:13:phase_range:2945",
+    "wraith:13:phase_abilities:2946",
+    "wraith:13:phase_spikes:2953"
+   ],
+   "items": [
+    {
+     "name": "Ricochet",
+     "imbue": null,
+     "caption": "Bounced bullets carry your bullet procs, so Tesla Bullets' shock gets extra rolls on up to 2 more enemies within 13m at 65% damage when they stand together. Takes weapon from 5,600 to 12,000 invested, crossing the 6.4k, 8k, 11.2k tiers: bonus 46 to 74% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:7:researched:2932",
+      "wraith:7:invest_step:2931"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:7:researched:2932",
+       true,
+       "all checks pass"
+      ],
+      [
+       "wraith:7:invest_step:2931",
+       true,
+       "inventory weapon: before 5600, after 12000, threshold 6400"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 3200.0 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Monster Rounds for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Bullet Lifesteal",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on.",
+     "cls": "b",
+     "why": "imminent: Enduring Speed completes 4.8k vitality in 1600.0 souls (~1.6 min), 2 purchases",
+     "claim_ids": [
+      "wraith:9:spike_progress:2936"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:9:spike_progress:2936",
+       true,
+       "3200"
+      ]
+     ]
+    },
+    {
+     "name": "Sprint Boots",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 800 souls on.",
+     "cls": "b",
+     "why": "imminent: Enduring Speed completes 4.8k vitality in 800.0 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "wraith:10:spike_progress:2938"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:10:spike_progress:2938",
+       true,
+       "4000"
+      ]
+     ]
+    },
+    {
+     "name": "Enduring Speed",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus. Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:11:spike_complete:2940",
+      "wraith:11:upgrade_of:2941"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:11:spike_complete:2940",
+       true,
+       "inventory vitality: before 4000, after 4800, threshold 4800"
+      ],
+      [
+       "wraith:11:upgrade_of:2941",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Reactive Barrier",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Shredder",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 24,800-53,600 (levels 28-36). Abilities gained (both point models agree): Project Mind T3, Telekinesis T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "wraith:19:phase_range:2967",
+    "wraith:19:phase_abilities:2968"
+   ],
+   "items": [
+    {
+     "name": "Mercurial Magnum",
+     "imbue": "1",
+     "caption": "Imbued on Card Trick: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s. Takes spirit from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power. Upgrade of Quicksilver Reload (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:14:imbue_reload:2955",
+      "wraith:14:invest_step:2954",
+      "wraith:14:upgrade_of:2956"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:14:imbue_reload:2955",
+       true,
+       ""
+      ],
+      [
+       "wraith:14:invest_step:2954",
+       true,
+       "inventory spirit: before 4800, after 9600, threshold 6400"
+      ],
+      [
+       "wraith:14:upgrade_of:2956",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Spiritual Overflow",
+     "imbue": null,
+     "caption": "Charges up while you hit enemy heroes, paying out +30 spirit, +25% fire rate and +10% spirit lifesteal; Full Auto T3 removes reloads while it lasts, which keeps you shooting. Takes weapon from 12,800 to 19,200 invested: bonus 74 to 86% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:15:researched:2959",
+      "wraith:15:invest_step:2957"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:15:researched:2959",
+       true,
+       "all checks pass"
+      ],
+      [
+       "wraith:15:invest_step:2957",
+       true,
+       "inventory weapon: before 12800, after 19200, threshold 16000"
+      ]
+     ]
+    },
+    {
+     "name": "Leech",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Inhibitor",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 9,600 to 16,000 invested, crossing the 11.2k, 16k tiers: bonus 46 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Rend",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Silencer",
+     "imbue": null,
+     "caption": "The silence lasts 2.5s and the target is then immune for 10s, so you get one silence per target roughly every 12.5s: save the build-up for an escape or a key cast. Takes weapon from 20,800 to 27,200 invested: bonus 86 to 100% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:19:researched:2966",
+      "wraith:19:invest_step:2965"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:19:researched:2966",
+       true,
+       "all checks pass"
+      ],
+      [
+       "wraith:19:invest_step:2965",
+       true,
+       "inventory weapon: before 20800, after 27200, threshold 22400"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Ricochet? Buy what is killing you, cheapest first. Not dying? Skip. Sell Swift Striker.",
+   "desc": "Dying after Ricochet? Buy what is killing you, cheapest first. Not dying? Skip. Sell Swift Striker.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:20:defence_purge:2974"
+     ],
+     "lint": [],
+     "legacy_note": "Silences and hexes keep stopping your teleport.",
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:20:defence_purge:2974",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:20:defence_spirit:2975"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:20:defence_spirit:2975",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:20:defence_bullet:2976"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry is out-shooting you.",
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:20:defence_bullet:2976",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:20:defence_gun:2977"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:20:defence_gun:2977",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:20:defence_parry:2978"
+     ],
+     "lint": [],
+     "legacy_note": "A big ult you can see coming, like Lash's or Infernus's.",
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:20:defence_parry:2978",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Project Mind (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:20:cc_exposure:2979"
+     ],
+     "lint": [],
+     "legacy_note": "Stuns keep cancelling your teleport and your ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:20:cc_exposure:2979",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Capacitor",
+     "imbue": null,
+     "caption": "Chain count goes from 4 to 6 and damage per chain from 33 to 43; the new part is a projectile that slows by up to 60% and silences movement abilities, on a 40s item cooldown. Same-slot upgrade of Tesla Bullets for 3,200 more souls: bonus fire rate 0 to 5..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:20:researched:2982",
+      "wraith:20:upgrade_delta:2980"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Tesla Bullets.",
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:20:researched:2982",
+       true,
+       "all checks pass"
+      ],
+      [
+       "wraith:20:upgrade_delta:2980",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": "Each spirit hit adds 4.5% spirit amp, at most one stack per 0.7s, so 12 stacks (54%) take about 8.4s of continuous spirit damage on one target: it pays off in long fights, not in a card burst. Takes spirit from 9,600 to 16,000 invested, crossing the 11.2k, 16k tiers: bonus 52 to 66 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:20:researched:2985",
+      "wraith:20:invest_step:2983"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Spirit Rend for this.",
+     "temporary": true,
+     "verify": [
+      [
+       "wraith:20:researched:2985",
+       true,
+       "all checks pass"
+      ],
+      [
+       "wraith:20:invest_step:2983",
+       true,
+       "inventory spirit: before 9600, after 16000, threshold 11200"
+      ]
+     ]
+    },
+    {
+     "name": "Spellslinger",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 27,200 to 33,600 invested: bonus 100 to 115% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Enduring Speed for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Indomitable",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Reactive Barrier for 4,800 more souls: cooldown reduction on proc 0 to 20; bullet resist 0 to 10..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:20:upgrade_delta:2988"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Reactive Barrier.",
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:20:upgrade_delta:2988",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "wraith:20:defence_barrier:2990"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "wraith:20:defence_barrier:2990",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "wraith:20:temporary_sold:2904": {
+   "id": "wraith:20:temporary_sold:2904",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, once you're out of slots.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 20,
+    "item": "Extra Regen",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it once you're out of slots."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:0:spike_progress:2905": {
+   "id": "wraith:0:spike_progress:2905",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 4,800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Rapid Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4800,
+    "event": "Tesla Bullets completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "wraith:0:component_for:2906": {
+   "id": "wraith:0:component_for:2906",
+   "kind": "component_for",
+   "phrase": "From Swift Striker: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Rapid Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Swift Striker"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Swift Striker"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:1:spike_progress:2907": {
+   "id": "wraith:1:spike_progress:2907",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "wraith:1:component_for:2908": {
+   "id": "wraith:1:component_for:2908",
+   "kind": "component_for",
+   "phrase": "From Surge of Power: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 8800,
+    "event": "Surge of Power"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Surge of Power"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:1:spirit_scaling:2909": {
+   "id": "wraith:1:spirit_scaling:2909",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 5.5 to Card Trick's damage (0.55x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_card_toss"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 1,
+    "item": "Extra Spirit",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 1,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "10.0",
+    "5.5",
+    "0.55"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "wraith:2:spike_progress:2910": {
+   "id": "wraith:2:spike_progress:2910",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 3,200 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Swift Striker",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 3200,
+    "event": "Tesla Bullets completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    3200,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "wraith:2:upgrade_of:2911": {
+   "id": "wraith:2:upgrade_of:2911",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Rapid Rounds (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 2,
+    "item": "Swift Striker",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Rapid Rounds"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:3:spike_complete:2912": {
+   "id": "wraith:3:spike_complete:2912",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 3,
+    "item": "Tesla Bullets",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "wraith:4:spike_progress:2913": {
+   "id": "wraith:4:spike_progress:2913",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 5,600 of the 6.4k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Monster Rounds",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 6400
+  },
+  "wraith:4:temporary_sold:2914": {
+   "id": "wraith:4:temporary_sold:2914",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Spirit Lifesteal later. Until then it speeds up camps: +25% weapon damage and +25% bullet resist against non-hero targets.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_non_player_bonus"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 4,
+    "item": "Monster Rounds",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Monster Rounds",
+    "buyer": "Spirit Lifesteal"
+   },
+   "numbers": [
+    "25",
+    "25"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "wraith:5:spike_progress:2915": {
+   "id": "wraith:5:spike_progress:2915",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Quicksilver Reload",
+    "souls": 8000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "wraith:5:imbue_reload:2916": {
+   "id": "wraith:5:imbue_reload:2916",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Card Trick: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_quick_silver",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_card_toss"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 5,
+    "item": "Quicksilver Reload",
+    "souls": 8000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 1
+   },
+   "numbers": [
+    "18.0",
+    "10.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "wraith:5:component_for:2917": {
+   "id": "wraith:5:component_for:2917",
+   "kind": "component_for",
+   "phrase": "From Mercurial Magnum: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Quicksilver Reload",
+    "souls": 8000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 21600.0,
+    "event": "Mercurial Magnum"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Mercurial Magnum"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:6:spike_complete:2918": {
+   "id": "wraith:6:spike_complete:2918",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 6,
+    "item": "Surge of Power",
+    "souls": 10400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "wraith:6:imbue_spirit:2919": {
+   "id": "wraith:6:imbue_spirit:2919",
+   "kind": "imbue_spirit",
+   "phrase": "Imbued on Card Trick: +28 spirit on that ability only, about +26.6 on its damage (0.95x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_storm",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_card_toss"
+   ],
+   "score": 60,
+   "point": {
+    "idx": 6,
+    "item": "Surge of Power",
+    "souls": 10400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_spirit",
+    "slot": 1
+   },
+   "numbers": [
+    "28.0",
+    "26.6",
+    "0.95"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "wraith:6:upgrade_of:2920": {
+   "id": "wraith:6:upgrade_of:2920",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 6,
+    "item": "Surge of Power",
+    "souls": 10400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:6:phase_range:2921": {
+   "id": "wraith:6:phase_range:2921",
+   "kind": "phase_range",
+   "phrase": "Souls 0-10,400 (levels 1-17).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Surge of Power",
+    "souls": 10400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Surge of Power",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "10,400",
+    "1",
+    "17"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:6:phase_spikes:2929": {
+   "id": "wraith:6:phase_spikes:2929",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Tesla Bullets, spirit 4.8k at Surge of Power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Surge of Power",
+    "souls": 10400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Surge of Power",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:6:phase_ult:2930": {
+   "id": "wraith:6:phase_ult:2930",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Telekinesis) is available from Tesla Bullets.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Surge of Power",
+    "souls": 10400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Surge of Power",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:7:invest_step:2931": {
+   "id": "wraith:7:invest_step:2931",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 5,600 to 12,000 invested, crossing the 6.4k, 8k, 11.2k tiers: bonus 46 to 74% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 7,
+    "item": "Ricochet",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "12000",
+    "46.0",
+    "74.0",
+    "6.4k",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 6400
+  },
+  "wraith:7:researched:2932": {
+   "id": "wraith:7:researched:2932",
+   "kind": "researched",
+   "phrase": "Bounced bullets carry your bullet procs, so Tesla Bullets' shock gets extra rolls on up to 2 more enemies within 13m at 65% damage when they stand together.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "abilities.vdata:upgrade_ricochet",
+    "citadel_mods_english.txt upgrade_ricochet_desc ('applying any bullet procs')",
+    "abilities.vdata:upgrade_chain_lightning"
+   ],
+   "score": 62,
+   "point": {
+    "idx": 7,
+    "item": "Ricochet",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "researched",
+    "checks": [
+     {
+      "kind": "item_text",
+      "item": "Ricochet",
+      "contains": "applying any bullet procs"
+     },
+     {
+      "kind": "item_stat",
+      "item": "Ricochet",
+      "key": "RicochetTargets",
+      "op": "==",
+      "value": 2
+     },
+     {
+      "kind": "item_stat",
+      "item": "Ricochet",
+      "key": "RicochetRadius",
+      "op": "==",
+      "value": 13
+     },
+     {
+      "kind": "item_stat",
+      "item": "Ricochet",
+      "key": "RicochetDamagePercent",
+      "op": "==",
+      "value": 65
+     },
+     {
+      "kind": "item_text",
+      "item": "Tesla Bullets",
+      "contains": "chance to shock"
+     }
+    ],
+    "requires": {
+     "owned": [
+      "Tesla Bullets"
+     ]
+    }
+   },
+   "numbers": [
+    "2",
+    "13",
+    "65"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "researcher_note": "Text says ricochet applies 'any bullet procs'; Tesla Bullets is a per-bullet proc (REG proc). Whether ricochet hits also feed Card Trick's card meter is NOT claimed (unknown)."
+  },
+  "wraith:8:spike_progress:2933": {
+   "id": "wraith:8:spike_progress:2933",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 8,
+    "item": "Spirit Lifesteal",
+    "souls": 18400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "wraith:8:component_for:2934": {
+   "id": "wraith:8:component_for:2934",
+   "kind": "component_for",
+   "phrase": "From Spiritual Overflow: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 8,
+    "item": "Spirit Lifesteal",
+    "souls": 18400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 16000.0,
+    "event": "Spiritual Overflow"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spiritual Overflow"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:8:sell_swap:2935": {
+   "id": "wraith:8:sell_swap:2935",
+   "kind": "sell_swap",
+   "phrase": "Replaces Monster Rounds: sell it when you buy this.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 8,
+    "item": "Spirit Lifesteal",
+    "souls": 18400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Monster Rounds",
+    "slots_full": false
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Monster Rounds"
+  },
+  "wraith:9:spike_progress:2936": {
+   "id": "wraith:9:spike_progress:2936",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 9,
+    "item": "Bullet Lifesteal",
+    "souls": 20000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600.0,
+    "event": "Enduring Speed completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600.0,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "wraith:9:component_for:2937": {
+   "id": "wraith:9:component_for:2937",
+   "kind": "component_for",
+   "phrase": "From Leech: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Bullet Lifesteal",
+    "souls": 20000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 19200.0,
+    "event": "Leech"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Leech"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:10:spike_progress:2938": {
+   "id": "wraith:10:spike_progress:2938",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 10,
+    "item": "Sprint Boots",
+    "souls": 20800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800.0,
+    "event": "Enduring Speed completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    800.0,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "wraith:10:component_for:2939": {
+   "id": "wraith:10:component_for:2939",
+   "kind": "component_for",
+   "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 10,
+    "item": "Sprint Boots",
+    "souls": 20800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800.0,
+    "event": "Enduring Speed"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Enduring Speed"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:11:spike_complete:2940": {
+   "id": "wraith:11:spike_complete:2940",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 11,
+    "item": "Enduring Speed",
+    "souls": 21600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "wraith:11:upgrade_of:2941": {
+   "id": "wraith:11:upgrade_of:2941",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Enduring Speed",
+    "souls": 21600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Sprint Boots"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:11:swap_candidate:2942": {
+   "id": "wraith:11:swap_candidate:2942",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Spellslinger later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 11,
+    "item": "Enduring Speed",
+    "souls": 21600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Enduring Speed",
+    "buyer": "Spellslinger"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:12:invest_step:2943": {
+   "id": "wraith:12:invest_step:2943",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Reactive Barrier",
+    "souls": 23200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "wraith:13:component_for:2944": {
+   "id": "wraith:13:component_for:2944",
+   "kind": "component_for",
+   "phrase": "From Spirit Rend: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Shredder",
+    "souls": 24800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 22400.0,
+    "event": "Spirit Rend"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Rend"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:13:phase_range:2945": {
+   "id": "wraith:13:phase_range:2945",
+   "kind": "phase_range",
+   "phrase": "Souls 10,400-24,800 (levels 17-28).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Shredder",
+    "souls": 24800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Shredder",
+    "keys": []
+   },
+   "numbers": [
+    "10,400",
+    "24,800",
+    "17",
+    "28"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:13:phase_abilities:2946": {
+   "id": "wraith:13:phase_abilities:2946",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Card Trick T3, Full Auto T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Shredder",
+    "souls": 24800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Shredder",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:13:phase_spikes:2953": {
+   "id": "wraith:13:phase_spikes:2953",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Enduring Speed.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Shredder",
+    "souls": 24800.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Shredder",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:14:invest_step:2954": {
+   "id": "wraith:14:invest_step:2954",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Mercurial Magnum",
+    "souls": 29600.0,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "9600",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "wraith:14:imbue_reload:2955": {
+   "id": "wraith:14:imbue_reload:2955",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Card Trick: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ethereal_bullets",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_card_toss"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 14,
+    "item": "Mercurial Magnum",
+    "souls": 29600.0,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 1
+   },
+   "numbers": [
+    "14.0",
+    "22.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "wraith:14:upgrade_of:2956": {
+   "id": "wraith:14:upgrade_of:2956",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Quicksilver Reload (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 14,
+    "item": "Mercurial Magnum",
+    "souls": 29600.0,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Quicksilver Reload"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:15:invest_step:2957": {
+   "id": "wraith:15:invest_step:2957",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 12,800 to 19,200 invested: bonus 74 to 86% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Spiritual Overflow",
+    "souls": 34400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "19200",
+    "74.0",
+    "86.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 16000
+  },
+  "wraith:15:upgrade_of:2958": {
+   "id": "wraith:15:upgrade_of:2958",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Spiritual Overflow",
+    "souls": 34400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:15:researched:2959": {
+   "id": "wraith:15:researched:2959",
+   "kind": "researched",
+   "phrase": "Charges up while you hit enemy heroes, paying out +30 spirit, +25% fire rate and +10% spirit lifesteal; Full Auto T3 removes reloads while it lasts, which keeps you shooting.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "abilities.vdata:upgrade_tech_overflow",
+    "abilities.vdata:citadel_ability_wraith_rapidfire (T3 UnlimitedAmmo)"
+   ],
+   "score": 55,
+   "point": {
+    "idx": 15,
+    "item": "Spiritual Overflow",
+    "souls": 34400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "researched",
+    "checks": [
+     {
+      "kind": "item_text",
+      "item": "Spiritual Overflow",
+      "contains": "charging up when shooting enemy heroes"
+     },
+     {
+      "kind": "item_stat",
+      "item": "Spiritual Overflow",
+      "key": "BonusSpirit",
+      "op": "==",
+      "value": 30
+     },
+     {
+      "kind": "item_stat",
+      "item": "Spiritual Overflow",
+      "key": "BonusFireRate",
+      "op": "==",
+      "value": 25
+     },
+     {
+      "kind": "item_stat",
+      "item": "Spiritual Overflow",
+      "key": "BonusSpiritLifesteal",
+      "op": "==",
+      "value": 10
+     },
+     {
+      "kind": "ability_prop",
+      "slot": 3,
+      "tier": 3,
+      "prop": "UnlimitedAmmo",
+      "op": ">=",
+      "value": 1
+     }
+    ],
+    "requires": {
+     "tier": {
+      "3": 3
+     }
+    }
+   },
+   "numbers": [
+    "30",
+    "25",
+    "10"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "researcher_note": ""
+  },
+  "wraith:16:invest_step:2960": {
+   "id": "wraith:16:invest_step:2960",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 9,600 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Leech",
+    "souls": 39200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "9600",
+    "38.0",
+    "46.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "wraith:16:upgrade_of:2961": {
+   "id": "wraith:16:upgrade_of:2961",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Bullet Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Leech",
+    "souls": 39200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Bullet Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:17:invest_step:2962": {
+   "id": "wraith:17:invest_step:2962",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 9,600 to 16,000 invested, crossing the 11.2k, 16k tiers: bonus 46 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Inhibitor",
+    "souls": 45600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "16000",
+    "46.0",
+    "54.0",
+    "11.2k",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "wraith:18:upgrade_of:2963": {
+   "id": "wraith:18:upgrade_of:2963",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Shredder (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Spirit Rend",
+    "souls": 47200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Shredder"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:18:swap_candidate:2964": {
+   "id": "wraith:18:swap_candidate:2964",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Escalating Exposure later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Spirit Rend",
+    "souls": 47200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Rend",
+    "buyer": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:19:invest_step:2965": {
+   "id": "wraith:19:invest_step:2965",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 20,800 to 27,200 invested: bonus 86 to 100% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Silencer",
+    "souls": 53600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 22400
+   },
+   "numbers": [
+    "20800",
+    "27200",
+    "86.0",
+    "100.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 22400
+  },
+  "wraith:19:researched:2966": {
+   "id": "wraith:19:researched:2966",
+   "kind": "researched",
+   "phrase": "The silence lasts 2.5s and the target is then immune for 10s, so you get one silence per target roughly every 12.5s: save the build-up for an escape or a key cast.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "abilities.vdata:upgrade_proc_silence"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 19,
+    "item": "Silencer",
+    "souls": 53600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "researched",
+    "checks": [
+     {
+      "kind": "item_stat",
+      "item": "Silencer",
+      "key": "SilenceDuration",
+      "op": "==",
+      "value": 2.5
+     },
+     {
+      "kind": "item_stat",
+      "item": "Silencer",
+      "key": "ImmunityDuration",
+      "op": "==",
+      "value": 10
+     },
+     {
+      "kind": "calc",
+      "expr": "2.5+10",
+      "equals": 12.5
+     }
+    ],
+    "requires": {}
+   },
+   "numbers": [
+    "2.5",
+    "10",
+    "12.5"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "researcher_note": ""
+  },
+  "wraith:19:phase_range:2967": {
+   "id": "wraith:19:phase_range:2967",
+   "kind": "phase_range",
+   "phrase": "Souls 24,800-53,600 (levels 28-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Silencer",
+    "souls": 53600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Silencer",
+    "keys": []
+   },
+   "numbers": [
+    "24,800",
+    "53,600",
+    "28",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:19:phase_abilities:2968": {
+   "id": "wraith:19:phase_abilities:2968",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Project Mind T3, Telekinesis T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Silencer",
+    "souls": 53600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Silencer",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:20:defence_purge:2974": {
+   "id": "wraith:20:defence_purge:2974",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Dispel Magic",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Silences and hexes keep stopping your teleport."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:20:defence_spirit:2975": {
+   "id": "wraith:20:defence_spirit:2975",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Resilience",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:20:defence_bullet:2976": {
+   "id": "wraith:20:defence_bullet:2976",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Metal Skin",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry is out-shooting you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:20:defence_gun:2977": {
+   "id": "wraith:20:defence_gun:2977",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Plated Armor",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:20:defence_parry:2978": {
+   "id": "wraith:20:defence_parry:2978",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Counterspell",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ult you can see coming, like Lash's or Infernus's."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:20:cc_exposure:2979": {
+   "id": "wraith:20:cc_exposure:2979",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Project Mind (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 20,
+    "item": "Unstoppable",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Stuns keep cancelling your teleport and your ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "wraith:20:upgrade_delta:2980": {
+   "id": "wraith:20:upgrade_delta:2980",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Tesla Bullets for 3,200 more souls: bonus fire rate 0 to 5..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_capacitor",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_chain_lightning"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Capacitor",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Tesla Bullets."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Tesla Bullets"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:20:upgrade_of:2981": {
+   "id": "wraith:20:upgrade_of:2981",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Tesla Bullets (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Capacitor",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Tesla Bullets."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Tesla Bullets"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:20:researched:2982": {
+   "id": "wraith:20:researched:2982",
+   "kind": "researched",
+   "phrase": "Chain count goes from 4 to 6 and damage per chain from 33 to 43; the new part is a projectile that slows by up to 60% and silences movement abilities, on a 40s item cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "abilities.vdata:upgrade_capacitor",
+    "abilities.vdata:upgrade_chain_lightning",
+    "citadel_mods_english.txt upgrade_capacitor_desc"
+   ],
+   "score": 60,
+   "point": {
+    "idx": 20,
+    "item": "Capacitor",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Tesla Bullets."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "researched",
+    "checks": [
+     {
+      "kind": "item_stat",
+      "item": "Tesla Bullets",
+      "key": "ChainCount",
+      "op": "==",
+      "value": 4
+     },
+     {
+      "kind": "item_stat",
+      "item": "Capacitor",
+      "key": "ChainCount",
+      "op": "==",
+      "value": 6
+     },
+     {
+      "kind": "item_stat",
+      "item": "Tesla Bullets",
+      "key": "DamagePerChain",
+      "op": "==",
+      "value": 33
+     },
+     {
+      "kind": "item_stat",
+      "item": "Capacitor",
+      "key": "DamagePerChain",
+      "op": "==",
+      "value": 43
+     },
+     {
+      "kind": "item_stat",
+      "item": "Capacitor",
+      "key": "MaxSlowPercent",
+      "op": "==",
+      "value": 60
+     },
+     {
+      "kind": "item_stat",
+      "item": "Capacitor",
+      "key": "AbilityCooldown",
+      "op": "==",
+      "value": 40
+     },
+     {
+      "kind": "item_text",
+      "item": "Capacitor",
+      "contains": "Silences their movement-based items and abilities"
+     }
+    ],
+    "requires": {
+     "owned": [
+      "Tesla Bullets"
+     ]
+    }
+   },
+   "numbers": [
+    "4",
+    "6",
+    "33",
+    "43",
+    "60",
+    "40"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "researcher_note": ""
+  },
+  "wraith:20:invest_step:2983": {
+   "id": "wraith:20:invest_step:2983",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 9,600 to 16,000 invested, crossing the 11.2k, 16k tiers: bonus 52 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Escalating Exposure",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Rend for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "16000",
+    "52.0",
+    "66.0",
+    "11.2k",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "wraith:20:sell_swap:2984": {
+   "id": "wraith:20:sell_swap:2984",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Rend: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Escalating Exposure",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Rend for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Rend",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Rend"
+  },
+  "wraith:20:researched:2985": {
+   "id": "wraith:20:researched:2985",
+   "kind": "researched",
+   "phrase": "Each spirit hit adds 4.5% spirit amp, at most one stack per 0.7s, so 12 stacks (54%) take about 8.4s of continuous spirit damage on one target: it pays off in long fights, not in a card burst.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "abilities.vdata:upgrade_escalating_exposure"
+   ],
+   "score": 62,
+   "point": {
+    "idx": 20,
+    "item": "Escalating Exposure",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Rend for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "researched",
+    "checks": [
+     {
+      "kind": "item_stat",
+      "item": "Escalating Exposure",
+      "key": "MagicIncreasePerStack",
+      "op": "==",
+      "value": 4.5
+     },
+     {
+      "kind": "item_stat",
+      "item": "Escalating Exposure",
+      "key": "ProcCooldown",
+      "op": "==",
+      "value": 0.7
+     },
+     {
+      "kind": "item_stat",
+      "item": "Escalating Exposure",
+      "key": "MaxStacks",
+      "op": "==",
+      "value": 12
+     },
+     {
+      "kind": "calc",
+      "expr": "12*4.5",
+      "equals": 54
+     },
+     {
+      "kind": "calc",
+      "expr": "12*0.7",
+      "equals": 8.4
+     }
+    ],
+    "requires": {}
+   },
+   "numbers": [
+    "4.5",
+    "0.7",
+    "12",
+    "54",
+    "8.4"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "researcher_note": ""
+  },
+  "wraith:20:invest_step:2986": {
+   "id": "wraith:20:invest_step:2986",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 27,200 to 33,600 invested: bonus 100 to 115% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_wraith m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Spellslinger",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enduring Speed for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 28800
+   },
+   "numbers": [
+    "27200",
+    "33600",
+    "100.0",
+    "115.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 28800
+  },
+  "wraith:20:sell_swap:2987": {
+   "id": "wraith:20:sell_swap:2987",
+   "kind": "sell_swap",
+   "phrase": "Replaces Enduring Speed: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Spellslinger",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enduring Speed for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Enduring Speed",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Enduring Speed"
+  },
+  "wraith:20:upgrade_delta:2988": {
+   "id": "wraith:20:upgrade_delta:2988",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Reactive Barrier for 4,800 more souls: cooldown reduction on proc 0 to 20; bullet resist 0 to 10..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_auto_cleanse",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_vex_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Indomitable",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Reactive Barrier."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Reactive Barrier"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "20",
+    "0",
+    "10"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "wraith:20:upgrade_of:2989": {
+   "id": "wraith:20:upgrade_of:2989",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Reactive Barrier (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Indomitable",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Reactive Barrier."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Reactive Barrier"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "wraith:20:defence_barrier:2990": {
+   "id": "wraith:20:defence_barrier:2990",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Divine Barrier",
+    "souls": 53600.0,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  }
+ },
+ "review": [
+  {
+   "build": "wraith",
+   "item": "Rapid Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Tesla Bullets completes 4.8k weapon in 4800 souls (~4.8 min), 3 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "wraith:0:spike_progress:2905",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 4,800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4800,
+      "event": "Tesla Bullets completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "wraith:0:component_for:2906",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Swift Striker: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Swift Striker"
+     }
+    }
+   ]
+  },
+  {
+   "build": "wraith",
+   "item": "Extra Spirit",
+   "section": "early",
+   "cls": "c",
+   "why": "spirit investment only; its 4.8k tier completes at Surge of Power, 8800 souls (~8.8 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "wraith:1:component_for:2908",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Surge of Power: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 8800,
+      "event": "Surge of Power"
+     }
+    }
+   ]
+  },
+  {
+   "build": "wraith",
+   "item": "Swift Striker",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Tesla Bullets completes 4.8k weapon in 3200 souls (~3.2 min), 1 purchases",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "wraith:2:spike_progress:2910",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Tesla Bullets completes 3,200 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 3200,
+      "event": "Tesla Bullets completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "wraith",
+   "item": "Spirit Lifesteal",
+   "section": "mid",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 3200.0 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 18400.0,
+   "unpublished": [
+    {
+     "id": "wraith:8:component_for:2934",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spiritual Overflow: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 16000.0,
+      "event": "Spiritual Overflow"
+     }
+    }
+   ]
+  },
+  {
+   "build": "wraith",
+   "item": "Bullet Lifesteal",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Enduring Speed completes 4.8k vitality in 1600.0 souls (~1.6 min), 2 purchases",
+   "souls": 20000.0,
+   "unpublished": [
+    {
+     "id": "wraith:9:spike_progress:2936",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600.0,
+      "event": "Enduring Speed completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "wraith:9:component_for:2937",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Leech: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 19200.0,
+      "event": "Leech"
+     }
+    }
+   ]
+  },
+  {
+   "build": "wraith",
+   "item": "Sprint Boots",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Enduring Speed completes 4.8k vitality in 800.0 souls (~0.8 min), 1 purchases",
+   "souls": 20800.0,
+   "unpublished": [
+    {
+     "id": "wraith:10:spike_progress:2938",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800.0,
+      "event": "Enduring Speed completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "wraith:10:component_for:2939",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800.0,
+      "event": "Enduring Speed"
+     }
+    }
+   ]
+  },
+  {
+   "build": "wraith",
+   "item": "Spirit Shredder",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+   "souls": 24800.0,
+   "unpublished": [
+    {
+     "id": "wraith:13:component_for:2944",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spirit Rend: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 22400.0,
+      "event": "Spirit Rend"
+     }
+    }
+   ]
+  },
+  {
+   "build": "wraith",
+   "item": "Spirit Rend",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 47200.0,
+   "unpublished": []
+  },
+  {
+   "build": "wraith",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Silences and hexes keep stopping your teleport."
+  },
+  {
+   "build": "wraith",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit."
+  },
+  {
+   "build": "wraith",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry is out-shooting you."
+  },
+  {
+   "build": "wraith",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "wraith",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ult you can see coming, like Lash's or Infernus's."
+  },
+  {
+   "build": "wraith",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep cancelling your teleport and your ult."
+  }
+ ],
+ "stats": {
+  "g": 5,
+  "b": 4,
+  "c": 2,
+  "a": 19,
+  "d": 2
+ }
+}

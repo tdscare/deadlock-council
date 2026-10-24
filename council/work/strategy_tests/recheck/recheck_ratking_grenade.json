@@ -1,0 +1,30 @@
+{
+ "id": "ratking_grenade",
+ "buildFile": "council/work/ratking_grenade.js",
+ "reason": "Undo silent edits that were mistakes: Battle Vest back to right after Cultist Sacrifice (it sat at 24k as a fresh tier 2, losing +10.8 grenade damage per detonation and 18% bullet resist for 17.6k souls), Sprint Boots/Enduring Speed back after Battle Vest (they pushed the gun 4.8k from 4.8k to 6.4k). Titanic before Cultist kept (neutral). Glass Cannon out of the rich box (tank-leaning build, -13% max health against the cape and Colossus, not a pricier version of anything in the build). Cheat Death now sells Titanic Magazine (14% weapon damage) instead of Hollow Point (35%), which also gives Titanic a named sell. Spikes: gun 4.8k at 4.8k, health 4.8k at 11.2k, gun 8k at 14.4k, spirit 4.8k at 24k (matches the existing Relevance pass line again).",
+ "evidence": [
+  {
+   "path": "council/work/tri2/ratking_grenade_paths.txt",
+   "kind": "calc"
+  },
+  {
+   "path": "council/work/tri2/ap_models.txt",
+   "kind": "calc"
+  },
+  {
+   "path": "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata",
+   "kind": "data"
+  },
+  {
+   "path": "council/work/tri2/ratking_waiver_main.txt",
+   "kind": "calc"
+  }
+ ],
+ "waive": [
+  {
+   "rule": "MAIN_4.8K_LATE",
+   "why": "Validator picks health as main by total souls; the grenade and ult scale only with weapon damage, so gun is the damage colour and lands 4.8k at 4.8k. No order gets health 4.8k by 8k without delaying the grenade spike (computed). Pre-existing in data.js, recorded explicitly.",
+   "evidence": "council/work/tri2/ratking_waiver_main.txt"
+  }
+ ]
+}

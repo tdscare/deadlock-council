@@ -1,0 +1,22 @@
+BUILD ratking_grenade | diff: added Early · L-R|Battle Vest; removed Late · L-R|Battle Vest, I'm rich as fuck|Glass Cannon
+fixed: 2 | UNRESOLVED in resulting build: 3 | NEW: 3
+  fixed   bc: T1T2_NOT_UPGRADED_OR_SOLD ratking_grenade: Titanic Magazine (T2) @2400
+  fixed   bc: FRESH_T2_LATE ratking_grenade: Battle Vest @24000
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY ratking_grenade: Extended Magazine: Its weapon damage raises your grenade damage.
+  UNRESOLVED bc: MAIN_4.8K_LATE ratking_grenade: health 4.8k at 11200
+  UNRESOLVED c12: Bullet Resist Shredder (spirit) instead of Battle Vest (health): colour changes, check spikes
+  UNRESOLVED c12: Bullet Resist Shredder (spirit) instead of Battle Vest (health): colour changes, check spikes
+STRATEGY BLOCK
+INTERACTION BLOCK Cultist Sacrifice
+INTERACTION BLOCK Battle Vest
+OVERLAP check (changed items):
+  overlap Cultist Sacrifice (moved earlier): no overlap-candidate
+  overlap Battle Vest (moved earlier): core_end=ADDS-VALUE
+UNRESOLVED overlap-candidates in resulting build (not part of this change): 3
+  UNRESOLVED overlap-candidate Superior Cooldown [core_end=REDUNDANT-LIKELY]
+  UNRESOLVED overlap-candidate Mystic Reverb [core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Juggernaut [core_end=UNKNOWN]
+BLOCK STRATEGY: proposal changes purchase order + greens (Sprint Boots,Enduring Speed,Extra Health,Fortitude,Battle Vest,Witchmail,Colossus -> Battle Vest,Sprint Boots,Enduring Speed,Extra Health,Fortitude,Witchmail,Colossus) + 4.8k spike timing (gun 6400 -> 4800, vitality 9600 -> 11200, spirit 22400 -> 24000) but cites no `strategy` evidence file (run abtimeline.py --strategy ratking_grenade <checkpoints> and cite it as kind `strategy`)
+BLOCK INTERACTION: Cultist Sacrifice (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions ratking_grenade "Cultist Sacrifice") is cited
+BLOCK INTERACTION: Battle Vest (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions ratking_grenade "Battle Vest") is cited
+RESULT: BLOCKED

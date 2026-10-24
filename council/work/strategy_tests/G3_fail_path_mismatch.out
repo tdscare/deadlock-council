@@ -1,0 +1,42 @@
+BUILD billy_damage | diff: added Early · L-R|Battle Vest, Mid · L-R|Bullet Lifesteal, Mid · L-R|Cultist Sacrifice, Mid · cont.|Close Quarters, Mid · cont.|Point Blank, Late · L-R|Rapid Recharge, Late · L-R|Berserker, Late · L-R|Silencer.0, Late · L-R|Scourge.0; removed Early · L-R|Cultist Sacrifice, Mid · L-R|Close Quarters, Mid · L-R|Point Blank, Mid · cont.|Rapid Recharge, Mid · cont.|Berserker, Late · L-R|Silencer, Late · L-R|Scourge
+fixed: 1 | UNRESOLVED in resulting build: 4 | NEW: 15
+  fixed   bc: CORE_NOTE_NONEMPTY billy_damage: Scourge: Cast it on yourself as you dive in.
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY billy_damage: Cultist Sacrifice: Have it by about 8 minutes and eat a big camp with it.
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY billy_damage: Lifestrike: Light punches and troopers trigger it too.
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY billy_damage: Spirit Strike: Bashdown counts as a punch for this.
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY billy_damage: Colossus: Pop it when you chain them in.
+  UNRESOLVED walk: Colossus: slot 13 with no sell that frees a slot
+  UNRESOLVED walk: Silencer.0: not a current item name
+  UNRESOLVED walk: Scourge.0: not a current item name
+STRATEGY BLOCK
+INTERACTION BLOCK Battle Vest
+INTERACTION BLOCK Bullet Lifesteal
+INTERACTION BLOCK Silencer
+WEAKNESS: proposal is not justified by a weakness
+SALES: no investment drop, sale-before-upgrade or redundant purchase detected
+OVERLAP check (changed items):
+  overlap Battle Vest (added): core_end=ADDS-VALUE
+  overlap Bullet Lifesteal (added): at_buy=COMPLEMENTS; core_end=COMPLEMENTS
+  overlap Silencer.0 (added): no overlap-candidate
+  overlap Scourge.0 (added): no overlap-candidate
+UNRESOLVED overlap-candidates in resulting build (not part of this change): 4
+  UNRESOLVED overlap-candidate Lifestrike [core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Point Blank [at_buy=UNKNOWN; core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Phantom Strike [core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Divine Barrier [core_end=UNKNOWN]
+BLOCK NEW violation introduced: bc: MAIN_4.8K_LATE billy_damage: gun 4.8k at 9600
+BLOCK NEW violation introduced: bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Battle Vest (T2) @5600
+BLOCK NEW violation introduced: bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Bullet Lifesteal (T2) @7200
+BLOCK NEW violation introduced: bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Bullet Resist Shredder (T2) @16800
+BLOCK NEW violation introduced: bc: SLOTS_GT12_NO_SELL billy_damage: Colossus is slot 13
+BLOCK NEW violation introduced: bc: STALE_ITEM billy_damage: Silencer.0 not in current item list
+BLOCK NEW violation introduced: bc: STALE_ITEM billy_damage: Scourge.0 not in current item list
+BLOCK NEW violation introduced: bc: CORE_NOT_12 billy_damage: core ends with 13 items, 40000 souls
+BLOCK NEW violation introduced: walk: Colossus: slot 13 with no sell that frees a slot
+BLOCK NEW violation introduced: walk: Silencer.0: not a current item name
+BLOCK NEW violation introduced: walk: Scourge.0: not a current item name
+BLOCK STRATEGY: proposal changes greens (Melee Lifesteal,Grit,Lifestrike,Spirit Shielding,Colossus -> Melee Lifesteal,Grit,Battle Vest,Bullet Lifesteal,Lifestrike,Spirit Shielding,Colossus) + 4.8k spike timing (gun 6400 -> 9600, vitality 9600 -> 7200, spirit 16000 -> 19200) but council/evidence/strategy/billy_damage_lane_sustain.txt: chosen alternative A5 path differs from the proposed core at position 4 (Extra Health vs Battle Vest)
+BLOCK INTERACTION: Battle Vest (added) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions billy_damage "Battle Vest") is cited
+BLOCK INTERACTION: Bullet Lifesteal (added) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions billy_damage "Bullet Lifesteal") is cited
+BLOCK INTERACTION: Silencer (removed) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions billy_damage "Silencer") is cited
+RESULT: BLOCKED

@@ -1,0 +1,12 @@
+BUILD venator_grenade | diff: core order changed
+fixed: 1 | UNRESOLVED in resulting build: 0 | NEW: 1
+  fixed   bc: THRESH_ITEM_NO_THRESHOLD_LINE venator_grenade: Recharging Rush @19200 has no "Threshold:" changes line naming it
+STRATEGY BLOCK
+INTERACTION BLOCK Battle Vest
+OVERLAP check (changed items):
+  overlap Cultist Sacrifice (moved earlier): no overlap-candidate
+UNRESOLVED overlap-candidates in resulting build (not part of this change): 1
+  UNRESOLVED overlap-candidate Counterspell [core_end=UNKNOWN]
+BLOCK STRATEGY: proposal changes purchase order + greens (Battle Vest,Extra Health,Fortitude,Bullet Lifesteal,Vampiric Burst,Inhibitor -> Battle Vest,Extra Health,Fortitude,Bullet Lifesteal,Vampiric Burst,Inhibitor) + 4.8k spike timing (gun 6400 -> 4800) but cites no `strategy` evidence file (run abtimeline.py --strategy venator_grenade <checkpoints> and cite it as kind `strategy`)
+BLOCK INTERACTION: Battle Vest (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions venator_grenade "Battle Vest") is cited
+RESULT: BLOCKED

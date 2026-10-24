@@ -1,0 +1,70 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: wraith
+HERO: Wraith
+ITEM: Bullet Lifesteal
+CHECKPOINT: buy-point at 20000.0 souls (state souls 20000.0; item cost 1600)
+VERSION: interaction-v1
+ARGS: --interactions wraith Bullet Lifesteal
+GENERATED: 2026-10-24T16:49:30Z
+BODY-SHA: 1a6586f1ac733dbb6c332106ab25254af28916e2048c27415aa66951aac5b6ce
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 1600, unconditional, ranked): Opening Rounds, Long Range, Mystic Shot, Bullet Resist Shredder, Titanic Magazine; also shown, not ranked (conditional or unequal cost): Battle Vest, Kinetic Dash, Active Reload
+VERDICT: Bullet Lifesteal is beaten in every window: sustained: Bullet Resist Shredder; burst: Mystic Shot; ult: Opening Rounds (no permanent equal-soul fire-rate item exists at this checkpoint)
+UNKNOWN_CELLS: 1
+SELECTION: build-decision | Bullet Lifesteal is bought at 20000.0 souls in wraith: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (1600) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+UPPER-BOUND OPTIONS THAT BEAT IT (their trigger condition decides; UNKNOWN uptime): Active Reload, Battle Vest, Kinetic Dash
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.6, long_share=0.3, W_sus=10.0, W_burst=3.0; reload 2.82 s (measured 2.82 s in council/sandbox/results/wraith_gun_PR-W1.md)
+STATE: owned ['Swift Striker', 'Tesla Bullets', 'Quicksilver Reload', 'Surge of Power', 'Ricochet', 'Spirit Lifesteal', 'Bullet Lifesteal'] | tiers Card Trick=T3(cards) Project Mind=T2(utility) Full Auto=T3(gun-mode) Telekinesis=T1(spirit) | weapon invest bonus 74% | spirit 70
+
+## INTERACTION MATRIX (item effect x kit component)
+- bullet lifesteal (BulletLifestealPercent=13)
+    normal shooting                              WORKS                      [CALCULATED] heals a share of bullet damage
+    1=Card Trick T3 [cards]                      DOES NOT WORK              [CALCULATED] no matching mechanic
+    2=Project Mind T2 [utility]                  NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Full Auto T3 [gun-mode]                    WORKS                      [CALCULATED] ability fires the weapon (game text: 'Temporarily boost your fire rate and deal bonus {g:citadel_i...'); bullets take weapon bonuses
+    4=Telekinesis T1 (ULT) [spirit]              DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+- defence (not damage) (BonusHealth=90)
+    normal shooting                              n/a                        [CALCULATED] defensive stat; valued by --strategy (survival), not damage
+    1=Card Trick T3 [cards]                      n/a                        [CALCULATED] defensive stat
+    2=Project Mind T2 [utility]                  n/a                        [CALCULATED] defensive stat
+    3=Full Auto T3 [gun-mode]                    n/a                        [CALCULATED] defensive stat
+    4=Telekinesis T1 (ULT) [spirit]              n/a                        [CALCULATED] defensive stat
+- weapon damage % (BaseAttackDamagePercent=6)
+    normal shooting                              WORKS                      [CALCULATED] multiplies every bullet (weapon % pool now 74%: +6 adds 3.4% relative)
+    1=Card Trick T3 [cards]                      DOES NOT WORK              [CALCULATED] card resource counts hits, card damage is spirit-scaled (Damage ETechPower)
+    2=Project Mind T2 [utility]                  NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Full Auto T3 [gun-mode]                    WORKS                      [CALCULATED] ability fires the weapon (game text: 'Temporarily boost your fire rate and deal bonus {g:citadel_i...'); bullets take weapon bonuses
+    3=Full Auto T3 [gun-mode] bullets            DOES NOT WORK              [CALCULATED] per-bullet spirit damage is spirit-scaled, not weapon %
+    4=Telekinesis T1 (ULT) [spirit]              DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    melee (light/heavy)                          UNKNOWN                    [UNKNOWN] melee damage is ELightMeleeDamage/EHeavyMeleeDamage; whether weapon-% (incl. range-conditional) bonuses apply to melee is not in data
+    owned proc Tesla Bullets                     DOES NOT WORK              [CALCULATED] proc count follows hits, its damage is fixed/spirit
+    other weapon % items                         WORKS (diminishing)        [CALCULATED] additive pool 74% (incl. invest bonus): relative gain 3.4%
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |      3891              |       663              |       270              | 0
+Bullet Lifesteal             |         3944 (+1..+1%) |          679 (+2..+2%) |          270 (+0..+0%) | 204
+Opening Rounds               |         4069 (+5..+5%) |          690 (+4..+4%) |          277 (+3..+3%) | 0
+Long Range                   |         3996 (+3..+3%) |          694 (+5..+5%) |          270 (+0..+0%) | 0
+Mystic Shot                  |         4246 (+9..+9%) |        819 (+24..+24%) |          277 (+3..+3%) | 0
+Battle Vest                  |         4037 (+4..+4%) |          689 (+4..+4%) |          270 (+0..+0%) | 0  ! stats only above a health threshold; conditional item (selfhp): counted as if its condition is met (upper bound)
+Bullet Resist Shredder       |       4277 (+10..+10%) |        753 (+14..+14%) |          277 (+3..+3%) | 0
+Kinetic Dash                 |       4421 (+14..+14%) |        759 (+14..+14%) |          270 (+0..+0%) | 0  ! fire rate is a timed buff, counted as always on (upper bound)
+Titanic Magazine             |         4014 (+3..+3%) |          700 (+6..+6%) |          270 (+0..+0%) | 0
+Active Reload                |       4421 (+14..+14%) |        759 (+14..+14%) |          270 (+0..+0%) | 280  ! fire rate is a timed buff, counted as always on (upper bound)
+  candidate detail (reading 1): sustained bullets 176, gun 1572, stacks 0, procs 675, spirit 1697 | ult: Telekinesis damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Bullet Resist Shredder > Mystic Shot > Opening Rounds > Titanic Magazine > Long Range > Bullet Lifesteal
+  burst: rank (reading 1) Mystic Shot > Bullet Resist Shredder > Titanic Magazine > Long Range > Opening Rounds > Bullet Lifesteal
+  ult: rank (reading 1) Opening Rounds > Mystic Shot > Bullet Resist Shredder > Bullet Lifesteal > Long Range > Titanic Magazine
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (150s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  none
+
+## NOT DETERMINED FROM DATA
+  - weapon damage % (BaseAttackDamagePercent=6): melee (light/heavy): melee damage is ELightMeleeDamage/EHeavyMeleeDamage; whether weapon-% (incl. range-conditional) bonuses apply to melee is not in data
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

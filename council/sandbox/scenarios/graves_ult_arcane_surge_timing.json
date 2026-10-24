@@ -1,0 +1,93 @@
+{
+ "id": "graves_ult_arcane_surge_timing",
+ "title": "Ult Graves 3.2k-5.6k: Arcane Surge at 2.4k (damage first) or Grit/Duration Extender first?",
+ "hero": "Graves",
+ "playstyle": "Ult Graves",
+ "builds": [
+  "graves_ult"
+ ],
+ "question": "Both orders hold 4.8k spirit at 5.6k. Arcane Surge first gives more spirit power when the ult unlocks; Grit/Extra Stamina first keep barrier and vitality bonus. Which wins the 3.2k-4k lane fight?",
+ "hypothesis": "H-GU-2 (calc, council/triage/calc/graves_paths.txt): at 3.2k souls P0 (Arcane Surge first) has spirit power 65 (45 without the dash bonus) vs 37 and deals ~+22-30% damage per Hands+Jar+ult rotation; P2 (Grit first) has +200 barrier and +12% vitality bonus (~+30% effective HP).",
+ "arms": [
+  {
+   "name": "P0_surge_first",
+   "items": [
+    "Improved Spirit",
+    "Arcane Surge"
+   ],
+   "ability_order": "1123444224231133",
+   "imbues": {},
+   "souls": 3200,
+   "notes": "real tiers at 3.2k: Jar T1, Hands U, Theft U, Decree T2 (model A); record before each block"
+  },
+  {
+   "name": "P2_grit_first",
+   "items": [
+    "Improved Spirit",
+    "Extra Stamina",
+    "Grit"
+   ],
+   "ability_order": "1123444224231133",
+   "imbues": {},
+   "souls": 3200,
+   "notes": "same tiers"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "L8",
+  "souls": 3200,
+  "position": "lane, 1 enemy bot hero 20m away",
+  "enemies": [
+   {
+    "hero": "Haze",
+    "count": 1,
+    "items": [],
+    "behaviour": "shoots back",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "hp"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Dash-jump, cast Decree on the enemy, then Hands, then Jar",
+  "Record damage dealt in 10s and your HP+barrier lost in the same 10s"
+ ],
+ "trials": 6,
+ "metrics": [
+  {
+   "name": "damage_10s",
+   "unit": "damage",
+   "how": "bot HP lost",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "ehp_lost_pct",
+   "unit": "%",
+   "how": "own HP+barrier lost / max",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "damage_10s",
+  "min_effect_pct": 15,
+  "min_trials": 6,
+  "rule": "SUPPORTS P0 if damage_10s >=15% higher and ehp_lost_pct not worse by more than 30%; REFUTES (switch to P2) if P2 is within 5% damage; else INCONCLUSIVE (keep P0 as the rule default: damage spike first)."
+ },
+ "blockedIfNo": []
+}

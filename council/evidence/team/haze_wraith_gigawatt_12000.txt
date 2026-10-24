@@ -1,0 +1,22 @@
+SCOPE: build-context
+KIND: team
+BUILD: haze
+ALLIES: ['hero_wraith', 'hero_gigawatt']
+CHECKPOINT: 12000
+ARGS: --team haze --allies hero_wraith,hero_gigawatt --at 12000
+GENERATED: 2026-10-24T16:28:02Z
+BODY-SHA: 56ec97fc35b7b36ed4b6d4de9a3caa481e1e4747ba7d4fd650fb455e8d29150a
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+RULE: only MY purchases are optimised; allies are context; ordinary teammate behaviour (attacking the enemy I debuff) is assumed at a shared-target share of 0.3 / 0.6 (MODELLED ESTIMATE); no prearranged plan
+ALLY PROFILES (kit data, VERIFIED GAME MECHANIC inputs; split MODELLED at spirit 30, 55% hits): hero_wraith: gun 33% / spirit 67%; hero_gigawatt: gun 69% / spirit 31%
+MARGIN (pre-registered): an option is shown as an optional pivot only if team damage (mine + allies) rises >= 5% at the 0.3 share, or my trade ratio rises >= 5%
+
+## OPTIONS FOR MY HERO (best catalog item per approach, replacing my newest same-tier item)
+approach | item (replaces) | my trade ratio % | my dps change | ally dps added (share 0.3 / 0.6) | team damage % | result | tier
+conventional (as built) | - | +0.0 | +0 | 0 / 0 | +0.0 | default | baseline
+debuff for allies (anti-heal) | Decay (Fortitude) | -1.6 | +55 | 9 / 17 | +19.9 | OPTIONAL PIVOT | MODEL-ONLY
+debuff for allies (bullet resist) | Disarming Hex (Fortitude) | -10.4 | +37 | 4 / 9 | +12.7 | OPTIONAL PIVOT | MODEL-ONLY
+debuff for allies (spirit resist) | Spirit Snatch (Fortitude) | -10.4 | +37 | 4 / 8 | +12.5 | OPTIONAL PIVOT | MODEL-ONLY
+disruption | Knockdown (Fortitude) | -10.4 | +37 | 0 / 0 | +10.8 | default stays | INSUFFICIENT (disruption value: denying enemy farm/picks has no model)
+
+## UNKNOWN: how often allies hit my debuffed target (share ASSUMED), disruption value, team win effect; not measurable in the sandbox (no allied bots, no economy).

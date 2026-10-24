@@ -1,0 +1,224 @@
+{
+ "id": "bebop_bomb",
+ "hk": "hero_bebop",
+ "hero": "Bebop",
+ "tag": "New",
+ "name": "Rizuhble's Kaboom Bot Bebop",
+ "desc": "Bomb Bebop",
+ "abil": [
+  "Exploding Uppercut",
+  "Sticky Bomb",
+  "Grapple Arm",
+  "Hyper Beam"
+ ],
+ "order": [
+  2,
+  2,
+  3,
+  1,
+  2,
+  4,
+  4,
+  4,
+  1,
+  3,
+  2,
+  4,
+  3,
+  3,
+  1,
+  1
+ ],
+ "rows": [
+  [
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Mystic Burst",
+      ""
+     ],
+     [
+      "Spirit Strike",
+      ""
+     ],
+     [
+      "Sprint Boots",
+      ""
+     ],
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Trophy Collector",
+      ""
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ],
+     [
+      "Compress Cooldown",
+      "On Sticky Bomb.",
+      "2"
+     ],
+     [
+      "Enduring Speed",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Spirit Snatch",
+      ""
+     ],
+     [
+      "Veil Walker",
+      ""
+     ],
+     [
+      "Tankbuster",
+      ""
+     ],
+     [
+      "Mystic Expansion",
+      "On Sticky Bomb.",
+      "2"
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Echo Shard",
+      "On Sticky Bomb.",
+      "2"
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Witchmail",
+      ""
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Greater Expansion",
+      ""
+     ],
+     [
+      "Mystic Reverb",
+      "On Sticky Bomb.",
+      "2"
+     ],
+     [
+      "Spirit Burn",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Tankbuster if needed. Ahead? Skip it until you're dying. Sell Veil Walker for it.",
+    true,
+    [
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+     ],
+     [
+      "Metal Skin",
+      "One gun hero is deleting you: Haze, Wraith, Vindicta."
+     ],
+     [
+      "Dispel Magic",
+      "Knockdown before it lands, Slowing Hex, Disarming Hex."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun and Metal Skin isn't enough."
+     ],
+     [
+      "Bullet Resilience",
+      "Two or more gun heroes keep hitting you."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+     ],
+     [
+      "Unstoppable",
+      "If you keep getting stunned or silenced before you can hook."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Escalating Exposure",
+      "Hyper Beam stacks it to max in one ult. Sell Veil Walker for this, or Spirit Snatch if it's gone."
+     ],
+     [
+      "Magic Carpet",
+      "Sell Trophy Collector for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ],
+     [
+      "Cheat Death",
+      "Sell Tankbuster for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ],
+     [
+      "Juggernaut",
+      "Upgrade of Enduring Speed."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Round 19: new build, replacing Support Bebop (no post-patch public support Bebop exists; the only one, Suzu's on mobalytics, was last a support build in January). Bomb Bebop is the popular spirit style (Plasma's THERES A BOMB STRAPPED TO MY CHEST, DTF's Special Bebomb Blend, Pctt Spirit, The REAL Shadow Bebop, Secret Eternus 7 Shadow Bebop, Suzu Bomb Bebop on mobalytics): Mystic Burst, Spirit Strike, Trophy Collector, Improved Spirit, Spirit Snatch, Echo Shard and Mystic Reverb on Sticky Bomb, Boundless, Witchmail, Spirit Burn.",
+  "Round 19: counters caption uses Kieran's exact wording.",
+  "Round 20: late list: Magic Carpet (Plasma's bomb build core, +15% ability duration; sell Trophy Collector), Cheat Death (Plasma's rich box; sell Tankbuster), Divine Barrier; slot-locked Transcendent Cooldown, Juggernaut. Core 51.2k, with the late list 72k without Divine Barrier. Cheat Death listed last as a luxury (Kieran 13:01).",
+  "Round 20 (update 2): checked Restorative Shot and lane timing: every lane item helps in lane now, no Slowing Bullets or Weighted Shots; no changes.",
+  "Round 23: Escalating Exposure added first in the late list: Hyper Beam hits every 0.1s, so it reaches 12 stacks (+54% spirit damage) inside one 11s ult.",
+  "Round 25: ability order 2134212342443311 → 2231244413243311 (kit-based for this playstyle, no idle early points)."
+ ]
+}

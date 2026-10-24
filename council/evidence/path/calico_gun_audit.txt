@@ -1,0 +1,58 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: calico_gun
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:16Z
+BODY-SHA: 341ba3722655115d30221a2298adb8ef8df1a152c309baddd0fb566706585506
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Early · L-R              -> main path (sequential): Close Quarters, Rapid Rounds, Extended Magazine, Titanic Magazine, Split Shot, Sprint Boots, Bullet Lifesteal
+  Mid · L-R                -> main path (sequential): Enduring Speed, Extra Health, Burst Fire, Fortitude, Point Blank, Lifestrike, Hunter's Aura, Vampiric Burst
+  Late · L-R               -> main path (sequential): Glass Cannon, Lucky Shot, Silencer, Ricochet, Spellslinger
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Resilience, Spellbreaker, Dispel Magic, Counterspell, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Armor Piercer, Crippling Headshot, Cheat Death, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Juggernaut
+
+## SALE CHECKLIST (computed)
+- Late · L-R (main path): buy Ricochet, sell Split Shot
+    function of Split Shot: stats only; replacement Ricochet: fire_rate; roles lost: none  [VERIFIED GAME MECHANIC]
+    Split Shot is a component of later items: no
+    held for 47200.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 32000/14400/0 -> 36800/14400/0; thresholds lost: none
+    trade ratio after the sale 0.53; selling Titanic Magazine instead: 0.40 (-23.4%)  [MODELLED ESTIMATE]
+    model limit: Split Shot has an active effect (INSTANT_CAST) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- Late · L-R (main path): buy Spellslinger, sell Titanic Magazine
+    function of Titanic Magazine: ammo; replacement Spellslinger: ammo, cooldown, fire_rate; roles lost: none  [VERIFIED GAME MECHANIC]
+    Titanic Magazine is a component of later items: no
+    held for 54400.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 36800/14400/0 -> 41600/14400/0; thresholds lost: none
+    trade ratio after the sale 0.34; selling Burst Fire instead: 0.41 (+22.2%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Titanic Magazine): 20 s 82 bullets (clip 16, 5.2 magazines, 48% not firing; refill items used every other charge) | 60 s 227 bullets, 52% not firing | damage 60 s 19801  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Titanic Magazine, sell Burst Fire: 20 s 97 bullets (clip 28, 3.5 magazines, 27% not firing; refill items used every other charge) | 60 s 270 bullets, 32% not firing | damage 60 s 24617  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Titanic Magazine, no Spellslinger): 20 s 101 bullets (clip 28, 3.7 magazines, 31% not firing; refill items used every other charge) | 60 s 277 bullets, 37% not firing | damage 60 s 25242  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Armor Piercer, sell Burst Fire
+    function of Burst Fire: fire_rate, move_speed; replacement Armor Piercer: bullet_proc; roles lost: fire_rate, move_speed  [VERIFIED GAME MECHANIC]
+    Burst Fire is a component of later items: no
+    held for 52800.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 41600/14400/0 -> 44800/14400/0; thresholds lost: none
+    trade ratio after the sale 0.29; selling Fortitude instead: 0.27 (-3.9%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Crippling Headshot, sell Point Blank
+    function of Point Blank: slow; replacement Crippling Headshot: resist_shred; roles lost: slow  [VERIFIED GAME MECHANIC]
+    Point Blank is a component of later items: no
+    held for 48000.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 41600/14400/0 -> 44800/14400/0; thresholds lost: none
+    trade ratio after the sale 0.27; selling Burst Fire instead: 0.29 (+7.6%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Cheat Death, sell Silencer
+    function of Silencer: bullet_proc, silence, spirit_resist; replacement Cheat Death: bullet_resist; roles lost: bullet_proc, silence, spirit_resist  [VERIFIED GAME MECHANIC]
+    Silencer is a component of later items: no
+    held for 17600.0 souls of purchases; resale 3200, net cost of having owned it 3200
+    investment before/after gun/vit/spirit 41600/14400/0 -> 35200/20800/0; thresholds lost: none
+    trade ratio after the sale 0.35; selling Burst Fire instead: 0.34 (-0.9%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

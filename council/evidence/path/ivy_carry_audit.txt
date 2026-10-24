@@ -1,0 +1,60 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: ivy_carry
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:16Z
+BODY-SHA: 3ca922329e8d5920c5af2e6b12d1cb1bbcb54eb417c7dab7463ebafcbaa949c6
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Extended Magazine, Titanic Magazine, Tesla Bullets, Monster Rounds, Intensifying Magazine, Headshot Booster, Active Reload, Extra Health
+  Mid · L-R                -> main path (sequential): Fortitude, Stamina Mastery, Headhunter, Capacitor, Bullet Resist Shredder, Siphon Bullets
+  Late · L-R               -> main path (sequential): Silencer, Inhibitor, Ricochet
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Spirit Resilience, Counterspell, Unstoppable, Warp Stone
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Crippling Headshot, Spellslinger, Indomitable, Armor Piercer
+
+## SALE CHECKLIST (computed)
+- Late · L-R (main path): buy Ricochet, sell Monster Rounds
+    function of Monster Rounds: stats only; replacement Ricochet: fire_rate; roles lost: none  [VERIFIED GAME MECHANIC]
+    Monster Rounds is a component of later items: no
+    held for 42800.0 souls of purchases; resale 400, net cost of having owned it 400
+    investment before/after gun/vit/spirit 21600/19200/1600 -> 27200/19200/1600; thresholds lost: none
+    trade ratio after the sale 0.45; selling Titanic Magazine instead: 0.37 (-18.1%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Crippling Headshot, sell Bullet Resist Shredder
+    function of Bullet Resist Shredder: bullet_resist, resist_shred; replacement Crippling Headshot: resist_shred; roles lost: bullet_resist  [VERIFIED GAME MECHANIC]
+    Bullet Resist Shredder is a component of later items: no
+    held for 31600.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/19200/1600 -> 33600/19200/0; thresholds lost: none
+    trade ratio after the sale 0.36; selling Titanic Magazine instead: 0.35 (-4.2%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Spellslinger, sell Active Reload
+    function of Active Reload: ammo, fire_rate, move_speed, sustain; replacement Spellslinger: ammo, cooldown, fire_rate; roles lost: move_speed, sustain  [VERIFIED GAME MECHANIC]
+    Active Reload is a component of later items: no
+    held for 45200.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/19200/1600 -> 32000/19200/1600; thresholds lost: none
+    trade ratio after the sale 0.36; selling Titanic Magazine instead: 0.34 (-3.5%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Active Reload): 20 s 246 bullets (clip 73, 3.4 magazines, 32% not firing; refill items used every other charge) | 60 s 710 bullets, 35% not firing | damage 60 s 13333  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Active Reload, sell Titanic Magazine: 20 s 220 bullets (clip 46, 4.8 magazines, 49% not firing; refill items used every other charge) | 60 s 641 bullets, 50% not firing | damage 60 s 11421  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Active Reload, no Spellslinger): 20 s 263 bullets (clip 79, 3.3 magazines, 35% not firing; refill items used every other charge) | 60 s 752 bullets, 38% not firing | damage 60 s 13332  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Indomitable, sell Stamina Mastery
+    function of Stamina Mastery: stats only; replacement Indomitable: bullet_resist, spirit_resist, sustain; roles lost: none  [VERIFIED GAME MECHANIC]
+    Stamina Mastery is a component of later items: no
+    held for 38800.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 27200/19200/1600 -> 27200/22400/1600; thresholds lost: none
+    trade ratio after the sale 0.47; selling Titanic Magazine instead: 0.38 (-18.4%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Armor Piercer, sell Titanic Magazine
+    function of Titanic Magazine: ammo; replacement Armor Piercer: bullet_proc; roles lost: ammo  [VERIFIED GAME MECHANIC]
+    Titanic Magazine is a component of later items: no
+    held for 53200.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/19200/1600 -> 32000/19200/1600; thresholds lost: none
+    trade ratio after the sale 0.34; selling Intensifying Magazine instead: 0.42 (+22.5%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Titanic Magazine): 20 s 205 bullets (clip 46, 4.4 magazines, 49% not firing; refill items used every other charge) | 60 s 590 bullets, 51% not firing | damage 60 s 10831  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Titanic Magazine, sell Intensifying Magazine: 20 s 252 bullets (clip 73, 3.5 magazines, 37% not firing; refill items used every other charge) | 60 s 725 bullets, 40% not firing | damage 60 s 14021  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Titanic Magazine, no Armor Piercer): 20 s 263 bullets (clip 79, 3.3 magazines, 35% not firing; refill items used every other charge) | 60 s 752 bullets, 38% not firing | damage 60 s 13332  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)

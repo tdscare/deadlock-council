@@ -1,0 +1,41 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: dynamo_damage
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:12Z
+BODY-SHA: 6cc422ee7d994875cb8076ca7cfad5a563d6b1a33422fc0d7732d710931e3782
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Headshot Booster, Mystic Burst, Headhunter, Sprint Boots, Recharging Rush, Enduring Speed, Warp Stone
+  Mid · L-R                -> main path (sequential): Tankbuster, Compress Cooldown, Quicksilver Reload, Extra Charge, Rapid Recharge, Superior Cooldown
+  Late · L-R               -> main path (sequential): Mercurial Magnum, Unstoppable, Mystic Reverb, Spirit Burn, Refresher
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Resilience, Counterspell, Dispel Magic, Reactive Barrier
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Boundless Spirit, Witchmail, Echo Shard, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown, Juggernaut
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Boundless Spirit, sell Rapid Recharge
+    function of Rapid Recharge: charges, cooldown; replacement Boundless Spirit: stats only; roles lost: charges, cooldown  [VERIFIED GAME MECHANIC]
+    Rapid Recharge is a component of later items: no
+    held for 38400 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/11200/35200 -> 4800/11200/38400; thresholds lost: none
+    trade ratio after the sale 0.32; selling Recharging Rush instead: 0.30 (-7.6%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Witchmail, sell Superior Cooldown
+    function of Superior Cooldown: cooldown; replacement Witchmail: cooldown, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Superior Cooldown is a component of later items: Transcendent Cooldown -> selling now and rebuying costs 3200 again later (net extra 1600 vs keeping, UNVERIFIED HYPOTHESIS refund)
+    held for 36800 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/11200/35200 -> 4800/17600/32000; thresholds lost: none
+    trade ratio after the sale 0.34; selling Recharging Rush instead: 0.30 (-10.2%)  [MODELLED ESTIMATE]
+    review: component sold before its planned upgrade; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Echo Shard, sell Rapid Recharge
+    function of Rapid Recharge: charges, cooldown; replacement Echo Shard: bullet_resist, cooldown, spirit_resist; roles lost: charges  [VERIFIED GAME MECHANIC]
+    Rapid Recharge is a component of later items: no
+    held for 38400 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/11200/35200 -> 4800/11200/38400; thresholds lost: none
+    trade ratio after the sale 0.30; selling Recharging Rush instead: 0.28 (-8.4%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

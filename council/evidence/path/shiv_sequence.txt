@@ -1,0 +1,140 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: shiv
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:14:32Z
+BODY-SHA: 37a6460e755bb31ee1e9c8ea7e58f7a27df9e3febb4c5e3209c87dc8ada42ca8
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Mystic Regeneration: retained-or-upgraded (-> Radiant Regeneration)
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Radiant Regeneration: retained
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Enchanter's Emblem: retained
+  Spirit Lifesteal: retained-or-upgraded (-> Leech)
+  Grit: retained-or-upgraded (-> Spirit Shielding)
+  Spirit Shielding: retained
+  Torment Pulse: retained
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Superior Cooldown: retained
+  Rapid Recharge: retained
+  Healbane: temporary (bought to be sold)
+  Decay: retained
+  Leech: retained
+  Dispel Magic: retained
+  Mystic Reverb: retained
+  Escalating Exposure: retained
+  Spirit Burn: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Spellbreaker: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Ethereal Shift: conditional branch (counter menu)
+  Boundless Spirit: situational-luxury
+  Witchmail: situational-luxury
+  Cheat Death: situational-luxury
+  Divine Barrier: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Mystic Regeneration, Extra Charge, Radiant Regeneration, Compress Cooldown
+  Mid · L-R                  -> main path (sequential): Enchanter's Emblem, Spirit Lifesteal, Grit, Spirit Shielding, Torment Pulse, Mystic Vulnerability, Superior Cooldown, Rapid Recharge
+  Mid · cont.                -> main path (sequential): Healbane, Decay, Leech, Dispel Magic
+  Late · L-R                 -> main path (sequential): Mystic Reverb, Escalating Exposure, Spirit Burn
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Resilience, Spellbreaker, Counterspell, Unstoppable, Ethereal Shift
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Boundless Spirit, Witchmail, Cheat Death, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+
+## Healbane: sold when buying Spirit Burn (Late · L-R, main)
+  role of Healbane: temporary (bought to be sold); role of Spirit Burn: retained
+  Healbane: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 20800 souls (~19.8 min), replaced at ~48.2 min -> owned ~28.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/14400/35200 -> after 0/12800/35200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 71 min | window TR | key purchase times (min)
+  as built                                    |          67592 |      0.14 | Healbane 20, Spirit Burn 48
+  keep Healbane                               |          67618 |      0.14 | Healbane 20, Spirit Burn 49
+  skip Healbane                               |          67583 |      0.14 | Spirit Burn 48
+  sell Enchanter's Emblem instead             |          67553 |      0.14 | Healbane 20, Spirit Burn 48
+  keep Healbane vs as built: d souls +26, d window TR +0.4% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Healbane vs as built: d souls -11, d window TR +0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Enchanter's Emblem instead vs as built: d souls -33, d window TR -1.1% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: no modelled stat for Spirit Burn (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Enchanter's Emblem instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Enchanter's Emblem: sold when buying Boundless Spirit (I'm rich as fuck, luxury)
+  role of Enchanter's Emblem: retained; role of Boundless Spirit: situational-luxury
+  Enchanter's Emblem: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 7200 souls (~7.5 min), replaced at ~54.8 min -> owned ~47.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/12800/41600 -> after 0/11200/41600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 79 min | window TR | key purchase times (min)
+  as built                                    |          73558 |      0.16 | Enchanter's Emblem 8, Boundless Spirit 55
+  keep Enchanter's Emblem (slot cap ignored)  |          73615 |      0.16 | Enchanter's Emblem 8, Boundless Spirit 56
+  skip Enchanter's Emblem                     |          73236 |      0.15 | Boundless Spirit 54
+  sell Spirit Shielding instead               |          73581 |      0.15 | Enchanter's Emblem 8, Boundless Spirit 55
+  keep Enchanter's Emblem (slot cap ignored) vs as built: d souls +55, d window TR +0.9% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: INSUFFICIENT (effect within model noise)
+  skip Enchanter's Emblem vs as built: d souls -212, d window TR -3.5% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Spirit Shielding instead vs as built: d souls +0, d window TR -1.3% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Enchanter's Emblem (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | sell Spirit Shielding instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Spirit Shielding: sold when buying Witchmail (I'm rich as fuck, luxury)
+  role of Spirit Shielding: retained; role of Witchmail: situational-luxury
+  Spirit Shielding: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 10400 souls (~10.5 min), replaced at ~54.8 min -> owned ~44.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/19200/35200 -> after 0/17600/35200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 79 min | window TR | key purchase times (min)
+  as built                                    |          73443 |      0.15 | Spirit Shielding 10, Witchmail 55
+  keep Spirit Shielding (slot cap ignored)    |          73478 |      0.15 | Spirit Shielding 10, Witchmail 56
+  skip Spirit Shielding                       |          73219 |      0.14 | Witchmail 55
+  sell Enchanter's Emblem instead             |          73419 |      0.15 | Spirit Shielding 10, Witchmail 55
+  keep Spirit Shielding (slot cap ignored) vs as built: d souls +25, d window TR +2.0% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Spirit Shielding vs as built: d souls -76, d window TR -5.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY (sign robust in 85% of cells; no measured inputs)
+  sell Enchanter's Emblem instead vs as built: d souls +0, d window TR +1.3% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Spirit Shielding (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | skip Spirit Shielding: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Enchanter's Emblem instead: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+
+## Decay: sold when buying Cheat Death (I'm rich as fuck, luxury)
+  role of Decay: retained; role of Cheat Death: situational-luxury
+  Decay: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 24000 souls (~22.8 min), replaced at ~53.8 min -> owned ~31.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/19200/35200 -> after 0/19200/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 79 min | window TR | key purchase times (min)
+  as built                                    |          73446 |      0.13 | Decay 23, Cheat Death 54
+  keep Decay (slot cap ignored)               |          73477 |      0.14 | Decay 23, Cheat Death 56
+  skip Decay                                  |          73400 |      0.13 | Cheat Death 52
+  sell Enchanter's Emblem instead             |          73409 |      0.13 | Decay 23, Cheat Death 55
+  keep Decay (slot cap ignored) vs as built: d souls +31, d window TR +0.4% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Decay vs as built: d souls -50, d window TR -0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Enchanter's Emblem instead vs as built: d souls -31, d window TR -1.1% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Decay has an active effect (PRESS) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: sell Enchanter's Emblem instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Dispel Magic: sold when buying Divine Barrier (I'm rich as fuck, luxury)
+  role of Dispel Magic: retained; role of Divine Barrier: situational-luxury
+  Dispel Magic: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 32000 souls (~30.5 min), replaced at ~53.8 min -> owned ~23.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/19200/35200 -> after 0/16000/35200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 79 min | window TR | key purchase times (min)
+  as built                                    |          73442 |      0.12 | Dispel Magic 30, Divine Barrier 54
+  keep Dispel Magic (slot cap ignored)        |          73446 |      0.12 | Dispel Magic 30, Divine Barrier 56
+  skip Dispel Magic                           |          73453 |      0.12 | Divine Barrier 52
+  sell Enchanter's Emblem instead             |          73382 |      0.12 | Dispel Magic 30, Divine Barrier 55
+  keep Dispel Magic (slot cap ignored) vs as built: d souls +1, d window TR +0.3% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Dispel Magic vs as built: d souls +13, d window TR -0.3% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Enchanter's Emblem instead vs as built: d souls -61, d window TR -0.9% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Dispel Magic has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Divine Barrier has an active effect (PRESS) not priced
+  model limit: no modelled stat for Dispel Magic (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Enchanter's Emblem instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

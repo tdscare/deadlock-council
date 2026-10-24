@@ -1,0 +1,124 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: bebop_support
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:10:46Z
+BODY-SHA: 18a6d08aaae2db013ee77102866da9a773e79584268bc9fb80cdb3fcaca570ef
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Bullet Resist Shredder: retained
+  Extra Health: retained-or-upgraded (-> Fortitude)
+  Sprint Boots: retained-or-upgraded (-> Trophy Collector)
+  Trophy Collector: retained
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Fortitude: retained
+  Heroic Aura: retained
+  Spirit Strike: retained-or-upgraded (-> Spirit Snatch)
+  Spirit Snatch: retained
+  Hunter's Aura: retained
+  Slowing Hex: retained-or-upgraded (-> Vortex Web)
+  Veil Walker: retained
+  Superior Cooldown: retained
+  Boundless Spirit: retained
+  Witchmail: retained
+  Vortex Web: retained
+  Unstoppable: retained
+  Extra Regen: conditional branch (lane alternative)
+  Counterspell: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Spirit Rend: conditional branch (alternative/optional)
+  Echo Shard: situational-luxury
+  Scourge: situational-luxury
+  Divine Barrier: situational-luxury
+  Refresher: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Extra Spirit, Bullet Resist Shredder, Extra Health, Sprint Boots, Trophy Collector, Improved Spirit, Compress Cooldown
+  Mid · L-R                  -> main path (sequential): Fortitude, Heroic Aura, Spirit Strike, Spirit Snatch, Hunter's Aura, Slowing Hex, Veil Walker
+  Late · L-R                 -> main path (sequential): Superior Cooldown, Boundless Spirit, Witchmail, Vortex Web, Unstoppable
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Counterspell, Metal Skin, Dispel Magic, Plated Armor, Spirit Resilience
+  Swap for Heroic Aura       -> alternative/optional (branch): Spirit Rend
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Echo Shard, Scourge, Divine Barrier, Refresher
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+
+## Bullet Resist Shredder: sold when buying Echo Shard (I'm rich as fuck, luxury)
+  role of Bullet Resist Shredder: retained; role of Echo Shard: situational-luxury
+  Bullet Resist Shredder: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 2400 souls (~3.0 min), replaced at ~53.2 min -> owned ~50.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/20800/27200 -> after 6400/20800/25600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 78 min | window TR | key purchase times (min)
+  as built                                    |          70560 |      0.82 | Bullet Resist Shredder 3, Echo Shard 53
+  keep Bullet Resist Shredder (slot cap ignored)|          70946 |      0.84 | Bullet Resist Shredder 3, Echo Shard 54
+  skip Bullet Resist Shredder                 |          69996 |      0.79 | Echo Shard 53
+  sell Trophy Collector instead               |          71005 |      0.84 | Bullet Resist Shredder 3, Echo Shard 53
+  keep Bullet Resist Shredder (slot cap ignored) vs as built: d souls +233, d window TR +1.8% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  skip Bullet Resist Shredder vs as built: d souls -338, d window TR -3.8% | souls: MODEL-ONLY (sign robust in 94% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Trophy Collector instead vs as built: d souls +273, d window TR +1.9% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  model limit: Echo Shard has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Echo Shard (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Bullet Resist Shredder (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Trophy Collector instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+
+## Trophy Collector: sold when buying Scourge (I'm rich as fuck, luxury)
+  role of Trophy Collector: retained; role of Scourge: situational-luxury
+  Trophy Collector: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 4800 souls (~5.5 min), replaced at ~53.2 min -> owned ~47.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/20800/27200 -> after 6400/19200/27200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 78 min | window TR | key purchase times (min)
+  as built                                    |          71569 |      0.85 | Trophy Collector 6, Scourge 53
+  keep Trophy Collector (slot cap ignored)    |          71480 |      0.85 | Trophy Collector 6, Scourge 54
+  skip Trophy Collector                       |          71488 |      0.84 | Scourge 53
+  sell Bullet Resist Shredder instead         |          71019 |      0.83 | Trophy Collector 6, Scourge 53
+  keep Trophy Collector (slot cap ignored) vs as built: d souls -55, d window TR -0.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  skip Trophy Collector vs as built: d souls +76, d window TR -1.4% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY (sign robust in 94% of cells; no measured inputs)
+  sell Bullet Resist Shredder instead vs as built: d souls -331, d window TR -2.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Scourge has an active effect (PRESS) not priced
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Trophy Collector (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with several parameters together) | skip Trophy Collector: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Bullet Resist Shredder instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Fortitude: sold when buying Divine Barrier (I'm rich as fuck, luxury)
+  role of Fortitude: retained; role of Divine Barrier: situational-luxury
+  Fortitude: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 9600 souls (~9.8 min), replaced at ~52.2 min -> owned ~42.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/27200/20800 -> after 6400/24000/20800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 78 min | window TR | key purchase times (min)
+  as built                                    |          70845 |      0.78 | Fortitude 10, Divine Barrier 52
+  keep Fortitude (slot cap ignored)           |          71160 |      0.80 | Fortitude 10, Divine Barrier 54
+  skip Fortitude                              |          70483 |      0.76 | Divine Barrier 52
+  sell Trophy Collector instead               |          71232 |      0.80 | Fortitude 10, Divine Barrier 53
+  keep Fortitude (slot cap ignored) vs as built: d souls +193, d window TR +1.7% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  skip Fortitude vs as built: d souls -84, d window TR -2.5% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); lost (0: +, 1: -)) | TR: MODEL-ONLY (sign robust in 88% of cells; no measured inputs)
+  sell Trophy Collector instead vs as built: d souls +239, d window TR +1.9% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  model limit: Divine Barrier has an active effect (PRESS) not priced
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Fortitude (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | skip Fortitude: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); lost (0: +, 1: -)) | sell Trophy Collector instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+
+## Veil Walker: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Veil Walker: retained; role of Refresher: situational-luxury
+  Veil Walker: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 24000 souls (~22.0 min), replaced at ~52.2 min -> owned ~30.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/20800/27200 -> after 6400/17600/27200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 78 min | window TR | key purchase times (min)
+  as built                                    |          71353 |      0.69 | Veil Walker 22, Refresher 52
+  keep Veil Walker (slot cap ignored)         |          71529 |      0.70 | Veil Walker 22, Refresher 54
+  skip Veil Walker                            |          71234 |      0.68 | Refresher 50
+  sell Trophy Collector instead               |          71620 |      0.70 | Veil Walker 22, Refresher 53
+  keep Veil Walker (slot cap ignored) vs as built: d souls +115, d window TR +0.9% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  skip Veil Walker vs as built: d souls -42, d window TR -0.8% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Trophy Collector instead vs as built: d souls +171, d window TR +1.2% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Veil Walker (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Trophy Collector instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))

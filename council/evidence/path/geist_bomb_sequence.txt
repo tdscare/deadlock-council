@@ -1,0 +1,88 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: geist_bomb
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:12:36Z
+BODY-SHA: f2691a02e841a890f304cbae9e8cc4b1373e4fd481b3367b1e7925d22174de30
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Regen: retained-or-upgraded (-> Healing Booster)
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Mystic Regeneration: retained-or-upgraded (-> Radiant Regeneration)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Radiant Regeneration: retained
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Healing Booster: retained
+  Spirit Lifesteal: retained-or-upgraded (-> Leech)
+  Spirit Resilience: retained
+  Tankbuster: retained
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Superior Cooldown: retained
+  Greater Expansion: retained
+  Leech: retained
+  Boundless Spirit: retained
+  Escalating Exposure: retained
+  Mystic Reverb: retained
+  Spirit Burn: retained
+  Echo Shard: retained
+  Extra Health: conditional branch (lane alternative)
+  Warp Stone: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Cheat Death: conditional branch (counter menu)
+  Witchmail: situational-luxury
+  Indomitable: situational-luxury
+  Divine Barrier: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+  Healing Tempo: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Health
+  Early · L-R                -> main path (sequential): Extra Regen, Mystic Burst, Mystic Regeneration, Extra Spirit, Radiant Regeneration, Mystic Expansion, Improved Spirit
+  Mid · L-R                  -> main path (sequential): Healing Booster, Spirit Lifesteal, Spirit Resilience, Tankbuster, Compress Cooldown, Mystic Vulnerability, Superior Cooldown, Greater Expansion
+  Late · L-R                 -> main path (sequential): Leech, Boundless Spirit, Escalating Exposure, Mystic Reverb, Spirit Burn, Echo Shard
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Warp Stone, Dispel Magic, Counterspell, Metal Skin, Plated Armor, Unstoppable, Cheat Death
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Witchmail, Indomitable, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown, Healing Tempo
+
+## Spirit Resilience: sold when buying Witchmail (I'm rich as fuck, luxury)
+  role of Spirit Resilience: retained; role of Witchmail: situational-luxury
+  Spirit Resilience: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 12800 souls (~12.8 min), replaced at ~56.0 min -> owned ~43.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/17600/44800 -> after 0/14400/44800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 91 min | window TR | key purchase times (min)
+  as built                                    |          87000 |      0.69 | Spirit Resilience 13, Witchmail 56
+  keep Spirit Resilience (slot cap ignored)   |          87000 |      0.69 | Spirit Resilience 13, Witchmail 57
+  skip Spirit Resilience                      |          85744 |      0.65 | Witchmail 56
+  sell Tankbuster instead                     |          87000 |      0.69 | Spirit Resilience 13, Witchmail 56
+  keep Spirit Resilience (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Spirit Resilience vs as built: d souls -350, d window TR -4.6% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Tankbuster instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: skip Spirit Resilience: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Radiant Regeneration: sold when buying Indomitable (I'm rich as fuck, luxury)
+  role of Radiant Regeneration: retained; role of Indomitable: situational-luxury
+  Radiant Regeneration: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 5600 souls (~5.8 min), replaced at ~56.0 min -> owned ~50.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/17600/44800 -> after 0/17600/41600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 91 min | window TR | key purchase times (min)
+  as built                                    |          87000 |      0.68 | Radiant Regeneration 6, Indomitable 56
+  keep Radiant Regeneration (slot cap ignored)|          87000 |      0.68 | Radiant Regeneration 6, Indomitable 57
+  skip Radiant Regeneration                   |          92663 |      0.79 | Indomitable 54
+  sell Tankbuster instead                     |          87000 |      0.68 | Radiant Regeneration 6, Indomitable 56
+  keep Radiant Regeneration (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Radiant Regeneration vs as built: d souls +3535, d window TR +11.1% | souls: MODEL-ONLY (sign robust in 88% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Tankbuster instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: a computed alternative sequence is better: skip Radiant Regeneration
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Radiant Regeneration; evidence tier: MODEL-ONLY

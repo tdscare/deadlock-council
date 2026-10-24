@@ -1,0 +1,96 @@
+{
+ "id": "seven_L8_ps_shred_preult",
+ "title": "Power Surge T3 spirit-resist shred before the ult",
+ "hero": "Seven",
+ "playstyle": "Ult Seven",
+ "builds": [
+  "seven"
+ ],
+ "question": "Does one Power Surge burst on the target before the ult raise storm damage on surge-hit targets by ~15% (T3 -15% spirit resist, 10 s)?",
+ "hypothesis": "H-L8: storm damage on the surged bot(s) +12-15% over the debuff window vs no pre-surge; free (no souls), playstyle only.",
+ "arms": [
+  {
+   "name": "NO_PS",
+   "items": [
+    "upgrade_magic_storm",
+    "upgrade_arcane_surge",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_healbane",
+    "upgrade_cardio_calibrator",
+    "upgrade_escalating_exposure",
+    "upgrade_imbued_duration_extender",
+    "upgrade_cooldown_reduction",
+    "upgrade_magic_reach"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 24800,
+   "notes": "cast 4 only"
+  },
+  {
+   "name": "PS_FIRST",
+   "items": [
+    "upgrade_magic_storm",
+    "upgrade_arcane_surge",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_healbane",
+    "upgrade_cardio_calibrator",
+    "upgrade_escalating_exposure",
+    "upgrade_imbued_duration_extender",
+    "upgrade_cooldown_reduction",
+    "upgrade_magic_reach"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 24800,
+   "notes": "cast 3 0.3; fire 1; cast 4"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "souls 24800 (levels.json)",
+  "souls": 24800,
+  "position": "mid lane, bots on a 300 u ring (inside the 40 m storm)",
+  "enemies": [
+   {
+    "hero": "Haze (bot)",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand, attacks disabled",
+    "hp": "ekeep 0.9"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 50 (heals never capped)",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance (enemies 3 at 300 u ring, main target 350 u)",
+  "hardreset between blocks (fresh cooldowns, no items)",
+  "Same souls/level/ability tiers (unlock 7) in every arm except the thing under test",
+  "Same bot heroes, HP keep-alive (ekeep 0.9) and resists",
+  "Arms interleaved A,B,A,B; A/A floor run first"
+ ],
+ "procedure": [
+  "give items; enemies 3 300 8; arm casts; wait 21"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "storm_dmg_surged_bot",
+   "unit": "hp",
+   "how": "damage csv, main bot, first 10 s",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "storm_dmg_surged_bot",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": ">=10% supports a playstyle line (no note: notes never explain procs)"
+ }
+}

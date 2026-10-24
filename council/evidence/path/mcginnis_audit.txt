@@ -1,0 +1,59 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: mcginnis
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:14Z
+BODY-SHA: d3f975dbbe5145214310405c9ce6b43942b79fc539e6ed4b1f8016de5384866b
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Monster Rounds, Extended Magazine, Intensifying Magazine, Rapid Rounds, Swift Striker, Battle Vest, Quicksilver Reload, Sprint Boots
+  Mid · L-R                -> main path (sequential): Enduring Speed, Bullet Lifesteal, Escalating Resilience, Fleetfoot, Spirit Lifesteal, Mercurial Magnum
+  Late · L-R               -> main path (sequential): Berserker, Vampiric Burst, Spiritual Overflow, Spirit Resilience
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Warp Stone, Metal Skin, Plated Armor, Dispel Magic, Counterspell, Unstoppable, Spellbreaker, Ethereal Shift
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Ricochet, Lucky Shot, Crippling Headshot, Silencer, Inhibitor, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Juggernaut
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Ricochet, sell Monster Rounds
+    function of Monster Rounds: stats only; replacement Ricochet: fire_rate; roles lost: none  [VERIFIED GAME MECHANIC]
+    Monster Rounds is a component of later items: no
+    held for 43200 souls of purchases; resale 400, net cost of having owned it 400
+    investment before/after gun/vit/spirit 18400/12800/6400 -> 24000/12800/6400; thresholds lost: none
+    trade ratio after the sale 0.36; selling Intensifying Magazine instead: 0.36 (+0.0%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Lucky Shot, sell Battle Vest
+    function of Battle Vest: bullet_resist, fire_rate; replacement Lucky Shot: ammo, bullet_proc; roles lost: bullet_resist, fire_rate  [VERIFIED GAME MECHANIC]
+    Battle Vest is a component of later items: no
+    held for 37600 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 18400/12800/6400 -> 24800/11200/6400; thresholds lost: none
+    trade ratio after the sale 0.25; selling Monster Rounds instead: 0.30 (+19.6%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Crippling Headshot, sell Fleetfoot
+    function of Fleetfoot: bullet_resist, move_speed; replacement Crippling Headshot: resist_shred; roles lost: bullet_resist, move_speed  [VERIFIED GAME MECHANIC]
+    Fleetfoot is a component of later items: no
+    held for 28800 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 18400/12800/6400 -> 23200/12800/6400; thresholds lost: none
+    trade ratio after the sale 0.29; selling Monster Rounds instead: 0.31 (+8.0%)  [MODELLED ESTIMATE]
+    model limit: Fleetfoot has an active effect (INSTANT_CAST) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Silencer, sell Swift Striker
+    function of Swift Striker: fire_rate; replacement Silencer: bullet_proc, silence, spirit_resist; roles lost: fire_rate  [VERIFIED GAME MECHANIC]
+    Swift Striker is a component of later items: no
+    held for 39200 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 18400/12800/6400 -> 23200/12800/6400; thresholds lost: none
+    trade ratio after the sale 0.28; selling Monster Rounds instead: 0.31 (+11.7%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Inhibitor, sell Intensifying Magazine
+    function of Intensifying Magazine: ammo; replacement Inhibitor: bullet_proc; roles lost: ammo  [VERIFIED GAME MECHANIC]
+    Intensifying Magazine is a component of later items: no
+    held for 40800 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 18400/12800/6400 -> 16800/19200/6400; thresholds lost: none
+    trade ratio after the sale 0.32; selling Monster Rounds instead: 0.32 (+0.0%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Intensifying Magazine): 20 s 142 bullets (clip 102, 1.4 magazines, -0% not firing; refill items used every other charge) | 60 s 407 bullets, 4% not firing | damage 60 s 11484  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Intensifying Magazine, sell Monster Rounds: 20 s 142 bullets (clip 116, 1.2 magazines, -0% not firing; refill items used every other charge) | 60 s 418 bullets, 2% not firing | damage 60 s 11778  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Intensifying Magazine, no Inhibitor): 20 s 142 bullets (clip 116, 1.2 magazines, -0% not firing; refill items used every other charge) | 60 s 418 bullets, 2% not firing | damage 60 s 11295  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

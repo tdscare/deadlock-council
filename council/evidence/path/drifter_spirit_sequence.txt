@@ -1,0 +1,106 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: drifter_spirit
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:14:19Z
+BODY-SHA: a931d1c2a245c99194fc777e0d96aac4bbb1196663302034e82eb97d104feb2f
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Melee Lifesteal: retained-or-upgraded (-> Lifestrike)
+  Stalker: retained
+  Spirit Strike: retained-or-upgraded (-> Spirit Snatch)
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Cold Front: retained
+  Spirit Snatch: retained
+  Sprint Boots: retained-or-upgraded (-> Trophy Collector)
+  Extra Health: retained-or-upgraded (-> Fortitude)
+  Lifestrike: retained
+  Trophy Collector: retained
+  Fortitude: retained
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Melee Charge: retained-or-upgraded (-> Crushing Fists)
+  Tankbuster: retained
+  Veil Walker: retained
+  Duration Extender: retained-or-upgraded (-> Superior Duration)
+  Superior Duration: retained
+  Crushing Fists: retained
+  Escalating Exposure: retained
+  Spirit Burn: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Arctic Blast: situational-luxury
+  Boundless Spirit: situational-luxury
+  Cursed Relic: situational-luxury
+  Divine Barrier: situational-luxury
+  Ethereal Shift: situational-luxury
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Melee Lifesteal, Stalker, Spirit Strike, Mystic Burst, Cold Front, Spirit Snatch, Sprint Boots, Extra Health
+  Mid · L-R                  -> main path (sequential): Lifestrike, Trophy Collector, Fortitude, Mystic Vulnerability, Melee Charge, Tankbuster, Veil Walker, Duration Extender
+  Mid · cont.                -> main path (sequential): Superior Duration
+  Late · L-R                 -> main path (sequential): Crushing Fists, Escalating Exposure, Spirit Burn
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Spirit Resilience, Counterspell, Dispel Magic, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Arctic Blast, Boundless Spirit, Cursed Relic, Divine Barrier, Ethereal Shift
+
+## Stalker: sold when buying Boundless Spirit (I'm rich as fuck, luxury)
+  role of Stalker: retained; role of Boundless Spirit: situational-luxury
+  Stalker: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 2400 souls (~2.5 min), replaced at ~62.8 min -> owned ~60.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 8000/11200/30400 -> after 6400/11200/30400; thresholds lost: gun 8000; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 73 min | window TR | key purchase times (min)
+  as built                                    |          53656 |      0.45 | Stalker 2, Boundless Spirit 63
+  keep Stalker (slot cap ignored)             |          53728 |      0.45 | Stalker 2, Boundless Spirit 64
+  skip Stalker                                |          52125 |      0.41 | Boundless Spirit 64
+  sell Trophy Collector instead               |          53758 |      0.45 | Stalker 2, Boundless Spirit 63
+  keep Stalker (slot cap ignored) vs as built: d souls +41, d window TR +1.0% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -))
+  skip Stalker vs as built: d souls -791, d window TR -7.6% | souls: MODEL-ONLY (sign robust in 97% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Trophy Collector instead vs as built: d souls +80, d window TR +1.0% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: established 4.8k lost
+  VERDICT: KEEP AS WRITTEN (as-built sequence is not beaten robustly by the alternatives); evidence tier: VERIFIED GAME MECHANIC (walk arithmetic) + MODEL-ONLY value; flipping assumptions: keep Stalker (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -)) | sell Trophy Collector instead: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+
+## Trophy Collector: sold when buying Cursed Relic (I'm rich as fuck, luxury)
+  role of Trophy Collector: retained; role of Cursed Relic: situational-luxury
+  Trophy Collector: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 12800 souls (~13.0 min), replaced at ~62.8 min -> owned ~49.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 8000/11200/30400 -> after 8000/9600/30400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 73 min | window TR | key purchase times (min)
+  as built                                    |          53693 |      0.39 | Trophy Collector 13, Cursed Relic 63
+  keep Trophy Collector (slot cap ignored)    |          53672 |      0.39 | Trophy Collector 13, Cursed Relic 64
+  skip Trophy Collector                       |          54112 |      0.39 | Cursed Relic 62
+  sell Stalker instead                        |          53598 |      0.38 | Trophy Collector 13, Cursed Relic 63
+  keep Trophy Collector (slot cap ignored) vs as built: d souls +0, d window TR +0.3% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Trophy Collector vs as built: d souls +343, d window TR +0.2% | souls: MODEL-ONLY (sign robust in 94% of cells; no measured inputs) | TR: INSUFFICIENT (effect within model noise)
+  sell Stalker instead vs as built: d souls -78, d window TR -1.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Trophy Collector'] differ from 'as built' only through items with no modelled stat (Cursed Relic contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Cursed Relic has an active effect (PRESS) not priced
+  model limit: no modelled stat for Cursed Relic (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Stalker instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Superior Duration: sold when buying Ethereal Shift (I'm rich as fuck, luxury)
+  role of Superior Duration: retained; role of Ethereal Shift: situational-luxury
+  Superior Duration: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 27200 souls (~29.0 min), replaced at ~61.2 min -> owned ~32.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 8000/11200/30400 -> after 8000/11200/27200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 73 min | window TR | key purchase times (min)
+  as built                                    |          53678 |      0.31 | Superior Duration 29, Ethereal Shift 61
+  keep Superior Duration (slot cap ignored)   |          53740 |      0.32 | Superior Duration 29, Ethereal Shift 64
+  skip Superior Duration                      |          53562 |      0.30 | Ethereal Shift 62
+  sell Trophy Collector instead               |          53771 |      0.32 | Superior Duration 29, Ethereal Shift 63
+  keep Superior Duration (slot cap ignored) vs as built: d souls +19, d window TR +1.9% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Superior Duration vs as built: d souls -0, d window TR -1.6% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Trophy Collector instead vs as built: d souls +56, d window TR +1.9% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -))
+  model limit: Ethereal Shift has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Superior Duration (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Superior Duration (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | skip Superior Duration: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Trophy Collector instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -))

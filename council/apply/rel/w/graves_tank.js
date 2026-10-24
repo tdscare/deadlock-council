@@ -1,0 +1,211 @@
+{
+ "id": "graves_tank",
+ "hk": "hero_necro",
+ "hero": "Graves",
+ "tag": "New",
+ "name": "Rizuhble's Hard To Bury Graves",
+ "desc": "Tank Graves",
+ "abil": [
+  "Jar of Dead",
+  "Grasping Hands",
+  "Essence Theft",
+  "Borrowed Decree"
+ ],
+ "order": [
+  1,
+  1,
+  2,
+  3,
+  3,
+  1,
+  4,
+  3,
+  3,
+  4,
+  4,
+  1,
+  2,
+  2,
+  2,
+  4
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Grit",
+      "Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Regen",
+      ""
+     ],
+     [
+      "Extra Stamina",
+      ""
+     ],
+     [
+      "Mystic Vulnerability",
+      ""
+     ],
+     [
+      "Torment Pulse",
+      ""
+     ],
+     [
+      "Enchanter's Emblem",
+      ""
+     ],
+     [
+      "Stamina Mastery",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Spirit Shredder",
+      ""
+     ],
+     [
+      "Toxic Bullets",
+      ""
+     ],
+     [
+      "Spirit Lifesteal",
+      ""
+     ],
+     [
+      "Spirit Resilience",
+      "Sell Extra Regen for this."
+     ],
+     [
+      "Escalating Resilience",
+      "Your gun hits about 10 times a second, so this fills up in about 3s."
+     ],
+     [
+      "Escalating Exposure",
+      ""
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Siphon Bullets",
+      ""
+     ],
+     [
+      "Scourge",
+      ""
+     ],
+     [
+      "Leech",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Stamina Mastery if needed. Ahead? Skip it until you're dying. Sell Enchanter's Emblem for it.",
+    true,
+    [
+     [
+      "Plated Armor",
+      "Most of their damage is gun."
+     ],
+     [
+      "Counterspell",
+      "Lash ult, Infernus ult."
+     ],
+     [
+      "Dispel Magic",
+      "Slows, hexes and burns like Infernus's."
+     ],
+     [
+      "Reactive Barrier",
+      "They stun you as you walk in."
+     ],
+     [
+      "Unstoppable",
+      "Stuns keep stopping you in their face."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Spirit Rend",
+      "Upgrade of Spirit Shredder."
+     ],
+     [
+      "Witchmail",
+      "Sell Enchanter's Emblem for this, or Escalating Resilience if it's gone."
+     ],
+     [
+      "Indomitable",
+      "Sell Spirit Resilience for this."
+     ],
+     [
+      "Boundless Spirit",
+      "Sell Stamina Mastery for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Round 19: new build. Tank/frontline Graves from Jamlex Tank Graves (lockbuilds 848784, Oct 10) and metabot.gg Graves 6795 data (Oct 20, 29,212 matches: Torment Pulse 26.0% pick / 61.1% WR, Escalating Exposure 35.5%, Siphon 23.2%, Scourge 5.7% / 66.1%). Torment Pulse + resists (Emblem, Spirit Resilience, Escalating Resilience, Scourge) + Siphon/Leech sustain; skull/Torment spirit damage with Mystic Vulnerability → Escalating Exposure and Toxic Bullets.",
+  "Round 19 fix: Restorative Shot (shotgun heroes only, Kieran rule) → Extra Regen, bought first and sold for Spirit Resilience; Scourge note emptied (item text already says it can be self-cast).",
+  "Round 20: Spirit Shredder now upgrades into Spirit Rend; late list to 72.8k with Indomitable and Boundless Spirit (Jamlex 848784 optionals); Counters now sell Enchanter's Emblem.",
+  "Round 23 (kit): Graves' gun fires every 0.102s (heroes.vdata citadel_weapon_necro_set, ~9.8 shots/s, 40 rounds) and Escalating Resilience gives one stack per bullet that hits a hero (30 stacks x 2% bullet resist, 24s), so it maxes in ~3s of shooting, faster than on any slow gun. Kept, note added because it's the reason this item is here. No item changes.",
+  "Round 25: ability order 1123144413222334 -> 1123314334412224 (playstyle-based; see a25/log/graves_tank.md).",
+  "Round 26 (cost): Escalating Exposure moved after Escalating Resilience (tank defence first; spirit 6.4k/8k and gun 6.4k/8k land at 28.0k/23.2k, 4.8k spikes unchanged)."
+ ]
+}

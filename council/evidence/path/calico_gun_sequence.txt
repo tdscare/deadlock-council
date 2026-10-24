@@ -1,0 +1,144 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: calico_gun
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:14:24Z
+BODY-SHA: 70d4aa31e2ffc2c3b8fd5a9aed254517b472d78dd0ed6b18b5436053f9e7c975
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Close Quarters: retained-or-upgraded (-> Point Blank)
+  Rapid Rounds: retained-or-upgraded (-> Burst Fire)
+  Extended Magazine: retained-or-upgraded (-> Titanic Magazine)
+  Titanic Magazine: temporary (bought to be sold)
+  Split Shot: temporary (bought to be sold)
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed)
+  Bullet Lifesteal: retained-or-upgraded (-> Vampiric Burst)
+  Enduring Speed: retained
+  Extra Health: retained-or-upgraded (-> Fortitude)
+  Burst Fire: retained
+  Fortitude: retained
+  Point Blank: retained
+  Lifestrike: retained
+  Hunter's Aura: retained
+  Vampiric Burst: retained
+  Glass Cannon: retained
+  Lucky Shot: retained
+  Silencer: retained
+  Ricochet: retained
+  Spellslinger: retained
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Spellbreaker: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Armor Piercer: situational-luxury
+  Crippling Headshot: situational-luxury
+  Cheat Death: situational-luxury
+  Divine Barrier: situational-luxury
+  Juggernaut: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Early · L-R                -> main path (sequential): Close Quarters, Rapid Rounds, Extended Magazine, Titanic Magazine, Split Shot, Sprint Boots, Bullet Lifesteal
+  Mid · L-R                  -> main path (sequential): Enduring Speed, Extra Health, Burst Fire, Fortitude, Point Blank, Lifestrike, Hunter's Aura, Vampiric Burst
+  Late · L-R                 -> main path (sequential): Glass Cannon, Lucky Shot, Silencer, Ricochet, Spellslinger
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Resilience, Spellbreaker, Dispel Magic, Counterspell, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Armor Piercer, Crippling Headshot, Cheat Death, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Juggernaut
+
+## Split Shot: sold when buying Ricochet (Late · L-R, main)
+  role of Split Shot: temporary (bought to be sold); role of Ricochet: retained
+  Split Shot: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 4800 souls (~5.2 min), replaced at ~46.2 min -> owned ~41.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 38400/14400/0 -> after 36800/14400/0; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 81 min | window TR | key purchase times (min)
+  as built                                    |          81979 |      0.49 | Split Shot 5, Ricochet 46
+  keep Split Shot                             |          81994 |      0.49 | Split Shot 5, Ricochet 47
+  skip Split Shot                             |          83740 |      0.52 | Ricochet 44
+  sell Titanic Magazine instead               |          81522 |      0.48 | Split Shot 5, Ricochet 46
+  keep Split Shot vs as built: d souls +0, d window TR +0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Split Shot vs as built: d souls +443, d window TR +5.2% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Titanic Magazine instead vs as built: d souls -202, d window TR -1.8% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY (sign robust in 85% of cells; no measured inputs)
+  note: the variants ['skip Split Shot'] differ from 'as built' only through items with no modelled stat (Split Shot contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Split Shot has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: no modelled stat for Split Shot (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Titanic Magazine instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Titanic Magazine: sold when buying Spellslinger (Late · L-R, main)
+  role of Titanic Magazine: temporary (bought to be sold); role of Spellslinger: retained
+  Titanic Magazine: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 3200 souls (~3.5 min), replaced at ~51.5 min -> owned ~48.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 43200/14400/0 -> after 41600/14400/0; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 81 min | window TR | key purchase times (min)
+  as built                                    |          81979 |      0.49 | Titanic Magazine 4, Spellslinger 52
+  keep Titanic Magazine                       |          83325 |      0.54 | Titanic Magazine 4, Spellslinger 52
+  skip Titanic Magazine                       |          79072 |      0.46 | Spellslinger 55
+  sell Burst Fire instead                     |          83022 |      0.53 | Titanic Magazine 4, Spellslinger 51
+  keep Titanic Magazine vs as built: d souls +664, d window TR +8.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Titanic Magazine vs as built: d souls -1045, d window TR -6.2% | souls: MODEL-ONLY (sign robust in 88% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 97% of cells; no measured inputs)
+  sell Burst Fire instead vs as built: d souls +506, d window TR +6.9% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  ammo mechanics (clip 12, reload 2.6 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Titanic Magazine): 8 s trade 40 bullets (36% not firing), 20 s 80 bullets (49% not firing, 5.2 magazines), damage 20 s 7007, refill uses 1.0
+    keep Titanic Magazine: 8 s trade 49 bullets (22% not firing), 20 s 108 bullets (31% not firing, 3.9 magazines), damage 20 s 9834, refill uses 1.0
+    without Spellslinger (keep Titanic Magazine): 8 s trade 47 bullets (19% not firing), 20 s 100 bullets (32% not firing, 3.6 magazines), damage 20 s 9130, refill uses 1.0
+    sell Burst Fire instead: 8 s trade 47 bullets (12% not firing), 20 s 96 bullets (27% not firing, 3.5 magazines), damage 20 s 8792, refill uses 1.0
+    sustained 20 s gun damage: selling Titanic Magazine costs 29% vs keeping it (both with Spellslinger); Spellslinger adds +8% on top of Titanic Magazine; selling Burst Fire instead: -11% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: the sale of Titanic Magazine lowers modelled sustained gun damage by 29% (ammo mechanics)
+  VERDICT: REVIEW: selling Titanic Magazine costs sustained gun output; Spellslinger does not replace its ammo role (quantified above). Alternatives for the slot: sell Burst Fire (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED); flipping assumptions: keep Titanic Magazine: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Burst Fire instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Burst Fire: sold when buying Armor Piercer (I'm rich as fuck, luxury)
+  role of Burst Fire: retained; role of Armor Piercer: situational-luxury
+  Burst Fire: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 11200 souls (~11.2 min), replaced at ~56.8 min -> owned ~45.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 48000/14400/0 -> after 44800/14400/0; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 89 min | window TR | key purchase times (min)
+  as built                                    |          87455 |      0.44 | Burst Fire 11, Armor Piercer 57
+  keep Burst Fire (slot cap ignored)          |          87455 |      0.44 | Burst Fire 11, Armor Piercer 58
+  skip Burst Fire                             |          87325 |      0.43 | Armor Piercer 56
+  sell Fortitude instead                      |          87455 |      0.44 | Burst Fire 11, Armor Piercer 57
+  keep Burst Fire (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Burst Fire vs as built: d souls -159, d window TR -1.4% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Fortitude instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: skip Burst Fire: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Point Blank: sold when buying Crippling Headshot (I'm rich as fuck, luxury)
+  role of Point Blank: retained; role of Crippling Headshot: situational-luxury
+  Point Blank: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 16000 souls (~15.2 min), replaced at ~56.8 min -> owned ~41.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 48000/14400/0 -> after 44800/14400/0; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 89 min | window TR | key purchase times (min)
+  as built                                    |          87455 |      0.42 | Point Blank 15, Crippling Headshot 57
+  keep Point Blank (slot cap ignored)         |          87455 |      0.42 | Point Blank 15, Crippling Headshot 58
+  skip Point Blank                            |          86153 |      0.39 | Crippling Headshot 57
+  sell Burst Fire instead                     |          87455 |      0.42 | Point Blank 15, Crippling Headshot 57
+  keep Point Blank (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Point Blank vs as built: d souls -1015, d window TR -6.8% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Burst Fire instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT
+
+## Silencer: sold when buying Cheat Death (I'm rich as fuck, luxury)
+  role of Silencer: retained; role of Cheat Death: situational-luxury
+  Silencer: price 6400, resale 3200, net cost of owning it 3200 souls (3.2 min of reference income); first bought at 46400 souls (~41.2 min), replaced at ~55.0 min -> owned ~13.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 41600/20800/0 -> after 35200/20800/0; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 89 min | window TR | key purchase times (min)
+  as built                                    |          87455 |      0.32 | Silencer 41, Cheat Death 55
+  keep Silencer (slot cap ignored)            |          87455 |      0.32 | Silencer 41, Cheat Death 58
+  skip Silencer                               |          88051 |      0.35 | Cheat Death 52
+  sell Burst Fire instead                     |          87455 |      0.32 | Silencer 41, Cheat Death 57
+  keep Silencer (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Silencer vs as built: d souls +1717, d window TR +9.8% | souls: MODEL-ONLY (sign robust in 85% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Burst Fire instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  note: the variants ['skip Silencer'] differ from 'as built' only through items with no modelled stat (Silencer contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: no modelled stat for Silencer (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: skip Silencer: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

@@ -1,0 +1,72 @@
+SCOPE: build-context
+KIND: situational
+BUILD: haze
+ITEM: Spirit Sap
+ARGS: --situational haze Spirit Sap
+GENERATED: 2026-10-24T16:27:43Z
+BODY-SHA: 656e0b1373050c0dc5b916cd4f32ef076e51016eee128d2d62fe64249bf6337e
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+MARGIN (pre-registered): swap must beat the default by >= 5% trade ratio at both enemy-healing readings (0%, 30% of their pool)
+ENEMY MODEL: reference enemy (--strategy) with its health pool scaled by the roster spread of heroes.vdata base health (CALCULATED) and x1.5/x2.0 for health-stacked tanks (ASSUMED); resists and healing ASSUMED; target choice = the enemy you fight
+VERDICT: SITUATIONAL - swap when the target's health pool is >= the trigger below; earliest worthwhile checkpoint 25000
+GRADE: CALCULATED item numbers + ASSUMED enemy composition/healing/hit rate
+
+## TRIGGERS (derived): checkpoint | replaces | health-pool multiplier from which swap wins by margin | gain range %
+   10000 | Titanic Magazine | never in range | +1.2 .. +1.2
+   15000 | Titanic Magazine | never in range | -1.0 .. -1.0
+   20000 | Healing Booster | never in range | -1.1 .. -1.1
+   25000 | Healing Booster | x0.65 of median hero health (507 base hp) | +7.9 .. +7.9
+
+## TABLE: checkpoint | replaces | health mult | enemy healing | gain %
+   10000 | Titanic Magazine | x0.65 | 0.0 |   +1.2
+   10000 | Titanic Magazine | x0.65 | 0.3 |   +1.2
+   10000 | Titanic Magazine | x0.94 | 0.0 |   +1.2
+   10000 | Titanic Magazine | x0.94 | 0.3 |   +1.2
+   10000 | Titanic Magazine | x1.0  | 0.0 |   +1.2
+   10000 | Titanic Magazine | x1.0  | 0.3 |   +1.2
+   10000 | Titanic Magazine | x1.5  | 0.0 |   +1.2
+   10000 | Titanic Magazine | x1.5  | 0.3 |   +1.2
+   10000 | Titanic Magazine | x2.0  | 0.0 |   +1.2
+   10000 | Titanic Magazine | x2.0  | 0.3 |   +1.2
+   10000 | Titanic Magazine | x3.83 | 0.0 |   +1.2
+   10000 | Titanic Magazine | x3.83 | 0.3 |   +1.2
+   15000 | Titanic Magazine | x0.65 | 0.0 |   -1.0
+   15000 | Titanic Magazine | x0.65 | 0.3 |   -1.0
+   15000 | Titanic Magazine | x0.94 | 0.0 |   -1.0
+   15000 | Titanic Magazine | x0.94 | 0.3 |   -1.0
+   15000 | Titanic Magazine | x1.0  | 0.0 |   -1.0
+   15000 | Titanic Magazine | x1.0  | 0.3 |   -1.0
+   15000 | Titanic Magazine | x1.5  | 0.0 |   -1.0
+   15000 | Titanic Magazine | x1.5  | 0.3 |   -1.0
+   15000 | Titanic Magazine | x2.0  | 0.0 |   -1.0
+   15000 | Titanic Magazine | x2.0  | 0.3 |   -1.0
+   15000 | Titanic Magazine | x3.83 | 0.0 |   -1.0
+   15000 | Titanic Magazine | x3.83 | 0.3 |   -1.0
+   20000 | Healing Booster | x0.65 | 0.0 |   -1.1
+   20000 | Healing Booster | x0.65 | 0.3 |   -1.1
+   20000 | Healing Booster | x0.94 | 0.0 |   -1.1
+   20000 | Healing Booster | x0.94 | 0.3 |   -1.1
+   20000 | Healing Booster | x1.0  | 0.0 |   -1.1
+   20000 | Healing Booster | x1.0  | 0.3 |   -1.1
+   20000 | Healing Booster | x1.5  | 0.0 |   -1.1
+   20000 | Healing Booster | x1.5  | 0.3 |   -1.1
+   20000 | Healing Booster | x2.0  | 0.0 |   -1.1
+   20000 | Healing Booster | x2.0  | 0.3 |   -1.1
+   20000 | Healing Booster | x3.83 | 0.0 |   -1.1
+   20000 | Healing Booster | x3.83 | 0.3 |   -1.1
+   25000 | Healing Booster | x0.65 | 0.0 |   +7.9
+   25000 | Healing Booster | x0.65 | 0.3 |   +7.9
+   25000 | Healing Booster | x0.94 | 0.0 |   +7.9
+   25000 | Healing Booster | x0.94 | 0.3 |   +7.9
+   25000 | Healing Booster | x1.0  | 0.0 |   +7.9
+   25000 | Healing Booster | x1.0  | 0.3 |   +7.9
+   25000 | Healing Booster | x1.5  | 0.0 |   +7.9
+   25000 | Healing Booster | x1.5  | 0.3 |   +7.9
+   25000 | Healing Booster | x2.0  | 0.0 |   +7.9
+   25000 | Healing Booster | x2.0  | 0.3 |   +7.9
+   25000 | Healing Booster | x3.83 | 0.0 |   +7.9
+   25000 | Healing Booster | x3.83 | 0.3 |   +7.9
+
+## COST / WHAT BREAKS: selling the replaced item refunds an unknown share (not in data, ASSUMED 50%); check --investment for spike loss; the replaced item's other roles (sustain/mobility) are lost (see the interaction matrix of the replaced item)
+
+## HOW IT WOULD BE RECORDED (read-only design, data.js untouched): an optional box ['Situational', '<trigger in plain words>', '', [['Spirit Sap', 'Swap for Titanic Magazine when <trigger>.']]]

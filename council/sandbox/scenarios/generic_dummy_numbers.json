@@ -1,0 +1,63 @@
+{
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the item/order under test",
+  "Same enemy hero, level, items, behaviour"
+ ],
+ "builds": [],
+ "id": "generic_dummy_numbers",
+ "title": "Generic: single-ability number check (stationary dummy)",
+ "hero": "any",
+ "playstyle": "any",
+ "question": "Does the in-game number match the calculated number (damage/heal/duration)?",
+ "hypothesis": "matches within 5%",
+ "arms": [
+  {
+   "name": "calc_check",
+   "items": [],
+   "souls": ""
+  },
+  {
+   "name": "observed",
+   "items": [],
+   "souls": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "set per use",
+  "enemies": [
+   {
+    "hero": "target dummy",
+    "count": 1,
+    "behaviour": "stationary"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "dummy hp"
+  ]
+ },
+ "procedure": [
+  "Use the ability once, record the number",
+  "Compare with the calculation"
+ ],
+ "metrics": [
+  {
+   "name": "observed_value",
+   "unit": "number",
+   "how": "",
+   "category": "other",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "observed_value",
+  "min_effect_pct": 5,
+  "min_trials": 5,
+  "rule": "report deviation from calculation"
+ }
+}

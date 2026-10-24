@@ -1,0 +1,43 @@
+{
+ "proposal": "restore_seven_gun",
+ "id": "seven_gun",
+ "diff": [
+  "added Early · L-R|Enchanter's Emblem, Early · L-R|Surge of Power, Mid · L-R|Escalating Exposure, I'm rich as fuck|Witchmail",
+  "removed Early · L-R|Rapid Rounds, Early · L-R|Swift Striker, Mid · L-R|Surge of Power, Late · L-R|Escalating Exposure",
+  "ability order 1331234324141224 -> 3311234324141224"
+ ],
+ "block": [
+  "NEW violation introduced: bc: MAIN_4.8K_LATE seven_gun: spirit 4.8k at 11200",
+  "NEW violation introduced: bc: COUNTERS_DESC_FORMAT_OCT22 seven_gun: \"Get after Enduring Speed if needed. Ahead? Skip it until you're dying. Sell Opening Rounds for it.\"",
+  "NEW violation introduced: bc: COUNTERS_X_NOT_IN_BUILD seven_gun: Enduring Speed if needed",
+  "NEW violation introduced: bc: COUNTERS_Y_NOT_IN_BUILD seven_gun: Opening Rounds for it"
+ ],
+ "warn": [],
+ "fixed": [
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD seven_gun: Swift Striker (T2) @4800",
+  "bc: OVERSHOOT_GUN_BEFORE_HEALTH seven_gun: gun 19200 at health 4.8k @40000",
+  "bc: HEALTH_4.8K_AFTER_16K seven_gun: at 40000",
+  "bc: OVERSHOOT_SPIRIT_BEFORE_HEALTH seven_gun: spirit 12800 when health first hits 4.8k at 40000"
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY seven_gun: Unstoppable: Pop it before you ult so nobody cancels the storm.",
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD seven_gun: Duration Extender (T2) @8800",
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD seven_gun: Enduring Speed (T2) @14400",
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE seven_gun: Spiritual Overflow @40000 has no \"Threshold:\" changes line naming it",
+  "bc: FRESH_T2_LATE seven_gun: Mystic Vulnerability @20800",
+  "bc: RICH_NOT_T4 seven_gun: Superior Duration T3"
+ ],
+ "newV": [
+  "bc: MAIN_4.8K_LATE seven_gun: spirit 4.8k at 11200",
+  "bc: COUNTERS_DESC_FORMAT_OCT22 seven_gun: \"Get after Enduring Speed if needed. Ahead? Skip it until you're dying. Sell Opening Rounds for it.\"",
+  "bc: COUNTERS_X_NOT_IN_BUILD seven_gun: Enduring Speed if needed",
+  "bc: COUNTERS_Y_NOT_IN_BUILD seven_gun: Opening Rounds for it",
+  "bc: RT_ITEMS seven_gun: Early · L-R: [[\"Monster Rounds\",null],[\"High-Velocity Rounds\",null],[\"Opening Rounds\",null],[\"Extra Spirit\",null],[\"Rapid Rounds\",null],[\"Swift Striker\",null],[\"Cultist Sacrifice\",null],[\"Duration Extender\",3]] vs [[\"Monster Rounds\",null],[\"High-Velocity Rounds\",null],[\"Opening Rounds\",null],[\"Extra Spirit\",null],[\"Cultist Sacrifice\",null],[\"Enchanter's Emblem\",null],[\"Duration Extender\",3],[\"Surge of Power\",3]]",
+  "bc: RT_ITEMS seven_gun: Mid · L-R: [[\"Surge of Power\",3],[\"Spirit Lifesteal\",null],[\"Sprint Boots\",null],[\"Enduring Speed\",null],[\"Improved Spirit\",null],[\"Tesla Bullets\",null],[\"Mystic Vulnerability\",null],[\"Toxic Bullets\",null]] vs [[\"Spirit Lifesteal\",null],[\"Sprint Boots\",null],[\"Enduring Speed\",null],[\"Improved Spirit\",null],[\"Tesla Bullets\",null],[\"Mystic Vulnerability\",null],[\"Toxic Bullets\",null],[\"Escalating Exposure\",null]]",
+  "bc: RT_ITEMS seven_gun: Late · L-R: [[\"Escalating Exposure\",null],[\"Spiritual Overflow\",null],[\"Unstoppable\",null],[\"Boundless Spirit\",null]] vs [[\"Unstoppable\",null],[\"Spiritual Overflow\",null],[\"Boundless Spirit\",null]]",
+  "bc: RT_ITEMS seven_gun: I'm rich as fuck: [[\"Superior Duration\",null],[\"Spirit Burn\",null],[\"Ricochet\",null],[\"Lightning Scroll\",null],[\"Divine Barrier\",null]] vs [[\"Superior Duration\",null],[\"Spirit Burn\",null],[\"Ricochet\",null],[\"Witchmail\",null],[\"Lightning Scroll\",null],[\"Divine Barrier\",null]]",
+  "bc: RT_ORDER seven_gun: 1331234324141224 vs 3311234324141224"
+ ],
+ "when": "2026-10-24 04:51",
+ "line": "[2026-10-24 04:51] CANDIDATE restore of seven_gun to LASTGOOD (data.js.bak_rel) core/ability order, because the current order shifted a 4.8k spike without a recorded reason (council/triage/TRIAGE.md). | added Early · L-R|Enchanter's Emblem, Early · L-R|Surge of Power, Mid · L-R|Escalating Exposure, I'm rich as fuck|Witchmail; removed Early · L-R|Rapid Rounds, Early · L-R|Swift Striker, Mid · L-R|Surge of Power, Late · L-R|Escalating Exposure; ability order 1331234324141224 -> 3311234324141224 | evidence: data:council/triage/TRIAGE.md | gate: FAIL"
+}

@@ -1,0 +1,125 @@
+meta kind BASELINE
+meta hero Wraith
+meta checkpoint Level 20, 0 souls spent, no items
+meta build none
+meta items none
+meta question Do UpgradeBits 1/3/7/15 read back as unlocked/T1/T2/T3 on Wraith abilities?
+meta purpose verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued
+meta mechanics ability tier readback only; no damage measured
+meta expectedstate items=none stacks=0 tiers set by abil per block
+meta accmode none - no gun accuracy measured
+meta accwhy this is a state readback test, not a damage test
+meta abilities abilities read back, not cast for damage
+meta runs 1/1
+setup Wraith Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 0 0 1 0
+abilist
+nw
+egod
+fetch 350
+wait 0.5
+mark bits1
+cast 3 0.3
+wait 0.2
+abilist
+wait 14
+abilist
+wait 6
+abilist
+wait 6
+abilist
+wait 12
+abilist
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 0 0 3 0
+abilist
+nw
+egod
+fetch 350
+wait 0.5
+mark bits3
+cast 3 0.3
+wait 0.2
+abilist
+wait 14
+abilist
+wait 6
+abilist
+wait 6
+abilist
+wait 12
+abilist
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 0 0 7 0
+abilist
+nw
+egod
+fetch 350
+wait 0.5
+mark bits7
+cast 3 0.3
+wait 0.2
+abilist
+wait 14
+abilist
+wait 6
+abilist
+wait 6
+abilist
+wait 12
+abilist
+mark none
+lvlhold 0
+hardreset
+raw citadel_unlock_flex_slots
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 20
+wait 1.2
+abil 0 0 15 0
+abilist
+nw
+egod
+fetch 350
+wait 0.5
+mark bits15
+cast 3 0.3
+wait 0.2
+abilist
+wait 14
+abilist
+wait 6
+abilist
+wait 6
+abilist
+wait 12
+abilist
+mark none
+lvlhold 0
+end

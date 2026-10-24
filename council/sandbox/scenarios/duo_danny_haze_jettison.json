@@ -1,0 +1,80 @@
+{
+ "id": "duo_danny_haze_jettison",
+ "title": "Danny + Haze: Jettison shred into Bullet Dance",
+ "hero": "Haze",
+ "playstyle": "Tanky healer Haze",
+ "builds": [
+  "haze",
+  "danny"
+ ],
+ "question": "Does Jettison (+ dagger T1 wake shred) raise Bullet Dance damage?",
+ "hypothesis": "H-KS1.1/1.2",
+ "arms": [
+  {
+   "name": "clean",
+   "items": []
+  },
+  {
+   "name": "jettison",
+   "items": []
+  }
+ ],
+ "setup": {
+  "level_or_boons": "~25k",
+  "souls": 25000,
+  "position": "partner within 5m",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 1,
+    "items": [],
+    "behaviour": "stand",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "danny",
+    "count": 1,
+    "role": "setup/shred"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "bot HP",
+   "debuffs"
+  ]
+ },
+ "procedure": [
+  "Haze sleeps bot, Danny sprays 2s",
+  "Haze Bullet Dance within 3s",
+  "Sum dance damage; read resist in debuff panel"
+ ],
+ "metrics": [
+  {
+   "name": "dance_damage",
+   "unit": "hp",
+   "how": "damage numbers / health delta",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "dance_damage",
+  "min_effect_pct": 12,
+  "min_trials": 5,
+  "rule": "SUPPORTS if arm B beats arm A by the effect with non-overlapping ranges"
+ },
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists"
+ ],
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "id": "duo_bebop_hunter_isolate",
+ "title": "Bebop: Hunter's Aura doubled on a hooked lone target",
+ "hero": "Bebop",
+ "playstyle": "1v1 Bebop",
+ "builds": [
+  "bebop",
+  "haze"
+ ],
+ "question": "Is Hunter's Aura -20% on one enemy within 15m of Bebop and -10% with two; how does it stack with Jettison?",
+ "hypothesis": "H-KS2.1/2.2",
+ "arms": [
+  {
+   "name": "two_enemies",
+   "items": [
+    "Hunter's Aura"
+   ],
+   "bots": 2
+  },
+  {
+   "name": "one_enemy",
+   "items": [
+    "Hunter's Aura"
+   ]
+  }
+ ],
+ "setup": {
+  "level_or_boons": "~25k",
+  "souls": 25000,
+  "position": "partner within 5m",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 2,
+    "items": [],
+    "behaviour": "stand",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "haze",
+    "count": 1,
+    "role": "setup/shred"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "bot HP",
+   "debuffs"
+  ]
+ },
+ "procedure": [
+  "Hook bot to Bebop",
+  "Read bullet resist in debuff panel",
+  "Haze dances; sum damage"
+ ],
+ "metrics": [
+  {
+   "name": "dance_damage",
+   "unit": "hp",
+   "how": "damage numbers / health delta",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "dance_damage",
+  "min_effect_pct": 8,
+  "min_trials": 5,
+  "rule": "SUPPORTS if arm B beats arm A by the effect with non-overlapping ranges"
+ },
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists"
+ ],
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

@@ -1,0 +1,262 @@
+{
+ "id": "apollo",
+ "hk": "hero_fencer",
+ "hero": "Apollo",
+ "tag": "Fix",
+ "name": "Rizuhble's Magic Missile Apollo",
+ "desc": "Spirit Apollo",
+ "abil": [
+  "Disengaging Sigil",
+  "Riposte",
+  "Flawless Advance",
+  "Itani Lo Sahn"
+ ],
+ "order": [
+  3,
+  3,
+  1,
+  2,
+  3,
+  2,
+  4,
+  1,
+  1,
+  3,
+  4,
+  4,
+  1,
+  4,
+  2,
+  2
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Grit",
+      "Getting burst in lane. Sell it for Mystic Reverb."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Mystic Burst",
+      ""
+     ],
+     [
+      "Mystic Expansion",
+      "",
+      "3"
+     ],
+     [
+      "Compress Cooldown",
+      "",
+      "3"
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ],
+     [
+      "Spirit Lifesteal",
+      ""
+     ],
+     [
+      "Extra Regen",
+      ""
+     ],
+     [
+      "Healing Booster",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Enchanter's Emblem",
+      ""
+     ],
+     [
+      "Tankbuster",
+      ""
+     ],
+     [
+      "Mystic Vulnerability",
+      ""
+     ],
+     [
+      "Greater Expansion",
+      ""
+     ],
+     [
+      "Extra Stamina",
+      ""
+     ],
+     [
+      "Stamina Mastery",
+      ""
+     ],
+     [
+      "Torment Pulse",
+      ""
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Leech",
+      ""
+     ],
+     [
+      "Spirit Burn",
+      ""
+     ],
+     [
+      "Mystic Reverb",
+      "",
+      "3"
+     ],
+     [
+      "Escalating Exposure",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Tankbuster if needed. Ahead? Skip it until you're dying. Sell Torment Pulse for it.",
+    true,
+    [
+     [
+      "Dispel Magic",
+      "Hexes and slows stop you lunging in or getting out."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun."
+     ],
+     [
+      "Metal Skin",
+      "Their gun carry is melting you."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit."
+     ],
+     [
+      "Unstoppable",
+      "Stuns and silences keep stopping you."
+     ],
+     [
+      "Healbane",
+      "Their healer keeps your target alive."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Witchmail",
+      "Sell Enchanter's Emblem for this."
+     ],
+     [
+      "Echo Shard",
+      "On Flawless Advance. Sell Torment Pulse for this, or Tankbuster if it's gone.",
+      "3"
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ],
+     [
+      "Ethereal Shift",
+      "Sell Stamina Mastery for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ],
+     [
+      "Healing Tempo",
+      "Upgrade of Healing Booster."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Witchmail (6.4k) and Mystic Reverb (6.4k) out of core; Melee Charge (1.6k at 14.4k) and Cold Front (1.6k at 18.4k) in. Core drops from 56k to 46.4k, 12 slots. Reverb goes to the rich box and sells Melee Charge; Arctic Blast sits there as the Cold Front upgrade.",
+  "Melee Charge: 55% of pro Apollo games, lockbuilds CD123 (most common Phantom+ path) and tracklock core. Riposte's dash lands a heavy melee that Spirit Snatch and Lifestrike already key off, so +25 heavy damage and +50% melee range go straight into the combo.",
+  "Cold Front: 49% pro early, deadlocked.gg early core. 95 + 0.47x spirit AoE for wave clear and a 48% slow before the lunges.",
+  "Spikes unchanged: 4.8k spirit at 5.6k, 4.8k health at 9.6k (Melee Lifesteal, Lifestrike, Healing Booster), Boundless at 36.8k. Pro core still Extra Spirit 99%, Mystic Expansion 99%, Improved Spirit 99%, Mystic Burst 98%, Healing Booster 97%, Spirit Snatch 80%, Boundless 91%, Tankbuster 80%.",
+  "Extra Regen in the lane box now says it upgrades to Healing Booster (it does).",
+  "Ability order: mobalytics build-stats grid: unlocks 1-3-2-4, Flawless Advance maxed 5-7 (85-94%), Riposte 8-10; kept that, then ult T1/T2/T3 interleaved by 13 for the finishing slash; Sigil last since its T1 fire rate does nothing for the spirit build.",
+  "Item fit: Spirit Lifesteal -> Infuser out. Apollo's spirit hits come in a few big chunks (Sigil 1 hit / 12s, up to 3 stabs per Flawless Advance / 26s, ult), not lots of separate hits over 7s; neither item is on the tracklock pro list or build page. Replaced by Extra Stamina (800) -> Stamina Mastery (+2.4k): pro 19% Stamina Mastery, Extra Stamina on the tracklock early list; Sigil T2 restores stamina and resets air dash on hit. Health ends at 8k instead of 11.2k (4.8k health spike unchanged at Healing Booster).",
+  "Item fit: Mystic Vulnerability -> Escalating Exposure out. Escalating Exposure stacks once per 0.7s per spirit hit and Apollo lands few separate hits; neither is in the pro top list (EE only on tracklock's counter-pick list). Replaced by Slowing Hex (1.6k, 29% pro, tracklock actives) then Torment Pulse (3.2k T3, tracklock late list; 9m pulse, 18% melee resist for a duellist who lives in melee range), selling Slowing Hex for it so slots stay at 12.",
+  "Item fit: kept Extra Spirit/Improved Spirit/Boundless 99/99/91% pro, Mystic Burst 98%/Tankbuster 80%, Mystic Expansion 99%/Greater Expansion 27%, Healing Booster 97%, Spirit Strike 75%/Spirit Snatch 80%, Melee Charge 55%, Melee Lifesteal 41%/Lifestrike 38%, Cold Front 49%, Compress Cooldown 24%/Superior Cooldown 38%, Spirit Burn 34%.",
+  "Item fit: Counters Metal Skin -> Plated Armor (Metal Skin is on no public Apollo list; Plated Armor is on tracklock's counter picks).",
+  "Order: ability order set to the a7 data-first order 1324333224124114.",
+  "Threshold: checked with the new order. Mystic Burst at 1.6k souls, 25.4 spirit: Sigil 85 + 1.3 x 25.4 = 118, perfect stab 65 + 1.55 x 25.4 = 104, vs 80. Tankbuster at 12.0k (after the 4.8k spirit and health spikes), 82.8 spirit, Flawless Advance T3: perfect stab 130 + 1.55 x 82.8 = 258, Sigil 193, vs 165. Spirit Burn at 31.2k, 124.9 spirit: one perfect stab 324 + Sigil 247 = 571 vs 500 in 5s. Mystic Reverb (rich, on Flawless Advance) late: one stab 324+ vs 100. Nothing moved.",
+  "Round 9: Cold Front (Mid, 18.4k) and Compress Cooldown (Early, 5.6k) swapped. Same 1.6k, so spirit still hits 4.8k at 5.6k souls. tracklock pro Apollo, last 30 days to Oct 19: Cold Front 48% early, Compress Cooldown 27% late (Superior Cooldown 41% late). Pros make the 4.8k spirit with Extra/Improved Spirit, Mystic Burst, Mystic Expansion and Cold Front, which is now exactly ours. Cold Front's slow and wave clear do something in lane; a shorter lunge cooldown matters in fights.",
+  "Round 11: added empty 'Lost lane?' box (Lifestrike right after Mystic Expansion). A duelist has no other job; behind, the duels need the heal first. Health 4.8k still lands on Healing Booster. No T4 run.",
+  "Round 12: Lost lane note now says why: Lifestrike heals 120 + 1.75 per spirit on heavy melee and still heals at 40% off troopers, so moving it from 8k to 5.6k souls is lane sustain when you're behind.",
+  "Round 13 (notes policy): notes that restated the item, said 'Upgrades to X' or marked spikes are now empty; kept only tips, situational calls and sells, each checked in the game files.",
+  "Round 13 (UPDATE 5): rebuilt as a real spirit build from spirit-style Apollo builds only: lockbuilds Twenty Eight Stab Wounds (Oct 4), APOLLO NEVER DIES (Oct 14, 'max Flawless Advance first', melee items only in a 'Melee-dependent, only if you can secure melees after Riposte' box), Sevoh's stabby sustain spirit (Oct 3), stabby stabby (Oct 13) and SwoleBenji SPIRIT JOUSTER (Oct 4). In all 5: Mystic Burst, Extra Spirit, Mystic Expansion, Improved Spirit, Spirit Lifesteal, Tankbuster, Greater Expansion, Boundless, Spirit Burn; in 3-4 of 5: Compress/Superior Cooldown, Healing Booster, Mystic Vulnerability/Escalating Exposure, Torment Pulse, Stamina Mastery, Leech, Mystic Reverb; Enchanter's Emblem in 2 (Twenty Eight Stab Wounds: 'always buy two 1.6k greens'). Removed Melee Lifesteal/Lifestrike, Melee Charge, Spirit Strike/Snatch, Cold Front, Slowing Hex, Mystic Expansion box 'Lost lane?' (it moved Lifestrike) — they came from hero-wide rates driven by melee Apollo.",
+  "Round 13: kit: Mystic Burst (>80) works off Sigil (85 + 1.3 spirit) from the start; Tankbuster (>165) and Mystic Reverb (>100) off a perfect Flawless Advance stab (65 + 1.55 spirit, T3 +65 with better scaling), which is maxed first (order unchanged, matches the spirit builds). Spirit Burn (500 in 5s) is three perfect stabs late.",
+  "Round 14: ability order 1324333224124114 -> 1324333222114144, the per-point best fit of the mobalytics Archon+ grid (Flawless Advance maxed first in 17.7K of 19.3K games): Riposte T3 at point 10 (69%), Sigil 11-12, ult 13/15/16. Counters now come after Tankbuster (Healing Booster came before Enchanter's Emblem, the item it sells). Divine Barrier added to rich (Dispel Magic is in Counters). Unstoppable and Counterspell notes made concrete.",
+  "Round 15: Counters caption was 117 characters (game limit 112) and sold Enchanter's Emblem, which Witchmail also sells: Counters now sell Torment Pulse (112 chars). Divine Barrier now sells Dispel Magic instead of Torment Pulse.",
+  "Round 19: verified as the public spirit Apollo (SwoleBenji SPIRIT JOUSTER Oct 4, Sevoh Oct 3, FREDTHEFINCH Sep 18, CD123 ranked Oct 17; lockbuilds table: Mystic Burst 52.6%, Mystic Expansion 49.8%, Improved Spirit 47.4%, Tankbuster 47.2%). No item changes; counters caption uses Kieran's exact wording; Grit names what it's sold for.",
+  "Round 20: late list: Witchmail (sell Enchanter's Emblem), Ethereal Shift (FREDTHEFINCH mid core, Sevoh; sell Stamina Mastery), Divine Barrier; slot-locked Transcendent Cooldown, Healing Tempo. Core 51.2k, with the late list 70.4k without Divine Barrier. Ethereal Shift is a luxury, so it's listed last (Kieran 13:01).",
+  "Round 20 (update 2): checked Restorative Shot and lane timing: every lane item helps in lane now, no Slowing Bullets or Weighted Shots; no changes.",
+  "Round 23: Echo Shard on Flawless Advance added to the late list (a second full set of stabs, and Mystic Reverb is on the same ability).",
+  "Round 25: ability order 1324333222114144 → 3312324113441422 (kit-based for this playstyle, no idle early points)."
+ ]
+}

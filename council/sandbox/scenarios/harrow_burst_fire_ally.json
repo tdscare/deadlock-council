@@ -1,0 +1,93 @@
+{
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the item/order under test",
+  "Same enemy hero, level, items, behaviour"
+ ],
+ "builds": [
+  "nurse"
+ ],
+ "id": "harrow_burst_fire_ally",
+ "title": "Harrow: Burst Fire proccing on a teammate",
+ "hero": "Harrow",
+ "playstyle": "Friendly Fire Harrow",
+ "question": "Does shooting an ally with Burst Fire raise healing-needle charge/throughput enough to beat Swift Striker?",
+ "hypothesis": "Burst Fire procs on allies (+32% fire rate for 4.5s, 9s cd) so needle charge from hits rises more than Swift Striker flat +20%.",
+ "arms": [
+  {
+   "name": "burst_fire",
+   "items": [
+    "Burst Fire"
+   ],
+   "souls": "equal spend"
+  },
+  {
+   "name": "swift_striker",
+   "items": [
+    "Swift Striker"
+   ],
+   "souls": "equal spend"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "mid (~20k)",
+  "enemies": [],
+  "allies": [
+   {
+    "hero": "any ally bot",
+    "count": 1,
+    "role": "stands still, damaged to 50% HP"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "ally HP",
+   "cooldowns"
+  ]
+ },
+ "procedure": [
+  "Ally at 50% HP 10m away",
+  "Harrow shoots ally with needles/bullets for 20s to charge Healing Needles; fire needle volley",
+  "Record time to full charge and heal delivered"
+ ],
+ "metrics": [
+  {
+   "name": "time_to_full_charge",
+   "unit": "s",
+   "how": "",
+   "category": "healing",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": true
+  },
+  {
+   "name": "heal_delivered_20s",
+   "unit": "hp",
+   "how": "",
+   "category": "healing",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "shots_fired",
+   "unit": "count",
+   "how": "",
+   "category": "sustained damage",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "time_to_full_charge",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "lower is better"
+ },
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

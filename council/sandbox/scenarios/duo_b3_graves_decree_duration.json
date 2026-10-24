@@ -1,0 +1,79 @@
+{
+ "id": "duo_b3_graves_decree_duration",
+ "title": "Does Duration Extender lengthen Borrowed Decree or Grasping Hands?",
+ "hero": "Graves",
+ "playstyle": "Ult Graves (inherited check)",
+ "builds": [
+  "graves_ult",
+  "graves_duo_doorman"
+ ],
+ "question": "Decree's duration is tagged to spirit power, Hands' to ability duration. Which one does the imbue actually lengthen?",
+ "hypothesis": "H-B3-3.4 Duration Extender on Decree changes its duration by <5%; on Grasping Hands it adds ~22% (7.0s -> 8.5s at T1).",
+ "arms": [
+  {
+   "name": "imbue_decree",
+   "items": [
+    "Duration Extender (Borrowed Decree)"
+   ],
+   "ability_order": null,
+   "souls": 10000,
+   "notes": ""
+  },
+  {
+   "name": "imbue_hands",
+   "items": [
+    "Duration Extender (Grasping Hands)"
+   ],
+   "ability_order": null,
+   "souls": 10000,
+   "notes": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "10k",
+  "souls": 10000,
+  "position": "open ground",
+  "enemies": [],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Cast Decree and Hands in each arm; time each from cast to disappear"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "decree_duration",
+   "unit": "s",
+   "how": "stopwatch / timer",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "hands_duration",
+   "unit": "s",
+   "how": "stopwatch",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "decree_duration",
+  "min_effect_pct": 5,
+  "min_trials": 5,
+  "rule": "If imbue_decree lengthens Decree by >=15%, REFUTES the tag reading: move the imbue back to Decree in graves_duo_doorman and keep graves_ult as is. Otherwise flag graves_ult's Duration Extender on Decree for a fix."
+ },
+ "blockedIfNo": []
+}

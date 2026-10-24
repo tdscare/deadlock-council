@@ -1,0 +1,60 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: nurse
+HERO: Nurse Harrow
+ITEM: Escalating Exposure
+CHECKPOINT: add-on-top at 60000 souls (state souls 66400; item cost 6400)
+VERSION: interaction-v1
+ARGS: --interactions nurse Escalating Exposure --at 60000
+GENERATED: 2026-10-24T16:27:38Z
+BODY-SHA: 90b18f32c2dcb488c606946912f004add6659dec1024db20c2a9393f9f3789c7
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 6400, unconditional, ranked): Capacitor, Lucky Shot, Phantom Strike, Colossus, Armor Piercer; also shown, not ranked (conditional or unequal cost): Frenzy, Siphon Bullets, Spellslinger
+VERDICT: Escalating Exposure is beaten in every window: sustained: Capacitor; burst: Capacitor; ult: Phantom Strike
+UNKNOWN_CELLS: 0
+SELECTION: build-decision | Escalating Exposure is bought at 60800.0 souls in nurse: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (6400) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+UPPER-BOUND OPTIONS THAT BEAT IT (their trigger condition decides; UNKNOWN uptime): Frenzy, Siphon Bullets, Spellslinger
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.3, long_share=0.6, W_sus=10.0, W_burst=3.0; reload 1.9 s (VERIFIED GAME MECHANIC m_reloadDuration (weapon vdata; Wraith value equals its sandbox measurement))
+STATE: owned ['Titanic Magazine', 'Surge of Power', 'Burst Fire', 'Superior Cooldown', 'Toxic Bullets', 'Boundless Spirit', 'Unstoppable', 'Vampiric Burst', 'Spiritual Overflow', 'Healing Tempo', 'Ricochet', 'Escalating Exposure'] | tiers Leech Therapy=T3(spirit) Wretched Vapors=T3(utility) Healing Needles=T3(utility) Lurking Terrors=T3(spirit) | weapon invest bonus 86% | spirit 162
+
+## INTERACTION MATRIX (item effect x kit component)
+- defence (not damage) (TechResist=17)
+    normal shooting                              n/a                        [CALCULATED] defensive stat; valued by --strategy (survival), not damage
+    1=Leech Therapy T3 [spirit]                  n/a                        [CALCULATED] defensive stat
+    2=Wretched Vapors T3 [utility]               n/a                        [CALCULATED] defensive stat
+    3=Healing Needles T3 [utility]               n/a                        [CALCULATED] defensive stat
+    4=Lurking Terrors T3 (ULT) [spirit]          n/a                        [CALCULATED] defensive stat
+- enemy resist reduction (TechArmorDamageReduction=-8)
+    normal shooting                              DOES NOT WORK              [CALCULATED] spirit-resist shred does not change bullet damage
+    1=Leech Therapy T3 [spirit]                  WORKS                      [CALCULATED] its damage type is the one shredded
+    2=Wretched Vapors T3 [utility]               DOES NOT WORK              [CALCULATED] shred type does not match this damage
+    3=Healing Needles T3 [utility]               DOES NOT WORK              [CALCULATED] shred type does not match this damage
+    4=Lurking Terrors T3 (ULT) [spirit]          WORKS                      [CALCULATED] its damage type is the one shredded
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(build state, nothing added) |      1486              |       585              |      2128              | 188
+Escalating Exposure          |         1487 (+0..+0%) |          586 (+0..+0%) |         2193 (+3..+3%) | 188
+Capacitor                    |       1983 (+33..+33%) |        771 (+32..+32%) |         2128 (+0..+0%) | 205
+Frenzy                       |       1695 (+14..+14%) |        656 (+12..+12%) |         2128 (+0..+0%) | 381  ! fire rate is a timed buff, counted as always on (upper bound); conditional item (selfhp): counted as if its condition is met (upper bound)
+Siphon Bullets               |         1591 (+7..+7%) |          625 (+7..+7%) |         2128 (+0..+0%) | 202  ! conditional item (stack): counted as if its condition is met (upper bound)
+Lucky Shot                   |         1623 (+9..+9%) |          622 (+6..+6%) |         2128 (+0..+0%) | 206
+Phantom Strike               |         1593 (+7..+7%) |          627 (+7..+7%) |         2202 (+3..+3%) | 202
+Colossus                     |         1591 (+7..+7%) |          625 (+7..+7%) |         2128 (+0..+0%) | 202
+Armor Piercer                |       1640 (+10..+10%) |        643 (+10..+10%) |         2128 (+0..+0%) | 208
+Spellslinger                 |       1695 (+14..+14%) |        646 (+10..+10%) |         2128 (+0..+0%) | 216  ! fire rate is a timed buff, counted as always on (upper bound); conditional item (stack): counted as if its condition is met (upper bound)
+  candidate detail (reading 1): sustained bullets 46, gun 1448, stacks 0, procs 0, spirit 39 | ult: Lurking Terrors damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Capacitor > Armor Piercer > Lucky Shot > Phantom Strike > Colossus > Escalating Exposure
+  burst: rank (reading 1) Capacitor > Armor Piercer > Phantom Strike > Colossus > Lucky Shot > Escalating Exposure
+  ult: rank (reading 1) Phantom Strike > Escalating Exposure > Capacitor > Lucky Shot > Colossus > Armor Piercer
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (150s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  none
+
+## NOT DETERMINED FROM DATA
+  - nothing beyond the ASSUMED shares above
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

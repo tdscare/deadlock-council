@@ -1,0 +1,106 @@
+{
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the item/order under test",
+  "Same enemy hero, level, items, behaviour"
+ ],
+ "builds": [
+  "victor"
+ ],
+ "id": "victor_sustain_three",
+ "title": "Victor sustain: Spirit Lifesteal vs Leech",
+ "hero": "Victor",
+ "playstyle": "Aura Brawler",
+ "question": "In real fights, does Leech out-sustain Spirit Lifesteal on the Aura Brawler core?",
+ "hypothesis": "Unresolved. Spirit Lifesteal scales with spirit damage dealt; Leech heals on damage dealt in melee/close range. Brawler pressure on 3 enemies decides it.",
+ "arms": [
+  {
+   "name": "spirit_lifesteal",
+   "items": "build:victor core",
+   "swaps": {}
+  },
+  {
+   "name": "leech",
+   "items": "build:victor core",
+   "swaps": {
+    "Spirit Lifesteal": "Leech"
+   }
+  }
+ ],
+ "setup": {
+  "level_or_boons": "mid-late (~30k souls)",
+  "enemies": [
+   {
+    "hero": "mixed bot heroes",
+    "count": 3,
+    "behaviour": "looped recorded attack; stay in melee range"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "hp",
+   "cooldowns",
+   "enemy positions"
+  ]
+ },
+ "conditions": [
+  {
+   "name": "1 enemy"
+  },
+  {
+   "name": "3 enemies"
+  }
+ ],
+ "procedure": [
+  "Victor engages with his normal rotation",
+  "Run 30s or until death",
+  "Record"
+ ],
+ "metrics": [
+  {
+   "name": "hp_healed_30s",
+   "unit": "hp",
+   "how": "sum of heal/lifesteal numbers or HP sampling",
+   "category": "healing",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "survival_time",
+   "unit": "s",
+   "how": "",
+   "category": "survivability",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "damage_dealt_30s",
+   "unit": "hp",
+   "how": "",
+   "category": "sustained damage",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "hp_lost_total",
+   "unit": "hp",
+   "how": "",
+   "category": "survivability",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "hp_healed_30s",
+  "min_effect_pct": 15,
+  "min_trials": 5,
+  "rule": "higher better; report per condition"
+ }
+}

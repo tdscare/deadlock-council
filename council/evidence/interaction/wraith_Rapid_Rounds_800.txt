@@ -1,0 +1,52 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: wraith
+HERO: Wraith
+ITEM: Rapid Rounds
+CHECKPOINT: buy-point at 800 souls (state souls 800; item cost 800)
+VERSION: interaction-v1
+ARGS: --interactions wraith Rapid Rounds --vs Close Quarters
+GENERATED: 2026-10-24T16:27:40Z
+BODY-SHA: 95e84a5f0c74c77dc8e337e376f60d776155870954033500084ca27988c08342
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 800, unconditional, ranked): Extended Magazine, High-Velocity Rounds, Close Quarters, Headshot Booster, Restorative Shot
+VERDICT: DEPENDS ON COMBAT WINDOW: sustained -> Rapid Rounds; burst -> Close Quarters
+UNKNOWN_CELLS: 0
+SELECTION: build-decision | Rapid Rounds is bought at 800 souls in wraith: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (800) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage; plus requested ['Close Quarters']
+PAIRWISE: Rapid Rounds vs Close Quarters: sustained: Rapid Rounds +1..+1% vs Close Quarters -> TIE (within 2% in every reading) | burst: Rapid Rounds -2..-2% vs Close Quarters -> LOSES in every reading
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.6, long_share=0.3, W_sus=10.0, W_burst=3.0; reload 2.82 s (measured 2.82 s in council/sandbox/results/wraith_gun_PR-W1.md)
+STATE: owned ['Rapid Rounds'] | tiers Card Trick=T1(cards) Project Mind=L(locked) Full Auto=U(gun-mode) Telekinesis=L(locked) | weapon invest bonus 9% | spirit 2
+
+## INTERACTION MATRIX (item effect x kit component)
+- fire rate (more bullets) (BonusFireRate=9)
+    normal shooting                              WORKS                      [CALCULATED] more bullets per second (fire-rate pool now 0%: +9 adds 9.0% bullets)
+    1=Card Trick T1 [cards]                      WORKS                      [CALCULATED] cards are earned per bullet hit (CardResourcePerBulletHit=4, 100 per card)
+    2=Project Mind L [locked]                    n/a                        [CALCULATED] not trained at this checkpoint
+    3=Full Auto U [gun-mode]                     WORKS                      [CALCULATED+ASSUMED] adds to the ability's own BonusFireRate=20 (additive stacking ASSUMED)
+    3=Full Auto U [gun-mode] bullets             WORKS                      [CALCULATED] MagicDamagePerBullet: more bullets -> more spirit damage
+    4=Telekinesis L [locked]                     n/a                        [CALCULATED] not trained at this checkpoint
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |       467              |       106              |         0              | 0
+Rapid Rounds                 |        526 (+13..+13%) |        126 (+19..+19%) |            0 (+0..+0%) | 0
+Extended Magazine            |        515 (+10..+10%) |        124 (+17..+17%) |            0 (+0..+0%) | 0
+High-Velocity Rounds         |          510 (+9..+9%) |        124 (+17..+17%) |            0 (+0..+0%) | 0
+Close Quarters               |        520 (+11..+11%) |        128 (+21..+21%) |            0 (+0..+0%) | 0
+Headshot Booster             |          507 (+8..+8%) |        123 (+16..+16%) |            0 (+0..+0%) | 0
+Restorative Shot             |          505 (+8..+8%) |        122 (+15..+15%) |            0 (+0..+0%) | 0
+  candidate detail (reading 1): sustained bullets 84, gun 299, stacks 0, procs 0, spirit 227 | ult: ultimate not trained at this checkpoint
+  sustained: rank (reading 1) Rapid Rounds > Close Quarters > Extended Magazine > High-Velocity Rounds > Headshot Booster > Restorative Shot
+  burst: rank (reading 1) Close Quarters > Rapid Rounds > Extended Magazine > High-Velocity Rounds > Headshot Booster > Restorative Shot
+  ult: not ranked (ultimate not trained at this checkpoint)
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (not trained)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  none
+
+## NOT DETERMINED FROM DATA
+  - nothing beyond the ASSUMED shares above
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

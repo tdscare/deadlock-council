@@ -1,0 +1,129 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: calico
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:14:21Z
+BODY-SHA: d180d7702be90d26f0811c39228d8c205fa898a9c688ddf1eef4d69e2890d738
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Melee Lifesteal: retained-or-upgraded (-> Lifestrike)
+  Stalker: retained
+  Spirit Strike: retained-or-upgraded (-> Spirit Snatch)
+  Cold Front: retained-or-upgraded (-> Arctic Blast)
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed)
+  Spirit Snatch: retained
+  Enduring Speed: retained
+  Lifestrike: retained
+  Mystic Vulnerability: retained
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Arctic Blast: retained
+  Dispel Magic: retained
+  Superior Cooldown: retained
+  Extra Health: retained-or-upgraded (-> Fortitude)
+  Fortitude: retained
+  Boundless Spirit: retained
+  Scourge: retained
+  Spirit Burn: retained
+  Extra Regen: conditional branch (lane alternative)
+  Grit: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Spellbreaker: conditional branch (counter menu)
+  Reactive Barrier: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Escalating Exposure: situational-luxury
+  Mystic Reverb: situational-luxury
+  Diviner's Kevlar: situational-luxury
+  Cursed Relic: situational-luxury
+  Divine Barrier: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+  Juggernaut: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen, Grit
+  Early · L-R                -> main path (sequential): Melee Lifesteal, Stalker, Spirit Strike, Cold Front, Sprint Boots, Spirit Snatch, Enduring Speed, Lifestrike
+  Mid · L-R                  -> main path (sequential): Mystic Vulnerability, Extra Spirit, Improved Spirit, Compress Cooldown, Arctic Blast, Dispel Magic, Superior Cooldown, Extra Health
+  Late · L-R                 -> main path (sequential): Fortitude, Boundless Spirit, Scourge, Spirit Burn
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Resilience, Spellbreaker, Reactive Barrier, Counterspell, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Escalating Exposure, Mystic Reverb, Diviner's Kevlar, Cursed Relic, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown, Juggernaut
+
+## Stalker: sold when buying Mystic Reverb (I'm rich as fuck, luxury)
+  role of Stalker: retained; role of Mystic Reverb: situational-luxury
+  Stalker: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 2400 souls (~2.5 min), replaced at ~59.0 min -> owned ~56.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 1600/11200/40000 -> after 0/11200/40000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 77 min | window TR | key purchase times (min)
+  as built                                    |          63945 |      0.23 | Stalker 2, Mystic Reverb 59
+  keep Stalker (slot cap ignored)             |          64063 |      0.24 | Stalker 2, Mystic Reverb 60
+  skip Stalker                                |          62670 |      0.21 | Mystic Reverb 60
+  sell Spirit Snatch instead                  |          64048 |      0.24 | Stalker 2, Mystic Reverb 58
+  keep Stalker (slot cap ignored) vs as built: d souls +142, d window TR +3.8% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -))
+  skip Stalker vs as built: d souls -712, d window TR -8.8% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Spirit Snatch instead vs as built: d souls +101, d window TR +2.6% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  model limit: no modelled stat for Mystic Reverb (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Stalker (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | sell Spirit Snatch instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+
+## Lifestrike: sold when buying Diviner's Kevlar (I'm rich as fuck, luxury)
+  role of Lifestrike: retained; role of Diviner's Kevlar: situational-luxury
+  Lifestrike: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 11200 souls (~11.2 min), replaced at ~58.0 min -> owned ~46.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 1600/17600/33600 -> after 1600/14400/33600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 77 min | window TR | key purchase times (min)
+  as built                                    |          64154 |      0.21 | Lifestrike 11, Diviner's Kevlar 58
+  keep Lifestrike (slot cap ignored)          |          64256 |      0.22 | Lifestrike 11, Diviner's Kevlar 60
+  skip Lifestrike                             |          63286 |      0.18 | Diviner's Kevlar 58
+  sell Stalker instead                        |          64131 |      0.22 | Lifestrike 11, Diviner's Kevlar 59
+  keep Lifestrike (slot cap ignored) vs as built: d souls +26, d window TR +5.6% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Lifestrike vs as built: d souls -868, d window TR -13.9% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Stalker instead vs as built: d souls +0, d window TR +1.9% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Lifestrike (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | skip Lifestrike: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Stalker instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+
+## Spirit Snatch: sold when buying Cursed Relic (I'm rich as fuck, luxury)
+  role of Spirit Snatch: retained; role of Cursed Relic: situational-luxury
+  Spirit Snatch: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 8000 souls (~8.2 min), replaced at ~58.0 min -> owned ~49.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 1600/11200/40000 -> after 1600/11200/36800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 77 min | window TR | key purchase times (min)
+  as built                                    |          64044 |      0.22 | Spirit Snatch 8, Cursed Relic 58
+  keep Spirit Snatch (slot cap ignored)       |          64059 |      0.22 | Spirit Snatch 8, Cursed Relic 60
+  skip Spirit Snatch                          |          64365 |      0.22 | Cursed Relic 56
+  sell Stalker instead                        |          63941 |      0.21 | Spirit Snatch 8, Cursed Relic 59
+  keep Spirit Snatch (slot cap ignored) vs as built: d souls +24, d window TR +1.2% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Spirit Snatch vs as built: d souls +168, d window TR +3.9% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Stalker instead vs as built: d souls -101, d window TR -2.7% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Spirit Snatch'] differ from 'as built' only through items with no modelled stat (Cursed Relic contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Cursed Relic has an active effect (PRESS) not priced
+  model limit: no modelled stat for Cursed Relic (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Spirit Snatch (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | skip Spirit Snatch: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Stalker instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Dispel Magic: sold when buying Divine Barrier (I'm rich as fuck, luxury)
+  role of Dispel Magic: retained; role of Divine Barrier: situational-luxury
+  Dispel Magic: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 24000 souls (~24.2 min), replaced at ~58.0 min -> owned ~33.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 1600/17600/33600 -> after 1600/14400/33600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 77 min | window TR | key purchase times (min)
+  as built                                    |          64105 |      0.18 | Dispel Magic 24, Divine Barrier 58
+  keep Dispel Magic (slot cap ignored)        |          64115 |      0.18 | Dispel Magic 24, Divine Barrier 60
+  skip Dispel Magic                           |          64177 |      0.18 | Divine Barrier 56
+  sell Stalker instead                        |          63989 |      0.17 | Dispel Magic 24, Divine Barrier 59
+  keep Dispel Magic (slot cap ignored) vs as built: d souls +3, d window TR +1.2% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Dispel Magic vs as built: d souls +58, d window TR +0.5% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: INSUFFICIENT (effect within model noise)
+  sell Stalker instead vs as built: d souls -110, d window TR -4.0% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Dispel Magic has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Divine Barrier has an active effect (PRESS) not priced
+  model limit: no modelled stat for Dispel Magic (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Dispel Magic (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | skip Dispel Magic: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Stalker instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

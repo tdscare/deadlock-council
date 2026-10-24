@@ -1,0 +1,23 @@
+# Seven ability orders, first 6k souls, from council/tools/abtimeline.py model_A (game data: unlocks at 0/500/1400/3200 souls, AP T1/T2/T3 = 1/2/5) non-strict and strict queue, and model_B (old: abilities 1-3 pre-unlocked, 1 AP per entry). Generator: early.py
+cur      A       BallU@0 PSurgeU@500 PSurgeT1@500 BallT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200 StormT1@3900 StormT2@5300 StaticT1@6000
+cur      Astrict BallU@0 PSurgeU@500 PSurgeT1@500 BallT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200 StormT1@3900 StormT2@5300 StaticT1@6000
+cur      B       BallU@0 StaticU@0 PSurgeU@0 BallT1@200 PSurgeT1@900 PSurgeT2@2000 BallT2@2600 StaticT1@3900 PSurgeT3@4600 StormU@5300 StormT1@6000
+clean    A       PSurgeU@0 PSurgeT1@200 BallU@500 BallT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200 StormT1@3900 StormT2@5300 StaticT1@6000
+clean    Astrict PSurgeU@0 PSurgeT1@200 BallU@500 BallT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200 StormT1@3900 StormT2@5300 StaticT1@6000
+clean    B       BallU@0 StaticU@0 PSurgeU@0 PSurgeT1@200 PSurgeT2@900 BallT1@2000 BallT2@2600 StaticT1@3900 PSurgeT3@4600 StormU@5300 StormT1@6000
+prop     A       BallU@0 BallT1@200 PSurgeU@500 PSurgeT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200 StormT1@3900 StormT2@5300 StaticT1@6000
+prop     Astrict BallU@0 BallT1@200 PSurgeU@500 PSurgeT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200 StormT1@3900 StormT2@5300 StaticT1@6000
+prop     B       BallU@0 StaticU@0 PSurgeU@0 BallT1@200 BallT2@900 PSurgeT1@2000 PSurgeT2@2600 StaticT1@3900 PSurgeT3@4600 StormU@5300 StormT1@6000
+gcur     A       BallU@0 PSurgeU@500 PSurgeT1@500 BallT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200
+gcur     Astrict BallU@0 PSurgeU@500 PSurgeT1@500 BallT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200
+gcur     B       BallU@0 StaticU@0 PSurgeU@0 BallT1@200 PSurgeT1@900 PSurgeT2@2000 BallT2@2600 StaticT1@3900 PSurgeT3@4600 StormU@5300
+gclean   A       PSurgeU@0 PSurgeT1@200 BallU@500 BallT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200
+gclean   Astrict PSurgeU@0 PSurgeT1@200 BallU@500 BallT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200
+gclean   B       BallU@0 StaticU@0 PSurgeU@0 PSurgeT1@200 PSurgeT2@900 BallT1@2000 BallT2@2600 StaticT1@3900 PSurgeT3@4600 StormU@5300
+gprop    A       BallU@0 BallT1@200 PSurgeU@500 PSurgeT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200
+gprop    Astrict BallU@0 BallT1@200 PSurgeU@500 PSurgeT1@900 StaticU@1400 PSurgeT2@2600 StormU@3200
+gprop    B       BallU@0 StaticU@0 PSurgeU@0 BallT1@200 BallT2@900 PSurgeT1@2000 PSurgeT2@2600 StaticT1@3900 PSurgeT3@4600 StormU@5300
+# VERDICT per model (Kieran rule reqs D3: 'Seven first point in Lightning Ball for 2nd charge'):
+#  model A non-strict = model A strict (identical rows above, so the unlock-vs-AP queue question does not change this): 1331 leaves ball T1 at 900 (same as 3311) and only swaps which ability is unlocked at 0 souls; 1133 gives ball T1 (2nd charge) at 200, Power Surge unlocked 500 / T1 900. Best = 1133.
+#  model B (superseded by FOUNDATIONS F5, VERIFIED m_bStartTrained=false): 1331 gives ball T1 at 200; 1133 would give ball T2 at 900 and push Power Surge T1 to 2000. Best = 1331.
+#  Under model A, 1331 and 1133 are identical from 1400 souls on (Static Charge unlock 1400, Power Surge T2 2600, ult 3200, ...); under model B they differ until ~2600. Chosen: 1133 (model A = game data, used by the gate). If the in-game guide reads clicks as model B, revert to 1331.

@@ -1,0 +1,104 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: baba_tank
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:13:09Z
+BODY-SHA: 5090436fce1f4d8f24b78a5637d4d3b194a420ae72dcc5816f5292f8456af43b
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Regen: retained-or-upgraded (-> Healing Booster)
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Mystic Regeneration: retained-or-upgraded (-> Radiant Regeneration)
+  Spirit Strike: retained-or-upgraded (-> Spirit Snatch)
+  Radiant Regeneration: retained
+  Healing Booster: retained
+  Healbane: retained
+  Reactive Barrier: retained
+  Torment Pulse: retained
+  Fortitude: retained
+  Spirit Snatch: retained
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Duration Extender: retained-or-upgraded (-> Superior Duration)
+  Rapid Recharge: retained
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Superior Duration: retained
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Unstoppable: retained
+  Boundless Spirit: retained
+  Escalating Exposure: retained
+  Bullet Resilience: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Spirit Burn: situational-luxury
+  Indomitable: situational-luxury
+  Infuser: situational-luxury
+  Divine Barrier: situational-luxury
+  Ethereal Shift: situational-luxury
+  Healing Tempo: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Early · L-R                -> main path (sequential): Extra Regen, Extra Charge, Mystic Regeneration, Spirit Strike, Radiant Regeneration, Healing Booster, Healbane, Reactive Barrier
+  Mid · L-R                  -> main path (sequential): Torment Pulse, Fortitude, Spirit Snatch, Extra Spirit, Duration Extender, Rapid Recharge, Mystic Vulnerability
+  Late · L-R                 -> main path (sequential): Superior Duration, Improved Spirit, Unstoppable, Boundless Spirit, Escalating Exposure
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Bullet Resilience, Metal Skin, Plated Armor, Counterspell, Dispel Magic, Spirit Resilience
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Spirit Burn, Indomitable, Infuser, Divine Barrier, Ethereal Shift
+  Slot locked                -> optional upgrade (branch): Healing Tempo
+
+## Torment Pulse: sold when buying Spirit Burn (I'm rich as fuck, luxury)
+  role of Torment Pulse: retained; role of Spirit Burn: situational-luxury
+  Torment Pulse: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 12800 souls (~13.2 min), replaced at ~65.2 min -> owned ~52.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/14400/35200 -> after 0/14400/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 73 min | window TR | key purchase times (min)
+  as built                                    |          51571 |      0.31 | Torment Pulse 13, Spirit Burn 65
+  keep Torment Pulse (slot cap ignored)       |          51580 |      0.31 | Torment Pulse 13, Spirit Burn 68
+  skip Torment Pulse                          |          51711 |      0.31 | Spirit Burn 62
+  sell Healbane instead                       |          51572 |      0.31 | Torment Pulse 13, Spirit Burn 67
+  keep Torment Pulse (slot cap ignored) vs as built: d souls +5, d window TR +0.3% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Torment Pulse vs as built: d souls +42, d window TR +0.6% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Healbane instead vs as built: d souls +0, d window TR +0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: no modelled stat for Spirit Burn (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled)
+
+## Fortitude: sold when buying Infuser (I'm rich as fuck, luxury)
+  role of Fortitude: retained; role of Infuser: situational-luxury
+  Fortitude: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 16000 souls (~16.8 min), replaced at ~65.2 min -> owned ~48.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/20800/28800 -> after 0/17600/28800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 73 min | window TR | key purchase times (min)
+  as built                                    |          51897 |      0.32 | Fortitude 17, Infuser 65
+  keep Fortitude (slot cap ignored)           |          51814 |      0.31 | Fortitude 17, Infuser 68
+  skip Fortitude                              |          51604 |      0.30 | Infuser 63
+  sell Healbane instead                       |          51869 |      0.31 | Fortitude 17, Infuser 67
+  keep Fortitude (slot cap ignored) vs as built: d souls -6, d window TR -0.7% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Fortitude vs as built: d souls -44, d window TR -3.9% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY (sign robust in 82% of cells; no measured inputs)
+  sell Healbane instead vs as built: d souls -1, d window TR -0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Infuser has an active effect (INSTANT_CAST) not priced
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT
+
+## Radiant Regeneration: sold when buying Ethereal Shift (I'm rich as fuck, luxury)
+  role of Radiant Regeneration: retained; role of Ethereal Shift: situational-luxury
+  Radiant Regeneration: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 5600 souls (~5.8 min), replaced at ~65.2 min -> owned ~59.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/14400/35200 -> after 0/14400/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 73 min | window TR | key purchase times (min)
+  as built                                    |          51605 |      0.35 | Radiant Regeneration 6, Ethereal Shift 65
+  keep Radiant Regeneration (slot cap ignored)|          51600 |      0.35 | Radiant Regeneration 6, Ethereal Shift 68
+  skip Radiant Regeneration                   |          51833 |      0.35 | Ethereal Shift 63
+  sell Healbane instead                       |          51598 |      0.35 | Radiant Regeneration 6, Ethereal Shift 67
+  keep Radiant Regeneration (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Radiant Regeneration vs as built: d souls +77, d window TR +1.3% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: -, 0.5: +); lost (0: +, 1: -)) | TR: MODEL-ONLY (sign robust in 88% of cells; no measured inputs)
+  sell Healbane instead vs as built: d souls -5, d window TR -0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Ethereal Shift has an active effect (INSTANT_CAST) not priced
+  FINDINGS: a computed alternative sequence is better: skip Radiant Regeneration
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Radiant Regeneration; evidence tier: MODEL-ONLY; flipping assumptions: skip Radiant Regeneration: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: -, 0.5: +); lost (0: +, 1: -))

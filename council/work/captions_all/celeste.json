@@ -1,0 +1,3446 @@
+{
+ "schema": 1,
+ "id": "celeste",
+ "hero": "Celeste",
+ "name": "Rizuhble's Healthy Glow Celeste",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-8,000 (levels 1-14). Abilities gained (both point models agree): Shining Wonder unlocked. 4.8k spikes: spirit 4.8k at Mystic Burst. Ultimate (Shining Wonder) is available from Radiant Regeneration.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "celeste:7:phase_range:4327",
+    "celeste:7:phase_abilities:4328",
+    "celeste:7:phase_spikes:4337",
+    "celeste:7:phase_ult:4338"
+   ],
+   "items": [
+    {
+     "name": "High-Velocity Rounds",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only; its 4.8k tier completes at Spiritual Overflow, 42400.0 souls (~42.4 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Opening Rounds",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only; its 4.8k tier completes at Spiritual Overflow, 41600.0 souls (~41.6 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Enchanter's Emblem, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Regeneration",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Mystic Burst completes 4,000 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Mystic Burst completes 4.8k spirit in 4000 souls (~4.0 min), 3 purchases",
+     "claim_ids": [
+      "celeste:3:spike_progress:4315"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:3:spike_progress:4315",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Expansion",
+     "imbue": "1",
+     "caption": "Imbued on Light Eater: widens its range.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Mystic Burst completes 4.8k spirit in 3200 souls (~3.2 min), 2 purchases",
+     "claim_ids": [
+      "celeste:4:imbue_reach:4318"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:4:imbue_reach:4318",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Radiant Regeneration",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Mystic Burst completes 800 souls on. Upgrade of Mystic Regeneration (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "b",
+     "why": "imminent: Mystic Burst completes 4.8k spirit in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "celeste:5:spike_progress:4320",
+      "celeste:5:upgrade_of:4321"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:5:spike_progress:4320",
+       true,
+       "4000"
+      ],
+      [
+       "celeste:5:upgrade_of:4321",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (4,000 to 4,800 invested): bonus 19 to 38 spirit power. Radiant Daggers (162) clears its 80-damage trigger; Light Eater stays under it.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:6:spike_complete:4322",
+      "celeste:6:threshold_now:4323"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:6:spike_complete:4322",
+       true,
+       "inventory spirit: before 4000, after 4800, threshold 4800"
+      ],
+      [
+       "celeste:6:threshold_now:4323",
+       true,
+       "instances above: [(3, 161.666)]"
+      ]
+     ]
+    },
+    {
+     "name": "Healing Booster",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Enchanter's Emblem, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 8,000-21,600 (levels 14-26). Abilities gained (both point models agree): Light Eater T3, Radiant Daggers T3. 4.8k spikes: vitality 4.8k at Enchanter's Emblem.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "celeste:15:phase_range:4354",
+    "celeste:15:phase_abilities:4355",
+    "celeste:15:phase_spikes:4362"
+   ],
+   "items": [
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Enchanter's Emblem completes 2,400 souls on.",
+     "cls": "b",
+     "why": "imminent: Enchanter's Emblem completes 4.8k vitality in 2400 souls (~2.4 min), 2 purchases",
+     "claim_ids": [
+      "celeste:8:spike_progress:4339"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:8:spike_progress:4339",
+       true,
+       "2400"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Shielding",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Enchanter's Emblem completes 1,600 souls on. Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "imminent: Enchanter's Emblem completes 4.8k vitality in 1600 souls (~1.6 min), 1 purchases",
+     "claim_ids": [
+      "celeste:9:spike_progress:4341",
+      "celeste:9:upgrade_of:4342"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:9:spike_progress:4341",
+       true,
+       "3200"
+      ],
+      [
+       "celeste:9:upgrade_of:4342",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Enchanter's Emblem",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (3,200 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:10:spike_complete:4344"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:10:spike_complete:4344",
+       true,
+       "inventory vitality: before 3200, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Torment Pulse",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Greater Expansion",
+     "imbue": null,
+     "caption": "+30% range and radius on everything that scales with them: Shining Wonder bounce radius (15.5m), Dazzling Trick explode radius (14m), Radiant Daggers explosion radius (8m). Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:12:global_reach:4347",
+      "celeste:12:upgrade_of:4348"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:12:global_reach:4347",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "celeste:12:upgrade_of:4348",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Suppressor",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 10,400 to 12,000 invested: bonus 52 to 59 spirit power. | +6 spirit adds about 3.8 to Radiant Daggers's impact damage (0.63x scaling).",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Vulnerability",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 21,600-43,200 (levels 26-34). Abilities gained (both point models agree): Shining Wonder T3. 4.8k spikes: weapon 4.8k at Spiritual Overflow.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "celeste:20:phase_range:4373",
+    "celeste:20:phase_abilities:4374",
+    "celeste:20:phase_spikes:4379"
+   ],
+   "items": [
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 13,600 to 16,000 invested: bonus 59 to 66 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: With 4 abilities trained their base cooldowns total 219s; 20% off is 43.8s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Opening Rounds for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 19,200 to 24,000 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spiritual Overflow",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (0 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 0 to 54% weapon damage. Upgrade of Spirit Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:20:spike_complete:4371",
+      "celeste:20:upgrade_of:4372"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:20:spike_complete:4371",
+       true,
+       "inventory weapon: before 0, after 6400, threshold 4800"
+      ],
+      [
+       "celeste:20:upgrade_of:4372",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Tankbuster? Buy what is killing you, cheapest first. Not dying? Skip. Sell Suppressor.",
+   "desc": "Dying after Tankbuster? Buy what is killing you, cheapest first. Not dying? Skip. Sell Suppressor.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Ethereal Shift",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They keep jumping you and you can't get out.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:21:defence_bullet:4380"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry is melting you.",
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:21:defence_bullet:4380",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:21:defence_gun:4381"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:21:defence_gun:4381",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:21:defence_purge:4382"
+     ],
+     "lint": [],
+     "legacy_note": "Hexes and slows stop you getting away.",
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:21:defence_purge:4382",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Stuns keep catching you before you cast.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:21:defence_parry:4383"
+     ],
+     "lint": [],
+     "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow.",
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:21:defence_parry:4383",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 24,000 to 30,400 invested: bonus 75 to 100 spirit power. | +30 spirit adds about 31.5 to Shining Wonder's damage (1.05x scaling).",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Enchanter's Emblem for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:21:defence_barrier:4387"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:21:defence_barrier:4387",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 189s of base cooldown across your kit, 130s of it the ultimate; the item has its own cooldown of 300s. Takes spirit from 24,000 to 30,400 invested: bonus 75 to 100 spirit power. Replaces Spirit Shielding: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:21:refresher:4388",
+      "celeste:21:invest_step:4389",
+      "celeste:21:sell_swap:4390"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Spirit Shielding for this.",
+     "temporary": true,
+     "verify": [
+      [
+       "celeste:21:refresher:4388",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "celeste:21:invest_step:4389",
+       true,
+       "inventory spirit: before 24000, after 30400, threshold 28800"
+      ],
+      [
+       "celeste:21:sell_swap:4390",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Healing Tempo",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:21:upgrade_delta:4391"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Healing Booster.",
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:21:upgrade_delta:4391",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "celeste:21:upgrade_delta:4393"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "celeste:21:upgrade_delta:4393",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "celeste:0:spike_progress:4308": {
+   "id": "celeste:0:spike_progress:4308",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "celeste:0:component_for:4309": {
+   "id": "celeste:0:component_for:4309",
+   "kind": "component_for",
+   "phrase": "From Opening Rounds: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Opening Rounds"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Opening Rounds"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:1:spike_progress:4310": {
+   "id": "celeste:1:spike_progress:4310",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Opening Rounds",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "celeste:1:upgrade_of:4311": {
+   "id": "celeste:1:upgrade_of:4311",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of High-Velocity Rounds (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 1,
+    "item": "Opening Rounds",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "High-Velocity Rounds"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:1:temporary_sold:4312": {
+   "id": "celeste:1:temporary_sold:4312",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Witchmail later.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 34,
+   "point": {
+    "idx": 1,
+    "item": "Opening Rounds",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Opening Rounds",
+    "buyer": "Witchmail"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:2:spike_progress:4313": {
+   "id": "celeste:2:spike_progress:4313",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Extra Regen",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "celeste:2:component_for:4314": {
+   "id": "celeste:2:component_for:4314",
+   "kind": "component_for",
+   "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Extra Regen",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Healing Booster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Healing Booster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:3:spike_progress:4315": {
+   "id": "celeste:3:spike_progress:4315",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Mystic Burst completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Regeneration",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Mystic Burst completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "celeste:3:component_for:4316": {
+   "id": "celeste:3:component_for:4316",
+   "kind": "component_for",
+   "phrase": "From Radiant Regeneration: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Regeneration",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 3200,
+    "event": "Radiant Regeneration"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Radiant Regeneration"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:4:spike_progress:4317": {
+   "id": "celeste:4:spike_progress:4317",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Mystic Burst completes 3,200 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Mystic Expansion",
+    "souls": 4000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 3200,
+    "event": "Mystic Burst completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    3200,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "celeste:4:imbue_reach:4318": {
+   "id": "celeste:4:imbue_reach:4318",
+   "kind": "imbue_reach",
+   "phrase": "Imbued on Light Eater: widens its range.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_reach",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_radiantblast"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 4,
+    "item": "Mystic Expansion",
+    "souls": 4000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 1,
+    "stats": [
+     "ETechRange",
+     "ETechRadius"
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "celeste:4:component_for:4319": {
+   "id": "celeste:4:component_for:4319",
+   "kind": "component_for",
+   "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Mystic Expansion",
+    "souls": 4000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12800,
+    "event": "Greater Expansion"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Greater Expansion"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:5:spike_progress:4320": {
+   "id": "celeste:5:spike_progress:4320",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Mystic Burst completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Radiant Regeneration",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Mystic Burst completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "celeste:5:upgrade_of:4321": {
+   "id": "celeste:5:upgrade_of:4321",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Regeneration (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 5,
+    "item": "Radiant Regeneration",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Regeneration"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:6:spike_complete:4322": {
+   "id": "celeste:6:spike_complete:4322",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (4,000 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 6,
+    "item": "Mystic Burst",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "celeste:6:threshold_now:4323": {
+   "id": "celeste:6:threshold_now:4323",
+   "kind": "threshold_now",
+   "phrase": "Radiant Daggers (162) clears its 80-damage trigger; Light Eater stays under it.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_radiantblast",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_prismaticguard",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_luminousstrike"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 6,
+    "item": "Mystic Burst",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "80.0",
+    "162"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 2.02,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "celeste:6:component_for:4324": {
+   "id": "celeste:6:component_for:4324",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Mystic Burst",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 16800,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:7:spike_progress:4325": {
+   "id": "celeste:7:spike_progress:4325",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "celeste:7:upgrade_of:4326": {
+   "id": "celeste:7:upgrade_of:4326",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Regen (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Regen"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:7:phase_range:4327": {
+   "id": "celeste:7:phase_range:4327",
+   "kind": "phase_range",
+   "phrase": "Souls 0-8,000 (levels 1-14).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Healing Booster",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "8,000",
+    "1",
+    "14"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:7:phase_abilities:4328": {
+   "id": "celeste:7:phase_abilities:4328",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Shining Wonder unlocked.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Healing Booster",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:7:phase_spikes:4337": {
+   "id": "celeste:7:phase_spikes:4337",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Mystic Burst.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Healing Booster",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:7:phase_ult:4338": {
+   "id": "celeste:7:phase_ult:4338",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Shining Wonder) is available from Radiant Regeneration.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Healing Booster",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Healing Booster",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:8:spike_progress:4339": {
+   "id": "celeste:8:spike_progress:4339",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Enchanter's Emblem completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 8,
+    "item": "Grit",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Enchanter's Emblem completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "celeste:8:component_for:4340": {
+   "id": "celeste:8:component_for:4340",
+   "kind": "component_for",
+   "phrase": "From Spirit Shielding: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 8,
+    "item": "Grit",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Spirit Shielding"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Shielding"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:9:spike_progress:4341": {
+   "id": "celeste:9:spike_progress:4341",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Enchanter's Emblem completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 9,
+    "item": "Spirit Shielding",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Enchanter's Emblem completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "celeste:9:upgrade_of:4342": {
+   "id": "celeste:9:upgrade_of:4342",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 9,
+    "item": "Spirit Shielding",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Grit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:9:swap_candidate:4343": {
+   "id": "celeste:9:swap_candidate:4343",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Refresher later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 9,
+    "item": "Spirit Shielding",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Shielding",
+    "buyer": "Refresher"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:10:spike_complete:4344": {
+   "id": "celeste:10:spike_complete:4344",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (3,200 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 10,
+    "item": "Enchanter's Emblem",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "celeste:10:swap_candidate:4345": {
+   "id": "celeste:10:swap_candidate:4345",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Boundless Spirit later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 10,
+    "item": "Enchanter's Emblem",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Enchanter's Emblem",
+    "buyer": "Boundless Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:11:invest_step:4346": {
+   "id": "celeste:11:invest_step:4346",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Torment Pulse",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "8000",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "celeste:12:global_reach:4347": {
+   "id": "celeste:12:global_reach:4347",
+   "kind": "global_reach",
+   "phrase": "+30% range and radius on everything that scales with them: Shining Wonder bounce radius (15.5m), Dazzling Trick explode radius (14m), Radiant Daggers explosion radius (8m).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_range",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_prismaticguard",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_luminousstrike",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_dazzlingorb"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 12,
+    "item": "Greater Expansion",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "global_reach"
+   },
+   "numbers": [
+    "30",
+    "15.5",
+    "14",
+    "8"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "celeste:12:upgrade_of:4348": {
+   "id": "celeste:12:upgrade_of:4348",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 12,
+    "item": "Greater Expansion",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Expansion"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:13:invest_step:4349": {
+   "id": "celeste:13:invest_step:4349",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Lifesteal",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "celeste:13:component_for:4350": {
+   "id": "celeste:13:component_for:4350",
+   "kind": "component_for",
+   "phrase": "From Spiritual Overflow: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Lifesteal",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 24800.0,
+    "event": "Spiritual Overflow"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spiritual Overflow"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:14:invest_step:4351": {
+   "id": "celeste:14:invest_step:4351",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 10,400 to 12,000 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Suppressor",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "10400",
+    "12000",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "celeste:14:spirit_scaling:4352": {
+   "id": "celeste:14:spirit_scaling:4352",
+   "kind": "spirit_scaling",
+   "phrase": "+6 spirit adds about 3.8 to Radiant Daggers's impact damage (0.63x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_suppressor",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_luminousstrike"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 14,
+    "item": "Suppressor",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 3,
+    "prop": "ImpactDamage"
+   },
+   "numbers": [
+    "6.0",
+    "3.8",
+    "0.63"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "celeste:15:component_for:4353": {
+   "id": "celeste:15:component_for:4353",
+   "kind": "component_for",
+   "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mystic Vulnerability",
+    "souls": 21600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 16800.0,
+    "event": "Escalating Exposure"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:15:phase_range:4354": {
+   "id": "celeste:15:phase_range:4354",
+   "kind": "phase_range",
+   "phrase": "Souls 8,000-21,600 (levels 14-26).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mystic Vulnerability",
+    "souls": 21600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mystic Vulnerability",
+    "keys": []
+   },
+   "numbers": [
+    "8,000",
+    "21,600",
+    "14",
+    "26"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:15:phase_abilities:4355": {
+   "id": "celeste:15:phase_abilities:4355",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Light Eater T3, Radiant Daggers T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mystic Vulnerability",
+    "souls": 21600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mystic Vulnerability",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:15:phase_spikes:4362": {
+   "id": "celeste:15:phase_spikes:4362",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Enchanter's Emblem.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mystic Vulnerability",
+    "souls": 21600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mystic Vulnerability",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:16:invest_step:4363": {
+   "id": "celeste:16:invest_step:4363",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 13,600 to 16,000 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "13600",
+    "16000",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "celeste:16:threshold_marginal:4364": {
+   "id": "celeste:16:threshold_marginal:4364",
+   "kind": "threshold_marginal",
+   "phrase": "Radiant Daggers (197) is within 50% of the 165-damage trigger; resist handling unverified.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_radiantblast",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_prismaticguard",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_luminousstrike"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "celeste:16:upgrade_of:4365": {
+   "id": "celeste:16:upgrade_of:4365",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:17:cdr_rotation:4366": {
+   "id": "celeste:17:cdr_rotation:4366",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 219s; 20% off is 43.8s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_radiantblast",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_prismaticguard",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_luminousstrike",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_dazzlingorb"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 17,
+    "item": "Superior Cooldown",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "219",
+    "20.0",
+    "43.8"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "celeste:18:invest_step:4367": {
+   "id": "celeste:18:invest_step:4367",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Witchmail",
+    "souls": 33600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "12800",
+    "42.0",
+    "50.0",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "celeste:18:sell_swap:4368": {
+   "id": "celeste:18:sell_swap:4368",
+   "kind": "sell_swap",
+   "phrase": "Replaces Opening Rounds: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Witchmail",
+    "souls": 33600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Opening Rounds",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Opening Rounds"
+  },
+  "celeste:19:invest_step:4369": {
+   "id": "celeste:19:invest_step:4369",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 19,200 to 24,000 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Escalating Exposure",
+    "souls": 38400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "19200",
+    "24000",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "celeste:19:upgrade_of:4370": {
+   "id": "celeste:19:upgrade_of:4370",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Vulnerability (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Escalating Exposure",
+    "souls": 38400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Vulnerability"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:20:spike_complete:4371": {
+   "id": "celeste:20:spike_complete:4371",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (0 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 0 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 20,
+    "item": "Spiritual Overflow",
+    "souls": 43200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "0",
+    "6400",
+    "0.0",
+    "54.0",
+    "4.8k",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "celeste:20:upgrade_of:4372": {
+   "id": "celeste:20:upgrade_of:4372",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Spiritual Overflow",
+    "souls": 43200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:20:phase_range:4373": {
+   "id": "celeste:20:phase_range:4373",
+   "kind": "phase_range",
+   "phrase": "Souls 21,600-43,200 (levels 26-34).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Spiritual Overflow",
+    "souls": 43200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spiritual Overflow",
+    "keys": []
+   },
+   "numbers": [
+    "21,600",
+    "43,200",
+    "26",
+    "34"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:20:phase_abilities:4374": {
+   "id": "celeste:20:phase_abilities:4374",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Shining Wonder T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Spiritual Overflow",
+    "souls": 43200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spiritual Overflow",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:20:phase_spikes:4379": {
+   "id": "celeste:20:phase_spikes:4379",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Spiritual Overflow.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Spiritual Overflow",
+    "souls": 43200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spiritual Overflow",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:21:defence_bullet:4380": {
+   "id": "celeste:21:defence_bullet:4380",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Metal Skin",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry is melting you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:21:defence_gun:4381": {
+   "id": "celeste:21:defence_gun:4381",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Plated Armor",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:21:defence_purge:4382": {
+   "id": "celeste:21:defence_purge:4382",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Dispel Magic",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Hexes and slows stop you getting away."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:21:defence_parry:4383": {
+   "id": "celeste:21:defence_parry:4383",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Counterspell",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:21:invest_step:4384": {
+   "id": "celeste:21:invest_step:4384",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 24,000 to 30,400 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 21,
+    "item": "Boundless Spirit",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "24000",
+    "30400",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "celeste:21:spirit_scaling:4385": {
+   "id": "celeste:21:spirit_scaling:4385",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 31.5 to Shining Wonder's damage (1.05x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_dazzlingorb"
+   ],
+   "score": 38,
+   "point": {
+    "idx": 21,
+    "item": "Boundless Spirit",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "30.0",
+    "31.5",
+    "1.05"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "celeste:21:sell_swap:4386": {
+   "id": "celeste:21:sell_swap:4386",
+   "kind": "sell_swap",
+   "phrase": "Replaces Enchanter's Emblem: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Boundless Spirit",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Enchanter's Emblem",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Enchanter's Emblem"
+  },
+  "celeste:21:defence_barrier:4387": {
+   "id": "celeste:21:defence_barrier:4387",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Divine Barrier",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:21:refresher:4388": {
+   "id": "celeste:21:refresher:4388",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 189s of base cooldown across your kit, 130s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_radiantblast",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_prismaticguard",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_luminousstrike",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_unicorn_dazzlingorb"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 21,
+    "item": "Refresher",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Shielding for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "189",
+    "130",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "celeste:21:invest_step:4389": {
+   "id": "celeste:21:invest_step:4389",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 24,000 to 30,400 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_unicorn m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 21,
+    "item": "Refresher",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Shielding for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "24000",
+    "30400",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "celeste:21:sell_swap:4390": {
+   "id": "celeste:21:sell_swap:4390",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Shielding: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Refresher",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Shielding for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Shielding",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Shielding"
+  },
+  "celeste:21:upgrade_delta:4391": {
+   "id": "celeste:21:upgrade_delta:4391",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healbuff",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healing_booster"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Healing Tempo",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Healing Booster"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "35",
+    "0",
+    "10"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:21:upgrade_of:4392": {
+   "id": "celeste:21:upgrade_of:4392",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Healing Booster (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 21,
+    "item": "Healing Tempo",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Healing Booster"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "celeste:21:upgrade_delta:4393": {
+   "id": "celeste:21:upgrade_delta:4393",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Transcendent Cooldown",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "celeste:21:upgrade_of:4394": {
+   "id": "celeste:21:upgrade_of:4394",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 21,
+    "item": "Transcendent Cooldown",
+    "souls": 43200.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "celeste",
+   "item": "High-Velocity Rounds",
+   "section": "early",
+   "cls": "c",
+   "why": "weapon investment only; its 4.8k tier completes at Spiritual Overflow, 42400.0 souls (~42.4 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "celeste:0:component_for:4309",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Opening Rounds: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Opening Rounds"
+     }
+    }
+   ]
+  },
+  {
+   "build": "celeste",
+   "item": "Opening Rounds",
+   "section": "early",
+   "cls": "c",
+   "why": "weapon investment only; its 4.8k tier completes at Spiritual Overflow, 41600.0 souls (~41.6 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 1600,
+   "unpublished": []
+  },
+  {
+   "build": "celeste",
+   "item": "Extra Regen",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Enchanter's Emblem, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "celeste:2:component_for:4314",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Healing Booster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "celeste",
+   "item": "Mystic Regeneration",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Mystic Burst completes 4.8k spirit in 4000 souls (~4.0 min), 3 purchases",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "celeste:3:spike_progress:4315",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Mystic Burst completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Mystic Burst completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "celeste:3:component_for:4316",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Radiant Regeneration: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 3200,
+      "event": "Radiant Regeneration"
+     }
+    }
+   ]
+  },
+  {
+   "build": "celeste",
+   "item": "Mystic Expansion",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Mystic Burst completes 4.8k spirit in 3200 souls (~3.2 min), 2 purchases",
+   "souls": 4000,
+   "unpublished": [
+    {
+     "id": "celeste:4:spike_progress:4317",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Mystic Burst completes 3,200 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 3200,
+      "event": "Mystic Burst completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "celeste:4:component_for:4319",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 12800,
+      "event": "Greater Expansion"
+     }
+    }
+   ]
+  },
+  {
+   "build": "celeste",
+   "item": "Radiant Regeneration",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Mystic Burst completes 4.8k spirit in 800 souls (~0.8 min), 1 purchases",
+   "souls": 6400,
+   "unpublished": [
+    {
+     "id": "celeste:5:spike_progress:4320",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Mystic Burst completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Mystic Burst completes the 4.8k spirit tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "celeste",
+   "item": "Healing Booster",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Enchanter's Emblem, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 8000,
+   "unpublished": []
+  },
+  {
+   "build": "celeste",
+   "item": "Grit",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Enchanter's Emblem completes 4.8k vitality in 2400 souls (~2.4 min), 2 purchases",
+   "souls": 8800,
+   "unpublished": [
+    {
+     "id": "celeste:8:spike_progress:4339",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Enchanter's Emblem completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Enchanter's Emblem completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "celeste:8:component_for:4340",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spirit Shielding: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Spirit Shielding"
+     }
+    }
+   ]
+  },
+  {
+   "build": "celeste",
+   "item": "Spirit Shielding",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Enchanter's Emblem completes 4.8k vitality in 1600 souls (~1.6 min), 1 purchases",
+   "souls": 9600,
+   "unpublished": [
+    {
+     "id": "celeste:9:spike_progress:4341",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Enchanter's Emblem completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Enchanter's Emblem completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "celeste",
+   "item": "Mystic Vulnerability",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+   "souls": 21600,
+   "unpublished": [
+    {
+     "id": "celeste:15:component_for:4353",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 16800.0,
+      "event": "Escalating Exposure"
+     }
+    }
+   ]
+  },
+  {
+   "build": "celeste",
+   "item": "Ethereal Shift",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 43200.0,
+   "unpublished": []
+  },
+  {
+   "build": "celeste",
+   "item": "Ethereal Shift",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They keep jumping you and you can't get out."
+  },
+  {
+   "build": "celeste",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry is melting you."
+  },
+  {
+   "build": "celeste",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "celeste",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Hexes and slows stop you getting away."
+  },
+  {
+   "build": "celeste",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 43200.0,
+   "unpublished": []
+  },
+  {
+   "build": "celeste",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep catching you before you cast."
+  },
+  {
+   "build": "celeste",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+  }
+ ],
+ "stats": {
+  "c": 4,
+  "b": 5,
+  "a": 12,
+  "g": 8,
+  "d": 3
+ }
+}

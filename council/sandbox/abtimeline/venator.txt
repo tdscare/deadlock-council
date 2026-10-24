@@ -1,0 +1,108 @@
+# venator | Venator | Rizuhble's Exorcism By Fist
+abilities: 1=Consecrating Grenade (ability_priest_flashbang, start_trained=false, Signature) / 2=Gutshot (ability_priest_knockback, start_trained=false, Signature) / 3=Hex-Lined Snap Trap (ability_priest_beartrap, start_trained=false, Signature) / 4=Ira Domini (ability_priest_weaponswap, start_trained=false, Ultimate)
+order: 2231243234414311
+model A (data):  Gutshot:U@0  Gutshot:T1@200  Hex-Lined :U@500  Consecrati:U@1400  Gutshot:T2@2000  Hex-Lined :T1@2600  Ira Domini:U@3200  Gutshot:T3@6800  Hex-Lined :T2@8400  Ira Domini:T1@9200  Ira Domini:T2@11000  Consecrati:T1@11900  Ira Domini:T3@17400  Hex-Lined :T3@26900  Consecrati:T2@32100  Consecrati:T3@48600
+model B (old):   Gutshot:T1@200  Gutshot:T2@900  Hex-Lined :T1@2000  Consecrati:T1@2600  Gutshot:T3@3900  Ira Domini:U@4600  Hex-Lined :T2@5300  Hex-Lined :T3@6800  Ira Domini:T1@7600  Ira Domini:T2@8400  Consecrati:T2@9200  Ira Domini:T3@10100  Consecrati:T3@11900
+tier upgrades: Consecrating: AbilityCooldown-5 / Radius+1.5,BurnRadius+1.5,BurnDuration+1 / HealAmpReceivePenaltyPercent-20,HealAmpRegenPenaltyPercent-20,AbilityCharges+1,AbilityCooldownBetweenCharge+3 | Gutshot: Damage+25 / AbilityCooldown-10,StunDuration+0.4 / BuffDuration+5 | Hex-Lined Sn: AbilityCooldown-11 / ImmobilizeDuration+1 / IncomingDamagePercentFromCaster+30,AbilityCharges+1 | Ira Domini: BonusMoveSpeed+1.2 / BonusDamage+65,AbilityCooldown-15 / AllStakesBlessed+1
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  Melee Lifesteal
+        Consecrati L[U] | Gutshot T1 ch1 cd23 | Hex-Lined  U ch2 cd28/8 Damage=85 | Ira Domini L
+  1600 L5   2     4  Monster Rounds
+        Consecrati U ch1 cd25 | Gutshot T1[T2] ch1 cd23 | Hex-Lined  U ch2 cd28/8 Damage=90 | Ira Domini L
+  3200 L8   4     8  Melee Charge
+        Consecrati U[T1] ch1 cd25 | Gutshot T2 ch1 cd13 | Hex-Lined  T1 ch2 cd17/8 Damage=97 | Ira Domini U[L] ch1 cd160 d15
+  4800 L10  6    10  Battle Vest
+        Consecrati U[T1] ch1 cd25 | Gutshot T2[T3] ch1 cd13 | Hex-Lined  T1 ch2 cd17/8 Damage=102 | Ira Domini U ch1 cd160 d15
+  7200 L13  9    13  Cultist Sacrifice
+        Consecrati U[T1] ch1 cd25 | Gutshot T3 ch1 cd13 | Hex-Lined  T1[T3] ch2 cd17/8 Damage=109 | Ira Domini U ch1 cd160 d15
+  9600 L16 12    16  Lifestrike
+        Consecrati U[T2] ch1 cd25 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=116 | Ira Domini T1[T2] ch1 cd160 d15
+ 10400 L17 13    18  Close Quarters
+        Consecrati U[T2] ch1 cd25 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=119 | Ira Domini T1[T3] ch1 cd160 d15
+ 12800 L20 16    21  Point Blank
+        Consecrati T1[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=126 | Ira Domini T2[T3] ch1 cd145 d15
+ 13600 L20 16    21  Sprint Boots
+        Consecrati T1[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=126 | Ira Domini T2[T3] ch1 cd145 d15
+ 14400 L21 17    22  Enduring Speed
+        Consecrati T1[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=128 | Ira Domini T2[T3] ch1 cd145 d15
+ 16000 L22 18    34  Compress Cooldown [imbue Gutshot]
+        Consecrati T1[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=155 | Ira Domini T2[T3] ch1 cd145 d15
+ 19200 L25 21    37  Hunter's Aura
+        Consecrati T1[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=162 | Ira Domini T3 ch1 cd145 d15
+ 20000 L25 21    41  Mystic Expansion [imbue Gutshot]
+        Consecrati T1[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=171 | Ira Domini T3 ch1 cd145 d15
+ 23200 L27 23    44  Warp Stone
+        Consecrati T1[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=176 | Ira Domini T3 ch1 cd145 d15
+ 24800 L28 24    49  Superior Cooldown
+        Consecrati T1[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T2[T3] ch2 cd17/8 Damage=187 | Ira Domini T3 ch1 cd145 d15
+ 27200 L29 25    76  Greater Expansion
+        Consecrati T1[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T3 ch3 cd17/8 Damage=247 | Ira Domini T3 ch1 cd145 d15
+ 32000 L30 26    77  Crushing Fists
+        Consecrati T1[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T3 ch3 cd17/8 Damage=249 | Ira Domini T3 ch1 cd145 d15
+ 35200 L32 28    79  Spirit Resilience
+        Consecrati T2[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T3 ch3 cd17/8 Damage=254 | Ira Domini T3 ch1 cd145 d15
+ 41600 L34 30    95  Echo Shard [imbue Gutshot]
+        Consecrati T2[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T3 ch3 cd17/8 Damage=290 | Ira Domini T3 ch1 cd145 d15
+ 46400 L35 31    96  Juggernaut
+        Consecrati T2[T3] ch1 cd20 | Gutshot T3 ch1 cd13 | Hex-Lined  T3 ch3 cd17/8 Damage=292 | Ira Domini T3 ch1 cd145 d15
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @800 Melee Lifesteal [melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs melee hits
+    game text: Your next Melee attack heals you. This heal is {s:NonHeroHealPct}% effective vs non-heroes. Cooldown is {s:LightMeleeCooldownMult}x as long for Light ... | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @1600 Monster Rounds [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: (no game text)
+    at buy: not computed (needs play data)
+- @3200 Melee Charge [melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs melee hits
+    game text: Your next Heavy Melee attack against an enemy deals increased damage. | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @4800 Battle Vest [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: While you are above {s:LifeThreshold}% health, gain {g:citadel_inline_attribute:'WeaponDamage'} and {g:citadel_inline_attribute:'BonusFireRate'}.
+    at buy: not computed (needs play data)
+- @7200 Cultist Sacrifice [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Target an enemy NPC and consume it for {s:BonusSoulsPct}% Bonus Souls and grants a powerful long lasting buff.
+    at buy: not computed (needs play data)
+- @9600 Lifestrike [melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs melee hits
+    game text: Your Melee Attack applies Movement Slow and heals you for a percentage of the Melee Damage dealt plus a fixed amount. This heal is {s:NonHeroHealPct}%... | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @10400 Close Quarters [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (CloseRangeBonusDamageRange=15m)
+    game text: Deal additional Weapon Damage when in close range to your target.
+    at buy: not computed (needs play data)
+- @12800 Point Blank [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (CloseRangeBonusDamageRange=15m)
+    game text: When in close range to your target, gain Weapon Damage and your bullets apply a Movement Slow.
+    at buy: not computed (needs play data)
+- @16000 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Gutshot; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Gutshot T3: cd 13s, duration 0s, charges 1; saves 2.3s/cast (4.62->5.63 casts/min)
+- @20000 Mystic Expansion [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Gutshot; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its range and effect radius.
+    at buy: Gutshot T3: cd 13s, duration 0s, charges 1
+- @24800 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 195s; 20% saves 39.0s per rotation
+- @32000 Crushing Fists [stack+melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (MaxStacks=6)
+    game text: Your {g:citadel_inline_attribute:'MeleeDamage'} will restore ammo and apply a stacking bullet resist debuff on enemies. Heavy melee applies 2 stacks. ... | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @35200 Spirit Resilience [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (HealthThreshold=50, TechResistBelowThreshold=15)
+    game text: When below {s:HealthThreshold}% health, gain additional Spirit Resist.
+    at buy: not computed (needs play data)
+- @41600 Echo Shard [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Gutshot; needs it trained and non-ultimate and the stat the item raises
+    game text: (no game text)
+    at buy: Gutshot T3: cd 13s, duration 0s, charges 1
+
+no trigger condition (plain stats/actives): Sprint Boots, Enduring Speed, Hunter's Aura, Warp Stone, Greater Expansion, Juggernaut

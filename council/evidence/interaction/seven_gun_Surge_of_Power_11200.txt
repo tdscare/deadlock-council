@@ -1,0 +1,46 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: seven_gun
+HERO: Seven
+ITEM: Surge of Power
+CHECKPOINT: buy-point at 11200 souls (state souls 11200; item cost 2400)
+VERSION: interaction-v1
+ARGS: --interactions seven_gun Surge of Power
+GENERATED: 2026-10-24T16:27:40Z
+BODY-SHA: fa241df657d20ac95e3289d46ed58d9c490b998ec64f9cc6b4980f9a4538e524
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 2400, unconditional, ranked): 
+VERDICT: Surge of Power delivers the most damage of the equal-soul options in every window (sustained, burst, ult)
+UNKNOWN_CELLS: 1
+SELECTION: build-decision | Surge of Power is bought at 11200 souls in seven_gun: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (2400) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.6, long_share=0.3, W_sus=10.0, W_burst=3.0; reload 2.35 s (VERIFIED GAME MECHANIC m_reloadDuration (weapon vdata; Wraith value equals its sandbox measurement))
+STATE: owned ['Opening Rounds', 'Swift Striker', 'Cultist Sacrifice', 'Duration Extender', 'Surge of Power'] | tiers Lightning Ball=T2(spirit) Static Charge=T1(spirit) Power Surge=T3(spirit) Storm Cloud=T1(spirit) | weapon invest bonus 54% | spirit 64
+
+## INTERACTION MATRIX (item effect x kit component)
+- fire rate (more bullets) (FireRateBonus=20)
+    normal shooting                              WORKS                      [CALCULATED] more bullets per second (fire-rate pool now 20%: +20 adds 16.7% bullets)
+    1=Lightning Ball T2 [spirit]                 DOES NOT WORK              [CALCULATED] damage ['DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Static Charge T1 [spirit]                  DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    3=Power Surge T3 [spirit]                    UNKNOWN                    [UNKNOWN] spirit damage triggered by shooting (game text: 'Power up your weapon with a shock effect, making your bullets proc sho...'): whether more bullets trigger it more often is not in data (trigger rate/limit)
+    4=Storm Cloud T1 (ULT) [spirit]              DOES NOT WORK              [CALCULATED] damage ['DPS', 'LightningStrikeDamage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    other fire-rate items                        WORKS (diminishing)        [CALCULATED] additive pool 20%: relative gain 16.7%
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |       655              |       364              |       978              | 0
+Surge of Power               |          678 (+3..+3%) |          387 (+6..+6%) |         1039 (+6..+6%) | 0
+  candidate detail (reading 1): sustained bullets 35, gun 487, stacks 0, procs 0, spirit 191 | ult: Storm Cloud damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Surge of Power
+  burst: rank (reading 1) Surge of Power
+  ult: rank (reading 1) Surge of Power
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (205s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_seven_gun_Surge_of_Power_3_Power_Surge_T3_fire_rate.txt
+
+## NOT DETERMINED FROM DATA
+  - fire rate (more bullets) (FireRateBonus=20): 3=Power Surge T3 [spirit]: spirit damage triggered by shooting (game text: 'Power up your weapon with a shock effect, making your bullets proc sho...'): whether more bullets trigger it more often is not in data (trigger rate/limit)
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

@@ -1,0 +1,73 @@
+meta hero Haze
+meta kind ISOLATED ITEM
+meta checkpoint Level 18 stat floor, 0 souls spent, items given per block
+meta build none (mechanic discovery)
+meta items none
+meta question Do Haze's built-up Fixation stacks survive without a reset, and does the reset really clear them?
+meta purpose prove with log evidence that the next measurement starts from a clean state; not a build verdict
+meta mechanics stacking_damage stacks read from the first damage row of each block
+meta excluded all items; harness state-contamination check
+meta assumed none
+meta levels_mode isolated
+meta expectedstate items=none at start of every block
+meta accmode body-only
+meta accwhy hit counts are verified per block
+meta abilities gun only
+meta runs 1/1
+meta cond_start_stacks fresh pawn every block
+meta player_title Tester check: leftover stacks
+meta player_what Stacks with and without reset
+meta player_why Checking the tester, not a build
+meta player_short Harness: stack reset proof
+meta player_expect Stacks 1 after reset
+setup Haze Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 1 350 0
+wait 0.5
+healreset
+hzarm
+mark ST|build_stacks|body
+fire 8
+mark none
+hzarm
+mark ST|control_no_reset|body
+fire 0.8
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 1 350 0
+wait 0.5
+healreset
+statecheck items=none mods=none cdready=1 charges=1
+mark ST|after_reset|body
+fire 0.8
+mark none
+wait 0.5
+end

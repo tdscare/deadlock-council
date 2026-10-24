@@ -1,0 +1,266 @@
+{
+ "id": "infernus_dash",
+ "hero": "Infernus",
+ "order": "3322124214441133",
+ "status": "WARN",
+ "errors": [],
+ "warnings": [
+  {
+   "item": "Extra Charge",
+   "souls": 4000,
+   "kind": "charged",
+   "flag": "DEAD-AT-BUY",
+   "gap": 2800,
+   "verdict": "delay / reorder points",
+   "grade": "CALCULATED",
+   "model_B": null,
+   "if_1charge_counts": null,
+   "rule": "needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)",
+   "value": "no ability with charges now: Napalm 1, Flame Dash 0, Afterburn 0, Concussive Combustion 0",
+   "enabler": "Flame Dash T3 @6800 (+2800)",
+   "code": "CHARGE-BEFORE-CHARGES",
+   "depends": "F7"
+  },
+  {
+   "code": "SPIKE-OVERSHOOT",
+   "colour": "gun",
+   "souls": 24000,
+   "item": "Spiritual Overflow",
+   "value": "gun lands at 8000 (4.8k + 3200)"
+  }
+ ],
+ "spikes": {
+  "gun": {
+   "4800": 24000,
+   "6400": 24000,
+   "overshoot4800": 3200,
+   "at_item": "Spiritual Overflow"
+  },
+  "vitality": {
+   "4800": 11200,
+   "6400": 16000,
+   "overshoot4800": 0,
+   "at_item": "Enduring Speed"
+  },
+  "spirit": {
+   "4800": 8800,
+   "6400": 12800,
+   "overshoot4800": 0,
+   "at_item": "Rapid Recharge"
+  }
+ },
+ "timeline_A": [
+  {
+   "souls": 0,
+   "level": 1,
+   "ability": "Afterburn",
+   "tier": "U"
+  },
+  {
+   "souls": 200,
+   "level": 2,
+   "ability": "Afterburn",
+   "tier": "T1"
+  },
+  {
+   "souls": 500,
+   "level": 3,
+   "ability": "Flame Dash",
+   "tier": "U"
+  },
+  {
+   "souls": 900,
+   "level": 4,
+   "ability": "Flame Dash",
+   "tier": "T1"
+  },
+  {
+   "souls": 1400,
+   "level": 5,
+   "ability": "Napalm",
+   "tier": "U"
+  },
+  {
+   "souls": 2600,
+   "level": 7,
+   "ability": "Flame Dash",
+   "tier": "T2"
+  },
+  {
+   "souls": 3200,
+   "level": 8,
+   "ability": "Concussive Combustion",
+   "tier": "U"
+  },
+  {
+   "souls": 6800,
+   "level": 13,
+   "ability": "Flame Dash",
+   "tier": "T3"
+  },
+  {
+   "souls": 7600,
+   "level": 14,
+   "ability": "Napalm",
+   "tier": "T1"
+  },
+  {
+   "souls": 8400,
+   "level": 15,
+   "ability": "Concussive Combustion",
+   "tier": "T1"
+  },
+  {
+   "souls": 10100,
+   "level": 17,
+   "ability": "Concussive Combustion",
+   "tier": "T2"
+  },
+  {
+   "souls": 14900,
+   "level": 22,
+   "ability": "Concussive Combustion",
+   "tier": "T3"
+  },
+  {
+   "souls": 17400,
+   "level": 24,
+   "ability": "Napalm",
+   "tier": "T2"
+  },
+  {
+   "souls": 26900,
+   "level": 29,
+   "ability": "Napalm",
+   "tier": "T3"
+  },
+  {
+   "souls": 32100,
+   "level": 31,
+   "ability": "Afterburn",
+   "tier": "T2"
+  },
+  {
+   "souls": 48600,
+   "level": 36,
+   "ability": "Afterburn",
+   "tier": "T3"
+  }
+ ],
+ "rows": [
+  {
+   "item": "Mystic Vulnerability",
+   "souls": 3200,
+   "kind": "spiritsrc",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Extra Charge",
+   "souls": 4000,
+   "kind": "charged",
+   "flag": "DEAD-AT-BUY",
+   "verdict": "delay / reorder points",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": 2800,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Rapid Recharge",
+   "souls": 8800,
+   "kind": "charged",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Duration Extender",
+   "souls": 12800,
+   "kind": "imbue",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Superior Duration",
+   "souls": 19200,
+   "kind": "cast",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Spiritual Overflow",
+   "souls": 24000,
+   "kind": "stack",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Escalating Exposure",
+   "souls": 28800,
+   "kind": "spiritsrc+stack",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Echo Shard",
+   "souls": 40000,
+   "kind": "imbue",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Spirit Burn",
+   "souls": 46400,
+   "kind": "win",
+   "flag": null,
+   "verdict": "buy now (needs ult in the combo)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "-51% without ult, +17% with",
+   "gap": null,
+   "B": null,
+   "F7": null
+  }
+ ],
+ "assumptions": {
+  "game_build": "6801 (gt repo); installed client 6819 unverified",
+  "point_model": "A (unlock currency separate, 1/2/5 AP)",
+  "charge_rule": "2+ charges (Kieran); F7 alternative reported",
+  "walk": "core boxes L-R, components consumed, sells dropped"
+ }
+}

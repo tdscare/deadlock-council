@@ -1,0 +1,234 @@
+{
+ "id": "danny_gun",
+ "hk": "hero_deadpack",
+ "hero": "Danny",
+ "tag": "Fix",
+ "name": "Rizuhble's Smoking Gun Danny",
+ "desc": "Gun-spirit Danny",
+ "tg": [
+  "weapon",
+  "damage",
+  "Toxic Bullets"
+ ],
+ "abil": [
+  "Strix Salvo",
+  "Chimera Mk1",
+  "Jettison Fuel",
+  "Close The Deal"
+ ],
+ "order": [
+  3,
+  3,
+  1,
+  1,
+  2,
+  3,
+  4,
+  2,
+  1,
+  3,
+  2,
+  4,
+  4,
+  1,
+  4,
+  2
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane?",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Sell it for Diviner's Kevlar."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "High-Velocity Rounds",
+      ""
+     ],
+     [
+      "Rapid Rounds",
+      ""
+     ],
+     [
+      "Express Shot",
+      ""
+     ],
+     [
+      "Swift Striker",
+      ""
+     ],
+     [
+      "Grit",
+      ""
+     ],
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Extra Health",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Fortitude",
+      ""
+     ],
+     [
+      "Spirit Shielding",
+      "Sell it for Spirit Resilience."
+     ],
+     [
+      "Duration Extender",
+      "On Jettison Fuel.",
+      "3"
+     ],
+     [
+      "Toxic Bullets",
+      ""
+     ],
+     [
+      "Surge of Power",
+      "On Jettison Fuel.",
+      "3"
+     ],
+     [
+      "Superior Duration",
+      ""
+     ],
+     [
+      "Mystic Vulnerability",
+      ""
+     ],
+     [
+      "Spirit Lifesteal",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · cont.",
+    "",
+    false,
+    [
+     [
+      "Warp Stone",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Spiritual Overflow",
+      ""
+     ],
+     [
+      "Escalating Exposure",
+      ""
+     ],
+     [
+      "Lucky Shot",
+      ""
+     ],
+     [
+      "Siphon Bullets",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Fortitude if needed. Ahead? Skip it until you're dying. Sell Warp Stone for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "One gun hero is deleting you: Haze, Wraith, Vindicta."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun and Metal Skin isn't enough."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+     ],
+     [
+      "Dispel Magic",
+      "Knockdown before it lands, Slowing Hex, Disarming Hex."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+     ],
+     [
+      "Unstoppable",
+      "Stuns and silences keep catching you."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Inhibitor",
+      "Sell Toxic Bullets for this."
+     ],
+     [
+      "Silencer",
+      "Sell Express Shot for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ],
+     [
+      "Echo Shard",
+      "On Jettison Fuel. Sell Warp Stone for this, or Swift Striker if it's gone.",
+      "3"
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Round 13: new gun build — sources (gun-led Danny builds, post Oct 14 patch): lockbuilds official 'Gun/Spirit Danny' (Oct 17, from pro games: High-Velocity, Opening Rounds, Express Shot, 'rush to a 4.8k gun, then spirit and HP', Grit, Reactive Barrier, Extra Health; core Improved Spirit, Sharpshooter, Fortitude, Toxic Bullets, Warp Stone, Superior Cooldown, 'main damage comes from your 3rd ability'; late Diviner's Kevlar, Indomitable; it marks a full no-spirit gun build 'please avoid', so this keeps the cooldown spirit for Jettison Fuel); lockbuilds 'He's a phantom' (Oct 15: High-Velocity, Rapid Rounds, Express Shot, Grit, Toxic Bullets 'applied with the 3', Compress Cooldown, Superior Cooldown, Spirit Lifesteal, Spiritual Overflow; Lucky Shot optional). Order: seemeta's most popular Danny order with Jettison Fuel taking Chimera's early points (kit: T2 +18% fire rate on a backblast hit, T3 25% bullet resist shred, and its 30 + 0.8x weapon-damage DPS, so it's the gun build's ability; lockbuilds official calls the 3 your main damage).",
+  "Round 14: Lucky Shot out (lockbuilds' official Gun/Spirit Danny lists it under 'Testing a Complete Gun Build — Please Avoid'), Tankbuster in as the first Late buy (official core 'don't skip Toxic Bullets and TB', also in 'He's a phantom' and 'Best Damn Salesman'): spirit lands exactly on 8k at 28.8k; Jettison backblast ~198 and a T3 Strix mark ~247 vs 165 there. Divine Barrier added to rich (Dispel Magic is in Counters). Echo Shard falls back to Express Shot when Warp Stone was sold for a counter. Toxic Bullets note emptied (it was a Jettison tip; Toxic Bullets has no shred). Lane box caption 'Losing lane?' (one item) and its sell names Diviner's Kevlar (the 12th slot). Dispel Magic no longer lists Yamato's grapple.",
+  "Round 15: ability order is now seemeta's most popular Danny order (Oct 5-19, 3,155 matches) with Jettison Fuel and Chimera swapped, as the log already claimed (the old order unlocked all four first and didn't match it). Tankbuster still clears 165 at 28.8k.",
+  "Round 19/20: rebuilt as the Jettison Fuel gun/spirit Danny so it shares nothing with the dive main after lane (Kieran: builds of one hero mustn't look the same). Renamed Rizuhble's Jettison Danny, desc Gun-spirit Danny. Own gun line HV > Express Shot + Rapid Rounds > Swift Striker (official 882708 early; 884964 lane). Mid/late from 882708's core and gun box plus 884964: Fortitude, Spirit Shielding, Duration Extender > Superior Duration and Surge of Power on Jettison Fuel, Toxic Bullets, Warp Stone, Mystic Vulnerability > Escalating Exposure, Spirit Lifesteal > Spiritual Overflow, Lucky Shot, Siphon Bullets. Dropped the main's items (Opening Rounds, Sharpshooter, Reactive Barrier > Indomitable, Improved Spirit > Boundless, Tankbuster, Compress > Superior Cooldown, Kevlar). Late list Inhibitor, Silencer, Divine Barrier, Echo Shard (luxury last).",
+  "Round 23: kit re-read item by item; no change (see log).",
+  "Round 25: ability order 1132134343144222 → 3311234213244142 (kit-based for this playstyle, no idle early points).",
+  "Cost pass: renamed Smoking Gun Danny; Spirit Shielding names its sell (Spirit Resilience)."
+ ]
+}

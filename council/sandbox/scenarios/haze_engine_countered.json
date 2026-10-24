@@ -1,0 +1,84 @@
+{
+ "id": "haze_engine_countered",
+ "title": "Haze: survival when Smoke Bomb is silenced/stunned or her healing is cut",
+ "hero": "Haze",
+ "playstyle": "Victor Cosplay Haze",
+ "builds": [
+  "haze"
+ ],
+ "question": "A2: how much survival is lost when the enemy silences or stuns her before smoke, or applies anti-heal, and which remedy (Unstoppable pre-pop, Vampiric Burst as an item heal, Leech) recovers most?",
+ "hypothesis": "Model: without smoke she dies 2-2.6 s sooner when focused at 10-24k and dies at 6.6 s instead of living at 41.6k+.",
+ "arms": [
+  {
+   "name": "smoke_available",
+   "items": "build:haze at 41.6k",
+   "ability_order": null,
+   "imbues": {},
+   "souls": "41.6k",
+   "notes": ""
+  },
+  {
+   "name": "smoke_denied",
+   "items": "build:haze at 41.6k",
+   "ability_order": null,
+   "imbues": {},
+   "souls": "41.6k",
+   "notes": "no cast 2 (stands in for silence)"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "unlock 7",
+  "souls": 50000,
+  "position": "enemy 350u",
+  "enemies": [
+   {
+    "hero": "Haze",
+    "count": 1,
+    "items": "none",
+    "behaviour": "bot",
+    "hp": "egod"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "hardreset"
+  ]
+ },
+ "controls": [
+  "hardreset between blocks (fresh pawns, factory cooldowns/charges, unlock 7 = all 3 tiers on every ability in BOTH arms)",
+  "Same position (fetch 350, aimoff 5.5 3), same enemy bot (Haze), egod default floor",
+  "Arms interleaved A,B,A,B (counterbalanced A,B,B,A for the second half)",
+  "healreset + mark none around every reset",
+  "cast reload 2.5 before each fire block (no auto-reload op)"
+ ],
+ "procedure": [
+  "incoming gun 2x reference dps; fight 12 s; record time of first HP <= 3% (lowhp floor) or HP at end"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "hp_end_or_time_to_floor",
+   "unit": "s",
+   "how": "samples csv",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "hp_end_or_time_to_floor",
+  "min_effect_pct": 15,
+  "min_trials": 5,
+  "rule": "Only the 'smoke not cast' proxy is runnable; real silence/stun (ecc), anti-heal on the player (eheal) and enemy fire are UNSUPPORTED."
+ },
+ "blockedIfNo": [
+  "ecc op (silence/stun on player)",
+  "eheal op (anti-heal on player)",
+  "bot shoot-back"
+ ],
+ "limitations": [
+  "Checkpoint level/ability-tier states cannot be reproduced (unlock sets all tiers; GAPS #2): results are late-game relative comparisons only.",
+  "`incoming` is a smooth stream; the safety 'heal to full below 15%' is disabled by incoming."
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "id": "harrow_surge_needles_vs_leech",
+ "title": "Harrow: Surge of Power on Healing Needles vs Leech Therapy",
+ "hero": "Nurse Harrow",
+ "playstyle": "Friendly Fire Harrow",
+ "builds": [
+  "nurse"
+ ],
+ "question": "Where does Surge of Power's 14s proc and +28 spirit do more?",
+ "hypothesis": "Needles have no cooldown and recharge every ~11-16s in fights (bullet hits 1.26%/hit, leeches 0.15%/s each), so Surge procs ~every 14s (57% speed uptime) and adds +16.8 heal per needle at T3; Leech (20s, 16s with Superior Cooldown) procs at most 40-50% and adds +13.7 DPS. Prediction: heal delivered per 60s >=10% higher on Needles arm.",
+ "arms": [
+  {
+   "name": "surge_needles",
+   "items": [
+    "Surge of Power"
+   ],
+   "ability_order": null,
+   "imbues": {
+    "Surge of Power": "Healing Needles"
+   },
+   "souls": "~20k",
+   "notes": "Needles T3"
+  },
+  {
+   "name": "surge_leech",
+   "items": [
+    "Surge of Power"
+   ],
+   "ability_order": null,
+   "imbues": {
+    "Surge of Power": "Leech Therapy"
+   },
+   "souls": "~20k",
+   "notes": "Leech T3"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "mid (~20k)",
+  "souls": 20000,
+  "position": "sandbox lane",
+  "enemies": [
+   {
+    "hero": "any bot",
+    "count": 1,
+    "items": "mid",
+    "behaviour": "strafe",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "any ally bot",
+    "count": 1,
+    "role": "at 50% HP, re-damaged each 10s"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "HP"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns, HP, leech stacks reset between trials",
+  "Same boons/souls/ability points in both arms except the item/imbue under test",
+  "Same enemy hero, level, items, behaviour",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "60s: shoot enemy to charge, needle the ally whenever a charge is ready, Leech on cooldown",
+  "Record Surge procs, heal delivered, damage dealt"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "heal_delivered_60s",
+   "unit": "hp",
+   "how": "healing meter",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "surge_procs_60s",
+   "unit": "count",
+   "how": "buff icon count",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "damage_dealt_60s",
+   "unit": "hp",
+   "how": "damage meter",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "heal_delivered_60s",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "SUPPORTS surge_needles if >=10% higher with non-overlapping ranges"
+ }
+}

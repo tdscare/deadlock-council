@@ -1,0 +1,115 @@
+{
+ "id": "duo_seven_holliday_crossshred",
+ "title": "Seven + Holliday: Bullet Resist Shredder on Seven, Spirit Shredder/Rend on Holliday",
+ "hero": "Seven",
+ "playstyle": "Ult Seven + gun Holliday",
+ "builds": [
+  "seven_duo_holliday",
+  "holliday_duo_seven",
+  "seven",
+  "holliday"
+ ],
+ "question": "Does Seven's spirit AoE keep Bullet Resist Shredder on Holliday's targets, and does Holliday's Spirit Shredder/Rend raise Seven's damage on her target?",
+ "hypothesis": "H-B2-3.1: Holliday gun damage on 3 bots hit by Lightning Ball/Storm Cloud is >=8% higher with Seven's BRS than with base Holliday's own BRS. H-B2-3.2: BRS from two owners refreshes (-10%), not stacks (-20%): debuff panel. H-B2-3.3: Seven's Storm Cloud damage on Holliday's headshot target is >=6% higher with Spirit Shredder and >=25% higher with Spirit Rend at 4 stacks.",
+ "arms": [
+  {
+   "name": "base_pair",
+   "items": [
+    "Bullet Resist Shredder (Holliday)"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": 31000,
+   "notes": "seven + holliday base"
+  },
+  {
+   "name": "duo_pair",
+   "items": [
+    "Bullet Resist Shredder (Seven)",
+    "Spirit Rend (Holliday)"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": 31000,
+   "notes": "seven_duo_holliday + holliday_duo_seven, Rend owned from 30.4k"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "31k souls",
+  "souls": 31000,
+  "position": "3 bots clumped 25m from Holliday; Seven 15m from them",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "holliday_duo_seven",
+    "count": 1,
+    "role": "gun"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "bot HP",
+   "debuffs"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns, HP and debuffs reset between trials",
+  "Same boons/souls/ability points in both arms except the item under test",
+  "Same bot heroes, HP and resists",
+  "Arms run interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Seven throws Lightning Ball into the clump and casts Storm Cloud",
+  "Holliday headshots bot 1 for 8s (one shot per second or faster)",
+  "Read Holliday damage on all 3 bots, Seven damage on bot 1, and the debuff panel on bot 1"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "holliday_gun_damage_dealt_8s",
+   "unit": "hp",
+   "how": "Holliday damage summed over 3 bots",
+   "category": "sustained damage",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "seven_damage_dealt_bot1_8s",
+   "unit": "hp",
+   "how": "Seven damage on bot 1",
+   "category": "sustained damage",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "bullet_resist_shown_bot1",
+   "unit": "%",
+   "how": "debuff panel",
+   "category": "other",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "seven_damage_dealt_bot1_8s",
+  "min_effect_pct": 20,
+  "min_trials": 5,
+  "rule": "SUPPORTS if duo_pair beats base_pair on Seven damage by >=20% with non-overlapping ranges and Holliday damage is not lower by >3%; REFUTES if Seven gains <6%; else INCONCLUSIVE."
+ },
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

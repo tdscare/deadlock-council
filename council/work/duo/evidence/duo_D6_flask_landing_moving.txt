@@ -1,0 +1,8 @@
+KIND: duo-evidence
+SCENARIO: duo_D6_flask_landing_moving
+STATUS: UNTESTABLE-NOW (blocked_by enemy_move_script)
+NOTE: D6 UNTESTABLE-NOW (needs scripted enemy movement). Measures h = how often a thrown ground payload lands on a moving enemy; the duo model sweeps h in 0.3..0.7 as ASSUMED.
+QUESTION: Checking how often Alchemical Fire lands on an enemy that is walking away.
+MECHANICS: Alchemical Fire is a thrown projectile that explodes on contact and leaves an area; whether a moving enemy stays inside is not in data
+MODEL USE: duo engine h parameter
+RESULT RULE: WORKS (h read as hits/throws per movement pattern) if standing > strafing > fleeing; DOES NOT WORK if the pattern has no effect

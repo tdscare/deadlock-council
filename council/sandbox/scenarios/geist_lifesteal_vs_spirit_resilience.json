@@ -1,0 +1,92 @@
+{
+ "id": "geist_lifesteal_vs_spirit_resilience",
+ "title": "Geist health spike: Bullet + Spirit Lifesteal vs Spirit Resilience at 12.8k",
+ "hero": "Lady Geist",
+ "playstyle": "Gun tank Geist",
+ "builds": [
+  "geist"
+ ],
+ "question": "Which 3.2k of health items gives Geist more survival at 12.8k against a gun lane and a spirit lane?",
+ "hypothesis": "Calc (G3 vs G0): lifesteal path +180 HP, +6 spirit, 13% bullet/spirit lifesteal; Spirit Resilience path 30% spirit resist (spirit-effective HP 3954 vs 2948). Prediction: lifesteal wins vs gun opponent by >=10%, Spirit Resilience wins vs spirit opponent by >=10%.",
+ "arms": [
+  {
+   "name": "G0_spirit_resilience",
+   "items": [
+    "Radiant Regeneration",
+    "Healing Booster",
+    "Spirit Resilience",
+    "Kinetic Dash",
+    "Cultist Sacrifice"
+   ],
+   "ability_order": "3231224233444111",
+   "imbues": {},
+   "souls": "12.8k",
+   "notes": ""
+  },
+  {
+   "name": "G3_lifesteal",
+   "items": [
+    "Radiant Regeneration",
+    "Healing Booster",
+    "Bullet Lifesteal",
+    "Spirit Lifesteal",
+    "Kinetic Dash",
+    "Cultist Sacrifice"
+   ],
+   "ability_order": "3231224233444111",
+   "imbues": {},
+   "souls": "12.8k",
+   "notes": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "level 20",
+  "souls": "12800",
+  "position": "duel 15m",
+  "enemies": [
+   {
+    "hero": "gun bot (Haze) then spirit bot (Seven)",
+    "count": 1,
+    "items": [
+     "12.8k"
+    ],
+    "behaviour": "fights",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "hp",
+   "buffs"
+  ]
+ },
+ "controls": [
+  "same opponents",
+  "Cultist buff off",
+  "same rotation (Malice, drain, gun)"
+ ],
+ "procedure": [
+  "duel 20s vs gun bot",
+  "duel 20s vs spirit bot",
+  "record HP left and damage dealt"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "hp_left",
+   "unit": "hp",
+   "how": "HP at 20s per opponent",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "hp_left",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "Replace Spirit Resilience as the health spike only if G3 wins vs BOTH opponents; if split, keep G0 and note lifesteal as a gun-lane reorder."
+ }
+}

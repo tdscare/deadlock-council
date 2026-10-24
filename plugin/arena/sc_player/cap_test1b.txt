@@ -1,0 +1,65 @@
+meta kind ISOLATED ITEM
+meta hero Haze
+meta checkpoint Level 18 stat floor, 0 souls spent, then Berserker given
+meta build none (capability check)
+meta items upgrade_berserker
+meta question Can the tester spawn and script an allied bot, make casts register, and deal real enemy damage that triggers a damage-taken item?
+meta purpose capability check of the tester: ally spawn, aexec, castself, eshoot vs artificial damage; not a build verdict
+meta mechanics ally bot, scripted casts, real damage through ApplyDamage versus Hurt as control
+meta excluded all build decisions; this is a harness check
+meta expectedstate items=none at start; one item given mid-run
+meta accmode body-only
+meta accwhy not a damage test
+meta abilities scripted casts only
+meta runs 1/1
+meta assumed none
+meta levels_mode isolated
+meta player_title Tester check: ally and damage
+meta player_what Ally bot and casts|Real damage vs fake damage
+meta player_why Checking the tester, not a build
+meta player_short Harness check
+meta player_expect Ally acts, hits register
+setup Haze Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark ACT|none|body
+ally Wraith 6
+allycheck
+moddump ally
+aexec ally 1
+wait 1.0
+aexec enemy 1
+wait 1.0
+castself 2
+wait 1.0
+moddump me
+give upgrade_berserker
+wait 1.0
+moddump me
+hurtme 150
+wait 1.0
+moddump me
+eshoot gun 60 5 0.3
+moddump me
+heal
+mark none
+end

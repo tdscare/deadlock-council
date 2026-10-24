@@ -1,0 +1,51 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: haze
+HERO: Haze
+ITEM: Rapid Rounds
+CHECKPOINT: buy-point at 800 souls (state souls 800; item cost 800)
+VERSION: interaction-v1
+ARGS: --interactions haze Rapid Rounds --vs Close Quarters
+GENERATED: 2026-10-24T16:49:31Z
+BODY-SHA: d1133a26fc91c761788a7f836e2fd3da74b13a0a2c3b64e38de60c31bc0c09ec
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 800, unconditional, ranked): Extended Magazine, High-Velocity Rounds, Close Quarters, Headshot Booster, Restorative Shot
+VERDICT: Rapid Rounds is beaten in every window: sustained: Extended Magazine; burst: Extended Magazine
+UNKNOWN_CELLS: 0
+SELECTION: build-decision | Rapid Rounds is bought at 800 souls in haze: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (800) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage; plus requested ['Close Quarters']
+PAIRWISE: Rapid Rounds vs Close Quarters: sustained: Rapid Rounds +3..+8% vs Close Quarters -> WINS in every reading | burst: Rapid Rounds -8..-7% vs Close Quarters -> LOSES in every reading
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.8, long_share=0.1, W_sus=10.0, W_burst=3.0; reload 2.35 s (VERIFIED GAME MECHANIC m_reloadDuration (weapon vdata; Wraith value equals its sandbox measurement))
+STATE: owned ['Rapid Rounds'] | tiers Sleep Dagger=U(spirit) Smoke Bomb=L(locked) Fixation=T1(stacks) Bullet Dance=L(locked) | weapon invest bonus 9% | spirit 1
+
+## INTERACTION MATRIX (item effect x kit component)
+- fire rate (more bullets) (BonusFireRate=9)
+    normal shooting                              WORKS                      [CALCULATED] more bullets per second (fire-rate pool now 0%: +9 adds 9.0% bullets)
+    1=Sleep Dagger U [spirit]                    DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Smoke Bomb L [locked]                      n/a                        [CALCULATED] not trained at this checkpoint
+    3=Fixation T1 [stacks]                       WORKS                      [CALCULATED] stacks per bullet hit (game text; HeadshotStacks=3): more bullets -> max stacks sooner; also more ProcDamage procs per 20 stacks
+    4=Bullet Dance L [locked]                    n/a                        [CALCULATED] not trained at this checkpoint
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |       388              |       164              |         0              | 0
+Rapid Rounds                 |        472 (+19..+22%) |          172 (+4..+5%) |            0 (+0..+0%) | 0
+Extended Magazine            |        559 (+37..+44%) |        249 (+49..+52%) |            0 (+0..+0%) | 0
+High-Velocity Rounds         |         435 (+7..+12%) |         180 (+8..+10%) |            0 (+0..+0%) | 0
+Close Quarters               |        457 (+11..+18%) |        188 (+12..+15%) |            0 (+0..+0%) | 0
+Headshot Booster             |          424 (+7..+9%) |          178 (+7..+8%) |            0 (+0..+0%) | 0
+Restorative Shot             |         429 (+6..+11%) |          178 (+7..+9%) |            0 (+0..+0%) | 0
+  candidate detail (reading 1): sustained bullets 58, gun 192, stacks 213, procs 0, spirit 67, time to max stacks 9.7s | ult: ultimate not trained at this checkpoint
+  sustained: rank (reading 1) Extended Magazine > Rapid Rounds > Close Quarters > High-Velocity Rounds > Restorative Shot > Headshot Booster
+  burst: rank (reading 1) Extended Magazine > Close Quarters > High-Velocity Rounds > Restorative Shot > Headshot Booster > Rapid Rounds
+  ult: not ranked (ultimate not trained at this checkpoint)
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (not trained)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  none
+
+## NOT DETERMINED FROM DATA
+  - nothing beyond the ASSUMED shares above
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

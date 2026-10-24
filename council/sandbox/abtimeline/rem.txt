@@ -1,0 +1,104 @@
+# rem | Rem | Rizuhble's Backpack Medic Rem
+abilities: 1=Pillow Toss (ability_familiar_ability02, start_trained=false, Signature) / 2=Tag Along (ability_familiar_attach, start_trained=false, Signature) / 3=Lil Helpers (ability_familiar_helpinghands, start_trained=false, Signature) / 4=Naptime (ability_familiar_ability01, start_trained=false, Ultimate)
+order: 2211324324344311
+model A (data):  Tag Along:U@0  Tag Along:T1@200  Pillow Tos:U@500  Pillow Tos:T1@900  Lil Helper:U@1400  Tag Along:T2@2600  Naptime:U@3200  Lil Helper:T1@3900  Tag Along:T3@7600  Naptime:T1@8400  Lil Helper:T2@10100  Naptime:T2@11900  Naptime:T3@17400  Lil Helper:T3@26900  Pillow Tos:T2@32100  Pillow Tos:T3@48600
+model B (old):   Tag Along:T1@200  Tag Along:T2@900  Pillow Tos:T1@2000  Pillow Tos:T2@2600  Lil Helper:T1@3900  Tag Along:T3@4600  Naptime:U@5300  Lil Helper:T2@6000  Naptime:T1@7600  Lil Helper:T3@8400  Naptime:T2@9200  Naptime:T3@10100  Pillow Tos:T3@11900
+tier upgrades: Pillow Toss: AbilityCooldown-7 / FireRateSlow+35,Radius+2 / Damage+100,AbilityCharges+1 | Tag Along: AbilityCooldown-8 / BonusBarrierAmpPercent+35,BonusItemDurationPercent+35,BonusItemRangePercent+35 / TechPowerPercent+15,BonusSpiritPower+35,HopOffEffecDuration+10,MissingHealthBurstPct+0.016x,HealingPerSecond+0.34x | Lil Helpers: HelperCount+1,BonusMoveSpeed+1.5 / HelperCount+1,InfestDamageTakenPercent+15 / HelperCount+1,TechArmorGain+15 | Naptime: ConsumeStaminaOnWake+1,NoStaminaRegenDuringSleep+1 / SleepDuration+0.75,Radius+3 / DamageResistPctWhileChanneling+50,UnstoppableWhileChanneling+1,AbilityCooldown-55
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     9  Extra Charge
+        Pillow Tos U ch1 cd25/8 Damage=90 | Tag Along T1 ch1 cd32 d5.5 | Lil Helper L[U] | Naptime L
+  1600 L5   2    11  Grit
+        Pillow Tos T1[U] ch1 cd18/8 Damage=93 | Tag Along T1[T2] ch1 cd32 d5.5 | Lil Helper U ch1 cd0 | Naptime L
+  2400 L6   3    12  High-Velocity Rounds
+        Pillow Tos T1 ch1 cd18/8 Damage=95 | Tag Along T1[T2] ch1 cd32 d5.5 | Lil Helper U ch1 cd0 | Naptime L
+  3200 L8   4    22  Opening Rounds
+        Pillow Tos T1[T2] ch1 cd18/8 Damage=110 | Tag Along T2 ch1 cd32 d5.5 | Lil Helper U ch1 cd0 | Naptime U[L] ch1 cd200 AwakeDam=155
+  4000 L9   5    23  Guardian Ward
+        Pillow Tos T1[T2] ch1 cd18/8 Damage=111 | Tag Along T2 ch1 cd32 d5.5 | Lil Helper T1 ch1 cd0 | Naptime U[L] ch1 cd200 AwakeDam=156
+  4800 L10  6    38  Extra Spirit
+        Pillow Tos T1[T2] ch1 cd18/8 Damage=136 | Tag Along T2[T3] ch1 cd32 d5.5 | Lil Helper T1 ch1 cd0 | Naptime U[L] ch1 cd200 AwakeDam=181
+  5600 L11  7    43  Mystic Burst
+        Pillow Tos T1[T2] ch1 cd18/8 Damage=144 | Tag Along T2[T3] ch1 cd32 d5.5 | Lil Helper T1 ch1 cd0 | Naptime U ch1 cd200 AwakeDam=189
+  6400 L12  8    56  Improved Spirit
+        Pillow Tos T1[T2] ch1 cd18/8 Damage=165 | Tag Along T2[T3] ch1 cd32 d5.5 | Lil Helper T1[T2] ch1 cd0 | Naptime U ch1 cd200 AwakeDam=210
+  8000 L14 10    77  Compress Cooldown [imbue Tag Along]
+        Pillow Tos T1[T2] ch1 cd18/8 Damage=199 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T1[T2] ch1 cd0 | Naptime U[T1] ch1 cd200 AwakeDam=244
+ 11200 L18 14    90  Healing Nova
+        Pillow Tos T1[T2] ch1 cd18/8 Damage=219 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T2[T3] ch1 cd0 | Naptime T1[T3] ch1 cd200 AwakeDam=264
+ 12800 L20 16    92  Trophy Collector
+        Pillow Tos T1[T3] ch1 cd18/8 Damage=222 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T2[T3] ch1 cd0 | Naptime T2[T3] ch1 cd200 AwakeDam=267
+ 15200 L22 18   101  Rapid Recharge
+        Pillow Tos T1[T3] ch1 cd18/8 Damage=237 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T2[T3] ch1 cd0 | Naptime T2[T3] ch1 cd200 AwakeDam=282
+ 16000 L22 18   108  Mystic Expansion [imbue Naptime]
+        Pillow Tos T1[T3] ch1 cd18/8 Damage=248 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T2[T3] ch1 cd0 | Naptime T2[T3] ch1 cd200 AwakeDam=293
+ 17600 L24 20   110  Healing Booster
+        Pillow Tos T1[T3] ch1 cd18/8 Damage=251 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T2[T3] ch1 cd0 | Naptime T3 ch1 cd145 AwakeDam=296
+ 24000 L27 23   121  Echo Shard [imbue Tag Along]
+        Pillow Tos T1[T3] ch1 cd18/8 Damage=268 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T2[T3] ch1 cd0 | Naptime T3 ch1 cd145 AwakeDam=313
+ 28800 L29 25   123  Divine Barrier
+        Pillow Tos T1[T3] ch1 cd18/8 Damage=271 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T3 ch1 cd0 | Naptime T3 ch1 cd145 AwakeDam=316
+ 31200 L30 26   131  Tankbuster
+        Pillow Tos T1[T3] ch1 cd18/8 Damage=284 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T3 ch1 cd0 | Naptime T3 ch1 cd145 AwakeDam=329
+ 34400 L31 27   132  Heroic Aura
+        Pillow Tos T2[T3] ch1 cd18/8 Damage=286 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T3 ch1 cd0 | Naptime T3 ch1 cd145 AwakeDam=331
+ 36000 L32 28   133  Superior Cooldown
+        Pillow Tos T2[T3] ch1 cd18/8 Damage=288 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T3 ch1 cd0 | Naptime T3 ch1 cd145 AwakeDam=333
+ 38400 L33 29   134  Greater Expansion
+        Pillow Tos T2[T3] ch1 cd18/8 Damage=290 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T3 ch1 cd0 | Naptime T3 ch1 cd145 AwakeDam=335
+ 43200 L34 30   180  Boundless Spirit
+        Pillow Tos T2[T3] ch1 cd18/8 Damage=363 | Tag Along T3 ch1 cd32 d5.5 | Lil Helper T3 ch1 cd0 | Naptime T3 ch1 cd145 AwakeDam=408
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @800 Extra Charge [charged] -> DEAD-AT-BUY | verdict: delay / reorder points | CALCULATED | F7-DEPENDENT (1-charge counts: OK) | gap 47800
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Adds one to your ability max charges.
+    at buy: no ability with charges now: Pillow Toss 1, Tag Along 0
+    enabler/next: Pillow Toss T3 @48600 (+47800)
+    unverified: F7 1-charge abilities
+- @3200 Opening Rounds [enemyhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on enemy health % (EnemyLifeThreshold=50)
+    game text: Your attacks have additional Weapon Damage against enemies above {s:EnemyLifeThreshold}% health.
+    at buy: not computed (needs play data)
+- @5600 Mystic Burst [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 80 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcByOtherObjects=true
+    at buy: best Naptime.AwakeDamage 189 at spirit 43
+    margin: +136%
+    reliability: procs from Pillow Toss.Damage 144 (cd 18), Naptime.AwakeDamage 189 (cd 200)
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @8000 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Tag Along; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Tag Along T3: cd 32s, duration 5.5s, charges 1; saves 5.8s/cast (1.88->2.29 casts/min)
+- @12800 Trophy Collector [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (MaxStacks=16)
+    game text: Whenever you score an assist or kill, gain extra sprint, ability range and passive soul generation. This effect stacks and persists through death.
+    at buy: not computed (needs play data)
+- @15200 Rapid Recharge [charged] -> DEAD-AT-BUY | verdict: delay / reorder points | CALCULATED | MODEL-DEPENDENT (B: OK) F7-DEPENDENT (1-charge counts: OK) | gap 33400
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: (no game text)
+    at buy: no ability with charges now: Pillow Toss 1, Tag Along 0, Lil Helpers 0, Naptime 0
+    enabler/next: Pillow Toss T3 @48600 (+33400)
+    unverified: F7 1-charge abilities
+- @16000 Mystic Expansion [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Naptime; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its range and effect radius.
+    at buy: Naptime T2: cd 200s, duration 0s, charges 1
+- @24000 Echo Shard [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Tag Along; needs it trained and non-ultimate and the stat the item raises
+    game text: (no game text)
+    at buy: Tag Along T3: cd 32s, duration 5.5s, charges 1
+- @31200 Tankbuster [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 165 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcFromItems=false, IgnoreResists=true, CanProcByOtherObjects=true
+    at buy: best Naptime.AwakeDamage 329 at spirit 131
+    margin: +100%
+    reliability: procs from Pillow Toss.Damage 284 (cd 18), Naptime.AwakeDamage 329 (cd 145)
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @36000 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 195s; 20% saves 39.0s per rotation
+
+no trigger condition (plain stats/actives): Grit, High-Velocity Rounds, Guardian Ward, Extra Spirit, Improved Spirit, Healing Nova, Healing Booster, Divine Barrier, Heroic Aura, Greater Expansion, Boundless Spirit

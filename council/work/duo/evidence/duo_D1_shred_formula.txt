@@ -1,0 +1,8 @@
+KIND: duo-evidence
+SCENARIO: duo_D1_shred_formula
+STATUS: RUNNABLE on the current runner source (PC build state UNVERIFIED)
+NOTE: D1 NOW (single player). Settles the two unknowns every shred estimate carries: formula (absolute vs relative) and stacking (max/add).
+QUESTION: Checking how Hollow Point and Hunter's Aura change an armoured enemy's gun damage.
+MECHANICS: BulletArmorReduction -10 on the enemy: does it remove 10 points of resist or 10 percent of it, and do two sources add, take the max or multiply (GAPS 18 unverified)
+MODEL USE: duo engine shred formula and stacking bounds
+RESULT RULE: WORKS (formula and stacking read from per-hit damage ratios) if B,C,D differ from A; DOES NOT WORK if all equal (shred not applied by this setup)

@@ -1,0 +1,332 @@
+{
+ "id": "vindicta_sniper",
+ "hero": "Vindicta",
+ "order": "1132444332213412",
+ "status": "WARN",
+ "errors": [],
+ "warnings": [
+  {
+   "item": "Extra Charge",
+   "souls": 3200,
+   "kind": "charged",
+   "flag": null,
+   "gap": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "model_B": "DEAD-AT-BUY",
+   "if_1charge_counts": null,
+   "rule": "needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)",
+   "value": "Assassinate 2->3 charges; Assassinate shots in 5s 2->3 (between-charge 2.5s)",
+   "enabler": "",
+   "code": "MODEL-DEPENDENT",
+   "note": "model A OK vs model B DEAD-AT-BUY"
+  },
+  {
+   "item": "Tankbuster",
+   "souls": 14400,
+   "kind": "hit",
+   "flag": "ULT-ONLY",
+   "gap": 17600,
+   "verdict": "delay to ~32000 or reorder/buy enabler first",
+   "grade": "CALCULATED",
+   "model_B": "ULT-ONLY",
+   "if_1charge_counts": "ULT-ONLY",
+   "rule": "one ability damage instance > 165 (any ability); scaled by spirit at hit time; procs at most every 14s",
+   "value": "best Assassinate.Damage 207 at spirit 112",
+   "enabler": "met by a non-ult ability @32000 (Diviner's Kevlar)",
+   "code": "ULT-ONLY"
+  },
+  {
+   "item": "Mystic Reverb",
+   "souls": 44800,
+   "kind": "hitimb",
+   "flag": "ULT-ONLY",
+   "gap": null,
+   "verdict": "skip/swap",
+   "grade": "CALCULATED",
+   "model_B": "ULT-ONLY",
+   "if_1charge_counts": "ULT-ONLY",
+   "rule": "one ability damage instance > 100 (imbued ability only); scaled by spirit at hit time; procs at most every 6s",
+   "value": "best Assassinate.Damage 378 at spirit 267",
+   "enabler": "never met in this build",
+   "code": "ULT-ONLY"
+  },
+  {
+   "code": "SPIKE-OVERSHOOT",
+   "colour": "gun",
+   "souls": 56000,
+   "item": "Spiritual Overflow",
+   "value": "gun lands at 6400 (4.8k + 1600)"
+  }
+ ],
+ "spikes": {
+  "gun": {
+   "4800": 56000,
+   "6400": 56000,
+   "overshoot4800": 1600,
+   "at_item": "Spiritual Overflow"
+  },
+  "vitality": {
+   "4800": 9600,
+   "6400": 17600,
+   "overshoot4800": 0,
+   "at_item": "Counterspell"
+  },
+  "spirit": {
+   "4800": 5600,
+   "6400": 12000,
+   "overshoot4800": 0,
+   "at_item": "Rapid Recharge"
+  }
+ },
+ "timeline_A": [
+  {
+   "souls": 0,
+   "level": 1,
+   "ability": "Stake",
+   "tier": "U"
+  },
+  {
+   "souls": 200,
+   "level": 2,
+   "ability": "Stake",
+   "tier": "T1"
+  },
+  {
+   "souls": 500,
+   "level": 3,
+   "ability": "Crow Familiar",
+   "tier": "U"
+  },
+  {
+   "souls": 1400,
+   "level": 5,
+   "ability": "Flight",
+   "tier": "U"
+  },
+  {
+   "souls": 3200,
+   "level": 8,
+   "ability": "Assassinate",
+   "tier": "U"
+  },
+  {
+   "souls": 3200,
+   "level": 8,
+   "ability": "Assassinate",
+   "tier": "T1"
+  },
+  {
+   "souls": 3200,
+   "level": 8,
+   "ability": "Assassinate",
+   "tier": "T2"
+  },
+  {
+   "souls": 3900,
+   "level": 9,
+   "ability": "Crow Familiar",
+   "tier": "T1"
+  },
+  {
+   "souls": 5300,
+   "level": 11,
+   "ability": "Crow Familiar",
+   "tier": "T2"
+  },
+  {
+   "souls": 6000,
+   "level": 12,
+   "ability": "Flight",
+   "tier": "T1"
+  },
+  {
+   "souls": 7600,
+   "level": 14,
+   "ability": "Flight",
+   "tier": "T2"
+  },
+  {
+   "souls": 9200,
+   "level": 16,
+   "ability": "Stake",
+   "tier": "T2"
+  },
+  {
+   "souls": 13800,
+   "level": 21,
+   "ability": "Crow Familiar",
+   "tier": "T3"
+  },
+  {
+   "souls": 20600,
+   "level": 26,
+   "ability": "Assassinate",
+   "tier": "T3"
+  },
+  {
+   "souls": 32100,
+   "level": 31,
+   "ability": "Stake",
+   "tier": "T3"
+  },
+  {
+   "souls": 48600,
+   "level": 36,
+   "ability": "Flight",
+   "tier": "T3"
+  }
+ ],
+ "rows": [
+  {
+   "item": "Mystic Burst",
+   "souls": 1600,
+   "kind": "hit",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "+22%",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Extra Charge",
+   "souls": 3200,
+   "kind": "charged",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": "DEAD-AT-BUY",
+   "F7": null
+  },
+  {
+   "item": "Rapid Recharge",
+   "souls": 5600,
+   "kind": "charged",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Mystic Vulnerability",
+   "souls": 12000,
+   "kind": "spiritsrc",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Tankbuster",
+   "souls": 14400,
+   "kind": "hit",
+   "flag": "ULT-ONLY",
+   "verdict": "delay to ~32000 or reorder/buy enabler first",
+   "grade": "CALCULATED",
+   "margin": "+26%",
+   "gap": 17600,
+   "B": "ULT-ONLY",
+   "F7": "ULT-ONLY"
+  },
+  {
+   "item": "Compress Cooldown",
+   "souls": 16000,
+   "kind": "imbue",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Surge of Power",
+   "souls": 20800,
+   "kind": "imbue",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Escalating Exposure",
+   "souls": 25600,
+   "kind": "spiritsrc+stack",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Superior Cooldown",
+   "souls": 33600,
+   "kind": "cast",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Mystic Reverb",
+   "souls": 44800,
+   "kind": "hitimb",
+   "flag": "ULT-ONLY",
+   "verdict": "skip/swap",
+   "grade": "CALCULATED",
+   "margin": "+278%",
+   "gap": null,
+   "B": "ULT-ONLY",
+   "F7": "ULT-ONLY"
+  },
+  {
+   "item": "Lightning Scroll",
+   "souls": 51200,
+   "kind": "ult",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Spiritual Overflow",
+   "souls": 56000,
+   "kind": "stack",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  }
+ ],
+ "assumptions": {
+  "game_build": "6801 (gt repo); installed client 6819 unverified",
+  "point_model": "A (unlock currency separate, 1/2/5 AP)",
+  "charge_rule": "2+ charges (Kieran); F7 alternative reported",
+  "walk": "core boxes L-R, components consumed, sells dropped"
+ }
+}

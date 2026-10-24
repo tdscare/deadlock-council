@@ -1,0 +1,122 @@
+{
+ "id": "haze_booster_vs_lifesteal",
+ "title": "Haze: Healing Booster vs Bullet Lifesteal at the 16k slot (does heal amp apply to lifesteal?)",
+ "hero": "Haze",
+ "playstyle": "Victor Cosplay Haze",
+ "builds": [
+  "haze"
+ ],
+ "question": "Does Healing Booster's +20% heal amp multiply Smoke T3 lifesteal and item bullet lifesteal, and is it worth more than Bullet Lifesteal in the same slot?",
+ "hypothesis": "Model (haze_model.py): Bullet Lifesteal +204 HP per 1k souls vs Healing Booster +133 (amp applies) or +30 (amp does not apply) in a 12 s focus fight. Prediction: healing with Bullet Lifesteal >= healing with Healing Booster in both smoke and no-smoke blocks.",
+ "arms": [
+  {
+   "name": "base",
+   "items": [
+    "upgrade_titan_round",
+    "upgrade_blitz_bullets",
+    "upgrade_ricochet"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "14.4k loadout",
+   "notes": ""
+  },
+  {
+   "name": "healing_booster",
+   "items": [
+    "upgrade_titan_round",
+    "upgrade_blitz_bullets",
+    "upgrade_ricochet",
+    "upgrade_healing_booster"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "16k",
+   "notes": ""
+  },
+  {
+   "name": "bullet_lifesteal",
+   "items": [
+    "upgrade_titan_round",
+    "upgrade_blitz_bullets",
+    "upgrade_ricochet",
+    "upgrade_vampire"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "16k",
+   "notes": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "unlock 7",
+  "souls": 50000,
+  "position": "enemy 350u",
+  "enemies": [
+   {
+    "hero": "Haze",
+    "count": 1,
+    "items": "none",
+    "behaviour": "bot",
+    "hp": "egod"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 40 (clamped, heals never capped)",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "hardreset between blocks (fresh pawns, factory cooldowns/charges, unlock 7 = all 3 tiers on every ability in BOTH arms)",
+  "Same position (fetch 350, aimoff 5.5 3), same enemy bot (Haze), egod default floor",
+  "Arms interleaved A,B,A,B (counterbalanced A,B,B,A for the second half)",
+  "healreset + mark none around every reset",
+  "cast reload 2.5 before each fire block (no auto-reload op)",
+  "accuracy 0.5 0",
+  "two blocks per arm: (a) no smoke fire 4 s, (b) cast 2 0.3 then fire 4 s"
+ ],
+ "procedure": [
+  "per arm: give; lowhp 40; cast reload 2.5; mark <arm>_nosmoke; fire 4; healsum; healreset",
+  "cast reload 2.5; cast 2 0.3; mark <arm>_smoke; fire 4; healsum; lowhp 0",
+  "hardreset"
+ ],
+ "trials": 6,
+ "metrics": [
+  {
+   "name": "heal_per_damage_smoke",
+   "unit": "ratio",
+   "how": "healDiffObserved / damage dealt (damage csv) in smoke block",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "heal_per_damage_nosmoke",
+   "unit": "ratio",
+   "how": "same, no smoke",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "damage_4s",
+   "unit": "hp",
+   "how": "damage csv",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "heal_per_damage_smoke",
+  "min_effect_pct": 10,
+  "min_trials": 6,
+  "rule": "Amp-on-lifesteal = (HB smoke ratio - base ratio) / base ratio ~= 0.20 confirms amp applies. SUPPORTS the reorder (Bullet Lifesteal at 16k) if bullet_lifesteal heal >= healing_booster heal; REFUTES if healing_booster heals >=10% more with non-overlapping ranges."
+ },
+ "limitations": [
+  "Checkpoint level/ability-tier states cannot be reproduced (unlock sets all tiers; GAPS #2): results are late-game relative comparisons only.",
+  "Regen part of Healing Booster (+3/s) is included in healDiffObserved; subtract 3 x 4 s x 1.2."
+ ]
+}

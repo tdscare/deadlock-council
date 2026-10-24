@@ -1,0 +1,84 @@
+{
+ "id": "duo_ivy_seven_storm_drop",
+ "title": "Ivy + Seven: Storm Cloud on landing",
+ "hero": "Seven",
+ "playstyle": "Ult Seven",
+ "builds": [
+  "ivy",
+  "seven"
+ ],
+ "question": "Does ulting right after Air Drop give the storm +20%?",
+ "hypothesis": "H5.1-H5.3",
+ "arms": [
+  {
+   "name": "solo",
+   "items": [],
+   "ability_order": null,
+   "souls": 25000,
+   "notes": "storm on foot"
+  },
+  {
+   "name": "dropped",
+   "items": [],
+   "ability_order": null,
+   "souls": 25000,
+   "notes": "storm within 0.5s of landing"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "~25k",
+  "souls": 25000,
+  "position": "3 bots spread within 15m",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "Ivy",
+    "count": 1,
+    "role": "Air Drop"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "bot HP"
+  ]
+ },
+ "procedure": [
+  "(dropped) Static Charge a bot while carried, Ivy drops Seven, Seven ults",
+  "Record storm damage over the first 8s and Static Charge stun"
+ ],
+ "metrics": [
+  {
+   "name": "storm_8s",
+   "unit": "hp",
+   "how": "sum on 3 bots",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "storm_8s",
+  "min_effect_pct": 15,
+  "min_trials": 5,
+  "rule": "higher is better"
+ },
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists"
+ ],
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

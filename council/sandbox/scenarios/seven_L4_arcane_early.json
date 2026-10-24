@@ -1,0 +1,100 @@
+{
+ "id": "seven_L4_arcane_early",
+ "title": "Arcane Surge before Surge of Power (restore) vs late (current) at 5.6k and 10k",
+ "hero": "Seven",
+ "playstyle": "Ult Seven",
+ "builds": [
+  "seven"
+ ],
+ "question": "Does buying Arcane Surge before Surge of Power raise Power Surge damage and storm damage at 5.6k-18k as the model says?",
+ "hypothesis": "H-L4: at 10k souls, storm per bot +37% and Power Surge chain damage on 4 bots higher with Arcane early (spirit invest 4.8k, +20 spirit on the next cast after a dash-jump). Equal from 18.4k.",
+ "arms": [
+  {
+   "name": "CUR_10k",
+   "items": [
+    "upgrade_magic_storm",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_health_stealing_magic",
+    "upgrade_sprint_booster"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 9600,
+   "notes": "Extra Stamina kept (no Arcane)"
+  },
+  {
+   "name": "RES_10k",
+   "items": [
+    "upgrade_arcane_surge",
+    "upgrade_magic_storm",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_health_stealing_magic",
+    "upgrade_sprint_booster"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 9600,
+   "notes": "dash-jump (cast jump + cast alt?) before cast 3 / cast 4"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "souls 9600 (levels.json)",
+  "souls": 9600,
+  "position": "mid lane, bots on a 300 u ring (inside the 40 m storm)",
+  "enemies": [
+   {
+    "hero": "Haze (bot)",
+    "count": 4,
+    "items": [],
+    "behaviour": "stand, attacks disabled",
+    "hp": "ekeep 0.9"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 50 (heals never capped)",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance (enemies 3 at 300 u ring, main target 350 u)",
+  "hardreset between blocks (fresh cooldowns, no items)",
+  "Same souls/level/ability tiers (unlock 7) in every arm except the thing under test",
+  "Same bot heroes, HP keep-alive (ekeep 0.9) and resists",
+  "Arms interleaved A,B,A,B; A/A floor run first"
+ ],
+ "procedure": [
+  "give items; enemies 4 220 8; fetch 350; cast reload 2.5",
+  "cast jump 0.2 (dash-jump approximation; verify Arcane buff in 'mods'); cast 3 0.3; fire 8",
+  "hardreset-equivalent items; cast jump 0.2; cast 4 17"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "power_surge_dmg",
+   "unit": "hp",
+   "how": "damage csv ability Power Surge, all bots, 8 s fire",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "storm_dmg_per_bot",
+   "unit": "hp",
+   "how": "damage csv",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "power_surge_dmg",
+  "min_effect_pct": 15,
+  "min_trials": 5,
+  "rule": "RES beats CUR by >=15% on both metrics supports the restore"
+ },
+ "blockedIfNo": [
+  "dash-jump op (cast jump + cast alt untested as dash-jump)"
+ ]
+}

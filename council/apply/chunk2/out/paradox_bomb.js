@@ -1,0 +1,241 @@
+{
+ "id": "paradox_bomb",
+ "hk": "hero_chrono",
+ "hero": "Paradox",
+ "tag": "Fix",
+ "name": "Rizuhble's Time Bomb Paradox",
+ "desc": "Bomb Paradox",
+ "tg": [
+  "spirit",
+  "damage",
+  "Echo Shard"
+ ],
+ "abil": [
+  "Pulse Grenade",
+  "Time Wall",
+  "Kinetic Carbine",
+  "Paradoxical Swap"
+ ],
+ "order": [
+  1,
+  1,
+  2,
+  2,
+  3,
+  1,
+  4,
+  4,
+  1,
+  2,
+  4,
+  4,
+  2,
+  3,
+  3,
+  3
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Getting poked out in lane. Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Mystic Expansion",
+      "",
+      "1"
+     ],
+     [
+      "Extra Stamina",
+      ""
+     ],
+     [
+      "Arcane Surge",
+      "Dash-jump right before you throw the grenade."
+     ],
+     [
+      "Duration Extender",
+      "",
+      "1"
+     ],
+     [
+      "Spirit Lifesteal",
+      ""
+     ],
+     [
+      "Veil Walker",
+      ""
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Mystic Vulnerability",
+      ""
+     ],
+     [
+      "Compress Cooldown",
+      "",
+      "1"
+     ],
+     [
+      "Superior Duration",
+      ""
+     ],
+     [
+      "Slowing Hex",
+      ""
+     ],
+     [
+      "Warp Stone",
+      ""
+     ],
+     [
+      "Greater Expansion",
+      ""
+     ],
+     [
+      "Echo Shard",
+      "Throw the second grenade straight after the first so the stacks pile up.",
+      "1"
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Escalating Exposure",
+      ""
+     ],
+     [
+      "Infuser",
+      ""
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Vortex Web",
+      ""
+     ],
+     [
+      "Spirit Burn",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Veil Walker if needed. Ahead? Skip it until you're dying. Sell Warp Stone for it.",
+    true,
+    [
+     [
+      "Plated Armor",
+      "Most of their damage is gun."
+     ],
+     [
+      "Spirit Resilience",
+      "Their spirit damage is what keeps killing you."
+     ],
+     [
+      "Dispel Magic",
+      "Slows and hexes keep landing on you."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+     ],
+     [
+      "Metal Skin",
+      "Their gun carry dives you after your grenades are out."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this. Otherwise sell Arcane Surge."
+     ],
+     [
+      "Focus Lens",
+      "Sell Warp Stone for this."
+     ],
+     [
+      "Cheat Death",
+      "Sell Veil Walker for this."
+     ],
+     [
+      "Refresher",
+      "Sell Vortex Web for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Round 13: new bomb build — sources: lockbuilds Very Big Pulse (Crafekster, 14,290, Oct 6), SOLVED BOMB BUILD (Oct 15), Puppydox (Oct 2); seemeta Oct 5–19 Paradox items (Duration Extender 15.6%, Superior Duration 16.7%, Mystic Expansion 13.4%, Echo Shard 11.4%, Greater Expansion 10.8%, Arcane Surge 7.7%); ability order: mobalytics build-stats grid, Pulse Grenade maxed first in 3.2K matches, rest by the same grid (Swap and Wall before the Carbine upgrades, which this build doesn't use).",
+  "Round 13: kit numbers: Pulse Grenade 35 + 0.3 spirit per pulse every 0.8s for 3.2s (T2 55 + 0.8, T3 +4% amp per stack and +1.6s = 6 pulses). Duration Extender (+22%) gives a 7th pulse once T3 is in (5.9s), Arcane Surge (+15%) an 8th. No Mystic Burst/Tankbuster: pulses only clear 165 at about 140 spirit power.",
+  "Round 13 (notes policy): notes cut to tips, situational calls and sells; every remaining claim checked in the game files.",
+  "Round 14: Refresher now sells Arcane Surge (the only T2 left in the final build) instead of Warp Stone, which Counters already sells; Divine Barrier added to rich (Dispel Magic is in Counters). Vortex Web how-to note emptied. Counterspell note made concrete.",
+  "Round 15: Infuser note emptied (how-to, not an allowed note). Divine Barrier now sells Dispel Magic (it replaces it) instead of Veil Walker.",
+  "Round 19: style check, no change. Spirit/utility Paradox is a real public style (lockbuilds top 1 paradox eu, fargareko Phantom VI: Slowing Hex, Superior Duration, Echo Shard, Compress, Greater Expansion, Superior Cooldown, Escalating Exposure, Spirit Burn, Vortex Web).",
+  "Round 20: late list to ~85k: Transcendent, Divine Barrier, Focus Lens (CallMeKimbo), Cheat Death (fargareko), Refresher moved last (luxury). Slot locked merged in.",
+  "Round 23: kit check, no changes.",
+  "Round 25: points reordered for the bomb: Time Wall unlocked second with T1 (bigger, longer wall that holds people in the pulses), Swap T1/T2 earlier, Swap T3 (multi-swap, +10% max-health damage) before Wall T3, Carbine untouched until last.",
+  "Slot locked: Transcendent Cooldown moved out of the rich box (Kieran rule: tiny-gain expensive upgrades are Slot locked).",
+  "Cost audit: Spirit Lifesteal moved after Duration Extender so spirit 4.8k lands at 4.8k instead of 6.4k. Focus Lens now sells Warp Stone and Cheat Death sells Veil Walker, so health never drops below 9,600."
+ ]
+}

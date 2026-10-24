@@ -1,0 +1,21 @@
+BUILD geist | diff: added Mid · L-R|Healing Booster, Mid · L-R|Extra Charge; removed Mid · cont.|Healing Booster, Late · L-R|Extra Charge
+fixed: 2 | UNRESOLVED in resulting build: 1 | NEW: 4
+  fixed   bc: OVERSHOOT_GUN_BEFORE_HEALTH geist: gun 8000 at health 4.8k @18400
+  fixed   bc: HEALTH_4.8K_AFTER_16K geist: at 18400
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY geist: Spirit Resilience: Your own bombs hurt you with spirit damage, so this cuts that too.
+STRATEGY BLOCK
+INTERACTION: no damage/fire-rate/stat item added, removed or reordered
+OVERLAP check (changed items):
+  overlap Healing Booster (moved earlier): at_buy=UNKNOWN; core_end=UNKNOWN
+  overlap Extra Charge (moved earlier): no overlap-candidate
+UNRESOLVED overlap-candidates in resulting build (not part of this change): 6
+  UNRESOLVED overlap-candidate Mystic Regeneration [at_buy=UNKNOWN]
+  UNRESOLVED overlap-candidate Radiant Regeneration [at_buy=UNKNOWN; core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Spellslinger [at_buy=ADDS-VALUE(9.6% whole item); core_end=REDUNDANT-LIKELY(6.8% whole item)]
+  UNRESOLVED overlap-candidate Rapid Recharge [at_buy=UNKNOWN; core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Counterspell [core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Unstoppable [core_end=UNKNOWN]
+WARN WAIVED bc: FRESH_T2_LATE geist: Spirit Lifesteal @21600 because: Spirit Lifesteal at 21.6k is a Leech component, not a dead-end late T2; every order that puts all T2s under 20k either delays the Geist health spike to 18.4k or the main gun 8k to 21.6k (computed).
+BLOCK OVERLAP: Healing Booster (moved earlier) is an overlap-candidate with a low/unknown in-build marginal (at_buy=UNKNOWN; core_end=UNKNOWN) and no `context` evidence file (SCOPE: build-context, BUILD: geist, ITEM: Healing Booster) compares the complete build with/without it vs the alternative use of the same souls
+BLOCK STRATEGY: proposal changes purchase order + greens (Extra Regen,Extra Stamina,Spirit Resilience,Bullet Lifesteal,Spirit Lifesteal,Healing Booster,Leech -> Extra Regen,Extra Stamina,Healing Booster,Spirit Resilience,Bullet Lifesteal,Spirit Lifesteal,Leech) + 4.8k spike timing (vitality 18400 -> 12800, spirit 16800 -> 18400) but cites no `strategy` evidence file (run abtimeline.py --strategy geist <checkpoints> and cite it as kind `strategy`)
+RESULT: BLOCKED

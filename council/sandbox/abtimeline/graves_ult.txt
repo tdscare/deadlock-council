@@ -1,0 +1,102 @@
+# graves_ult | Graves | Rizuhble's Zombie Horde Graves
+abilities: 1=Jar of Dead (ability_necro_hauntingskull, start_trained=false, Signature) / 2=Grasping Hands (ability_necro_zombiewall, start_trained=false, Signature) / 3=Essence Theft (ability_necro_fear, start_trained=false, Signature) / 4=Borrowed Decree (ability_necro_gravestone, start_trained=false, Ultimate)
+order: 1123444224231133
+model A (data):  Jar of Dea:U@0  Jar of Dea:T1@200  Grasping H:U@500  Essence Th:U@1400  Borrowed D:U@3200  Borrowed D:T1@3200  Borrowed D:T2@3200  Grasping H:T1@3900  Grasping H:T2@5300  Borrowed D:T3@9200  Grasping H:T3@13800  Essence Th:T1@14900  Jar of Dea:T2@17400  Jar of Dea:T3@26900  Essence Th:T2@32100  Essence Th:T3@48600
+model B (old):   Jar of Dea:T1@200  Jar of Dea:T2@900  Grasping H:T1@2000  Essence Th:T1@2600  Borrowed D:U@3900  Borrowed D:T1@4600  Borrowed D:T2@5300  Grasping H:T2@6000  Grasping H:T3@6800  Borrowed D:T3@7600  Essence Th:T2@9200  Jar of Dea:T3@10100  Essence Th:T3@11900
+tier upgrades: Jar of Dead: HealPerPickup+5,HealPerPickup+0.16x / SlowPercent+24,SlowDuration+1 / SkullCount+2,SkullLifetime+4 | Grasping Han: AbilityDuration+2 / Damage+90,ZombieWallLength+10 / ImmobilizeDuration+0.75,SummonCount+1,AbilityCooldown-14 | Essence Thef: MaxStolenSpiritResist+5 / MaxStolenAttackDamage+20 / SkullBuildUp+0.15,ZombieMeleeBuildUp+0.15,ZombieExplosionBuildUp+1,MaxStolenTargets+1 | Borrowed Dec: AbilityCooldown-15,MoveSpeedPercent+25 / AbilityDuration+10,SummonFrequency-0.3 / CurrentHealthDamagePercentage+5
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1    19  Extra Spirit
+        Jar of Dea T1 ch4 cd0/13 Damage=21 | Grasping H U ch1 cd34 d5 Damage=121 | Essence Th L[U] | Borrowed D L
+  1600 L5   2    21  Extra Stamina
+        Jar of Dea T1[T2] ch4 cd0/13 Damage=21 | Grasping H U ch1 cd34 d5 Damage=124 | Essence Th U ch1 cd0 d4 MaxStole=30 | Borrowed D L
+  2400 L6   3    34  Improved Spirit
+        Jar of Dea T1[T2] ch4 cd0/13 Damage=25 | Grasping H U[T1] ch1 cd34 d5 Damage=145 | Essence Th U ch1 cd0 d4 MaxStole=34 | Borrowed D L
+  3200 L8   4    37  Grit
+        Jar of Dea T1[T2] ch4 cd0/13 Damage=25 | Grasping H U[T1] ch1 cd34 d5 Damage=149 | Essence Th U[T1] ch1 cd0 d4 MaxStole=34 | Borrowed D T2[L] ch1 cd125 d26 Damage=162,SummonMe=58
+  4800 L10  6    47  Duration Extender [imbue Borrowed Decree]
+        Jar of Dea T1[T2] ch4 cd0/13 Damage=28 | Grasping H T1 ch1 cd34 d7 Damage=165 | Essence Th U[T1] ch1 cd0 d4 MaxStole=37 | Borrowed D T2[T1] ch1 cd125 d26 Damage=175,SummonMe=63
+  6400 L12  8    64  Enchanter's Emblem
+        Jar of Dea T1[T2] ch4 cd0/13 Damage=32 | Grasping H T2 ch1 cd34 d7 Damage=283 | Essence Th U[T1] ch1 cd0 d4 MaxStole=41 | Borrowed D T2 ch1 cd125 d26 Damage=196,SummonMe=72
+  8000 L14 10    72  Spirit Lifesteal
+        Jar of Dea T1[T2] ch4 cd0/13 Damage=34 | Grasping H T2[T3] ch1 cd34 d7 Damage=296 | Essence Th U[T1] ch1 cd0 d4 MaxStole=43 | Borrowed D T2[T3] ch1 cd125 d26 Damage=207,SummonMe=76
+  8800 L15 11    73  Spirit Shielding
+        Jar of Dea T1[T2] ch4 cd0/13 Damage=34 | Grasping H T2[T3] ch1 cd34 d7 Damage=297 | Essence Th U[T1] ch1 cd0 d4 MaxStole=43 | Borrowed D T2[T3] ch1 cd125 d26 Damage=208,SummonMe=77
+ 12000 L19 15    78  Heroic Aura
+        Jar of Dea T1[T3] ch4 cd0/13 Damage=35 | Grasping H T2[T3] ch1 cd34 d7 Damage=304 | Essence Th U[T3] ch1 cd0 d4 MaxStole=44 | Borrowed D T3 ch1 cd125 d26 Damage=214,SummonMe=79
+ 13600 L20 16    98  Compress Cooldown [imbue Borrowed Decree]
+        Jar of Dea T1[T3] ch4 cd0/13 Damage=40 | Grasping H T2[T3] ch1 cd34 d7 Damage=337 | Essence Th U[T3] ch1 cd0 d4 MaxStole=49 | Borrowed D T3 ch1 cd125 d26 Damage=239,SummonMe=89
+ 15200 L22 18   107  Superior Duration
+        Jar of Dea T1[T3] ch4 cd0/13 Damage=43 | Grasping H T3 ch1 cd20 d7 Damage=351 | Essence Th T1[T3] ch1 cd0 d4 MaxStole=52 | Borrowed D T3 ch1 cd125 d26 Damage=251,SummonMe=94
+ 16800 L23 19   115  Superior Cooldown
+        Jar of Dea T1[T3] ch4 cd0/13 Damage=45 | Grasping H T3 ch1 cd20 d7 Damage=364 | Essence Th T1[T3] ch1 cd0 d4 MaxStole=54 | Borrowed D T3 ch1 cd125 d26 Damage=261,SummonMe=98
+ 18400 L24 20   116  Mystic Vulnerability
+        Jar of Dea T2[T3] ch4 cd0/13 Damage=45 | Grasping H T3 ch1 cd20 d7 Damage=366 | Essence Th T1[T3] ch1 cd0 d4 MaxStole=54 | Borrowed D T3 ch1 cd125 d26 Damage=263,SummonMe=98
+ 24800 L28 24   161  Diviner's Kevlar
+        Jar of Dea T2[T3] ch4 cd0/13 Damage=56 | Grasping H T3 ch1 cd20 d7 Damage=437 | Essence Th T1[T3] ch1 cd0 d4 MaxStole=65 | Borrowed D T3 ch1 cd125 d26 Damage=319,SummonMe=120
+ 25600 L28 24   188  Arcane Surge
+        Jar of Dea T2[T3] ch4 cd0/13 Damage=63 | Grasping H T3 ch1 cd20 d7 Damage=480 | Essence Th T1[T3] ch1 cd0 d4 MaxStole=72 | Borrowed D T3 ch1 cd125 d26 Damage=353,SummonMe=134
+ 30400 L30 26   240  Boundless Spirit
+        Jar of Dea T3 ch4 cd0/13 Damage=76 | Grasping H T3 ch1 cd20 d7 Damage=564 | Essence Th T1[T3] ch1 cd0 d4 MaxStole=85 | Borrowed D T3 ch1 cd125 d26 Damage=420,SummonMe=160
+ 36800 L32 28   253  Echo Shard [imbue Borrowed Decree]
+        Jar of Dea T3 ch4 cd0/13 Damage=79 | Grasping H T3 ch1 cd20 d7 Damage=585 | Essence Th T2[T3] ch1 cd0 d4 MaxStole=108 | Borrowed D T3 ch1 cd125 d26 Damage=436,SummonMe=167
+ 41600 L34 30   256  Escalating Exposure
+        Jar of Dea T3 ch4 cd0/13 Damage=80 | Grasping H T3 ch1 cd20 d7 Damage=589 | Essence Th T2[T3] ch1 cd0 d4 MaxStole=109 | Borrowed D T3 ch1 cd125 d26 Damage=440,SummonMe=168
+ 48000 L35 31   295  Magic Carpet
+        Jar of Dea T3 ch4 cd0/13 Damage=90 | Grasping H T3 ch1 cd20 d7 Damage=652 | Essence Th T2[T3] ch1 cd0 d4 MaxStole=119 | Borrowed D T3 ch1 cd125 d26 Damage=489,SummonMe=187
+ 54400 L36 32   296  Spirit Burn
+        Jar of Dea T3 ch4 cd0/13 Damage=90 | Grasping H T3 ch1 cd20 d7 Damage=654 | Essence Th T3 ch1 cd0 d4 MaxStole=119 | Borrowed D T3 ch1 cd125 d26 Damage=491,SummonMe=188
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @4800 Duration Extender [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Borrowed Decree; needs it trained and the stat the item raises
+    game text: Imbue an ability to increase its Duration.
+    at buy: Borrowed Decree T2: cd 125s, duration 26s, charges 1; duration-scaled props: AbilityDuration=26, AbilityChannelTime=0.66, SlowDuration=1.25, SummonLifetime=20
+- @6400 Enchanter's Emblem [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: While you are above {s:LifeThreshold}% health, gain bonus {g:citadel_inline_attribute:'Spirit'} and Cooldown Reduction.
+    at buy: not computed (needs play data)
+    reliability: its spirit is conditional: only above 65% health
+- @8800 Spirit Shielding [taken] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: triggers on damage TAKEN from enemies (enemy-dependent) (DamageWindow=3.5, DamageThreshold=225)
+    game text: Gain a Barrier whenever you take significant {g:citadel_inline_attribute:'SpiritDamage'} from enemy Heroes in a small time frame.
+    at buy: not computed (needs play data)
+- @13600 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Borrowed Decree; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Borrowed Decree T3: cd 125s, duration 26s, charges 1; saves 22.5s/cast (0.48->0.59 casts/min)
+- @15200 Superior Duration [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Increases the duration of your abilities and items.
+    at buy: 4 abilities trained, summed cooldown 145s
+- @16800 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 145s; 20% saves 29.0s per rotation
+- @18400 Mystic Vulnerability [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: When an enemy takes {g:citadel_inline_attribute:'SpiritDamage'}, they have their {g:citadel_inline_attribute:'SpiritResist'} reduced. | vdata: proc damage types ABILITY
+    at buy: spirit sources: Jar of Dead, Grasping Hands, Essence Theft, Borrowed Decree
+- @25600 Arcane Surge [dash] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs a dash-jump then an ability
+    game text: After you Dash-Jump, the next ability you use within {s:ArcaneSurgeWindow}s will have bonus Range, Duration, and Spirit Power.
+    at buy: not computed (needs play data)
+    reliability: its spirit is conditional: only the next ability after a dash-jump
+- @36800 Echo Shard [imbue] -> ECHO-ON-ULT | verdict: fix (Echo Shard is non-ultimate) | CALCULATED
+    rule: imbued on Borrowed Decree; needs it trained and non-ultimate and the stat the item raises
+    game text: (no game text)
+    at buy: Borrowed Decree T3: cd 125s, duration 26s, charges 1
+- @41600 Escalating Exposure [spiritsrc+stack] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} applies a stacking Spirit Amp that increases your {g:citadel_inline_attribute:'SpiritDamage'} to t... | vdata: proc damage types ABILITY
+    at buy: spirit sources: Jar of Dead, Grasping Hands, Essence Theft, Borrowed Decree
+    reliability: max 12 stacks, one per 0.7s of spirit hits = 8.4s of continuous spirit damage to max
+- @54400 Spirit Burn [win] -> OK | verdict: buy now | UNTESTABLE-HIGH-RISK
+    rule: 500 spirit damage to one enemy within 5s (game text: 'significant spirit damage'); per-enemy cooldown
+    game text: Dealing significant {g:citadel_inline_attribute:'SpiritDamage'} to an enemy within {s:DamageThresholdDuration}s causes an explosion dealing damage and...
+    at buy: all abilities in 5s ~1542 (Jar of Dead 90x1; Grasping Han 654x1; Essence Thef 119x1; Borrowed Dec 679x1), without ult 863
+    margin: +73% without ult, +208% with
+    reliability: needs the whole combo on one target (hit rate, travel time)
+    unverified: pre/post resist; item and DoT damage count (text says any spirit damage)
+
+no trigger condition (plain stats/actives): Extra Spirit, Extra Stamina, Improved Spirit, Grit, Spirit Lifesteal, Heroic Aura, Diviner's Kevlar, Boundless Spirit, Magic Carpet

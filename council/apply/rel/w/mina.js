@@ -1,0 +1,281 @@
+{
+ "id": "mina",
+ "hero": "Mina",
+ "tag": "Fix",
+ "name": "Rizuhble's Takeaway Mina",
+ "desc": "",
+ "hk": "hero_vampirebat",
+ "abil": [
+  "Rake",
+  "Sanguine Retreat",
+  "Love Bites",
+  "Nox Nostra"
+ ],
+ "order": [
+  3,
+  1,
+  1,
+  2,
+  1,
+  3,
+  4,
+  3,
+  1,
+  2,
+  2,
+  3,
+  2,
+  4,
+  4,
+  4
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Health",
+      "Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Mystic Burst",
+      ""
+     ],
+     [
+      "Quicksilver Reload",
+      "",
+      "1"
+     ],
+     [
+      "Mystic Expansion",
+      "",
+      "1"
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ],
+     [
+      "Extra Stamina",
+      ""
+     ],
+     [
+      "Grit",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Stamina Mastery",
+      ""
+     ],
+     [
+      "Reactive Barrier",
+      ""
+     ],
+     [
+      "Dispel Magic",
+      ""
+     ],
+     [
+      "Rapid Rounds",
+      ""
+     ],
+     [
+      "Swift Striker",
+      ""
+     ],
+     [
+      "Spirit Sap",
+      ""
+     ],
+     [
+      "Compress Cooldown",
+      "",
+      "1"
+     ]
+    ]
+   ],
+   [
+    "Mid · cont.",
+    "",
+    false,
+    [
+     [
+      "Spirit Lifesteal",
+      ""
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Tankbuster",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Spirit Burn",
+      ""
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Greater Expansion",
+      ""
+     ],
+     [
+      "Infuser",
+      "Pop it with your ult."
+     ],
+     [
+      "Mercurial Magnum",
+      "",
+      "1"
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Tankbuster if needed. Ahead? Skip it until you're dying. Sell Spirit Sap for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "Their gun carry is melting you."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit."
+     ],
+     [
+      "Spellbreaker",
+      "Big spirit bursts catch you when you go in."
+     ],
+     [
+      "Counterspell",
+      "A big ult you can see coming, like Lash's or Infernus's."
+     ],
+     [
+      "Unstoppable",
+      "Stuns keep catching you before you blink."
+     ],
+     [
+      "Ethereal Shift",
+      "They keep jumping you and you can't blink out."
+     ],
+     [
+      "Toxic Bullets",
+      "They're all tanks or self-healers."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Focus Lens",
+      "Upgrade of Spirit Sap. Throw it on them, then ult."
+     ],
+     [
+      "Escalating Exposure",
+      "Sell Swift Striker for this."
+     ],
+     [
+      "Indomitable",
+      "Upgrade of Reactive Barrier."
+     ],
+     [
+      "Mystic Reverb",
+      "On Rake. Sell Tankbuster for this.",
+      "1"
+     ],
+     [
+      "Divine Barrier",
+      "Sell Dispel Magic for this."
+     ],
+     [
+      "Lightning Scroll",
+      "Sell Mercurial Magnum for this."
+     ],
+     [
+      "Cheat Death",
+      "Sell Stamina Mastery for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Dispel Magic back in core at 15.2k (was only a counter): 95% of pro Minas, Kieran's played build says you need it, and his in-game base had it in Mid. Spirit Burn back in core at 32.8k (71% pro late, Kieran mid core); it had slipped into counters.",
+  "Spirit 4.8k at 4.8k and health 4.8k at 9.6k unchanged (Extra Spirit, Mystic Burst, Quicksilver, Mystic Expansion, Improved Spirit; Extra Stamina, Grit, Stamina Mastery, Reactive Barrier).",
+  "Trimmed from 54.4k to 46.4k: Escalating Exposure, Focus Lens and Mystic Reverb out of core (Mystic Vulnerability cut; Focus Lens and Reverb now rich, Spirit Sap stays core and upgrades there). Superior Cooldown is now an upgrade of Compress Cooldown on Rake instead of a fresh T3.",
+  "Kept Kieran's fire-rate pair (Rapid Rounds → Swift Striker), Spirit Lifesteal → Infuser (pop with ult) and Mercurial Magnum on Rake as the last buy. Toxic Bullets added to counters (Kieran: tank shredder with Swift Striker); lane box Mystic Regeneration → Extra Health.",
+  "Ability order: Kieran's played jackalacken order, identical to the mobalytics grid (Rake 93/98% at 5-6, Love Bites 7-8, Rake T3 9, Retreat 10-12, ult last): Rake maxed first for Quicksilver/Compress/Expansion on Rake; only change from the current build is the ult unlocked at 4 (99% public) instead of 6.",
+  "Item fit: Extra Regen out of the lane box (Extra Health stays). Mina heals off Rake and the bats, and Extra Regen isn't in any public Mina list checked (lockbuilds top 30 items, tracklock core/situational, jackalacken's build Kieran plays, his own in-game Mina), while Extra Health is (lockbuilds 29.8% pick, jackalacken early). No other cheap survival item with public Mina support to put in its place. Every other item checked: Mercurial Magnum kept (lockbuilds 10.1% pick, 52.1% WR, avg 37 min; Rake 16s cd feeds it and +22% fire rate on a 12-round 0.252s gun builds Love Bites faster).",
+  "Order: 3112134312223444 (data-first redo, see a7/order_mina.json).",
+  "Threshold: checked on the new order, nothing moved. Mystic Burst at 1.6k (25 spirit, Rake T1): Rake 60+60+1.0×25 = 145 vs 80. Tankbuster at 12k (83 spirit, Rake T3): Rake 203 plus missing-health damage vs 165. Spirit Burn at 32.8k (135 spirit): Rake 255 + Love Bites T3 bite 90+1.85×135 = 340 = 595 vs 500. Mystic Reverb (rich, on Rake): 255+ vs 100.",
+  "Round 10: Indomitable rich note said only 'Upgrade.'; now names Reactive Barrier (its component) and what it does. Tracklock pro Mina (last 30 days, 306 games) late 17%. Nothing else changed: the build matches pro Mina's top items phase by phase.",
+  "Round 13: notes emptied per UPDATE 3 (only sells, swaps, slot locked, counters and verified tips kept); desc shortened to a style label (UPDATE 4).",
+  "Round 14: Dispel Magic given a note (its empty note showed the site default naming Yamato grapple); counters now sell Spirit Sap so Swift Striker is only Mystic Reverb's sell; Spirit Resilience and Counterspell notes fixed; lane note trimmed to the sell; duplicate Swift Striker sell note removed.",
+  "Round 15: Counters caption was 115 chars (game limit 112): now 'Get after Tankbuster' (12k, after the 9.6k health spike), still sells Spirit Sap (109). Divine Barrier added to the rich box with 'Sell Dispel Magic for this.' (Dispel Magic is core; Kieran's layout rule); Dispel Magic note emptied (it only existed to cover a site default that's gone).",
+  "Round 17: Rich Indomitable note 'Upgrade of Reactive Barrier.' like the same upgrade elsewhere. Dispel Magic note left empty (the site no longer fills empty notes).",
+  "Round 19: style check, no change. Spirit burst Mina is the only post-patch public style (lockbuilds Max Burst official Oct 19, Mayonese Oct 18, LordNM, FaxFox Oct 19, Kijua; seemeta Oct 6-20).",
+  "Round 20: late list to ~85k: Focus Lens, Escalating Exposure (Max Burst official late core), Transcendent Cooldown, Indomitable, Mystic Reverb, Divine Barrier, Cheat Death (both LB Mina builds' super-late pick). Slot locked merged in.",
+  "Round 23: Lightning Scroll added to the late list: every bat is ult damage, so everyone the swarm hits gets the slow then the stun. Worth testing.",
+  "Round 25: order 3112134312223444 → 3112134312232444: Love Bites T3 (bite every 5s instead of 10s) before Sanguine Retreat T3.",
+  "Slot locked: Transcendent Cooldown moved out of the rich box (Kieran rule: tiny-gain expensive upgrades are Slot locked).",
+  "Cost pass: Tankbuster moved after Boundless Spirit (was the earliest in any Mina build at 12k).",
+  "Renamed."
+ ]
+}

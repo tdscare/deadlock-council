@@ -1,0 +1,35 @@
+SCOPE: build-context
+KIND: conditional
+BUILD: haze
+ITEM: Frenzy
+CONDITION: health-gated
+ARGS: --conditional haze Frenzy
+GENERATED: 2026-10-24T16:16:52Z
+BODY-SHA: 8cce908c47a21e0673bd9bbfcb664132bdd38fc5cf0679320a17db4cca3dd354
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+METHOD: unconditional value (always-on stats) + peak value x useful active window / 12 s fight; activation from the --strategy enemy model at each checkpoint (ASSUMED enemy dps, CALCULATED item numbers); not buff duration, not a full-health dummy test
+
+checkpoint | enemy | unconditional dmg% | peak dmg% (gun share) | t_activate s | active s | useful s | fight-avg dmg% | dTR% (stats only) | notes
+  5000 | x0.6  |   +11.0 |   +11.8 |  17.2 |   0.0 |   0.0 |   +11.0 |  +65.7 | active below 50% hp: reached after 17.2s under 56 dps, dead at 34.5s
+  5000 | x1.0  |   +11.0 |   +11.8 |   8.3 |   3.7 |   2.6 |   +13.5 |  +46.3 | active below 50% hp: reached after 8.3s under 93 dps, dead at 16.6s
+  5000 | x1.6  |   +11.0 |   +11.8 |   4.7 |   4.7 |   3.3 |   +14.2 |  +38.4 | active below 50% hp: reached after 4.7s under 148 dps, dead at 9.3s
+ 10000 | x0.6  |   +11.4 |   +12.8 |  17.9 |   0.0 |   0.0 |   +11.4 |  +45.5 | active below 50% hp: reached after 17.9s under 80 dps, dead at 35.7s
+ 10000 | x1.0  |   +11.4 |   +12.8 |   9.2 |   2.8 |   2.0 |   +13.5 |  +33.6 | active below 50% hp: reached after 9.2s under 133 dps, dead at 18.4s
+ 10000 | x1.6  |   +11.4 |   +12.8 |   5.3 |   5.3 |   3.7 |   +15.3 |  +28.3 | active below 50% hp: reached after 5.3s under 213 dps, dead at 10.6s
+ 15000 | x0.6  |    +7.8 |   +14.1 |  18.5 |   0.0 |   0.0 |    +7.8 |  +44.3 | active below 50% hp: reached after 18.5s under 94 dps, dead at 37.1s
+ 15000 | x1.0  |    +7.8 |   +14.1 |   9.1 |   2.9 |   2.0 |   +10.2 |  +30.0 | active below 50% hp: reached after 9.1s under 156 dps, dead at 18.2s
+ 15000 | x1.6  |    +7.8 |   +14.1 |   5.2 |   5.2 |   3.6 |   +12.1 |  +24.0 | active below 50% hp: reached after 5.2s under 250 dps, dead at 10.3s
+ 20000 | x0.6  |    +7.9 |   +15.0 |  18.6 |   0.0 |   0.0 |    +7.9 |  +39.9 | active below 50% hp: reached after 18.6s under 109 dps, dead at 37.1s
+ 20000 | x1.0  |    +7.9 |   +15.0 |   9.2 |   2.8 |   2.0 |   +10.4 |  +27.3 | active below 50% hp: reached after 9.2s under 181 dps, dead at 18.4s
+ 20000 | x1.6  |    +7.9 |   +15.0 |   5.2 |   5.2 |   3.7 |   +12.5 |  +22.0 | active below 50% hp: reached after 5.2s under 290 dps, dead at 10.4s
+
+## SCENARIO DESIGNS (three phases; each its own request file, kind INTERACTION)
+  council/sandbox/autorun/scenarios/interaction/int_haze_Frenzy_cond_inactive.txt
+  council/sandbox/autorun/scenarios/interaction/int_haze_Frenzy_cond_activated.txt
+  council/sandbox/autorun/scenarios/interaction/int_haze_Frenzy_cond_realistic.txt
+
+## READING THE EVIDENCE
+  - inactive baseline: only the unconditional part; it is never evidence that the item is weak (meta effect_inactive_on_purpose).
+  - deliberately activated: measures the peak value with the condition forced (health-gated: lowhp; damage-taken: NOT forceable - artificial damage does not trigger it, plugin pauses it).
+  - realistic encounter: needs real enemy damage (shoot-back bot); until it exists the fight-avg column above is CALCULATED+ASSUMED and the verdict stays INSUFFICIENT for damage-taken items.
+  - conclusion changes: if the measured activated peak is below the modelled peak, scale the fight-avg column by measured/modelled; if the realistic run shows activation later than t_activate, recompute useful s.

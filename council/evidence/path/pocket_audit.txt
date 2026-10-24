@@ -1,0 +1,63 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: pocket
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:15Z
+BODY-SHA: 3e5e827689bc6f506a65810123d8faa13275c2a2945e6ccfbff68824f85d2b40
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen, Grit
+  Early · L-R              -> main path (sequential): Restorative Shot, Monster Rounds, Battle Vest, Mystic Burst, Rapid Rounds, Cultist Sacrifice, Swift Striker, Compress Cooldown
+  Mid · L-R                -> main path (sequential): Tankbuster, Majestic Leap, Mystic Expansion, Superior Cooldown, Dispel Magic, Duration Extender, Spirit Burn, Superior Duration
+  Late · L-R               -> main path (sequential): Greater Expansion, Ethereal Shift, Diviner's Kevlar
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Shielding, Unstoppable, Counterspell
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Escalating Exposure, Divine Barrier, Arctic Blast, Mystic Reverb, Refresher
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown
+
+## SALE CHECKLIST (computed)
+- Late · L-R (main path): buy Diviner's Kevlar, sell Restorative Shot
+    function of Restorative Shot: bullet_proc, sustain; replacement Diviner's Kevlar: cooldown, duration, sustain; roles lost: bullet_proc  [VERIFIED GAME MECHANIC]
+    Restorative Shot is a component of later items: no
+    held for 44400.0 souls of purchases; resale 400, net cost of having owned it 400
+    investment before/after gun/vit/spirit 5600/8000/25600 -> 4800/14400/25600; thresholds lost: none
+    trade ratio after the sale 0.27; selling Battle Vest instead: 0.24 (-12.7%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Escalating Exposure, sell Greater Expansion
+    function of Greater Expansion: range, spirit_resist; replacement Escalating Exposure: spirit_resist; roles lost: range  [VERIFIED GAME MECHANIC]
+    Greater Expansion is a component of later items: no
+    held for 18800.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/14400/25600 -> 4800/14400/28800; thresholds lost: none
+    trade ratio after the sale 0.26; selling Battle Vest instead: 0.23 (-12.4%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Divine Barrier, sell Dispel Magic
+    function of Dispel Magic: move_speed, spirit_resist, sustain; replacement Divine Barrier: move_speed, range, sustain; roles lost: spirit_resist  [VERIFIED GAME MECHANIC]
+    Dispel Magic is a component of later items: no
+    held for 30800.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/14400/25600 -> 4800/17600/25600; thresholds lost: none
+    trade ratio after the sale 0.27; selling Battle Vest instead: 0.23 (-12.1%)  [MODELLED ESTIMATE]
+    model limit: Dispel Magic has an active effect (INSTANT_CAST) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Arctic Blast, sell Battle Vest
+    function of Battle Vest: bullet_resist, fire_rate; replacement Arctic Blast: slow, spirit_resist; roles lost: bullet_resist, fire_rate  [VERIFIED GAME MECHANIC]
+    Battle Vest is a component of later items: no
+    held for 48400.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 4800/14400/25600 -> 4800/12800/32000; thresholds lost: none
+    trade ratio after the sale 0.22; selling Swift Striker instead: 0.22 (+0.7%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Mystic Reverb, sell Superior Duration
+    function of Superior Duration: bullet_resist, duration; replacement Mystic Reverb: slow, sustain; roles lost: bullet_resist, duration  [VERIFIED GAME MECHANIC]
+    Superior Duration is a component of later items: no
+    held for 21200.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/14400/25600 -> 4800/14400/28800; thresholds lost: none
+    trade ratio after the sale 0.24; selling Battle Vest instead: 0.22 (-8.3%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Refresher, sell Tankbuster
+    function of Tankbuster: stats only; replacement Refresher: bullet_resist, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Tankbuster is a component of later items: no
+    held for 39600.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/14400/25600 -> 4800/14400/28800; thresholds lost: none
+    trade ratio after the sale 0.29; selling Battle Vest instead: 0.26 (-13.1%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

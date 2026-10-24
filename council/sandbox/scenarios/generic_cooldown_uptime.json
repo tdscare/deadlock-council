@@ -1,0 +1,71 @@
+{
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the item/order under test",
+  "Same enemy hero, level, items, behaviour"
+ ],
+ "builds": [],
+ "id": "generic_cooldown_uptime",
+ "title": "Generic: ability/imbue uptime",
+ "hero": "any",
+ "playstyle": "ability/imbue builds",
+ "question": "Which cooldown item or imbue placement gives more casts/damage over 60s?",
+ "hypothesis": "defined per use",
+ "arms": [
+  {
+   "name": "A",
+   "items": [],
+   "souls": ""
+  },
+  {
+   "name": "B",
+   "items": [],
+   "souls": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "set per use",
+  "enemies": [
+   {
+    "hero": "durable bot",
+    "count": 1,
+    "behaviour": "stationary"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns"
+  ]
+ },
+ "procedure": [
+  "Cast the target ability on cooldown for 60s"
+ ],
+ "metrics": [
+  {
+   "name": "casts_60s",
+   "unit": "count",
+   "how": "",
+   "category": "cooldowns",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "damage_60s",
+   "unit": "hp",
+   "how": "",
+   "category": "sustained damage",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "damage_60s",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "higher better"
+ }
+}

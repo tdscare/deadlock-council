@@ -1,0 +1,103 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: bebop_bomb
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:10:43Z
+BODY-SHA: de67fb384f8268f71c0308dcb300cb0803f4a4c6bbd8118ae52266757864e440
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Spirit Strike: retained-or-upgraded (-> Spirit Snatch)
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed,Trophy Collector)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Enduring Speed: retained
+  Spirit Snatch: retained
+  Veil Walker: retained
+  Trophy Collector: retained
+  Tankbuster: retained
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Superior Cooldown: retained
+  Echo Shard: retained
+  Witchmail: retained
+  Boundless Spirit: retained
+  Greater Expansion: retained
+  Mystic Reverb: retained
+  Spirit Burn: retained
+  Counterspell: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Bullet Resilience: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Escalating Exposure: situational-luxury
+  Magic Carpet: situational-luxury
+  Divine Barrier: situational-luxury
+  Cheat Death: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+  Juggernaut: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Early · L-R                -> main path (sequential): Mystic Burst, Spirit Strike, Sprint Boots, Extra Spirit, Improved Spirit, Compress Cooldown, Enduring Speed
+  Mid · L-R                  -> main path (sequential): Spirit Snatch, Veil Walker, Trophy Collector, Tankbuster, Mystic Expansion, Superior Cooldown, Echo Shard
+  Late · L-R                 -> main path (sequential): Witchmail, Boundless Spirit, Greater Expansion, Mystic Reverb, Spirit Burn
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Counterspell, Metal Skin, Dispel Magic, Plated Armor, Bullet Resilience, Spirit Resilience, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Escalating Exposure, Magic Carpet, Divine Barrier, Cheat Death
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown, Juggernaut
+
+## Veil Walker: sold when buying Escalating Exposure (I'm rich as fuck, luxury)
+  role of Veil Walker: retained; role of Escalating Exposure: situational-luxury
+  Veil Walker: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 12000 souls (~12.0 min), replaced at ~63.8 min -> owned ~51.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/12800/44800 -> after 0/9600/44800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 81 min | window TR | key purchase times (min)
+  as built                                    |          66317 |      0.55 | Veil Walker 12, Escalating Exposure 64
+  keep Veil Walker (slot cap ignored)         |          66469 |      0.56 | Veil Walker 12, Escalating Exposure 66
+  skip Veil Walker                            |          65249 |      0.52 | Escalating Exposure 63
+  sell Trophy Collector instead               |          66501 |      0.56 | Veil Walker 12, Escalating Exposure 65
+  keep Veil Walker (slot cap ignored) vs as built: d souls +178, d window TR +1.6% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Veil Walker vs as built: d souls -425, d window TR -6.0% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Trophy Collector instead vs as built: d souls +211, d window TR +1.7% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  model limit: no modelled stat for Escalating Exposure (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Veil Walker (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | sell Trophy Collector instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+
+## Trophy Collector: sold when buying Magic Carpet (I'm rich as fuck, luxury)
+  role of Trophy Collector: retained; role of Magic Carpet: situational-luxury
+  Trophy Collector: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 13600 souls (~13.2 min), replaced at ~65.0 min -> owned ~51.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/12800/44800 -> after 0/11200/44800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 81 min | window TR | key purchase times (min)
+  as built                                    |          66586 |      0.56 | Trophy Collector 13, Magic Carpet 65
+  keep Trophy Collector (slot cap ignored)    |          66548 |      0.55 | Trophy Collector 13, Magic Carpet 66
+  skip Trophy Collector                       |          67006 |      0.56 | Magic Carpet 63
+  sell Spirit Snatch instead                  |          66527 |      0.55 | Trophy Collector 13, Magic Carpet 64
+  keep Trophy Collector (slot cap ignored) vs as built: d souls -34, d window TR -0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Trophy Collector vs as built: d souls +318, d window TR +1.5% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Spirit Snatch instead vs as built: d souls -33, d window TR -0.4% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Magic Carpet has an active effect (INSTANT_CAST) not priced
+  FINDINGS: a computed alternative sequence is better: skip Trophy Collector
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Trophy Collector; evidence tier: MODEL-ONLY
+
+## Tankbuster: sold when buying Cheat Death (I'm rich as fuck, luxury)
+  role of Tankbuster: retained; role of Cheat Death: situational-luxury
+  Tankbuster: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 16000 souls (~15.5 min), replaced at ~63.8 min -> owned ~48.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/19200/38400 -> after 0/19200/35200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 81 min | window TR | key purchase times (min)
+  as built                                    |          66862 |      0.55 | Tankbuster 16, Cheat Death 64
+  keep Tankbuster (slot cap ignored)          |          66807 |      0.55 | Tankbuster 16, Cheat Death 66
+  skip Tankbuster                             |          67230 |      0.57 | Cheat Death 62
+  sell Trophy Collector instead               |          66873 |      0.55 | Tankbuster 16, Cheat Death 65
+  keep Tankbuster (slot cap ignored) vs as built: d souls -13, d window TR -0.3% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Tankbuster vs as built: d souls +252, d window TR +2.0% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Trophy Collector instead vs as built: d souls +9, d window TR -0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: a computed alternative sequence is better: skip Tankbuster
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Tankbuster; evidence tier: MODEL-ONLY

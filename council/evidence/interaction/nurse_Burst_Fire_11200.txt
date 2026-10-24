@@ -1,0 +1,55 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: nurse
+HERO: Nurse Harrow
+ITEM: Burst Fire
+CHECKPOINT: buy-point at 11200 souls (state souls 11200; item cost 2400)
+VERSION: interaction-v1
+ARGS: --interactions nurse Burst Fire
+GENERATED: 2026-10-24T16:27:37Z
+BODY-SHA: 5e37fcf2e6d11e32cc6a974f84386c09d17f16c737028fa157531ad0e69c07c3
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 2400, unconditional, ranked): 
+VERDICT: Burst Fire delivers the most damage of the equal-soul options in every window (sustained, burst, ult)
+UNKNOWN_CELLS: 1
+SELECTION: build-decision | Burst Fire is bought at 11200 souls in nurse: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (2400) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.3, long_share=0.6, W_sus=10.0, W_burst=3.0; reload 1.9 s (VERIFIED GAME MECHANIC m_reloadDuration (weapon vdata; Wraith value equals its sandbox measurement))
+STATE: owned ['Healing Booster', 'Titanic Magazine', 'Compress Cooldown', 'Surge of Power', 'Burst Fire'] | tiers Leech Therapy=T3(spirit) Wretched Vapors=U(utility) Healing Needles=T2(utility) Lurking Terrors=U(spirit) | weapon invest bonus 46% | spirit 57
+
+## INTERACTION MATRIX (item effect x kit component)
+- fire rate (more bullets) (BonusFireRate=10)
+    normal shooting                              WORKS                      [CALCULATED] more bullets per second (fire-rate pool now 20%: +10 adds 8.3% bullets)
+    1=Leech Therapy T3 [spirit]                  DOES NOT WORK              [CALCULATED] damage ['DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Wretched Vapors U [utility]                NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Healing Needles T2 [utility]               NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    4=Lurking Terrors U (ULT) [spirit]           DOES NOT WORK              [CALCULATED] damage ['DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    ally hits via Healing Needles                WORKS                      [CALCULATED] more shots = more heal bullets (heal keys ['HealRegen', 'HeadshotHealBonusPercent', 'SecondaryShotHealPercent'])
+    other fire-rate items                        WORKS (diminishing)        [CALCULATED] additive pool 20%: relative gain 8.3%
+- fire rate (more bullets) (ActivatedFireRate=32)
+    normal shooting                              WORKS                      [CALCULATED] more bullets per second (fire-rate pool now 20%: +32 adds 26.7% bullets)
+    1=Leech Therapy T3 [spirit]                  DOES NOT WORK              [CALCULATED] damage ['DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Wretched Vapors U [utility]                NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Healing Needles T2 [utility]               NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    4=Lurking Terrors U (ULT) [spirit]           DOES NOT WORK              [CALCULATED] damage ['DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    ally hits via Healing Needles                UNKNOWN                    [UNKNOWN] on-hit trigger ("bullets hit a hero"): whether bullets that hit ALLIES count as hero hits is not in data
+    other fire-rate items                        WORKS (diminishing)        [CALCULATED] additive pool 20%: relative gain 26.7%
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |       441              |       181              |       539              | 0
+Burst Fire                   |        612 (+39..+39%) |        243 (+35..+35%) |          539 (+0..+0%) | 0
+  candidate detail (reading 1): sustained bullets 32, gun 592, stacks 0, procs 0, spirit 19 | ult: Lurking Terrors damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Burst Fire
+  burst: rank (reading 1) Burst Fire
+  ult: rank (reading 1) Burst Fire
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (200s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_nurse_Burst_Fire_ally_hits_via_Healing_Needles_fire_rate.txt
+
+## NOT DETERMINED FROM DATA
+  - fire rate (more bullets) (ActivatedFireRate=32): ally hits via Healing Needles: on-hit trigger ("bullets hit a hero"): whether bullets that hit ALLIES count as hero hits is not in data
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

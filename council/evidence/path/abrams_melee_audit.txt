@@ -1,0 +1,55 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: abrams_melee
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:15Z
+BODY-SHA: 961d305f944b8eaaa7483fe3581914bbbef1003bda23f0bbeedc5c42f6823a31
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Restorative Shot, Close Quarters, Melee Lifesteal, Melee Charge, Stalker, Lifestrike, Sprint Boots, Enduring Speed
+  Mid · L-R                -> main path (sequential): Spirit Strike, Bullet Resist Shredder, Point Blank, Spirit Snatch, Hunter's Aura, Crushing Fists, Berserker
+  Late · L-R               -> main path (sequential): Spirit Resilience, Extra Health, Colossus, Phantom Strike
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Plated Armor, Spellbreaker, Counterspell, Dispel Magic, Metal Skin, Healbane
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Witchmail, Scourge, Unstoppable, Divine Barrier, Ethereal Shift
+  Slot locked              -> optional upgrade (branch): Juggernaut
+
+## SALE CHECKLIST (computed)
+- Mid · L-R (main path): buy Berserker, sell Restorative Shot
+    function of Restorative Shot: bullet_proc, sustain; replacement Berserker: bullet_resist; roles lost: bullet_proc, sustain  [VERIFIED GAME MECHANIC]
+    Restorative Shot is a component of later items: no
+    held for 26800.0 souls of purchases; resale 400, net cost of having owned it 400
+    investment before/after gun/vit/spirit 15200/4800/4800 -> 17600/4800/4800; thresholds lost: none
+    trade ratio after the sale 0.56; selling Bullet Resist Shredder instead: 0.48 (-13.9%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Witchmail, sell Hunter's Aura
+    function of Hunter's Aura: resist_shred, slow; replacement Witchmail: cooldown, spirit_resist; roles lost: resist_shred, slow  [VERIFIED GAME MECHANIC]
+    Hunter's Aura is a component of later items: no
+    held for 30000.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 17600/20800/4800 -> 14400/27200/4800; thresholds lost: none
+    trade ratio after the sale 0.45; selling Bullet Resist Shredder instead: 0.40 (-12.0%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Scourge, sell Spirit Snatch
+    function of Spirit Snatch: stats only; replacement Scourge: cleanse, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Spirit Snatch is a component of later items: no
+    held for 33200.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 17600/20800/4800 -> 17600/20800/8000; thresholds lost: none
+    trade ratio after the sale 0.48; selling Bullet Resist Shredder instead: 0.45 (-7.2%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Unstoppable, sell Spirit Resilience
+    function of Spirit Resilience: spirit_resist; replacement Unstoppable: cleanse; roles lost: spirit_resist  [VERIFIED GAME MECHANIC]
+    Spirit Resilience is a component of later items: no
+    held for 19200.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 17600/20800/4800 -> 17600/24000/4800; thresholds lost: none
+    trade ratio after the sale 0.37; selling Bullet Resist Shredder instead: 0.36 (-2.5%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Ethereal Shift, sell Stalker
+    function of Stalker: move_speed, resist_shred; replacement Ethereal Shift: move_speed, spirit_resist; roles lost: resist_shred  [VERIFIED GAME MECHANIC]
+    Stalker is a component of later items: no
+    held for 44400.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 17600/20800/4800 -> 16000/20800/11200; thresholds lost: none
+    trade ratio after the sale 0.45; selling Bullet Resist Shredder instead: 0.42 (-6.8%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

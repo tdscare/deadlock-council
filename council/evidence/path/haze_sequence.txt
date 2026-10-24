@@ -1,0 +1,60 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: haze
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:11:30Z
+BODY-SHA: f685b1e9136a4bebc86a5f30f662dc5025c6de063489344683f91dfb71c6ec08
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Rapid Rounds: retained-or-upgraded (-> Swift Striker,Burst Fire)
+  Active Reload: retained
+  Swift Striker: retained
+  Extended Magazine: retained-or-upgraded (-> Titanic Magazine)
+  Titanic Magazine: retained
+  Extra Health: retained-or-upgraded (-> Fortitude)
+  Fortitude: retained
+  Ricochet: retained
+  Healing Booster: retained-or-upgraded (-> Healing Tempo)
+  Siphon Bullets: retained
+  Burst Fire: retained
+  Bullet Lifesteal: retained-or-upgraded (-> Vampiric Burst)
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Lucky Shot: retained
+  Rapid Recharge: retained
+  Vampiric Burst: retained
+  Silencer: retained
+  Healing Tempo: retained
+  Spirit Resilience: conditional branch (counter menu)
+  Bullet Resilience: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Spellbreaker: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Cursed Relic: conditional branch (counter menu)
+  Armor Piercer: conditional branch (counter menu)
+  Surge of Power: conditional branch (alternative/optional)
+  Leech: conditional branch (alternative/optional)
+  Blood Tribute: conditional branch (alternative/optional)
+  Phantom Strike: conditional branch (alternative/optional)
+  Frenzy: situational-luxury
+  Crippling Headshot: situational-luxury
+  Cheat Death: situational-luxury
+  Indomitable: situational-luxury
+  Mercurial Magnum: situational-luxury
+  Spiritual Overflow: situational-luxury
+  Inhibitor: situational-luxury
+  Divine Barrier: situational-luxury
+
+## BRANCH STRUCTURE
+  Early · L-R                -> main path (sequential): Rapid Rounds, Active Reload, Swift Striker, Extended Magazine, Titanic Magazine, Extra Health, Fortitude, Ricochet
+  Mid · L-R                  -> main path (sequential): Healing Booster, Siphon Bullets, Burst Fire, Bullet Lifesteal, Extra Charge
+  Late · L-R                 -> main path (sequential): Lucky Shot, Rapid Recharge, Vampiric Burst, Silencer, Healing Tempo
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Spirit Resilience, Bullet Resilience, Plated Armor, Spellbreaker, Counterspell, Unstoppable, Cursed Relic, Armor Piercer
+  Swaps                      -> alternative/optional (branch): Surge of Power, Leech, Blood Tribute, Phantom Strike
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Frenzy, Crippling Headshot, Cheat Death, Indomitable, Mercurial Magnum, Spiritual Overflow, Inhibitor, Divine Barrier
+  Lost lane?                 -> lane alternative (branch): 

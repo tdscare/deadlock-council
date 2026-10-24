@@ -1,0 +1,84 @@
+# wraith | Wraith | Rizuhble's Pinball Wraith
+abilities: 1=Card Trick (citadel_ability_card_toss, start_trained=false, Signature) / 2=Project Mind (citadel_ability_projectmind, start_trained=false, Signature) / 3=Full Auto (citadel_ability_wraith_rapidfire, start_trained=false, Signature) / 4=Telekinesis (citadel_ability_psychic_lift, start_trained=false, Ultimate)
+order: 1132341322314424
+model A (data):  Card Trick:U@0  Card Trick:T1@200  Full Auto:U@500  Full Auto:T1@900  Project Mi:U@1400  Card Trick:T2@2600  Telekinesi:U@3200  Full Auto:T2@4600  Project Mi:T1@5300  Project Mi:T2@6800  Full Auto:T3@11000  Card Trick:T3@16100  Telekinesi:T1@17400  Telekinesi:T2@20600  Project Mi:T3@32100  Telekinesi:T3@48600
+model B (old):   Card Trick:T1@200  Card Trick:T2@900  Full Auto:T1@2000  Project Mi:T1@2600  Full Auto:T2@3900  Telekinesi:U@4600  Card Trick:T3@5300  Full Auto:T3@6000  Project Mi:T2@6800  Project Mi:T3@7600  Telekinesi:T1@10100  Telekinesi:T2@11000  Telekinesi:T3@12800
+tier upgrades: Card Trick: AbilityCharges+2 / Damage+40,Damage+0.4x / ImprovedJokerChance+1,SpadeDamageBonus+40,DiamondResistShred-4,HeartHeal+75,HeartHeal+0.5x,ClubSlowPercent+12 | Project Mind: AbilityCastRange+15 / CombatBarrier+300,BarrierDuration+5,CombatBarrier+1.7x / AbilityCooldown-32 | Full Auto: AbilityCooldown-20 / BonusFireRate+10,AbilityDuration+3 / MagicDamagePerBullet+0.045x,UnlimitedAmmo+1 | Telekinesis: Damage+100 / AbilityCooldown-45 / AbilityDuration+1.5,TossDistance+6,AbilityCastRange+6
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  Rapid Rounds
+        Card Trick T1 ch4 cd0.6 Damage=46 | Project Mi L[U] | Full Auto U ch1 cd45 d5 MagicDam=2 | Telekinesi L
+  1600 L5   2    21  Extra Spirit
+        Card Trick T1[T2] ch4 cd0.6 Damage=57 | Project Mi U ch1 cd46 | Full Auto T1[U] ch1 cd25 d5 MagicDam=3 | Telekinesi L
+  2400 L6   3    22  Swift Striker
+        Card Trick T1[T2] ch4 cd0.6 Damage=57 | Project Mi U ch1 cd46 | Full Auto T1 ch1 cd25 d5 MagicDam=3 | Telekinesi L
+  5600 L11  7    28  Tesla Bullets
+        Card Trick T2[T3] ch4 cd0.6 Damage=112 | Project Mi T1 ch1 cd46 | Full Auto T2 ch1 cd25 d8 MagicDam=3 | Telekinesi U ch1 cd150 d2.25 Damage=128
+  6400 L12  8    29  Monster Rounds
+        Card Trick T2[T3] ch4 cd0.6 Damage=113 | Project Mi T1 ch1 cd46 | Full Auto T2[T3] ch1 cd25 d8 MagicDam=3 | Telekinesi U ch1 cd150 d2.25 Damage=129
+  8000 L14 10    39  Quicksilver Reload [imbue Card Trick]
+        Card Trick T2[T3] ch4 cd0.6 Damage=122 | Project Mi T2[T3] ch1 cd46 | Full Auto T2[T3] ch1 cd25 d8 MagicDam=4 | Telekinesi U ch1 cd150 d2.25 Damage=139
+ 10400 L17 13    56  Surge of Power [imbue Card Trick]
+        Card Trick T2[T3] ch4 cd0.6 Damage=164 | Project Mi T2[T3] ch1 cd46 | Full Auto T2[T3] ch1 cd25 d8 MagicDam=5 | Telekinesi U[T1] ch1 cd150 d2.25 Damage=156
+ 16800 L23 19    62  Ricochet
+        Card Trick T3 ch4 cd0.6 Damage=171 | Project Mi T2[T3] ch1 cd46 | Full Auto T3 ch1 cd25 d8 MagicDam=8 | Telekinesi U[T3] ch1 cd150 d2.25 Damage=162
+ 18400 L24 20    69  Spirit Lifesteal
+        Card Trick T3 ch4 cd0.6 Damage=177 | Project Mi T2[T3] ch1 cd46 | Full Auto T3 ch1 cd25 d8 MagicDam=8 | Telekinesi T1[T3] ch1 cd150 d2.25 Damage=269
+ 20000 L25 21    70  Bullet Lifesteal
+        Card Trick T3 ch4 cd0.6 Damage=178 | Project Mi T2[T3] ch1 cd46 | Full Auto T3 ch1 cd25 d8 MagicDam=8 | Telekinesi T1[T3] ch1 cd150 d2.25 Damage=270
+ 20800 L26 22    72  Sprint Boots
+        Card Trick T3 ch4 cd0.6 Damage=180 | Project Mi T2[T3] ch1 cd46 | Full Auto T3 ch1 cd25 d8 MagicDam=8 | Telekinesi T2[T3] ch1 cd105 d2.25 Damage=272
+ 21600 L26 22    72  Enduring Speed
+        Card Trick T3 ch4 cd0.6 Damage=180 | Project Mi T2[T3] ch1 cd46 | Full Auto T3 ch1 cd25 d8 MagicDam=8 | Telekinesi T2[T3] ch1 cd105 d2.25 Damage=272
+ 23200 L27 23    73  Reactive Barrier
+        Card Trick T3 ch4 cd0.6 Damage=181 | Project Mi T2[T3] ch1 cd46 | Full Auto T3 ch1 cd25 d8 MagicDam=9 | Telekinesi T2[T3] ch1 cd105 d2.25 Damage=273
+ 24800 L28 24    74  Spirit Shredder
+        Card Trick T3 ch4 cd0.6 Damage=182 | Project Mi T2[T3] ch1 cd46 | Full Auto T3 ch1 cd25 d8 MagicDam=9 | Telekinesi T2[T3] ch1 cd105 d2.25 Damage=274
+ 29600 L30 26    97  Mercurial Magnum [imbue Card Trick]
+        Card Trick T3 ch4 cd0.6 Damage=204 | Project Mi T2[T3] ch1 cd46 | Full Auto T3 ch1 cd25 d8 MagicDam=11 | Telekinesi T2[T3] ch1 cd105 d2.25 Damage=297
+ 34400 L31 27    98  Spiritual Overflow
+        Card Trick T3 ch4 cd0.6 Damage=205 | Project Mi T3 ch1 cd14 | Full Auto T3 ch1 cd25 d8 MagicDam=11 | Telekinesi T2[T3] ch1 cd105 d2.25 Damage=298
+ 39200 L33 29   112  Leech
+        Card Trick T3 ch4 cd0.6 Damage=218 | Project Mi T3 ch1 cd14 | Full Auto T3 ch1 cd25 d8 MagicDam=12 | Telekinesi T2[T3] ch1 cd105 d2.25 Damage=312
+ 45600 L35 31   114  Inhibitor
+        Card Trick T3 ch4 cd0.6 Damage=220 | Project Mi T3 ch1 cd14 | Full Auto T3 ch1 cd25 d8 MagicDam=12 | Telekinesi T2[T3] ch1 cd105 d2.25 Damage=314
+ 47200 L35 31   114  Spirit Rend
+        Card Trick T3 ch4 cd0.6 Damage=220 | Project Mi T3 ch1 cd14 | Full Auto T3 ch1 cd25 d8 MagicDam=12 | Telekinesi T2[T3] ch1 cd105 d2.25 Damage=314
+ 53600 L36 32   116  Silencer
+        Card Trick T3 ch4 cd0.6 Damage=221 | Project Mi T3 ch1 cd14 | Full Auto T3 ch1 cd25 d8 MagicDam=12 | Telekinesi T3 ch1 cd105 d3.75 Damage=316
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @5600 Tesla Bullets [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=15)
+    game text: Your bullets have a chance to shock your target. The shock will jump to a nearby enemy.
+    at buy: not computed (needs play data)
+- @6400 Monster Rounds [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: (no game text)
+    at buy: not computed (needs play data)
+- @8000 Quicksilver Reload [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Card Trick; needs it trained and the stat the item raises
+    game text: Your imbued ability charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, {g:citadel_inline_attribute:'BonusFireRate'}, and relo... | vdata: proc damage types ABILITY/BULLET/MELEE, CanProcByOtherObjects=true
+    at buy: Card Trick T2: cd 0.6s, duration 0s, charges 4
+- @10400 Surge of Power [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Card Trick; needs it trained and the stat the item raises
+    game text: Imbue an ability with permanent Spirit Power. When that ability is used, gain bonus Move Speed and maintain full speed while attacking.
+    at buy: Card Trick T2: cd 0.6s, duration 0s, charges 4; with imbue: Damage 164
+- @29600 Mercurial Magnum [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Card Trick; needs it trained and the stat the item raises
+    game text: Your imbued ability charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, {g:citadel_inline_attribute:'BonusFireRate'}, and relo... | vdata: proc damage types ABILITY/BULLET/MELEE, CanProcByOtherObjects=true
+    at buy: Card Trick T3: cd 0.6s, duration 0s, charges 4
+- @34400 Spiritual Overflow [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack
+    game text: Gain bonus Fire Rate, Spirit Power and Spirit Lifesteal by charging up when shooting enemy heroes.
+    at buy: not computed (needs play data)
+- @47200 Spirit Rend [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (MaxStacks=4)
+    game text: (no game text)
+    at buy: not computed (needs play data)
+- @53600 Silencer [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Your bullets build up to a Silence. Victims are immune to the build up for {s:ImmunityDuration}s after silence expires.
+    at buy: not computed (needs play data)
+
+no trigger condition (plain stats/actives): Rapid Rounds, Extra Spirit, Swift Striker, Ricochet, Spirit Lifesteal, Bullet Lifesteal, Sprint Boots, Enduring Speed, Reactive Barrier, Spirit Shredder, Leech, Inhibitor

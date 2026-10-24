@@ -1,0 +1,25 @@
+{
+ "proposal": "restore_venator_grenade",
+ "id": "venator_grenade",
+ "diff": [
+  "core order changed"
+ ],
+ "block": [
+  "NEW violation introduced: bc: COUNTERS_DESC_FORMAT_OCT22 venator_grenade: \"Get after Fortitude if needed. Ahead? Skip it until you're dying. Sell Battle Vest for it.\"",
+  "NEW violation introduced: bc: COUNTERS_X_NOT_IN_BUILD venator_grenade: Fortitude if needed",
+  "NEW violation introduced: bc: COUNTERS_Y_NOT_IN_BUILD venator_grenade: Battle Vest for it"
+ ],
+ "warn": [],
+ "fixed": [],
+ "kept": [
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE venator_grenade: Recharging Rush @19200 has no \"Threshold:\" changes line naming it"
+ ],
+ "newV": [
+  "bc: COUNTERS_DESC_FORMAT_OCT22 venator_grenade: \"Get after Fortitude if needed. Ahead? Skip it until you're dying. Sell Battle Vest for it.\"",
+  "bc: COUNTERS_X_NOT_IN_BUILD venator_grenade: Fortitude if needed",
+  "bc: COUNTERS_Y_NOT_IN_BUILD venator_grenade: Battle Vest for it",
+  "bc: RT_ITEMS venator_grenade: Early · L-R: [[\"High-Velocity Rounds\",null],[\"Close Quarters\",null],[\"Monster Rounds\",null],[\"Battle Vest\",null],[\"Cultist Sacrifice\",null],[\"Extra Health\",null],[\"Fortitude\",null]] vs [[\"High-Velocity Rounds\",null],[\"Close Quarters\",null],[\"Monster Rounds\",null],[\"Cultist Sacrifice\",null],[\"Battle Vest\",null],[\"Extra Health\",null],[\"Fortitude\",null]]"
+ ],
+ "when": "2026-10-24 04:51",
+ "line": "[2026-10-24 04:51] CANDIDATE restore of venator_grenade to LASTGOOD (data.js.bak_rel) core/ability order, because the current order shifted a 4.8k spike without a recorded reason (council/triage/TRIAGE.md). | core order changed | evidence: data:council/triage/TRIAGE.md | gate: FAIL"
+}

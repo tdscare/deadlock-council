@@ -1,0 +1,3941 @@
+{
+ "schema": 1,
+ "id": "violet_spirit",
+ "hero": "Violet",
+ "name": "Rizuhble's Happy Little Splats",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Health",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Getting bursted in lane. Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-8,000 (levels 1-14). Abilities gained (both point models agree): Abstract Landscape unlocked. 4.8k spikes: spirit 4.8k at Surge of Power. Ultimate (Abstract Landscape) is available from Surge of Power.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "violet_spirit:7:phase_range:2635",
+    "violet_spirit:7:phase_abilities:2636",
+    "violet_spirit:7:phase_spikes:2645",
+    "violet_spirit:7:phase_ult:2646"
+   ],
+   "items": [
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 14 to Still Life's damage (1.40x scaling), your steepest spirit scaling.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:0:spirit_scaling:2617"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:0:spirit_scaling:2617",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Spirit Lifesteal, 8000 souls (~8.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Charge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Living Ink (2 to 3).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:2:charges:2622"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:2:charges:2622",
+       true,
+       "[1]"
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Regeneration",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Surge of Power completes 2,400 souls on.",
+     "cls": "b",
+     "why": "imminent: Surge of Power completes 4.8k spirit in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "violet_spirit:3:spike_progress:2623"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:3:spike_progress:2623",
+       true,
+       "2400"
+      ]
+     ]
+    },
+    {
+     "name": "Surge of Power",
+     "imbue": "1",
+     "caption": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power. Imbued on Living Ink: +28 spirit on that ability only, about +19.6 on its damage (0.70x scaling). Upgrade of Extra Spirit (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:4:spike_complete:2625",
+      "violet_spirit:4:imbue_spirit:2626",
+      "violet_spirit:4:upgrade_of:2627"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:4:spike_complete:2625",
+       true,
+       "inventory spirit: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "violet_spirit:4:imbue_spirit:2626",
+       true,
+       ""
+      ],
+      [
+       "violet_spirit:4:upgrade_of:2627",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Spirit Lifesteal, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Healing Booster",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 2,400 souls on. Upgrade of Extra Regen (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "imminent: Spirit Lifesteal completes 4.8k vitality in 2400 souls (~2.4 min), 2 purchases",
+     "claim_ids": [
+      "violet_spirit:6:spike_progress:2630",
+      "violet_spirit:6:upgrade_of:2631"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:6:spike_progress:2630",
+       true,
+       "2400"
+      ],
+      [
+       "violet_spirit:6:upgrade_of:2631",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Shielding",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 1,600 souls on. Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "imminent: Spirit Lifesteal completes 4.8k vitality in 1600 souls (~1.6 min), 1 purchases",
+     "claim_ids": [
+      "violet_spirit:7:spike_progress:2633",
+      "violet_spirit:7:upgrade_of:2634"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:7:spike_progress:2633",
+       true,
+       "3200"
+      ],
+      [
+       "violet_spirit:7:upgrade_of:2634",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 8,000-21,600 (levels 14-26). Abilities gained (both point models agree): Living Ink T3, Still Life T3. Your biggest single spirit hit (Flow State, max damage) grows from 194 to 299. 4.8k spikes: vitality 4.8k at Spirit Lifesteal.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "violet_spirit:15:phase_range:2666",
+    "violet_spirit:15:phase_abilities:2667",
+    "violet_spirit:15:phase_power:2668",
+    "violet_spirit:15:phase_spikes:2675"
+   ],
+   "items": [
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (3,200 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:8:spike_complete:2647"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:8:spike_complete:2647",
+       true,
+       "inventory vitality: before 3200, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 32.4 to Flow State's max damage (1.80x scaling), your steepest spirit scaling. Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:9:spirit_scaling:2651",
+      "violet_spirit:9:invest_step:2649"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:9:spirit_scaling:2651",
+       true,
+       ""
+      ],
+      [
+       "violet_spirit:9:invest_step:2649",
+       true,
+       "inventory spirit: before 4800, after 6400, threshold 6400"
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Flow State (260), Still Life (184) clear its 80-damage trigger.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:10:threshold_now:2653"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:10:threshold_now:2653",
+       true,
+       "instances above: [(1, 171.18), (2, 259.84000000000003), (2, 129.92000000000002), (3, 184.32)]"
+      ]
+     ]
+    },
+    {
+     "name": "Radiant Regeneration",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 7,200 to 9,600 invested: bonus 45 to 52 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Enchanter's Emblem",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Rapid Recharge",
+     "imbue": null,
+     "caption": "Adds 1 more charge to Living Ink (3 to 4). Takes spirit from 9,600 to 12,000 invested: bonus 52 to 59 spirit power. Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:13:charges:2662",
+      "violet_spirit:13:invest_step:2660",
+      "violet_spirit:13:upgrade_of:2661"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:13:charges:2662",
+       true,
+       "[1]"
+      ],
+      [
+       "violet_spirit:13:invest_step:2660",
+       true,
+       "inventory spirit: before 9600, after 12000, threshold 11200"
+      ],
+      [
+       "violet_spirit:13:upgrade_of:2661",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "3",
+     "caption": "Imbued on Still Life: takes 18% off its 35s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:14:imbue_cooldown:2663"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:14:imbue_cooldown:2663",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Vulnerability",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 cont.",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 21,600-24,000 (levels 26-27).",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "violet_spirit:16:phase_range:2680"
+   ],
+   "items": [
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": "Flow State (313) clears its 165-damage trigger. Takes spirit from 15,200 to 17,600 invested: bonus 59 to 66 spirit power. Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:16:threshold_now:2677",
+      "violet_spirit:16:invest_step:2676",
+      "violet_spirit:16:upgrade_of:2678"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:16:threshold_now:2677",
+       true,
+       "instances above: [(2, 313.48)]"
+      ],
+      [
+       "violet_spirit:16:invest_step:2676",
+       true,
+       "inventory spirit: before 15200, after 17600, threshold 16000"
+      ],
+      [
+       "violet_spirit:16:upgrade_of:2678",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 24,000-46,400 (levels 27-35). Abilities gained (both point models agree): Flow State T3. Your biggest single spirit hit (Flow State, max damage) grows from 313 to 459.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "violet_spirit:21:phase_range:2692",
+    "violet_spirit:21:phase_abilities:2693",
+    "violet_spirit:21:phase_power:2694"
+   ],
+   "items": [
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: With 4 abilities trained their base cooldowns total 204s; 20% off is 40.8s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 19,200 to 24,000 invested: bonus 66 to 75 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 54 to Flow State's max damage (1.80x scaling), your steepest spirit scaling. Takes spirit from 24,000 to 28,800 invested: bonus 75 to 100 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:19:spirit_scaling:2688",
+      "violet_spirit:19:invest_step:2686",
+      "violet_spirit:19:upgrade_of:2687"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:19:spirit_scaling:2688",
+       true,
+       ""
+      ],
+      [
+       "violet_spirit:19:invest_step:2686",
+       true,
+       "inventory spirit: before 24000, after 28800, threshold 28800"
+      ],
+      [
+       "violet_spirit:19:upgrade_of:2687",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Infuser",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 6,400 to 11,200 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Grit? Buy what is killing you, cheapest first. Not dying? Skip. Sell Spirit Shielding.",
+   "desc": "Dying after Grit? Buy what is killing you, cheapest first. Not dying? Skip. Sell Spirit Shielding.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:22:defence_spirit:2698"
+     ],
+     "lint": [],
+     "legacy_note": "Spirit damage that keeps hurting you after the hit: Infernus, Seven, Vyper, Lady Geist.",
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:22:defence_spirit:2698",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Bullet Resilience",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:22:defence_parry:2699"
+     ],
+     "lint": [],
+     "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:22:defence_parry:2699",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:22:defence_purge:2700"
+     ],
+     "lint": [],
+     "legacy_note": "Knockdown, Slowing Hex, Disarming Hex and slows.",
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:22:defence_purge:2700",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Knockdown",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Flyers like Vindicta and Grey Talon keep getting away.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Mystic Reverb",
+     "imbue": "1",
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Healing Booster for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Diviner's Kevlar",
+     "imbue": null,
+     "caption": "Casting Abstract Landscape gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (145s at your current ultimate tier), so it is a once-per-fight burst of defence. Takes vitality from 11,200 to 16,000 invested: bonus 50 to 54 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:22:ult_trigger:2703",
+      "violet_spirit:22:invest_step:2704"
+     ],
+     "lint": [],
+     "legacy_note": "Living Ink hits shorten your ult too, so it comes up often. Sell Enchanter's Emblem for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:22:ult_trigger:2703",
+       true,
+       ""
+      ],
+      [
+       "violet_spirit:22:invest_step:2704",
+       true,
+       "inventory vitality: before 11200, after 16000, threshold 16000"
+      ]
+     ]
+    },
+    {
+     "name": "Spiritual Overflow",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (0 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 0 to 54% weapon damage. Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:22:spike_complete:2706",
+      "violet_spirit:22:sell_swap:2707"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Tankbuster for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:22:spike_complete:2706",
+       true,
+       "inventory weapon: before 0, after 6400, threshold 4800"
+      ],
+      [
+       "violet_spirit:22:sell_swap:2707",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 204s of base cooldown across your kit, 145s of it the ultimate; the item has its own cooldown of 300s. Replaces Radiant Regeneration: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:22:refresher:2708",
+      "violet_spirit:22:sell_swap:2709"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Radiant Regeneration for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:22:refresher:2708",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "violet_spirit:22:sell_swap:2709",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:22:defence_barrier:2710"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:22:defence_barrier:2710",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "violet_spirit:22:upgrade_delta:2711"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "violet_spirit:22:upgrade_delta:2711",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "violet_spirit:0:spike_progress:2615": {
+   "id": "violet_spirit:0:spike_progress:2615",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "violet_spirit:0:component_for:2616": {
+   "id": "violet_spirit:0:component_for:2616",
+   "kind": "component_for",
+   "phrase": "From Surge of Power: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 4800,
+    "event": "Surge of Power"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Surge of Power"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:0:spirit_scaling:2617": {
+   "id": "violet_spirit:0:spirit_scaling:2617",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 14 to Still Life's damage (1.40x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_tether"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 3,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "10.0",
+    "14",
+    "1.40"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "violet_spirit:1:spike_progress:2618": {
+   "id": "violet_spirit:1:spike_progress:2618",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Extra Regen",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "violet_spirit:1:component_for:2619": {
+   "id": "violet_spirit:1:component_for:2619",
+   "kind": "component_for",
+   "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Extra Regen",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Healing Booster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Healing Booster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:2:spike_progress:2620": {
+   "id": "violet_spirit:2:spike_progress:2620",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Extra Charge",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "violet_spirit:2:component_for:2621": {
+   "id": "violet_spirit:2:component_for:2621",
+   "kind": "component_for",
+   "phrase": "From Rapid Recharge: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Extra Charge",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 16000,
+    "event": "Rapid Recharge"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Rapid Recharge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:2:charges:2622": {
+   "id": "violet_spirit:2:charges:2622",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Living Ink (2 to 3).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_extra_charge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_homingbrush"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 2,
+    "item": "Extra Charge",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "1",
+    "2",
+    "3"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "violet_spirit:3:spike_progress:2623": {
+   "id": "violet_spirit:3:spike_progress:2623",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Surge of Power completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Regeneration",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Surge of Power completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "violet_spirit:3:component_for:2624": {
+   "id": "violet_spirit:3:component_for:2624",
+   "kind": "component_for",
+   "phrase": "From Radiant Regeneration: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Regeneration",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 11200,
+    "event": "Radiant Regeneration"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Radiant Regeneration"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:4:spike_complete:2625": {
+   "id": "violet_spirit:4:spike_complete:2625",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 4,
+    "item": "Surge of Power",
+    "souls": 5600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "violet_spirit:4:imbue_spirit:2626": {
+   "id": "violet_spirit:4:imbue_spirit:2626",
+   "kind": "imbue_spirit",
+   "phrase": "Imbued on Living Ink: +28 spirit on that ability only, about +19.6 on its damage (0.70x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_storm",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_homingbrush"
+   ],
+   "score": 60,
+   "point": {
+    "idx": 4,
+    "item": "Surge of Power",
+    "souls": 5600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_spirit",
+    "slot": 1
+   },
+   "numbers": [
+    "28.0",
+    "19.6",
+    "0.70"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "violet_spirit:4:upgrade_of:2627": {
+   "id": "violet_spirit:4:upgrade_of:2627",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 4,
+    "item": "Surge of Power",
+    "souls": 5600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:5:spike_progress:2628": {
+   "id": "violet_spirit:5:spike_progress:2628",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Grit",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "violet_spirit:5:component_for:2629": {
+   "id": "violet_spirit:5:component_for:2629",
+   "kind": "component_for",
+   "phrase": "From Spirit Shielding: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Grit",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Spirit Shielding"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Shielding"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:6:spike_progress:2630": {
+   "id": "violet_spirit:6:spike_progress:2630",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Healing Booster",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Spirit Lifesteal completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "violet_spirit:6:upgrade_of:2631": {
+   "id": "violet_spirit:6:upgrade_of:2631",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Regen (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 6,
+    "item": "Healing Booster",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Regen"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:6:swap_candidate:2632": {
+   "id": "violet_spirit:6:swap_candidate:2632",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Mystic Reverb later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 6,
+    "item": "Healing Booster",
+    "souls": 7200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Healing Booster",
+    "buyer": "Mystic Reverb"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:7:spike_progress:2633": {
+   "id": "violet_spirit:7:spike_progress:2633",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Spirit Lifesteal completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "violet_spirit:7:upgrade_of:2634": {
+   "id": "violet_spirit:7:upgrade_of:2634",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Grit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:7:phase_range:2635": {
+   "id": "violet_spirit:7:phase_range:2635",
+   "kind": "phase_range",
+   "phrase": "Souls 0-8,000 (levels 1-14).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Shielding",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "8,000",
+    "1",
+    "14"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:7:phase_abilities:2636": {
+   "id": "violet_spirit:7:phase_abilities:2636",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Abstract Landscape unlocked.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Shielding",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:7:phase_spikes:2645": {
+   "id": "violet_spirit:7:phase_spikes:2645",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Surge of Power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Shielding",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:7:phase_ult:2646": {
+   "id": "violet_spirit:7:phase_ult:2646",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Abstract Landscape) is available from Surge of Power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Shielding",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:8:spike_complete:2647": {
+   "id": "violet_spirit:8:spike_complete:2647",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (3,200 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 8,
+    "item": "Spirit Lifesteal",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "violet_spirit:8:component_for:2648": {
+   "id": "violet_spirit:8:component_for:2648",
+   "kind": "component_for",
+   "phrase": "From Infuser: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 8,
+    "item": "Spirit Lifesteal",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 36800,
+    "event": "Infuser"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Infuser"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:9:invest_step:2649": {
+   "id": "violet_spirit:9:invest_step:2649",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Improved Spirit",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "violet_spirit:9:component_for:2650": {
+   "id": "violet_spirit:9:component_for:2650",
+   "kind": "component_for",
+   "phrase": "From Boundless Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Improved Spirit",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 24000,
+    "event": "Boundless Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Boundless Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:9:spirit_scaling:2651": {
+   "id": "violet_spirit:9:spirit_scaling:2651",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 32.4 to Flow State's max damage (1.80x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_rollingprojectile"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 9,
+    "item": "Improved Spirit",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "MaxDamage"
+   },
+   "numbers": [
+    "18.0",
+    "32.4",
+    "1.80"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "violet_spirit:10:spike_progress:2652": {
+   "id": "violet_spirit:10:spike_progress:2652",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 7,200 of the 8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 10,
+    "item": "Mystic Burst",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 7200
+   },
+   "numbers": [
+    "7200",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 8000
+  },
+  "violet_spirit:10:threshold_now:2653": {
+   "id": "violet_spirit:10:threshold_now:2653",
+   "kind": "threshold_now",
+   "phrase": "Flow State (260), Still Life (184) clear its 80-damage trigger.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_homingbrush",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_rollingprojectile",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_tether"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 10,
+    "item": "Mystic Burst",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "80.0",
+    "260",
+    "184"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 3.25,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "violet_spirit:10:component_for:2654": {
+   "id": "violet_spirit:10:component_for:2654",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 10,
+    "item": "Mystic Burst",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12000,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:11:invest_step:2655": {
+   "id": "violet_spirit:11:invest_step:2655",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 7,200 to 9,600 invested: bonus 45 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Radiant Regeneration",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "9600",
+    "45.0",
+    "52.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "violet_spirit:11:upgrade_of:2656": {
+   "id": "violet_spirit:11:upgrade_of:2656",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Regeneration (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Radiant Regeneration",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Regeneration"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:11:swap_candidate:2657": {
+   "id": "violet_spirit:11:swap_candidate:2657",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Refresher later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 11,
+    "item": "Radiant Regeneration",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Radiant Regeneration",
+    "buyer": "Refresher"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:12:invest_step:2658": {
+   "id": "violet_spirit:12:invest_step:2658",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Enchanter's Emblem",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "violet_spirit:12:swap_candidate:2659": {
+   "id": "violet_spirit:12:swap_candidate:2659",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Diviner's Kevlar later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 12,
+    "item": "Enchanter's Emblem",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Enchanter's Emblem",
+    "buyer": "Diviner's Kevlar"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:13:invest_step:2660": {
+   "id": "violet_spirit:13:invest_step:2660",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 9,600 to 12,000 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Rapid Recharge",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "12000",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "violet_spirit:13:upgrade_of:2661": {
+   "id": "violet_spirit:13:upgrade_of:2661",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Rapid Recharge",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Charge"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:13:charges:2662": {
+   "id": "violet_spirit:13:charges:2662",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Living Ink (3 to 4).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_rapid_recharge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_homingbrush"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 13,
+    "item": "Rapid Recharge",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "1",
+    "3",
+    "4"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "violet_spirit:14:imbue_cooldown:2663": {
+   "id": "violet_spirit:14:imbue_cooldown:2663",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Still Life: takes 18% off its 35s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_tether"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 14,
+    "item": "Compress Cooldown",
+    "souls": 20000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 3
+   },
+   "numbers": [
+    "18.0",
+    "35.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "violet_spirit:14:component_for:2664": {
+   "id": "violet_spirit:14:component_for:2664",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Compress Cooldown",
+    "souls": 20000,
+    "noncore": false,
+    "imb": 3,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:15:component_for:2665": {
+   "id": "violet_spirit:15:component_for:2665",
+   "kind": "component_for",
+   "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mystic Vulnerability",
+    "souls": 21600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 8800,
+    "event": "Escalating Exposure"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:15:phase_range:2666": {
+   "id": "violet_spirit:15:phase_range:2666",
+   "kind": "phase_range",
+   "phrase": "Souls 8,000-21,600 (levels 14-26).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mystic Vulnerability",
+    "souls": 21600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mystic Vulnerability",
+    "keys": []
+   },
+   "numbers": [
+    "8,000",
+    "21,600",
+    "14",
+    "26"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:15:phase_abilities:2667": {
+   "id": "violet_spirit:15:phase_abilities:2667",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Living Ink T3, Still Life T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mystic Vulnerability",
+    "souls": 21600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mystic Vulnerability",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:15:phase_power:2668": {
+   "id": "violet_spirit:15:phase_power:2668",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Flow State, max damage) grows from 194 to 299.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_rollingprojectile",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mystic Vulnerability",
+    "souls": 21600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mystic Vulnerability",
+    "keys": []
+   },
+   "numbers": [
+    "194",
+    "299"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:15:phase_spikes:2675": {
+   "id": "violet_spirit:15:phase_spikes:2675",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Spirit Lifesteal.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Mystic Vulnerability",
+    "souls": 21600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mystic Vulnerability",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:16:invest_step:2676": {
+   "id": "violet_spirit:16:invest_step:2676",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 15,200 to 17,600 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "15200",
+    "17600",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "violet_spirit:16:threshold_now:2677": {
+   "id": "violet_spirit:16:threshold_now:2677",
+   "kind": "threshold_now",
+   "phrase": "Flow State (313) clears its 165-damage trigger.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_homingbrush",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_rollingprojectile",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_tether"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "165.0",
+    "313"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 1.9,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "violet_spirit:16:upgrade_of:2678": {
+   "id": "violet_spirit:16:upgrade_of:2678",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:16:swap_candidate:2679": {
+   "id": "violet_spirit:16:swap_candidate:2679",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Spiritual Overflow later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Tankbuster",
+    "buyer": "Spiritual Overflow"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:16:phase_range:2680": {
+   "id": "violet_spirit:16:phase_range:2680",
+   "kind": "phase_range",
+   "phrase": "Souls 21,600-24,000 (levels 26-27).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Tankbuster",
+    "keys": []
+   },
+   "numbers": [
+    "21,600",
+    "24,000",
+    "26",
+    "27"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:17:upgrade_of:2682": {
+   "id": "violet_spirit:17:upgrade_of:2682",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Superior Cooldown",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:17:cdr_rotation:2683": {
+   "id": "violet_spirit:17:cdr_rotation:2683",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 204s; 20% off is 40.8s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_homingbrush",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_rollingprojectile",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_tether",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_bamboogrove"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 17,
+    "item": "Superior Cooldown",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "204",
+    "20.0",
+    "40.8"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "violet_spirit:18:invest_step:2684": {
+   "id": "violet_spirit:18:invest_step:2684",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 19,200 to 24,000 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Escalating Exposure",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "19200",
+    "24000",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "violet_spirit:18:upgrade_of:2685": {
+   "id": "violet_spirit:18:upgrade_of:2685",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Vulnerability (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Escalating Exposure",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Vulnerability"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:19:invest_step:2686": {
+   "id": "violet_spirit:19:invest_step:2686",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 24,000 to 28,800 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Boundless Spirit",
+    "souls": 35200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "24000",
+    "28800",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "violet_spirit:19:upgrade_of:2687": {
+   "id": "violet_spirit:19:upgrade_of:2687",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Boundless Spirit",
+    "souls": 35200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:19:spirit_scaling:2688": {
+   "id": "violet_spirit:19:spirit_scaling:2688",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 54 to Flow State's max damage (1.80x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_rollingprojectile"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 19,
+    "item": "Boundless Spirit",
+    "souls": 35200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "MaxDamage"
+   },
+   "numbers": [
+    "30.0",
+    "54",
+    "1.80"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "violet_spirit:20:burn_trigger_modelled:2689": {
+   "id": "violet_spirit:20:burn_trigger_modelled:2689",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Living Ink (299) + Flow State (457) + Still Life (337) = 1,093 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Burn",
+    "souls": 41600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "1,093",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "violet_spirit:21:invest_step:2690": {
+   "id": "violet_spirit:21:invest_step:2690",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 11,200 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 21,
+    "item": "Infuser",
+    "souls": 46400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "11200",
+    "42.0",
+    "50.0",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "violet_spirit:21:upgrade_of:2691": {
+   "id": "violet_spirit:21:upgrade_of:2691",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 21,
+    "item": "Infuser",
+    "souls": 46400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "violet_spirit:21:phase_range:2692": {
+   "id": "violet_spirit:21:phase_range:2692",
+   "kind": "phase_range",
+   "phrase": "Souls 24,000-46,400 (levels 27-35).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 21,
+    "item": "Infuser",
+    "souls": 46400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Infuser",
+    "keys": []
+   },
+   "numbers": [
+    "24,000",
+    "46,400",
+    "27",
+    "35"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:21:phase_abilities:2693": {
+   "id": "violet_spirit:21:phase_abilities:2693",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Flow State T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 21,
+    "item": "Infuser",
+    "souls": 46400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Infuser",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:21:phase_power:2694": {
+   "id": "violet_spirit:21:phase_power:2694",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Flow State, max damage) grows from 313 to 459.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_rollingprojectile",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 21,
+    "item": "Infuser",
+    "souls": 46400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Infuser",
+    "keys": []
+   },
+   "numbers": [
+    "313",
+    "459"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:22:defence_spirit:2698": {
+   "id": "violet_spirit:22:defence_spirit:2698",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Spirit Resilience",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Spirit damage that keeps hurting you after the hit: Infernus, Seven, Vyper, Lady Geist."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:22:defence_parry:2699": {
+   "id": "violet_spirit:22:defence_parry:2699",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Counterspell",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Lash ult, Infernus ult. Anything big you can see coming."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:22:defence_purge:2700": {
+   "id": "violet_spirit:22:defence_purge:2700",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Dispel Magic",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Knockdown, Slowing Hex, Disarming Hex and slows."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:22:threshold_now:2701": {
+   "id": "violet_spirit:22:threshold_now:2701",
+   "kind": "threshold_now",
+   "phrase": "Living Ink (301) clears its 100-damage trigger.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_homingbrush"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 22,
+    "item": "Mystic Reverb",
+    "souls": 46400,
+    "noncore": true,
+    "imb": 1,
+    "note": "Sell Healing Booster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 100.0,
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "100.0",
+    "301"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 3.01,
+   "caveat": "item has no localisation text; trigger semantics are modelled",
+   "contradiction": false
+  },
+  "violet_spirit:22:sell_swap:2702": {
+   "id": "violet_spirit:22:sell_swap:2702",
+   "kind": "sell_swap",
+   "phrase": "Replaces Healing Booster: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 22,
+    "item": "Mystic Reverb",
+    "souls": 46400,
+    "noncore": true,
+    "imb": 1,
+    "note": "Sell Healing Booster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Healing Booster",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Healing Booster"
+  },
+  "violet_spirit:22:ult_trigger:2703": {
+   "id": "violet_spirit:22:ult_trigger:2703",
+   "kind": "ult_trigger",
+   "phrase": "Casting Abstract Landscape gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (145s at your current ultimate tier), so it is a once-per-fight burst of defence.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_diviners_kevlar",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_bamboogrove"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 22,
+    "item": "Diviner's Kevlar",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Living Ink hits shorten your ult too, so it comes up often. Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "ult_tier",
+    "min_tier": 2
+   },
+   "numbers": [
+    "1,000",
+    "40",
+    "20",
+    "145"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "violet_spirit:22:invest_step:2704": {
+   "id": "violet_spirit:22:invest_step:2704",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 11,200 to 16,000 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 22,
+    "item": "Diviner's Kevlar",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Living Ink hits shorten your ult too, so it comes up often. Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "16000",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "violet_spirit:22:sell_swap:2705": {
+   "id": "violet_spirit:22:sell_swap:2705",
+   "kind": "sell_swap",
+   "phrase": "Replaces Enchanter's Emblem: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 22,
+    "item": "Diviner's Kevlar",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Living Ink hits shorten your ult too, so it comes up often. Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Enchanter's Emblem",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Enchanter's Emblem"
+  },
+  "violet_spirit:22:spike_complete:2706": {
+   "id": "violet_spirit:22:spike_complete:2706",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (0 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 0 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_artist m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 22,
+    "item": "Spiritual Overflow",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "0",
+    "6400",
+    "0.0",
+    "54.0",
+    "4.8k",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "violet_spirit:22:sell_swap:2707": {
+   "id": "violet_spirit:22:sell_swap:2707",
+   "kind": "sell_swap",
+   "phrase": "Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 22,
+    "item": "Spiritual Overflow",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Tankbuster",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Tankbuster"
+  },
+  "violet_spirit:22:refresher:2708": {
+   "id": "violet_spirit:22:refresher:2708",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 204s of base cooldown across your kit, 145s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_homingbrush",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_rollingprojectile",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_tether",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_artist_bamboogrove"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 22,
+    "item": "Refresher",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Radiant Regeneration for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "204",
+    "145",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "violet_spirit:22:sell_swap:2709": {
+   "id": "violet_spirit:22:sell_swap:2709",
+   "kind": "sell_swap",
+   "phrase": "Replaces Radiant Regeneration: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 22,
+    "item": "Refresher",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Radiant Regeneration for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Radiant Regeneration",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Radiant Regeneration"
+  },
+  "violet_spirit:22:defence_barrier:2710": {
+   "id": "violet_spirit:22:defence_barrier:2710",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Divine Barrier",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:22:upgrade_delta:2711": {
+   "id": "violet_spirit:22:upgrade_delta:2711",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Transcendent Cooldown",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "violet_spirit:22:upgrade_of:2712": {
+   "id": "violet_spirit:22:upgrade_of:2712",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 22,
+    "item": "Transcendent Cooldown",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "violet_spirit",
+   "item": "Extra Health",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 46400,
+   "unpublished": []
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Extra Health",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Getting bursted in lane. Sell it once you're out of slots."
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Extra Regen",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Spirit Lifesteal, 8000 souls (~8.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "violet_spirit:1:component_for:2619",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Healing Booster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Mystic Regeneration",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Surge of Power completes 4.8k spirit in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "violet_spirit:3:spike_progress:2623",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Surge of Power completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Surge of Power completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "violet_spirit:3:component_for:2624",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Radiant Regeneration: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 11200,
+      "event": "Radiant Regeneration"
+     }
+    }
+   ]
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Grit",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Spirit Lifesteal, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 6400,
+   "unpublished": [
+    {
+     "id": "violet_spirit:5:component_for:2629",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spirit Shielding: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Spirit Shielding"
+     }
+    }
+   ]
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Healing Booster",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Spirit Lifesteal completes 4.8k vitality in 2400 souls (~2.4 min), 2 purchases",
+   "souls": 7200,
+   "unpublished": [
+    {
+     "id": "violet_spirit:6:spike_progress:2630",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Spirit Lifesteal completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Spirit Shielding",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Spirit Lifesteal completes 4.8k vitality in 1600 souls (~1.6 min), 1 purchases",
+   "souls": 8000,
+   "unpublished": [
+    {
+     "id": "violet_spirit:7:spike_progress:2633",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Spirit Lifesteal completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Mystic Vulnerability",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+   "souls": 21600,
+   "unpublished": [
+    {
+     "id": "violet_spirit:15:component_for:2665",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 8800,
+      "event": "Escalating Exposure"
+     }
+    }
+   ]
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Spirit Burn",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 41600,
+   "unpublished": [
+    {
+     "id": "violet_spirit:20:burn_trigger_modelled:2689",
+     "tier": "MODELLED",
+     "phrase": "One rotation of Living Ink (299) + Flow State (457) + Still Life (337) = 1,093 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Spirit damage that keeps hurting you after the hit: Infernus, Seven, Vyper, Lady Geist."
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Bullet Resilience",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 46400,
+   "unpublished": []
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Bullet Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming."
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Knockdown, Slowing Hex, Disarming Hex and slows."
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Knockdown",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 46400,
+   "unpublished": []
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Knockdown",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Flyers like Vindicta and Grey Talon keep getting away."
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Mystic Reverb",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 46400,
+   "unpublished": [
+    {
+     "id": "violet_spirit:22:threshold_now:2701",
+     "tier": "MODELLED",
+     "phrase": "Living Ink (301) clears its 100-damage trigger.",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "violet_spirit",
+   "item": "Diviner's Kevlar",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Living Ink hits shorten your ult too, so it comes up often. Sell Enchanter's Emblem for this."
+  }
+ ],
+ "stats": {
+  "d": 6,
+  "a": 18,
+  "c": 2,
+  "b": 3,
+  "g": 5
+ }
+}

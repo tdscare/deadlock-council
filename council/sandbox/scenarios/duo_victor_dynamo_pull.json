@@ -1,0 +1,93 @@
+{
+ "id": "duo_victor_dynamo_pull",
+ "title": "Victor + Dynamo: Singularity into Aura",
+ "hero": "Victor",
+ "playstyle": "Spirit Victor",
+ "builds": [
+  "victor",
+  "dynamo"
+ ],
+ "question": "How close must Victor stand for every pulled bot to take Aura ticks, and does Aura T3 raise Singularity damage 15%?",
+ "hypothesis": "H2.1/H2.2",
+ "arms": [
+  {
+   "name": "victor_1m",
+   "items": [],
+   "ability_order": null,
+   "souls": 20000,
+   "notes": "Victor 1m from Dynamo"
+  },
+  {
+   "name": "victor_3m",
+   "items": [],
+   "ability_order": null,
+   "souls": 20000,
+   "notes": "Victor 3m from Dynamo"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "~20k",
+  "souls": 20000,
+  "position": "3 bots spread 5-7m around Dynamo",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "Dynamo",
+    "count": 1,
+    "role": "Singularity"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "bot HP"
+  ]
+ },
+ "procedure": [
+  "Victor starts Aura",
+  "Dynamo casts Singularity",
+  "Record aura damage per bot during channel and Singularity damage per bot"
+ ],
+ "metrics": [
+  {
+   "name": "bots_hit_by_aura",
+   "unit": "count",
+   "how": "damage numbers",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "singularity_damage",
+   "unit": "hp",
+   "how": "per bot",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "bots_hit_by_aura",
+  "min_effect_pct": 30,
+  "min_trials": 5,
+  "rule": "higher is better"
+ },
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists"
+ ],
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

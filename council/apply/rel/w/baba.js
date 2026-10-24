@@ -1,0 +1,261 @@
+{
+ "id": "baba",
+ "hk": "hero_baba",
+ "hero": "Baba",
+ "tag": "New",
+ "name": "Rizuhble's Glock Granny Baba",
+ "desc": "",
+ "abil": [
+  "Threadsap",
+  "Granny Long Legs",
+  "Baba's Brew",
+  "Feed The Birds"
+ ],
+ "order": [
+  1,
+  1,
+  3,
+  2,
+  1,
+  3,
+  4,
+  2,
+  3,
+  1,
+  2,
+  4,
+  2,
+  4,
+  3,
+  4
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Getting poked out. Sell it for Ricochet."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Charge",
+      ""
+     ],
+     [
+      "Mystic Regeneration",
+      ""
+     ],
+     [
+      "Rapid Rounds",
+      ""
+     ],
+     [
+      "Spirit Strike",
+      ""
+     ],
+     [
+      "Radiant Regeneration",
+      ""
+     ],
+     [
+      "Grit",
+      ""
+     ],
+     [
+      "Reactive Barrier",
+      ""
+     ],
+     [
+      "Titanic Magazine",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Fortitude",
+      ""
+     ],
+     [
+      "Burst Fire",
+      ""
+     ],
+     [
+      "Spirit Lifesteal",
+      ""
+     ],
+     [
+      "Rapid Recharge",
+      ""
+     ],
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Spirit Snatch",
+      ""
+     ],
+     [
+      "Compress Cooldown",
+      "On Granny Long Legs.",
+      "2"
+     ],
+     [
+      "Mystic Vulnerability",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Spiritual Overflow",
+      ""
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Escalating Exposure",
+      ""
+     ],
+     [
+      "Ricochet",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Burst Fire if needed. Ahead? Skip it until you're dying. Sell Fortitude for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "Their gun carry is melting you."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun."
+     ],
+     [
+      "Bullet Resilience",
+      "Two or more gun heroes keep hitting you."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming, like Bebop's hook or Apollo's ult."
+     ],
+     [
+      "Dispel Magic",
+      "Hexes and slows keep you off them."
+     ],
+     [
+      "Unstoppable",
+      "Stuns keep cancelling your ult."
+     ],
+     [
+      "Spirit Resilience",
+      "Their spirit damage keeps hitting you."
+     ],
+     [
+      "Healbane",
+      "Their healer keeps your target alive. Sell Reactive Barrier for this."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Indomitable",
+      "Upgrade of Reactive Barrier."
+     ],
+     [
+      "Spirit Burn",
+      "Sell Radiant Regeneration for this."
+     ],
+     [
+      "Leech",
+      "Sell Titanic Magazine for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Alchemical Fire out: its shred is bullet resist, but Baba's bullets do spirit damage (8 + 0.26x spirit per bullet while holding stolen spirit, +8 at T1), so it only helped the small base bullet. Replaced with Spirit Shredder to Spirit Rend from the GILF build Kieran plays: -8% then stacking -15% spirit resist on every bullet plus 10% ability lifesteal. Rend's old note claim is gone with it.",
+  "Rapid Rounds to Swift Striker added mid (GILF lane core): +20% fire rate is +20% spirit bullets for 1.6k, and with Spirit Rend it lands gun 4.8k exactly at 27.2k souls instead of a lone 3.2k gun pocket. Spirit lands 4.8k at 4.8k, 6.4k on Quicksilver Reload and 8k on Mystic Vulnerability (Rapid Recharge moved after them); health 4.8k at 9.6k, 9.6k on Healing Tempo, 14.4k on Infuser.",
+  "Spirit Burn moved from core to rich (sell Torment Pulse) so the full build is 48k (was 52.8k). Core still 12: Rapid Recharge, Radiant, Snatch, Healing Tempo, Reactive Barrier, Infuser, Swift Striker, Mercurial Magnum, Escalating Exposure, Superior Duration, Torment Pulse, Spirit Rend. Counters now sell Swift Striker.",
+  "Kept against the GILF build: Quicksilver Reload to Mercurial Magnum (+20 + 0.38x spirit per bullet and 22% fire rate, the biggest gun item for her stolen spirit) and Healing Tempo (35% fire rate on every Radiant heal). GILF's Extra Spirit/Boundless, Greater Expansion and Spiritual Overflow didn't fit the 12 slots over those. Public Baba data is too thin to weigh (tracklock has under 30 games); the two in-game public builds open the same way (Extra Charge, Mystic Regen, Spirit Strike, Radiant, Healing Booster, Reactive Barrier).",
+  "Ability order: Mobalytics Baba grid (97% Threadsap first, T1/T2 at 5-6, Brew T1/T2 at 7-8, Threadsap T3 at 9) matches Kieran's in-game GILF order; Threadsap T1 is the +8 spirit per bullet the gun plan is built on and T3 adds the charge for Extra Charge/Rapid Recharge; ult T1/T2 at 10-11 (Kieran takes the ult 9-11, public 14-16), Legs and Brew T3 late.",
+  "Item fit: Quicksilver Reload -> Mercurial Magnum out (on no tracklock Baba list, not in Kieran's own build mine/baba.txt or the public baba builds). Replaced by Extra Spirit -> Improved Spirit (same 1.6k) -> Boundless Spirit (same +4.8k): Kieran's build has Extra Spirit and Boundless, pro 18%/27%. Kit: her bullets deal 8 (+0.26x spirit) spirit each with 3 pellets at 0.31s, so raw spirit scales every bullet. Torment Pulse moved to 'Mid · cont.' to keep Mid at 8 (order unchanged).",
+  "Item fit: Infuser kept: in Kieran's own build, and Baba's spirit bullets are ~9-10 separate spirit hits a second (3 pellets / 0.31s) for the full 7s. Kept: Extra Charge 100%, Mystic Regen 97%/Radiant 98%, Healing Booster 91%, Spirit Strike 88%/Spirit Snatch 77%, Grit 71%/Reactive Barrier 89%, Torment Pulse 91%, Duration Extender 57%/Superior Duration 45%, Mystic Vulnerability 20% + Escalating Exposure (Kieran's build), Rapid Rounds -> Swift Striker, Spirit Shredder -> Spirit Rend, Spirit Lifesteal, Healing Tempo (all in Kieran's build).",
+  "Healing Tempo moved from core to Slot locked (Kieran: small gain over Healing Booster for a lot of money).",
+  "Order: ability order set to the a7 data-first order 1324113312223444.",
+  "Threshold: Extra Charge at 800 souls goes on Threadsap, which is already a charged ability (1 charge, T3 adds another). Duration Extender on Granny Long Legs (10s). Spirit Burn (rich box, after 43.2k, ~172 spirit): Threadsap T1 bullets 16 + 0.26 x 172 = 61 each, stomp 75 + 0.6 x 172 = 178, thread 50, so stomp + thread + 5 bullets = 533 vs 500 in 5s. Nothing moved.",
+  "Round 8: Bullet Resilience added to counters (box now 8). Oct 14 gave Baba -7% base bullet resist and cut spirit resist scaling 0.12 to 0.1; NA #1 Shmuckyo build (lockbuilds, updated Oct 17) lists Bullet Resilience first in its counter buys.",
+  "Round 8: Radiant Regeneration kept, note softened ('You cast loads, so it heals a lot' to 'Every cast heals you'). Oct 14 cut its scaling 0.04 to 0.035 and raised Threadsap 26 to 28s, Legs 30 to 32s, Brew 25 to 27s. Shmuckyo (Oct 17) still has Mystic Regen > Radiant Regen in early core. Rest of the build (Extra Charge, Spirit Strike > Snatch, Spirit Shredder > Rend, Mystic Vulnerability > Escalating Exposure, Torment Pulse, Boundless) matches Shmuckyo Oct 17; tracklock (last 30 days, 250 games) is mostly pre-Oct 14.",
+  "Round 13 (notes policy): notes that restated the item, said 'Upgrades to X' or marked spikes are now empty; kept only tips, situational calls and sells, each checked in the game files.",
+  "Round 14: renamed 'Steal And Stomp' to 'Spirit Bullets Baba' (the style is spirit damage through her gun, not stomping). Infuser moved to the start of Late (32k, was 43.2k) so health goes past 4.8k before Boundless instead of staying at 4.8k from 9.6k to 43.2k. Notes emptied: Extra Charge (restated the item; 'twice as often' wasn't accurate), Spirit Lifesteal and Spirit Shredder (proc explanations). Melee Lifesteal note cut to its lane condition and sell. Bullet Resilience note no longer claims it answers shred (it's flat bullet resist, more under 50% health). Counterspell example changed from 'a lift or a long channel' (a 0.8s parry can't block a channel) to Bebop's hook / Apollo's ult. Ability order checked: identical to mobalytics Archon+ Baba grid.",
+  "Round 15: Melee Lifesteal out of the losing-lane box (melee item on a gun Baba, no named sell). Counters desc cut to 111 chars (game limit 112). Divine Barrier added to rich (Dispel Magic is in Counters). Healbane note no longer says 'stomping'; Infuser note names Granny Long Legs.",
+  "Round 17: Lane box caption \"Losing lane? Buy 1\"; rich Indomitable note \"Upgrade of Reactive Barrier.\"; Slot locked moved beside the rich box.",
+  "Round 19: rebuilt as the public gun Baba (SN|P3R Hex Marks the Spot, mock default/lightbringer edit; mobalytics early Rapid Rounds 18%, Swift Striker 14%): the old build was the green Torment Pulse / Granny Long Legs build with two gun items, which is now its own build (baba_tank). Gun core: Rapid Rounds, Titanic Magazine, Burst Fire, Spiritual Overflow, Ricochet on top of the Extra Charge / Mystic Regeneration / Spirit Strike base every Baba build shares.",
+  "Round 19: name is now \"Rizuhble's Gun Baba\" (\"Spirit Bullets\" read like the spirit build). Compress Cooldown moved from Threadsap to Granny Long Legs: Threadsap's stolen spirit lasts 22s (30s at T2) while its cooldown is 16s at T2, so a shorter cooldown adds almost nothing there; Granny Long Legs (32s, 10s duration, shoot while moving at full speed) gets more uptime. Counters caption uses Kieran's exact wording (get after Burst Fire, sell Fortitude, to stay within 112 characters).",
+  "Round 20: late list: Indomitable (upgrade of Reactive Barrier, SN|P3R late), Spirit Burn (SN|P3R, Eido's, Shmuck late; sell Radiant Regeneration), Leech (Eido's, Shmuck late; sell Titanic Magazine), Divine Barrier; slot-locked Transcendent Cooldown. Core 48k, with the late list 71.2k without Divine Barrier. Mystic Regeneration kept (core, not a lane box): Baba's 1 has 2 charges and it upgrades to Radiant Regeneration (65 + 1.7x heal per cast, 6s cooldown).",
+  "Round 20 (update 2): checked Restorative Shot and lane timing: every lane item helps in lane now, no Slowing Bullets or Weighted Shots; no changes.",
+  "Round 23: Spirit Rend added to the late list (worth testing): Threadsap makes every pellet deal spirit damage, so bullet-applied spirit resist drops raise gun damage.",
+  "Round 25: ability order 1324113312223444 → 1132134231242434 (kit-based for this playstyle, no idle early points).",
+  "Cost audit: Healbane sells Reactive Barrier (T2 for T2) so health 4.8k is kept. Removed Spirit Rend from the T4-only rich box (it is a T3)."
+ ]
+}

@@ -1,0 +1,64 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: nurse
+HERO: Nurse Harrow
+ITEM: Titanic Magazine
+CHECKPOINT: add-on-top at 9600 souls (state souls 11200; item cost 1600)
+VERSION: interaction-v1
+ARGS: --interactions nurse Titanic Magazine --at 9600
+GENERATED: 2026-10-24T16:27:39Z
+BODY-SHA: 7b7fc4fc5a5bc071290d83ea33c7606cd87b4b5bf717518fde7908a6c27d10f9
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 1600, unconditional, ranked): Opening Rounds, Long Range, Mystic Shot, Bullet Resist Shredder, Fleetfoot, Recharging Rush; also shown, not ranked (conditional or unequal cost): Kinetic Dash, Active Reload
+VERDICT: Titanic Magazine is beaten in every window: sustained: Mystic Shot; burst: Mystic Shot; ult: Opening Rounds (no permanent equal-soul fire-rate item exists at this checkpoint)
+UNKNOWN_CELLS: 1
+SELECTION: build-decision | Titanic Magazine is bought at 4800 souls in nurse: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (1600) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+UPPER-BOUND OPTIONS THAT BEAT IT (their trigger condition decides; UNKNOWN uptime): Active Reload, Kinetic Dash
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.3, long_share=0.6, W_sus=10.0, W_burst=3.0; reload 1.9 s (VERIFIED GAME MECHANIC m_reloadDuration (weapon vdata; Wraith value equals its sandbox measurement))
+STATE: owned ['Rapid Rounds', 'Healing Booster', 'Titanic Magazine', 'Compress Cooldown', 'Surge of Power', 'Titanic Magazine'] | tiers Leech Therapy=T3(spirit) Wretched Vapors=U(utility) Healing Needles=T2(utility) Lurking Terrors=U(spirit) | weapon invest bonus 18% | spirit 57
+
+## INTERACTION MATRIX (item effect x kit component)
+- magazine size (BonusClipSizePercent=100)
+    normal shooting                              WORKS                      [CALCULATED] fewer reloads in long fights
+    1=Leech Therapy T3 [spirit]                  DOES NOT WORK              [CALCULATED] damage ['DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Wretched Vapors U [utility]                NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Healing Needles T2 [utility]               NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    4=Lurking Terrors U (ULT) [spirit]           DOES NOT WORK              [CALCULATED] damage ['DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    ally hits via Healing Needles                WORKS                      [CALCULATED] more shots per magazine = more heal bullets (heal keys ['HealRegen', 'HeadshotHealBonusPercent', 'SecondaryShotHealPercent'])
+- weapon damage % (BaseAttackDamagePercent=14)
+    normal shooting                              WORKS                      [CALCULATED] multiplies every bullet (weapon % pool now 18%: +14 adds 11.9% relative)
+    1=Leech Therapy T3 [spirit]                  DOES NOT WORK              [CALCULATED] damage ['DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Wretched Vapors U [utility]                NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Healing Needles T2 [utility]               NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    4=Lurking Terrors U (ULT) [spirit]           DOES NOT WORK              [CALCULATED] damage ['DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    melee (light/heavy)                          UNKNOWN                    [UNKNOWN] melee damage is ELightMeleeDamage/EHeavyMeleeDamage; whether weapon-% (incl. range-conditional) bonuses apply to melee is not in data
+    ally hits via Healing Needles                DOES NOT WORK              [CALCULATED] heal per shot is not weapon-damage scaled (heal keys have no weapon scale type)
+    other weapon % items                         WORKS (diminishing)        [CALCULATED] additive pool 18% (incl. invest bonus): relative gain 11.9%
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(build state, nothing added) |       441              |       181              |       539              | 0
+Titanic Magazine             |        567 (+29..+29%) |        202 (+12..+12%) |          539 (+0..+0%) | 0
+Opening Rounds               |          478 (+8..+8%) |          196 (+8..+8%) |          554 (+3..+3%) | 0
+Long Range                   |        529 (+20..+20%) |        214 (+19..+19%) |          539 (+0..+0%) | 0
+Mystic Shot                  |        671 (+52..+52%) |        320 (+77..+77%) |          554 (+3..+3%) | 0
+Bullet Resist Shredder       |        524 (+19..+19%) |        213 (+18..+18%) |          554 (+3..+3%) | 0
+Fleetfoot                    |          470 (+7..+7%) |          192 (+6..+6%) |          539 (+0..+0%) | 0
+Kinetic Dash                 |        528 (+20..+20%) |        213 (+18..+18%) |          539 (+0..+0%) | 0  ! fire rate is a timed buff, counted as always on (upper bound)
+Active Reload                |        528 (+20..+20%) |        213 (+18..+18%) |          539 (+0..+0%) | 81  ! fire rate is a timed buff, counted as always on (upper bound)
+Recharging Rush              |        486 (+10..+10%) |          197 (+9..+9%) |          539 (+0..+0%) | 0
+  candidate detail (reading 1): sustained bullets 32, gun 548, stacks 0, procs 0, spirit 19 | ult: Lurking Terrors damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Mystic Shot > Titanic Magazine > Long Range > Bullet Resist Shredder > Recharging Rush > Opening Rounds > Fleetfoot
+  burst: rank (reading 1) Mystic Shot > Long Range > Bullet Resist Shredder > Titanic Magazine > Recharging Rush > Opening Rounds > Fleetfoot
+  ult: rank (reading 1) Opening Rounds > Mystic Shot > Bullet Resist Shredder > Titanic Magazine > Long Range > Fleetfoot > Recharging Rush
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (200s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_nurse_Titanic_Magazine_melee_light_heavy__weapon_damage_.txt
+
+## NOT DETERMINED FROM DATA
+  - weapon damage % (BaseAttackDamagePercent=14): melee (light/heavy): melee damage is ELightMeleeDamage/EHeavyMeleeDamage; whether weapon-% (incl. range-conditional) bonuses apply to melee is not in data
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

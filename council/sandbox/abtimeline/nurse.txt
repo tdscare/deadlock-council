@@ -1,0 +1,83 @@
+# nurse | Nurse Harrow | Rizuhble's Friendly Fire Harrow
+abilities: 1=Leech Therapy (ability_nurse_leech_therapy, start_trained=false, Signature) / 2=Wretched Vapors (ability_nurse_adrenaline_rush, start_trained=false, Signature) / 3=Healing Needles (ability_nurse_healing_needles, start_trained=false, Signature) / 4=Lurking Terrors (ability_nurse_fear, start_trained=false, Ultimate)
+order: 1111332433222444
+model A (data):  Leech Ther:U@0  Leech Ther:T1@200  Healing Ne:U@500  Wretched V:U@1400  Leech Ther:T2@2000  Lurking Te:U@3200  Leech Ther:T3@6000  Healing Ne:T1@6800  Healing Ne:T2@8400  Healing Ne:T3@12800  Wretched V:T1@13800  Wretched V:T2@16100  Wretched V:T3@24600  Lurking Te:T1@26900  Lurking Te:T2@32100  Lurking Te:T3@48600
+model B (old):   Leech Ther:T1@200  Leech Ther:T2@900  Leech Ther:T3@2000  Healing Ne:T1@3900  Healing Ne:T2@4600  Wretched V:T1@5300  Lurking Te:U@6000  Healing Ne:T3@6800  Wretched V:T2@8400  Wretched V:T3@9200  Lurking Te:T1@11000  Lurking Te:T2@11900  Lurking Te:T3@12800
+tier upgrades: Leech Therap: LeechStaminaDrain+0.3 / AbilityCooldown-10,SpiritPowerPerLeechStack+4 / MaxLeechBonusStacks+8,DPS+0.3x,Radius+1 | Wretched Vap: AbilityCooldown-15,AbilityCastRange+7 / AbilityDuration+1,HealingEffectivenessPercent+20,HealAmpRegenPercent+20 / RushTimeScaleBonusPercent+15,DispelDebuffs+1 | Healing Need: AbilityCharges+1 / StaminaRestorePerHit+0.6,HealRegen+20 / HealRegen+0.4x,BuffExtendPercentPerShot+6 | Lurking Terr: AbilityCooldown-50 / SlowPercent+20,FireRateSlow+20,DPS+30 / ChannelDamageImmune+1,AbilityChannelTime+3,DPS+0.5x
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1    19  Extra Spirit
+        Leech Ther T1 ch1 cd30 d5 DPS=10 | Wretched V L[U] | Healing Ne U ch1 cd0 | Lurking Te L
+  1600 L5   2    21  Extended Magazine
+        Leech Ther T1[T2] ch1 cd30 d5 DPS=10 | Wretched V U ch1 cd40 d4 | Healing Ne U ch1 cd0 | Lurking Te L
+  2400 L6   3    22  Extra Regen
+        Leech Ther T2[T3] ch1 cd20 d5 DPS=10 | Wretched V U ch1 cd40 d4 | Healing Ne U ch1 cd0 | Lurking Te L
+  3200 L8   4    25  Rapid Rounds
+        Leech Ther T2[T3] ch1 cd20 d5 DPS=11 | Wretched V U ch1 cd40 d4 | Healing Ne U ch1 cd0 | Lurking Te U[L] ch1 cd200 DPS=10
+  4000 L9   5    26  Healing Booster
+        Leech Ther T2[T3] ch1 cd20 d5 DPS=11 | Wretched V U ch1 cd40 d4 | Healing Ne U[T1] ch1 cd0 | Lurking Te U[L] ch1 cd200 DPS=10
+  4800 L10  6    27  Titanic Magazine
+        Leech Ther T2[T3] ch1 cd20 d5 DPS=11 | Wretched V U ch1 cd40 d4 | Healing Ne U[T2] ch1 cd0 | Lurking Te U[L] ch1 cd200 DPS=10
+  6400 L12  8    37  Compress Cooldown [imbue Wretched Vapors]
+        Leech Ther T3 ch1 cd20 d5 DPS=16 | Wretched V U[T1] ch1 cd40 d4 | Healing Ne U[T2] ch1 cd0 | Lurking Te U ch1 cd200 DPS=11
+  8800 L15 11    53  Surge of Power [imbue Healing Needles]
+        Leech Ther T3 ch1 cd20 d5 DPS=19 | Wretched V U[T2] ch1 cd40 d4 | Healing Ne T2[T3] ch2 cd0 | Lurking Te U ch1 cd200 DPS=11
+ 11200 L18 14    57  Burst Fire
+        Leech Ther T3 ch1 cd20 d5 DPS=19 | Wretched V U[T3] ch1 cd40 d4 | Healing Ne T2[T3] ch2 cd0 | Lurking Te U[T1] ch1 cd200 DPS=12
+ 12800 L20 16    65  Spirit Lifesteal
+        Leech Ther T3 ch1 cd20 d5 DPS=21 | Wretched V U[T3] ch1 cd40 d4 | Healing Ne T3 ch2 cd0 | Lurking Te U[T3] ch1 cd200 DPS=12
+ 14400 L21 17    66  Debuff Reducer
+        Leech Ther T3 ch1 cd20 d5 DPS=21 | Wretched V T1[T3] ch1 cd25 d4 | Healing Ne T3 ch2 cd0 | Lurking Te U[T3] ch1 cd200 DPS=12
+ 16000 L22 18    92  Improved Spirit
+        Leech Ther T3 ch1 cd20 d5 DPS=26 | Wretched V T1[T3] ch1 cd25 d4 | Healing Ne T3 ch2 cd0 | Lurking Te U[T3] ch1 cd200 DPS=13
+ 17600 L24 20   101  Superior Cooldown
+        Leech Ther T3 ch1 cd20 d5 DPS=28 | Wretched V T2[T3] ch1 cd25 d5 | Healing Ne T3 ch2 cd0 | Lurking Te U[T3] ch1 cd200 DPS=14
+ 20800 L26 22   104  Toxic Bullets
+        Leech Ther T3 ch1 cd20 d5 DPS=28 | Wretched V T2[T3] ch1 cd25 d5 | Healing Ne T3 ch2 cd0 | Lurking Te U[T3] ch1 cd200 DPS=14
+ 22400 L26 22   104  Guardian Ward
+        Leech Ther T3 ch1 cd20 d5 DPS=28 | Wretched V T2[T3] ch1 cd25 d5 | Healing Ne T3 ch2 cd0 | Lurking Te U[T3] ch1 cd200 DPS=14
+ 27200 L29 25   145  Boundless Spirit
+        Leech Ther T3 ch1 cd20 d5 DPS=36 | Wretched V T3 ch1 cd25 d5 | Healing Ne T3 ch2 cd0 | Lurking Te T1[T3] ch1 cd150 DPS=16
+ 32000 L30 26   146  Unstoppable
+        Leech Ther T3 ch1 cd20 d5 DPS=36 | Wretched V T3 ch1 cd25 d5 | Healing Ne T3 ch2 cd0 | Lurking Te T1[T3] ch1 cd150 DPS=16
+ 38400 L33 29   150  Vampiric Burst
+        Leech Ther T3 ch1 cd20 d5 DPS=37 | Wretched V T3 ch1 cd25 d5 | Healing Ne T3 ch2 cd0 | Lurking Te T2[T3] ch1 cd150 DPS=20
+ 43200 L34 30   151  Spiritual Overflow
+        Leech Ther T3 ch1 cd20 d5 DPS=37 | Wretched V T3 ch1 cd25 d5 | Healing Ne T3 ch2 cd0 | Lurking Te T2[T3] ch1 cd150 DPS=20
+ 48000 L35 31   152  Healing Tempo
+        Leech Ther T3 ch1 cd20 d5 DPS=37 | Wretched V T3 ch1 cd25 d5 | Healing Ne T3 ch2 cd0 | Lurking Te T2[T3] ch1 cd150 DPS=20
+ 54400 L36 32   154  Ricochet
+        Leech Ther T3 ch1 cd20 d5 DPS=37 | Wretched V T3 ch1 cd25 d5 | Healing Ne T3 ch2 cd0 | Lurking Te T3 ch1 cd150 DPS=32
+ 60800 L36 32   162  Escalating Exposure
+        Leech Ther T3 ch1 cd20 d5 DPS=39 | Wretched V T3 ch1 cd25 d5 | Healing Ne T3 ch2 cd0 | Lurking Te T3 ch1 cd150 DPS=33
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @6400 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Wretched Vapors; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Wretched Vapors U: cd 40s, duration 4s, charges 1; saves 7.2s/cast (1.50->1.83 casts/min)
+    enabler/next: after T1 @13800 (+7400): cd 25, saves 4.5s/cast, +0.53 casts/min vs +0.33 now
+- @8800 Surge of Power [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Healing Needles; needs it trained and the stat the item raises
+    game text: Imbue an ability with permanent Spirit Power. When that ability is used, gain bonus Move Speed and maintain full speed while attacking.
+    at buy: Healing Needles T2: cd 0s, duration 0s, charges 2; with imbue: 
+    reliability: imbued ability has no spirit-scaled damage (spirit only helps other scaled props)
+- @17600 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 245s; 20% saves 49.0s per rotation
+- @43200 Spiritual Overflow [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack
+    game text: Gain bonus Fire Rate, Spirit Power and Spirit Lifesteal by charging up when shooting enemy heroes.
+    at buy: not computed (needs play data)
+- @48000 Healing Tempo [heal] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs a heal applied (not innate regen/lifesteal)
+    game text: Applying {g:citadel_inline_attribute:'Heal'} to yourself or an ally grants the target {g:citadel_inline_attribute:'BonusFireRate'} and {g:citadel_inli...
+    at buy: not computed (needs play data)
+- @60800 Escalating Exposure [spiritsrc+stack] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Dealing {g:citadel_inline_attribute:'SpiritDamage'} applies a stacking Spirit Amp that increases your {g:citadel_inline_attribute:'SpiritDamage'} to t... | vdata: proc damage types ABILITY
+    at buy: spirit sources: Leech Therapy, Lurking Terrors
+    reliability: max 12 stacks, one per 0.7s of spirit hits = 8.4s of continuous spirit damage to max
+
+no trigger condition (plain stats/actives): Extra Spirit, Extended Magazine, Extra Regen, Rapid Rounds, Healing Booster, Titanic Magazine, Burst Fire, Spirit Lifesteal, Debuff Reducer, Improved Spirit, Toxic Bullets, Guardian Ward, Boundless Spirit, Unstoppable, Vampiric Burst, Ricochet

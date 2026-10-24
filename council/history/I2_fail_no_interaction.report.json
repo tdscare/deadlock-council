@@ -1,0 +1,101 @@
+{
+ "strategy": {
+  "trig": [],
+  "lines": [
+   "STRATEGY: not triggered (no purchase-order/greens/spike-timing change)"
+  ]
+ },
+ "interaction": {
+  "lines": [
+   "INTERACTION BLOCK Close Quarters"
+  ]
+ },
+ "weakness": {
+  "lines": [
+   "WEAKNESS: proposal is not justified by a weakness"
+  ]
+ },
+ "overlap": {
+  "changed": [
+   "  overlap Close Quarters (added): no overlap-candidate"
+  ],
+  "unresolved": [
+   "overlap-candidate Active Reload [at_buy=ADDS-VALUE(20.3% whole item) ALT-BETTER [\"Titanic Magazine\",46.5]; core_end=ADDS-VALUE(11.6% whole item)]",
+   "overlap-candidate Swift Striker [at_buy=REDUNDANT-LIKELY(2.7% whole item) ALT-BETTER [\"Titanic Magazine\",41.6]; core_end=REDUNDANT-LIKELY(3.6% whole item)]",
+   "overlap-candidate Ricochet [at_buy=ADDS-VALUE(8.1% whole item) ALT-BETTER [\"Mercurial Magnum\",19]; core_end=REDUNDANT-LIKELY(5.9% whole item) ALT-BETTER [\"Mercurial Magnum\",16.2]]",
+   "overlap-candidate Burst Fire [at_buy=ADDS-VALUE(9.9% whole item) ALT-BETTER [\"Blood Tribute\",12.5]; core_end=ADDS-VALUE(8.8% whole item) ALT-BETTER [\"Blood Tribute\",11.9]]",
+   "overlap-candidate Lucky Shot [at_buy=REDUNDANT-LIKELY(4.3% whole item) ALT-BETTER [\"Mercurial Magnum\",18.6]; core_end=COMPLEMENTS(4.3% whole item) ALT-BETTER [\"Mercurial Magnum\",16.5]]",
+   "overlap-candidate Vampiric Burst [at_buy=ADDS-VALUE(8.8% whole item) ALT-BETTER [\"Healing Tempo\",12]; core_end=ADDS-VALUE(8.9% whole item)]",
+   "overlap-candidate Counterspell [core_end=UNKNOWN]",
+   "overlap-candidate Unstoppable [core_end=UNKNOWN]",
+   "overlap-candidate Surge of Power [core_end=REDUNDANT-LIKELY(0.0% whole item) ALT-BETTER [\"Blood Tribute\",9.9]]",
+   "overlap-candidate Leech [core_end=UNKNOWN]",
+   "overlap-candidate Phantom Strike [core_end=UNKNOWN]",
+   "overlap-candidate Frenzy [core_end=ADDS-VALUE(4.7% whole item) ALT-BETTER [\"Mercurial Magnum\",16.5]]",
+   "overlap-candidate Mercurial Magnum [core_end=REDUNDANT-LIKELY(0.0% whole item) ALT-BETTER [\"Phantom Strike\",6.4]]",
+   "overlap-candidate Spiritual Overflow [core_end=COMPLEMENTS(2.9% whole item) ALT-BETTER [\"Mercurial Magnum\",16.5]]"
+  ]
+ },
+ "unresolved": [
+  "bc: CORE_NOTE_NONEMPTY haze: Ricochet: start farming and dont stop untill u have siphon bullets",
+  "bc: CORE_NOTE_NONEMPTY haze: Healing Booster: Buffs all your lifesteal, smoke T3 included.",
+  "bc: CORE_NOTE_NONEMPTY haze: Siphon Bullets: farm until this, then start fighting",
+  "bc: CORE_NOTE_NONEMPTY haze: Rapid Recharge: More smokes, and Smoke Bomb works as a dispel: it clears hexes and bur",
+  "bc: CORE_NOTE_NONEMPTY haze: Vampiric Burst: Pop it with smoke T3 for the big heal.",
+  "bc: FRESH_T2_LATE haze: Bullet Lifesteal @28000",
+  "bc: OVER_WORDING haze: \"over\" in notes: if u die the game is over get this. Sell Fortitude for ",
+  "bc: OPT_SELL_NOT_IN_CORE haze: Divine Barrier sells Counterspell",
+  "bc: OVERSHOOT_GUN_BEFORE_HEALTH haze: gun 11200 at health 4.8k @16000",
+  "bc: T4_BEFORE_20K haze: Ricochet@14400",
+  "c12: Surge of Power (spirit) instead of Burst Fire (gun): colour changes, check spikes",
+  "c12: Phantom Strike (health) instead of Silencer (gun): colour changes, check spikes",
+  "c12: Spiritual Overflow (gun) instead of Mercurial Magnum (spirit): colour changes, check spikes",
+  "walk: Silencer: slot 13 with no sell that frees a slot",
+  "walk: Healing Tempo: slot 13 with no sell that frees a slot",
+  "c12: Surge of Power (spirit) instead of Burst Fire (gun): colour changes, check spikes",
+  "c12: Phantom Strike (health) instead of Silencer (gun): colour changes, check spikes",
+  "c12: Spiritual Overflow (gun) instead of Mercurial Magnum (spirit): colour changes, check spikes"
+ ],
+ "proposal": "I2_fail_no_interaction",
+ "id": "haze",
+ "diff": [
+  "added Mid · L-R|Close Quarters"
+ ],
+ "block": [
+  "NEW violation introduced: bc: T1T2_NOT_UPGRADED_OR_SOLD haze: Close Quarters (T1) @16800",
+  "NEW violation introduced: bc: SLOTS_GT12_NO_SELL haze: Silencer is slot 13",
+  "NEW violation introduced: bc: SLOTS_GT12_NO_SELL haze: Healing Tempo is slot 13",
+  "NEW violation introduced: bc: CORE_NOT_12 haze: core ends with 13 items, 53600 souls",
+  "NEW violation introduced: walk: Silencer: slot 13 with no sell that frees a slot",
+  "NEW violation introduced: walk: Healing Tempo: slot 13 with no sell that frees a slot",
+  "INTERACTION: Close Quarters (added) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions haze \"Close Quarters\") is cited"
+ ],
+ "warn": [],
+ "fixed": [],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY haze: Ricochet: start farming and dont stop untill u have siphon bullets",
+  "bc: CORE_NOTE_NONEMPTY haze: Healing Booster: Buffs all your lifesteal, smoke T3 included.",
+  "bc: CORE_NOTE_NONEMPTY haze: Siphon Bullets: farm until this, then start fighting",
+  "bc: CORE_NOTE_NONEMPTY haze: Rapid Recharge: More smokes, and Smoke Bomb works as a dispel: it clears hexes and bur",
+  "bc: CORE_NOTE_NONEMPTY haze: Vampiric Burst: Pop it with smoke T3 for the big heal.",
+  "bc: FRESH_T2_LATE haze: Bullet Lifesteal @28000",
+  "bc: OVER_WORDING haze: \"over\" in notes: if u die the game is over get this. Sell Fortitude for ",
+  "bc: OPT_SELL_NOT_IN_CORE haze: Divine Barrier sells Counterspell",
+  "bc: OVERSHOOT_GUN_BEFORE_HEALTH haze: gun 11200 at health 4.8k @16000",
+  "bc: T4_BEFORE_20K haze: Ricochet@14400",
+  "c12: Surge of Power (spirit) instead of Burst Fire (gun): colour changes, check spikes",
+  "c12: Phantom Strike (health) instead of Silencer (gun): colour changes, check spikes",
+  "c12: Spiritual Overflow (gun) instead of Mercurial Magnum (spirit): colour changes, check spikes"
+ ],
+ "newV": [
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD haze: Close Quarters (T1) @16800",
+  "bc: SLOTS_GT12_NO_SELL haze: Silencer is slot 13",
+  "bc: SLOTS_GT12_NO_SELL haze: Healing Tempo is slot 13",
+  "bc: CORE_NOT_12 haze: core ends with 13 items, 53600 souls",
+  "bc: RT_ITEMS haze: Mid · L-R: [[\"Healing Booster\",null],[\"Siphon Bullets\",null],[\"Burst Fire\",null],[\"Bullet Lifesteal\",null],[\"Extra Charge\",null]] vs [[\"Healing Booster\",null],[\"Close Quarters\",null],[\"Siphon Bullets\",null],[\"Burst Fire\",null],[\"Bullet Lifesteal\",null],[\"Extra Charge\",null]]",
+  "walk: Silencer: slot 13 with no sell that frees a slot",
+  "walk: Healing Tempo: slot 13 with no sell that frees a slot"
+ ],
+ "when": "2026-10-24 16:59",
+ "line": "[2026-10-24 16:59] crafted gate test case for the strategy/interaction rules (not a real proposal) | added Mid · L-R|Close Quarters | evidence: data:gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata | gate: FAIL"
+}

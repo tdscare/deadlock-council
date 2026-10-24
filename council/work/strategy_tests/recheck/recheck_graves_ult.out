@@ -1,0 +1,19 @@
+BUILD graves_ult | diff: added Early · L-R|Arcane Surge; removed Mid · cont.|Arcane Surge
+fixed: 4 | UNRESOLVED in resulting build: 2 | NEW: 3
+  fixed   bc: MAIN_4.8K_LATE graves_ult: spirit 4.8k at 13600
+  fixed   bc: THRESH_ITEM_NO_THRESHOLD_LINE graves_ult: Spirit Burn @54400 has no "Threshold:" changes line naming it
+  fixed   bc: THRESH_ITEM_NO_THRESHOLD_LINE graves_ult: Arcane Surge @25600 has no "Threshold:" changes line naming it
+  fixed   abt: ECHO-ON-ULT Echo Shard 36800
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY graves_ult: Arcane Surge: Dash-jump right before you cast your ult.
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY graves_ult: Heroic Aura: Works on your ghouls too.
+STRATEGY BLOCK
+INTERACTION BLOCK Arcane Surge
+OVERLAP check (changed items):
+  overlap Arcane Surge (moved earlier): no overlap-candidate
+UNRESOLVED overlap-candidates in resulting build (not part of this change): 3
+  UNRESOLVED overlap-candidate Superior Cooldown [at_buy=REDUNDANT-LIKELY; core_end=REDUNDANT-LIKELY]
+  UNRESOLVED overlap-candidate Diviner's Kevlar [at_buy=UNKNOWN; core_end=UNKNOWN]
+  UNRESOLVED overlap-candidate Divine Barrier [core_end=UNKNOWN]
+BLOCK STRATEGY: proposal changes purchase order + greens (Extra Stamina,Grit,Enchanter's Emblem,Spirit Lifesteal,Spirit Shielding,Diviner's Kevlar -> Extra Stamina,Grit,Enchanter's Emblem,Spirit Lifesteal,Spirit Shielding,Diviner's Kevlar) + 4.8k spike timing (vitality 8000 -> 9600, spirit 13600 -> 5600) but cites no `strategy` evidence file (run abtimeline.py --strategy graves_ult <checkpoints> and cite it as kind `strategy`)
+BLOCK INTERACTION: Arcane Surge (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions graves_ult "Arcane Surge") is cited
+RESULT: BLOCKED

@@ -1,0 +1,66 @@
+SCOPE: build-context
+KIND: range
+BUILD: haze
+HERO: Haze
+CHECKPOINT: 12000 souls (state after Fortitude); owned ['Active Reload', 'Swift Striker', 'Titanic Magazine', 'Fortitude']
+ARGS: --range haze --at 12000 --item Close Quarters --vs High-Velocity Rounds --queue
+GENERATED: 2026-10-24T15:57:45Z
+BODY-SHA: 324547213ff54d533b4c8c0d9aff8bd0011f52575fb7ffe67b61bf481ea643f9
+INPUT-SHA: 6b25324ca102abf1e8a0be930cdb79838cf0a060ca7969561a57fbe54d83021d
+UNIT: 1 m = 39.37 u (UNVERIFIED HYPOTHESIS; supported by round-number falloff 787 u = 20.0 m, 1811 u = 46.0 m)
+WEAPON (citadel_weapon_haze_set): falloff 787.0 u -> 1811.0 u, scale 1.0 -> 0.1, bullet speed 30000.0 u/s, reload 2.35 s [VERIFIED GAME MECHANIC]. Falloff curve between the ends is linear here (bias MODELLED ESTIMATE simplification)
+WHAT IS MEASURED: nothing yet. RAW rows = game numbers multiplied out (VERIFIED inputs, MODELLED combination). PRACTICAL effectiveness (hit rate vs distance, reaching/holding the range, danger) is UNKNOWN: no data and no measurement, so it is shown as labelled SCENARIOS and sensitivity, with sandbox requests queued
+
+## DISTANCE SET (from data; distances in m / u; kind; source tier)
+    2.5 m     98 u  [melee] contact / point blank (100 u)  <sandbox operator practice (100-150 u for melee), NOT game...>
+    3.8 m    150 u  [melee] melee reach upper (150 u)  <sandbox operator practice, NOT game data>
+   13.5 m    531 u  [item threshold] just inside Close Quarters: +20% weapon damage within 15m  <VERIFIED GAME MECHANIC>
+   16.0 m    630 u  [ability range] Bullet Dance Radius=16  <VERIFIED GAME MECHANIC>
+   16.5 m    650 u  [item threshold] just outside Close Quarters: +20% weapon damage within 15m  <VERIFIED GAME MECHANIC>
+   19.0 m    748 u  [gun falloff] just inside weapon falloff start (787 u)  <VERIFIED GAME MECHANIC>
+   21.0 m    827 u  [gun falloff] just beyond falloff start  <VERIFIED GAME MECHANIC>
+   33.0 m   1299 u  [gun falloff] middle of the falloff band  <VERIFIED GAME MECHANIC>
+   46.0 m   1811 u  [gun falloff] falloff end (1811 u, scale 0.1)  <VERIFIED GAME MECHANIC>
+
+## RAW RELATIVE GUN DAMAGE PER BULLET HIT (falloff x weapon-% items active at that distance; MODELLED from VERIFIED stats; 1.00 = unmodified bullet at no falloff)
+distance | falloff | flight time ms | owned (as built) | + Close Quarters | + High-Velocity Rounds | range items active (any set)
+  2.5 m | 1.00 | 3 | 1.140 | 1.340 | 1.220 | Close Quarters
+  3.8 m | 1.00 | 5 | 1.140 | 1.340 | 1.220 | Close Quarters
+ 13.5 m | 1.00 | 18 | 1.140 | 1.340 | 1.220 | Close Quarters
+ 16.0 m | 1.00 | 21 | 1.140 | 1.140 | 1.220 | -
+ 16.5 m | 1.00 | 22 | 1.140 | 1.140 | 1.220 | -
+ 19.0 m | 1.00 | 25 | 1.140 | 1.140 | 1.220 | -
+ 21.0 m | 0.97 | 28 | 1.100 | 1.100 | 1.177 | -
+ 33.0 m | 0.55 | 43 | 0.627 | 0.627 | 0.671 | -
+ 46.0 m | 0.10 | 60 | 0.114 | 0.114 | 0.122 | -
+
+## SCENARIO DISTRIBUTIONS (explicit labelled scenarios, uniform within each band; NOT measured frequencies, no probabilities claimed)
+scenario | owned (as built) | + Close Quarters | + High-Velocity Rounds | best
+brawl (all inside the closest item threshold / melee band) 0.5-15.0 m | 1.140 | 1.340 | 1.220 | + Close Quarters
+skirmish (between that threshold and the falloff start) 15.0-20.0 m | 1.140 | 1.140 | 1.220 | + High-Velocity Rounds
+poke (falloff band) 20.0-46.0 m | 0.627 | 0.627 | 0.671 | + High-Velocity Rounds
+mix 70/25/5 (brawl/skirmish/poke shares) | 1.114 | 1.254 | 1.193 | + Close Quarters
+mix 40/40/20 (brawl/skirmish/poke shares) | 1.037 | 1.117 | 1.110 | + Close Quarters
+mix 15/45/40 (brawl/skirmish/poke shares) | 0.935 | 0.965 | 1.000 | + High-Velocity Rounds
+mix 5/25/70 (brawl/skirmish/poke shares) | 0.781 | 0.791 | 0.836 | + High-Velocity Rounds
+BREAK-EVEN: + Close Quarters out-damages + High-Velocity Rounds per bullet hit once the brawl-band share is >= 35% (rest split evenly skirmish/poke); below that the other wins [RAW, hit rate equal at all ranges ASSUMED]
+
+## PRACTICAL SENSITIVITY (hit rate vs distance is UNKNOWN; three labelled shapes, RAW value x hit(d); a ranking that survives all three does not depend on the unknown)
+  flat 1.0             mix 40/40/20: owned (as built) 1.037 | + Close Quarters 1.117 | + High-Velocity Rounds 1.110 | best + Close Quarters
+  mild (-1% per m)     mix 40/40/20: owned (as built) 0.885 | + Close Quarters 0.959 | + High-Velocity Rounds 0.947 | best + Close Quarters
+  steep (-2.5% per m)  mix 40/40/20: owned (as built) 0.663 | + Close Quarters 0.727 | + High-Velocity Rounds 0.709 | best + Close Quarters
+
+## MULTI-TARGET LAYOUTS (ring geometry of `enemies n rho`: main target + n-1 others on a ring of radius rho; radii from item/ability data)
+  Bullet Dance (ability 4) Radius=16 m [radius-from-source] (VERIFIED GAME MECHANIC)
+    tight                  rho   6.4 m ( 252 u): n=2: 1 of 1 others reached; n=3: 2 of 2 others reached; n=5: 4 of 4 others reached
+    medium (just inside)   rho  14.4 m ( 567 u): n=2: 1 of 1 others reached; n=3: 2 of 2 others reached; n=5: 4 of 4 others reached
+    wide (just outside)    rho  20.8 m ( 819 u): n=2: 0 of 1 others reached; n=3: 0 of 2 others reached; n=5: 0 of 4 others reached
+    spread (2x)            rho  32.0 m (1260 u): n=2: 0 of 1 others reached; n=3: 0 of 2 others reached; n=5: 0 of 4 others reached
+  RULE: secondary-target damage and debuff coverage are reported per target (primary / secondary / kills); a total across targets is never the headline; bounce and splash damage is counted once, on the target that receives it.
+
+## SANDBOX REQUESTS (planner fields: council/sandbox/PLANNER_FIELDS.md)
+  council/sandbox/autorun/scenarios/range/rng_haze_distance_sweep_12000.txt
+  council/sandbox/autorun/scenarios/range/rng_haze_layout_Bullet_Dance_ability_4__12000.txt
+  council/sandbox/autorun/scenarios/range/rng_haze_moving_12000.txt
+
+## NOT DETERMINED: hit rate vs distance, strafing hit rate (no moving-target op in the runner: blocked_by estrafe), engagement-distance frequencies per hero, ability-range-limited reach; each shows as a labelled scenario or a queued request, never as a number

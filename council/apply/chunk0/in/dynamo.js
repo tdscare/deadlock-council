@@ -1,0 +1,261 @@
+{
+ "id": "dynamo",
+ "hero": "Dynamo",
+ "tag": "Fix",
+ "name": "Rizuhble's Babysitter Dynamo",
+ "desc": "Support Dynamo",
+ "hk": "hero_dynamo",
+ "abil": [
+  "Kinetic Pulse",
+  "Quantum Entanglement",
+  "Rejuvenating Aurora",
+  "Singularity"
+ ],
+ "order": [
+  1,
+  1,
+  3,
+  3,
+  2,
+  3,
+  4,
+  1,
+  4,
+  3,
+  4,
+  2,
+  2,
+  4,
+  2,
+  1
+ ],
+ "rows": [
+  [
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Charge",
+      ""
+     ],
+     [
+      "Headshot Booster",
+      ""
+     ],
+     [
+      "Extra Regen",
+      ""
+     ],
+     [
+      "Healing Rite",
+      ""
+     ],
+     [
+      "Rescue Beam",
+      ""
+     ],
+     [
+      "Headhunter",
+      ""
+     ],
+     [
+      "Sprint Boots",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Trophy Collector",
+      ""
+     ],
+     [
+      "Heroic Aura",
+      "Only if your team has gun heroes."
+     ],
+     [
+      "Healing Booster",
+      ""
+     ],
+     [
+      "Rapid Recharge",
+      ""
+     ],
+     [
+      "Mystic Expansion",
+      "On Kinetic Pulse.",
+      "1"
+     ],
+     [
+      "Compress Cooldown",
+      "On the ult.",
+      "4"
+     ],
+     [
+      "Enchanter's Emblem",
+      ""
+     ],
+     [
+      "Duration Extender",
+      "On the ult.",
+      "4"
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Warp Stone",
+      "Teleport into the middle of them, then ult."
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Greater Expansion",
+      ""
+     ],
+     [
+      "Superior Duration",
+      ""
+     ],
+     [
+      "Healing Tempo",
+      "Everyone your Aurora heals gets the fire rate and move speed."
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Enchanter's Emblem if needed. Ahead? Skip it until you're dying. Sell Warp Stone for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "One gun hero is deleting you: Haze, Wraith, Vindicta."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun and Metal Skin isn't enough."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+     ],
+     [
+      "Dispel Magic",
+      "Knockdown before it lands, Slowing Hex, Disarming Hex."
+     ],
+     [
+      "Debuff Reducer",
+      "Silences and slows keep you out of fights."
+     ],
+     [
+      "Unstoppable",
+      "Stuns that cancel your ult."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Swap for Heroic Aura",
+    "",
+    true,
+    [
+     [
+      "Knockdown",
+      "Instead of Heroic Aura when your team has no gun heroes."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Witchmail",
+      "Sell Enchanter's Emblem for this."
+     ],
+     [
+      "Lightning Scroll",
+      "Sell Trophy Collector for this."
+     ],
+     [
+      "Echo Shard",
+      "On Rejuvenating Aurora. Sell Rapid Recharge for this.",
+      "3"
+     ],
+     [
+      "Cheat Death",
+      "Sell Heroic Aura (or Knockdown) for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ],
+     [
+      "Refresher",
+      "Sell Headhunter for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Base = Kieran's in-game Babysitter Dynamo. Items, order and boxes kept; gun spike restored and slot/upgrade rule breaks fixed.",
+  "Added Opening Rounds (800) at the end of Early: his in-game build left High-Velocity as an untouched 800 and gun stopped at 4000. With Opening Rounds, Heroic Aura lands 4.8k gun exactly at 11.2k souls (his older in-game build did the same: 'With Opening Rounds this is 4.8k gun').",
+  "Core now ends at exactly 12 slots: Boundless Spirit was slot 13 with no sell, so it sells Sprint Boots (weakest 800 at 40k). Health 4.8k still lands on Sprint Boots at 8k souls, spirit 4.8k passes at Compress Cooldown (5.6k, a bit over).",
+  "Removed Enduring Speed from Slot locked: rule says Enduring Speed is core or not in, never optional. Sprint Boots now has a named sell instead.",
+  "Note wording: Enchanter's Emblem/Witchmail, Divine Barrier/Counterspell were called upgrades but Witchmail has no components and Divine Barrier builds from Guardian Ward; reworded as pricier versions of the same job. Counters box uses the standard wording; every rich item names what to sell.",
+  "Public check: tracklock (60% WR) and lockbuilds support builds run Compress/Superior Cooldown, Duration Extender/Superior Duration, Greater Expansion, Warp Stone, Refresher, which this build has. They skip Heroic Aura/Rescue Beam as core, but those are his support style, so kept. Total core 40.8k.",
+  "Ability order: Strong consensus: unlock 1, 3, 2, ult, max Kinetic Pulse first (91-99% at points 5-7), then ult T1-T2, then Aurora. Ours is that path exactly.",
+  "Round 9: High-Velocity Rounds > Opening Rounds swapped for Headshot Booster > Headhunter. Opening Rounds was a lone 1.6k gun item only there to round the gun spike up with Heroic Aura. tracklock pro Dynamo, last 30 days to Oct 19: Headshot Booster 89% and Headhunter 57% early; HV and Opening Rounds aren't in the top 8. Headhunter's heal on headshots keeps a support in lane. Gun now 3.2k at Headhunter (7.2k souls), 6.4k at Heroic Aura (12k). Core 42.4k (was 40.8k). Colossus and Boundless now sell Headhunter instead of Opening Rounds.",
+  "Round 9: Mystic Expansion (on the stomp) moved from lane (3.2k souls) to Mid after Rapid Recharge (15.2k). +20% radius on the stomp barely matters in a 1-2 hero lane; it's for team fights. tracklock pro Dynamo (last 30 days to Oct 19): Mystic Expansion 64% mid. Warp Stone moved into Late to keep Mid at 8.",
+  "Round 12: notes made true: Compress Cooldown 'Ult up for every fight' and Superior Cooldown 'Ult every fight' were false (250s ult, 205s with Compress, 200s with Superior) - now give the real numbers; Warp Stone 'teleport out' after the ult is impossible (16s cooldown, one charge) - now 'teleport in, then ult' with its 30% bullet resist; Dispel Magic no longer lists Geist bomb; Spirit Resilience no longer lists Haze. Checked all 10 types: imbues (Compress + Duration Extender on the 250s ult; Mystic Expansion on Kinetic Pulse, his most-cast damage ability; Echo Shard on Aurora), no dead items, no duplicates, no pivots needed (full support already).",
+  "Round 13: notes cut to what a player wouldn't know (UPDATE 3), desc is a short style label (UPDATE 4), Counters notes name the right heroes (Spirit Resilience: real spirit-damage heroes, no Haze; Counterspell: a parryable ability). Extra Charge checked: Kinetic Pulse has charges in the files (1, 5s between).",
+  "Round 14: Sprint Boots now upgrades to Trophy Collector (support Dynamo builds: KRJ 'healing and vacuum cleaning' early, Yxoko's Black Hole lane; Kieran: pure supports want it) instead of being sold; Sprint Boots moved to the end of Early so Mid stays at 8. Boundless now sells Headhunter. Colossus out of rich (nothing in the build it's a pricier version of). Sells made unique: Counters sell Warp Stone, Divine Barrier replaces Dispel Magic (it sold Healing Booster, which Healing Tempo in Slot locked upgrades). Notes: Unstoppable says stuns (silence doesn't interrupt channels), Debuff Reducer drops 'Upgrades to Unstoppable', Heroic Aura/Enchanter's/Sprint Boots emptied, Mystic Expansion names Kinetic Pulse, Echo Shard cut to imbue and sell. Dispel Magic no longer lists Yamato's grapple.",
+  "Round 15: ability order is now Kieran's in-game order 1132141443332242, which is also seemeta's most popular Dynamo order (Oct 5-19, 2,090 matches); the build had all unlocks moved first while the log claimed it matched. Counters description shortened to 110 characters (was 117, over the game's 112 limit) using Kieran's own 'Enchanter's'.",
+  "Round 17: Heroic Aura says 'Only if your team has gun heroes.'; new 'Swap for Heroic Aura' box: Knockdown (same 3.2k; its stun lasts longer on airborne targets and Kinetic Pulse launches them). Counterspell added to Counters (the build had none). Counters desc names Enchanter's Emblem in full. Witchmail and Echo Shard sell notes say 'for this'.",
+  "Round 19: checked against current public builds of this style; it is a real style, no changes.",
+  "Round 20: late list to 76.8k: Healing Tempo moved up from Slot locked (heals give allies fire rate), Lightning Scroll and Cheat Death added (Hard Support Dynamo 718141 late box), Echo Shard after them.",
+  "Round 23 (kit): Healing Tempo gives +35% fire rate and +1.25m/s for 7s to whoever you heal (not innate regen or passive lifesteal), so Rejuvenating Aurora (8m, 30+0.4x spirit per second, +2.5% max health/s at T3) hands it to every ally standing in it, every second. That is a team-wide fire rate buff in every fight, so it moves from the late list into Late core (upgrade of Healing Booster, no slot) in Refresher's place. Refresher (300s cooldown luxury for a second Singularity) goes to the end of the late list and sells Headhunter; Boundless Spirit is now the 12th slot and needs no sell.",
+  "Round 25: ability order 1132141443332242 -> 1133234143422421 (playstyle-based; see a25/log/dynamo.md)."
+ ]
+}

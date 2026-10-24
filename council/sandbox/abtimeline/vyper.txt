@@ -1,0 +1,80 @@
+# vyper | Vyper | Rizuhble's Snake Oil Vyper
+abilities: 1=Screwjab Dagger (ability_viper_debuffdagger, start_trained=false, Signature) / 2=Lethal Venom (ability_viper_venom, start_trained=false, Signature) / 3=Slither (ability_viper_snakedash, start_trained=false, Signature) / 4=Petrifying Bola (ability_viper_petrifybola, start_trained=false, Ultimate)
+order: 1123241421333244
+model A (data):  Screwjab D:U@0  Screwjab D:T1@200  Lethal Ven:U@500  Lethal Ven:T1@900  Slither:U@1400  Screwjab D:T2@2600  Petrifying:U@3200  Petrifying:T1@3900  Lethal Ven:T2@5300  Screwjab D:T3@9200  Slither:T1@10100  Slither:T2@11900  Slither:T3@17400  Lethal Ven:T3@26900  Petrifying:T2@32100  Petrifying:T3@48600
+model B (old):   Screwjab D:T1@200  Screwjab D:T2@900  Lethal Ven:T1@2000  Slither:T1@2600  Lethal Ven:T2@3900  Petrifying:U@4600  Screwjab D:T3@5300  Petrifying:T1@6000  Lethal Ven:T3@6800  Slither:T2@8400  Slither:T3@9200  Petrifying:T2@11900  Petrifying:T3@12800
+tier upgrades: Screwjab Dag: AbilityCharges+1 / BulletResistReduction-8,BulletResistReductionPerStack-6 / CooldownRefundPercent+55,MaxStacks+2,AbilityCooldownBetweenCharge-2 | Lethal Venom: VenomMaxDamage+31.5 / HealAmpRegenPenaltyPercent-40,HealAmpReceivePenaltyPercent-40,AbilityCooldown-12 / BuildUpPerShot+4.5 | Slither: SlideScale+20 / Stamina+2 / BuffDuration+4,CombatBarrier+180,AbilityCooldown+8,CombatBarrier+0.8x | Petrifying B: PetrifyDamage+49.5 / AbilityCooldown-20 / PetrifyDuration+1
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1    19  Extra Spirit
+        Screwjab D T1 ch3 cd10/4 Damage=65,DamagePe=33 | Lethal Ven U ch1 cd28 VenomMin=32,VenomMax=194 | Slither L[U] | Petrifying L
+  1600 L5   2    33  Improved Spirit
+        Screwjab D T1[T2] ch3 cd10/4 Damage=77,DamagePe=38 | Lethal Ven T1[U] ch1 cd28 VenomMin=42,VenomMax=265 | Slither U ch1 cd0 | Petrifying L
+  3200 L8   4    45  Quicksilver Reload [imbue Screwjab Dagger]
+        Screwjab D T2 ch3 cd10/4 Damage=86,DamagePe=43 | Lethal Ven T1 ch1 cd28 VenomMin=49,VenomMax=296 | Slither U[T1] ch1 cd0 | Petrifying U[L] ch1 cd115 Damage=83,PetrifyD=271
+  4800 L10  6    66  Cold Front
+        Screwjab D T2 ch3 cd10/4 Damage=103,DamagePe=51 | Lethal Ven T1[T2] ch1 cd28 VenomMin=63,VenomMax=355 | Slither U[T1] ch1 cd0 | Petrifying T1[U] ch1 cd115 Damage=99,PetrifyD=364
+  6400 L12  8    75  Opening Rounds
+        Screwjab D T2[T3] ch3 cd10/4 Damage=110,DamagePe=55 | Lethal Ven T2 ch1 cd16 VenomMin=69,VenomMax=381 | Slither U[T1] ch1 cd0 | Petrifying T1 ch1 cd115 Damage=106,PetrifyD=383
+  7200 L13  9    76  Rapid Rounds
+        Screwjab D T2[T3] ch3 cd10/4 Damage=111,DamagePe=55 | Lethal Ven T2[T3] ch1 cd16 VenomMin=70,VenomMax=384 | Slither U[T1] ch1 cd0 | Petrifying T1 ch1 cd115 Damage=107,PetrifyD=385
+  8800 L15 11    78  Bullet Lifesteal
+        Screwjab D T2[T3] ch3 cd10/4 Damage=113,DamagePe=56 | Lethal Ven T2[T3] ch1 cd16 VenomMin=71,VenomMax=390 | Slither U[T2] ch1 cd0 | Petrifying T1 ch1 cd115 Damage=108,PetrifyD=390
+  9600 L16 12    80  Sprint Boots
+        Screwjab D T3 ch3 cd10/2 Damage=114,DamagePe=57 | Lethal Ven T2[T3] ch1 cd16 VenomMin=72,VenomMax=393 | Slither U[T3] ch1 cd0 | Petrifying T1 ch1 cd115 Damage=109,PetrifyD=392
+ 10400 L17 13    81  Enduring Speed
+        Screwjab D T3 ch3 cd10/2 Damage=114,DamagePe=57 | Lethal Ven T2[T3] ch1 cd16 VenomMin=72,VenomMax=396 | Slither T1[T3] ch1 cd0 | Petrifying T1 ch1 cd115 Damage=110,PetrifyD=394
+ 12000 L19 15    89  Spirit Lifesteal
+        Screwjab D T3 ch3 cd10/2 Damage=121,DamagePe=61 | Lethal Ven T2[T3] ch1 cd16 VenomMin=78,VenomMax=419 | Slither T2[T3] ch1 cd0 | Petrifying T1[T2] ch1 cd115 Damage=116,PetrifyD=411
+ 14400 L21 17    91  Burst Fire
+        Screwjab D T3 ch3 cd10/2 Damage=123,DamagePe=61 | Lethal Ven T2[T3] ch1 cd16 VenomMin=79,VenomMax=425 | Slither T2[T3] ch1 cd0 | Petrifying T1[T3] ch1 cd115 Damage=118,PetrifyD=416
+ 15200 L22 18    92  Close Quarters
+        Screwjab D T3 ch3 cd10/2 Damage=124,DamagePe=62 | Lethal Ven T2[T3] ch1 cd16 VenomMin=80,VenomMax=428 | Slither T2[T3] ch1 cd0 | Petrifying T1[T3] ch1 cd115 Damage=119,PetrifyD=418
+ 17600 L24 20    94  Point Blank
+        Screwjab D T3 ch3 cd10/2 Damage=125,DamagePe=63 | Lethal Ven T2[T3] ch1 cd16 VenomMin=81,VenomMax=435 | Slither T3 ch1 cd8 CombatBa=255 | Petrifying T1[T3] ch1 cd115 Damage=120,PetrifyD=422
+ 22400 L26 22   118  Mercurial Magnum [imbue Screwjab Dagger]
+        Screwjab D T3 ch3 cd10/2 Damage=144,DamagePe=72 | Lethal Ven T2[T3] ch1 cd16 VenomMin=96,VenomMax=499 | Slither T3 ch1 cd8 CombatBa=274 | Petrifying T1[T3] ch1 cd115 Damage=137,PetrifyD=470
+ 25600 L28 24   126  Leech
+        Screwjab D T3 ch3 cd10/2 Damage=151,DamagePe=75 | Lethal Ven T2[T3] ch1 cd16 VenomMin=102,VenomMax=522 | Slither T3 ch1 cd8 CombatBa=281 | Petrifying T1[T3] ch1 cd115 Damage=144,PetrifyD=487
+ 30400 L30 26   169  Boundless Spirit
+        Screwjab D T3 ch3 cd10/2 Damage=185,DamagePe=93 | Lethal Ven T3 ch1 cd16 VenomMin=130,VenomMax=643 | Slither T3 ch1 cd8 CombatBa=315 | Petrifying T1[T3] ch1 cd115 Damage=176,PetrifyD=575
+ 36800 L32 28   178  Spiritual Overflow
+        Screwjab D T3 ch3 cd10/2 Damage=193,DamagePe=96 | Lethal Ven T3 ch1 cd16 VenomMin=136,VenomMax=669 | Slither T3 ch1 cd8 CombatBa=323 | Petrifying T2[T3] ch1 cd95 Damage=183,PetrifyD=594
+ 43200 L34 30   181  Frenzy
+        Screwjab D T3 ch3 cd10/2 Damage=195,DamagePe=97 | Lethal Ven T3 ch1 cd16 VenomMin=138,VenomMax=676 | Slither T3 ch1 cd8 CombatBa=325 | Petrifying T2[T3] ch1 cd95 Damage=185,PetrifyD=600
+ 49600 L36 32   183  Ricochet
+        Screwjab D T3 ch3 cd10/2 Damage=197,DamagePe=98 | Lethal Ven T3 ch1 cd16 VenomMin=139,VenomMax=683 | Slither T3 ch1 cd8 CombatBa=327 | Petrifying T3 ch1 cd95 Damage=186,PetrifyD=605
+ 56000 L36 32   183  Unstoppable
+        Screwjab D T3 ch3 cd10/2 Damage=197,DamagePe=98 | Lethal Ven T3 ch1 cd16 VenomMin=139,VenomMax=683 | Slither T3 ch1 cd8 CombatBa=327 | Petrifying T3 ch1 cd95 Damage=186,PetrifyD=605
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @3200 Quicksilver Reload [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Screwjab Dagger; needs it trained and the stat the item raises
+    game text: Your imbued ability charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, {g:citadel_inline_attribute:'BonusFireRate'}, and relo... | vdata: proc damage types ABILITY/BULLET/MELEE, CanProcByOtherObjects=true
+    at buy: Screwjab Dagger T2: cd 10s, duration 0s, charges 3
+- @6400 Opening Rounds [enemyhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on enemy health % (EnemyLifeThreshold=50)
+    game text: Your attacks have additional Weapon Damage against enemies above {s:EnemyLifeThreshold}% health.
+    at buy: not computed (needs play data)
+- @15200 Close Quarters [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (CloseRangeBonusDamageRange=15m)
+    game text: Deal additional Weapon Damage when in close range to your target.
+    at buy: not computed (needs play data)
+- @17600 Point Blank [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (CloseRangeBonusDamageRange=15m)
+    game text: When in close range to your target, gain Weapon Damage and your bullets apply a Movement Slow.
+    at buy: not computed (needs play data)
+- @22400 Mercurial Magnum [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Screwjab Dagger; needs it trained and the stat the item raises
+    game text: Your imbued ability charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, {g:citadel_inline_attribute:'BonusFireRate'}, and relo... | vdata: proc damage types ABILITY/BULLET/MELEE, CanProcByOtherObjects=true
+    at buy: Screwjab Dagger T3: cd 10s, duration 0s, charges 3
+- @36800 Spiritual Overflow [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack
+    game text: Gain bonus Fire Rate, Spirit Power and Spirit Lifesteal by charging up when shooting enemy heroes.
+    at buy: not computed (needs play data)
+- @43200 Frenzy [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LowHealthThreshold=50)
+    game text: (no game text)
+    at buy: not computed (needs play data)
+
+no trigger condition (plain stats/actives): Extra Spirit, Improved Spirit, Cold Front, Rapid Rounds, Bullet Lifesteal, Sprint Boots, Enduring Speed, Spirit Lifesteal, Burst Fire, Leech, Boundless Spirit, Ricochet, Unstoppable

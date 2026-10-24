@@ -1,0 +1,70 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: paige
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:13Z
+BODY-SHA: 67f99c41573eb94baf887485ba8daced165261b9bc55beeceb30da5f3be80e3e
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Early · L-R              -> main path (sequential): High-Velocity Rounds, Opening Rounds, Express Shot, Extra Charge, Extra Spirit, Mystic Expansion, Sprint Boots
+  Mid · L-R                -> main path (sequential): Trophy Collector, Improved Spirit, Compress Cooldown, Extra Health, Fortitude, Mystic Burst, Rapid Recharge, Tankbuster
+  Late · L-R               -> main path (sequential): Surge of Power, Grit, Guardian Ward, Greater Expansion, Superior Cooldown, Escalating Exposure, Boundless Spirit
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Spirit Resilience, Bullet Resilience, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Mystic Reverb, Spirit Burn, Divine Barrier, Superior Duration, Lightning Scroll
+  Rich · cont.             -> luxury ending (optional branch, each item separately): Cheat Death, Refresher, Echo Shard
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown
+  Lots of dashers?         -> alternative/optional (branch): Slowing Hex, Vortex Web, Knockdown
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Mystic Reverb, sell Greater Expansion
+    function of Greater Expansion: range, spirit_resist; replacement Mystic Reverb: slow, sustain; roles lost: range, spirit_resist  [VERIFIED GAME MECHANIC]
+    Greater Expansion is a component of later items: no
+    held for 19200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/6400/28800 -> 4800/6400/32000; thresholds lost: none
+    trade ratio after the sale 0.41; selling Opening Rounds instead: 0.39 (-3.8%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Spirit Burn, sell Escalating Exposure
+    function of Escalating Exposure: spirit_resist; replacement Spirit Burn: range; roles lost: spirit_resist  [VERIFIED GAME MECHANIC]
+    Escalating Exposure is a component of later items: no
+    held for 11200 souls of purchases; resale 3200, net cost of having owned it 3200
+    investment before/after gun/vit/spirit 4800/6400/28800 -> 4800/6400/28800; thresholds lost: none
+    trade ratio after the sale 0.36; selling Opening Rounds instead: 0.36 (-1.7%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Superior Duration, sell Tankbuster
+    function of Tankbuster: stats only; replacement Superior Duration: bullet_resist, duration; roles lost: none  [VERIFIED GAME MECHANIC]
+    Tankbuster is a component of later items: no
+    held for 23200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/6400/28800 -> 4800/6400/28800; thresholds lost: none
+    trade ratio after the sale 0.46; selling Opening Rounds instead: 0.43 (-5.1%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Lightning Scroll, sell Trophy Collector
+    function of Trophy Collector: stats only; replacement Lightning Scroll: slow, stun; roles lost: none  [VERIFIED GAME MECHANIC]
+    Trophy Collector is a component of later items: no
+    held for 37600 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 4800/6400/28800 -> 4800/4800/35200; thresholds lost: none
+    trade ratio after the sale 0.38; selling Opening Rounds instead: 0.36 (-4.7%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- Rich · cont. (luxury ending): buy Cheat Death, sell Fortitude
+    function of Fortitude: move_speed; replacement Cheat Death: bullet_resist; roles lost: move_speed  [VERIFIED GAME MECHANIC]
+    Fortitude is a component of later items: no
+    held for 32000 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/6400/28800 -> 4800/9600/28800; thresholds lost: none
+    trade ratio after the sale 0.42; selling Opening Rounds instead: 0.44 (+5.0%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- Rich · cont. (luxury ending): buy Refresher, sell Surge of Power
+    function of Surge of Power: fire_rate, imbue_spirit, move_speed; replacement Refresher: bullet_resist, spirit_resist; roles lost: fire_rate, imbue_spirit, move_speed  [VERIFIED GAME MECHANIC]
+    Surge of Power is a component of later items: no
+    held for 23200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/6400/28800 -> 4800/6400/32000; thresholds lost: none
+    trade ratio after the sale 0.44; selling Opening Rounds instead: 0.42 (-5.2%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- Rich · cont. (luxury ending): buy Echo Shard, sell Rapid Recharge
+    function of Rapid Recharge: charges, cooldown; replacement Echo Shard: bullet_resist, cooldown, spirit_resist; roles lost: charges  [VERIFIED GAME MECHANIC]
+    Rapid Recharge is a component of later items: no
+    held for 28800 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/6400/28800 -> 4800/6400/32000; thresholds lost: none
+    trade ratio after the sale 0.39; selling Opening Rounds instead: 0.38 (-4.3%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

@@ -1,0 +1,3184 @@
+{
+ "schema": 1,
+ "id": "abrams_melee",
+ "hero": "Abrams",
+ "name": "Rizuhble's Fists Of Law Abrams",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, for Phantom Strike.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it for Phantom Strike.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-9,600 (levels 1-16). 4.8k spikes: weapon 4.8k at Stalker, vitality 4.8k at Enduring Speed.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "abrams_melee:7:phase_range:5823",
+    "abrams_melee:7:phase_spikes:5832"
+   ],
+   "items": [
+    {
+     "name": "Restorative Shot",
+     "imbue": null,
+     "caption": "Temporary, sold when you buy Berserker later.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Stalker completes 4.8k weapon in 4800 souls (~4.8 min), 4 purchases",
+     "claim_ids": [
+      "abrams_melee:0:temporary_sold:5808"
+     ],
+     "lint": [],
+     "legacy_note": "Sell it for Berserker.",
+     "temporary": true,
+     "verify": [
+      [
+       "abrams_melee:0:temporary_sold:5808",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Close Quarters",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Stalker completes 4,000 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Stalker completes 4.8k weapon in 4000 souls (~4.0 min), 3 purchases",
+     "claim_ids": [
+      "abrams_melee:1:spike_progress:5809"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:1:spike_progress:5809",
+       true,
+       "1600"
+      ]
+     ]
+    },
+    {
+     "name": "Melee Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 7200 souls (~7.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Melee Charge",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Stalker completes 1,600 souls on.",
+     "cls": "b",
+     "why": "imminent: Stalker completes 4.8k weapon in 1600 souls (~1.6 min), 1 purchases",
+     "claim_ids": [
+      "abrams_melee:3:spike_progress:5813"
+     ],
+     "lint": [],
+     "legacy_note": "Shoulder Charge pins them into a wall, so the heavy always lands.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:3:spike_progress:5813",
+       true,
+       "3200"
+      ]
+     ]
+    },
+    {
+     "name": "Stalker",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (3,200 to 4,800 invested): bonus 18 to 46% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams_melee:4:spike_complete:5815"
+     ],
+     "lint": [],
+     "legacy_note": "Sell it for your first counter.",
+     "temporary": true,
+     "verify": [
+      [
+       "abrams_melee:4:spike_complete:5815",
+       true,
+       "inventory weapon: before 3200, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Lifestrike",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on. Upgrade of Melee Lifesteal (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "b",
+     "why": "imminent: Enduring Speed completes 4.8k vitality in 1600 souls (~1.6 min), 2 purchases",
+     "claim_ids": [
+      "abrams_melee:5:spike_progress:5817",
+      "abrams_melee:5:upgrade_of:5818"
+     ],
+     "lint": [],
+     "legacy_note": "Light punches and troopers trigger it too.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:5:spike_progress:5817",
+       true,
+       "3200"
+      ],
+      [
+       "abrams_melee:5:upgrade_of:5818",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Sprint Boots",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 800 souls on.",
+     "cls": "b",
+     "why": "imminent: Enduring Speed completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "abrams_melee:6:spike_progress:5819"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:6:spike_progress:5819",
+       true,
+       "4000"
+      ]
+     ]
+    },
+    {
+     "name": "Enduring Speed",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus. Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams_melee:7:spike_complete:5821",
+      "abrams_melee:7:upgrade_of:5822"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:7:spike_complete:5821",
+       true,
+       "inventory vitality: before 4000, after 4800, threshold 4800"
+      ],
+      [
+       "abrams_melee:7:upgrade_of:5822",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 9,600-28,000 (levels 16-29). Abilities gained (both point models agree): Shoulder Charge T3, Infernal Resilience T3, Seismic Impact T3. Your biggest single spirit hit (Shoulder Charge, damage) grows from 53.1 to 126. 4.8k spikes: spirit 4.8k at Spirit Snatch.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "abrams_melee:14:phase_range:5847",
+    "abrams_melee:14:phase_abilities:5848",
+    "abrams_melee:14:phase_power:5849",
+    "abrams_melee:14:phase_spikes:5857"
+   ],
+   "items": [
+    {
+     "name": "Spirit Strike",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "spirit investment only; its 4.8k tier completes at Spirit Snatch, 6400 souls (~6.4 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Bullet Resist Shredder",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "spirit investment only; its 4.8k tier completes at Spirit Snatch, 4800 souls (~4.8 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Point Blank",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 4,800 to 7,200 invested: bonus 46 to 54% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Snatch",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power. Upgrade of Spirit Strike (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams_melee:11:spike_complete:5838",
+      "abrams_melee:11:upgrade_of:5839"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:11:spike_complete:5838",
+       true,
+       "inventory spirit: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "abrams_melee:11:upgrade_of:5839",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Hunter's Aura",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 7,200 to 10,400 invested: bonus 54 to 62% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Crushing Fists",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 10,400 to 15,200 invested: bonus 62 to 74% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Berserker",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 15,200 to 17,600 invested: bonus 74 to 86% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Restorative Shot for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 28,000-44,000 (levels 29-34).",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "abrams_melee:18:phase_range:5865"
+   ],
+   "items": [
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you. Takes vitality from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams_melee:15:defence_spirit:5860",
+      "abrams_melee:15:invest_step:5858"
+     ],
+     "lint": [],
+     "legacy_note": "Get it earlier if most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:15:defence_spirit:5860",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "abrams_melee:15:invest_step:5858",
+       true,
+       "inventory vitality: before 4800, after 8000, threshold 6400"
+      ]
+     ]
+    },
+    {
+     "name": "Extra Health",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Colossus",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 8,800 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Pop it as you ult in.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Phantom Strike",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 14,400 to 20,800 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "For the flyer or the one who keeps dashing away from your Charge.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Enduring Speed? Buy what is killing you, cheapest first. Not dying? Skip. Sell Stalker.",
+   "desc": "Dying after Enduring Speed? Buy what is killing you, cheapest first. Not dying? Skip. Sell Stalker.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams_melee:19:defence_gun:5869"
+     ],
+     "lint": [],
+     "legacy_note": "Against gun heroes: Haze, Wraith, Vindicta, Infernus.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:19:defence_gun:5869",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spellbreaker",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Against spirit heroes: Seven, Geist, Pocket, Kelvin.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams_melee:19:defence_parry:5870"
+     ],
+     "lint": [],
+     "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:19:defence_parry:5870",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams_melee:19:defence_purge:5871"
+     ],
+     "lint": [],
+     "legacy_note": "Slowing Hex, Infernus burn, Knockdown before it lands.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:19:defence_purge:5871",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams_melee:19:defence_bullet:5872"
+     ],
+     "lint": [],
+     "legacy_note": "Against gun heroes who stand still and shoot you: Wraith, Haze, Bebop.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:19:defence_bullet:5872",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Healbane",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Against heroes who out-heal you: Rem, Geist, another Abrams.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 20,800 to 27,200 invested: bonus 54 to 60 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Hunter's Aura for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Scourge",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Spirit Snatch for this.",
+     "temporary": true,
+     "verify": []
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Shoulder Charge (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown. Takes vitality from 20,800 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams_melee:19:cc_exposure:5878",
+      "abrams_melee:19:invest_step:5877"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Spirit Resilience for this.",
+     "temporary": true,
+     "verify": [
+      [
+       "abrams_melee:19:cc_exposure:5878",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "abrams_melee:19:invest_step:5877",
+       true,
+       "inventory vitality: before 20800, after 24000, threshold 22400"
+      ]
+     ]
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams_melee:19:defence_barrier:5880"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:19:defence_barrier:5880",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Ethereal Shift",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 4,800 to 11,200 invested, crossing the 6.4k, 8k, 11.2k tiers: bonus 38 to 59 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Stalker for this, or Spirit Resilience if it's gone.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Juggernaut",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "abrams_melee:19:upgrade_delta:5883"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Enduring Speed.",
+     "temporary": false,
+     "verify": [
+      [
+       "abrams_melee:19:upgrade_delta:5883",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "abrams_melee:19:temporary_sold:5806": {
+   "id": "abrams_melee:19:temporary_sold:5806",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, for Phantom Strike.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 19,
+    "item": "Extra Regen",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it for Phantom Strike."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:0:spike_progress:5807": {
+   "id": "abrams_melee:0:spike_progress:5807",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Stalker completes 4,800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Restorative Shot",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4800,
+    "event": "Stalker completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "abrams_melee:0:temporary_sold:5808": {
+   "id": "abrams_melee:0:temporary_sold:5808",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Berserker later.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 34,
+   "point": {
+    "idx": 0,
+    "item": "Restorative Shot",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Restorative Shot",
+    "buyer": "Berserker"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:1:spike_progress:5809": {
+   "id": "abrams_melee:1:spike_progress:5809",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Stalker completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Close Quarters",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Stalker completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "abrams_melee:1:component_for:5810": {
+   "id": "abrams_melee:1:component_for:5810",
+   "kind": "component_for",
+   "phrase": "From Point Blank: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Close Quarters",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12800,
+    "event": "Point Blank"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Point Blank"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:2:spike_progress:5811": {
+   "id": "abrams_melee:2:spike_progress:5811",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Melee Lifesteal",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "abrams_melee:2:component_for:5812": {
+   "id": "abrams_melee:2:component_for:5812",
+   "kind": "component_for",
+   "phrase": "From Lifestrike: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Melee Lifesteal",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Lifestrike"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Lifestrike"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:3:spike_progress:5813": {
+   "id": "abrams_melee:3:spike_progress:5813",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Stalker completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Melee Charge",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Stalker completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "abrams_melee:3:component_for:5814": {
+   "id": "abrams_melee:3:component_for:5814",
+   "kind": "component_for",
+   "phrase": "From Crushing Fists: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Melee Charge",
+    "souls": 4000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 20800,
+    "event": "Crushing Fists"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Crushing Fists"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:4:spike_complete:5815": {
+   "id": "abrams_melee:4:spike_complete:5815",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (3,200 to 4,800 invested): bonus 18 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 4,
+    "item": "Stalker",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "18.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "abrams_melee:4:swap_candidate:5816": {
+   "id": "abrams_melee:4:swap_candidate:5816",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Ethereal Shift later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 4,
+    "item": "Stalker",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Stalker",
+    "buyer": "Ethereal Shift"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:5:spike_progress:5817": {
+   "id": "abrams_melee:5:spike_progress:5817",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Lifestrike",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Enduring Speed completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "abrams_melee:5:upgrade_of:5818": {
+   "id": "abrams_melee:5:upgrade_of:5818",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Melee Lifesteal (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 5,
+    "item": "Lifestrike",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Melee Lifesteal"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:6:spike_progress:5819": {
+   "id": "abrams_melee:6:spike_progress:5819",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Sprint Boots",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Enduring Speed completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "abrams_melee:6:component_for:5820": {
+   "id": "abrams_melee:6:component_for:5820",
+   "kind": "component_for",
+   "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Sprint Boots",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Enduring Speed"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Enduring Speed"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:7:spike_complete:5821": {
+   "id": "abrams_melee:7:spike_complete:5821",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "abrams_melee:7:upgrade_of:5822": {
+   "id": "abrams_melee:7:upgrade_of:5822",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Sprint Boots"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:7:phase_range:5823": {
+   "id": "abrams_melee:7:phase_range:5823",
+   "kind": "phase_range",
+   "phrase": "Souls 0-9,600 (levels 1-16).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Enduring Speed",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "9,600",
+    "1",
+    "16"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:7:phase_spikes:5832": {
+   "id": "abrams_melee:7:phase_spikes:5832",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Stalker, vitality 4.8k at Enduring Speed.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Enduring Speed",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Enduring Speed",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:8:spike_progress:5833": {
+   "id": "abrams_melee:8:spike_progress:5833",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 8,
+    "item": "Spirit Strike",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "abrams_melee:8:component_for:5834": {
+   "id": "abrams_melee:8:component_for:5834",
+   "kind": "component_for",
+   "phrase": "From Spirit Snatch: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 8,
+    "item": "Spirit Strike",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 6400,
+    "event": "Spirit Snatch"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Snatch"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:9:spike_progress:5835": {
+   "id": "abrams_melee:9:spike_progress:5835",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 9,
+    "item": "Bullet Resist Shredder",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "abrams_melee:10:invest_step:5836": {
+   "id": "abrams_melee:10:invest_step:5836",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 4,800 to 7,200 invested: bonus 46 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Point Blank",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "7200",
+    "46.0",
+    "54.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 6400
+  },
+  "abrams_melee:10:upgrade_of:5837": {
+   "id": "abrams_melee:10:upgrade_of:5837",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Close Quarters (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Point Blank",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Close Quarters"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:11:spike_complete:5838": {
+   "id": "abrams_melee:11:spike_complete:5838",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Snatch",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "abrams_melee:11:upgrade_of:5839": {
+   "id": "abrams_melee:11:upgrade_of:5839",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Strike (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Snatch",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Strike"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:11:swap_candidate:5840": {
+   "id": "abrams_melee:11:swap_candidate:5840",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Scourge later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Snatch",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Snatch",
+    "buyer": "Scourge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:12:invest_step:5841": {
+   "id": "abrams_melee:12:invest_step:5841",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 7,200 to 10,400 invested: bonus 54 to 62% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Hunter's Aura",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "10400",
+    "54.0",
+    "62.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 8000
+  },
+  "abrams_melee:12:swap_candidate:5842": {
+   "id": "abrams_melee:12:swap_candidate:5842",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Witchmail later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 12,
+    "item": "Hunter's Aura",
+    "souls": 20000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Hunter's Aura",
+    "buyer": "Witchmail"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:13:invest_step:5843": {
+   "id": "abrams_melee:13:invest_step:5843",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 10,400 to 15,200 invested: bonus 62 to 74% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Crushing Fists",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 11200
+   },
+   "numbers": [
+    "10400",
+    "15200",
+    "62.0",
+    "74.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 11200
+  },
+  "abrams_melee:13:upgrade_of:5844": {
+   "id": "abrams_melee:13:upgrade_of:5844",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Melee Charge (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Crushing Fists",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Melee Charge"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:14:invest_step:5845": {
+   "id": "abrams_melee:14:invest_step:5845",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 15,200 to 17,600 invested: bonus 74 to 86% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Berserker",
+    "souls": 28000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 16000
+   },
+   "numbers": [
+    "15200",
+    "17600",
+    "74.0",
+    "86.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 16000
+  },
+  "abrams_melee:14:sell_swap:5846": {
+   "id": "abrams_melee:14:sell_swap:5846",
+   "kind": "sell_swap",
+   "phrase": "Replaces Restorative Shot: sell it when you buy this.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 14,
+    "item": "Berserker",
+    "souls": 28000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Restorative Shot",
+    "slots_full": false
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Restorative Shot"
+  },
+  "abrams_melee:14:phase_range:5847": {
+   "id": "abrams_melee:14:phase_range:5847",
+   "kind": "phase_range",
+   "phrase": "Souls 9,600-28,000 (levels 16-29).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Berserker",
+    "souls": 28000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Berserker",
+    "keys": []
+   },
+   "numbers": [
+    "9,600",
+    "28,000",
+    "16",
+    "29"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:14:phase_abilities:5848": {
+   "id": "abrams_melee:14:phase_abilities:5848",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Shoulder Charge T3, Infernal Resilience T3, Seismic Impact T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Berserker",
+    "souls": 28000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Berserker",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:14:phase_power:5849": {
+   "id": "abrams_melee:14:phase_power:5849",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Shoulder Charge, damage) grows from 53.1 to 126.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_bull_charge",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Berserker",
+    "souls": 28000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Berserker",
+    "keys": []
+   },
+   "numbers": [
+    "53.1",
+    "126"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:14:phase_spikes:5857": {
+   "id": "abrams_melee:14:phase_spikes:5857",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Spirit Snatch.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Berserker",
+    "souls": 28000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Berserker",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:15:invest_step:5858": {
+   "id": "abrams_melee:15:invest_step:5858",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Spirit Resilience",
+    "souls": 31200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "8000",
+    "38.0",
+    "46.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "abrams_melee:15:swap_candidate:5859": {
+   "id": "abrams_melee:15:swap_candidate:5859",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Unstoppable later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 15,
+    "item": "Spirit Resilience",
+    "souls": 31200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Resilience",
+    "buyer": "Unstoppable"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:15:defence_spirit:5860": {
+   "id": "abrams_melee:15:defence_spirit:5860",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 15,
+    "item": "Spirit Resilience",
+    "souls": 31200.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:16:component_for:5861": {
+   "id": "abrams_melee:16:component_for:5861",
+   "kind": "component_for",
+   "phrase": "From Colossus: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 16,
+    "item": "Extra Health",
+    "souls": 32000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600.0,
+    "event": "Colossus"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Colossus"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:17:invest_step:5862": {
+   "id": "abrams_melee:17:invest_step:5862",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 8,800 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Colossus",
+    "souls": 37600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8800",
+    "14400",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "abrams_melee:17:upgrade_of:5863": {
+   "id": "abrams_melee:17:upgrade_of:5863",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Health (already owned): costs 5,600 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Colossus",
+    "souls": 37600.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Health"
+    ]
+   },
+   "numbers": [
+    "5600",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "abrams_melee:18:invest_step:5864": {
+   "id": "abrams_melee:18:invest_step:5864",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 14,400 to 20,800 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Phantom Strike",
+    "souls": 44000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "20800",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "abrams_melee:18:phase_range:5865": {
+   "id": "abrams_melee:18:phase_range:5865",
+   "kind": "phase_range",
+   "phrase": "Souls 28,000-44,000 (levels 29-34).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 18,
+    "item": "Phantom Strike",
+    "souls": 44000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Phantom Strike",
+    "keys": []
+   },
+   "numbers": [
+    "28,000",
+    "44,000",
+    "29",
+    "34"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:19:defence_gun:5869": {
+   "id": "abrams_melee:19:defence_gun:5869",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Plated Armor",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Against gun heroes: Haze, Wraith, Vindicta, Infernus."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:19:defence_parry:5870": {
+   "id": "abrams_melee:19:defence_parry:5870",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Counterspell",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Lash ult, Infernus ult. Anything big you can see coming."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:19:defence_purge:5871": {
+   "id": "abrams_melee:19:defence_purge:5871",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Dispel Magic",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Slowing Hex, Infernus burn, Knockdown before it lands."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:19:defence_bullet:5872": {
+   "id": "abrams_melee:19:defence_bullet:5872",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Metal Skin",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Against gun heroes who stand still and shoot you: Wraith, Haze, Bebop."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:19:invest_step:5873": {
+   "id": "abrams_melee:19:invest_step:5873",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 20,800 to 27,200 invested: bonus 54 to 60 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Witchmail",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Hunter's Aura for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 22400
+   },
+   "numbers": [
+    "20800",
+    "27200",
+    "54.0",
+    "60.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 22400
+  },
+  "abrams_melee:19:sell_swap:5874": {
+   "id": "abrams_melee:19:sell_swap:5874",
+   "kind": "sell_swap",
+   "phrase": "Replaces Hunter's Aura: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Witchmail",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Hunter's Aura for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Hunter's Aura",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Hunter's Aura"
+  },
+  "abrams_melee:19:invest_step:5875": {
+   "id": "abrams_melee:19:invest_step:5875",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Scourge",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Snatch for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "8000",
+    "38.0",
+    "52.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "abrams_melee:19:sell_swap:5876": {
+   "id": "abrams_melee:19:sell_swap:5876",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Snatch: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Scourge",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Snatch for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Snatch",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Snatch"
+  },
+  "abrams_melee:19:invest_step:5877": {
+   "id": "abrams_melee:19:invest_step:5877",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 20,800 to 24,000 invested: bonus 54 to 60 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Unstoppable",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Resilience for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 22400
+   },
+   "numbers": [
+    "20800",
+    "24000",
+    "54.0",
+    "60.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 22400
+  },
+  "abrams_melee:19:cc_exposure:5878": {
+   "id": "abrams_melee:19:cc_exposure:5878",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Shoulder Charge (movement). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 19,
+    "item": "Unstoppable",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Resilience for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "abrams_melee:19:sell_swap:5879": {
+   "id": "abrams_melee:19:sell_swap:5879",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Resilience: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Unstoppable",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Resilience for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Resilience",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Resilience"
+  },
+  "abrams_melee:19:defence_barrier:5880": {
+   "id": "abrams_melee:19:defence_barrier:5880",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Divine Barrier",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:19:invest_step:5881": {
+   "id": "abrams_melee:19:invest_step:5881",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 11,200 invested, crossing the 6.4k, 8k, 11.2k tiers: bonus 38 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_atlas m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 19,
+    "item": "Ethereal Shift",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Stalker for this, or Spirit Resilience if it's gone."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "11200",
+    "38.0",
+    "59.0",
+    "6.4k",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "abrams_melee:19:sell_swap:5882": {
+   "id": "abrams_melee:19:sell_swap:5882",
+   "kind": "sell_swap",
+   "phrase": "Replaces Stalker: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 19,
+    "item": "Ethereal Shift",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Stalker for this, or Spirit Resilience if it's gone."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Stalker",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Stalker"
+  },
+  "abrams_melee:19:upgrade_delta:5883": {
+   "id": "abrams_melee:19:upgrade_delta:5883",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_juggernaut",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cardio_calibrator"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 19,
+    "item": "Juggernaut",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Enduring Speed"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "40",
+    "25",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "abrams_melee:19:upgrade_of:5884": {
+   "id": "abrams_melee:19:upgrade_of:5884",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Enduring Speed (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Juggernaut",
+    "souls": 44000.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Enduring Speed"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "abrams_melee",
+   "item": "Restorative Shot",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Stalker completes 4.8k weapon in 4800 souls (~4.8 min), 4 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "abrams_melee:0:spike_progress:5807",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Stalker completes 4,800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4800,
+      "event": "Stalker completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Close Quarters",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Stalker completes 4.8k weapon in 4000 souls (~4.0 min), 3 purchases",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "abrams_melee:1:spike_progress:5809",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Stalker completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Stalker completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "abrams_melee:1:component_for:5810",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Point Blank: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 12800,
+      "event": "Point Blank"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Melee Lifesteal",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Enduring Speed, 7200 souls (~7.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "abrams_melee:2:component_for:5812",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Lifestrike: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Lifestrike"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Melee Charge",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Stalker completes 4.8k weapon in 1600 souls (~1.6 min), 1 purchases",
+   "souls": 4000,
+   "unpublished": [
+    {
+     "id": "abrams_melee:3:spike_progress:5813",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Stalker completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Stalker completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "abrams_melee:3:component_for:5814",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Crushing Fists: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 20800,
+      "event": "Crushing Fists"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Melee Charge",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Shoulder Charge pins them into a wall, so the heavy always lands."
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Lifestrike",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Enduring Speed completes 4.8k vitality in 1600 souls (~1.6 min), 2 purchases",
+   "souls": 8000,
+   "unpublished": [
+    {
+     "id": "abrams_melee:5:spike_progress:5817",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Enduring Speed completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Lifestrike",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Light punches and troopers trigger it too."
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Sprint Boots",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Enduring Speed completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+   "souls": 8800,
+   "unpublished": [
+    {
+     "id": "abrams_melee:6:spike_progress:5819",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Enduring Speed completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Enduring Speed completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "abrams_melee:6:component_for:5820",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Enduring Speed"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Spirit Strike",
+   "section": "mid",
+   "cls": "c",
+   "why": "spirit investment only; its 4.8k tier completes at Spirit Snatch, 6400 souls (~6.4 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 10400,
+   "unpublished": [
+    {
+     "id": "abrams_melee:8:component_for:5834",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spirit Snatch: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 6400,
+      "event": "Spirit Snatch"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Bullet Resist Shredder",
+   "section": "mid",
+   "cls": "c",
+   "why": "spirit investment only; its 4.8k tier completes at Spirit Snatch, 4800 souls (~4.8 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 12000,
+   "unpublished": []
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Spirit Resilience",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Get it earlier if most of their damage is spirit."
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Extra Health",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+   "souls": 32000.0,
+   "unpublished": [
+    {
+     "id": "abrams_melee:16:component_for:5861",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Colossus: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600.0,
+      "event": "Colossus"
+     }
+    }
+   ]
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Colossus",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Pop it as you ult in."
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Phantom Strike",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "For the flyer or the one who keeps dashing away from your Charge."
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Against gun heroes: Haze, Wraith, Vindicta, Infernus."
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 44000.0,
+   "unpublished": []
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Against spirit heroes: Seven, Geist, Pocket, Kelvin."
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming."
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Slowing Hex, Infernus burn, Knockdown before it lands."
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Against gun heroes who stand still and shoot you: Wraith, Haze, Bebop."
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Healbane",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 44000.0,
+   "unpublished": []
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Healbane",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Against heroes who out-heal you: Rem, Geist, another Abrams."
+  },
+  {
+   "build": "abrams_melee",
+   "item": "Ethereal Shift",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Sell Stalker for this, or Spirit Resilience if it's gone."
+  }
+ ],
+ "stats": {
+  "g": 10,
+  "b": 5,
+  "c": 3,
+  "a": 11,
+  "d": 3
+ }
+}

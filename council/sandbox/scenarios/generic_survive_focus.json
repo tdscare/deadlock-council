@@ -1,0 +1,73 @@
+{
+ "trials": 5,
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the item/order under test",
+  "Same enemy hero, level, items, behaviour"
+ ],
+ "builds": [],
+ "id": "generic_survive_focus",
+ "title": "Generic: time to die under focus fire",
+ "hero": "any",
+ "playstyle": "any",
+ "question": "How long does the build survive N attackers with and without a defensive item (Metal Skin, Bullet Resilience, Counterspell…)?",
+ "hypothesis": "defined per use",
+ "arms": [
+  {
+   "name": "without",
+   "items": [],
+   "souls": ""
+  },
+  {
+   "name": "with",
+   "items": [],
+   "souls": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "set per use",
+  "enemies": [
+   {
+    "hero": "3 attackers of the type the item counters",
+    "count": 3,
+    "behaviour": "focus the hero"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "hp",
+   "cooldowns"
+  ]
+ },
+ "procedure": [
+  "Hero uses defensive item/ability at the moment a real player would",
+  "Run until death or 30s"
+ ],
+ "metrics": [
+  {
+   "name": "survival_time",
+   "unit": "s",
+   "how": "",
+   "category": "survivability",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "damage_taken",
+   "unit": "hp",
+   "how": "",
+   "category": "survivability",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "survival_time",
+  "min_effect_pct": 15,
+  "min_trials": 5,
+  "rule": "higher better"
+ }
+}

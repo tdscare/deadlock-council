@@ -1,0 +1,66 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: mirage
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:15Z
+BODY-SHA: c318ccf1224cd54db4d0e9bd51a9dd47a1af575f5531223f1761808bc9deec83
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Extra Spirit, Compress Cooldown, Mystic Vulnerability, Improved Spirit, Spirit Shredder, Healbane, Dispel Magic
+  Mid · L-R                -> main path (sequential): Toxic Bullets, Headshot Booster, Extended Magazine, Ricochet, Escalating Exposure, Superior Cooldown
+  Late · L-R               -> main path (sequential): Inhibitor, Spirit Rend, Titanic Magazine, Boundless Spirit, Headhunter, Leech
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Resilience, Unstoppable, Counterspell
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Spirit Burn, Mystic Reverb, Crippling Headshot, Siphon Bullets, Divine Barrier, Cheat Death
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Spirit Burn, sell Healbane
+    function of Healbane: sustain; replacement Spirit Burn: range; roles lost: sustain  [VERIFIED GAME MECHANIC]
+    Healbane is a component of later items: no
+    held for 49600 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 17600/17600/16000 -> 17600/16000/22400; thresholds lost: none
+    trade ratio after the sale 0.16; selling Titanic Magazine instead: 0.13 (-22.6%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Mystic Reverb, sell Toxic Bullets
+    function of Toxic Bullets: bullet_proc; replacement Mystic Reverb: slow, sustain; roles lost: bullet_proc  [VERIFIED GAME MECHANIC]
+    Toxic Bullets is a component of later items: no
+    held for 43200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 17600/17600/16000 -> 14400/17600/22400; thresholds lost: none
+    trade ratio after the sale 0.16; selling Titanic Magazine instead: 0.13 (-20.7%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Crippling Headshot, sell Titanic Magazine
+    function of Titanic Magazine: ammo; replacement Crippling Headshot: resist_shred; roles lost: ammo  [VERIFIED GAME MECHANIC]
+    Titanic Magazine is a component of later items: no
+    held for 20000 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 17600/17600/16000 -> 22400/17600/16000; thresholds lost: none
+    trade ratio after the sale 0.13; selling Healbane instead: 0.17 (+30.6%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Titanic Magazine): 20 s 46 bullets (clip 16, 2.9 magazines, 29% not firing; refill items used every other charge) | 60 s 131 bullets, 32% not firing | damage 60 s 7280  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Titanic Magazine, sell Healbane: 20 s 56 bullets (clip 32, 1.8 magazines, 12% not firing; refill items used every other charge) | 60 s 158 bullets, 18% not firing | damage 60 s 9291  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Titanic Magazine, no Crippling Headshot): 20 s 56 bullets (clip 32, 1.8 magazines, 12% not firing; refill items used every other charge) | 60 s 158 bullets, 18% not firing | damage 60 s 8751  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Siphon Bullets, sell Headhunter
+    function of Headhunter: bullet_proc, move_speed; replacement Siphon Bullets: bullet_resist; roles lost: bullet_proc, move_speed  [VERIFIED GAME MECHANIC]
+    Headhunter is a component of later items: no
+    held for 12800 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 17600/17600/16000 -> 14400/24000/16000; thresholds lost: none
+    trade ratio after the sale 0.18; selling Titanic Magazine instead: 0.15 (-19.6%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Divine Barrier, sell Dispel Magic
+    function of Dispel Magic: move_speed, spirit_resist, sustain; replacement Divine Barrier: move_speed, range, sustain; roles lost: spirit_resist  [VERIFIED GAME MECHANIC]
+    Dispel Magic is a component of later items: no
+    held for 46400 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 17600/17600/16000 -> 17600/20800/16000; thresholds lost: none
+    trade ratio after the sale 0.18; selling Titanic Magazine instead: 0.14 (-19.4%)  [MODELLED ESTIMATE]
+    model limit: Dispel Magic has an active effect (INSTANT_CAST) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Cheat Death, sell Spirit Rend
+    function of Spirit Rend: resist_shred, sustain; replacement Cheat Death: bullet_resist; roles lost: resist_shred, sustain  [VERIFIED GAME MECHANIC]
+    Spirit Rend is a component of later items: no
+    held for 20800 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 17600/17600/16000 -> 14400/24000/16000; thresholds lost: none
+    trade ratio after the sale 0.19; selling Titanic Magazine instead: 0.15 (-18.1%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

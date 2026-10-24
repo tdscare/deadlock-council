@@ -1,0 +1,37 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: vyper
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:15Z
+BODY-SHA: 03c377724e6c8083f1974c36050c8fd73dc5a51571707179bf7acad9aad7710e
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Extra Spirit, Improved Spirit, Quicksilver Reload, Cold Front, Opening Rounds, Rapid Rounds, Bullet Lifesteal
+  Mid · L-R                -> main path (sequential): Sprint Boots, Enduring Speed, Spirit Lifesteal, Burst Fire, Close Quarters, Point Blank, Mercurial Magnum, Leech
+  Late · L-R               -> main path (sequential): Boundless Spirit, Spiritual Overflow, Frenzy, Ricochet, Unstoppable
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Spirit Resilience, Dispel Magic, Counterspell, Metal Skin, Plated Armor
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Silencer, Arctic Blast, Vampiric Burst, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Juggernaut
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Silencer, sell Opening Rounds
+    function of Opening Rounds: stats only; replacement Silencer: bullet_proc, silence, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Opening Rounds is a component of later items: no
+    held for 56000 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 27200/14400/14400 -> 32000/14400/14400; thresholds lost: none
+    trade ratio after the sale 0.65; selling Burst Fire instead: 0.66 (+1.9%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Vampiric Burst, sell Point Blank
+    function of Point Blank: slow; replacement Vampiric Burst: ammo, bullet_resist, fire_rate, sustain; roles lost: slow  [VERIFIED GAME MECHANIC]
+    Point Blank is a component of later items: no
+    held for 44800 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 27200/14400/14400 -> 24000/20800/14400; thresholds lost: none
+    trade ratio after the sale 0.98; selling Opening Rounds instead: 1.17 (+18.6%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Point Blank): 20 s 201 bullets (clip 29, 7.0 magazines, 61% not firing; refill items used every other charge) | 60 s 546 bullets, 65% not firing | damage 60 s 15140  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Point Blank, sell Opening Rounds: 20 s 201 bullets (clip 29, 7.0 magazines, 61% not firing; refill items used every other charge) | 60 s 546 bullets, 65% not firing | damage 60 s 14604  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Point Blank, no Vampiric Burst): 20 s 184 bullets (clip 29, 6.4 magazines, 64% not firing; refill items used every other charge) | 60 s 527 bullets, 65% not firing | damage 60 s 14225  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)

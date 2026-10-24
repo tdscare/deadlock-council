@@ -1,0 +1,65 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: lash
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:15Z
+BODY-SHA: 5df8f1ba221082ba5c6ee87e1ecfc94a708b991e99a291c62555b5d7beb8f69b
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen, Grit
+  Early · L-R              -> main path (sequential): Headshot Booster, Extra Spirit, Mystic Burst, Mystic Expansion, Improved Spirit, Cold Front, Mystic Shot, Extra Stamina
+  Mid · L-R                -> main path (sequential): Enchanter's Emblem, Stamina Mastery, Tankbuster, Headhunter, Extra Charge, Compress Cooldown, Warp Stone, Boundless Spirit
+  Late · L-R               -> main path (sequential): Greater Expansion, Superior Cooldown, Spirit Burn, Mystic Reverb
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Unstoppable, Dispel Magic, Counterspell, Metal Skin, Plated Armor, Spirit Resilience, Spellbreaker, Ethereal Shift
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Witchmail, Arctic Blast, Cheat Death, Lightning Scroll, Divine Barrier, Refresher
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown
+  Swap for Warp Stone      -> alternative/optional (branch): Majestic Leap
+
+## SALE CHECKLIST (computed)
+- Late · L-R (main path): buy Mystic Reverb, sell Extra Charge
+    function of Extra Charge: charges; replacement Mystic Reverb: slow, sustain; roles lost: charges  [VERIFIED GAME MECHANIC]
+    Extra Charge is a component of later items: no
+    held for 26000.0 souls of purchases; resale 400, net cost of having owned it 400
+    investment before/after gun/vit/spirit 4800/8000/24800 -> 4800/8000/30400; thresholds lost: none
+    trade ratio after the sale 0.26; selling Mystic Shot instead: 0.21 (-20.9%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- Counters (counter menu): buy Ethereal Shift, sell Cold Front
+    function of Cold Front: slow, spirit_resist; replacement Ethereal Shift: move_speed, spirit_resist; roles lost: slow  [VERIFIED GAME MECHANIC]
+    Cold Front is a component of later items: Arctic Blast -> selling now and rebuying costs 1600 again later (net extra 800 vs keeping, UNVERIFIED HYPOTHESIS refund)
+    held for 44400.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 4800/8000/30400 -> 4800/8000/35200; thresholds lost: none
+    trade ratio after the sale 0.24; selling Mystic Shot instead: 0.19 (-19.6%)  [MODELLED ESTIMATE]
+    model limit: Cold Front has an active effect (INSTANT_CAST) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: component sold before its planned upgrade; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Witchmail, sell Enchanter's Emblem
+    function of Enchanter's Emblem: cooldown, spirit_resist; replacement Witchmail: cooldown, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Enchanter's Emblem is a component of later items: no
+    held for 40400.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 4800/8000/30400 -> 4800/12800/30400; thresholds lost: none
+    trade ratio after the sale 0.24; selling Mystic Shot instead: 0.20 (-15.9%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Cheat Death, sell Warp Stone
+    function of Warp Stone: bullet_resist; replacement Cheat Death: bullet_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Warp Stone is a component of later items: no
+    held for 27600.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/8000/30400 -> 4800/11200/30400; thresholds lost: none
+    trade ratio after the sale 0.21; selling Mystic Shot instead: 0.21 (+2.2%)  [MODELLED ESTIMATE]
+    model limit: Warp Stone has an active effect (INSTANT_CAST) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Lightning Scroll, sell Greater Expansion
+    function of Greater Expansion: range, spirit_resist; replacement Lightning Scroll: slow, stun; roles lost: range, spirit_resist  [VERIFIED GAME MECHANIC]
+    Greater Expansion is a component of later items: no
+    held for 20400.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/8000/30400 -> 4800/8000/33600; thresholds lost: none
+    trade ratio after the sale 0.22; selling Mystic Shot instead: 0.18 (-18.0%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Refresher, sell Tankbuster
+    function of Tankbuster: stats only; replacement Refresher: bullet_resist, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Tankbuster is a component of later items: no
+    held for 35600.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/8000/30400 -> 4800/8000/33600; thresholds lost: none
+    trade ratio after the sale 0.26; selling Mystic Shot instead: 0.21 (-19.9%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

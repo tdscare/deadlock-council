@@ -1,0 +1,471 @@
+[
+ {
+  "pair": 1,
+  "heroA": "Vindicta",
+  "heroB": "Haze",
+  "verdict": "keep, no special build",
+  "combo": "Haze shoots them under half health, then lands Sleep Dagger; Vindicta, already scoped for 1s, fires Assassinate straight away (1.75s spare in the 2.75s sleep). Only that first shot is guaranteed, Crow and guns follow on the waking target.",
+  "sides": [
+   {
+    "hero": "Vindicta",
+    "baseBuildId": "vindicta_sniper",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Payoff is one spirit hit: sniper build already has Mystic Burst, Surge of Power + Mystic Reverb on the ult and ult T2 (low-HP +80) at pick 7. Gun build Assassinate is ~100 dmg, so sniper is the base. Rejected: none needed, scope 1.0s fits the 2.75s sleep untouched."
+   },
+   {
+    "hero": "Haze",
+    "baseBuildId": "haze_assassin",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Rejected Duration Extender on Sleep Dagger (2.75->3.36s): 1.75s spare already. Rejected Mystic Vulnerability on Haze (dagger spirit hit does not wake, -8% on one ~150-470 shot = +12-38 dmg) as a token item. Rejected earlier dagger T3: Vindicta caps at 2 shots/40s (1 per 20s), dagger T3 cd 13 only helps between picks 11-13; smoke-tier cost unverified, kept as hypothesis H1.4. Haze T1 wake shred is bullet-only, does nothing for shot 1."
+   }
+  ],
+  "hypotheses": [
+   "H1.1 (duo_vindicta_haze_sleep_shot): full-charge Assassinate fired 0-1.75s after Sleep Dagger lands always hits and deals the full-charge value for that SP (~151 at 14.4k souls, +-5%); target wakes >=0.1s after the hit.",
+   "H1.2 (same file, arm low_hp): if Haze first drops the target under 50% HP, the same shot adds the low-HP bonus (~+322 at 14.4k souls, total ~473 +-10%).",
+   "H1.3 (S7): Haze T1 bullet-resist shred on wake does not change Assassinate damage (difference <3%).",
+   "H1.4: with dagger T3 moved before smoke T2/T3, sleep+Assassinate combos per 10 min rise from ~20 to ~30 (capped by 2 charges/40s) - only worth testing if H1.1 holds."
+  ]
+ },
+ {
+  "pair": 2,
+  "heroA": "Victor",
+  "heroB": "Dynamo",
+  "verdict": "keep, no special build",
+  "combo": "Dynamo Quantum Entanglements in with Victor inside 13m, Victor starts Aura and stands within 1-2m of Dynamo, then Dynamo ults: the 7m (9m T1) pull lands everyone inside Victor's 8m (9m T3) aura for 2.75s (3.36s with Dynamo's Duration Extender).",
+  "sides": [
+   {
+    "hero": "Victor",
+    "baseBuildId": "victor",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Aura T3 (+15% damage taken, 9m) already at pick 8, before Dynamo's Singularity T1 (pick 9). Rejected selling Warp Stone because Quantum carries him: Warp Stone is his every-fight engage when Dynamo is elsewhere and Singularity is 250s cd. Note: Dynamo Pulse T2 -15% is bullet resist, does nothing for spirit Aura; only the Aura T3 +15% is shared."
+   },
+   {
+    "hero": "Dynamo",
+    "baseBuildId": "dynamo",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Duration Extender + Compress Cooldown already on the ult, Greater Expansion late (9m->11.7m pull). Rejected moving Mystic Expansion from Kinetic Pulse to Singularity (9->10.8m): Greater Expansion gives more later and Pulse loses 20% range all game. Victor's aura ticks apply his Mystic Vulnerability (-8% spirit) to Singularity's 75+0.28x DPS for free."
+   }
+  ],
+  "hypotheses": [
+   "H2.1 (duo_victor_dynamo_pull): with Victor 1m from Dynamo, all 3 pulled bots take Aura ticks for the whole Singularity (aura damage per bot during channel >= 2.75s x MinDPS); at 3m from Dynamo at least one bot at the 7m rim gets no ticks.",
+   "H2.2: Victor Aura T3 raises Singularity damage on bots by 15% (+-3%).",
+   "H2.3: Dynamo Pulse T2 bullet shred changes Victor Aura damage by <3%."
+  ]
+ },
+ {
+  "pair": 3,
+  "heroA": "Mo & Krill",
+  "heroB": "Bebop",
+  "verdict": "keep, one point-order change on Mo",
+  "combo": "Bebop sticks a bomb, then hooks about 1s later; Mo stands right beside Bebop (within 1.5m) and Combos the moment they land. Bebop starts Hyper Beam as Combo starts, and the bomb pops inside the hold.",
+  "sides": [
+   {
+    "hero": "Mo & Krill",
+    "baseBuildId": "mokrill",
+    "swaps": [],
+    "pointOrderChange": {
+     "from": "1132124422133434",
+     "to": "1132124422133443",
+     "why": "Combo T3 one pick before Sand Blast T3: hold 2.4->3.1s puts +0.7s of Bebop's T2 beam (268 DPS = +188 + 1.76x his spirit) and doubles Combo DPS (40->80, 0.6x->1.0x) inside the window, ~+340 per Combo vs Sand Blast T3 (cd 40->15) one point later. Untested: H3.4."
+    },
+    "newName": "Rizuhble's Hold Still Mo (Fully Annotated)",
+    "desc": "Duo Mo for Bebop",
+    "rejected": [
+     "Duration Extender moved from Sand Blast to Combo (+0.53-0.68s): Sand Blast is cast every fight (cd 40/15), Combo once (120); Superior Duration late already gives Combo +28%.",
+     "Mystic Expansion moved from Scorn to Combo (4->4.8m range): only loosens the 1.5m stand-by-Bebop rule, costs Scorn radius (his heal) all game.",
+     "Alchemical Fire (held target can't leave the puddle, ~128+0.6x in 2.4s): 3200 off-colour for one ult."
+    ]
+   },
+   {
+    "hero": "Bebop",
+    "baseBuildId": "bebop_bomb",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Beam is the payoff, so Bomb Bebop is the base (ult T2 +108 DPS at pick 8; 1v1 build gets ult T2 at pick 14). Spirit Burn already late: beam T2 643 in 2.4s clears 500 in 5s. Rejected Hunter's Aura / Bullet Resist Shredder: beam, bomb and Combo are spirit, bullet shred adds nothing. Mo's Mystic Vulnerability (-8% spirit) already shreds for the beam, so Bebop needs no shred item."
+   }
+  ],
+  "hypotheses": [
+   "H3.1 (duo_mo_bebop_hook_combo): Mo 1m from Bebop can Combo a hooked bot inside the 0.5s hook restriction 5/5 times; at 3m from Bebop it fails (landing point ~2.5m in front of Bebop, outside 4m).",
+   "H3.2: Bebop beam and bomb damage on a Combo-held bot land in full (no reduction) and the hold is not broken.",
+   "H3.3: bomb -> hook ~1s later -> Combo -> beam at Combo press deals ~641 + spirit terms inside the 2.4s hold with T2 beam (375 beam + 96 Combo + 170 bomb, +-15%); bomb placed <1.1s before Combo explodes after the hold ends.",
+   "H3.4: Combo T3 (3.1s) vs T2 (2.4s) on the same sequence raises in-hold duo damage by >=25%.",
+   "H3.5: Bebop's killing blow within 3s of Combo ending still gives Mo BonusHealthOnKill (Mo max HP rises 40+2xboons).",
+   "H3.6: hooking a Combo-held enemy does NOT move it (Combo's drag holds it at Mo); measure target displacement after the hook lands (predict <1m).",
+   "H3.7: Bebop hooking Mo mid-Combo keeps the Combo running and drags the held target along (predict target ends within 4m of Mo at Bebop)."
+  ],
+  "orders": {
+   "a_mo_holds_first": "Mo Burrows in (1.0s delay, 13 m/s) and Combos (4m range); Bebop hooks the held target. Hook hits every time (target pinned ~2.5m in front of Mo), but the hook's job (getting Mo into 4m) is wasted, Mo has to walk into their team, and if the hook moves the target it fights Combo's spring-drag (unverified, may break the hold geometry or do nothing).",
+   "b_hook_first": "Bebop hooks (30m, 0.5s restriction on landing ~2.5m in front of Bebop), Mo stands within 1.5m of Bebop and Combos instantly (cast delay 0). All verified; Mo never leaves Bebop's side.",
+   "c_hook_mo": "Untested idea: Mo Combos on their side, Bebop hooks MO (hook targets allies outside 8m); Combo only breaks on Mo being stunned, so if the target follows Mo both come back to Bebop's team.",
+   "favoured": "b: every step is verified and keeps Mo safe; a needs Mo to dive 4m into them for nothing the hook adds except accuracy; c only if H3.6/H3.7 come back positive."
+  }
+ },
+ {
+  "pair": 4,
+  "heroA": "Ivy",
+  "heroB": "Bebop",
+  "verdict": "keep only if H4.1 holds, no special build",
+  "combo": "Ivy Air Drops Bebop over their team; Bebop starts Hyper Beam about 1s before Ivy drops him, so the 11s beam starts on landing with 8s of it at +20% and the T3 silence keeping them from stunning him for 3s.",
+  "sides": [
+   {
+    "hero": "Ivy",
+    "baseBuildId": "ivy",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Duration Extender on Air Drop already in: post-drop +20% buff 8->9.76s covers ~89% of the 11s beam. Rejected moving Air Drop T2/T3 (picks 12-13) before Kudzu T3 (pick 11): costs 7 points of delay on always-on tether, the support's core, for one silence per 70s."
+   },
+   {
+    "hero": "Bebop",
+    "baseBuildId": "bebop_bomb",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Bomb build has ult T2 at pick 8. Rejected Unstoppable early: Ivy T3 silence covers the first 3s of the beam; Unstoppable stays a counter. Beam is spirit, so Kudzu's fire rate/lifesteal are wasted, but Kudzu's shared heal (35% + 0.85/boon) still applies."
+   }
+  ],
+  "hypotheses": [
+   "H4.1 (duo_ivy_bebop_beam_drop, S2): Bebop can cast and keep channelling Hyper Beam while carried; if the channel ends on lift or drop, the pair is dropped.",
+   "H4.2: beam ticks are x0.8 while carried and x1.2 for 8s after the drop (+-3%).",
+   "H4.3: beam cast 1.0s before the drop deals >=1.14x the 11s grounded beam total on 3 bots.",
+   "H4.4: with Air Drop T3, an enemy ability stun cast inside 3s of the drop fails (silenced) and the beam keeps going."
+  ]
+ },
+ {
+  "pair": 5,
+  "heroA": "Ivy",
+  "heroB": "Seven",
+  "verdict": "keep, no special build",
+  "combo": "Seven Static Charges the first target in reach, Ivy drops him in the middle of them, and Seven ults the moment he lands: T3 silence covers the first 3s and the whole 7s storm sits inside the +20% damage window.",
+  "sides": [
+   {
+    "hero": "Ivy",
+    "baseBuildId": "ivy",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Duration Extender on Air Drop (+20% buff 8->9.76s) already covers Seven's storm 7s (8.54s with his own Duration Extender). Same Air Drop T3 order rejection as pair 4."
+   },
+   {
+    "hero": "Seven",
+    "baseBuildId": "seven",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Rejected dropping Unstoppable: Ivy silence is 3s of a 7-14s channel, only when Ivy is there, and does not cover item stuns. Ivy +20% boosts the ult's 95+0.6x DPS with no item. Power Surge is dead while carried (no bullets), so ult after landing, not in the air."
+   }
+  ],
+  "hypotheses": [
+   "H5.1 (duo_ivy_seven_storm_drop): Storm Cloud cast within 0.5s of landing deals 1.2x (+-3%) the solo storm total on 3 bots over the first 8s.",
+   "H5.2: Static Charge cast while carried still applies and stuns 3.5s later.",
+   "H5.3 (S1-type): Storm Cloud cast while still carried either fails or ends the carry; if it works it deals x0.8 until the drop."
+  ]
+ },
+ {
+  "pair": 8,
+  "heroA": "Calico",
+  "heroB": "Abrams",
+  "verdict": "keep only if H8.2 shows >=15%, no special build",
+  "combo": "Calico throws Gloom Bombs (T2) on the target as Abrams charges in; Abrams pops Colossus and heavy-punches inside the 6s melee-resist window.",
+  "sides": [
+   {
+    "hero": "Calico",
+    "baseBuildId": "calico",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Bombs T2 already at pick 6. Rejected Duration Extender on Gloom Bombs (6->7.32s): about one extra shredded heavy (~+49 if 4 touches stack, ~+12 if not) per 11s cycle for a 1600 slot."
+   },
+   {
+    "hero": "Abrams",
+    "baseBuildId": "abrams_melee",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Already 75% melee bonus with Colossus (7s active inside the 6s window). Calico's shred is melee-only, so Crushing Fists' bullet-resist stacks don't overlap with it. Same holds for billy_damage (75%) and sinclair (52%)."
+   }
+  ],
+  "hypotheses": [
+   "H8.1 (duo_calico_abrams_melee): 4 bomb touches give -24% melee resist (stacking); if the debuff panel shows -6% only, stacking is refuted.",
+   "H8.2: Abrams heavy melee on a bombed dummy deals >=15% more than on a clean dummy; <10% drops the pair.",
+   "H8.3: the shred applies to Abrams' (ally) melee, not only Calico's."
+  ]
+ },
+ {
+  "pair": 6,
+  "heroA": "Dynamo",
+  "heroB": "Infernus",
+  "verdict": "keep, no special build; Billy+Seven and Lash+Seven/Infernus dropped",
+  "combo": "Infernus, standing next to Dynamo, presses Concussive Combustion 0.3s before Dynamo ults; the pull holds them 2.95s and the 12m blast stuns the whole clump 1.25s as it ends (4.2s of control).",
+  "sides": [
+   {
+    "hero": "Dynamo",
+    "baseBuildId": "dynamo",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Same as pair 2: ult duration items already in."
+   },
+   {
+    "hero": "Infernus",
+    "baseBuildId": "infernus",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Combustion radius 12m covers the 7-9m pull without upgrades; ult T3 (2.15s stun) at pick 16 left alone."
+   }
+  ],
+  "hypotheses": [
+   "H6.1 (duo_dynamo_infernus_chain): Combustion pressed 0.3s before Singularity hits all 3 pulled bots and the stun starts as the pull ends (no gap >0.2s); pressed 0.5s after Singularity it explodes after the pull ends."
+  ],
+  "dropped": [
+   "Billy + Seven: 0.1s spare on Static Charge timing, too tight for new players.",
+   "Lash + Seven / Lash + Infernus: their stun overlaps Lash's own T3 1.2s stun (max, not sum).",
+   "Pair 7 (shred carriers) not designed: ally-damage and stacking need the sandbox first."
+  ]
+ },
+ {
+  "pair": "IS1",
+  "origin": "council (item shred)",
+  "heroA": "Dynamo",
+  "heroB": "Victor (gun)",
+  "verdict": "keep, one swap on Dynamo",
+  "combo": "Dynamo ults on top of gun Victor; every pulled enemy is shredded 10% for the pull plus 8s, so Victor's gun and aura fight hits shredded targets the whole time.",
+  "itemShredCheck": "Bullet Resist Shredder: m_DebuffModifier modifier_bullet_armor_shredder on the enemy, property MODIFIER_VALUE_BULLET_AND_MELEE_RESIST_REDUCTION, no caster field, so it applies to all bullet/melee damage on the target. Mystic Vulnerability: modifier_tech_resist_debuff_proc, TECH_RESIST_REDUCTION, same. Escalating Exposure: only its -8% is target-side; the 4.5%/stack amp is 'your' damage. Spirit Shredder text names allies for the lifesteal. Engine confirm: H-IS1.2.",
+  "sides": [
+   {
+    "hero": "Dynamo",
+    "baseBuildId": "dynamo",
+    "swaps": [
+     {
+      "out": "Enchanter's Emblem",
+      "in": "Bullet Resist Shredder",
+      "why": "Singularity ticks every 0.25s for 3.36s put -10% bullet resist on the whole clump for 8s after; gun Victor owns no shred. Same 1600 cost, spikes unchanged (walk: health 8.8k, gun 12.8k, spirit 18.4k, FLAGS none)."
+     }
+    ],
+    "pointOrderChange": null,
+    "newName": "Rizuhble's Shred Sitter Dynamo (Fully Annotated)",
+    "desc": "Duo Dynamo for gun Victor",
+    "file": "council/work/dynamo_duo_victorgun.js",
+    "rejected": [
+     "Bullet Resist Shredder instead of Heroic Aura: Heroic Aura gives the gun ally +26% fire rate, more than a 10% shred, and gun Victor is a gun hero so it stays."
+    ]
+   },
+   {
+    "hero": "Victor",
+    "baseBuildId": "victor_gun",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Pulse T2 (-15%, kit) and the item (-10%) are both bullet resist, so this pair uses gun Victor, not spirit Victor."
+   }
+  ],
+  "hypotheses": [
+   "H-IS1.1 (duo_victorgun_dynamo_shred): gun Victor's damage on pulled bots is >=8% higher with Dynamo's Bullet Resist Shredder than without.",
+   "H-IS1.2: an ally-applied Bullet Resist Shredder debuff raises Victor's bullet damage (target-side debuff confirmed in game)."
+  ]
+ },
+ {
+  "pair": "IS2",
+  "origin": "council (item shred)",
+  "heroA": "Ivy",
+  "heroB": "Bebop (bomb)",
+  "verdict": "keep only if H4.1 holds, one swap on Ivy",
+  "combo": "Same as pair 4; the Air Drop blast now shreds 8% spirit resist on everyone just before Bebop's beam starts, and Thorns keeps it up.",
+  "sides": [
+   {
+    "hero": "Ivy",
+    "baseBuildId": "ivy",
+    "swaps": [
+     {
+      "out": "Healbane",
+      "in": "Mystic Vulnerability",
+      "why": "Drop blast (16-20m) puts -8% on all targets before the first beam tick, 7s (8.96s with Superior Duration), Thorns refreshes it for the 11s beam (~+270 on a T2 beam). Bomb Bebop has no Mystic Vulnerability in core. Same 1600, spikes unchanged (walk: health 8.8k, gun 12k, spirit 17.6k, FLAGS none)."
+     }
+    ],
+    "pointOrderChange": null,
+    "newName": "Rizuhble's Bomb Bay Ivy (Fully Annotated)",
+    "desc": "Duo Ivy for Bebop",
+    "file": "council/work/ivy_duo_bebop.js"
+   },
+   {
+    "hero": "Bebop",
+    "baseBuildId": "bebop_bomb",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Keeps the slot; his rich-box Escalating Exposure adds his own -8% later (same debuff type, may refresh not stack: H-IS2.2)."
+   }
+  ],
+  "hypotheses": [
+   "H-IS2.1 (duo_ivy_bebop_mv): beam total on 3 bots is >=6% higher when Ivy has Mystic Vulnerability.",
+   "H-IS2.2: two Mystic Vulnerability debuffs from different owners stack (-16%) or refresh (-8%)."
+  ]
+ },
+ {
+  "pair": "KS1",
+  "origin": "Kieran (Danny+Haze) + council (Haze dagger T1 shred stacking)",
+  "heroA": "Danny",
+  "heroB": "Haze",
+  "verdict": "keep, no special build",
+  "combo": "Haze sleeps the target and Danny sprays Jettison on it (it wakes on the first tick, Haze dagger T1 adds -10% on wake); Haze Bullet Dances inside the 7s shred (0.4s cast + 3.5s dance = 3.1s spare).",
+  "numbers": "Jettison (ability_deadpack_flamethrower, ab.py): cd 22 (T1 14), spray 2.0s, range 22m, width 2.75m, -15% (T3 -25%) bullet AND melee resist for 7s, property BULLET_AND_MELEE_RESIST_REDUCTION, no caster field (ally bullets structurally included). Strix Salvo cd 25 (T1 13). Close The Deal cd 135. Sleep does NOT hold the target in the spray: any damage wakes it 0.1s later; Haze dagger T3 on-wake slow 40% 3s does keep it in the 2.75m beam. Haze dagger T1 on-wake -10% bullet resist 6s (pick 4 in her main order) stacks as a different source: -25% (-35% at Danny T3) if additive.",
+  "sides": [
+   {
+    "hero": "Danny",
+    "baseBuildId": "danny",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Rejected moving Jettison T1/T3 earlier (picks 14/16): Bullet Dance is once per 165s, so cd 22->14 adds only ~+2.7% average Haze damage; Kieran's in-game dive order stays."
+   },
+   {
+    "hero": "Haze",
+    "baseBuildId": "haze",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Main Haze has no bullet shred item, so Danny's -15% is pure gain; dagger T1 already at pick 4."
+   }
+  ],
+  "hypotheses": [
+   "H-KS1.1 (duo_danny_haze_jettison): Bullet Dance damage on a Jettisoned bot is >=12% higher than on a clean bot.",
+   "H-KS1.2: Haze dagger T1 wake shred and Jettison stack (>=20% total) rather than the larger one only (15%)."
+  ]
+ },
+ {
+  "pair": "KS2",
+  "origin": "Kieran (Hunter's Aura isolate), numbers checked by council",
+  "heroA": "Bebop (1v1)",
+  "heroB": "Haze",
+  "verdict": "keep, no special build",
+  "combo": "Bebop hooks a lone enemy out of their team (30m, lands 2.5m in front of him, inside the 15m aura); with no other enemy hero within 15m of Bebop, Hunter's Aura doubles to -20% bullet resist and -30% fire rate, and Haze Bullet Dances on it.",
+  "numbers": "Hunter's Aura is a modifier_base_aura on the wearer (Bebop), radius 15m, applying modifier_hunter_aura_target to enemies: the target must stay within 15m of BEBOP. SingleTargetPlayerMultiplier 2 (2x, not 3x). AbilityUnitTargetLimit=1 is on every item (passives too) and does not mean one target. Hook range 30m (T2 +30m), so a hooked target is pulled 15-30m clear of teammates standing near it. Stacks with Bebop's own Bullet Resist Shredder (-10%) and Danny Jettison (-15/-25%): additive gives -45/-55%, multiplicative less (H-KS2.2).",
+  "sides": [
+   {
+    "hero": "Bebop",
+    "baseBuildId": "bebop",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "1v1 Bebop already has Hunter's Aura and Bullet Resist Shredder; the hook isolates by itself."
+   },
+   {
+    "hero": "Haze",
+    "baseBuildId": "haze",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Bullet Dance radius 16m covers a target 2.5m from Bebop."
+   }
+  ],
+  "hypotheses": [
+   "H-KS2.1 (duo_bebop_hunter_isolate): with one enemy hero within 15m of Bebop the debuff panel shows -20% bullet resist; with two it shows -10%.",
+   "H-KS2.2: Hunter's Aura -20% plus Danny Jettison -15% shows -35% (additive) vs ~-32% (multiplicative)."
+  ]
+ },
+ {
+  "pair": "KS3",
+  "origin": "council",
+  "heroA": "Bebop (1v1)",
+  "heroB": "Danny",
+  "verdict": "keep, no special build",
+  "combo": "Bebop hooks a lone target; Danny sprays Jettison on it as it lands, and both guns hit through Hunter's Aura -20% plus Jettison -15% for 7s.",
+  "sides": [
+   {
+    "hero": "Bebop",
+    "baseBuildId": "bebop",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Already owns both shred items."
+   },
+   {
+    "hero": "Danny",
+    "baseBuildId": "danny",
+    "swaps": [],
+    "pointOrderChange": null,
+    "newName": null,
+    "desc": null,
+    "noSpecialBuild": true,
+    "why": "Jettison at pick 5; HV/Opening Rounds/Sharpshooter gun spike untouched."
+   }
+  ],
+  "hypotheses": [
+   "H-KS3.1: two guns on a hooked, Jettisoned lone target kill it >=20% faster than the same guns without Jettison."
+  ]
+ },
+ {
+  "pair": "KSmatch",
+  "origin": "council scan of cards_g1-g4",
+  "heroA": "kit shreds",
+  "heroB": "matching damage",
+  "verdict": "listed, not designed (pair 7 rules: sandbox first)",
+  "combo": "Seven Power Surge T3 (-15% spirit, 10s, needs his bullets on the target) -> Pocket (Affliction 10s fully covered, raw ~513+5.1x per rotation). Paige Captivating Read T3 (-18% spirit, 6s, root 2s) -> Mina (Nox Nostra 2.5s release inside the root). Calico Gloom Bombs T2 (-6% melee per touch, 6s) -> Abrams melee (pair 8). Danny Jettison (-15/-25% bullet+melee, 7s) -> Haze, Bebop, gun Victor, Abrams melee (melee too).",
+  "sides": [],
+  "hypotheses": [
+   "H-KM.1 (S3-2a): an ally's spirit hit on a Power Surge T3 target deals 15% more (R=0 dummy)."
+  ]
+ },
+ {
+  "pair": "ORIG",
+  "origin": "council",
+  "heroA": "Knockdown carrier",
+  "heroB": "launcher",
+  "verdict": "idea only, sandbox first",
+  "combo": "Knockdown (stun after 2.0s, 0.5s, up to +1.5s on airborne targets under 30m) cast 2.0s before a partner launches the target: Bebop Uppercut toss 0.5s, Mo Burrow emerge toss 1.0s, Billy Rising Ram. Dynamo already has Knockdown in his swap box.",
+  "sides": [],
+  "hypotheses": [
+   "H-O.1: Knockdown landing while a Bebop Uppercut target is airborne stuns for >=1.5s (vs 0.5s grounded)."
+  ]
+ }
+]

@@ -1,0 +1,72 @@
+SCOPE: build-context
+KIND: situational
+BUILD: paige
+ITEM: Tankbuster
+ARGS: --situational paige Tankbuster
+GENERATED: 2026-10-24T16:27:45Z
+BODY-SHA: b6ac6279acfb60384b8128fb0bd4e16f674954e3366809a453de4876c2a867e4
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+MARGIN (pre-registered): swap must beat the default by >= 5% trade ratio at both enemy-healing readings (0%, 30% of their pool)
+ENEMY MODEL: reference enemy (--strategy) with its health pool scaled by the roster spread of heroes.vdata base health (CALCULATED) and x1.5/x2.0 for health-stacked tanks (ASSUMED); resists and healing ASSUMED; target choice = the enemy you fight
+VERDICT: SITUATIONAL - swap when the target's health pool is >= the trigger below; earliest worthwhile checkpoint 10000
+GRADE: CALCULATED item numbers + ASSUMED enemy composition/healing/hit rate
+
+## TRIGGERS (derived): checkpoint | replaces | health-pool multiplier from which swap wins by margin | gain range %
+   10000 | Express Shot | x0.65 of median hero health (507 base hp) | +15.2 .. +38.7
+   15000 | Fortitude | never in range | -16.7 .. +3.6
+   20000 | Rapid Recharge | x0.65 of median hero health (507 base hp) | +7.6 .. +41.9
+   25000 | Surge of Power | x0.65 of median hero health (507 base hp) | +9.3 .. +45.8
+
+## TABLE: checkpoint | replaces | health mult | enemy healing | gain %
+   10000 | Express Shot | x0.65 | 0.0 |  +15.2
+   10000 | Express Shot | x0.65 | 0.3 |  +15.2
+   10000 | Express Shot | x0.94 | 0.0 |  +17.3
+   10000 | Express Shot | x0.94 | 0.3 |  +17.3
+   10000 | Express Shot | x1.0  | 0.0 |  +17.8
+   10000 | Express Shot | x1.0  | 0.3 |  +17.8
+   10000 | Express Shot | x1.5  | 0.0 |  +21.5
+   10000 | Express Shot | x1.5  | 0.3 |  +21.5
+   10000 | Express Shot | x2.0  | 0.0 |  +25.1
+   10000 | Express Shot | x2.0  | 0.3 |  +25.1
+   10000 | Express Shot | x3.83 | 0.0 |  +38.7
+   10000 | Express Shot | x3.83 | 0.3 |  +38.7
+   15000 | Fortitude | x0.65 | 0.0 |  -16.7
+   15000 | Fortitude | x0.65 | 0.3 |  -16.7
+   15000 | Fortitude | x0.94 | 0.0 |  -14.9
+   15000 | Fortitude | x0.94 | 0.3 |  -14.9
+   15000 | Fortitude | x1.0  | 0.0 |  -14.5
+   15000 | Fortitude | x1.0  | 0.3 |  -14.5
+   15000 | Fortitude | x1.5  | 0.0 |  -11.3
+   15000 | Fortitude | x1.5  | 0.3 |  -11.3
+   15000 | Fortitude | x2.0  | 0.0 |   -8.1
+   15000 | Fortitude | x2.0  | 0.3 |   -8.1
+   15000 | Fortitude | x3.83 | 0.0 |   +3.6
+   15000 | Fortitude | x3.83 | 0.3 |   +3.6
+   20000 | Rapid Recharge | x0.65 | 0.0 |   +7.6
+   20000 | Rapid Recharge | x0.65 | 0.3 |   +7.6
+   20000 | Rapid Recharge | x0.94 | 0.0 |  +10.8
+   20000 | Rapid Recharge | x0.94 | 0.3 |  +10.8
+   20000 | Rapid Recharge | x1.0  | 0.0 |  +11.4
+   20000 | Rapid Recharge | x1.0  | 0.3 |  +11.4
+   20000 | Rapid Recharge | x1.5  | 0.0 |  +16.8
+   20000 | Rapid Recharge | x1.5  | 0.3 |  +16.8
+   20000 | Rapid Recharge | x2.0  | 0.0 |  +22.2
+   20000 | Rapid Recharge | x2.0  | 0.3 |  +22.2
+   20000 | Rapid Recharge | x3.83 | 0.0 |  +41.9
+   20000 | Rapid Recharge | x3.83 | 0.3 |  +41.9
+   25000 | Surge of Power | x0.65 | 0.0 |   +9.3
+   25000 | Surge of Power | x0.65 | 0.3 |   +9.3
+   25000 | Surge of Power | x0.94 | 0.0 |  +12.7
+   25000 | Surge of Power | x0.94 | 0.3 |  +12.7
+   25000 | Surge of Power | x1.0  | 0.0 |  +13.3
+   25000 | Surge of Power | x1.0  | 0.3 |  +13.3
+   25000 | Surge of Power | x1.5  | 0.0 |  +19.1
+   25000 | Surge of Power | x1.5  | 0.3 |  +19.1
+   25000 | Surge of Power | x2.0  | 0.0 |  +24.8
+   25000 | Surge of Power | x2.0  | 0.3 |  +24.8
+   25000 | Surge of Power | x3.83 | 0.0 |  +45.8
+   25000 | Surge of Power | x3.83 | 0.3 |  +45.8
+
+## COST / WHAT BREAKS: selling the replaced item refunds an unknown share (not in data, ASSUMED 50%); check --investment for spike loss; the replaced item's other roles (sustain/mobility) are lost (see the interaction matrix of the replaced item)
+
+## HOW IT WOULD BE RECORDED (read-only design, data.js untouched): an optional box ['Situational', '<trigger in plain words>', '', [['Tankbuster', 'Swap for Express Shot when <trigger>.']]]

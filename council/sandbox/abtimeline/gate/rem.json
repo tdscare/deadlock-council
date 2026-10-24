@@ -1,0 +1,287 @@
+{
+ "id": "rem",
+ "hero": "Rem",
+ "order": "2211324324344311",
+ "status": "WARN",
+ "errors": [],
+ "warnings": [
+  {
+   "item": "Extra Charge",
+   "souls": 800,
+   "kind": "charged",
+   "flag": "DEAD-AT-BUY",
+   "gap": 47800,
+   "verdict": "delay / reorder points",
+   "grade": "CALCULATED",
+   "model_B": "DEAD-AT-BUY",
+   "if_1charge_counts": null,
+   "rule": "needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)",
+   "value": "no ability with charges now: Pillow Toss 1, Tag Along 0",
+   "enabler": "Pillow Toss T3 @48600 (+47800)",
+   "code": "CHARGE-BEFORE-CHARGES",
+   "depends": "F7"
+  },
+  {
+   "item": "Rapid Recharge",
+   "souls": 15200,
+   "kind": "charged",
+   "flag": "DEAD-AT-BUY",
+   "gap": 33400,
+   "verdict": "delay / reorder points",
+   "grade": "CALCULATED",
+   "model_B": null,
+   "if_1charge_counts": null,
+   "rule": "needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)",
+   "value": "no ability with charges now: Pillow Toss 1, Tag Along 0, Lil Helpers 0, Naptime 0",
+   "enabler": "Pillow Toss T3 @48600 (+33400)",
+   "code": "CHARGE-BEFORE-CHARGES",
+   "depends": "F7"
+  }
+ ],
+ "spikes": {
+  "gun": {
+   "4800": 34400,
+   "6400": null,
+   "overshoot4800": 0,
+   "at_item": "Heroic Aura"
+  },
+  "vitality": {
+   "4800": 11200,
+   "6400": 12800,
+   "overshoot4800": 0,
+   "at_item": "Healing Nova"
+  },
+  "spirit": {
+   "4800": 8000,
+   "6400": 15200,
+   "overshoot4800": 0,
+   "at_item": "Compress Cooldown"
+  }
+ },
+ "timeline_A": [
+  {
+   "souls": 0,
+   "level": 1,
+   "ability": "Tag Along",
+   "tier": "U"
+  },
+  {
+   "souls": 200,
+   "level": 2,
+   "ability": "Tag Along",
+   "tier": "T1"
+  },
+  {
+   "souls": 500,
+   "level": 3,
+   "ability": "Pillow Toss",
+   "tier": "U"
+  },
+  {
+   "souls": 900,
+   "level": 4,
+   "ability": "Pillow Toss",
+   "tier": "T1"
+  },
+  {
+   "souls": 1400,
+   "level": 5,
+   "ability": "Lil Helpers",
+   "tier": "U"
+  },
+  {
+   "souls": 2600,
+   "level": 7,
+   "ability": "Tag Along",
+   "tier": "T2"
+  },
+  {
+   "souls": 3200,
+   "level": 8,
+   "ability": "Naptime",
+   "tier": "U"
+  },
+  {
+   "souls": 3900,
+   "level": 9,
+   "ability": "Lil Helpers",
+   "tier": "T1"
+  },
+  {
+   "souls": 7600,
+   "level": 14,
+   "ability": "Tag Along",
+   "tier": "T3"
+  },
+  {
+   "souls": 8400,
+   "level": 15,
+   "ability": "Naptime",
+   "tier": "T1"
+  },
+  {
+   "souls": 10100,
+   "level": 17,
+   "ability": "Lil Helpers",
+   "tier": "T2"
+  },
+  {
+   "souls": 11900,
+   "level": 19,
+   "ability": "Naptime",
+   "tier": "T2"
+  },
+  {
+   "souls": 17400,
+   "level": 24,
+   "ability": "Naptime",
+   "tier": "T3"
+  },
+  {
+   "souls": 26900,
+   "level": 29,
+   "ability": "Lil Helpers",
+   "tier": "T3"
+  },
+  {
+   "souls": 32100,
+   "level": 31,
+   "ability": "Pillow Toss",
+   "tier": "T2"
+  },
+  {
+   "souls": 48600,
+   "level": 36,
+   "ability": "Pillow Toss",
+   "tier": "T3"
+  }
+ ],
+ "rows": [
+  {
+   "item": "Extra Charge",
+   "souls": 800,
+   "kind": "charged",
+   "flag": "DEAD-AT-BUY",
+   "verdict": "delay / reorder points",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": 47800,
+   "B": "DEAD-AT-BUY",
+   "F7": null
+  },
+  {
+   "item": "Opening Rounds",
+   "souls": 3200,
+   "kind": "enemyhp",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Mystic Burst",
+   "souls": 5600,
+   "kind": "hit",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "+136%",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Compress Cooldown",
+   "souls": 8000,
+   "kind": "imbue",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Trophy Collector",
+   "souls": 12800,
+   "kind": "stack",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Rapid Recharge",
+   "souls": 15200,
+   "kind": "charged",
+   "flag": "DEAD-AT-BUY",
+   "verdict": "delay / reorder points",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": 33400,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Mystic Expansion",
+   "souls": 16000,
+   "kind": "imbue",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Echo Shard",
+   "souls": 24000,
+   "kind": "imbue",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Tankbuster",
+   "souls": 31200,
+   "kind": "hit",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "+100%",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Superior Cooldown",
+   "souls": 36000,
+   "kind": "cast",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  }
+ ],
+ "assumptions": {
+  "game_build": "6801 (gt repo); installed client 6819 unverified",
+  "point_model": "A (unlock currency separate, 1/2/5 AP)",
+  "charge_rule": "2+ charges (Kieran); F7 alternative reported",
+  "walk": "core boxes L-R, components consumed, sells dropped"
+ }
+}

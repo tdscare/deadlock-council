@@ -1,0 +1,3053 @@
+{
+ "schema": 1,
+ "id": "danny",
+ "hero": "Danny",
+ "name": "Rizuhble's Belly Flop Danny",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane?",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "If you're getting poked out of lane. Sell it for Diviner's Kevlar.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-8,800 (levels 1-15). 4.8k spikes: weapon 4.8k at Sharpshooter.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "danny:7:phase_range:19",
+    "danny:7:phase_spikes:28"
+   ],
+   "items": [
+    {
+     "name": "High-Velocity Rounds",
+     "imbue": null,
+     "caption": "From Opening Rounds: this becomes its component and counts toward the upgrade price.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Sharpshooter completes 4.8k weapon in 4000 souls (~4.0 min), 2 purchases",
+     "claim_ids": [
+      "danny:0:component_for:2"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "danny:0:component_for:2",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Opening Rounds",
+     "imbue": null,
+     "caption": "From Sharpshooter (3,200 souls on): completes the 4.8k weapon tier; until then it is only weapon investment. Upgrade of High-Velocity Rounds (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Sharpshooter completes 4.8k weapon in 3200 souls (~3.2 min), 1 purchases",
+     "claim_ids": [
+      "danny:1:spike_progress:3",
+      "danny:1:upgrade_of:4"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "danny:1:spike_progress:3",
+       true,
+       "1600"
+      ],
+      [
+       "danny:1:upgrade_of:4",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Sharpshooter",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:2:spike_complete:5"
+     ],
+     "lint": [],
+     "legacy_note": "Chimera's landing also scales with weapon damage.",
+     "temporary": false,
+     "verify": [
+      [
+       "danny:2:spike_complete:5",
+       true,
+       "inventory weapon: before 1600, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 15 to Chimera Mk1's explosion damage (1.5x scaling), your steepest spirit scaling.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:4:spirit_scaling:10"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "danny:4:spirit_scaling:10",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Strix Salvo (135), Chimera Mk1 (132) clear its 80-damage trigger; Jettison Fuel stays under it.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:5:threshold_now:12"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "danny:5:threshold_now:12",
+       true,
+       "instances above: [(1, 135.32), (2, 131.8)]"
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Expansion",
+     "imbue": "2",
+     "caption": null,
+     "cls": "c",
+     "why": "spirit investment only; its 4.8k tier completes at Compress Cooldown, 3200 souls (~3.2 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "On the dive.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Stamina",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 8,800-24,000 (levels 15-27). Abilities gained (both point models agree): Chimera Mk1 T3, Close The Deal T3. Your biggest single spirit hit (Chimera Mk1, explosion damage) grows from 142 to 401. 4.8k spikes: spirit 4.8k at Compress Cooldown, vitality 4.8k at Stamina Mastery.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "danny:15:phase_range:45",
+    "danny:15:phase_abilities:46",
+    "danny:15:phase_power:47",
+    "danny:15:phase_spikes:54"
+   ],
+   "items": [
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 27 to Chimera Mk1's explosion damage (1.5x scaling), your steepest spirit scaling. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:8:spirit_scaling:31",
+      "danny:8:upgrade_of:30"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "danny:8:spirit_scaling:31",
+       true,
+       ""
+      ],
+      [
+       "danny:8:upgrade_of:30",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "2",
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power. Imbued on Chimera Mk1: takes 18% off its 21s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:9:spike_complete:32",
+      "danny:9:imbue_cooldown:33"
+     ],
+     "lint": [],
+     "legacy_note": "On the dive.",
+     "temporary": false,
+     "verify": [
+      [
+       "danny:9:spike_complete:32",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ],
+      [
+       "danny:9:imbue_cooldown:33",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Reactive Barrier",
+     "imbue": null,
+     "caption": "From Stamina Mastery (2,400 souls on): completes the 4.8k vitality tier; until then it is only vitality investment. Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "b",
+     "why": "imminent: Stamina Mastery completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "danny:10:spike_progress:35",
+      "danny:10:upgrade_of:36"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "danny:10:spike_progress:35",
+       true,
+       "2400"
+      ],
+      [
+       "danny:10:upgrade_of:36",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Stamina Mastery",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus. Upgrade of Extra Stamina (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:11:spike_complete:37",
+      "danny:11:upgrade_of:38"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "danny:11:spike_complete:37",
+       true,
+       "inventory vitality: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "danny:11:upgrade_of:38",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Enchanter's Emblem",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Completes the 6.4k vitality tier (4,800 to 6,400 invested): bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": "Chimera Mk1 (333) clears its 165-damage trigger; Jettison Fuel stays under it. Completes the 6.4k spirit tier (4,800 to 7,200 invested): bonus 38 to 45 spirit power. Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:13:threshold_now:41",
+      "danny:13:spike_complete:40",
+      "danny:13:upgrade_of:42"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "danny:13:threshold_now:41",
+       true,
+       "instances above: [(2, 332.95)]"
+      ],
+      [
+       "danny:13:spike_complete:40",
+       true,
+       "inventory spirit: before 4800, after 7200, threshold 6400"
+      ],
+      [
+       "danny:13:upgrade_of:42",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Surge of Power",
+     "imbue": "2",
+     "caption": "Imbued on Chimera Mk1: its spirit-scaled explosion damage goes from 347 to 389 (+28 spirit on that ability only).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:14:imbue_spirit:43"
+     ],
+     "lint": [],
+     "legacy_note": "On the dive.",
+     "temporary": false,
+     "verify": [
+      [
+       "danny:14:imbue_spirit:43",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Greater Expansion",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 24,000-48,000 (levels 27-35). Abilities gained (both point models agree): Strix Salvo T3. Your biggest single spirit hit (Chimera Mk1, explosion damage) grows from 401 to 559.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "danny:20:phase_range:60",
+    "danny:20:phase_abilities:61",
+    "danny:20:phase_power:62"
+   ],
+   "items": [
+    {
+     "name": "Diviner's Kevlar",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 45 to Chimera Mk1's explosion damage (1.5x scaling), your steepest spirit scaling. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:17:spirit_scaling:56",
+      "danny:17:upgrade_of:55"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "danny:17:spirit_scaling:56",
+       true,
+       ""
+      ],
+      [
+       "danny:17:upgrade_of:55",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: With 4 abilities trained their base cooldowns total 148s; 20% off is 29.6s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Indomitable",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Diviner's Kevlar? Buy what is killing you, cheapest first. Not dying? Skip. Sell Enchanter's Emblem.",
+   "desc": "Dying after Diviner's Kevlar? Buy what is killing you, cheapest first. Not dying? Skip. Sell Enchanter's Emblem.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:21:defence_bullet:63"
+     ],
+     "lint": [],
+     "legacy_note": "One gun hero is deleting you: Haze, Wraith, Vindicta.",
+     "temporary": false,
+     "verify": [
+      [
+       "danny:21:defence_bullet:63",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:21:defence_gun:64"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun and Metal Skin isn't enough.",
+     "temporary": false,
+     "verify": [
+      [
+       "danny:21:defence_gun:64",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:21:defence_parry:65"
+     ],
+     "lint": [],
+     "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow.",
+     "temporary": false,
+     "verify": [
+      [
+       "danny:21:defence_parry:65",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:21:defence_purge:66"
+     ],
+     "lint": [],
+     "legacy_note": "Knockdown before it lands, Slowing Hex, Disarming Hex.",
+     "temporary": false,
+     "verify": [
+      [
+       "danny:21:defence_purge:66",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:21:defence_spirit:67"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist.",
+     "temporary": false,
+     "verify": [
+      [
+       "danny:21:defence_spirit:67",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Chimera Mk1 (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:21:cc_exposure:68"
+     ],
+     "lint": [],
+     "legacy_note": "Stuns and silences keep stopping your dive.",
+     "temporary": false,
+     "verify": [
+      [
+       "danny:21:cc_exposure:68",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Mystic Reverb",
+     "imbue": "2",
+     "caption": "Chimera Mk1 (602) clears its 100-damage trigger. Replaces Greater Expansion: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "danny:21:threshold_now:69",
+      "danny:21:sell_swap:70"
+     ],
+     "lint": [],
+     "legacy_note": "On the dive. Sell Greater Expansion for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "danny:21:threshold_now:69",
+       true,
+       "instances above: [(2, 601.8399999999999)]"
+      ],
+      [
+       "danny:21:sell_swap:70",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Reactive Barrier for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Focus Lens",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Silence them before the dive: part of the dive damage hits them again after. Sell Stamina Mastery for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "danny:0:spike_progress:1": {
+   "id": "danny:0:spike_progress:1",
+   "kind": "spike_progress",
+   "phrase": "From Sharpshooter (4,000 souls on): completes the 4.8k weapon tier; until then it is only weapon investment.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 18,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Sharpshooter completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "danny:0:component_for:2": {
+   "id": "danny:0:component_for:2",
+   "kind": "component_for",
+   "phrase": "From Opening Rounds: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "High-Velocity Rounds",
+    "souls": 800,
+    "noncore": false
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Opening Rounds"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Opening Rounds"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:1:spike_progress:3": {
+   "id": "danny:1:spike_progress:3",
+   "kind": "spike_progress",
+   "phrase": "From Sharpshooter (3,200 souls on): completes the 4.8k weapon tier; until then it is only weapon investment.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 18,
+   "point": {
+    "idx": 1,
+    "item": "Opening Rounds",
+    "souls": 1600,
+    "noncore": false
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 3200,
+    "event": "Sharpshooter completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    3200,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "danny:1:upgrade_of:4": {
+   "id": "danny:1:upgrade_of:4",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of High-Velocity Rounds (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 1,
+    "item": "Opening Rounds",
+    "souls": 1600,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "High-Velocity Rounds"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:2:spike_complete:5": {
+   "id": "danny:2:spike_complete:5",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_deadpack m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 2,
+    "item": "Sharpshooter",
+    "souls": 4800,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "46.0"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "danny:3:spike_progress:6": {
+   "id": "danny:3:spike_progress:6",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 18,
+   "point": {
+    "idx": 3,
+    "item": "Grit",
+    "souls": 5600,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "danny:3:component_for:7": {
+   "id": "danny:3:component_for:7",
+   "kind": "component_for",
+   "phrase": "From Reactive Barrier: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Grit",
+    "souls": 5600,
+    "noncore": false
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 6400,
+    "event": "Reactive Barrier"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Reactive Barrier"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:4:spike_progress:8": {
+   "id": "danny:4:spike_progress:8",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 18,
+   "point": {
+    "idx": 4,
+    "item": "Extra Spirit",
+    "souls": 6400,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "danny:4:component_for:9": {
+   "id": "danny:4:component_for:9",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Extra Spirit",
+    "souls": 6400,
+    "noncore": false
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 3200,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:4:spirit_scaling:10": {
+   "id": "danny:4:spirit_scaling:10",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 15 to Chimera Mk1's explosion damage (1.5x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 4,
+    "item": "Extra Spirit",
+    "souls": 6400,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "ExplosionDamage"
+   },
+   "numbers": [
+    "10.0",
+    "15",
+    "1.5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "danny:5:spike_progress:11": {
+   "id": "danny:5:spike_progress:11",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 18,
+   "point": {
+    "idx": 5,
+    "item": "Mystic Burst",
+    "souls": 7200,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "danny:5:threshold_now:12": {
+   "id": "danny:5:threshold_now:12",
+   "kind": "threshold_now",
+   "phrase": "Strix Salvo (135), Chimera Mk1 (132) clear its 80-damage trigger; Jettison Fuel stays under it.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_chargeblast",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_flamethrower"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 5,
+    "item": "Mystic Burst",
+    "souls": 7200,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "80.0",
+    "135",
+    "132"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 1.69,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "danny:5:component_for:13": {
+   "id": "danny:5:component_for:13",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Mystic Burst",
+    "souls": 7200,
+    "noncore": false
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 11200,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:6:spike_progress:14": {
+   "id": "danny:6:spike_progress:14",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 2,400 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 18,
+   "point": {
+    "idx": 6,
+    "item": "Mystic Expansion",
+    "souls": 8000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "danny:6:imbue_reach:15": {
+   "id": "danny:6:imbue_reach:15",
+   "kind": "imbue_reach",
+   "phrase": "Imbued on Chimera Mk1: widens its radius.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_reach",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 6,
+    "item": "Mystic Expansion",
+    "souls": 8000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 2,
+    "stats": [
+     "ETechRange",
+     "ETechRadius"
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "danny:6:component_for:16": {
+   "id": "danny:6:component_for:16",
+   "kind": "component_for",
+   "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Mystic Expansion",
+    "souls": 8000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 16000,
+    "event": "Greater Expansion"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Greater Expansion"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:7:spike_progress:17": {
+   "id": "danny:7:spike_progress:17",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 18,
+   "point": {
+    "idx": 7,
+    "item": "Extra Stamina",
+    "souls": 8800,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "danny:7:component_for:18": {
+   "id": "danny:7:component_for:18",
+   "kind": "component_for",
+   "phrase": "From Stamina Mastery: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Stamina",
+    "souls": 8800,
+    "noncore": false
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Stamina Mastery"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Stamina Mastery"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:7:phase_range:19": {
+   "id": "danny:7:phase_range:19",
+   "kind": "phase_range",
+   "phrase": "Souls 0-8,800 (levels 1-15).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_deadpack m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Stamina",
+    "souls": 8800,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Stamina",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "8,800",
+    "1",
+    "15"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:7:phase_spikes:28": {
+   "id": "danny:7:phase_spikes:28",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Sharpshooter.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_deadpack"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Extra Stamina",
+    "souls": 8800,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Extra Stamina",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:8:spike_progress:29": {
+   "id": "danny:8:spike_progress:29",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 18,
+   "point": {
+    "idx": 8,
+    "item": "Improved Spirit",
+    "souls": 9600,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "danny:8:upgrade_of:30": {
+   "id": "danny:8:upgrade_of:30",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 8,
+    "item": "Improved Spirit",
+    "souls": 9600,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:8:spirit_scaling:31": {
+   "id": "danny:8:spirit_scaling:31",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 27 to Chimera Mk1's explosion damage (1.5x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 8,
+    "item": "Improved Spirit",
+    "souls": 9600,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "ExplosionDamage"
+   },
+   "numbers": [
+    "18.0",
+    "27",
+    "1.5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "danny:9:spike_complete:32": {
+   "id": "danny:9:spike_complete:32",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_deadpack m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 9,
+    "item": "Compress Cooldown",
+    "souls": 11200,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "danny:9:imbue_cooldown:33": {
+   "id": "danny:9:imbue_cooldown:33",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Chimera Mk1: takes 18% off its 21s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 9,
+    "item": "Compress Cooldown",
+    "souls": 11200,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 2
+   },
+   "numbers": [
+    "18.0",
+    "21.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "danny:9:component_for:34": {
+   "id": "danny:9:component_for:34",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Compress Cooldown",
+    "souls": 11200,
+    "noncore": false
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 25600,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:10:spike_progress:35": {
+   "id": "danny:10:spike_progress:35",
+   "kind": "spike_progress",
+   "phrase": "From Stamina Mastery (2,400 souls on): completes the 4.8k vitality tier; until then it is only vitality investment.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 18,
+   "point": {
+    "idx": 10,
+    "item": "Reactive Barrier",
+    "souls": 12000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Stamina Mastery completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "danny:10:upgrade_of:36": {
+   "id": "danny:10:upgrade_of:36",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Reactive Barrier",
+    "souls": 12000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Grit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:11:spike_complete:37": {
+   "id": "danny:11:spike_complete:37",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (2,400 to 4,800 invested): bonus 15 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_deadpack m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 11,
+    "item": "Stamina Mastery",
+    "souls": 14400,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "danny:11:upgrade_of:38": {
+   "id": "danny:11:upgrade_of:38",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Stamina (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Stamina Mastery",
+    "souls": 14400,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Stamina"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:12:spike_complete:39": {
+   "id": "danny:12:spike_complete:39",
+   "kind": "spike_complete",
+   "phrase": "Completes the 6.4k vitality tier (4,800 to 6,400 invested): bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_deadpack m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Enchanter's Emblem",
+    "souls": 16000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "6.4k",
+    "4800",
+    "6400",
+    "38.0",
+    "42.0"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "danny:13:spike_complete:40": {
+   "id": "danny:13:spike_complete:40",
+   "kind": "spike_complete",
+   "phrase": "Completes the 6.4k spirit tier (4,800 to 7,200 invested): bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_deadpack m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Tankbuster",
+    "souls": 18400,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "6.4k",
+    "4800",
+    "7200",
+    "38.0",
+    "45.0"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "danny:13:threshold_now:41": {
+   "id": "danny:13:threshold_now:41",
+   "kind": "threshold_now",
+   "phrase": "Chimera Mk1 (333) clears its 165-damage trigger; Jettison Fuel stays under it.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_chargeblast",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_flamethrower"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 13,
+    "item": "Tankbuster",
+    "souls": 18400,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "165.0",
+    "333"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 2.02,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "danny:13:upgrade_of:42": {
+   "id": "danny:13:upgrade_of:42",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Tankbuster",
+    "souls": 18400,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:14:imbue_spirit:43": {
+   "id": "danny:14:imbue_spirit:43",
+   "kind": "imbue_spirit",
+   "phrase": "Imbued on Chimera Mk1: its spirit-scaled explosion damage goes from 347 to 389 (+28 spirit on that ability only).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_storm",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer"
+   ],
+   "score": 60,
+   "point": {
+    "idx": 14,
+    "item": "Surge of Power",
+    "souls": 21600,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_spirit",
+    "slot": 2
+   },
+   "numbers": [
+    "28.0",
+    "347",
+    "389"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "danny:15:upgrade_of:44": {
+   "id": "danny:15:upgrade_of:44",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Greater Expansion",
+    "souls": 24000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Expansion"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:15:phase_range:45": {
+   "id": "danny:15:phase_range:45",
+   "kind": "phase_range",
+   "phrase": "Souls 8,800-24,000 (levels 15-27).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_deadpack m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Greater Expansion",
+    "souls": 24000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Greater Expansion",
+    "keys": []
+   },
+   "numbers": [
+    "8,800",
+    "24,000",
+    "15",
+    "27"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:15:phase_abilities:46": {
+   "id": "danny:15:phase_abilities:46",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Chimera Mk1 T3, Close The Deal T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Greater Expansion",
+    "souls": 24000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Greater Expansion",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:15:phase_power:47": {
+   "id": "danny:15:phase_power:47",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Chimera Mk1, explosion damage) grows from 142 to 401.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Greater Expansion",
+    "souls": 24000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Greater Expansion",
+    "keys": []
+   },
+   "numbers": [
+    "142",
+    "401"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:15:phase_spikes:54": {
+   "id": "danny:15:phase_spikes:54",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Compress Cooldown, vitality 4.8k at Stamina Mastery.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_deadpack"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Greater Expansion",
+    "souls": 24000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Greater Expansion",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:17:upgrade_of:55": {
+   "id": "danny:17:upgrade_of:55",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Boundless Spirit",
+    "souls": 35200,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:17:spirit_scaling:56": {
+   "id": "danny:17:spirit_scaling:56",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 45 to Chimera Mk1's explosion damage (1.5x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 17,
+    "item": "Boundless Spirit",
+    "souls": 35200,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "ExplosionDamage"
+   },
+   "numbers": [
+    "30.0",
+    "45",
+    "1.5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "danny:18:upgrade_of:57": {
+   "id": "danny:18:upgrade_of:57",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Superior Cooldown",
+    "souls": 36800,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:18:cdr_rotation:58": {
+   "id": "danny:18:cdr_rotation:58",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 148s; 20% off is 29.6s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_chargeblast",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_flamethrower",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_ultimate"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 18,
+    "item": "Superior Cooldown",
+    "souls": 36800,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "148",
+    "20.0",
+    "29.6"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "danny:20:upgrade_of:59": {
+   "id": "danny:20:upgrade_of:59",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Reactive Barrier (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Indomitable",
+    "souls": 48000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Reactive Barrier"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "danny:20:phase_range:60": {
+   "id": "danny:20:phase_range:60",
+   "kind": "phase_range",
+   "phrase": "Souls 24,000-48,000 (levels 27-35).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_deadpack m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Indomitable",
+    "souls": 48000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Indomitable",
+    "keys": []
+   },
+   "numbers": [
+    "24,000",
+    "48,000",
+    "27",
+    "35"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:20:phase_abilities:61": {
+   "id": "danny:20:phase_abilities:61",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Strix Salvo T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Indomitable",
+    "souls": 48000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Indomitable",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:20:phase_power:62": {
+   "id": "danny:20:phase_power:62",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Chimera Mk1, explosion damage) grows from 401 to 559.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 20,
+    "item": "Indomitable",
+    "souls": 48000,
+    "noncore": false
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Indomitable",
+    "keys": []
+   },
+   "numbers": [
+    "401",
+    "559"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:21:defence_bullet:63": {
+   "id": "danny:21:defence_bullet:63",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Metal Skin",
+    "souls": 48000,
+    "noncore": true
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:21:defence_gun:64": {
+   "id": "danny:21:defence_gun:64",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Plated Armor",
+    "souls": 48000,
+    "noncore": true
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:21:defence_parry:65": {
+   "id": "danny:21:defence_parry:65",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Counterspell",
+    "souls": 48000,
+    "noncore": true
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:21:defence_purge:66": {
+   "id": "danny:21:defence_purge:66",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Dispel Magic",
+    "souls": 48000,
+    "noncore": true
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:21:defence_spirit:67": {
+   "id": "danny:21:defence_spirit:67",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 21,
+    "item": "Spirit Resilience",
+    "souls": 48000,
+    "noncore": true
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "danny:21:cc_exposure:68": {
+   "id": "danny:21:cc_exposure:68",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Chimera Mk1 (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 21,
+    "item": "Unstoppable",
+    "souls": 48000,
+    "noncore": true
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "danny:21:threshold_now:69": {
+   "id": "danny:21:threshold_now:69",
+   "kind": "threshold_now",
+   "phrase": "Chimera Mk1 (602) clears its 100-damage trigger.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_deadpack_rocketeer"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 21,
+    "item": "Mystic Reverb",
+    "souls": 48000,
+    "noncore": true
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 100.0,
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "100.0",
+    "602"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 6.02,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "danny:21:sell_swap:70": {
+   "id": "danny:21:sell_swap:70",
+   "kind": "sell_swap",
+   "phrase": "Replaces Greater Expansion: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Mystic Reverb",
+    "souls": 48000,
+    "noncore": true
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Greater Expansion",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Greater Expansion"
+  },
+  "danny:21:sell_swap:71": {
+   "id": "danny:21:sell_swap:71",
+   "kind": "sell_swap",
+   "phrase": "Replaces Reactive Barrier: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Witchmail",
+    "souls": 48000,
+    "noncore": true
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Reactive Barrier",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Reactive Barrier"
+  },
+  "danny:21:sell_swap:72": {
+   "id": "danny:21:sell_swap:72",
+   "kind": "sell_swap",
+   "phrase": "Replaces Stamina Mastery: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Focus Lens",
+    "souls": 48000,
+    "noncore": true
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Stamina Mastery",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Stamina Mastery"
+  },
+  "danny:21:upgrade_of:73": {
+   "id": "danny:21:upgrade_of:73",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 21,
+    "item": "Transcendent Cooldown",
+    "souls": 48000,
+    "noncore": true
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "danny",
+   "item": "Extra Regen",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 48000,
+   "unpublished": []
+  },
+  {
+   "build": "danny",
+   "item": "Extra Regen",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "If you're getting poked out of lane. Sell it for Diviner's Kevlar."
+  },
+  {
+   "build": "danny",
+   "item": "High-Velocity Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Sharpshooter completes 4.8k weapon in 4000 souls (~4.0 min), 2 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "danny:0:spike_progress:1",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Sharpshooter (4,000 souls on): completes the 4.8k weapon tier; until then it is only weapon investment.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Sharpshooter completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "danny:0:component_for:2",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Opening Rounds: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Opening Rounds"
+     }
+    }
+   ]
+  },
+  {
+   "build": "danny",
+   "item": "Opening Rounds",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Sharpshooter completes 4.8k weapon in 3200 souls (~3.2 min), 1 purchases",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "danny:1:spike_progress:3",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Sharpshooter (3,200 souls on): completes the 4.8k weapon tier; until then it is only weapon investment.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 3200,
+      "event": "Sharpshooter completes the 4.8k weapon tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "danny",
+   "item": "Sharpshooter",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Chimera's landing also scales with weapon damage."
+  },
+  {
+   "build": "danny",
+   "item": "Grit",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 5600,
+   "unpublished": [
+    {
+     "id": "danny:3:component_for:7",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Reactive Barrier: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 6400,
+      "event": "Reactive Barrier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "danny",
+   "item": "Mystic Expansion",
+   "section": "early",
+   "cls": "c",
+   "why": "spirit investment only; its 4.8k tier completes at Compress Cooldown, 3200 souls (~3.2 min) later and spirit is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 8000,
+   "unpublished": [
+    {
+     "id": "danny:6:component_for:16",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 16000,
+      "event": "Greater Expansion"
+     }
+    }
+   ]
+  },
+  {
+   "build": "danny",
+   "item": "Mystic Expansion",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On the dive."
+  },
+  {
+   "build": "danny",
+   "item": "Extra Stamina",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Stamina Mastery, 5600 souls (~5.6 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 8800,
+   "unpublished": [
+    {
+     "id": "danny:7:component_for:18",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Stamina Mastery: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Stamina Mastery"
+     }
+    }
+   ]
+  },
+  {
+   "build": "danny",
+   "item": "Compress Cooldown",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On the dive."
+  },
+  {
+   "build": "danny",
+   "item": "Reactive Barrier",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Stamina Mastery completes 4.8k vitality in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 12000,
+   "unpublished": [
+    {
+     "id": "danny:10:spike_progress:35",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Stamina Mastery (2,400 souls on): completes the 4.8k vitality tier; until then it is only vitality investment.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Stamina Mastery completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "danny",
+   "item": "Surge of Power",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On the dive."
+  },
+  {
+   "build": "danny",
+   "item": "Greater Expansion",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 24000,
+   "unpublished": []
+  },
+  {
+   "build": "danny",
+   "item": "Diviner's Kevlar",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 30400,
+   "unpublished": []
+  },
+  {
+   "build": "danny",
+   "item": "Spirit Burn",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 43200,
+   "unpublished": []
+  },
+  {
+   "build": "danny",
+   "item": "Indomitable",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 48000,
+   "unpublished": []
+  },
+  {
+   "build": "danny",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "One gun hero is deleting you: Haze, Wraith, Vindicta."
+  },
+  {
+   "build": "danny",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun and Metal Skin isn't enough."
+  },
+  {
+   "build": "danny",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+  },
+  {
+   "build": "danny",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Knockdown before it lands, Slowing Hex, Disarming Hex."
+  },
+  {
+   "build": "danny",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit: Seven, Infernus, Kelvin, Geist."
+  },
+  {
+   "build": "danny",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns and silences keep stopping your dive."
+  },
+  {
+   "build": "danny",
+   "item": "Mystic Reverb",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On the dive. Sell Greater Expansion for this."
+  },
+  {
+   "build": "danny",
+   "item": "Witchmail",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 48000,
+   "unpublished": []
+  },
+  {
+   "build": "danny",
+   "item": "Focus Lens",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 48000,
+   "unpublished": []
+  },
+  {
+   "build": "danny",
+   "item": "Focus Lens",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Silence them before the dive: part of the dive damage hits them again after. Sell Stamina Mastery for this."
+  },
+  {
+   "build": "danny",
+   "item": "Divine Barrier",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 48000,
+   "unpublished": []
+  },
+  {
+   "build": "danny",
+   "item": "Transcendent Cooldown",
+   "section": "slot_locked",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 48000,
+   "unpublished": []
+  }
+ ],
+ "stats": {
+  "d": 9,
+  "b": 3,
+  "a": 16,
+  "c": 3,
+  "g": 2
+ }
+}

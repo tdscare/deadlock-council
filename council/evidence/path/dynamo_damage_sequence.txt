@@ -1,0 +1,104 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: dynamo_damage
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:10:55Z
+BODY-SHA: 9a19e3759f83bbf86fc8ebd3044c954dee3ce7b9aaf228bf4d073535eb8f9783
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Headshot Booster: retained-or-upgraded (-> Headhunter)
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Headhunter: retained
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed)
+  Recharging Rush: retained
+  Enduring Speed: retained
+  Warp Stone: retained
+  Tankbuster: retained
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Quicksilver Reload: retained-or-upgraded (-> Mercurial Magnum)
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Rapid Recharge: retained
+  Superior Cooldown: retained
+  Mercurial Magnum: retained
+  Unstoppable: retained
+  Mystic Reverb: retained
+  Spirit Burn: retained
+  Refresher: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Reactive Barrier: conditional branch (counter menu)
+  Boundless Spirit: situational-luxury
+  Witchmail: situational-luxury
+  Echo Shard: situational-luxury
+  Divine Barrier: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+  Juggernaut: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Headshot Booster, Mystic Burst, Headhunter, Sprint Boots, Recharging Rush, Enduring Speed, Warp Stone
+  Mid · L-R                  -> main path (sequential): Tankbuster, Compress Cooldown, Quicksilver Reload, Extra Charge, Rapid Recharge, Superior Cooldown
+  Late · L-R                 -> main path (sequential): Mercurial Magnum, Unstoppable, Mystic Reverb, Spirit Burn, Refresher
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Resilience, Counterspell, Dispel Magic, Reactive Barrier
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Boundless Spirit, Witchmail, Echo Shard, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown, Juggernaut
+
+## Rapid Recharge: sold when buying Boundless Spirit (I'm rich as fuck, luxury)
+  role of Rapid Recharge: retained; role of Boundless Spirit: situational-luxury
+  Rapid Recharge: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 19200 souls (~18.0 min), replaced at ~57.2 min -> owned ~39.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/11200/41600 -> after 4800/11200/38400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 80 min | window TR | key purchase times (min)
+  as built                                    |          72370 |      0.38 | Rapid Recharge 18, Boundless Spirit 57
+  keep Rapid Recharge (slot cap ignored)      |          72391 |      0.38 | Rapid Recharge 18, Boundless Spirit 59
+  skip Rapid Recharge                         |          72441 |      0.38 | Boundless Spirit 56
+  sell Recharging Rush instead                |          71731 |      0.36 | Rapid Recharge 18, Boundless Spirit 58
+  keep Rapid Recharge (slot cap ignored) vs as built: d souls +9, d window TR +0.4% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Rapid Recharge vs as built: d souls +40, d window TR +0.6% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Recharging Rush instead vs as built: d souls -570, d window TR -2.2% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: no modelled stat for Rapid Recharge (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Recharging Rush instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Superior Cooldown: sold when buying Witchmail (I'm rich as fuck, luxury)
+  role of Superior Cooldown: retained; role of Witchmail: situational-luxury
+  Superior Cooldown: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 20800 souls (~19.2 min), replaced at ~57.2 min -> owned ~38.0 min  [MODELLED ESTIMATE]
+  component of later purchases: Transcendent Cooldown -> selling and rebuying adds 1600 souls vs keeping it in the upgrade (UNVERIFIED HYPOTHESIS resale)
+  investment gun/vit/spirit before 4800/17600/35200 -> after 4800/17600/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 80 min | window TR | key purchase times (min)
+  as built                                    |          72484 |      0.38 | Superior Cooldown 19, Witchmail 57
+  keep Superior Cooldown (slot cap ignored)   |          72449 |      0.37 | Superior Cooldown 19, Witchmail 59
+  skip Superior Cooldown                      |          72523 |      0.38 | Witchmail 57
+  sell Recharging Rush instead                |          71767 |      0.36 | Superior Cooldown 19, Witchmail 58
+  keep Superior Cooldown (slot cap ignored) vs as built: d souls -14, d window TR -0.4% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Superior Cooldown vs as built: d souls +18, d window TR +0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Recharging Rush instead vs as built: d souls -619, d window TR -3.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: component sold before its planned upgrade
+  VERDICT: REVIEW: keep Superior Cooldown until the Transcendent Cooldown upgrade unless the freed slot is needed earlier (quantified above); proposal needs the gate; evidence tier: VERIFIED GAME MECHANIC (walk arithmetic) + MODEL-ONLY value; flipping assumptions: sell Recharging Rush instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Rapid Recharge: sold when buying Echo Shard (I'm rich as fuck, luxury)
+  role of Rapid Recharge: retained; role of Echo Shard: situational-luxury
+  Rapid Recharge: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 19200 souls (~18.0 min), replaced at ~57.2 min -> owned ~39.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/11200/41600 -> after 4800/11200/38400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 80 min | window TR | key purchase times (min)
+  as built                                    |          72237 |      0.37 | Rapid Recharge 18, Echo Shard 57
+  keep Rapid Recharge (slot cap ignored)      |          72273 |      0.37 | Rapid Recharge 18, Echo Shard 59
+  skip Rapid Recharge                         |          72297 |      0.37 | Echo Shard 56
+  sell Recharging Rush instead                |          71613 |      0.36 | Rapid Recharge 18, Echo Shard 58
+  keep Rapid Recharge (slot cap ignored) vs as built: d souls +12, d window TR +0.7% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Rapid Recharge vs as built: d souls +34, d window TR +0.6% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Recharging Rush instead vs as built: d souls -564, d window TR -2.4% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Echo Shard has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Rapid Recharge, Echo Shard (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Recharging Rush instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

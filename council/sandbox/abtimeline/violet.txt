@@ -1,0 +1,110 @@
+# violet | Violet | Rizuhble's Bob Ross Has A Glock
+abilities: 1=Living Ink (ability_artist_homingbrush, start_trained=false, Signature) / 2=Flow State (ability_artist_rollingprojectile, start_trained=false, Signature) / 3=Still Life (ability_artist_tether, start_trained=false, Signature) / 4=Abstract Landscape (ability_artist_bamboogrove, start_trained=false, Ultimate)
+order: 1132141334422234
+model A (data):  Living Ink:U@0  Living Ink:T1@200  Still Life:U@500  Flow State:U@1400  Living Ink:T2@2000  Abstract L:U@3200  Living Ink:T3@6000  Still Life:T1@6800  Still Life:T2@8400  Abstract L:T1@9200  Abstract L:T2@11000  Flow State:T1@11900  Flow State:T2@13800  Flow State:T3@20600  Still Life:T3@32100  Abstract L:T3@48600
+model B (old):   Living Ink:T1@200  Living Ink:T2@900  Still Life:T1@2000  Flow State:T1@2600  Living Ink:T3@3900  Abstract L:U@4600  Still Life:T2@6000  Still Life:T3@6800  Abstract L:T1@7600  Abstract L:T2@8400  Flow State:T2@9200  Flow State:T3@10100  Abstract L:T3@12800
+tier upgrades: Living Ink: AbilityCooldown-4,MaxDrawDistance+15 / MaxStacks+5,StackDuration+10,BonusFireRatePerStack+10 / BulletDamageMultiplier+30,CooldownReductionPerHit+1,Damage+0.4x | Flow State: StaminaCooldownReduction+150 / AbilityCooldown-6,ExplosionRadius+8,GroundAuraDuration+4 / OutgoingDamagePercent+20,DamageAmpBuildDuration+4,DamageAmpDuration+6 | Still Life: BuffDuration+4,HealthRegen+15,HealthRegen+0.25x / OutgoingDamagePercent-35 / AbilityCooldown-11,StunDuration+0.35,BonusMoveSpeedPercent+20 | Abstract Lan: AbilityCooldown-20 / AbilityLifestealPercentHero+25,TechPower+15 / SilenceDuration+1.25,AbilityDuration+4,DestroyOnDamage-1
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1    19  Extra Spirit
+        Living Ink T1 ch2 cd18/7 d10 Damage=48 | Flow State L[U] | Still Life U ch1 cd35 Damage=87,DPS=43 | Abstract L L
+  1600 L5   2    21  High-Velocity Rounds
+        Living Ink T1[T2] ch2 cd18/7 d10 Damage=50 | Flow State U ch1 cd23 MaxDamag=139,MinDamag=69 | Still Life U ch1 cd35 Damage=90,DPS=45 | Abstract L L
+  2400 L6   3    30  Opening Rounds
+        Living Ink T2 ch2 cd18/7 d10 Damage=56 | Flow State U ch1 cd23 MaxDamag=153,MinDamag=77 | Still Life U[T1] ch1 cd35 Damage=101,DPS=51 | Abstract L L
+  3200 L8   4    36  Extra Charge
+        Living Ink T2 ch2 cd18/7 d10 Damage=65 | Flow State U[T1] ch1 cd23 MaxDamag=164,MinDamag=82 | Still Life U[T1] ch1 cd35 Damage=110,DPS=55 | Abstract L U[L] ch1 cd165 d6 Damage=150
+  5600 L11  7    37  Surge of Power [imbue Living Ink]
+        Living Ink T2[T3] ch2 cd18/7 d10 Damage=85 | Flow State U[T1] ch1 cd23 MaxDamag=167,MinDamag=83 | Still Life U[T1] ch1 cd35 Damage=112,DPS=56 | Abstract L U ch1 cd165 d6 Damage=152
+  6400 L12  8    57  Mystic Burst
+        Living Ink T3 ch2 cd18/7 d10 Damage=136 | Flow State U[T1] ch1 cd23 MaxDamag=203,MinDamag=101 | Still Life U[T2] ch1 cd35 Damage=140,DPS=70 | Abstract L U ch1 cd165 d6 Damage=180
+  8000 L14 10    66  Mystic Shot
+        Living Ink T3 ch2 cd18/7 d10 Damage=146 | Flow State U[T1] ch1 cd23 MaxDamag=219,MinDamag=110 | Still Life T1[T3] ch1 cd35 Damage=153,DPS=76 | Abstract L U[T1] ch1 cd165 d6 Damage=193
+  9600 L16 12    68  Recharging Rush
+        Living Ink T3 ch2 cd18/7 d10 Damage=149 | Flow State U[T2] ch1 cd23 MaxDamag=223,MinDamag=112 | Still Life T2[T3] ch1 cd35 Damage=156,DPS=78 | Abstract L T1[T2] ch1 cd145 d6 Damage=196
+ 11200 L18 14    86  Enchanter's Emblem
+        Living Ink T3 ch2 cd18/7 d10 Damage=168 | Flow State U[T3] ch1 cd23 MaxDamag=254,MinDamag=127 | Still Life T2[T3] ch1 cd35 Damage=180,DPS=90 | Abstract L T2 ch1 cd145 d6 Damage=220
+ 12800 L20 16    95  Healbane
+        Living Ink T3 ch2 cd18/7 d10 Damage=178 | Flow State T1[T3] ch1 cd23 MaxDamag=271,MinDamag=135 | Still Life T2[T3] ch1 cd35 Damage=193,DPS=96 | Abstract L T2[T3] ch1 cd145 d6 Damage=233
+ 14400 L21 17   102  Spirit Lifesteal
+        Living Ink T3 ch2 cd18/7 d10 Damage=186 | Flow State T2[T3] ch1 cd17 MaxDamag=284,MinDamag=142 | Still Life T2[T3] ch1 cd35 Damage=203,DPS=101 | Abstract L T2[T3] ch1 cd145 d6 Damage=243
+ 16000 L22 18   128  Improved Spirit
+        Living Ink T3 ch2 cd18/7 d10 Damage=214 | Flow State T2[T3] ch1 cd17 MaxDamag=331,MinDamag=165 | Still Life T2[T3] ch1 cd35 Damage=239,DPS=120 | Abstract L T2[T3] ch1 cd145 d6 Damage=279
+ 22400 L26 22   154  Mercurial Magnum [imbue Living Ink]
+        Living Ink T3 ch2 cd18/7 d10 Damage=242 | Flow State T3 ch1 cd17 MaxDamag=376,MinDamag=188 | Still Life T2[T3] ch1 cd35 Damage=275,DPS=137 | Abstract L T2[T3] ch1 cd145 d6 Damage=315
+ 24800 L28 24   156  Rapid Recharge
+        Living Ink T3 ch2 cd18/7 d10 Damage=252 | Flow State T3 ch1 cd17 MaxDamag=380,MinDamag=190 | Still Life T2[T3] ch1 cd35 Damage=278,DPS=139 | Abstract L T2[T3] ch1 cd145 d6 Damage=318
+ 29600 L30 26   203  Boundless Spirit
+        Living Ink T3 ch2 cd18/7 d10 Damage=305 | Flow State T3 ch1 cd17 MaxDamag=466,MinDamag=233 | Still Life T2[T3] ch1 cd35 Damage=345,DPS=172 | Abstract L T2[T3] ch1 cd145 d6 Damage=385
+ 32000 L30 26   214  Tankbuster
+        Living Ink T3 ch2 cd18/7 d10 Damage=316 | Flow State T3 ch1 cd17 MaxDamag=485,MinDamag=242 | Still Life T2[T3] ch1 cd35 Damage=359,DPS=180 | Abstract L T2[T3] ch1 cd145 d6 Damage=399
+ 38400 L33 29   246  Spirit Burn
+        Living Ink T3 ch2 cd18/7 d10 Damage=352 | Flow State T3 ch1 cd17 MaxDamag=543,MinDamag=272 | Still Life T3 ch1 cd24 Damage=405,DPS=202 | Abstract L T2[T3] ch1 cd145 d6 Damage=445
+ 43200 L34 30   248  Infuser
+        Living Ink T3 ch2 cd18/7 d10 Damage=354 | Flow State T3 ch1 cd17 MaxDamag=546,MinDamag=273 | Still Life T3 ch1 cd24 Damage=407,DPS=203 | Abstract L T2[T3] ch1 cd145 d6 Damage=447
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @2400 Opening Rounds [enemyhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on enemy health % (EnemyLifeThreshold=50)
+    game text: Your attacks have additional Weapon Damage against enemies above {s:EnemyLifeThreshold}% health.
+    at buy: not computed (needs play data)
+- @3200 Extra Charge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Adds one to your ability max charges.
+    at buy: Living Ink 2->3 charges; Living Ink shots in 5s 1->1 (between-charge 7s)
+    unverified: F7 1-charge abilities
+- @5600 Surge of Power [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Living Ink; needs it trained and the stat the item raises
+    game text: Imbue an ability with permanent Spirit Power. When that ability is used, gain bonus Move Speed and maintain full speed while attacking.
+    at buy: Living Ink T2: cd 18s, duration 10s, charges 2; with imbue: Damage 85
+- @6400 Mystic Burst [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 80 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcByOtherObjects=true
+    at buy: best Flow State.MaxDamage 203 at spirit 57
+    margin: +153%
+    reliability: procs from Living Ink.Damage 136 (cd 18), Flow State.MaxDamage 203 (cd 23), Flow State.MinDamage 101 (cd 23), Still Life.Damage 140 (cd 35), Abstract Landscape.Damage 180 (cd 165)
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @8000 Mystic Shot [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=100)
+    game text: Your next bullet deals bonus {g:citadel_inline_attribute:'SpiritDamage'}.
+    at buy: not computed (needs play data)
+- @9600 Recharging Rush [gunwin+charged] -> OK | verdict: buy now | CALCULATED
+    rule: 200 weapon damage within 3.5s (game text: 'significant weapon damage'), refills one charge per charged ability; cd 25s; needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Dealing significant {g:citadel_inline_attribute:'WeaponDamage'} replenishes a charge for each of your charged abilities.
+    at buy: gun 63/bullet x 7 shots = 439 in 3.5s (100% hits, base + level + weapon-invest + item weapon damage); Living Ink 2->2 charges; Living Ink shots in 5s 1->1 (between-charge 7s)
+    margin: +120% at 100% hits; needs 3.2 hits
+    unverified: falloff, headshots, accuracy; whether ability weapon-damage counts; F7 1-charge abilities
+- @11200 Enchanter's Emblem [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (LifeThreshold=65)
+    game text: While you are above {s:LifeThreshold}% health, gain bonus {g:citadel_inline_attribute:'Spirit'} and Cooldown Reduction.
+    at buy: not computed (needs play data)
+    reliability: its spirit is conditional: only above 65% health
+- @22400 Mercurial Magnum [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Living Ink; needs it trained and the stat the item raises
+    game text: Your imbued ability charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, {g:citadel_inline_attribute:'BonusFireRate'}, and relo... | vdata: proc damage types ABILITY/BULLET/MELEE, CanProcByOtherObjects=true
+    at buy: Living Ink T3: cd 18s, duration 10s, charges 2
+- @24800 Rapid Recharge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: (no game text)
+    at buy: Living Ink 2->4 charges; Living Ink shots in 5s 1->2 (between-charge 7s) (cd 18->15.5s, between 7->4.90s)
+    unverified: F7 1-charge abilities
+- @32000 Tankbuster [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 165 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcFromItems=false, IgnoreResists=true, CanProcByOtherObjects=true
+    at buy: best Flow State.MaxDamage 485 at spirit 214 (454 without conditional spirit)
+    margin: +194%
+    reliability: procs from Living Ink.Damage 316 (cd 18), Flow State.MaxDamage 485 (cd 17), Flow State.MinDamage 242 (cd 17), Still Life.Damage 359 (cd 35), Abstract Landscape.Damage 399 (cd 145)
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @38400 Spirit Burn [win] -> OK | verdict: buy now | UNTESTABLE-HIGH-RISK
+    rule: 500 spirit damage to one enemy within 5s (game text: 'significant spirit damage'); per-enemy cooldown
+    game text: Dealing significant {g:citadel_inline_attribute:'SpiritDamage'} to an enemy within {s:DamageThresholdDuration}s causes an explosion dealing damage and...
+    at buy: all abilities in 5s ~2543 (Living Ink 352x1; Flow State 815x1; Still Life 931x1; Abstract Lan 445x1), without ult 2098
+    margin: +320% without ult, +409% with
+    reliability: needs the whole combo on one target (hit rate, travel time)
+    unverified: pre/post resist; item and DoT damage count (text says any spirit damage)
+- @43200 Infuser [spiritsrc] -> OK | verdict: buy now | CALCULATED
+    rule: needs spirit damage on enemies
+    game text: Gain Spirit Lifesteal and Spirit Power.
+    at buy: spirit sources: Living Ink, Flow State, Still Life, Abstract Landscape, upgrade_crackshot, upgrade_ethereal_bullets, upgrade_magic_shock
+
+no trigger condition (plain stats/actives): Extra Spirit, High-Velocity Rounds, Healbane, Spirit Lifesteal, Improved Spirit, Boundless Spirit

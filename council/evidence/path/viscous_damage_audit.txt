@@ -1,0 +1,41 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: viscous_damage
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:14Z
+BODY-SHA: e9970fec2e268728f20179016b294672815de8decfae6ea0f2b8ef016cd7d861
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Mystic Burst, Extra Spirit, Mystic Expansion, Spirit Strike, Compress Cooldown, Melee Lifesteal, Extra Health, Melee Charge
+  Mid · L-R                -> main path (sequential): Improved Spirit, Lifestrike, Grit, Spirit Snatch, Tankbuster, Superior Cooldown, Spirit Shielding, Extra Charge
+  Late · L-R               -> main path (sequential): Greater Expansion, Crushing Fists, Fortitude, Rapid Recharge, Boundless Spirit, Mystic Reverb, Spirit Burn
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Spirit Resilience, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Escalating Exposure, Witchmail, Refresher
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Escalating Exposure, sell Spirit Shielding
+    function of Spirit Shielding: spirit_resist, sustain; replacement Escalating Exposure: spirit_resist; roles lost: sustain  [VERIFIED GAME MECHANIC]
+    Spirit Shielding is a component of later items: no
+    held for 36800 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 6400/8000/35200 -> 6400/6400/41600; thresholds lost: none
+    trade ratio after the sale 0.30; selling Spirit Snatch instead: 0.35 (+15.7%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Witchmail, sell Spirit Snatch
+    function of Spirit Snatch: stats only; replacement Witchmail: cooldown, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Spirit Snatch is a component of later items: no
+    held for 41600 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 6400/8000/35200 -> 6400/14400/32000; thresholds lost: none
+    trade ratio after the sale 0.37; selling Spirit Shielding instead: 0.33 (-11.3%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Refresher, sell Lifestrike
+    function of Lifestrike: slow; replacement Refresher: bullet_resist, spirit_resist; roles lost: slow  [VERIFIED GAME MECHANIC]
+    Lifestrike is a component of later items: no
+    held for 44800 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 6400/8000/35200 -> 6400/4800/41600; thresholds lost: none
+    trade ratio after the sale 0.28; selling Spirit Shielding instead: 0.35 (+21.8%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)

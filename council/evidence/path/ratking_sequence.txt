@@ -1,0 +1,129 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: ratking
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:11:24Z
+BODY-SHA: 8fd2c5f32035b58e2c4b8e51344fcacfcd2ad01c8cd015a3f18b7a54ea92020f
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  High-Velocity Rounds: retained-or-upgraded (-> Opening Rounds)
+  Extra Health: retained-or-upgraded (-> Fortitude,Colossus)
+  Monster Rounds: retained-or-upgraded (-> Cultist Sacrifice)
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed)
+  Mystic Expansion: retained-or-upgraded (-> Ballistic Enchantment)
+  Opening Rounds: temporary (bought to be sold)
+  Cultist Sacrifice: retained
+  Close Quarters: retained-or-upgraded (-> Point Blank)
+  Fortitude: retained
+  Enduring Speed: retained
+  Fleetfoot: retained
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Return Fire: retained
+  Berserker: retained
+  Ballistic Enchantment: retained
+  Siphon Bullets: retained
+  Superior Cooldown: retained
+  Point Blank: retained
+  Colossus: retained
+  Witchmail: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Bullet Resilience: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Echo Shard: situational-luxury
+  Leech: situational-luxury
+  Refresher: situational-luxury
+  Divine Barrier: situational-luxury
+  Juggernaut: conditional branch (optional upgrade)
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): High-Velocity Rounds, Extra Health, Monster Rounds, Sprint Boots, Mystic Expansion, Opening Rounds, Cultist Sacrifice
+  Mid · L-R                  -> main path (sequential): Close Quarters, Fortitude, Enduring Speed, Fleetfoot, Compress Cooldown, Return Fire
+  Late · L-R                 -> main path (sequential): Berserker, Ballistic Enchantment, Siphon Bullets, Superior Cooldown, Point Blank, Colossus, Witchmail
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Counterspell, Plated Armor, Dispel Magic, Spirit Resilience, Bullet Resilience, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Echo Shard, Leech, Refresher, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Juggernaut, Transcendent Cooldown
+  Lost lane?                 -> lane alternative (branch): 
+
+## Opening Rounds: sold when buying Colossus (Late · L-R, main)
+  role of Opening Rounds: temporary (bought to be sold); role of Colossus: retained
+  Opening Rounds: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 4800 souls (~5.2 min), replaced at ~36.0 min -> owned ~30.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 16000/19200/3200 -> after 14400/19200/3200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 64 min | window TR | key purchase times (min)
+  as built                                    |          62912 |      0.20 | Opening Rounds 5, Colossus 36
+  keep Opening Rounds                         |          63122 |      0.20 | Opening Rounds 5, Colossus 37
+  skip Opening Rounds                         |          63119 |      0.20 | Colossus 36
+  sell Fortitude instead                      |          63065 |      0.20 | Opening Rounds 5, Colossus 35
+  keep Opening Rounds vs as built: d souls +170, d window TR +3.1% | souls: MODEL-ONLY (sign robust in 88% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 82% of cells; no measured inputs)
+  skip Opening Rounds vs as built: d souls +144, d window TR +2.5% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 91% of cells; no measured inputs)
+  sell Fortitude instead vs as built: d souls +154, d window TR -0.1% | souls: MODEL-ONLY (sign robust in 94% of cells; no measured inputs) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Colossus has an active effect (INSTANT_CAST) not priced
+  FINDINGS: a computed alternative sequence is better: keep Opening Rounds; skip Opening Rounds; sell Fortitude instead
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): keep Opening Rounds; skip Opening Rounds; sell Fortitude instead; evidence tier: MODEL-ONLY
+
+## Fleetfoot: sold when buying Echo Shard (I'm rich as fuck, luxury)
+  role of Fleetfoot: retained; role of Echo Shard: situational-luxury
+  Fleetfoot: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 12800 souls (~12.8 min), replaced at ~48.8 min -> owned ~36.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 14400/25600/9600 -> after 12800/25600/9600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          69154 |      0.17 | Fleetfoot 13, Echo Shard 49
+  keep Fleetfoot (slot cap ignored)           |          69222 |      0.17 | Fleetfoot 13, Echo Shard 50
+  skip Fleetfoot                              |          68943 |      0.16 | Echo Shard 48
+  sell Fortitude instead                      |          69182 |      0.16 | Fleetfoot 13, Echo Shard 48
+  keep Fleetfoot (slot cap ignored) vs as built: d souls +51, d window TR +1.5% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); POKE (0.06: +, 0.2: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Fleetfoot vs as built: d souls -152, d window TR -2.7% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 94% of cells; no measured inputs)
+  sell Fortitude instead vs as built: d souls +18, d window TR -0.4% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Fleetfoot has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Echo Shard has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Echo Shard (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Fleetfoot (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+
+## Cultist Sacrifice: sold when buying Leech (I'm rich as fuck, luxury)
+  role of Cultist Sacrifice: retained; role of Leech: situational-luxury
+  Cultist Sacrifice: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 7200 souls (~7.5 min), replaced at ~47.8 min -> owned ~40.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 14400/32000/3200 -> after 11200/32000/3200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          68549 |      0.19 | Cultist Sacrifice 8, Leech 48
+  keep Cultist Sacrifice (slot cap ignored)   |          69400 |      0.19 | Cultist Sacrifice 8, Leech 50
+  skip Cultist Sacrifice                      |          67304 |      0.18 | Leech 48
+  sell Fortitude instead                      |          69366 |      0.19 | Cultist Sacrifice 8, Leech 48
+  keep Cultist Sacrifice (slot cap ignored) vs as built: d souls +908, d window TR +1.4% | souls: MODEL-ONLY (sign robust in 82% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Cultist Sacrifice vs as built: d souls -1246, d window TR -3.3% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 94% of cells; no measured inputs)
+  sell Fortitude instead vs as built: d souls +900, d window TR -0.1% | souls: MODEL-ONLY (sign robust in 82% of cells; no measured inputs) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Cultist Sacrifice has an active effect (PRESS) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  FINDINGS: a computed alternative sequence is better: keep Cultist Sacrifice (slot cap ignored); sell Fortitude instead
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): keep Cultist Sacrifice (slot cap ignored); sell Fortitude instead; evidence tier: MODEL-ONLY; flipping assumptions: keep Cultist Sacrifice (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+
+## Return Fire: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Return Fire: retained; role of Refresher: situational-luxury
+  Return Fire: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 16000 souls (~15.5 min), replaced at ~48.8 min -> owned ~33.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 14400/25600/9600 -> after 14400/24000/9600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          69243 |      0.17 | Return Fire 16, Refresher 49
+  keep Return Fire (slot cap ignored)         |          69282 |      0.17 | Return Fire 16, Refresher 50
+  skip Return Fire                            |          69189 |      0.16 | Refresher 48
+  sell Fortitude instead                      |          69240 |      0.17 | Return Fire 16, Refresher 48
+  keep Return Fire (slot cap ignored) vs as built: d souls +15, d window TR +2.1% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+  skip Return Fire vs as built: d souls +1, d window TR -2.2% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY (sign robust in 91% of cells; no measured inputs)
+  sell Fortitude instead vs as built: d souls -1, d window TR -0.2% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Return Fire has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Return Fire, Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Return Fire (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))

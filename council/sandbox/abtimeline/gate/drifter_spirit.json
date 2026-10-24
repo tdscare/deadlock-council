@@ -1,0 +1,356 @@
+{
+ "id": "drifter_spirit",
+ "hero": "Drifter",
+ "order": "1123124122443334",
+ "status": "WARN",
+ "errors": [],
+ "warnings": [
+  {
+   "item": "Spirit Burn",
+   "souls": 43200,
+   "kind": "win",
+   "flag": "KIT-ONLY-BELOW",
+   "gap": null,
+   "verdict": "check by hand: abilities alone < threshold, item/proc spirit damage not counted",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "model_B": "KIT-ONLY-BELOW",
+   "if_1charge_counts": "KIT-ONLY-BELOW",
+   "rule": "500 spirit damage to one enemy within 5s (game text: 'significant spirit damage'); per-enemy cooldown",
+   "value": "all abilities in 5s ~247 (Rend 244x1; Bloodscent 3x1), without ult 247",
+   "enabler": "",
+   "code": "KIT-ONLY-BELOW"
+  },
+  {
+   "code": "SPIKE-OVERSHOOT",
+   "colour": "gun",
+   "souls": 32000,
+   "item": "Crushing Fists",
+   "value": "gun lands at 8000 (4.8k + 3200)"
+  },
+  {
+   "code": "SPIKE-OVERSHOOT",
+   "colour": "spirit",
+   "souls": 8000,
+   "item": "Spirit Snatch",
+   "value": "spirit lands at 5600 (4.8k + 800)"
+  }
+ ],
+ "spikes": {
+  "gun": {
+   "4800": 32000,
+   "6400": 32000,
+   "overshoot4800": 3200,
+   "at_item": "Crushing Fists"
+  },
+  "vitality": {
+   "4800": 12000,
+   "6400": 15200,
+   "overshoot4800": 0,
+   "at_item": "Lifestrike"
+  },
+  "spirit": {
+   "4800": 8000,
+   "6400": 16800,
+   "overshoot4800": 800,
+   "at_item": "Spirit Snatch"
+  }
+ },
+ "timeline_A": [
+  {
+   "souls": 0,
+   "level": 1,
+   "ability": "Rend",
+   "tier": "U"
+  },
+  {
+   "souls": 200,
+   "level": 2,
+   "ability": "Rend",
+   "tier": "T1"
+  },
+  {
+   "souls": 500,
+   "level": 3,
+   "ability": "Stalker's Mark",
+   "tier": "U"
+  },
+  {
+   "souls": 1400,
+   "level": 5,
+   "ability": "Bloodscent",
+   "tier": "U"
+  },
+  {
+   "souls": 2000,
+   "level": 6,
+   "ability": "Rend",
+   "tier": "T2"
+  },
+  {
+   "souls": 2600,
+   "level": 7,
+   "ability": "Stalker's Mark",
+   "tier": "T1"
+  },
+  {
+   "souls": 3200,
+   "level": 8,
+   "ability": "Eternal Night",
+   "tier": "U"
+  },
+  {
+   "souls": 6800,
+   "level": 13,
+   "ability": "Rend",
+   "tier": "T3"
+  },
+  {
+   "souls": 8400,
+   "level": 15,
+   "ability": "Stalker's Mark",
+   "tier": "T2"
+  },
+  {
+   "souls": 12800,
+   "level": 20,
+   "ability": "Stalker's Mark",
+   "tier": "T3"
+  },
+  {
+   "souls": 13800,
+   "level": 21,
+   "ability": "Eternal Night",
+   "tier": "T1"
+  },
+  {
+   "souls": 16100,
+   "level": 23,
+   "ability": "Eternal Night",
+   "tier": "T2"
+  },
+  {
+   "souls": 17400,
+   "level": 24,
+   "ability": "Bloodscent",
+   "tier": "T1"
+  },
+  {
+   "souls": 20600,
+   "level": 26,
+   "ability": "Bloodscent",
+   "tier": "T2"
+  },
+  {
+   "souls": 32100,
+   "level": 31,
+   "ability": "Bloodscent",
+   "tier": "T3"
+  },
+  {
+   "souls": 48600,
+   "level": 36,
+   "ability": "Eternal Night",
+   "tier": "T3"
+  }
+ ],
+ "rows": [
+  {
+   "item": "Melee Lifesteal",
+   "souls": 800,
+   "kind": "melee",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Stalker",
+   "souls": 2400,
+   "kind": "proc",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Spirit Strike",
+   "souls": 3200,
+   "kind": "melee",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Mystic Burst",
+   "souls": 4000,
+   "kind": "hit",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "+35%",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Spirit Snatch",
+   "souls": 8000,
+   "kind": "melee",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Lifestrike",
+   "souls": 12000,
+   "kind": "melee",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Trophy Collector",
+   "souls": 12800,
+   "kind": "stack",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Fortitude",
+   "souls": 15200,
+   "kind": "selfhp",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Mystic Vulnerability",
+   "souls": 16800,
+   "kind": "spiritsrc",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Melee Charge",
+   "souls": 18400,
+   "kind": "melee",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Tankbuster",
+   "souls": 20800,
+   "kind": "hit",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "+16%",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Duration Extender",
+   "souls": 25600,
+   "kind": "imbue",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Superior Duration",
+   "souls": 27200,
+   "kind": "cast",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Crushing Fists",
+   "souls": 32000,
+   "kind": "stack+melee",
+   "flag": null,
+   "verdict": "keep (situational; not a timeline check)",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Escalating Exposure",
+   "souls": 36800,
+   "kind": "spiritsrc+stack",
+   "flag": null,
+   "verdict": "buy now",
+   "grade": "CALCULATED",
+   "margin": "",
+   "gap": null,
+   "B": null,
+   "F7": null
+  },
+  {
+   "item": "Spirit Burn",
+   "souls": 43200,
+   "kind": "win",
+   "flag": "KIT-ONLY-BELOW",
+   "verdict": "check by hand: abilities alone < threshold, item/proc spirit damage not counted",
+   "grade": "UNTESTABLE-HIGH-RISK",
+   "margin": "-51% without ult, -51% with",
+   "gap": null,
+   "B": "KIT-ONLY-BELOW",
+   "F7": "KIT-ONLY-BELOW"
+  }
+ ],
+ "assumptions": {
+  "game_build": "6801 (gt repo); installed client 6819 unverified",
+  "point_model": "A (unlock currency separate, 1/2/5 AP)",
+  "charge_rule": "2+ charges (Kieran); F7 alternative reported",
+  "walk": "core boxes L-R, components consumed, sells dropped"
+ }
+}

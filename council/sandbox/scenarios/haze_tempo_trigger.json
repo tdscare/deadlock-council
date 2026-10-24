@@ -1,0 +1,137 @@
+{
+ "id": "haze_tempo_trigger",
+ "title": "Haze: what triggers Healing Tempo's fire-rate buff on this build",
+ "hero": "Haze",
+ "playstyle": "Victor Cosplay Haze (tanky lifesteal gun)",
+ "builds": [
+  "haze"
+ ],
+ "question": "Does Healing Tempo's buff (+35% fire rate, 7 s) appear from Siphon Bullets' steal, Smoke Bomb T3 lifesteal, Vampiric Burst's active lifesteal, or plain Bullet Lifesteal? Item text: 'Does not apply on innate Regen or passive Bullet/Spirit Lifesteals'.",
+ "hypothesis": "Prediction from item text: plain Bullet Lifesteal does NOT trigger it; Siphon steal and Smoke T3 are unknown. If no source in this build triggers it, Healing Tempo is the worst 6.4k in the build (model: +236 HP over keeping Healing Booster, 0 damage); if Siphon triggers it, it is the best last buy (+1491 damage in a 20 s fight).",
+ "arms": [
+  {
+   "name": "tempo_siphon",
+   "items": [
+    "upgrade_healbuff",
+    "upgrade_siphon_bullets"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "give only",
+   "notes": "fire 5 s, mods every 1 s"
+  },
+  {
+   "name": "tempo_smoke",
+   "items": [
+    "upgrade_healbuff"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "give only",
+   "notes": "cast 2 0.3 then fire 5"
+  },
+  {
+   "name": "tempo_vb",
+   "items": [
+    "upgrade_surging_power",
+    "upgrade_healbuff"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "give only",
+   "notes": "cast i1 0.3 (VB is first active) then fire 5"
+  },
+  {
+   "name": "tempo_bl",
+   "items": [
+    "upgrade_healbuff",
+    "upgrade_vampire"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "give only",
+   "notes": "fire 5"
+  },
+  {
+   "name": "control_no_tempo",
+   "items": [
+    "upgrade_siphon_bullets"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "give only",
+   "notes": "shot-count baseline"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "unlock 7 (all tiers)",
+  "souls": 50000,
+  "position": "mid lane, enemy 350u",
+  "enemies": [
+   {
+    "hero": "Haze",
+    "count": 1,
+    "items": "none",
+    "behaviour": "bot, attacks disabled",
+    "hp": "egod floor 0.9"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 50 (so heals happen)",
+  "resets": [
+   "hardreset",
+   "basemods",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "hardreset between blocks (fresh pawns, factory cooldowns/charges, unlock 7 = all 3 tiers on every ability in BOTH arms)",
+  "Same position (fetch 350, aimoff 5.5 3), same enemy bot (Haze), egod default floor",
+  "Arms interleaved A,B,A,B (counterbalanced A,B,B,A for the second half)",
+  "healreset + mark none around every reset",
+  "cast reload 2.5 before each fire block (no auto-reload op)",
+  "accuracy 1 0 (body hits only) so every arm hits equally"
+ ],
+ "procedure": [
+  "setup Haze Haze; unlock 7; basemods",
+  "per arm: give items; lowhp 50; cast reload 2.5; arm-specific cast; mark <arm>; fire 5 with mods at t=1,2,3,4,5; acclog; lowhp 0",
+  "hardreset; next arm",
+  "repeat interleaved 5x"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "tempo_modifier_present",
+   "unit": "yes/no",
+   "how": "modifier name from upgrade_healbuff buff in `mods` log / heals csv modifier list after first heal",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "shots_fired_5s",
+   "unit": "count",
+   "how": "GunFired count from acclog vs control_no_tempo",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "heal_diff_observed",
+   "unit": "hp",
+   "how": "healsum healDiffObserved",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "tempo_modifier_present",
+  "min_effect_pct": 0,
+  "min_trials": 5,
+  "rule": "If present in >=4/5 trials for an arm, that source triggers Healing Tempo (confirm with shots_fired >= +25% vs control). SUPPORTS keeping Healing Tempo if tempo_siphon or tempo_smoke or tempo_vb triggers; REFUTES (replace with Leech or Superior Duration, see worked example) if none triggers."
+ },
+ "limitations": [
+  "Checkpoint level/ability-tier states cannot be reproduced (unlock sets all tiers; GAPS #2): results are late-game relative comparisons only."
+ ]
+}

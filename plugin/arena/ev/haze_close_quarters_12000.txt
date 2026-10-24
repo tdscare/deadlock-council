@@ -1,0 +1,57 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: haze
+HERO: Haze
+ITEM: Close Quarters
+CHECKPOINT: add-on-top at 12000 souls (state souls 12800; item cost 800)
+VERSION: interaction-v1
+ARGS: --interactions haze Close Quarters --at 12000
+GENERATED: 2026-10-24T13:51:49Z
+BODY-SHA: ae822303e926e412f423b063a87b4bc5ea216084dae6c48f676d74537363c49e
+INPUT-SHA: 238a1a6c4e70fe4c0fedb05142568ac154d62de16de96e7e36e6cdab9bc854a2
+ALTERNATIVES (equal souls 800, unconditional, ranked): High-Velocity Rounds, Headshot Booster, Restorative Shot
+VERDICT: Close Quarters delivers the most damage of the equal-soul options in every window (sustained, burst, ult) (no permanent equal-soul fire-rate item exists at this checkpoint)
+UNKNOWN_CELLS: 2
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.8, long_share=0.1, W_sus=10.0, W_burst=3.0; reload 2.5 s (ASSUMED 2.5 s: reload duration is animation-defined, not in vdata)
+STATE: owned ['Active Reload', 'Swift Striker', 'Titanic Magazine', 'Fortitude', 'Close Quarters'] | tiers Sleep Dagger=T1(spirit) Smoke Bomb=T3(utility) Fixation=T2(stacks) Bullet Dance=U(gun-mode) | weapon invest bonus 46% | spirit 10
+
+## INTERACTION MATRIX (item effect x kit component)
+- weapon damage % within range (CloseRangeBonusWeaponPower=20)
+    normal shooting                              WORKS (conditional)        [CALCULATED+ASSUMED] only within 15m; close-range share 0.8 ASSUMED
+    1=Sleep Dagger T1 [spirit]                   DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Smoke Bomb T3 [utility]                    WORKS (sustain)            [CALCULATED] tier adds BulletLifesteal after use: more bullet damage -> more healing
+    3=Fixation T2 [stacks]                       UNKNOWN                    [UNKNOWN] per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage)
+    4=Bullet Dance U (ULT) [gun-mode]            WORKS (partly)             [CALCULATED+ASSUMED] bullets within 15m of a 16m radius: share (15/r)^2 ASSUMED uniform targets
+    lifesteal Active Reload                      WORKS                      [CALCULATED] heal = bullet damage x lifesteal %
+- defence (not damage) (MeleeResistPercent=20)
+    normal shooting                              n/a                        [CALCULATED] defensive stat; valued by --strategy (survival), not damage
+    1=Sleep Dagger T1 [spirit]                   n/a                        [CALCULATED] defensive stat
+    2=Smoke Bomb T3 [utility]                    n/a                        [CALCULATED] defensive stat
+    3=Fixation T2 [stacks]                       n/a                        [CALCULATED] defensive stat
+    4=Bullet Dance U (ULT) [gun-mode]            n/a                        [CALCULATED] defensive stat
+- reload time of Haze's gun (ASSUMED 2.5 s)
+    normal shooting                              UNKNOWN                    [UNKNOWN] reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 8 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 8 UNKNOWN readings]
+(build state, nothing added) |      1553              |       534              |      2054              | 212
+Close Quarters               |         1686 (+5..+9%) |          574 (+6..+7%) |        2280 (+9..+11%) | 233
+High-Velocity Rounds         |         1620 (+3..+4%) |          554 (+3..+4%) |         2157 (+4..+5%) | 223
+Headshot Booster             |         1583 (+2..+2%) |          546 (+2..+3%) |         2054 (+0..+0%) | 217
+Restorative Shot             |         1603 (+2..+3%) |          549 (+2..+3%) |         2131 (+3..+4%) | 220
+  candidate detail (reading 1): sustained bullets 101, gun 778, stacks 822, procs 0, spirit 86, time to max stacks 11.1s | ult: 61 bullets in 3.8s, close-range share 0.88
+  sustained: rank (reading 1) Close Quarters > High-Velocity Rounds > Restorative Shot > Headshot Booster
+  burst: rank (reading 1) Close Quarters > High-Velocity Rounds > Restorative Shot > Headshot Booster
+  ult: rank (reading 1) Close Quarters > High-Velocity Rounds > Restorative Shot > Headshot Booster
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (165s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_haze_Close_Quarters_3_Fixation_T2_weapon_damage_within_range.txt
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_haze_reload_probe.txt
+
+## NOT DETERMINED FROM DATA
+  - weapon damage % within range (CloseRangeBonusWeaponPower=20): 3=Fixation T2 [stacks]: per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage)
+  - reload time of Haze's gun (ASSUMED 2.5 s): normal shooting: reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

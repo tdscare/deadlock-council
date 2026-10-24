@@ -1,0 +1,436 @@
+meta kind ISOLATED ITEM
+meta hero Haze
+meta checkpoint Level 18 stat floor, 0 souls spent (Close Quarters only)
+meta build none (single-item validation)
+meta items upgrade_close_range
+meta question Known-answer check: does Close Quarters add its documented damage inside its range and nothing outside, for body and head shots?
+meta purpose validate the harness against a documented item effect before trusting any item comparison
+meta mechanics Close Quarters range-gated gun damage bonus; Haze gun only, no abilities
+meta expectedstate items=none before each block; items=upgrade_close_range in CQ blocks; stacks=0
+meta excluded all other items and all abilities - the result says nothing about a full build because Haze's real build interacts with other bonuses
+meta accmode body-only and head-only blocks at fixed range
+meta accwhy removes miss/headshot noise so the known answer is exact
+meta abilities gun only
+meta runs 1/1
+meta assumed documented Close Quarters values from game data
+meta player_title Haze item: Close Quarters
+meta player_what Extra gun damage at short range
+meta player_why Checks game matches our numbers
+meta player_short Item: Close Quarters
+meta player_expect Expected: no bonus at long range
+setup Haze Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark KA|body|r0
+pos
+expect hero=Haze level=18 items=0 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -5
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark KA|head|r0
+pos
+expect hero=Haze level=18 items=0 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 20
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark KA|body|res20
+pos
+expect hero=Haze level=18 items=0 gold=0 dist=150 enemies=1 resgun=20 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 20
+eresist spirit 0
+aimpt -33 -5
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark KA|head|res20
+pos
+expect hero=Haze level=18 items=0 gold=0 dist=150 enemies=1 resgun=20 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_close_range
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 300
+wait 0.8
+healreset
+mark KA|CQ|body|300
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=300 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_close_range
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 500
+wait 0.8
+healreset
+mark KA|CQ|body|500
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=500 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_close_range
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 600
+wait 0.8
+healreset
+mark KA|CQ|body|600
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=600 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_close_range
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 650
+wait 0.8
+healreset
+mark KA|CQ|body|650
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=650 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_close_range
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 700
+wait 0.8
+healreset
+mark KA|CQ|body|700
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=700 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_close_range
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 750
+wait 0.8
+healreset
+mark KA|CQ|body|750
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=750 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_close_range
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 850
+wait 0.8
+healreset
+mark KA|CQ|body|850
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=850 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_close_range
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 1100
+wait 0.8
+healreset
+mark KA|CQ|body|1100
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=1100 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 300
+wait 0.8
+healreset
+mark KA|none|body|300
+pos
+expect hero=Haze level=18 items=0 gold=0 dist=300 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 900
+wait 0.8
+healreset
+mark KA|none|body|900
+pos
+expect hero=Haze level=18 items=0 gold=0 dist=900 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.6
+wait 0.3
+mark none
+acclog
+wait 0.5
+end

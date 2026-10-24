@@ -1,0 +1,20 @@
+{"_note": "Researcher-authored claims for dynamo; checks re-run against the game files at validation time.",
+ "items": {
+  "Healing Tempo": [{"phrase": "Rejuvenating Aurora's heal counts as applying healing, so everyone it heals gets 35% fire rate and +1.25m/s move speed for 7s (innate regen and lifesteal do not trigger it).",
+     "score": 62, "numbers": [35, 1.25, 7], "sources": ["abilities.vdata:upgrade_healbuff", "citadel_mods_english.txt upgrade_healbuff_desc", "abilities.vdata:citadel_ability_nikuman (HealingPerSecond, CAN_HEAL_PLAYERS)"],
+     "requires": {"tier": {"3": 0}, "owned": ["Healing Booster"]},
+     "checks": [{"kind": "item_text", "item": "Healing Tempo", "contains": "to yourself or an ally"}, {"kind": "item_stat", "item": "Healing Tempo", "key": "BonusFireRate", "op": "==", "value": 35},
+                {"kind": "item_stat", "item": "Healing Tempo", "key": "BuffDuration", "op": "==", "value": 7}, {"kind": "item_stat", "item": "Healing Tempo", "key": "BonusMoveSpeed", "op": "==", "value": 1.25},
+                {"kind": "ability_flag", "slot": 3, "behavior": "CAN_HEAL_PLAYERS"}, {"kind": "ability_prop", "slot": 3, "tier": 0, "prop": "HealingPerSecond", "op": ">", "value": 0}],
+     "note": "ASSUMPTION flagged for review: aura healing (HealingPerSecond) is treated as 'applying healing'; item text only excludes innate regen and passive lifesteal. Not engine-tested."}],
+  "Warp Stone": [{"phrase": "Singularity is centred on you (no cast range, 7m pull), so the 11m teleport is how you land inside the group before channelling; the 30% bullet resist lasts 6s, longer than the whole channel.",
+     "score": 62, "numbers": [11, 7, 30, 6], "sources": ["abilities.vdata:upgrade_warp_stone", "abilities.vdata:citadel_ability_self_vacuum"],
+     "requires": {"tier": {"4": 0}},
+     "checks": [{"kind": "item_stat", "item": "Warp Stone", "key": "AbilityCastRange", "op": "==", "value": 11}, {"kind": "item_stat", "item": "Warp Stone", "key": "BulletResist", "op": "==", "value": 30},
+                {"kind": "item_stat", "item": "Warp Stone", "key": "CasterBuffDuration", "op": "==", "value": 6}, {"kind": "ability_flag", "slot": 4, "target_loc": "SELF"},
+                {"kind": "ability_prop", "slot": 4, "tier": 0, "prop": "VacuumRadius", "op": "==", "value": 7}, {"kind": "ability_prop", "slot": 4, "tier": 0, "prop": "AbilityCastRange", "op": "==", "value": 0},
+                {"kind": "ability_prop", "slot": 4, "tier": 3, "prop": "AbilityChannelTime", "op": "<", "value": 6}]}],
+  "Enchanter's Emblem": [{"phrase": "Its +15 spirit and 5% cooldown reduction only count above 65% health, which fits a healer who is not being focused but is lost once you are dived.",
+     "score": 40, "numbers": [15, 5, 65], "sources": ["abilities.vdata:upgrade_magic_shield"], "note": "The 'fits a healer' clause is interpretation; kept below the publish threshold on purpose to show the gate working.",
+     "checks": [{"kind": "item_stat", "item": "Enchanter's Emblem", "key": "LifeThreshold", "op": "==", "value": 65}, {"kind": "item_stat", "item": "Enchanter's Emblem", "key": "TechPower", "op": "==", "value": 15}]}]
+ }}

@@ -1,0 +1,150 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: mcginnis
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:12:38Z
+BODY-SHA: 04de7af0cef027f020fdbbe4666ef28fe20b22d53c30009b1bf3723a0a53fc5e
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Monster Rounds: retained
+  Extended Magazine: retained-or-upgraded (-> Escalating Resilience)
+  Intensifying Magazine: retained
+  Rapid Rounds: retained-or-upgraded (-> Swift Striker)
+  Swift Striker: retained
+  Battle Vest: retained
+  Quicksilver Reload: retained-or-upgraded (-> Mercurial Magnum)
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed)
+  Enduring Speed: retained
+  Bullet Lifesteal: retained-or-upgraded (-> Vampiric Burst)
+  Escalating Resilience: retained
+  Fleetfoot: retained
+  Spirit Lifesteal: retained-or-upgraded (-> Spiritual Overflow)
+  Mercurial Magnum: retained
+  Berserker: retained
+  Vampiric Burst: retained
+  Spiritual Overflow: retained
+  Spirit Resilience: retained
+  Extra Regen: conditional branch (lane alternative)
+  Warp Stone: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Spellbreaker: conditional branch (counter menu)
+  Ethereal Shift: conditional branch (counter menu)
+  Ricochet: situational-luxury
+  Lucky Shot: situational-luxury
+  Crippling Headshot: situational-luxury
+  Silencer: situational-luxury
+  Inhibitor: situational-luxury
+  Divine Barrier: situational-luxury
+  Juggernaut: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Monster Rounds, Extended Magazine, Intensifying Magazine, Rapid Rounds, Swift Striker, Battle Vest, Quicksilver Reload, Sprint Boots
+  Mid · L-R                  -> main path (sequential): Enduring Speed, Bullet Lifesteal, Escalating Resilience, Fleetfoot, Spirit Lifesteal, Mercurial Magnum
+  Late · L-R                 -> main path (sequential): Berserker, Vampiric Burst, Spiritual Overflow, Spirit Resilience
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Warp Stone, Metal Skin, Plated Armor, Dispel Magic, Counterspell, Unstoppable, Spellbreaker, Ethereal Shift
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Ricochet, Lucky Shot, Crippling Headshot, Silencer, Inhibitor, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Juggernaut
+
+## Monster Rounds: sold when buying Ricochet (I'm rich as fuck, luxury)
+  role of Monster Rounds: retained; role of Ricochet: situational-luxury
+  Monster Rounds: price 800, resale 400, net cost of owning it 400 souls (0.4 min of reference income); first bought at 800 souls (~1.0 min), replaced at ~43.2 min -> owned ~42.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 24800/12800/6400 -> after 24000/12800/6400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 64 min | window TR | key purchase times (min)
+  as built                                    |          60145 |      0.37 | Monster Rounds 1, Ricochet 43
+  keep Monster Rounds (slot cap ignored)      |          60167 |      0.37 | Monster Rounds 1, Ricochet 44
+  skip Monster Rounds                         |          59481 |      0.36 | Ricochet 44
+  sell Intensifying Magazine instead          |          60253 |      0.37 | Monster Rounds 1, Ricochet 43
+  keep Monster Rounds (slot cap ignored) vs as built: d souls +39, d window TR -0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Monster Rounds vs as built: d souls -569, d window TR -0.5% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: INSUFFICIENT (effect within model noise)
+  sell Intensifying Magazine instead vs as built: d souls +97, d window TR +0.1% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: sell Intensifying Magazine instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+
+## Battle Vest: sold when buying Lucky Shot (I'm rich as fuck, luxury)
+  role of Battle Vest: retained; role of Lucky Shot: situational-luxury
+  Battle Vest: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 6400 souls (~7.0 min), replaced at ~42.8 min -> owned ~35.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 24800/12800/6400 -> after 24800/11200/6400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 64 min | window TR | key purchase times (min)
+  as built                                    |          58579 |      0.32 | Battle Vest 7, Lucky Shot 43
+  keep Battle Vest (slot cap ignored)         |          58960 |      0.34 | Battle Vest 7, Lucky Shot 44
+  skip Battle Vest                            |          56956 |      0.29 | Lucky Shot 44
+  sell Monster Rounds instead                 |          58845 |      0.34 | Battle Vest 7, Lucky Shot 43
+  keep Battle Vest (slot cap ignored) vs as built: d souls +199, d window TR +6.1% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Battle Vest vs as built: d souls -749, d window TR -9.4% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Monster Rounds instead vs as built: d souls +134, d window TR +6.1% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  ammo mechanics (clip 66, reload 3.29 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Battle Vest): 8 s trade 54 bullets (0% not firing), 20 s 135 bullets (0% not firing, 1.0 magazines), damage 20 s 3598, refill uses 2.0
+    keep Battle Vest: 8 s trade 57 bullets (0% not firing), 20 s 142 bullets (0% not firing, 1.0 magazines), damage 20 s 4068, refill uses 2.0
+    without Lucky Shot (keep Battle Vest): 8 s trade 57 bullets (0% not firing), 20 s 142 bullets (0% not firing, 1.2 magazines), damage 20 s 3838, refill uses 2.0
+    sell Monster Rounds instead: 8 s trade 57 bullets (0% not firing), 20 s 142 bullets (0% not firing, 1.0 magazines), damage 20 s 4068, refill uses 2.0
+    sustained 20 s gun damage: selling Battle Vest costs 12% vs keeping it (both with Lucky Shot); Lucky Shot adds +6% on top of Battle Vest; selling Monster Rounds instead: +0% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: the sale of Battle Vest lowers modelled sustained gun damage by 12% (ammo mechanics)
+  VERDICT: REVIEW: selling Battle Vest costs sustained gun output; Lucky Shot does not replace its ammo role (quantified above). Alternatives for the slot: sell Monster Rounds (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED); flipping assumptions: keep Battle Vest (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Monster Rounds instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+
+## Fleetfoot: sold when buying Crippling Headshot (I'm rich as fuck, luxury)
+  role of Fleetfoot: retained; role of Crippling Headshot: situational-luxury
+  Fleetfoot: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 15200 souls (~14.8 min), replaced at ~42.8 min -> owned ~28.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 24800/12800/6400 -> after 23200/12800/6400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 64 min | window TR | key purchase times (min)
+  as built                                    |          58859 |      0.31 | Fleetfoot 15, Crippling Headshot 43
+  keep Fleetfoot (slot cap ignored)           |          59014 |      0.32 | Fleetfoot 15, Crippling Headshot 44
+  skip Fleetfoot                              |          58441 |      0.30 | Crippling Headshot 42
+  sell Monster Rounds instead                 |          58900 |      0.32 | Fleetfoot 15, Crippling Headshot 43
+  keep Fleetfoot (slot cap ignored) vs as built: d souls +65, d window TR +3.0% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Fleetfoot vs as built: d souls -232, d window TR -3.0% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Monster Rounds instead vs as built: d souls +0, d window TR +3.0% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  model limit: Fleetfoot has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Fleetfoot (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Monster Rounds instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+
+## Swift Striker: sold when buying Silencer (I'm rich as fuck, luxury)
+  role of Swift Striker: retained; role of Silencer: situational-luxury
+  Swift Striker: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 4800 souls (~5.2 min), replaced at ~42.8 min -> owned ~37.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 24800/12800/6400 -> after 23200/12800/6400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 64 min | window TR | key purchase times (min)
+  as built                                    |          58646 |      0.34 | Swift Striker 5, Silencer 43
+  keep Swift Striker (slot cap ignored)       |          59016 |      0.35 | Swift Striker 5, Silencer 44
+  skip Swift Striker                          |          58089 |      0.33 | Silencer 44
+  sell Monster Rounds instead                 |          58901 |      0.35 | Swift Striker 5, Silencer 43
+  keep Swift Striker (slot cap ignored) vs as built: d souls +249, d window TR +3.6% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Swift Striker vs as built: d souls -291, d window TR -2.1% | souls: MODEL-ONLY (sign robust in 91% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Monster Rounds instead vs as built: d souls +127, d window TR +3.6% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  model limit: no modelled stat for Silencer (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Swift Striker (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | skip Swift Striker: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Monster Rounds instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+
+## Intensifying Magazine: sold when buying Inhibitor (I'm rich as fuck, luxury)
+  role of Intensifying Magazine: retained; role of Inhibitor: situational-luxury
+  Intensifying Magazine: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 3200 souls (~3.5 min), replaced at ~42.8 min -> owned ~39.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 18400/19200/6400 -> after 16800/19200/6400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 64 min | window TR | key purchase times (min)
+  as built                                    |          59042 |      0.35 | Intensifying Magazine 4, Inhibitor 43
+  keep Intensifying Magazine (slot cap ignored)|          59027 |      0.35 | Intensifying Magazine 4, Inhibitor 44
+  skip Intensifying Magazine                  |          59649 |      0.37 | Inhibitor 41
+  sell Monster Rounds instead                 |          58910 |      0.35 | Intensifying Magazine 4, Inhibitor 43
+  keep Intensifying Magazine (slot cap ignored) vs as built: d souls -6, d window TR -0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Intensifying Magazine vs as built: d souls +152, d window TR +3.2% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Monster Rounds instead vs as built: d souls -130, d window TR -0.0% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  ammo mechanics (clip 66, reload 3.29 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Intensifying Magazine): 8 s trade 57 bullets (0% not firing), 20 s 142 bullets (0% not firing, 1.4 magazines), damage 20 s 4003, refill uses 2.0
+    keep Intensifying Magazine: 8 s trade 57 bullets (0% not firing), 20 s 142 bullets (0% not firing, 1.2 magazines), damage 20 s 4003, refill uses 2.0
+    without Inhibitor (keep Intensifying Magazine): 8 s trade 57 bullets (0% not firing), 20 s 142 bullets (0% not firing, 1.2 magazines), damage 20 s 3838, refill uses 2.0
+    sell Monster Rounds instead: 8 s trade 57 bullets (0% not firing), 20 s 142 bullets (0% not firing, 1.2 magazines), damage 20 s 4003, refill uses 2.0
+    sustained 20 s gun damage: selling Intensifying Magazine costs 0% vs keeping it (both with Inhibitor); Inhibitor adds +4% on top of Intensifying Magazine; selling Monster Rounds instead: +0% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: a computed alternative sequence is better: skip Intensifying Magazine
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): skip Intensifying Magazine; evidence tier: MODEL-ONLY; flipping assumptions: skip Intensifying Magazine: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | sell Monster Rounds instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

@@ -1,0 +1,54 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: geist
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:14Z
+BODY-SHA: 8cd1205451c7ba8e65314cf5ecb2d8874e1caa968b4bad35eadc1ed3c1287656
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Health
+  Early · L-R              -> main path (sequential): Monster Rounds, Extra Regen, Mystic Regeneration, Extra Stamina, Kinetic Dash, Cultist Sacrifice
+  Mid · L-R                -> main path (sequential): Radiant Regeneration, Spirit Resilience, Berserker, Bullet Resist Shredder, Bullet Lifesteal, Spirit Lifesteal
+  Mid · cont.              -> main path (sequential): Healing Booster, Spellslinger, Blood Tribute
+  Late · L-R               -> main path (sequential): Leech, Extra Charge, Rapid Recharge, Refresher
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Warp Stone, Dispel Magic, Counterspell, Metal Skin, Plated Armor, Unstoppable, Spellbreaker, Cheat Death
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Inhibitor, Silencer, Crippling Headshot, Ricochet, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Healing Tempo
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Inhibitor, sell Cultist Sacrifice
+    function of Cultist Sacrifice: charges, range; replacement Inhibitor: bullet_proc; roles lost: charges, range  [VERIFIED GAME MECHANIC]
+    Cultist Sacrifice is a component of later items: no
+    held for 43200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 17600/11200/14400 -> 14400/17600/14400; thresholds lost: none
+    trade ratio after the sale 1.28; selling Kinetic Dash instead: 1.37 (+7.1%)  [MODELLED ESTIMATE]
+    model limit: Cultist Sacrifice has an active effect (PRESS) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Silencer, sell Blood Tribute
+    function of Blood Tribute: cleanse, fire_rate, move_speed, spirit_resist; replacement Silencer: bullet_proc, silence, spirit_resist; roles lost: cleanse, fire_rate, move_speed  [VERIFIED GAME MECHANIC]
+    Blood Tribute is a component of later items: no
+    held for 19200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 17600/11200/14400 -> 20800/11200/14400; thresholds lost: none
+    trade ratio after the sale 1.25; selling Kinetic Dash instead: 1.41 (+12.3%)  [MODELLED ESTIMATE]
+    model limit: Blood Tribute has an active effect (INSTANT_CAST_TOGGLE) the trade model does not price -> the alternative-sale comparison is not a finding
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Crippling Headshot, sell Bullet Resist Shredder
+    function of Bullet Resist Shredder: bullet_resist, resist_shred; replacement Crippling Headshot: resist_shred; roles lost: bullet_resist  [VERIFIED GAME MECHANIC]
+    Bullet Resist Shredder is a component of later items: no
+    held for 32800 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 17600/11200/14400 -> 24000/11200/12800; thresholds lost: none
+    trade ratio after the sale 1.15; selling Kinetic Dash instead: 1.35 (+16.8%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Ricochet, sell Kinetic Dash
+    function of Kinetic Dash: ammo, fire_rate; replacement Ricochet: fire_rate; roles lost: ammo  [VERIFIED GAME MECHANIC]
+    Kinetic Dash is a component of later items: no
+    held for 45600 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 17600/11200/14400 -> 22400/11200/14400; thresholds lost: none
+    trade ratio after the sale 1.45; selling Bullet Resist Shredder instead: 1.22 (-16.2%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Kinetic Dash): 20 s 40 bullets (clip 9, 4.4 magazines, 43% not firing; refill items used every other charge) | 60 s 114 bullets, 45% not firing | damage 60 s 13895  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Kinetic Dash, sell Bullet Resist Shredder: 20 s 42 bullets (clip 9, 4.7 magazines, 47% not firing; refill items used every other charge) | 60 s 123 bullets, 49% not firing | damage 60 s 14374  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Kinetic Dash, no Ricochet): 20 s 40 bullets (clip 9, 4.5 magazines, 44% not firing; refill items used every other charge) | 60 s 116 bullets, 46% not firing | damage 60 s 13315  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

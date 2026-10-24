@@ -1,0 +1,37 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: vindicta
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:14Z
+BODY-SHA: d80a3fc5e2ebbecee401579553b0bfb83b226ea464cb0068e30759937043e27d
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Healing Rite
+  Early · L-R              -> main path (sequential): High-Velocity Rounds, Long Range, Sharpshooter, Rapid Rounds, Extended Magazine, Extra Charge, Bullet Lifesteal, Rapid Recharge
+  Mid · L-R                -> main path (sequential): Counterspell, Sprint Boots, Enduring Speed, Quicksilver Reload, Swift Striker, Titanic Magazine, Spirit Lifesteal, Mercurial Magnum
+  Late · L-R               -> main path (sequential): Burst Fire, Leech, Ricochet, Blood Tribute, Lucky Shot
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Resilience, Unstoppable, Dispel Magic
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Spiritual Overflow, Vampiric Burst, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Juggernaut
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Spiritual Overflow, sell Swift Striker
+    function of Swift Striker: fire_rate; replacement Spiritual Overflow: bullet_proc, duration, fire_rate, sustain; roles lost: none  [VERIFIED GAME MECHANIC]
+    Swift Striker is a component of later items: no
+    held for 36000 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 25600/11200/9600 -> 30400/11200/9600; thresholds lost: none
+    trade ratio after the sale 2.07; selling Titanic Magazine instead: 2.27 (+9.7%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Vampiric Burst, sell Titanic Magazine
+    function of Titanic Magazine: ammo; replacement Vampiric Burst: ammo, bullet_resist, fire_rate, sustain; roles lost: none  [VERIFIED GAME MECHANIC]
+    Titanic Magazine is a component of later items: no
+    held for 35200 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 25600/11200/9600 -> 24000/17600/9600; thresholds lost: none
+    trade ratio after the sale 16.17; selling Swift Striker instead: 5.76 (-64.4%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Titanic Magazine): 20 s 147 bullets (clip 38, 3.9 magazines, 20% not firing; refill items used every other charge) | 60 s 389 bullets, 29% not firing | damage 60 s 27477  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Titanic Magazine, sell Swift Striker: 20 s 156 bullets (clip 57, 2.7 magazines, 6% not firing; refill items used every other charge) | 60 s 414 bullets, 17% not firing | damage 60 s 31015  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Titanic Magazine, no Vampiric Burst): 20 s 155 bullets (clip 57, 2.7 magazines, 14% not firing; refill items used every other charge) | 60 s 429 bullets, 21% not firing | damage 60 s 31342  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

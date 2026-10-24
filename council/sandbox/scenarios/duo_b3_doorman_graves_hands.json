@@ -1,0 +1,94 @@
+{
+ "id": "duo_b3_doorman_graves_hands",
+ "title": "Doorman + Graves: Cart through Grasping Hands into the gravestone",
+ "hero": "Graves",
+ "playstyle": "Duo Graves / Duo Doorman",
+ "builds": [
+  "graves_duo_doorman",
+  "doorman_duo_push"
+ ],
+ "question": "Does carting a target through Grasping Hands into Borrowed Decree land more ghoul explosions than the target walking out of the zone?",
+ "hypothesis": "H-B3-3.1 Cart through the hands roots the target (1.75s at T3). H-B3-3.2 ghoul explosions on the target per Decree >=2x vs no Doorman. H-B3-3.3 an 8.5s wall (Duration Extender) gives >=1.5s spare for the Cart every trial.",
+ "arms": [
+  {
+   "name": "graves_alone",
+   "items": [],
+   "ability_order": "1123444222431133",
+   "souls": 25000,
+   "notes": "Graves walls + Decree, bot walks out"
+  },
+  {
+   "name": "with_cart",
+   "items": [],
+   "ability_order": "1123444222431133",
+   "souls": 25000,
+   "notes": "Doorman carts the bot through the hands into Decree"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "25k souls",
+  "souls": 25000,
+  "position": "Decree 6m behind the wall; bot 20m in front",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 1,
+    "items": [],
+    "behaviour": "walks away from gravestone",
+    "hp": "3000"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "The Doorman",
+    "count": 1,
+    "role": "cart"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "HP"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Graves casts Grasping Hands, then Decree",
+  "Doorman Carts the bot through the wall toward the gravestone (with_cart)",
+  "Count ghoul explosions on the bot and damage over 16s"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "decree_damage_on_target",
+   "unit": "hp",
+   "how": "HP delta over the Decree",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "ghoul_explosions",
+   "unit": "count",
+   "how": "visual",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "decree_damage_on_target",
+  "min_effect_pct": 50,
+  "min_trials": 5,
+  "rule": "SUPPORTS if with_cart >=50% higher. REFUTED: drop the pair."
+ },
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

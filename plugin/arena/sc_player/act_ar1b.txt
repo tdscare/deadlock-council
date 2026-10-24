@@ -1,0 +1,64 @@
+meta hero Haze
+meta kind ISOLATED ITEM
+meta checkpoint Level 18 stat floor, 0 souls spent, then Active Reload given
+meta build none (mechanic discovery)
+meta items upgrade_active_reload
+meta question Can the tester trigger Active Reload with a timed second reload press, and does the reload get shorter?
+meta purpose discover and verify the timed-input path; not a build verdict
+meta mechanics gun plus timed reload input; no abilities
+meta excluded all abilities and all other items; this is a mechanic check
+meta assumed second press inside the reload window shortens the reload
+meta levels_mode isolated
+meta required_activation Active Reload buff|modifier|active_reload|1
+meta required_readback Timed press reloaded faster|ar_best|<|base_reload
+meta player_title Haze check: Active Reload
+meta player_what Timed 2nd reload press|Is the reload shorter?
+meta player_why Checking the tester, not a build
+meta player_short Harness check
+meta player_expect Buff seen, reload shorter
+meta expectedstate items=none at start; exactly one item given mid-run
+meta accmode body-only
+meta accwhy not a damage test
+meta abilities gun only
+meta runs 1/1
+setup Haze Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark ACT|none|body
+rbprobe
+fire 1.5
+rl none 4
+rb base_reload reload_s
+give upgrade_active_reload
+wait 1.0
+fire 1.5
+rl 0.8 4
+rb ar_a reload_s
+fire 1.5
+rl 1.2 4
+rb ar_b reload_s
+fire 1.5
+rl 1.6 4
+rb ar_c reload_s
+rb ar_best minof:ar_a,ar_b,ar_c
+mark none
+end

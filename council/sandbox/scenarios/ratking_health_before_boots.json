@@ -1,0 +1,101 @@
+{
+ "id": "ratking_health_before_boots",
+ "title": "Rat King grenade: Extra Health + Fortitude before Sprint Boots/Enduring Speed",
+ "hero": "Rat King",
+ "playstyle": "Grenade Rat King",
+ "builds": [
+  "ratking_grenade"
+ ],
+ "question": "Path R3 lands health 4.8k at 9.6k (+444 HP, +67 cape at 9.6k) but delays +2m move speed from 8.0k to 11.2k. Which survives and farms better at 9.6k?",
+ "hypothesis": "Calc only (ratking_grenade_paths.txt R2 vs R3). Prediction: R3 survives a 15s focus >=10% better; R2 clears a camp route >=5% faster.",
+ "arms": [
+  {
+   "name": "R2_boots_first",
+   "items": [
+    "Extended Magazine",
+    "Monster Rounds",
+    "Titanic Magazine",
+    "Cultist Sacrifice",
+    "Battle Vest",
+    "Sprint Boots",
+    "Enduring Speed",
+    "Extra Health"
+   ],
+   "ability_order": "1131234133444222",
+   "imbues": {},
+   "souls": "9.6k",
+   "notes": ""
+  },
+  {
+   "name": "R3_health_first",
+   "items": [
+    "Extended Magazine",
+    "Monster Rounds",
+    "Titanic Magazine",
+    "Cultist Sacrifice",
+    "Battle Vest",
+    "Extra Health",
+    "Fortitude"
+   ],
+   "ability_order": "1131234133444222",
+   "imbues": {},
+   "souls": "9.6k",
+   "notes": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "level 16, grenade T3, cape T1 (model A)",
+  "souls": "9600",
+  "position": "lane + fixed camp route",
+  "enemies": [
+   {
+    "hero": "gun bot",
+    "count": 1,
+    "items": [
+     "9.6k"
+    ],
+    "behaviour": "focuses you",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "hp"
+  ]
+ },
+ "controls": [
+  "same level and ability tiers",
+  "same camp route"
+ ],
+ "procedure": [
+  "survive 15s focus with cape up: record HP left",
+  "run the camp route: record seconds"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "hp_left_15s",
+   "unit": "hp",
+   "how": "HP after focus",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "route_seconds",
+   "unit": "s",
+   "how": "timer",
+   "grade_target": "A",
+   "better": "lower",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "hp_left_15s",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "Move Fortitude before boots only if R3 wins hp_left_15s by >=10% and loses route_seconds by <5%; else keep R2."
+ }
+}

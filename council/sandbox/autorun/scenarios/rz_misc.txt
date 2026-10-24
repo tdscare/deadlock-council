@@ -1,0 +1,42 @@
+setup Frank Haze
+raw citadel_unlock_flex_slots
+aimoff 5.5 3
+unlock 7
+mark none
+clear
+heal
+fetch 350
+ekeep 1
+ehp 50000
+mark e_base
+fetch 350
+fire 3
+eitem upgrade_improved_bullet_armor
+eitem upgrade_tech_armor
+mark e_armor
+fetch 350
+fire 3
+eclear
+wait 1
+mark e_resist50
+eresist gun 50
+fetch 350
+fire 3
+eresist off
+mark none
+lowhp 40
+give upgrade_damage_recycler
+give upgrade_pristine_emblem
+wait 1
+mark lowhp_leech
+fire 5
+healsum
+incoming gun 100
+mark in_gun
+wait 3
+incoming spirit 100
+mark in_spirit
+wait 3
+incoming off
+lowhp 0
+end

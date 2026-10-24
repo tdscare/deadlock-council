@@ -1,0 +1,100 @@
+{
+ "id": "geist_extra_charge_timing",
+ "title": "Geist: Extra Charge at 7.2k (right after Life Drain T3) vs 16.8k (after Berserker)",
+ "hero": "Lady Geist",
+ "playstyle": "Gun tank Geist",
+ "builds": [
+  "geist"
+ ],
+ "question": "Is the 4th drain charge worth delaying Radiant Regeneration, Healing Booster, Spirit Resilience and Berserker by 800 souls each?",
+ "hypothesis": "Calc (geist_paths.txt G5 vs G0): at 12.8k G5 drain bank 1758 vs 1221 but 481 less HP (no Spirit Resilience yet); at 16k G5 has 16% less weapon damage. Prediction: in a 20s 1v1 the extra charge only matters if all 3 base charges get used; G0 wins short fights, G5 long ones.",
+ "arms": [
+  {
+   "name": "G0_12800",
+   "items": [
+    "Kinetic Dash",
+    "Cultist Sacrifice",
+    "Radiant Regeneration",
+    "Healing Booster",
+    "Spirit Resilience"
+   ],
+   "ability_order": "3231224233444111",
+   "imbues": {},
+   "souls": "12.8k state of G0",
+   "notes": ""
+  },
+  {
+   "name": "G5_12800",
+   "items": [
+    "Kinetic Dash",
+    "Cultist Sacrifice",
+    "Extra Charge",
+    "Radiant Regeneration",
+    "Healing Booster"
+   ],
+   "ability_order": "3231224233444111",
+   "imbues": {},
+   "souls": "12.8k state of G5",
+   "notes": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "level 20, Life Drain T3, Malice T2",
+  "souls": "12800",
+  "position": "duel at 15m",
+  "enemies": [
+   {
+    "hero": "bot gun hero",
+    "count": 1,
+    "items": [
+     "12.8k gun build"
+    ],
+    "behaviour": "shoots continuously",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "hp",
+   "charges",
+   "buffs"
+  ]
+ },
+ "controls": [
+  "same opponent and items",
+  "Cultist buff off",
+  "fight lengths 10s and 20s both run"
+ ],
+ "procedure": [
+  "start duel",
+  "use all drain charges as they come up",
+  "record damage dealt, healing done and HP at the end at 10s and at 20s"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "hp_end_20s",
+   "unit": "hp",
+   "how": "HP at 20s",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "hp_end_10s",
+   "unit": "hp",
+   "how": "HP at 10s",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "hp_end_20s",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "SUPPORTS G5 (move Extra Charge to 7.2k) only if G5 beats G0 by >=10% at 20s AND is within 5% at 10s; else keep G0."
+ }
+}

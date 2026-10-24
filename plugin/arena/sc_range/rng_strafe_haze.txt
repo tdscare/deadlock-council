@@ -1,0 +1,125 @@
+meta hero Haze
+meta kind ISOLATED ITEM
+meta checkpoint Level 18 stat floor, 0 souls spent, items given per block
+meta build none (mechanic discovery)
+meta items none
+meta question How much of Haze's gun fire still hits a target that strafes left and right?
+meta purpose measure hit rate and useful damage against stationary and strafing targets; misses are not damage
+meta mechanics teleport-driven strafing of the dummy; camera tracks the target
+meta excluded all items and abilities; strafing is a teleport sequence, not a real player's movement
+meta assumed none
+meta levels_mode isolated
+meta expectedstate items=none at start of every block
+meta accmode body-only
+meta accwhy hit counts are verified per block
+meta abilities gun only
+meta runs 1/1
+meta cond_start_stacks fresh pawn every block
+meta player_title Haze: gun vs moving target
+meta player_what Hit rate when strafing
+meta player_why Misses are not damage
+meta player_short Moving target hit rate
+meta player_expect Lower hit rate
+setup Haze Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 1 350 0
+strafe off
+wait 0.5
+healreset
+rngreset
+mark MV|static|body
+fire 4.0
+mark none
+rngreport static
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 1 350 0
+strafe 150 2
+wait 0.5
+healreset
+rngreset
+mark MV|strafe150_2s|body
+fire 4.0
+mark none
+rngreport strafe150_2s
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 1 350 0
+strafe 250 1.5
+wait 0.5
+healreset
+rngreset
+mark MV|strafe250_1.5s|body
+fire 4.0
+mark none
+rngreport strafe250_1.5s
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 1 350 0
+strafe off
+wait 0.5
+healreset
+rngreset
+mark MV|static_rep|body
+fire 4.0
+mark none
+rngreport static_rep
+wait 0.5
+strafe off
+rngsummary
+mark none
+end

@@ -1,0 +1,103 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: celeste
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:13:01Z
+BODY-SHA: e86c7d41b3bbaea38721c2eadb356432407b73f512821204fe5e7321cf18e086
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  High-Velocity Rounds: retained-or-upgraded (-> Opening Rounds)
+  Opening Rounds: temporary (bought to be sold)
+  Extra Regen: retained-or-upgraded (-> Healing Booster)
+  Mystic Regeneration: retained-or-upgraded (-> Radiant Regeneration)
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Radiant Regeneration: retained
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  Healing Booster: retained
+  Grit: retained-or-upgraded (-> Spirit Shielding)
+  Spirit Shielding: retained
+  Enchanter's Emblem: retained
+  Torment Pulse: retained
+  Greater Expansion: retained
+  Spirit Lifesteal: retained-or-upgraded (-> Spiritual Overflow)
+  Suppressor: retained
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Tankbuster: retained
+  Superior Cooldown: retained
+  Witchmail: retained
+  Escalating Exposure: retained
+  Spiritual Overflow: retained
+  Ethereal Shift: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Boundless Spirit: situational-luxury
+  Divine Barrier: situational-luxury
+  Refresher: situational-luxury
+  Healing Tempo: conditional branch (optional upgrade)
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Early · L-R                -> main path (sequential): High-Velocity Rounds, Opening Rounds, Extra Regen, Mystic Regeneration, Mystic Expansion, Radiant Regeneration, Mystic Burst, Healing Booster
+  Mid · L-R                  -> main path (sequential): Grit, Spirit Shielding, Enchanter's Emblem, Torment Pulse, Greater Expansion, Spirit Lifesteal, Suppressor, Mystic Vulnerability
+  Late · L-R                 -> main path (sequential): Tankbuster, Superior Cooldown, Witchmail, Escalating Exposure, Spiritual Overflow
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Ethereal Shift, Metal Skin, Plated Armor, Dispel Magic, Unstoppable, Counterspell
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Boundless Spirit, Divine Barrier, Refresher
+  Slot locked                -> optional upgrade (branch): Healing Tempo, Transcendent Cooldown
+
+## Opening Rounds: sold when buying Witchmail (Late · L-R, main)
+  role of Opening Rounds: temporary (bought to be sold); role of Witchmail: retained
+  Opening Rounds: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 1600 souls (~2.2 min), replaced at ~32.8 min -> owned ~30.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 1600/12800/19200 -> after 0/12800/19200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 64 min | window TR | key purchase times (min)
+  as built                                    |          55798 |      0.30 | Opening Rounds 2, Witchmail 33
+  keep Opening Rounds                         |          55988 |      0.30 | Opening Rounds 2, Witchmail 34
+  skip Opening Rounds                         |          56089 |      0.30 | Witchmail 32
+  sell Suppressor instead                     |          55823 |      0.29 | Opening Rounds 2, Witchmail 33
+  keep Opening Rounds vs as built: d souls +140, d window TR +2.1% | souls: MODEL-ONLY (sign robust in 82% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  skip Opening Rounds vs as built: d souls +180, d window TR +1.5% | souls: MODEL-ONLY (sign robust in 97% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 82% of cells; no measured inputs)
+  sell Suppressor instead vs as built: d souls +19, d window TR -1.7% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: a computed alternative sequence is better: keep Opening Rounds; skip Opening Rounds
+  VERDICT: CHANGE SUGGESTED (as a proposal through the gate): keep Opening Rounds; skip Opening Rounds; evidence tier: MODEL-ONLY; flipping assumptions: keep Opening Rounds: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Suppressor instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Enchanter's Emblem: sold when buying Boundless Spirit (I'm rich as fuck, luxury)
+  role of Enchanter's Emblem: retained; role of Boundless Spirit: situational-luxury
+  Enchanter's Emblem: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 11200 souls (~11.2 min), replaced at ~52.2 min -> owned ~41.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/11200/30400 -> after 6400/9600/30400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          60557 |      0.26 | Enchanter's Emblem 11, Boundless Spirit 52
+  keep Enchanter's Emblem (slot cap ignored)  |          60649 |      0.26 | Enchanter's Emblem 11, Boundless Spirit 53
+  skip Enchanter's Emblem                     |          60033 |      0.24 | Boundless Spirit 52
+  sell Suppressor instead                     |          60563 |      0.25 | Enchanter's Emblem 11, Boundless Spirit 52
+  keep Enchanter's Emblem (slot cap ignored) vs as built: d souls +47, d window TR +2.6% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Enchanter's Emblem vs as built: d souls -282, d window TR -4.3% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Suppressor instead vs as built: d souls +0, d window TR -0.4% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Enchanter's Emblem (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+
+## Spirit Shielding: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Spirit Shielding: retained; role of Refresher: situational-luxury
+  Spirit Shielding: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 9600 souls (~9.8 min), replaced at ~52.2 min -> owned ~42.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 6400/11200/30400 -> after 6400/9600/30400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          60399 |      0.25 | Spirit Shielding 10, Refresher 52
+  keep Spirit Shielding (slot cap ignored)    |          60549 |      0.26 | Spirit Shielding 10, Refresher 53
+  skip Spirit Shielding                       |          60072 |      0.24 | Refresher 53
+  sell Suppressor instead                     |          60458 |      0.26 | Spirit Shielding 10, Refresher 52
+  keep Spirit Shielding (slot cap ignored) vs as built: d souls +44, d window TR +5.8% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Spirit Shielding vs as built: d souls -128, d window TR -6.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Suppressor instead vs as built: d souls +8, d window TR +1.7% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Spirit Shielding (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | skip Spirit Shielding: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Suppressor instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))

@@ -1,0 +1,163 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: shiv_gun
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:14:36Z
+BODY-SHA: 1637995c0f1f42728e17ce7c9b1c1c1642d94b740d52d1361bbf8fb3052f4496
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Restorative Shot: temporary (bought to be sold)
+  Close Quarters: temporary (bought to be sold)
+  Mystic Regeneration: retained-or-upgraded (-> Radiant Regeneration)
+  High-Velocity Rounds: retained-or-upgraded (-> Express Shot)
+  Express Shot: retained
+  Battle Vest: retained
+  Radiant Regeneration: retained
+  Dispel Magic: retained
+  Bullet Resist Shredder: retained
+  Hunter's Aura: retained
+  Fleetfoot: retained
+  Bullet Lifesteal: retained-or-upgraded (-> Vampiric Burst)
+  Berserker: retained
+  Lucky Shot: retained
+  Vampiric Burst: retained
+  Silencer: retained
+  Inhibitor: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Glass Cannon: situational-luxury
+  Crippling Headshot: situational-luxury
+  Colossus: situational-luxury
+  Divine Barrier: situational-luxury
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Restorative Shot, Close Quarters, Mystic Regeneration, High-Velocity Rounds, Express Shot, Battle Vest, Radiant Regeneration, Dispel Magic
+  Mid · L-R                  -> main path (sequential): Bullet Resist Shredder, Hunter's Aura, Fleetfoot, Bullet Lifesteal, Berserker, Lucky Shot
+  Late · L-R                 -> main path (sequential): Vampiric Burst, Silencer, Inhibitor
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Spirit Resilience, Counterspell, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Glass Cannon, Crippling Headshot, Colossus, Divine Barrier
+
+## Restorative Shot: sold when buying Lucky Shot (Mid · L-R, main)
+  role of Restorative Shot: temporary (bought to be sold); role of Lucky Shot: retained
+  Restorative Shot: price 800, resale 400, net cost of owning it 400 souls (0.4 min of reference income); first bought at 800 souls (~1.0 min), replaced at ~28.0 min -> owned ~27.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 19200/6400/4800 -> after 18400/6400/4800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 64 min | window TR | key purchase times (min)
+  as built                                    |          65030 |      0.36 | Restorative Shot 1, Lucky Shot 28
+  keep Restorative Shot                       |          65124 |      0.36 | Restorative Shot 1, Lucky Shot 28
+  skip Restorative Shot                       |          64737 |      0.35 | Lucky Shot 28
+  sell Battle Vest instead                    |          64198 |      0.33 | Restorative Shot 1, Lucky Shot 28
+  keep Restorative Shot vs as built: d souls +73, d window TR +0.9% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: INSUFFICIENT (effect within model noise)
+  skip Restorative Shot vs as built: d souls -210, d window TR -1.5% | souls: MODEL-ONLY (sign robust in 94% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Battle Vest instead vs as built: d souls -383, d window TR -8.8% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  ammo mechanics (clip 10, reload 2.8 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Restorative Shot): 8 s trade 13 bullets (16% not firing), 20 s 29 bullets (25% not firing, 2.2 magazines), damage 20 s 4087, refill uses 0.0
+    keep Restorative Shot: 8 s trade 13 bullets (16% not firing), 20 s 29 bullets (25% not firing, 2.2 magazines), damage 20 s 4192, refill uses 0.0
+    without Lucky Shot (keep Restorative Shot): 8 s trade 11 bullets (29% not firing), 20 s 28 bullets (29% not firing, 2.8 magazines), damage 20 s 3785, refill uses 0.0
+    sell Battle Vest instead: 8 s trade 13 bullets (10% not firing), 20 s 28 bullets (23% not firing, 2.1 magazines), damage 20 s 3723, refill uses 0.0
+    sustained 20 s gun damage: selling Restorative Shot costs 3% vs keeping it (both with Lucky Shot); Lucky Shot adds +11% on top of Restorative Shot; selling Battle Vest instead: -11% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Restorative Shot: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | skip Restorative Shot: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Close Quarters: sold when buying Inhibitor (Late · L-R, main)
+  role of Close Quarters: temporary (bought to be sold); role of Inhibitor: retained
+  Close Quarters: price 800, resale 400, net cost of owning it 400 souls (0.4 min of reference income); first bought at 1600 souls (~1.8 min), replaced at ~44.5 min -> owned ~42.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 24800/17600/4800 -> after 24000/17600/4800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 64 min | window TR | key purchase times (min)
+  as built                                    |          65030 |      0.36 | Close Quarters 2, Inhibitor 44
+  keep Close Quarters                         |          65211 |      0.37 | Close Quarters 2, Inhibitor 45
+  skip Close Quarters                         |          64166 |      0.34 | Inhibitor 45
+  sell Battle Vest instead                    |          64766 |      0.35 | Close Quarters 2, Inhibitor 44
+  keep Close Quarters vs as built: d souls +96, d window TR +1.8% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Close Quarters vs as built: d souls -519, d window TR -5.5% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Battle Vest instead vs as built: d souls -145, d window TR -3.9% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: no modelled stat for Close Quarters (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Close Quarters: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Battle Vest: sold when buying Glass Cannon (I'm rich as fuck, luxury)
+  role of Battle Vest: retained; role of Glass Cannon: situational-luxury
+  Battle Vest: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 7200 souls (~7.5 min), replaced at ~50.2 min -> owned ~42.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 30400/17600/4800 -> after 30400/16000/4800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          72145 |      0.35 | Battle Vest 8, Glass Cannon 50
+  keep Battle Vest (slot cap ignored)         |          72707 |      0.37 | Battle Vest 8, Glass Cannon 51
+  skip Battle Vest                            |          70562 |      0.31 | Glass Cannon 51
+  sell Bullet Resist Shredder instead         |          72370 |      0.36 | Battle Vest 8, Glass Cannon 50
+  keep Battle Vest (slot cap ignored) vs as built: d souls +245, d window TR +5.9% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Battle Vest vs as built: d souls -770, d window TR -10.7% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Bullet Resist Shredder instead vs as built: d souls +107, d window TR +2.5% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  ammo mechanics (clip 10, reload 2.8 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Battle Vest): 8 s trade 16 bullets (0% not firing), 20 s 33 bullets (16% not firing, 2.6 magazines), damage 20 s 6724, refill uses 1.0
+    keep Battle Vest: 8 s trade 17 bullets (0% not firing), 20 s 34 bullets (19% not firing, 2.6 magazines), damage 20 s 7329, refill uses 1.0
+    without Glass Cannon (keep Battle Vest): 8 s trade 16 bullets (0% not firing), 20 s 33 bullets (16% not firing, 2.6 magazines), damage 20 s 5174, refill uses 1.0
+    sell Bullet Resist Shredder instead: 8 s trade 17 bullets (0% not firing), 20 s 34 bullets (19% not firing, 2.6 magazines), damage 20 s 7142, refill uses 1.0
+    sustained 20 s gun damage: selling Battle Vest costs 8% vs keeping it (both with Glass Cannon); Glass Cannon adds +42% on top of Battle Vest; selling Bullet Resist Shredder instead: -3% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: the sale of Battle Vest lowers modelled sustained gun damage by 8% (ammo mechanics)
+  VERDICT: REVIEW: selling Battle Vest costs sustained gun output; Glass Cannon does not replace its ammo role (quantified above). Alternatives for the slot: sell Bullet Resist Shredder (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED); flipping assumptions: keep Battle Vest (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Bullet Resist Shredder instead: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+
+## Berserker: sold when buying Crippling Headshot (I'm rich as fuck, luxury)
+  role of Berserker: retained; role of Crippling Headshot: situational-luxury
+  Berserker: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 24000 souls (~22.5 min), replaced at ~49.5 min -> owned ~27.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 30400/17600/4800 -> after 27200/17600/4800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          71376 |      0.30 | Berserker 22, Crippling Headshot 50
+  keep Berserker (slot cap ignored)           |          71645 |      0.31 | Berserker 22, Crippling Headshot 51
+  skip Berserker                              |          71243 |      0.29 | Crippling Headshot 48
+  sell Battle Vest instead                    |          71250 |      0.29 | Berserker 22, Crippling Headshot 50
+  keep Berserker (slot cap ignored) vs as built: d souls +138, d window TR +5.3% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Berserker vs as built: d souls -94, d window TR -1.4% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY (sign robust in 94% of cells; no measured inputs)
+  sell Battle Vest instead vs as built: d souls -64, d window TR -2.8% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: no modelled stat for Berserker (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Berserker (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | skip Berserker: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Fleetfoot: sold when buying Colossus (I'm rich as fuck, luxury)
+  role of Fleetfoot: retained; role of Colossus: situational-luxury
+  Fleetfoot: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 19200 souls (~18.2 min), replaced at ~50.2 min -> owned ~32.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 24000/24000/4800 -> after 22400/24000/4800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          71510 |      0.31 | Fleetfoot 18, Colossus 50
+  keep Fleetfoot (slot cap ignored)           |          71655 |      0.32 | Fleetfoot 18, Colossus 51
+  skip Fleetfoot                              |          71401 |      0.31 | Colossus 50
+  sell Battle Vest instead                    |          71258 |      0.30 | Fleetfoot 18, Colossus 50
+  keep Fleetfoot (slot cap ignored) vs as built: d souls +70, d window TR +2.7% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Fleetfoot vs as built: d souls -59, d window TR -1.3% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY (sign robust in 91% of cells; no measured inputs)
+  sell Battle Vest instead vs as built: d souls -133, d window TR -4.6% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Fleetfoot has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Colossus has an active effect (INSTANT_CAST) not priced
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Fleetfoot (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | skip Fleetfoot: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Dispel Magic: sold when buying Divine Barrier (I'm rich as fuck, luxury)
+  role of Dispel Magic: retained; role of Divine Barrier: situational-luxury
+  Dispel Magic: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 12800 souls (~12.5 min), replaced at ~49.5 min -> owned ~37.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 24000/24000/4800 -> after 24000/20800/4800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 72 min | window TR | key purchase times (min)
+  as built                                    |          71579 |      0.33 | Dispel Magic 12, Divine Barrier 50
+  keep Dispel Magic (slot cap ignored)        |          71714 |      0.34 | Dispel Magic 12, Divine Barrier 51
+  skip Dispel Magic                           |          71550 |      0.32 | Divine Barrier 48
+  sell Battle Vest instead                    |          71286 |      0.32 | Dispel Magic 12, Divine Barrier 50
+  keep Dispel Magic (slot cap ignored) vs as built: d souls +60, d window TR +2.5% | souls: MODEL-ONLY, assumption-sensitive (flips with hit (0.35: -, 0.75: +); enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Dispel Magic vs as built: d souls +82, d window TR -1.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Battle Vest instead vs as built: d souls -156, d window TR -4.1% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Dispel Magic has an active effect (INSTANT_CAST) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  model limit: Divine Barrier has an active effect (PRESS) not priced
+  model limit: no modelled stat for Dispel Magic (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Dispel Magic (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | skip Dispel Magic: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Battle Vest instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

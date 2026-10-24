@@ -1,0 +1,224 @@
+{
+ "id": "kelvin_support",
+ "hk": "hero_kelvin",
+ "hero": "Kelvin",
+ "tag": "Fix",
+ "name": "Rizuhble's Frozone Kelvin",
+ "desc": "Support Kelvin",
+ "tg": [
+  "healing",
+  "utility",
+  "Healing Tempo"
+ ],
+ "abil": [
+  "Frost Grenade",
+  "Ice Path",
+  "Arctic Beam",
+  "Frozen Shelter"
+ ],
+ "order": [
+  1,
+  1,
+  3,
+  2,
+  1,
+  4,
+  1,
+  2,
+  2,
+  4,
+  4,
+  4,
+  3,
+  2,
+  3,
+  3
+ ],
+ "rows": [
+  [
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Charge",
+      ""
+     ],
+     [
+      "Extra Regen",
+      ""
+     ],
+     [
+      "Healing Booster",
+      ""
+     ],
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Mystic Expansion",
+      "On Frost Grenade.",
+      "1"
+     ],
+     [
+      "Compress Cooldown",
+      "On Frost Grenade.",
+      "1"
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Sprint Boots",
+      ""
+     ],
+     [
+      "Trophy Collector",
+      ""
+     ],
+     [
+      "Enchanter's Emblem",
+      "Sell it for a second counter."
+     ],
+     [
+      "Healbane",
+      "Sell it for a third counter."
+     ],
+     [
+      "Rapid Recharge",
+      ""
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Duration Extender",
+      "On Ice Path.",
+      2
+     ],
+     [
+      "Warp Stone",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Healing Tempo",
+      ""
+     ],
+     [
+      "Cursed Relic",
+      ""
+     ],
+     [
+      "Refresher",
+      ""
+     ],
+     [
+      "Greater Expansion",
+      ""
+     ],
+     [
+      "Superior Duration",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Healbane if needed. Ahead? Skip it until you're dying. Sell Trophy Collector for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "One gun hero is deleting you: Haze, Wraith, Vindicta."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult."
+     ],
+     [
+      "Dispel Magic",
+      "Knockdown, Slowing Hex, Disarming Hex."
+     ],
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit: Seven, Infernus, Geist, Vyper."
+     ],
+     [
+      "Unstoppable",
+      "You keep getting stunned before you can dome."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this. Otherwise sell Trophy Collector."
+     ],
+     [
+      "Diviner's Kevlar",
+      "Sell Enchanter's Emblem for this."
+     ],
+     [
+      "Scourge",
+      "Cast it on the mate who's diving in. Sell Healbane for this."
+     ],
+     [
+      "Rescue Beam",
+      "Sell Warp Stone for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Round 13: new support build — sources (support-style only): lockbuilds 'Aethergic's (Annotated) Support Kelvin' (Sep 7; no Kelvin numbers changed in the Oct 14 patch): lane High-Velocity, Extra Regen, Opening Rounds, Extra Charge, Healing Booster, Extra Spirit, Mystic Expansion, Compress Cooldown, Improved Spirit, Enchanter's Emblem, Healbane; core Superior Cooldown, Rapid Recharge, Duration Extender, Warp Stone, Boundless, Cursed Relic, Refresher; upgrades Greater Expansion, Superior Duration, Transcendent, Healing Tempo. Kit: Frost Grenade heals allies 60 + 0.8x spirit (+30 and +0.9 scaling at T3) and has 2 charges (Extra Charge makes 3), Frozen Shelter regen 90 + 0.2x (+65, +1.0x), Ice Path T2 gives your team 35% bullet resist. So the heal imbues go on the grenade (cast most) and Duration Extender on the dome. Order: kit-based (no support Kelvin order is published): grenade maxed first for its heal scaling, Ice Path T1-T2 for the team speed and bullet resist, then beam, dome last; seemeta's most popular Kelvin order also opens grenade, grenade.",
+  "Round 14: High-Velocity Rounds and Opening Rounds (own-gun lane trades) out; Sprint Boots into Trophy Collector in (support lane items should help the team; Trophy Collector is on Kieran's pure-support list and in Aethergic's mobility list, seemeta 52.3% early). Spirit 4.8k now at 6.4k (was 8k), health 4.8k at 9.6k. Ability order: dome maxed right after grenade T1-T2 (Aethergic's stated goal is max dome; mobalytics shows a dome-max-first Kelvin group, 995 matches): Frozen Shelter T2 is +1.5s, +65 regen and +1.0x spirit scaling for everyone inside, T3 purges your team. Changes-log fix: Ice Path T1's 35% bullet resist is for Kelvin only, not the team. Cursed Relic note emptied (explained its penalty); Unstoppable note now says what it stops (stuns before the dome), the dome isn't a channel; Counterspell example is Lash's ult; Dispel Magic examples are item debuffs it purges; Divine Barrier note now says it is Dispel Magic's pricier version; Counters sell Trophy Collector, then Enchanter's Emblem, then Healbane, so every T2 left in the last 12 has a named sell (Opening Rounds is gone).",
+  "Round 15: Counters desc was 123 characters (game limit 112): now 'Get after Healbane if needed ... Sell Trophy Collector for it.' (108).",
+  "Round 19: checked against current public builds of this style; it is a real style, no changes.",
+  "Round 20: Late list filled to ~72k: Divine Barrier, Diviner's Kevlar, Scourge, Rescue Beam (Aethergic's support Kelvin late boxes), each selling the weakest item left.",
+  "Round 25: order 1324114441223323 → 1132141224443233: Frost Grenade T1 no longer waits for the ult unlock, grenade maxed first (heal scaling), Ice Path T1/T2 before the ult tiers. Duration Extender moved from Frozen Shelter to Ice Path (25s path vs 165s dome)."
+ ]
+}

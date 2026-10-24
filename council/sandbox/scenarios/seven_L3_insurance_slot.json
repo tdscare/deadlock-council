@@ -1,0 +1,137 @@
+{
+ "id": "seven_L3_insurance_slot",
+ "title": "Which 'storm insurance' first at 24.8k: Infuser vs Diviner's Kevlar vs Unstoppable",
+ "hero": "Seven",
+ "playstyle": "Ult Seven",
+ "builds": [
+  "seven"
+ ],
+ "question": "At the slot after Superior Duration, which item keeps Seven alive longest and deals most during one storm against incoming spirit damage?",
+ "hypothesis": "H-L3: Kevlar gives +23% storm damage per bot and absorbs 1000; Infuser +3% damage and ~1.8k heal per bot in the cloud; Unstoppable 0 damage. Prediction vs 3 bots and incoming spirit 350 dps: HP-lost Kevlar < Infuser only if heal per bot < ~0.6k (AoE lifesteal cut); otherwise Infuser lowest HP-lost, Kevlar highest damage.",
+ "arms": [
+  {
+   "name": "INF",
+   "items": [
+    "upgrade_magic_storm",
+    "upgrade_arcane_surge",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_healbane",
+    "upgrade_cardio_calibrator",
+    "upgrade_escalating_exposure",
+    "upgrade_imbued_duration_extender",
+    "upgrade_cooldown_reduction",
+    "upgrade_magic_reach",
+    "upgrade_infuser"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 29600,
+   "notes": ""
+  },
+  {
+   "name": "KEV",
+   "items": [
+    "upgrade_magic_storm",
+    "upgrade_arcane_surge",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_healbane",
+    "upgrade_cardio_calibrator",
+    "upgrade_escalating_exposure",
+    "upgrade_imbued_duration_extender",
+    "upgrade_cooldown_reduction",
+    "upgrade_magic_reach",
+    "upgrade_health_stealing_magic",
+    "upgrade_diviners_kevlar"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 31200,
+   "notes": ""
+  },
+  {
+   "name": "UNST",
+   "items": [
+    "upgrade_magic_storm",
+    "upgrade_arcane_surge",
+    "upgrade_non_player_bonus_sacrifice",
+    "upgrade_healbane",
+    "upgrade_cardio_calibrator",
+    "upgrade_escalating_exposure",
+    "upgrade_imbued_duration_extender",
+    "upgrade_cooldown_reduction",
+    "upgrade_magic_reach",
+    "upgrade_health_stealing_magic",
+    "upgrade_unstoppable"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 31200,
+   "notes": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "souls 31200 (levels.json)",
+  "souls": 31200,
+  "position": "mid lane, bots on a 300 u ring (inside the 40 m storm)",
+  "enemies": [
+   {
+    "hero": "Haze (bot)",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand, attacks disabled",
+    "hp": "ekeep 0.9"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 50 (heals never capped) (no lowhp: full HP; incoming spirit 350)",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance (enemies 3 at 300 u ring, main target 350 u)",
+  "hardreset between blocks (fresh cooldowns, no items)",
+  "Same souls/level/ability tiers (unlock 7) in every arm except the thing under test",
+  "Same bot heroes, HP keep-alive (ekeep 0.9) and resists",
+  "Arms interleaved A,B,A,B; A/A floor run first"
+ ],
+ "procedure": [
+  "give items; basemods; enemies 3 300 8; heal",
+  "(INF) cast i1 0.1; cast 4 0.1; incoming spirit 350; wait 21; incoming off",
+  "(KEV/UNST) cast i1 0.1 where an active exists; same timing"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "hp_end",
+   "unit": "hp",
+   "how": "player HP at storm end (min over block)",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "storm_dmg_per_bot",
+   "unit": "hp",
+   "how": "damage csv",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "heal_storm",
+   "unit": "hp",
+   "how": "healDiffObserved",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "hp_end",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "higher hp_end with storm damage not lower by >10% wins the slot; the stun value of Unstoppable is outside this test"
+ }
+}

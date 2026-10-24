@@ -1,0 +1,454 @@
+meta hero Haze
+meta kind ISOLATED ITEM
+meta checkpoint Level 18 stat floor, 0 souls spent, items given per block
+meta build none (mechanic discovery)
+meta items upgrade_ricochet
+meta question Does Ricochet reach more enemies when they stand closer together, and what does that add?
+meta purpose measure real bounce hits per target for different enemy counts and spacings; not a build verdict
+meta mechanics bullet bounce to nearby enemies; per-target damage, no double counting
+meta excluded all abilities and all other items; says nothing about a full build
+meta assumed none
+meta levels_mode isolated
+meta expectedstate items=none at start of every block
+meta accmode body-only
+meta accwhy hit counts are verified per block
+meta abilities gun only
+meta runs 1/1
+meta cond_start_stacks fresh pawn every block
+meta player_title Haze: Ricochet and spacing
+meta player_what Targets hit by layout
+meta player_why Does spacing change its value?
+meta player_short Ricochet vs enemy spacing
+meta player_expect Fewer hits when spread
+setup Haze Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 1 350 0
+wait 0.5
+healreset
+rngreset
+mark MT|A_none|1_target|body
+fire 4.0
+mark none
+rngreport A_none 1_target
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_ricochet
+layout 1 350 0
+wait 0.5
+healreset
+rngreset
+mark MT|B_rico|1_target|body
+fire 4.0
+mark none
+moddump me
+rngreport B_rico 1_target
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 1 350 0
+wait 0.5
+healreset
+rngreset
+mark MT|A_none_rep|1_target|body
+fire 4.0
+mark none
+rngreport A_none_rep 1_target
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 3 350 150
+wait 0.5
+healreset
+rngreset
+mark MT|A_none|3_tight|body
+fire 4.0
+mark none
+rngreport A_none 3_tight
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_ricochet
+layout 3 350 150
+wait 0.5
+healreset
+rngreset
+mark MT|B_rico|3_tight|body
+fire 4.0
+mark none
+moddump me
+rngreport B_rico 3_tight
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 3 350 150
+wait 0.5
+healreset
+rngreset
+mark MT|A_none_rep|3_tight|body
+fire 4.0
+mark none
+rngreport A_none_rep 3_tight
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 3 350 400
+wait 0.5
+healreset
+rngreset
+mark MT|A_none|3_medium|body
+fire 4.0
+mark none
+rngreport A_none 3_medium
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_ricochet
+layout 3 350 400
+wait 0.5
+healreset
+rngreset
+mark MT|B_rico|3_medium|body
+fire 4.0
+mark none
+moddump me
+rngreport B_rico 3_medium
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 3 350 400
+wait 0.5
+healreset
+rngreset
+mark MT|A_none_rep|3_medium|body
+fire 4.0
+mark none
+rngreport A_none_rep 3_medium
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 5 350 150
+wait 0.5
+healreset
+rngreset
+mark MT|A_none|5_tight|body
+fire 4.0
+mark none
+rngreport A_none 5_tight
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_ricochet
+layout 5 350 150
+wait 0.5
+healreset
+rngreset
+mark MT|B_rico|5_tight|body
+fire 4.0
+mark none
+moddump me
+rngreport B_rico 5_tight
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 5 350 150
+wait 0.5
+healreset
+rngreset
+mark MT|A_none_rep|5_tight|body
+fire 4.0
+mark none
+rngreport A_none_rep 5_tight
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 5 350 400
+wait 0.5
+healreset
+rngreset
+mark MT|A_none|5_medium|body
+fire 4.0
+mark none
+rngreport A_none 5_medium
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_ricochet
+layout 5 350 400
+wait 0.5
+healreset
+rngreset
+mark MT|B_rico|5_medium|body
+fire 4.0
+mark none
+moddump me
+rngreport B_rico 5_medium
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 5 350 400
+wait 0.5
+healreset
+rngreset
+mark MT|A_none_rep|5_medium|body
+fire 4.0
+mark none
+rngreport A_none_rep 5_medium
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 5 350 800
+wait 0.5
+healreset
+rngreset
+mark MT|A_none|5_wide|body
+fire 4.0
+mark none
+rngreport A_none 5_wide
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+give upgrade_ricochet
+layout 5 350 800
+wait 0.5
+healreset
+rngreset
+mark MT|B_rico|5_wide|body
+fire 4.0
+mark none
+moddump me
+rngreport B_rico 5_wide
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+lvlhold 18
+wait 1.2
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+layout 5 350 800
+wait 0.5
+healreset
+rngreset
+mark MT|A_none_rep|5_wide|body
+fire 4.0
+mark none
+rngreport A_none_rep 5_wide
+wait 0.5
+rngsummary
+mark none
+end

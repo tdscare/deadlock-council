@@ -1,0 +1,119 @@
+{
+ "id": "haze_vb_vs_leech",
+ "title": "Haze: Vampiric Burst vs Leech at 41.6k (fire rate + ammo refill vs constant healing)",
+ "hero": "Haze",
+ "playstyle": "Victor Cosplay Haze",
+ "builds": [
+  "haze"
+ ],
+ "question": "Kieran's open question: Leech (28% bullet+spirit lifesteal, +12% weapon, anti-heal reduction) or Vampiric Burst (13% + 70% active for 5 s, +34% fire rate, refills 75% ammo)?",
+ "hypothesis": "Model: VB +752 damage and +2736 HP vs Leech +87 / +646 in a 12 s focus fight at 41.6k, mainly from the ammo refill on a 55-round magazine that empties in ~4 s. Prediction: VB arm deals >=15% more damage in a 12 s scripted fight and heals more.",
+ "arms": [
+  {
+   "name": "vampiric_burst",
+   "items": [
+    "upgrade_surging_power",
+    "upgrade_titan_round",
+    "upgrade_blitz_bullets",
+    "upgrade_ricochet",
+    "upgrade_siphon_bullets",
+    "upgrade_burst_fire",
+    "upgrade_critshot",
+    "upgrade_rapid_recharge"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "41.6k",
+   "notes": "VB is first active (i1); pop it when the first magazine is empty"
+  },
+  {
+   "name": "leech",
+   "items": [
+    "upgrade_damage_recycler",
+    "upgrade_titan_round",
+    "upgrade_blitz_bullets",
+    "upgrade_ricochet",
+    "upgrade_siphon_bullets",
+    "upgrade_burst_fire",
+    "upgrade_critshot",
+    "upgrade_rapid_recharge"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "41.6k",
+   "notes": "reload instead"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "unlock 7",
+  "souls": 50000,
+  "position": "enemy 350u",
+  "enemies": [
+   {
+    "hero": "Haze",
+    "count": 1,
+    "items": "none",
+    "behaviour": "bot",
+    "hp": "egod"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 50",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "hardreset between blocks (fresh pawns, factory cooldowns/charges, unlock 7 = all 3 tiers on every ability in BOTH arms)",
+  "Same position (fetch 350, aimoff 5.5 3), same enemy bot (Haze), egod default floor",
+  "Arms interleaved A,B,A,B (counterbalanced A,B,B,A for the second half)",
+  "healreset + mark none around every reset",
+  "cast reload 2.5 before each fire block (no auto-reload op)",
+  "accuracy 0.5 0",
+  "same scripted 12 s timeline in both arms: cast 2 0.3; fire 4; [VB: cast i1 0.3 | Leech: cast reload 2.35]; fire 4; cast reload 2.35; fire 1.3"
+ ],
+ "procedure": [
+  "give arm items; lowhp 50; cast reload 2.5; mark <arm>; run the 12 s timeline; healsum; lowhp 0; hardreset",
+  "repeat interleaved"
+ ],
+ "trials": 6,
+ "metrics": [
+  {
+   "name": "damage_12s",
+   "unit": "hp",
+   "how": "damage csv sum",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "heal_12s",
+   "unit": "hp",
+   "how": "healDiffObserved",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "shots_12s",
+   "unit": "count",
+   "how": "acclog GunFired",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "damage_12s",
+  "min_effect_pct": 10,
+  "min_trials": 6,
+  "rule": "SUPPORTS VB core if VB damage >=10% higher and heal not lower (non-overlapping ranges); REFUTES if Leech wins both; else INCONCLUSIVE. The anti-heal condition of the Leech swap is UNSUPPORTED (no eheal op, GAPS #8) and is decided from kit maths."
+ },
+ "blockedIfNo": [
+  "eheal (for the anti-heal arm only)"
+ ],
+ "limitations": [
+  "Checkpoint level/ability-tier states cannot be reproduced (unlock sets all tiers; GAPS #2): results are late-game relative comparisons only."
+ ]
+}

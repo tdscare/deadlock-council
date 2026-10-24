@@ -1,0 +1,119 @@
+{
+ "id": "haze_ricochet_roles",
+ "title": "Haze: Ricochet on all roles (fire rate, bounces vs 3 enemies, ult, bounce lifesteal) vs the same souls in greens",
+ "hero": "Haze",
+ "playstyle": "Victor Cosplay Haze",
+ "builds": [
+  "haze"
+ ],
+ "question": "Section J: is Ricochet only a farming item? Measure each role separately against Extra Health + Fortitude + 3.2k banked (Kieran's Fortitude-first order) at the 12k decision point.",
+ "hypothesis": "Model at 12k: Ricochet +29% 1v1 damage, +138% damage vs 3 enemies, ult vs 3 enemies x2.8, bounce damage heals if lifesteal applies to bounces; Fortitude +375 HP and ~3 s longer survival when focused. Prediction: 3-enemy damage with Ricochet >= 2x without; ult damage vs 3 >= 2x.",
+ "arms": [
+  {
+   "name": "ricochet",
+   "items": [
+    "upgrade_titan_round",
+    "upgrade_blitz_bullets",
+    "upgrade_active_reload",
+    "upgrade_ricochet"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "11.2k",
+   "notes": ""
+  },
+  {
+   "name": "greens",
+   "items": [
+    "upgrade_titan_round",
+    "upgrade_blitz_bullets",
+    "upgrade_active_reload",
+    "upgrade_chonky"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": "8k",
+   "notes": "Fortitude"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "unlock 7",
+  "souls": 50000,
+  "position": "enemy 350u; ring radius 300u for 3 enemies",
+  "enemies": [
+   {
+    "hero": "Haze",
+    "count": 3,
+    "items": "none",
+    "behaviour": "bots",
+    "hp": "egod"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full; lowhp 50 for the heal block",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "hardreset between blocks (fresh pawns, factory cooldowns/charges, unlock 7 = all 3 tiers on every ability in BOTH arms)",
+  "Same position (fetch 350, aimoff 5.5 3), same enemy bot (Haze), egod default floor",
+  "Arms interleaved A,B,A,B (counterbalanced A,B,B,A for the second half)",
+  "healreset + mark none around every reset",
+  "cast reload 2.5 before each fire block (no auto-reload op)",
+  "accuracy 0.5 0"
+ ],
+ "procedure": [
+  "block A single target: enemies 1; cast reload 2.5; mark <arm>_1t; fire 4",
+  "block B: enemies 3 300; cast reload 2.5; mark <arm>_3t; fire 4",
+  "block C: enemies 3 300; mark <arm>_ult; cast 4 3.5",
+  "block D: enemies 3 300; lowhp 50; cast 2 0.3; mark <arm>_heal; fire 4; healsum; lowhp 0"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "dmg_3_targets_4s",
+   "unit": "hp",
+   "how": "damage csv, all victims",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "ult_dmg_3_targets",
+   "unit": "hp",
+   "how": "damage csv during ult mark",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "dmg_1_target_4s",
+   "unit": "hp",
+   "how": "damage csv",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "heal_3_targets_smoke",
+   "unit": "hp",
+   "how": "healDiffObserved",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "dmg_3_targets_4s",
+  "min_effect_pct": 50,
+  "min_trials": 5,
+  "rule": "Measures Ricochet's fight roles; the order decision (Ricochet before Fortitude) also needs farming speed and survival when focused, which are UNSUPPORTED (no camp spawn, bots never shoot): verdict on the order stays CALCULATED."
+ },
+ "limitations": [
+  "Checkpoint level/ability-tier states cannot be reproduced (unlock sets all tiers; GAPS #2): results are late-game relative comparisons only.",
+  "Farming (camp clear) UNSUPPORTED: no NPC/camp op (GAPS #21).",
+  "Survival under real focus UNSUPPORTED: bots never shoot; `incoming` is a smooth stream (GAPS #6/#17)."
+ ]
+}

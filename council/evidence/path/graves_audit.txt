@@ -1,0 +1,62 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: graves
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:16Z
+BODY-SHA: fde694e5d67b914e593382b4d5e94ec4249d719d80b6791d8af03274eff58df9
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Extra Stamina, Extra Spirit, Grit, Tesla Bullets, Active Reload
+  Mid · L-R                -> main path (sequential): Spirit Lifesteal, Healbane, Spirit Shielding, Surge of Power, Mystic Vulnerability, Toxic Bullets, Split Shot, Stamina Mastery
+  Mid · cont.              -> main path (sequential): Capacitor, Ricochet
+  Late · L-R               -> main path (sequential): Escalating Exposure, Siphon Bullets, Spiritual Overflow, Lucky Shot
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Dispel Magic, Spellbreaker, Bullet Resilience, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Inhibitor, Silencer, Mercurial Magnum, Cheat Death, Divine Barrier
+
+## SALE CHECKLIST (computed)
+- Mid · cont.: buy Ricochet, sell Extra Regen: Extra Regen is not held at that point in the walk - only bought in a conditional branch: the note applies only if that branch was taken (no issue)
+- Late · L-R (main path): buy Siphon Bullets, sell Spirit Shielding
+    function of Spirit Shielding: spirit_resist, sustain; replacement Siphon Bullets: bullet_resist; roles lost: spirit_resist, sustain  [VERIFIED GAME MECHANIC]
+    Spirit Shielding is a component of later items: no
+    held for 31200.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 19200/8000/9600 -> 19200/12800/9600; thresholds lost: none
+    trade ratio after the sale 0.46; selling Active Reload instead: 0.50 (+8.6%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Inhibitor, sell Healbane
+    function of Healbane: sustain; replacement Inhibitor: bullet_proc; roles lost: sustain  [VERIFIED GAME MECHANIC]
+    Healbane is a component of later items: no
+    held for 49600.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 32000/11200/9600 -> 32000/16000/9600; thresholds lost: none
+    trade ratio after the sale 0.31; selling Active Reload instead: 0.29 (-7.2%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Silencer, sell Active Reload
+    function of Active Reload: ammo, fire_rate, move_speed, sustain; replacement Silencer: bullet_proc, silence, spirit_resist; roles lost: ammo, fire_rate, move_speed, sustain  [VERIFIED GAME MECHANIC]
+    Active Reload is a component of later items: no
+    held for 52800.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 32000/11200/9600 -> 36800/11200/9600; thresholds lost: none
+    trade ratio after the sale 0.28; selling Healbane instead: 0.29 (+4.8%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Active Reload): 20 s 184 bullets (clip 52, 3.5 magazines, 38% not firing; refill items used every other charge) | 60 s 534 bullets, 40% not firing | damage 60 s 6544  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Active Reload, sell Healbane: 20 s 214 bullets (clip 60, 3.6 magazines, 39% not firing; refill items used every other charge) | 60 s 621 bullets, 40% not firing | damage 60 s 7610  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Active Reload, no Silencer): 20 s 214 bullets (clip 60, 3.6 magazines, 39% not firing; refill items used every other charge) | 60 s 621 bullets, 40% not firing | damage 60 s 7610  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Mercurial Magnum, sell Surge of Power
+    function of Surge of Power: fire_rate, imbue_spirit, move_speed; replacement Mercurial Magnum: ammo, fire_rate; roles lost: imbue_spirit, move_speed  [VERIFIED GAME MECHANIC]
+    Surge of Power is a component of later items: no
+    held for 46400.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 32000/11200/9600 -> 32000/11200/12800; thresholds lost: none
+    trade ratio after the sale 0.36; selling Active Reload instead: 0.33 (-7.1%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Surge of Power): 20 s 243 bullets (clip 68, 3.6 magazines, 26% not firing; refill items used every other charge) | 60 s 684 bullets, 30% not firing | damage 60 s 8379  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Surge of Power, sell Active Reload: 20 s 226 bullets (clip 60, 3.8 magazines, 29% not firing; refill items used every other charge) | 60 s 642 bullets, 33% not firing | damage 60 s 7871  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Surge of Power, no Mercurial Magnum): 20 s 214 bullets (clip 60, 3.6 magazines, 39% not firing; refill items used every other charge) | 60 s 621 bullets, 40% not firing | damage 60 s 7610  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Cheat Death, sell Stamina Mastery
+    function of Stamina Mastery: stats only; replacement Cheat Death: bullet_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Stamina Mastery is a component of later items: no
+    held for 37600.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 32000/11200/9600 -> 32000/14400/9600; thresholds lost: none
+    trade ratio after the sale 0.36; selling Active Reload instead: 0.33 (-7.8%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

@@ -1,0 +1,52 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: greytalon
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:12Z
+BODY-SHA: 77a2c5fa2f01331e90d3bc6f1a0b207ee16ccfe536635b8a3e724789ba6e2517
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Extra Charge, Mystic Burst, High-Velocity Rounds, Extra Spirit, Compress Cooldown, Improved Spirit
+  Mid · L-R                -> main path (sequential): Extra Stamina, Enchanter's Emblem, Stamina Mastery, Tankbuster, Long Range, Sharpshooter
+  Mid · cont.              -> main path (sequential): Recharging Rush, Rapid Recharge
+  Late · L-R               -> main path (sequential): Surge of Power, Boundless Spirit, Superior Cooldown, Indomitable, Spirit Burn, Mystic Reverb
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Dispel Magic, Spirit Resilience, Unstoppable
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Spiritual Overflow, Witchmail, Echo Shard, Refresher, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Spiritual Overflow, sell Recharging Rush
+    function of Recharging Rush: ammo; replacement Spiritual Overflow: bullet_proc, duration, fire_rate, sustain; roles lost: ammo  [VERIFIED GAME MECHANIC]
+    Recharging Rush is a component of later items: no
+    held for 37600 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 4800/11200/32000 -> 9600/11200/32000; thresholds lost: none
+    trade ratio after the sale 0.36; selling Enchanter's Emblem instead: 0.36 (+1.3%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Recharging Rush): 20 s 35 bullets (clip 17, 2.1 magazines, 19% not firing; refill items used every other charge) | 60 s 101 bullets, 22% not firing | damage 60 s 11751  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Recharging Rush, sell Enchanter's Emblem: 20 s 37 bullets (clip 20, 1.8 magazines, 14% not firing; refill items used every other charge) | 60 s 105 bullets, 19% not firing | damage 60 s 13781  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Recharging Rush, no Spiritual Overflow): 20 s 35 bullets (clip 20, 1.7 magazines, 13% not firing; refill items used every other charge) | 60 s 98 bullets, 18% not firing | damage 60 s 10945  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Witchmail, sell Enchanter's Emblem
+    function of Enchanter's Emblem: cooldown, spirit_resist; replacement Witchmail: cooldown, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Enchanter's Emblem is a component of later items: no
+    held for 46400 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 4800/11200/32000 -> 4800/16000/32000; thresholds lost: none
+    trade ratio after the sale 0.32; selling Recharging Rush instead: 0.30 (-7.2%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Echo Shard, sell Rapid Recharge
+    function of Rapid Recharge: charges, cooldown; replacement Echo Shard: bullet_resist, cooldown, spirit_resist; roles lost: charges  [VERIFIED GAME MECHANIC]
+    Rapid Recharge is a component of later items: no
+    held for 35200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/11200/32000 -> 4800/11200/35200; thresholds lost: none
+    trade ratio after the sale 0.31; selling Recharging Rush instead: 0.28 (-11.0%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Refresher, sell Stamina Mastery
+    function of Stamina Mastery: stats only; replacement Refresher: bullet_resist, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Stamina Mastery is a component of later items: no
+    held for 44000 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/11200/32000 -> 4800/8000/38400; thresholds lost: none
+    trade ratio after the sale 0.36; selling Recharging Rush instead: 0.32 (-11.2%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

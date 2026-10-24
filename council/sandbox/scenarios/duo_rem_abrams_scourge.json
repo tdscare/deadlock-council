@@ -1,0 +1,126 @@
+{
+ "id": "duo_rem_abrams_scourge",
+ "title": "Rem + Abrams: Scourge cast by Rem while napping on Abrams",
+ "hero": "Rem",
+ "playstyle": "Support Rem on tanky Abrams",
+ "builds": [
+  "rem_duo_abrams",
+  "abrams_duo_rem",
+  "abrams"
+ ],
+ "question": "Does Rem's Scourge, cast while napping on Abrams, last 13.5s and out-damage Abrams' own Scourge, and do two Scourges refresh rather than stack?",
+ "hypothesis": "H-B2-2.1: Scourge self-cast by Rem during Tag Along lands on Abrams and lasts 13.5s (+35%, Tag Along T2), +-0.5s. H-B2-2.2: a second Scourge on Abrams refreshes (aura damage per second unchanged, <5% change) rather than stacking. H-B2-2.3: Rem's Scourge total damage on 3 bots per cast is >=25% higher than Abrams' own at the same souls (13.5s x Rem napping spirit ~190 vs 10s x Abrams ~168). H-B2-2.4: Divine Barrier self-cast while napping gives Abrams 810 barrier (+-5%).",
+ "arms": [
+  {
+   "name": "abrams_own_scourge",
+   "items": [
+    "Scourge (Abrams)"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": 37600,
+   "notes": "base abrams, Rem not present"
+  },
+  {
+   "name": "rem_scourge_napping",
+   "items": [
+    "Scourge (Rem)"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": 37600,
+   "notes": "rem_duo_abrams naps on abrams_duo_rem, self-casts Scourge"
+  },
+  {
+   "name": "double_scourge",
+   "items": [
+    "Scourge (Abrams)",
+    "Scourge (Rem)"
+   ],
+   "ability_order": null,
+   "imbues": {},
+   "souls": 37600,
+   "notes": "stacking check only"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "37.6k souls",
+  "souls": 37600,
+  "position": "Abrams standing among 3 bots (within 6m), Rem napping on him",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "rem_duo_abrams",
+    "count": 1,
+    "role": "support rider"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "bot HP",
+   "debuffs",
+   "Scourge buff"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns, HP and debuffs reset between trials",
+  "Same boons/souls/ability points in both arms except the item under test",
+  "Same bot heroes, HP and resists",
+  "Arms run interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Abrams walks into the 3 bots and does nothing else",
+  "Arm A: Abrams casts Scourge on himself. Arm B: Rem Tag Alongs onto Abrams and self-casts Scourge within 1s. Arm C: both cast, 1s apart",
+  "Time the Scourge buff on Abrams, sum Scourge damage on the 3 bots until it ends",
+  "Arm B also: Rem self-casts Divine Barrier while napping, read the barrier bar"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "scourge_damage_dealt_per_cast",
+   "unit": "hp",
+   "how": "Scourge damage summed over 3 bots",
+   "category": "sustained damage",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "scourge_uptime_s",
+   "unit": "s",
+   "how": "buff timer on Abrams",
+   "category": "cooldowns",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "divine_barrier_amount",
+   "unit": "hp",
+   "how": "barrier on Abrams",
+   "category": "survivability",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "scourge_damage_dealt_per_cast",
+  "min_effect_pct": 25,
+  "min_trials": 5,
+  "rule": "SUPPORTS if rem_scourge_napping beats abrams_own_scourge by >=25% with non-overlapping ranges; REFUTES if Rem's is not higher; else INCONCLUSIVE. If double_scourge deals >=40% more per second than one, two copies stack and Abrams keeps his own (revert the Abrams swap)."
+ },
+ "blockedIfNo": [
+  "allies spawnable"
+ ]
+}

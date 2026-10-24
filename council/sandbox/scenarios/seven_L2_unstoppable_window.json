@@ -1,0 +1,106 @@
+{
+ "id": "seven_L2_unstoppable_window",
+ "title": "Unstoppable window vs storm length (stun part UNSUPPORTED)",
+ "hero": "Seven",
+ "playstyle": "Ult Seven",
+ "builds": [
+  "seven"
+ ],
+ "question": "How long does Unstoppable last with Superior Duration and Diviner's Kevlar, and what share of the storm does it cover? Does casting it right before the ult change the storm (Arcane Surge consumption)?",
+ "hypothesis": "H-L2: Unstoppable modifier lasts 5.5 x (1 + 0.28 + 0.15) = 7.9 s (7.0 s with Superior Duration only) while the storm lasts ~20-22 s, so it covers 31-39%. The stun-interrupt half (does a stun after the window end the storm) is UNSUPPORTED: no op applies CC to the player (GAPS.md 7).",
+ "arms": [
+  {
+   "name": "UNST",
+   "items": [
+    "upgrade_unstoppable"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 31200,
+   "notes": "Unstoppable only"
+  },
+  {
+   "name": "UNST_SD",
+   "items": [
+    "upgrade_unstoppable",
+    "upgrade_imbued_duration_extender"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 31200,
+   "notes": ""
+  },
+  {
+   "name": "UNST_SD_KEV",
+   "items": [
+    "upgrade_unstoppable",
+    "upgrade_imbued_duration_extender",
+    "upgrade_diviners_kevlar"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 31200,
+   "notes": ""
+  }
+ ],
+ "setup": {
+  "level_or_boons": "souls 31200 (levels.json)",
+  "souls": 31200,
+  "position": "mid lane, bots on a 300 u ring (inside the 40 m storm)",
+  "enemies": [
+   {
+    "hero": "Haze (bot)",
+    "count": 1,
+    "items": [],
+    "behaviour": "stand, attacks disabled",
+    "hp": "ekeep 0.9"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 50 (heals never capped)",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance (enemies 3 at 300 u ring, main target 350 u)",
+  "hardreset between blocks (fresh cooldowns, no items)",
+  "Same souls/level/ability tiers (unlock 7) in every arm except the thing under test",
+  "Same bot heroes, HP keep-alive (ekeep 0.9) and resists",
+  "Arms interleaved A,B,A,B; A/A floor run first"
+ ],
+ "procedure": [
+  "give items; basemods",
+  "cast i1 0.1; then 'mods' every 0.5 s for 10 s (wait 0.5 / mods x20)",
+  "cast 4 22 with enemies 3 to read storm length in the same block"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "unstoppable_s",
+   "unit": "s",
+   "how": "first/last 'mods' line listing the Unstoppable modifier",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "storm_seconds",
+   "unit": "s",
+   "how": "storm tick span",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "unstoppable_s",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "UNST_SD_KEV within 0.5 s of 7.9 s supports the coverage maths; stun-interrupt stays UNSUPPORTED until a player-CC op exists"
+ },
+ "blockedIfNo": [
+  "op that stuns the player (for the interrupt half)"
+ ]
+}

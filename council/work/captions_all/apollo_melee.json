@@ -1,0 +1,2702 @@
+{
+ "schema": 1,
+ "id": "apollo_melee",
+ "hero": "Apollo",
+ "name": "Rizuhble's Curb Stomp Apollo",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Health",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Getting burst when you go in. Sell it for Unstoppable.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-11,200 (levels 1-18). Abilities gained (both point models agree): Riposte T3. 4.8k spikes: weapon 4.8k at Hunter's Aura, vitality 4.8k at Healing Booster. Ultimate (Itani Lo Sahn) is available from Hunter's Aura.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "apollo_melee:7:phase_range:4179",
+    "apollo_melee:7:phase_abilities:4180",
+    "apollo_melee:7:phase_spikes:4189",
+    "apollo_melee:7:phase_ult:4190"
+   ],
+   "items": [
+    {
+     "name": "Melee Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Healing Booster, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Melee Charge",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k weapon tier, which Hunter's Aura completes 4,000 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (weapon): Hunter's Aura completes 4.8k weapon in 4000 souls (~4.0 min), 2 purchases",
+     "claim_ids": [
+      "apollo_melee:1:spike_progress:4165"
+     ],
+     "lint": [],
+     "legacy_note": "Once Riposte has its longer stun, heavy melee right after it.",
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:1:spike_progress:4165",
+       true,
+       "1600"
+      ]
+     ]
+    },
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Healing Booster, 6400 souls (~6.4 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Hunter's Aura",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "apollo_melee:3:spike_complete:4169"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:3:spike_complete:4169",
+       true,
+       "inventory weapon: before 1600, after 4800, threshold 4800"
+      ]
+     ]
+    },
+    {
+     "name": "Lifestrike",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Healing Booster completes 800 souls on. Upgrade of Melee Lifesteal (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "b",
+     "why": "imminent: Healing Booster completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "apollo_melee:4:spike_progress:4171",
+      "apollo_melee:4:upgrade_of:4172"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:4:spike_progress:4171",
+       true,
+       "4000"
+      ],
+      [
+       "apollo_melee:4:upgrade_of:4172",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Healing Booster",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus. Upgrade of Extra Regen (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "apollo_melee:5:spike_complete:4173",
+      "apollo_melee:5:upgrade_of:4174"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:5:spike_complete:4173",
+       true,
+       "inventory vitality: before 4000, after 4800, threshold 4800"
+      ],
+      [
+       "apollo_melee:5:upgrade_of:4174",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Close Quarters",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only; its 6.4k tier completes at Stalker, 3200 souls (~3.2 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": "Builds toward the 6.4k vitality tier, which Reactive Barrier completes 800 souls on.",
+     "cls": "b",
+     "why": "imminent: Reactive Barrier completes 6.4k vitality in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "apollo_melee:7:spike_progress:4177"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:7:spike_progress:4177",
+       true,
+       "5600"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 11,200-27,200 (levels 18-29). Abilities gained (both point models agree): Itani Lo Sahn T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "apollo_melee:13:phase_range:4202",
+    "apollo_melee:13:phase_abilities:4203"
+   ],
+   "items": [
+    {
+     "name": "Reactive Barrier",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 5,600 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Stalker",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 5,600 to 7,200 invested: bonus 46 to 54% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Point Blank",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 7,200 to 9,600 invested: bonus 54 to 62% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Berserker",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 9,600 to 12,800 invested: bonus 62 to 74% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Crushing Fists",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes weapon from 12,800 to 17,600 invested: bonus 74 to 86% weapon damage.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you. Takes vitality from 6,400 to 9,600 invested: bonus 42 to 46 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "apollo_melee:13:defence_spirit:4201",
+      "apollo_melee:13:invest_step:4199"
+     ],
+     "lint": [],
+     "legacy_note": "Get it earlier if most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:13:defence_spirit:4201",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "apollo_melee:13:invest_step:4199",
+       true,
+       "inventory vitality: before 6400, after 9600, threshold 8000"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 27,200-51,200 (levels 29-36). Abilities gained (both point models agree): Disengaging Sigil T3, Flawless Advance T3. Your biggest single spirit hit (Flawless Advance, perfect damage) grows from 125 to 225.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "apollo_melee:17:phase_range:4215",
+    "apollo_melee:17:phase_abilities:4216",
+    "apollo_melee:17:phase_power:4217"
+   ],
+   "items": [
+    {
+     "name": "Witchmail",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 9,600 to 16,000 invested, crossing the 11.2k, 16k tiers: bonus 46 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Phantom Strike",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 16,000 to 22,400 invested: bonus 54 to 60 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Indomitable",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Disengaging Sigil (movement) and Riposte (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown. Takes vitality from 27,200 to 33,600 invested: bonus 60 to 66 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "apollo_melee:17:cc_exposure:4214",
+      "apollo_melee:17:invest_step:4213"
+     ],
+     "lint": [],
+     "legacy_note": "Get it earlier if stuns keep stopping you before you reach them.",
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:17:cc_exposure:4214",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "apollo_melee:17:invest_step:4213",
+       true,
+       "inventory vitality: before 27200, after 33600, threshold 28800"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Lifestrike? Buy what is killing you, cheapest first. Not dying? Skip. Sell Stalker.",
+   "desc": "Dying after Lifestrike? Buy what is killing you, cheapest first. Not dying? Skip. Sell Stalker.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "apollo_melee:18:defence_purge:4221"
+     ],
+     "lint": [],
+     "legacy_note": "Hexes and slows keep you off them.",
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:18:defence_purge:4221",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "apollo_melee:18:defence_parry:4222"
+     ],
+     "lint": [],
+     "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow.",
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:18:defence_parry:4222",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "apollo_melee:18:defence_bullet:4223"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry is melting you up close.",
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:18:defence_bullet:4223",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "apollo_melee:18:defence_gun:4224"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:18:defence_gun:4224",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Healbane",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Their healer keeps your target alive.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Colossus",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Hunter's Aura for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Scourge",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (0 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 0 to 45 spirit power. Replaces Spirit Resilience: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "apollo_melee:18:spike_complete:4226",
+      "apollo_melee:18:sell_swap:4227"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Spirit Resilience for this.",
+     "temporary": true,
+     "verify": [
+      [
+       "apollo_melee:18:spike_complete:4226",
+       true,
+       "inventory spirit: before 0, after 6400, threshold 4800"
+      ],
+      [
+       "apollo_melee:18:sell_swap:4227",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "apollo_melee:18:defence_barrier:4228"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:18:defence_barrier:4228",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Healing Tempo",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "apollo_melee:18:upgrade_delta:4229"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Healing Booster.",
+     "temporary": false,
+     "verify": [
+      [
+       "apollo_melee:18:upgrade_delta:4229",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "apollo_melee:0:spike_progress:4163": {
+   "id": "apollo_melee:0:spike_progress:4163",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Melee Lifesteal",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "apollo_melee:0:component_for:4164": {
+   "id": "apollo_melee:0:component_for:4164",
+   "kind": "component_for",
+   "phrase": "From Lifestrike: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Melee Lifesteal",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 8000,
+    "event": "Lifestrike"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Lifestrike"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:1:spike_progress:4165": {
+   "id": "apollo_melee:1:spike_progress:4165",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k weapon tier, which Hunter's Aura completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Melee Charge",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Hunter's Aura completes the 4.8k weapon tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "apollo_melee:1:component_for:4166": {
+   "id": "apollo_melee:1:component_for:4166",
+   "kind": "component_for",
+   "phrase": "From Crushing Fists: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Melee Charge",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 21600,
+    "event": "Crushing Fists"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Crushing Fists"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:2:spike_progress:4167": {
+   "id": "apollo_melee:2:spike_progress:4167",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Extra Regen",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "apollo_melee:2:component_for:4168": {
+   "id": "apollo_melee:2:component_for:4168",
+   "kind": "component_for",
+   "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Extra Regen",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 6400,
+    "event": "Healing Booster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Healing Booster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:3:spike_complete:4169": {
+   "id": "apollo_melee:3:spike_complete:4169",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (1,600 to 4,800 invested): bonus 12 to 46% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 3,
+    "item": "Hunter's Aura",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "46.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "apollo_melee:3:swap_candidate:4170": {
+   "id": "apollo_melee:3:swap_candidate:4170",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Colossus later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 3,
+    "item": "Hunter's Aura",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Hunter's Aura",
+    "buyer": "Colossus"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:4:spike_progress:4171": {
+   "id": "apollo_melee:4:spike_progress:4171",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Healing Booster completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Lifestrike",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Healing Booster completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "apollo_melee:4:upgrade_of:4172": {
+   "id": "apollo_melee:4:upgrade_of:4172",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Melee Lifesteal (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 4,
+    "item": "Lifestrike",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Melee Lifesteal"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:5:spike_complete:4173": {
+   "id": "apollo_melee:5:spike_complete:4173",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 5,
+    "item": "Healing Booster",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "apollo_melee:5:upgrade_of:4174": {
+   "id": "apollo_melee:5:upgrade_of:4174",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Regen (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 5,
+    "item": "Healing Booster",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Regen"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:6:spike_progress:4175": {
+   "id": "apollo_melee:6:spike_progress:4175",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 5,600 of the 6.4k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Close Quarters",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 6400
+  },
+  "apollo_melee:6:component_for:4176": {
+   "id": "apollo_melee:6:component_for:4176",
+   "kind": "component_for",
+   "phrase": "From Point Blank: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Close Quarters",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Point Blank"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Point Blank"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:7:spike_progress:4177": {
+   "id": "apollo_melee:7:spike_progress:4177",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 6.4k vitality tier, which Reactive Barrier completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Grit",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Reactive Barrier completes the 6.4k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k",
+    800,
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 6400
+  },
+  "apollo_melee:7:component_for:4178": {
+   "id": "apollo_melee:7:component_for:4178",
+   "kind": "component_for",
+   "phrase": "From Reactive Barrier: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Grit",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Reactive Barrier"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Reactive Barrier"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:7:phase_range:4179": {
+   "id": "apollo_melee:7:phase_range:4179",
+   "kind": "phase_range",
+   "phrase": "Souls 0-11,200 (levels 1-18).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Grit",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Grit",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "11,200",
+    "1",
+    "18"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:7:phase_abilities:4180": {
+   "id": "apollo_melee:7:phase_abilities:4180",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Riposte T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Grit",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Grit",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:7:phase_spikes:4189": {
+   "id": "apollo_melee:7:phase_spikes:4189",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Hunter's Aura, vitality 4.8k at Healing Booster.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Grit",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Grit",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:7:phase_ult:4190": {
+   "id": "apollo_melee:7:phase_ult:4190",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Itani Lo Sahn) is available from Hunter's Aura.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 7,
+    "item": "Grit",
+    "souls": 11200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Grit",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:8:invest_step:4191": {
+   "id": "apollo_melee:8:invest_step:4191",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 5,600 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 8,
+    "item": "Reactive Barrier",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "apollo_melee:8:upgrade_of:4192": {
+   "id": "apollo_melee:8:upgrade_of:4192",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 8,
+    "item": "Reactive Barrier",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Grit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:9:invest_step:4193": {
+   "id": "apollo_melee:9:invest_step:4193",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 5,600 to 7,200 invested: bonus 46 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Stalker",
+    "souls": 13600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "7200",
+    "46.0",
+    "54.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 6400
+  },
+  "apollo_melee:10:invest_step:4194": {
+   "id": "apollo_melee:10:invest_step:4194",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 7,200 to 9,600 invested: bonus 54 to 62% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Point Blank",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "9600",
+    "54.0",
+    "62.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 8000
+  },
+  "apollo_melee:10:upgrade_of:4195": {
+   "id": "apollo_melee:10:upgrade_of:4195",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Close Quarters (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Point Blank",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Close Quarters"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:11:invest_step:4196": {
+   "id": "apollo_melee:11:invest_step:4196",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 9,600 to 12,800 invested: bonus 62 to 74% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Berserker",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "12800",
+    "62.0",
+    "74.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 11200
+  },
+  "apollo_melee:12:invest_step:4197": {
+   "id": "apollo_melee:12:invest_step:4197",
+   "kind": "invest_step",
+   "phrase": "Takes weapon from 12,800 to 17,600 invested: bonus 74 to 86% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Crushing Fists",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 16000
+   },
+   "numbers": [
+    "12800",
+    "17600",
+    "74.0",
+    "86.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 16000
+  },
+  "apollo_melee:12:upgrade_of:4198": {
+   "id": "apollo_melee:12:upgrade_of:4198",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Melee Charge (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 12,
+    "item": "Crushing Fists",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Melee Charge"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:13:invest_step:4199": {
+   "id": "apollo_melee:13:invest_step:4199",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 9,600 invested: bonus 42 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Resilience",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "9600",
+    "42.0",
+    "46.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "apollo_melee:13:swap_candidate:4200": {
+   "id": "apollo_melee:13:swap_candidate:4200",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Scourge later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Resilience",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Resilience",
+    "buyer": "Scourge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:13:defence_spirit:4201": {
+   "id": "apollo_melee:13:defence_spirit:4201",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Resilience",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:13:phase_range:4202": {
+   "id": "apollo_melee:13:phase_range:4202",
+   "kind": "phase_range",
+   "phrase": "Souls 11,200-27,200 (levels 18-29).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Resilience",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": []
+   },
+   "numbers": [
+    "11,200",
+    "27,200",
+    "18",
+    "29"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:13:phase_abilities:4203": {
+   "id": "apollo_melee:13:phase_abilities:4203",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Itani Lo Sahn T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Spirit Resilience",
+    "souls": 27200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:14:invest_step:4210": {
+   "id": "apollo_melee:14:invest_step:4210",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 9,600 to 16,000 invested, crossing the 11.2k, 16k tiers: bonus 46 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Witchmail",
+    "souls": 33600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "16000",
+    "46.0",
+    "54.0",
+    "11.2k",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "apollo_melee:15:invest_step:4211": {
+   "id": "apollo_melee:15:invest_step:4211",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 16,000 to 22,400 invested: bonus 54 to 60 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Phantom Strike",
+    "souls": 40000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 22400
+   },
+   "numbers": [
+    "16000",
+    "22400",
+    "54.0",
+    "60.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 22400
+  },
+  "apollo_melee:16:upgrade_of:4212": {
+   "id": "apollo_melee:16:upgrade_of:4212",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Reactive Barrier (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Indomitable",
+    "souls": 44800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Reactive Barrier"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "apollo_melee:17:invest_step:4213": {
+   "id": "apollo_melee:17:invest_step:4213",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 27,200 to 33,600 invested: bonus 60 to 66 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Unstoppable",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 28800
+   },
+   "numbers": [
+    "27200",
+    "33600",
+    "60.0",
+    "66.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 28800
+  },
+  "apollo_melee:17:cc_exposure:4214": {
+   "id": "apollo_melee:17:cc_exposure:4214",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Disengaging Sigil (movement) and Riposte (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 17,
+    "item": "Unstoppable",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "apollo_melee:17:phase_range:4215": {
+   "id": "apollo_melee:17:phase_range:4215",
+   "kind": "phase_range",
+   "phrase": "Souls 27,200-51,200 (levels 29-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 17,
+    "item": "Unstoppable",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Unstoppable",
+    "keys": []
+   },
+   "numbers": [
+    "27,200",
+    "51,200",
+    "29",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:17:phase_abilities:4216": {
+   "id": "apollo_melee:17:phase_abilities:4216",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Disengaging Sigil T3, Flawless Advance T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 17,
+    "item": "Unstoppable",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Unstoppable",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:17:phase_power:4217": {
+   "id": "apollo_melee:17:phase_power:4217",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Flawless Advance, perfect damage) grows from 125 to 225.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_fencer_lunge",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 17,
+    "item": "Unstoppable",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Unstoppable",
+    "keys": []
+   },
+   "numbers": [
+    "125",
+    "225"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:18:defence_purge:4221": {
+   "id": "apollo_melee:18:defence_purge:4221",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Dispel Magic",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Hexes and slows keep you off them."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:18:defence_parry:4222": {
+   "id": "apollo_melee:18:defence_parry:4222",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Counterspell",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:18:defence_bullet:4223": {
+   "id": "apollo_melee:18:defence_bullet:4223",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Metal Skin",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry is melting you up close."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:18:defence_gun:4224": {
+   "id": "apollo_melee:18:defence_gun:4224",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Plated Armor",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:18:sell_swap:4225": {
+   "id": "apollo_melee:18:sell_swap:4225",
+   "kind": "sell_swap",
+   "phrase": "Replaces Hunter's Aura: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Colossus",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Hunter's Aura for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Hunter's Aura",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Hunter's Aura"
+  },
+  "apollo_melee:18:spike_complete:4226": {
+   "id": "apollo_melee:18:spike_complete:4226",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (0 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 0 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_fencer m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 18,
+    "item": "Scourge",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Resilience for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "0",
+    "6400",
+    "0.0",
+    "45.0",
+    "4.8k",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "apollo_melee:18:sell_swap:4227": {
+   "id": "apollo_melee:18:sell_swap:4227",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Resilience: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Scourge",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Resilience for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Resilience",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Resilience"
+  },
+  "apollo_melee:18:defence_barrier:4228": {
+   "id": "apollo_melee:18:defence_barrier:4228",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Divine Barrier",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:18:upgrade_delta:4229": {
+   "id": "apollo_melee:18:upgrade_delta:4229",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Healing Booster for 4,800 more souls: bonus fire rate 0 to 35; tech resist 0 to 10..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healbuff",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_healing_booster"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 18,
+    "item": "Healing Tempo",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Healing Booster"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "35",
+    "0",
+    "10"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "apollo_melee:18:upgrade_of:4230": {
+   "id": "apollo_melee:18:upgrade_of:4230",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Healing Booster (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Healing Tempo",
+    "souls": 51200,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Healing Booster."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Healing Booster"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "apollo_melee",
+   "item": "Extra Health",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 51200,
+   "unpublished": []
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Extra Health",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Getting burst when you go in. Sell it for Unstoppable."
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Melee Lifesteal",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Healing Booster, 8800 souls (~8.8 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "apollo_melee:0:component_for:4164",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Lifestrike: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 8000,
+      "event": "Lifestrike"
+     }
+    }
+   ]
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Melee Charge",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (weapon): Hunter's Aura completes 4.8k weapon in 4000 souls (~4.0 min), 2 purchases",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "apollo_melee:1:spike_progress:4165",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k weapon tier, which Hunter's Aura completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Hunter's Aura completes the 4.8k weapon tier"
+     }
+    },
+    {
+     "id": "apollo_melee:1:component_for:4166",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Crushing Fists: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 21600,
+      "event": "Crushing Fists"
+     }
+    }
+   ]
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Melee Charge",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Once Riposte has its longer stun, heavy melee right after it."
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Extra Regen",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Healing Booster, 6400 souls (~6.4 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "apollo_melee:2:component_for:4168",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Healing Booster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 6400,
+      "event": "Healing Booster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Lifestrike",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Healing Booster completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+   "souls": 8800,
+   "unpublished": [
+    {
+     "id": "apollo_melee:4:spike_progress:4171",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Healing Booster completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Healing Booster completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Close Quarters",
+   "section": "early",
+   "cls": "c",
+   "why": "weapon investment only; its 6.4k tier completes at Stalker, 3200 souls (~3.2 min) later and weapon is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 10400,
+   "unpublished": [
+    {
+     "id": "apollo_melee:6:component_for:4176",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Point Blank: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Point Blank"
+     }
+    }
+   ]
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Grit",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Reactive Barrier completes 6.4k vitality in 800 souls (~0.8 min), 1 purchases",
+   "souls": 11200,
+   "unpublished": [
+    {
+     "id": "apollo_melee:7:spike_progress:4177",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 6.4k vitality tier, which Reactive Barrier completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Reactive Barrier completes the 6.4k vitality tier"
+     }
+    },
+    {
+     "id": "apollo_melee:7:component_for:4178",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Reactive Barrier: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Reactive Barrier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Spirit Resilience",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Get it earlier if most of their damage is spirit."
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Indomitable",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 44800,
+   "unpublished": []
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Unstoppable",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Get it earlier if stuns keep stopping you before you reach them."
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Hexes and slows keep you off them."
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry is melting you up close."
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Healbane",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 51200,
+   "unpublished": []
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Healbane",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their healer keeps your target alive."
+  },
+  {
+   "build": "apollo_melee",
+   "item": "Colossus",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 51200,
+   "unpublished": []
+  }
+ ],
+ "stats": {
+  "d": 4,
+  "c": 3,
+  "b": 3,
+  "a": 11,
+  "g": 7
+ }
+}

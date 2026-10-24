@@ -1,0 +1,14 @@
+SEALED CANDIDATE LIST (research side) for council/evidence/decision/seven_gun_3200_record.txt - do not show to blind specialists before their lists are in
+paths (abtimeline.py --strategy seven_gun 3200-16000:3200 --alt council/evidence/decision/seven_gun_alt_proposal.json):
+- A0 AS-BUILT: the build as it is in data.js  [generator: data.js core boxes L-R]
+- A1 RUSH-DMG-4.8K: gun items first until gun holds 4.8k (6400), rest in build order  [generator: rush(gun, 4800) over the build's own items]
+- A2 RUSH-VIT-4.8K: vitality items first until vitality holds 4.8k (9600), rest in build order  [generator: rush(vitality, 4800); catalog greens added if the build has < 4.8k]
+- A3 SPREAD: colours interleaved, cheapest colour next (no rush)  [generator: spread(): round-robin by souls spent per colour]
+- A4 OFFENSIVE-GREENS: Bullet Lifesteal (+28.6% trade ratio for 1600), Battle Vest (+25.9% trade ratio for 1600) bought before Cultist Sacrifice (delays it by 3200 souls)  [generator: candidate_greens
+- A5 DEFENSIVE-GREENS: Weapon Shielding (+81.0% time-to-die for 1600), Extra Health (+28.1% time-to-die for 800) bought before Cultist Sacrifice (delays it by 2400 souls)  [generator: candidate_greens
+- A8 OWN-GREENS-BEFORE-SPIKE: the build's own first greens (Spirit Lifesteal, Sprint Boots, Enduring Speed, 3200) moved before Cultist Sacrifice  [generator: build's own vitality items after the spike
+- XP ALT-FILE: blocked proposal council/proposals/seven_gun.json core path and ability order (existing input)  [generator: --alt council/evidence/decision/seven_gun_alt_proposal.json]
+slot items at purchase 5 (4000 souls), equal souls 800 (abtimeline.py --interactions seven_gun 'Rapid Rounds' --vs 'Extended Magazine'):
+ALTERNATIVES (equal souls 800, unconditional, ranked): Extended Magazine, Close Quarters, Headshot Booster, Restorative Shot
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (800) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage; plus requested ['Extended Magazine']
+also: keep data.js as is (A0); buy nothing and bank the souls

@@ -1,0 +1,100 @@
+{
+ "strategy": {
+  "trig": [
+   "purchase order",
+   "greens (Spirit Lifesteal,Bullet Lifesteal,Sprint Boots,Enduring Speed,Reactive Barrier,Leech,Inhibitor -> Spirit Lifesteal,Bullet Lifesteal,Sprint Boots,Enduring Speed,Reactive Barrier,Leech,Inhibitor)",
+   "4.8k spike timing (gun 5600 -> 10400, vitality 21600 -> 14400, spirit 10400 -> 12800)"
+  ],
+  "lines": [
+   "STRATEGY BLOCK"
+  ]
+ },
+ "interaction": {
+  "lines": [
+   "INTERACTION BLOCK Spirit Lifesteal",
+   "INTERACTION BLOCK Tesla Bullets",
+   "INTERACTION BLOCK Surge of Power",
+   "INTERACTION BLOCK Ricochet",
+   "INTERACTION BLOCK Spiritual Overflow"
+  ]
+ },
+ "weakness": {
+  "lines": [
+   "WEAKNESS: proposal is not justified by a weakness"
+  ]
+ },
+ "overlap": {
+  "changed": [
+   "  overlap Spirit Lifesteal (moved earlier): at_buy=COMPLEMENTS",
+   "  overlap Quicksilver Reload (moved earlier): at_buy=ADDS-VALUE(14.5% whole item)",
+   "  overlap Bullet Lifesteal (moved earlier): at_buy=COMPLEMENTS",
+   "  overlap Surge of Power (moved earlier): at_buy=ADDS-VALUE(11.3% whole item); core_end=ADDS-VALUE(8.9% whole item)",
+   "  overlap Sprint Boots (moved earlier): no overlap-candidate",
+   "  overlap Enduring Speed (moved earlier): no overlap-candidate",
+   "  overlap Reactive Barrier (moved earlier): at_buy=UNKNOWN; core_end=UNKNOWN",
+   "  overlap Mercurial Magnum (moved earlier): at_buy=ADDS-VALUE(20.0% whole item); core_end=ADDS-VALUE(17.9% whole item)",
+   "  overlap Leech (moved earlier): at_buy=COMPLEMENTS; core_end=UNKNOWN",
+   "  overlap Inhibitor (moved earlier): no overlap-candidate"
+  ],
+  "unresolved": [
+   "overlap-candidate Swift Striker [at_buy=COMPLEMENTS(5.7% whole item) ALT-BETTER [\"Quicksilver Reload\",14.9]; core_end=REDUNDANT-LIKELY(4.3% whole item) ALT-BETTER [\"Quicksilver Reload\",11]]",
+   "overlap-candidate Spirit Shredder [at_buy=UNKNOWN]",
+   "overlap-candidate Spiritual Overflow [at_buy=REDUNDANT-LIKELY(3.7% whole item); core_end=REDUNDANT-LIKELY(3.7% whole item)]",
+   "overlap-candidate Spirit Rend [at_buy=UNKNOWN; core_end=UNKNOWN]",
+   "overlap-candidate Counterspell [core_end=UNKNOWN]",
+   "overlap-candidate Capacitor [core_end=REDUNDANT-LIKELY(1.9% whole item)]",
+   "overlap-candidate Spellslinger [core_end=REDUNDANT-LIKELY(5.9% whole item)]",
+   "overlap-candidate Divine Barrier [core_end=UNKNOWN]"
+  ]
+ },
+ "unresolved": [
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE wraith: Spiritual Overflow @45600 has no \"Threshold:\" changes line naming it",
+  "bc: FRESH_T2_LATE wraith: Spirit Shredder @32800",
+  "walk: Silencer: slot 13 with no sell that frees a slot"
+ ],
+ "proposal": "G4_fail_insufficient",
+ "id": "wraith",
+ "diff": [
+  "added Early · L-R|Spirit Lifesteal, Early · L-R|Bullet Lifesteal, Mid · L-R|Surge of Power, Mid · L-R|Monster Rounds, Mid · L-R|Mercurial Magnum, Late · L-R|Spirit Shredder",
+  "removed Early · L-R|Monster Rounds, Early · L-R|Surge of Power, Mid · L-R|Spirit Lifesteal, Mid · L-R|Bullet Lifesteal, Mid · L-R|Spirit Shredder, Late · L-R|Mercurial Magnum"
+ ],
+ "block": [
+  "NEW violation introduced: bc: MAIN_4.8K_LATE wraith: gun 4.8k at 10400",
+  "NEW violation introduced: bc: SELL_CHAIN_NOT_OWNED wraith: Spirit Lifesteal sells Monster Rounds which is not owned at that point",
+  "NEW violation introduced: bc: SLOTS_GT12_NO_SELL wraith: Silencer is slot 13",
+  "NEW violation introduced: bc: CORE_NOT_12 wraith: core ends with 13 items, 53600 souls",
+  "NEW violation introduced: walk: Silencer: slot 13 with no sell that frees a slot",
+  "OVERLAP: Reactive Barrier (moved earlier) is an overlap-candidate with a low/unknown in-build marginal (at_buy=UNKNOWN; core_end=UNKNOWN) and no `context` evidence file (SCOPE: build-context, BUILD: wraith, ITEM: Reactive Barrier) compares the complete build with/without it vs the alternative use of the same souls",
+  "OVERLAP: Leech (moved earlier) is an overlap-candidate with a low/unknown in-build marginal (at_buy=COMPLEMENTS; core_end=UNKNOWN) and no `context` evidence file (SCOPE: build-context, BUILD: wraith, ITEM: Leech) compares the complete build with/without it vs the alternative use of the same souls",
+  "STRATEGY: proposal changes purchase order + greens (Spirit Lifesteal,Bullet Lifesteal,Sprint Boots,Enduring Speed,Reactive Barrier,Leech,Inhibitor -> Spirit Lifesteal,Bullet Lifesteal,Sprint Boots,Enduring Speed,Reactive Barrier,Leech,Inhibitor) + 4.8k spike timing (gun 5600 -> 10400, vitality 21600 -> 14400, spirit 10400 -> 12800) but council/evidence/strategy/wraith_greens_vs_ricochet.txt: conclusion is \"INSUFFICIENT EVIDENCE - no decision\" (needs CHOSEN; INSUFFICIENT EVIDENCE / DEPENDS ON ASSUMPTION cannot justify a path change)",
+  "INTERACTION: Spirit Lifesteal (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions wraith \"Spirit Lifesteal\") is cited",
+  "INTERACTION: Tesla Bullets (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions wraith \"Tesla Bullets\") is cited",
+  "INTERACTION: Surge of Power (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions wraith \"Surge of Power\") is cited",
+  "INTERACTION: Ricochet (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions wraith \"Ricochet\") is cited",
+  "INTERACTION: Spiritual Overflow (reordered) is a damage/fire-rate/stat item and no `interaction` evidence (abtimeline.py --interactions wraith \"Spiritual Overflow\") is cited",
+  "SALES: new finding \"sale of item already gone\": Monster Rounds sold when buying Spirit Lifesteal but not held (cite a computed comparison and waive, or change the proposal)"
+ ],
+ "warn": [],
+ "fixed": [
+  "bc: FRESH_T2_LATE wraith: Reactive Barrier @23200",
+  "bc: OVERSHOOT_GUN_BEFORE_HEALTH wraith: gun 12000 at health 4.8k @21600",
+  "bc: T4_BEFORE_20K wraith: Ricochet@16800",
+  "bc: HEALTH_4.8K_AFTER_16K wraith: at 21600"
+ ],
+ "kept": [
+  "bc: THRESH_ITEM_NO_THRESHOLD_LINE wraith: Spiritual Overflow @45600 has no \"Threshold:\" changes line naming it",
+  "bc: FRESH_T2_LATE wraith: Spirit Shredder @32800"
+ ],
+ "newV": [
+  "bc: MAIN_4.8K_LATE wraith: gun 4.8k at 10400",
+  "bc: SELL_CHAIN_NOT_OWNED wraith: Spirit Lifesteal sells Monster Rounds which is not owned at that point",
+  "bc: SLOTS_GT12_NO_SELL wraith: Silencer is slot 13",
+  "bc: CORE_NOT_12 wraith: core ends with 13 items, 53600 souls",
+  "bc: RT_ITEMS wraith: Early · L-R: [[\"Rapid Rounds\",null],[\"Extra Spirit\",null],[\"Swift Striker\",null],[\"Tesla Bullets\",null],[\"Monster Rounds\",null],[\"Quicksilver Reload\",1],[\"Surge of Power\",1]] vs [[\"Rapid Rounds\",null],[\"Spirit Lifesteal\",null],[\"Extra Spirit\",null],[\"Swift Striker\",null],[\"Quicksilver Reload\",1],[\"Bullet Lifesteal\",null],[\"Tesla Bullets\",null]]",
+  "bc: RT_ITEMS wraith: Mid · L-R: [[\"Ricochet\",null],[\"Spirit Lifesteal\",null],[\"Bullet Lifesteal\",null],[\"Sprint Boots\",null],[\"Enduring Speed\",null],[\"Reactive Barrier\",null],[\"Spirit Shredder\",null]] vs [[\"Surge of Power\",1],[\"Sprint Boots\",null],[\"Enduring Speed\",null],[\"Monster Rounds\",null],[\"Reactive Barrier\",null],[\"Mercurial Magnum\",1],[\"Ricochet\",null]]",
+  "bc: RT_ITEMS wraith: Late · L-R: [[\"Mercurial Magnum\",1],[\"Spiritual Overflow\",null],[\"Leech\",null],[\"Inhibitor\",null],[\"Spirit Rend\",null],[\"Silencer\",null]] vs [[\"Leech\",null],[\"Spirit Shredder\",null],[\"Inhibitor\",null],[\"Spiritual Overflow\",null],[\"Spirit Rend\",null],[\"Silencer\",null]]",
+  "walk: Silencer: slot 13 with no sell that frees a slot"
+ ],
+ "when": "2026-10-24 16:59",
+ "line": "[2026-10-24 16:59] crafted gate test case for the strategy/interaction rules (not a real proposal) | added Early · L-R|Spirit Lifesteal, Early · L-R|Bullet Lifesteal, Mid · L-R|Surge of Power, Mid · L-R|Monster Rounds, Mid · L-R|Mercurial Magnum, Late · L-R|Spirit Shredder; removed Early · L-R|Monster Rounds, Early · L-R|Surge of Power, Mid · L-R|Spirit Lifesteal, Mid · L-R|Bullet Lifesteal, Mid · L-R|Spirit Shredder, Late · L-R|Mercurial Magnum | evidence: data:gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata, strategy:council/evidence/strategy/wraith_greens_vs_ricochet.txt | gate: FAIL"
+}

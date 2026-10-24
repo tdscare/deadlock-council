@@ -1,0 +1,101 @@
+{
+ "id": "harrow_echo_vapors_vs_leech",
+ "title": "Harrow: Echo Shard on Wretched Vapors vs Leech Therapy",
+ "hero": "Nurse Harrow",
+ "playstyle": "Friendly Fire Harrow",
+ "builds": [
+  "nurse"
+ ],
+ "question": "Which imbue target gives more value from Echo Shard's reset?",
+ "hypothesis": "Vapors: Echo resets ~20s (25s T1 x0.8 Superior Cooldown) for a second rush on another teammate; Leech: resets ~16s for 4 more leeches that add no stacks once at 18. Prediction: damage prevented on teammates per 60s fight is >=25% higher with Echo on Vapors; Leech arm deals <15% more damage.",
+ "arms": [
+  {
+   "name": "echo_vapors",
+   "items": [
+    "Echo Shard"
+   ],
+   "ability_order": null,
+   "imbues": {
+    "Echo Shard": "Wretched Vapors"
+   },
+   "souls": "~45k core",
+   "notes": "Vapors T3"
+  },
+  {
+   "name": "echo_leech",
+   "items": [
+    "Echo Shard"
+   ],
+   "ability_order": null,
+   "imbues": {
+    "Echo Shard": "Leech Therapy"
+   },
+   "souls": "~45k core",
+   "notes": "18 leech stacks preloaded"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "late (~45k)",
+  "souls": 45000,
+  "position": "sandbox open lane",
+  "enemies": [
+   {
+    "hero": "Haze bot",
+    "count": 2,
+    "items": "gun T3/T4",
+    "behaviour": "focus nearest ally",
+    "hp": "full"
+   }
+  ],
+  "allies": [
+   {
+    "hero": "any ally bot",
+    "count": 2,
+    "role": "frontline taking focus"
+   }
+  ],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "HP",
+   "leech stacks to 18"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns, HP, leech stacks reset between trials",
+  "Same boons/souls/ability points in both arms except the item/imbue under test",
+  "Same enemy hero, level, items, behaviour",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "60s fight vs 2 enemy bots focusing allies",
+  "Cast imbued ability on cooldown, use Echo as soon as ready",
+  "Record ally damage taken, specters healed off, enemy damage dealt"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "ally_damage_taken_60s",
+   "unit": "hp",
+   "how": "sum of ally HP lost (damage log)",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": true
+  },
+  {
+   "name": "enemy_damage_dealt_60s",
+   "unit": "hp",
+   "how": "Harrow damage meter",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "ally_damage_taken_60s",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "SUPPORTS echo_vapors if ally damage taken >=10% lower with non-overlapping ranges"
+ }
+}

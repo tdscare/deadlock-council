@@ -1,0 +1,93 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: vyper
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:13:29Z
+BODY-SHA: a366751ebdffb5d0be550f65a3dc1531c0d2bf3692f99fa2ceb2bb3d05be41cd
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Quicksilver Reload: retained-or-upgraded (-> Mercurial Magnum)
+  Cold Front: retained
+  Opening Rounds: retained
+  Rapid Rounds: retained-or-upgraded (-> Burst Fire)
+  Bullet Lifesteal: retained-or-upgraded (-> Leech)
+  Sprint Boots: retained-or-upgraded (-> Enduring Speed)
+  Enduring Speed: retained
+  Spirit Lifesteal: retained-or-upgraded (-> Leech,Spiritual Overflow)
+  Burst Fire: retained
+  Close Quarters: retained-or-upgraded (-> Point Blank)
+  Point Blank: retained
+  Mercurial Magnum: retained
+  Leech: retained
+  Boundless Spirit: retained
+  Spiritual Overflow: retained
+  Frenzy: retained
+  Ricochet: retained
+  Unstoppable: retained
+  Extra Regen: conditional branch (lane alternative)
+  Spirit Resilience: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Silencer: situational-luxury
+  Arctic Blast: situational-luxury
+  Vampiric Burst: situational-luxury
+  Divine Barrier: situational-luxury
+  Juggernaut: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Extra Spirit, Improved Spirit, Quicksilver Reload, Cold Front, Opening Rounds, Rapid Rounds, Bullet Lifesteal
+  Mid · L-R                  -> main path (sequential): Sprint Boots, Enduring Speed, Spirit Lifesteal, Burst Fire, Close Quarters, Point Blank, Mercurial Magnum, Leech
+  Late · L-R                 -> main path (sequential): Boundless Spirit, Spiritual Overflow, Frenzy, Ricochet, Unstoppable
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Spirit Resilience, Dispel Magic, Counterspell, Metal Skin, Plated Armor
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Silencer, Arctic Blast, Vampiric Burst, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Juggernaut
+
+## Opening Rounds: sold when buying Silencer (I'm rich as fuck, luxury)
+  role of Opening Rounds: retained; role of Silencer: situational-luxury
+  Opening Rounds: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 6400 souls (~6.8 min), replaced at ~49.2 min -> owned ~42.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 33600/14400/14400 -> after 32000/14400/14400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 90 min | window TR | key purchase times (min)
+  as built                                    |          93417 |      1.03 | Opening Rounds 7, Silencer 49
+  keep Opening Rounds (slot cap ignored)      |          93417 |      1.03 | Opening Rounds 7, Silencer 50
+  skip Opening Rounds                         |          92611 |      1.01 | Silencer 48
+  sell Burst Fire instead                     |          93417 |      1.03 | Opening Rounds 7, Silencer 49
+  keep Opening Rounds (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Opening Rounds vs as built: d souls -477, d window TR -1.7% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Burst Fire instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: no modelled stat for Silencer (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: skip Opening Rounds: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Point Blank: sold when buying Vampiric Burst (I'm rich as fuck, luxury)
+  role of Point Blank: retained; role of Vampiric Burst: situational-luxury
+  Point Blank: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 17600 souls (~16.8 min), replaced at ~48.8 min -> owned ~32.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 27200/20800/14400 -> after 24000/20800/14400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 90 min | window TR | key purchase times (min)
+  as built                                    |          93417 |      1.02 | Point Blank 17, Vampiric Burst 49
+  keep Point Blank (slot cap ignored)         |          93417 |      1.02 | Point Blank 17, Vampiric Burst 50
+  skip Point Blank                            |         104068 |      1.44 | Vampiric Burst 49
+  sell Opening Rounds instead                 |          93417 |      1.02 | Point Blank 17, Vampiric Burst 49
+  keep Point Blank (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Point Blank vs as built: d souls +3817, d window TR +33.8% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))
+  sell Opening Rounds instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  ammo mechanics (clip 24, reload 1.6 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Point Blank): 8 s trade 121 bullets (41% not firing), 20 s 246 bullets (52% not firing, 8.5 magazines), damage 20 s 6821, refill uses 2.0
+    keep Point Blank: 8 s trade 121 bullets (41% not firing), 20 s 246 bullets (52% not firing, 8.5 magazines), damage 20 s 6821, refill uses 2.0
+    without Vampiric Burst (keep Point Blank): 8 s trade 108 bullets (47% not firing), 20 s 231 bullets (54% not firing, 8.0 magazines), damage 20 s 6246, refill uses 1.0
+    sell Opening Rounds instead: 8 s trade 121 bullets (41% not firing), 20 s 246 bullets (52% not firing, 8.5 magazines), damage 20 s 6580, refill uses 2.0
+    sustained 20 s gun damage: selling Point Blank costs 0% vs keeping it (both with Vampiric Burst); Vampiric Burst adds +9% on top of Point Blank; selling Opening Rounds instead: -4% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  model limit: Vampiric Burst has an active effect (INSTANT_CAST) not priced
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: skip Point Blank: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -))

@@ -1,0 +1,57 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: violet
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:14Z
+BODY-SHA: dfa5c30f33c17f7bd088665f5bb6f7998219d7a906c4ff0ded6b3a1a22019cea
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Extra Spirit, High-Velocity Rounds, Opening Rounds, Extra Charge, Surge of Power, Mystic Burst, Mystic Shot, Recharging Rush
+  Mid · L-R                -> main path (sequential): Enchanter's Emblem, Healbane, Spirit Lifesteal, Improved Spirit
+  Late · L-R               -> main path (sequential): Mercurial Magnum, Rapid Recharge, Boundless Spirit, Tankbuster, Spirit Burn, Infuser
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Spirit Resilience, Bullet Resilience, Counterspell, Dispel Magic, Knockdown, Cursed Relic
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Escalating Exposure, Spellslinger, Witchmail, Spiritual Overflow, Refresher, Divine Barrier
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Escalating Exposure, sell Healbane
+    function of Healbane: sustain; replacement Escalating Exposure: spirit_resist; roles lost: sustain  [VERIFIED GAME MECHANIC]
+    Healbane is a component of later items: no
+    held for 36800 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 4800/9600/28800 -> 4800/8000/35200; thresholds lost: none
+    trade ratio after the sale 1.03; selling Opening Rounds instead: 0.98 (-4.4%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Spellslinger, sell Mystic Shot
+    function of Mystic Shot: bullet_proc; replacement Spellslinger: ammo, cooldown, fire_rate; roles lost: bullet_proc  [VERIFIED GAME MECHANIC]
+    Mystic Shot is a component of later items: no
+    held for 41600 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 4800/9600/28800 -> 9600/9600/28800; thresholds lost: none
+    trade ratio after the sale 0.86; selling Opening Rounds instead: 0.91 (+6.3%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Witchmail, sell Enchanter's Emblem
+    function of Enchanter's Emblem: cooldown, spirit_resist; replacement Witchmail: cooldown, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Enchanter's Emblem is a component of later items: no
+    held for 38400 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 4800/9600/28800 -> 4800/14400/28800; thresholds lost: none
+    trade ratio after the sale 1.09; selling Opening Rounds instead: 1.31 (+20.5%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Spiritual Overflow, sell Recharging Rush
+    function of Recharging Rush: ammo; replacement Spiritual Overflow: bullet_proc, duration, fire_rate, sustain; roles lost: ammo  [VERIFIED GAME MECHANIC]
+    Recharging Rush is a component of later items: no
+    held for 40000 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 4800/9600/28800 -> 9600/9600/28800; thresholds lost: none
+    trade ratio after the sale 2.02; selling Opening Rounds instead: 1.74 (-14.0%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Recharging Rush): 20 s 39 bullets (clip 18, 2.2 magazines, 9% not firing; refill items used every other charge) | 60 s 110 bullets, 14% not firing | damage 60 s 8867  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Recharging Rush, sell Opening Rounds: 20 s 41 bullets (clip 21, 2.0 magazines, 4% not firing; refill items used every other charge) | 60 s 113 bullets, 12% not firing | damage 60 s 9275  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Recharging Rush, no Spiritual Overflow): 20 s 39 bullets (clip 21, 1.9 magazines, 2% not firing; refill items used every other charge) | 60 s 107 bullets, 10% not firing | damage 60 s 8364  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Refresher, sell Tankbuster
+    function of Tankbuster: stats only; replacement Refresher: bullet_resist, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Tankbuster is a component of later items: no
+    held for 17600 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 4800/9600/28800 -> 4800/9600/32000; thresholds lost: none
+    trade ratio after the sale 1.85; selling Opening Rounds instead: 1.58 (-15.0%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

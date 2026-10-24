@@ -1,0 +1,3575 @@
+{
+ "schema": 1,
+ "id": "vindicta_sniper",
+ "hero": "Vindicta",
+ "name": "Rizuhble's Heaven Sent Headshots",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Healing Rite",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Getting poked out in lane. Back off before you use it. Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-9,600 (levels 1-16). Abilities gained (both point models agree): Assassinate T2. 4.8k spikes: spirit 4.8k at Rapid Recharge, vitality 4.8k at Counterspell. Ultimate (Assassinate) is available from Rapid Recharge.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "vindicta_sniper:6:phase_range:3374",
+    "vindicta_sniper:6:phase_abilities:3375",
+    "vindicta_sniper:6:phase_spikes:3383",
+    "vindicta_sniper:6:phase_ult:3384"
+   ],
+   "items": [
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 7.4 to Crow Familiar's impact damage (0.74x scaling).",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Rapid Recharge completes 4.8k spirit in 4800 souls (~4.8 min), 4 purchases",
+     "claim_ids": [
+      "vindicta_sniper:0:spirit_scaling:3357"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:0:spirit_scaling:3357",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k spirit tier, which Rapid Recharge completes 4,000 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (spirit): Rapid Recharge completes 4.8k spirit in 4000 souls (~4.0 min), 3 purchases",
+     "claim_ids": [
+      "vindicta_sniper:1:spike_progress:3358"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:1:spike_progress:3358",
+       true,
+       "1600"
+      ]
+     ]
+    },
+    {
+     "name": "Sprint Boots",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Counterspell, 7200 souls (~7.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Extra Charge",
+     "imbue": null,
+     "caption": "From Assassinate unlocks: gives that ability a charge to add to.",
+     "cls": "b",
+     "why": "imminent: Rapid Recharge completes 4.8k spirit in 2400 souls (~2.4 min), 1 purchases",
+     "claim_ids": [
+      "vindicta_sniper:3:charges_later:3365"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:3:charges_later:3365",
+       true,
+       "[]"
+      ]
+     ]
+    },
+    {
+     "name": "Rapid Recharge",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power. Adds 1 more charge to Assassinate (3 to 4). Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:4:spike_complete:3366",
+      "vindicta_sniper:4:charges:3369",
+      "vindicta_sniper:4:upgrade_of:3367"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:4:spike_complete:3366",
+       true,
+       "inventory spirit: before 2400, after 4800, threshold 4800"
+      ],
+      [
+       "vindicta_sniper:4:charges:3369",
+       true,
+       "[4]"
+      ],
+      [
+       "vindicta_sniper:4:upgrade_of:3367",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Enduring Speed",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Counterspell, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus. Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:6:spike_complete:3372",
+      "vindicta_sniper:6:defence_parry:3373"
+     ],
+     "lint": [],
+     "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:6:spike_complete:3372",
+       true,
+       "inventory vitality: before 1600, after 4800, threshold 4800"
+      ],
+      [
+       "vindicta_sniper:6:defence_parry:3373",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 9,600-25,600 (levels 16-28). Abilities gained (both point models agree): Crow Familiar T3, Assassinate T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "vindicta_sniper:13:phase_range:3402",
+    "vindicta_sniper:13:phase_abilities:3403"
+   ],
+   "items": [
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 41.4 to Assassinate's low health enemy damage bonus (2.30x scaling), your steepest spirit scaling. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:7:spirit_scaling:3387",
+      "vindicta_sniper:7:upgrade_of:3386"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:7:spirit_scaling:3387",
+       true,
+       ""
+      ],
+      [
+       "vindicta_sniper:7:upgrade_of:3386",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Vulnerability",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 5,600 to 7,200 invested: bonus 38 to 45 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "gives little now; payoff Diviner's Kevlar in 17600 souls (~17.6 min): timing review",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "4",
+     "caption": "Imbued on Assassinate: takes 18% off its 40s base cooldown. Takes spirit from 9,600 to 11,200 invested: bonus 52 to 59 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:10:imbue_cooldown:3395",
+      "vindicta_sniper:10:invest_step:3394"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:10:imbue_cooldown:3395",
+       true,
+       ""
+      ],
+      [
+       "vindicta_sniper:10:invest_step:3394",
+       true,
+       "inventory spirit: before 9600, after 11200, threshold 11200"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Surge of Power",
+     "imbue": "4",
+     "caption": "Imbued on Assassinate: +28 spirit on that ability only, about +64.4 on its low health enemy damage bonus (2.30x scaling).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:12:imbue_spirit:3399"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:12:imbue_spirit:3399",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 14,400 to 19,200 invested: bonus 59 to 66 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 25,600-56,000 (levels 28-36). Abilities gained (both point models agree): Stake T3, Flight T3. Your biggest single spirit hit (Crow Familiar, impact damage) grows from 155 to 241. 4.8k spikes: weapon 4.8k at Spiritual Overflow.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "vindicta_sniper:19:phase_range:3422",
+    "vindicta_sniper:19:phase_abilities:3423",
+    "vindicta_sniper:19:phase_power:3424",
+    "vindicta_sniper:19:phase_spikes:3429"
+   ],
+   "items": [
+    {
+     "name": "Diviner's Kevlar",
+     "imbue": null,
+     "caption": "Casting Assassinate gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (40s at your current ultimate tier), so it is a once-per-fight burst of defence. Takes vitality from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:14:ult_trigger:3410",
+      "vindicta_sniper:14:invest_step:3411"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:14:ult_trigger:3410",
+       true,
+       ""
+      ],
+      [
+       "vindicta_sniper:14:invest_step:3411",
+       true,
+       "inventory vitality: before 6400, after 12800, threshold 8000"
+      ]
+     ]
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: With 4 abilities trained their base cooldowns total 116s; 20% off is 23.2s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 69 to Assassinate's low health enemy damage bonus (2.30x scaling), your steepest spirit scaling. Takes spirit from 20,800 to 25,600 invested: bonus 66 to 75 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:16:spirit_scaling:3416",
+      "vindicta_sniper:16:invest_step:3414",
+      "vindicta_sniper:16:upgrade_of:3415"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:16:spirit_scaling:3416",
+       true,
+       ""
+      ],
+      [
+       "vindicta_sniper:16:invest_step:3414",
+       true,
+       "inventory spirit: before 20800, after 25600, threshold 22400"
+      ],
+      [
+       "vindicta_sniper:16:upgrade_of:3415",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Reverb",
+     "imbue": "4",
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 25,600 to 32,000 invested: bonus 75 to 100 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Lightning Scroll",
+     "imbue": null,
+     "caption": "Assassinate deals damage (damage, low health enemy damage bonus), so it applies the item's 0.75s stun after a 3s delay plus 150 damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:18:ult_trigger:3419"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:18:ult_trigger:3419",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spiritual Overflow",
+     "imbue": null,
+     "caption": "Completes the 4.8k weapon tier (0 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 0 to 54% weapon damage. Upgrade of Spirit Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:19:spike_complete:3420",
+      "vindicta_sniper:19:upgrade_of:3421"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:19:spike_complete:3420",
+       true,
+       "inventory weapon: before 0, after 6400, threshold 4800"
+      ],
+      [
+       "vindicta_sniper:19:upgrade_of:3421",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Counterspell? Buy what is killing you, cheapest first. Not dying? Skip. Sell Enduring Speed.",
+   "desc": "Dying after Counterspell? Buy what is killing you, cheapest first. Not dying? Skip. Sell Enduring Speed.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:20:defence_bullet:3430"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun heroes shoot you out of the sky.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:20:defence_bullet:3430",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:20:defence_gun:3431"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:20:defence_gun:3431",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:20:defence_spirit:3432"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:20:defence_spirit:3432",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Flight (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:20:cc_exposure:3433"
+     ],
+     "lint": [],
+     "legacy_note": "Stuns and Knockdown keep dropping you out of Flight.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:20:cc_exposure:3433",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:20:defence_purge:3434"
+     ],
+     "lint": [],
+     "legacy_note": "Slows and hexes keep landing on you.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:20:defence_purge:3434",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Rapid Recharge for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 116s of base cooldown across your kit, 40s of it the ultimate; the item has its own cooldown of 300s. Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:20:refresher:3437",
+      "vindicta_sniper:20:sell_swap:3438"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Tankbuster for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:20:refresher:3437",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "vindicta_sniper:20:sell_swap:3438",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:20:defence_barrier:3439"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:20:defence_barrier:3439",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Juggernaut",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:20:upgrade_delta:3440"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Enduring Speed.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:20:upgrade_delta:3440",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "vindicta_sniper:20:upgrade_delta:3442"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "vindicta_sniper:20:upgrade_delta:3442",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "vindicta_sniper:0:spike_progress:3355": {
+   "id": "vindicta_sniper:0:spike_progress:3355",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Rapid Recharge completes 4,800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4800,
+    "event": "Rapid Recharge completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    4800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "vindicta_sniper:0:component_for:3356": {
+   "id": "vindicta_sniper:0:component_for:3356",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 9600,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:0:spirit_scaling:3357": {
+   "id": "vindicta_sniper:0:spirit_scaling:3357",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 7.4 to Crow Familiar's impact damage (0.74x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_sting"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 3,
+    "prop": "ImpactDamage"
+   },
+   "numbers": [
+    "10.0",
+    "7.4",
+    "0.74"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:1:spike_progress:3358": {
+   "id": "vindicta_sniper:1:spike_progress:3358",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Rapid Recharge completes 4,000 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4000,
+    "event": "Rapid Recharge completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    4000,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "vindicta_sniper:1:threshold_marginal:3359": {
+   "id": "vindicta_sniper:1:threshold_marginal:3359",
+   "kind": "threshold_marginal",
+   "phrase": "Stake (97.7) is within 50% of the 80-damage trigger; resist handling unverified.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_chain",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_leap",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_sting"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:1:component_for:3360": {
+   "id": "vindicta_sniper:1:component_for:3360",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 12800,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:2:spike_progress:3361": {
+   "id": "vindicta_sniper:2:spike_progress:3361",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Sprint Boots",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "vindicta_sniper:2:component_for:3362": {
+   "id": "vindicta_sniper:2:component_for:3362",
+   "kind": "component_for",
+   "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Sprint Boots",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 4000,
+    "event": "Enduring Speed"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Enduring Speed"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:3:spike_progress:3363": {
+   "id": "vindicta_sniper:3:spike_progress:3363",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Rapid Recharge completes 2,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Extra Charge",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Rapid Recharge completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 2400
+   },
+   "numbers": [
+    "2400",
+    "4.8k",
+    2400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "vindicta_sniper:3:component_for:3364": {
+   "id": "vindicta_sniper:3:component_for:3364",
+   "kind": "component_for",
+   "phrase": "From Rapid Recharge: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Extra Charge",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 2400,
+    "event": "Rapid Recharge"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Rapid Recharge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:3:charges_later:3365": {
+   "id": "vindicta_sniper:3:charges_later:3365",
+   "kind": "charges_later",
+   "phrase": "From Assassinate unlocks: gives that ability a charge to add to.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_extra_charge"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 3,
+    "item": "Extra Charge",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 700,
+    "event": "Assassinate unlocks"
+   },
+   "check": {
+    "kind": "charges",
+    "slots": []
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:4:spike_complete:3366": {
+   "id": "vindicta_sniper:4:spike_complete:3366",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (2,400 to 4,800 invested): bonus 15 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 4,
+    "item": "Rapid Recharge",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "2400",
+    "4800",
+    "15.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "vindicta_sniper:4:upgrade_of:3367": {
+   "id": "vindicta_sniper:4:upgrade_of:3367",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Charge (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 4,
+    "item": "Rapid Recharge",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Charge"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:4:swap_candidate:3368": {
+   "id": "vindicta_sniper:4:swap_candidate:3368",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Spirit Burn later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 4,
+    "item": "Rapid Recharge",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Rapid Recharge",
+    "buyer": "Spirit Burn"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:4:charges:3369": {
+   "id": "vindicta_sniper:4:charges:3369",
+   "kind": "charges",
+   "phrase": "Adds 1 more charge to Assassinate (3 to 4).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_rapid_recharge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 4,
+    "item": "Rapid Recharge",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "charges",
+    "slots": [
+     4
+    ]
+   },
+   "numbers": [
+    "1",
+    "3",
+    "4"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:5:spike_progress:3370": {
+   "id": "vindicta_sniper:5:spike_progress:3370",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Enduring Speed",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "vindicta_sniper:5:upgrade_of:3371": {
+   "id": "vindicta_sniper:5:upgrade_of:3371",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Sprint Boots (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 5,
+    "item": "Enduring Speed",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Sprint Boots"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:6:spike_complete:3372": {
+   "id": "vindicta_sniper:6:spike_complete:3372",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (1,600 to 4,800 invested): bonus 12 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 6,
+    "item": "Counterspell",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "1600",
+    "4800",
+    "12.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "vindicta_sniper:6:defence_parry:3373": {
+   "id": "vindicta_sniper:6:defence_parry:3373",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 6,
+    "item": "Counterspell",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:6:phase_range:3374": {
+   "id": "vindicta_sniper:6:phase_range:3374",
+   "kind": "phase_range",
+   "phrase": "Souls 0-9,600 (levels 1-16).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Counterspell",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "9,600",
+    "1",
+    "16"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:6:phase_abilities:3375": {
+   "id": "vindicta_sniper:6:phase_abilities:3375",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Assassinate T2.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Counterspell",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:6:phase_spikes:3383": {
+   "id": "vindicta_sniper:6:phase_spikes:3383",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Rapid Recharge, vitality 4.8k at Counterspell.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Counterspell",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:6:phase_ult:3384": {
+   "id": "vindicta_sniper:6:phase_ult:3384",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Assassinate) is available from Rapid Recharge.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Counterspell",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:7:spike_progress:3385": {
+   "id": "vindicta_sniper:7:spike_progress:3385",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 5,600 of the 6.4k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Improved Spirit",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 6400
+  },
+  "vindicta_sniper:7:upgrade_of:3386": {
+   "id": "vindicta_sniper:7:upgrade_of:3386",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Improved Spirit",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:7:spirit_scaling:3387": {
+   "id": "vindicta_sniper:7:spirit_scaling:3387",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 41.4 to Assassinate's low health enemy damage bonus (2.30x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 7,
+    "item": "Improved Spirit",
+    "souls": 10400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "LowHealthEnemyDamageBonus"
+   },
+   "numbers": [
+    "18.0",
+    "41.4",
+    "2.30"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:8:invest_step:3388": {
+   "id": "vindicta_sniper:8:invest_step:3388",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 5,600 to 7,200 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 8,
+    "item": "Mystic Vulnerability",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "7200",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "vindicta_sniper:8:component_for:3389": {
+   "id": "vindicta_sniper:8:component_for:3389",
+   "kind": "component_for",
+   "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 8,
+    "item": "Mystic Vulnerability",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 13600,
+    "event": "Escalating Exposure"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:9:invest_step:3390": {
+   "id": "vindicta_sniper:9:invest_step:3390",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 7,200 to 9,600 invested: bonus 45 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Tankbuster",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "7200",
+    "9600",
+    "45.0",
+    "52.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "vindicta_sniper:9:threshold_later:3391": {
+   "id": "vindicta_sniper:9:threshold_later:3391",
+   "kind": "threshold_later",
+   "phrase": "From Diviner's Kevlar: first ability hit above its 165-damage trigger (nothing clears it at this purchase).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_chain",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_leap",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_sting"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Tankbuster",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 17600,
+    "event": "Diviner's Kevlar"
+   },
+   "check": {
+    "kind": "threshold_later",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "165.0"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "best_now": 141.0
+  },
+  "vindicta_sniper:9:upgrade_of:3392": {
+   "id": "vindicta_sniper:9:upgrade_of:3392",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 9,
+    "item": "Tankbuster",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:9:swap_candidate:3393": {
+   "id": "vindicta_sniper:9:swap_candidate:3393",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Refresher later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 9,
+    "item": "Tankbuster",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Tankbuster",
+    "buyer": "Refresher"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:10:invest_step:3394": {
+   "id": "vindicta_sniper:10:invest_step:3394",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 9,600 to 11,200 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Compress Cooldown",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "11200",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "vindicta_sniper:10:imbue_cooldown:3395": {
+   "id": "vindicta_sniper:10:imbue_cooldown:3395",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Assassinate: takes 18% off its 40s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 10,
+    "item": "Compress Cooldown",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 4
+   },
+   "numbers": [
+    "18.0",
+    "40.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:10:component_for:3396": {
+   "id": "vindicta_sniper:10:component_for:3396",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 10,
+    "item": "Compress Cooldown",
+    "souls": 16000,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 17600,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:11:invest_step:3397": {
+   "id": "vindicta_sniper:11:invest_step:3397",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 6,400 invested: bonus 38 to 42 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Lifesteal",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "42.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "vindicta_sniper:11:component_for:3398": {
+   "id": "vindicta_sniper:11:component_for:3398",
+   "kind": "component_for",
+   "phrase": "From Spiritual Overflow: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 11,
+    "item": "Spirit Lifesteal",
+    "souls": 17600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 38400,
+    "event": "Spiritual Overflow"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spiritual Overflow"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:12:imbue_spirit:3399": {
+   "id": "vindicta_sniper:12:imbue_spirit:3399",
+   "kind": "imbue_spirit",
+   "phrase": "Imbued on Assassinate: +28 spirit on that ability only, about +64.4 on its low health enemy damage bonus (2.30x scaling).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_storm",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 60,
+   "point": {
+    "idx": 12,
+    "item": "Surge of Power",
+    "souls": 20800,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_spirit",
+    "slot": 4
+   },
+   "numbers": [
+    "28.0",
+    "64.4",
+    "2.30"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:13:invest_step:3400": {
+   "id": "vindicta_sniper:13:invest_step:3400",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 14,400 to 19,200 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Escalating Exposure",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "19200",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "vindicta_sniper:13:upgrade_of:3401": {
+   "id": "vindicta_sniper:13:upgrade_of:3401",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Vulnerability (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 13,
+    "item": "Escalating Exposure",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Vulnerability"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:13:phase_range:3402": {
+   "id": "vindicta_sniper:13:phase_range:3402",
+   "kind": "phase_range",
+   "phrase": "Souls 9,600-25,600 (levels 16-28).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Escalating Exposure",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Escalating Exposure",
+    "keys": []
+   },
+   "numbers": [
+    "9,600",
+    "25,600",
+    "16",
+    "28"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:13:phase_abilities:3403": {
+   "id": "vindicta_sniper:13:phase_abilities:3403",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Crow Familiar T3, Assassinate T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Escalating Exposure",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Escalating Exposure",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:14:ult_trigger:3410": {
+   "id": "vindicta_sniper:14:ult_trigger:3410",
+   "kind": "ult_trigger",
+   "phrase": "Casting Assassinate gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (40s at your current ultimate tier), so it is a once-per-fight burst of defence.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_diviners_kevlar",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 14,
+    "item": "Diviner's Kevlar",
+    "souls": 32000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "ult_tier",
+    "min_tier": 3
+   },
+   "numbers": [
+    "1,000",
+    "40",
+    "20",
+    "40"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:14:invest_step:3411": {
+   "id": "vindicta_sniper:14:invest_step:3411",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 6,400 to 12,800 invested, crossing the 8k, 11.2k tiers: bonus 42 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Diviner's Kevlar",
+    "souls": 32000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "12800",
+    "42.0",
+    "50.0",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 8000
+  },
+  "vindicta_sniper:15:upgrade_of:3412": {
+   "id": "vindicta_sniper:15:upgrade_of:3412",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Superior Cooldown",
+    "souls": 33600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:15:cdr_rotation:3413": {
+   "id": "vindicta_sniper:15:cdr_rotation:3413",
+   "kind": "cdr_rotation",
+   "phrase": "With 4 abilities trained their base cooldowns total 116s; 20% off is 23.2s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_chain",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_leap",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_sting",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 15,
+    "item": "Superior Cooldown",
+    "souls": 33600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "4",
+    "116",
+    "20.0",
+    "23.2"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:16:invest_step:3414": {
+   "id": "vindicta_sniper:16:invest_step:3414",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 20,800 to 25,600 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Boundless Spirit",
+    "souls": 38400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "20800",
+    "25600",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "vindicta_sniper:16:upgrade_of:3415": {
+   "id": "vindicta_sniper:16:upgrade_of:3415",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Boundless Spirit",
+    "souls": 38400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:16:spirit_scaling:3416": {
+   "id": "vindicta_sniper:16:spirit_scaling:3416",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 69 to Assassinate's low health enemy damage bonus (2.30x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 16,
+    "item": "Boundless Spirit",
+    "souls": 38400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 4,
+    "prop": "LowHealthEnemyDamageBonus"
+   },
+   "numbers": [
+    "30.0",
+    "69",
+    "2.30"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:17:invest_step:3417": {
+   "id": "vindicta_sniper:17:invest_step:3417",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 25,600 to 32,000 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Mystic Reverb",
+    "souls": 44800,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "25600",
+    "32000",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "vindicta_sniper:17:threshold_unverified:3418": {
+   "id": "vindicta_sniper:17:threshold_unverified:3418",
+   "kind": "threshold_unverified",
+   "phrase": "Only Assassinate (damage, 380) reaches the 100-damage trigger, and whether an ultimate or damage-over-time tick counts is not established.",
+   "tier": "UNVERIFIED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 17,
+    "item": "Mystic Reverb",
+    "souls": 44800,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "never",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold_later",
+    "thr": 100.0,
+    "slots": [
+     4
+    ]
+   },
+   "numbers": [
+    "100.0"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "contradiction": false,
+   "caveat": "item has no localisation text; trigger semantics are modelled"
+  },
+  "vindicta_sniper:18:ult_trigger:3419": {
+   "id": "vindicta_sniper:18:ult_trigger:3419",
+   "kind": "ult_trigger",
+   "phrase": "Assassinate deals damage (damage, low health enemy damage bonus), so it applies the item's 0.75s stun after a 3s delay plus 150 damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ultimate_burst",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 18,
+    "item": "Lightning Scroll",
+    "souls": 51200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "ult_dmg"
+   },
+   "numbers": [
+    "0.75",
+    "3",
+    "150"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:19:spike_complete:3420": {
+   "id": "vindicta_sniper:19:spike_complete:3420",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k weapon tier (0 to 6,400 invested, crossing the 4.8k, 6.4k tiers): bonus 0 to 54% weapon damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 19,
+    "item": "Spiritual Overflow",
+    "souls": 56000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "weapon",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "0",
+    "6400",
+    "0.0",
+    "54.0",
+    "4.8k",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "weapon",
+   "threshold": 4800
+  },
+  "vindicta_sniper:19:upgrade_of:3421": {
+   "id": "vindicta_sniper:19:upgrade_of:3421",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Spiritual Overflow",
+    "souls": 56000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:19:phase_range:3422": {
+   "id": "vindicta_sniper:19:phase_range:3422",
+   "kind": "phase_range",
+   "phrase": "Souls 25,600-56,000 (levels 28-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Spiritual Overflow",
+    "souls": 56000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spiritual Overflow",
+    "keys": []
+   },
+   "numbers": [
+    "25,600",
+    "56,000",
+    "28",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:19:phase_abilities:3423": {
+   "id": "vindicta_sniper:19:phase_abilities:3423",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Stake T3, Flight T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Spiritual Overflow",
+    "souls": 56000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spiritual Overflow",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:19:phase_power:3424": {
+   "id": "vindicta_sniper:19:phase_power:3424",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Crow Familiar, impact damage) grows from 155 to 241.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_sting",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Spiritual Overflow",
+    "souls": 56000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spiritual Overflow",
+    "keys": []
+   },
+   "numbers": [
+    "155",
+    "241"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:19:phase_spikes:3429": {
+   "id": "vindicta_sniper:19:phase_spikes:3429",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: weapon 4.8k at Spiritual Overflow.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_hornet"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Spiritual Overflow",
+    "souls": 56000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spiritual Overflow",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:20:defence_bullet:3430": {
+   "id": "vindicta_sniper:20:defence_bullet:3430",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Metal Skin",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun heroes shoot you out of the sky."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:20:defence_gun:3431": {
+   "id": "vindicta_sniper:20:defence_gun:3431",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Plated Armor",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:20:defence_spirit:3432": {
+   "id": "vindicta_sniper:20:defence_spirit:3432",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Resilience",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:20:cc_exposure:3433": {
+   "id": "vindicta_sniper:20:cc_exposure:3433",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Flight (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 20,
+    "item": "Unstoppable",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Stuns and Knockdown keep dropping you out of Flight."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:20:defence_purge:3434": {
+   "id": "vindicta_sniper:20:defence_purge:3434",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Dispel Magic",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Slows and hexes keep landing on you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:20:burn_trigger_modelled:3435": {
+   "id": "vindicta_sniper:20:burn_trigger_modelled:3435",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Stake (220) + Flight (95.5) + Crow Familiar (241) = 556 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Burn",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Rapid Recharge for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "556",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:20:sell_swap:3436": {
+   "id": "vindicta_sniper:20:sell_swap:3436",
+   "kind": "sell_swap",
+   "phrase": "Replaces Rapid Recharge: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Spirit Burn",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Rapid Recharge for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Rapid Recharge",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Rapid Recharge"
+  },
+  "vindicta_sniper:20:refresher:3437": {
+   "id": "vindicta_sniper:20:refresher:3437",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 116s of base cooldown across your kit, 40s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_chain",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_leap",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_sting",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:citadel_ability_hornet_snipe"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 20,
+    "item": "Refresher",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "numbers": [
+    "116",
+    "40",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "vindicta_sniper:20:sell_swap:3438": {
+   "id": "vindicta_sniper:20:sell_swap:3438",
+   "kind": "sell_swap",
+   "phrase": "Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Refresher",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Tankbuster",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Tankbuster"
+  },
+  "vindicta_sniper:20:defence_barrier:3439": {
+   "id": "vindicta_sniper:20:defence_barrier:3439",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Divine Barrier",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:20:upgrade_delta:3440": {
+   "id": "vindicta_sniper:20:upgrade_delta:3440",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Enduring Speed for 4,800 more souls: fire rate slow 0 to 40; slow resistance percent 25 to 50..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_juggernaut",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cardio_calibrator"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Juggernaut",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Enduring Speed"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "40",
+    "25",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:20:upgrade_of:3441": {
+   "id": "vindicta_sniper:20:upgrade_of:3441",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Enduring Speed (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Juggernaut",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Enduring Speed."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Enduring Speed"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "vindicta_sniper:20:upgrade_delta:3442": {
+   "id": "vindicta_sniper:20:upgrade_delta:3442",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "vindicta_sniper:20:upgrade_of:3443": {
+   "id": "vindicta_sniper:20:upgrade_of:3443",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 56000,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "vindicta_sniper",
+   "item": "Healing Rite",
+   "section": "lane",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 56000,
+   "unpublished": []
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Healing Rite",
+   "section": "lane",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Getting poked out in lane. Back off before you use it. Sell it once you're out of slots."
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Extra Spirit",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Rapid Recharge completes 4.8k spirit in 4800 souls (~4.8 min), 4 purchases",
+   "souls": 800,
+   "unpublished": [
+    {
+     "id": "vindicta_sniper:0:spike_progress:3355",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Rapid Recharge completes 4,800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4800,
+      "event": "Rapid Recharge completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "vindicta_sniper:0:component_for:3356",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 9600,
+      "event": "Improved Spirit"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Mystic Burst",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (spirit): Rapid Recharge completes 4.8k spirit in 4000 souls (~4.0 min), 3 purchases",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "vindicta_sniper:1:spike_progress:3358",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Rapid Recharge completes 4,000 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4000,
+      "event": "Rapid Recharge completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "vindicta_sniper:1:threshold_marginal:3359",
+     "tier": "MODELLED",
+     "phrase": "Stake (97.7) is within 50% of the 80-damage trigger; resist handling unverified.",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    },
+    {
+     "id": "vindicta_sniper:1:component_for:3360",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 12800,
+      "event": "Tankbuster"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Sprint Boots",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Counterspell, 7200 souls (~7.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 2400,
+   "unpublished": [
+    {
+     "id": "vindicta_sniper:2:component_for:3362",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Enduring Speed: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 4000,
+      "event": "Enduring Speed"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Extra Charge",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Rapid Recharge completes 4.8k spirit in 2400 souls (~2.4 min), 1 purchases",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "vindicta_sniper:3:spike_progress:3363",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Rapid Recharge completes 2,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Rapid Recharge completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "vindicta_sniper:3:component_for:3364",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Rapid Recharge: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 2400,
+      "event": "Rapid Recharge"
+     }
+    },
+    {
+     "id": "vindicta_sniper:3:charges_later:3365",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Assassinate unlocks: gives that ability a charge to add to.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 700,
+      "event": "Assassinate unlocks"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Enduring Speed",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Counterspell, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 6400,
+   "unpublished": []
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Counterspell",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Lash ult, Infernus ult. Anything big you can see coming."
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Tankbuster",
+   "section": "mid",
+   "cls": "c",
+   "why": "gives little now; payoff Diviner's Kevlar in 17600 souls (~17.6 min): timing review",
+   "souls": 14400,
+   "unpublished": [
+    {
+     "id": "vindicta_sniper:9:threshold_later:3391",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Diviner's Kevlar: first ability hit above its 165-damage trigger (nothing clears it at this purchase).",
+     "timing": {
+      "when": "future",
+      "delta_souls": 17600,
+      "event": "Diviner's Kevlar"
+     }
+    }
+   ]
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun heroes shoot you out of the sky."
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit."
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns and Knockdown keep dropping you out of Flight."
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Slows and hexes keep landing on you."
+  },
+  {
+   "build": "vindicta_sniper",
+   "item": "Spirit Burn",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 56000,
+   "unpublished": [
+    {
+     "id": "vindicta_sniper:20:burn_trigger_modelled:3435",
+     "tier": "MODELLED",
+     "phrase": "One rotation of Stake (220) + Flight (95.5) + Crow Familiar (241) = 556 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  }
+ ],
+ "stats": {
+  "d": 2,
+  "b": 3,
+  "c": 3,
+  "a": 18,
+  "g": 5
+ }
+}

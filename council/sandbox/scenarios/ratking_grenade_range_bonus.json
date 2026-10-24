@@ -1,0 +1,23 @@
+{
+ "id": "ratking_grenade_range_bonus",
+ "title": "Rat King: do range-conditional gun bonuses (Long Range, Sharpshooter, Close Quarters, Point Blank) add to Scrap Grenade damage?",
+ "hero": "Rat King",
+ "playstyle": "Grenade Rat King",
+ "builds": ["ratking_grenade", "ratking"],
+ "question": "Game files scale Scrap Grenade only with EBaseWeaponDamageIncrease (70 + 0.6x per detonation). Long Range/Sharpshooter (LONG_RANGE_BULLET_DAMAGE_INCREASE) and Close Quarters/Point Blank (CLOSE_RANGE_WEAPON_DAMAGE_INCREASE) are separate conditional bonuses. Do they still raise the damage a detonation deals to a hero?",
+ "hypothesis": "No: per-detonation damage with each range item equals the no-item baseline (within 5%) at its range. Prediction if they DID apply: Long Range +40%, Sharpshooter +60% (+6 flat) at 20m; Close Quarters +20%, Point Blank +50% at 8m.",
+ "arms": [
+  {"name": "A_baseline_20m", "items": [], "ability_order": null, "imbues": {}, "souls": "grenade T1 only, 0 other items", "notes": "throw from 20m"},
+  {"name": "B_long_range_20m", "items": ["Long Range"], "ability_order": null, "imbues": {}, "souls": "same", "notes": "throw from 20m"},
+  {"name": "C_sharpshooter_20m", "items": ["Sharpshooter"], "ability_order": null, "imbues": {}, "souls": "same", "notes": "throw from 20m; expect +6 flat from its 10% Weapon Damage only"},
+  {"name": "D_baseline_8m", "items": [], "ability_order": null, "imbues": {}, "souls": "same", "notes": "throw from 8m"},
+  {"name": "E_close_quarters_8m", "items": ["Close Quarters"], "ability_order": null, "imbues": {}, "souls": "same", "notes": "throw from 8m"},
+  {"name": "F_point_blank_8m", "items": ["Point Blank"], "ability_order": null, "imbues": {}, "souls": "same", "notes": "throw from 8m"}
+ ],
+ "setup": {"level_or_boons": "same level every arm, grenade T1, no investment bonus differences (give items with no other weapon items)", "souls": "fixed", "position": "flat ground, target at measured 20m or 8m", "enemies": [{"hero": "target dummy or idle bot", "count": 1, "items": [], "behaviour": "stationary", "hp": "full"}], "allies": [], "start_hp": "full", "resets": ["cooldowns", "target hp"]},
+ "controls": ["Same distance per pair (A/B/C at 20m, D/E/F at 8m)", "Same target and resists", "Grenade lands at the target's feet every trial", "No other weapon damage items; weapon investment tier equal across arms (Sharpshooter costs more: compare against its own +10% Weapon Damage expectation)"],
+ "procedure": ["Throw one grenade at the target", "Read the damage number of the first detonation", "Reset, repeat; interleave arms A,B,C then D,E,F"],
+ "trials": 5,
+ "metrics": [{"name": "first_detonation_damage", "unit": "damage", "how": "on-screen damage number of detonation 1", "grade_target": "B", "better": "higher", "primary": true}],
+ "decision": {"metric": "first_detonation_damage", "min_effect_pct": 10, "min_trials": 5, "rule": "SUPPORTS range bonus applying if an item arm beats its baseline by >=10% with non-overlapping trial ranges (beyond Sharpshooter's own +6); REFUTES if within 5%; else INCONCLUSIVE. If Close Quarters/Point Blank SUPPORT, put Close Quarters → Point Blank into ratking_grenade in place of Extended Magazine → Titanic Magazine; if Long Range/Sharpshooter SUPPORT, revisit them for the thrower."}
+}

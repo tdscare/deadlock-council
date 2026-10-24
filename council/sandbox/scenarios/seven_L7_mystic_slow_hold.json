@@ -1,0 +1,83 @@
+{
+ "id": "seven_L7_mystic_slow_hold",
+ "title": "Mystic Slow / Lightning Scroll keep enemies in the cloud",
+ "hero": "Seven",
+ "playstyle": "Ult Seven",
+ "builds": [
+  "seven"
+ ],
+ "question": "Do Mystic Slow (24% on spirit damage) or Lightning Scroll (64% slow then 0.75 s stun) raise time-in-cloud enough to make duration and Escalating Exposure count?",
+ "hypothesis": "H-L7: fleeing enemies stay in the 50 m cloud >=30% longer with Mystic Slow; UNSUPPORTED: bots cannot move or flee (AUTORUN: bots stand, no enemy movement op).",
+ "arms": [
+  {
+   "name": "ME",
+   "items": [
+    "upgrade_magic_reach"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 18400,
+   "notes": "current"
+  },
+  {
+   "name": "MSLOW",
+   "items": [
+    "upgrade_magic_slow"
+   ],
+   "ability_order": "1331234442431122",
+   "imbues": {},
+   "souls": 18400,
+   "notes": "swap"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "souls 18400 (levels.json)",
+  "souls": 18400,
+  "position": "mid lane, bots on a 300 u ring (inside the 40 m storm)",
+  "enemies": [
+   {
+    "hero": "Haze (bot)",
+    "count": 3,
+    "items": [],
+    "behaviour": "stand, attacks disabled",
+    "hp": "ekeep 0.9"
+   }
+  ],
+  "allies": [],
+  "start_hp": "lowhp 50 (heals never capped)",
+  "resets": [
+   "hardreset",
+   "healreset"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance (enemies 3 at 300 u ring, main target 350 u)",
+  "hardreset between blocks (fresh cooldowns, no items)",
+  "Same souls/level/ability tiers (unlock 7) in every arm except the thing under test",
+  "Same bot heroes, HP keep-alive (ekeep 0.9) and resists",
+  "Arms interleaved A,B,A,B; A/A floor run first"
+ ],
+ "procedure": [
+  "needs fleeing bots"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "time_in_cloud",
+   "unit": "s",
+   "how": "per bot",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "time_in_cloud",
+  "min_effect_pct": 30,
+  "min_trials": 5,
+  "rule": "UNSUPPORTED until an enemy movement op exists"
+ },
+ "blockedIfNo": [
+  "enemy movement/flee op"
+ ]
+}

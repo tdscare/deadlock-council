@@ -1,0 +1,77 @@
+{
+ "strategy": {
+  "trig": [
+   "greens (Melee Lifesteal,Grit,Lifestrike,Spirit Shielding,Colossus -> Melee Lifesteal,Grit,Extra Health,Weapon Shielding,Lifestrike,Spirit Shielding,Colossus)",
+   "4.8k spike timing (gun 6400 -> 8000, vitality 9600 -> 10400, spirit 16000 -> 18400)"
+  ],
+  "lines": [
+   "STRATEGY WAIVED"
+  ]
+ },
+ "interaction": {
+  "lines": [
+   "INTERACTION: no damage/fire-rate/stat item added, removed or reordered"
+  ]
+ },
+ "weakness": {
+  "lines": [
+   "WEAKNESS: proposal is not justified by a weakness"
+  ]
+ },
+ "overlap": {
+  "changed": [
+   "  overlap Extra Health (added): no overlap-candidate",
+   "  overlap Weapon Shielding (added): at_buy=COMPLEMENTS; core_end=ADDS-VALUE"
+  ],
+  "unresolved": [
+   "overlap-candidate Lifestrike [core_end=UNKNOWN]",
+   "overlap-candidate Point Blank [at_buy=UNKNOWN; core_end=UNKNOWN]",
+   "overlap-candidate Unstoppable [core_end=UNKNOWN]",
+   "overlap-candidate Phantom Strike [core_end=UNKNOWN]",
+   "overlap-candidate Divine Barrier [core_end=UNKNOWN]"
+  ]
+ },
+ "unresolved": [
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Cultist Sacrifice: Have it by about 8 minutes and eat a big camp with it.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Lifestrike: Light punches and troopers trigger it too.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Spirit Strike: Bashdown counts as a punch for this.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Colossus: Pop it when you chain them in.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Scourge: Cast it on yourself as you dive in.",
+  "walk: Scourge: slot 13 with no sell that frees a slot"
+ ],
+ "proposal": "G6_waived",
+ "id": "billy_damage",
+ "diff": [
+  "added Early · L-R|Extra Health, Mid · L-R|Weapon Shielding, Mid · L-R|Cultist Sacrifice, Mid · cont.|Close Quarters, Mid · cont.|Point Blank, Late · L-R|Rapid Recharge, Late · L-R|Berserker",
+  "removed Early · L-R|Cultist Sacrifice, Mid · L-R|Close Quarters, Mid · L-R|Point Blank, Mid · cont.|Rapid Recharge, Mid · cont.|Berserker"
+ ],
+ "block": [
+  "NEW violation introduced: bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Weapon Shielding (T2) @5600",
+  "NEW violation introduced: bc: SLOTS_GT12_NO_SELL billy_damage: Scourge is slot 13",
+  "NEW violation introduced: bc: CORE_NOT_12 billy_damage: core ends with 13 items, 51200 souls",
+  "NEW violation introduced: walk: Scourge: slot 13 with no sell that frees a slot"
+ ],
+ "warn": [
+  "WAIVED STRATEGY (greens (Melee Lifesteal,Grit,Lifestrike,Spirit Shielding,Colossus -> Melee Lifesteal,Grit,Extra Health,Weapon Shielding,Lifestrike,Spirit Shielding,Colossus) + 4.8k spike timing (gun 6400 -> 8000, vitality 9600 -> 10400, spirit 16000 -> 18400)) because: crafted waiver test: computed comparison cited as the evidence file | cites no `strategy` evidence file (run abtimeline.py --strategy billy_damage <checkpoints> and cite it as kind `strategy`)"
+ ],
+ "fixed": [],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Cultist Sacrifice: Have it by about 8 minutes and eat a big camp with it.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Lifestrike: Light punches and troopers trigger it too.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Spirit Strike: Bashdown counts as a punch for this.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Colossus: Pop it when you chain them in.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Scourge: Cast it on yourself as you dive in."
+ ],
+ "newV": [
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Weapon Shielding (T2) @5600",
+  "bc: SLOTS_GT12_NO_SELL billy_damage: Scourge is slot 13",
+  "bc: CORE_NOT_12 billy_damage: core ends with 13 items, 51200 souls",
+  "bc: RT_ITEMS billy_damage: Early · L-R: [[\"Melee Lifesteal\",null],[\"Monster Rounds\",null],[\"Grit\",null],[\"Stalker\",null],[\"Cultist Sacrifice\",null]] vs [[\"Melee Lifesteal\",null],[\"Monster Rounds\",null],[\"Grit\",null],[\"Stalker\",null],[\"Extra Health\",null]]",
+  "bc: RT_ITEMS billy_damage: Mid · L-R: [[\"Lifestrike\",null],[\"Spirit Shielding\",null],[\"Melee Charge\",null],[\"Spirit Strike\",null],[\"Bullet Resist Shredder\",null],[\"Spirit Snatch\",null],[\"Close Quarters\",null],[\"Point Blank\",null]] vs [[\"Weapon Shielding\",null],[\"Cultist Sacrifice\",null],[\"Lifestrike\",null],[\"Spirit Shielding\",null],[\"Melee Charge\",null],[\"Spirit Strike\",null],[\"Bullet Resist Shredder\",null],[\"Spirit Snatch\",null]]",
+  "bc: RT_ITEMS billy_damage: Mid · cont.: [[\"Crushing Fists\",null],[\"Extra Charge\",null],[\"Rapid Recharge\",null],[\"Berserker\",null]] vs [[\"Close Quarters\",null],[\"Point Blank\",null],[\"Crushing Fists\",null],[\"Extra Charge\",null]]",
+  "bc: RT_ITEMS billy_damage: Late · L-R: [[\"Colossus\",null],[\"Silencer\",null],[\"Scourge\",null]] vs [[\"Rapid Recharge\",null],[\"Berserker\",null],[\"Colossus\",null],[\"Silencer\",null],[\"Scourge\",null]]",
+  "walk: Scourge: slot 13 with no sell that frees a slot"
+ ],
+ "when": "2026-10-24 16:59",
+ "line": "[2026-10-24 16:59] crafted gate test case for the strategy/interaction rules (not a real proposal) | added Early · L-R|Extra Health, Mid · L-R|Weapon Shielding, Mid · L-R|Cultist Sacrifice, Mid · cont.|Close Quarters, Mid · cont.|Point Blank, Late · L-R|Rapid Recharge, Late · L-R|Berserker; removed Early · L-R|Cultist Sacrifice, Mid · L-R|Close Quarters, Mid · L-R|Point Blank, Mid · cont.|Rapid Recharge, Mid · cont.|Berserker | evidence: data:gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata | gate: FAIL"
+}

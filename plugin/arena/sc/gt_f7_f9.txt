@@ -1,0 +1,110 @@
+meta kind ISOLATED ITEM
+meta hero Grey Talon
+meta checkpoint Level at stat floor, 0 souls spent (Extra Charge only)
+meta build none (mechanics test)
+meta items upgrade_extra_charge
+meta question Grey Talon: do ability bits 1/3/7/15 give unlocked/T1/T2/T3 and does Extra Charge add a charge to a 1-charge Charged Shot?
+meta purpose establish tier readback and charge behaviour before any Grey Talon build comparison
+meta mechanics Charged Shot charges and cooldown, Extra Charge item
+meta expectedstate items=none before each block; Extra Charge only in EC blocks; Charged Shot on full charges at block start
+meta excluded all other items and gun damage - this is not a damage or build verdict
+meta accmode aimoff fixed aim, abilities only
+meta accwhy ability hits must not depend on gun accuracy
+meta abilities Charged Shot only
+meta runs 1/1
+# Grey Talon: (F9) do abil bits 1/3/7/15 = unlocked/T1/T2/T3? (F7) does Extra Charge add a charge to a 1-charge ability?
+# (M) Extra Charge burst value at Charged Shot T2 (between-charge 4s) vs T3 (1s).
+# Each block: hardreset, set tiers with abil, log them (abilist), optionally give EC, then 4 charged shots 1.5s apart (hold 1 0.6 + wait 0.9) = 6s window, then 6s idle.
+# Metric: ability_charged_shot hits on the enemy per block and their timestamps (damage csv, split by mark).
+setup Orion Haze
+aimoff 5.5 3
+egod
+# --- A: bits 1 (unlocked only), no item. Predict 1 hit (1 charge, cd 17)
+mark none
+hardreset
+abil 1 0 0 0
+abilist
+mark A_bits1_noEC
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 6
+# --- B: bits 1 + Extra Charge. F7 true -> 2 hits (2nd >= 4s after 1st). F7 false -> 1 hit
+mark none
+hardreset
+abil 1 0 0 0
+give upgrade_extra_charge
+abilist
+mark B_bits1_EC
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 6
+# --- C: bits 3 (T1 = +1 charge), no item. F9 true -> 2 hits, 2nd >= 4s after 1st
+mark none
+hardreset
+abil 3 0 0 0
+abilist
+mark C_bits3_noEC
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 6
+# --- D: bits 7 (T2) + EC. Predict 2 hits in the 6s window (3rd charge only after 8s)
+mark none
+hardreset
+abil 7 0 0 0
+give upgrade_extra_charge
+abilist
+mark D_bits7_EC
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 6
+# --- E: bits 15 (T3, between-charge 1s) + EC. F9 true -> 3 hits in the window, damage per hit higher (T2 +54, T3 +1.0x)
+mark none
+hardreset
+abil 15 0 0 0
+give upgrade_extra_charge
+abilist
+mark E_bits15_EC
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 6
+# --- F: bits 15, no item (control for E). Predict 2 hits
+mark none
+hardreset
+abil 15 0 0 0
+abilist
+mark F_bits15_noEC
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 0.9
+hold 1 0.6
+wait 6
+mark none
+end

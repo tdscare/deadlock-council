@@ -1,0 +1,106 @@
+{
+ "id": "mirage_ee_before_gun_run",
+ "title": "Mirage: Escalating Exposure + Superior Cooldown right after Ricochet vs the gun run",
+ "hero": "Mirage",
+ "playstyle": "Mark My Words Mirage",
+ "builds": [
+  "mirage"
+ ],
+ "question": "At ~28.8k, is the spirit order (Ricochet, Escalating Exposure, Superior Cooldown) stronger than the gun order (Headhunter, Titanic, Ricochet, Spirit Rend)?",
+ "hypothesis": "5-mark pop = 16 x (31 + 0.35 x spirit) ~990 at 88 spirit; EE at 12 stacks (Toxic bleed ticks every 0.5s) adds +54% to it, Superior Cooldown + invest +21 spirit. Gun order adds Headhunter ~20 DPS and Titanic ~+15 sustained DPS. Prediction: time to kill a 3000 HP target and 3-target damage in 20s both >=10% better on spirit arm.",
+ "arms": [
+  {
+   "name": "spirit_order",
+   "items": [
+    "Toxic Bullets",
+    "Headshot Booster",
+    "Extended Magazine",
+    "Ricochet",
+    "Escalating Exposure",
+    "Superior Cooldown"
+   ],
+   "ability_order": "3132343212121444",
+   "imbues": {
+    "Compress Cooldown": "Djinn's Mark"
+   },
+   "souls": 28800,
+   "notes": "new mirage.js at 28.8k"
+  },
+  {
+   "name": "gun_order",
+   "items": [
+    "Toxic Bullets",
+    "Headshot Booster",
+    "Headhunter",
+    "Extended Magazine",
+    "Ricochet",
+    "Titanic Magazine",
+    "Spirit Rend"
+   ],
+   "ability_order": "3132343212121444",
+   "imbues": {
+    "Compress Cooldown": "Djinn's Mark"
+   },
+   "souls": 27200,
+   "notes": "old data.js order at 27.2k + 1.6k unspent"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "~29k souls level",
+  "souls": 28800,
+  "position": "sandbox, targets at 15m",
+  "enemies": [
+   {
+    "hero": "dummy hero",
+    "count": 3,
+    "items": "none",
+    "behaviour": "strafe, grouped within 10m",
+    "hp": 3000
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns",
+   "HP",
+   "EE stacks"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns, HP, leech stacks reset between trials",
+  "Same boons/souls/ability points in both arms except the item/imbue under test",
+  "Same enemy hero, level, items, behaviour",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Shoot the main target, pop marks at 5 stacks, Dust Devil + Scarabs on cooldown",
+  "Run 1: single target, record TTK",
+  "Run 2: 3 grouped targets, record total damage in 20s"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "ttk_single_3000",
+   "unit": "s",
+   "how": "stopwatch from first shot",
+   "grade_target": "B",
+   "better": "lower",
+   "primary": true
+  },
+  {
+   "name": "damage_3_targets_20s",
+   "unit": "hp",
+   "how": "damage meter",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "ttk_single_3000",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "SUPPORTS spirit_order if TTK >=10% lower with non-overlapping ranges"
+ }
+}

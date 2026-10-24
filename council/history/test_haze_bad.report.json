@@ -1,0 +1,42 @@
+{
+ "proposal": "test_haze_bad",
+ "id": "haze",
+ "diff": [
+  "added Early · L-R|Extra Charge",
+  "removed Mid · L-R|Extra Charge"
+ ],
+ "block": [
+  "NEW violation introduced: bc: FRESH_T2_LATE haze: Healing Booster @28000",
+  "NEW violation introduced: bc: BOX_GT8 haze: Early · L-R has 9",
+  "NEW violation introduced: bc: HEALTH_4.8K_AFTER_16K haze: at 16800",
+  "NEW violation introduced: abt: CHARGE-BEFORE-CHARGES Extra Charge 800"
+ ],
+ "warn": [],
+ "fixed": [
+  "bc: FRESH_T2_LATE haze: Bullet Lifesteal @27200"
+ ],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY haze: Ricochet: start farming and dont stop untill u have siphon bullets",
+  "bc: CORE_NOTE_NONEMPTY haze: Siphon Bullets: farm until this, then start fighting",
+  "bc: CORE_NOTE_NONEMPTY haze: Healing Booster: Buffs all your lifesteal, smoke T3 included.",
+  "bc: CORE_NOTE_NONEMPTY haze: Rapid Recharge: More smokes, and Smoke Bomb works as a dispel: it clears hexes and bur",
+  "bc: CORE_NOTE_NONEMPTY haze: Vampiric Burst: Pop it with smoke T3 for the big heal.",
+  "bc: OVER_WORDING haze: \"over\" in notes: if u die the game is over get this. Sell Fortitude for ",
+  "bc: OPT_SELL_NOT_IN_CORE haze: Divine Barrier sells Counterspell",
+  "bc: OVERSHOOT_GUN_BEFORE_HEALTH haze: gun 11200 at health 4.8k @16800",
+  "bc: T4_BEFORE_20K haze: Ricochet@15200",
+  "c12: Surge of Power (spirit) instead of Burst Fire (gun): colour changes, check spikes",
+  "c12: Phantom Strike (health) instead of Silencer (gun): colour changes, check spikes",
+  "c12: Spiritual Overflow (gun) instead of Mercurial Magnum (spirit): colour changes, check spikes"
+ ],
+ "newV": [
+  "bc: FRESH_T2_LATE haze: Healing Booster @28000",
+  "bc: BOX_GT8 haze: Early · L-R has 9",
+  "bc: HEALTH_4.8K_AFTER_16K haze: at 16800",
+  "bc: RT_ITEMS haze: Early · L-R: [[\"Rapid Rounds\",null],[\"Active Reload\",null],[\"Swift Striker\",null],[\"Extended Magazine\",null],[\"Titanic Magazine\",null],[\"Extra Health\",null],[\"Fortitude\",null],[\"Ricochet\",null]] vs [[\"Extra Charge\",null],[\"Rapid Rounds\",null],[\"Active Reload\",null],[\"Swift Striker\",null],[\"Extended Magazine\",null],[\"Titanic Magazine\",null],[\"Extra Health\",null],[\"Fortitude\",null],[\"Ricochet\",null]]",
+  "bc: RT_ITEMS haze: Mid · L-R: [[\"Healing Booster\",null],[\"Siphon Bullets\",null],[\"Burst Fire\",null],[\"Bullet Lifesteal\",null],[\"Extra Charge\",null]] vs [[\"Bullet Lifesteal\",null],[\"Siphon Bullets\",null],[\"Burst Fire\",null],[\"Healing Booster\",null]]",
+  "abt: CHARGE-BEFORE-CHARGES Extra Charge 800"
+ ],
+ "when": "2026-10-24 04:50",
+ "line": "[2026-10-24 04:50] NEGATIVE TEST of gate: Extra Charge moved to first Early box | added Early · L-R|Extra Charge; removed Mid · L-R|Extra Charge | evidence: calc:council/sandbox/weaknesses/haze_runs.out | gate: FAIL"
+}

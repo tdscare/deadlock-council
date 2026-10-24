@@ -1,0 +1,71 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: haze
+HERO: Haze
+ITEM: Point Blank
+CHECKPOINT: add-on-top at 12000 souls (state souls 15200; item cost 3200)
+VERSION: interaction-v1
+ARGS: --interactions haze Point Blank --at 12000 --vs Burst Fire
+GENERATED: 2026-10-24T13:51:50Z
+BODY-SHA: 2e75c17f9b2049dca08bcb182fdd3299ec4480dee49d66aa909cd6d2d72d0f06
+INPUT-SHA: 238a1a6c4e70fe4c0fedb05142568ac154d62de16de96e7e36e6cdab9bc854a2
+ALTERNATIVES (equal souls 3200, unconditional, ranked): Tesla Bullets, Weighted Shots, Sharpshooter, Headhunter, Burst Fire, Express Shot; also shown, not ranked (conditional or unequal cost): Heroic Aura, Blood Tribute, Escalating Resilience
+VERDICT: INSUFFICIENT EVIDENCE: the best item in the sustained, burst window depends on UNKNOWN cells (see test requests)
+UNKNOWN_CELLS: 2
+PAIRWISE: Point Blank vs Burst Fire: sustained: Point Blank -4..+9% vs Burst Fire -> DEPENDS on UNKNOWN cells | burst: Point Blank -3..-1% vs Burst Fire -> DEPENDS on UNKNOWN cells | ult: Point Blank +12..+25% vs Burst Fire -> WINS in every reading
+UPPER-BOUND OPTIONS THAT BEAT IT (their trigger condition decides; UNKNOWN uptime): Blood Tribute
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.8, long_share=0.1, W_sus=10.0, W_burst=3.0; reload 2.5 s (ASSUMED 2.5 s: reload duration is animation-defined, not in vdata)
+STATE: owned ['Active Reload', 'Swift Striker', 'Titanic Magazine', 'Fortitude', 'Point Blank'] | tiers Sleep Dagger=T1(spirit) Smoke Bomb=T3(utility) Fixation=T3(stacks) Bullet Dance=T1(gun-mode) | weapon invest bonus 62% | spirit 10
+
+## INTERACTION MATRIX (item effect x kit component)
+- weapon damage % within range (CloseRangeBonusWeaponPower=50)
+    normal shooting                              WORKS (conditional)        [CALCULATED+ASSUMED] only within 15m; close-range share 0.8 ASSUMED
+    1=Sleep Dagger T1 [spirit]                   DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Smoke Bomb T3 [utility]                    WORKS (sustain)            [CALCULATED] tier adds BulletLifesteal after use: more bullet damage -> more healing
+    3=Fixation T3 [stacks]                       UNKNOWN                    [UNKNOWN] per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage)
+    4=Bullet Dance T1 (ULT) [gun-mode]           WORKS (partly)             [CALCULATED+ASSUMED] bullets within 15m of a 16m radius: share (15/r)^2 ASSUMED uniform targets
+    lifesteal Active Reload                      WORKS                      [CALCULATED] heal = bullet damage x lifesteal %
+- defence (not damage) (MeleeResistPercent=30)
+    normal shooting                              n/a                        [CALCULATED] defensive stat; valued by --strategy (survival), not damage
+    1=Sleep Dagger T1 [spirit]                   n/a                        [CALCULATED] defensive stat
+    2=Smoke Bomb T3 [utility]                    n/a                        [CALCULATED] defensive stat
+    3=Fixation T3 [stacks]                       n/a                        [CALCULATED] defensive stat
+    4=Bullet Dance T1 (ULT) [gun-mode]           n/a                        [CALCULATED] defensive stat
+- defence (not damage) (BonusHealth=75)
+    normal shooting                              n/a                        [CALCULATED] defensive stat; valued by --strategy (survival), not damage
+    1=Sleep Dagger T1 [spirit]                   n/a                        [CALCULATED] defensive stat
+    2=Smoke Bomb T3 [utility]                    n/a                        [CALCULATED] defensive stat
+    3=Fixation T3 [stacks]                       n/a                        [CALCULATED] defensive stat
+    4=Bullet Dance T1 (ULT) [gun-mode]           n/a                        [CALCULATED] defensive stat
+- reload time of Haze's gun (ASSUMED 2.5 s)
+    normal shooting                              UNKNOWN                    [UNKNOWN] reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 8 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 8 UNKNOWN readings]
+(build state, nothing added) |      1923              |       605              |      3108              | 270
+Point Blank                  |       2515 (+16..+31%) |        769 (+20..+27%) |       4272 (+30..+37%) | 365
+Tesla Bullets                |       2383 (+23..+24%) |        773 (+28..+28%) |       3743 (+20..+21%) | 297
+Weighted Shots               |       2409 (+13..+26%) |        740 (+16..+22%) |       4001 (+23..+29%) | 348
+Heroic Aura                  |       2310 (+14..+28%) |        779 (+23..+29%) |        4146 (+8..+33%) | 332  ! fire rate is a timed buff, counted as always on (upper bound)
+Sharpshooter                 |        2261 (+9..+18%) |        699 (+11..+15%) |       3613 (+13..+16%) | 324
+Headhunter                   |        2196 (+9..+14%) |        688 (+11..+14%) |       3516 (+10..+13%) | 314
+Blood Tribute                |       2364 (+16..+35%) |        813 (+28..+34%) |        4392 (+8..+41%) | 341  ! costs 50 health per second while on (not netted)
+Burst Fire                   |       2310 (+14..+28%) |        779 (+23..+29%) |        3697 (+8..+19%) | 332
+Escalating Resilience        |       2399 (+15..+33%) |        705 (+12..+16%) |       3768 (+17..+40%) | 347  ! conditional item (stack): counted as if its condition is met (upper bound)
+Express Shot                 |        2177 (+7..+13%) |         675 (+8..+12%) |       3574 (+12..+15%) | 311
+  candidate detail (reading 1): sustained bullets 101, gun 989, stacks 1438, procs 0, spirit 88, time to max stacks 11.1s | ult: 62 bullets in 3.8s, close-range share 0.88
+  sustained: rank (reading 1) Point Blank > Weighted Shots > Tesla Bullets > Burst Fire > Sharpshooter > Headhunter > Express Shot  <- changes with UNKNOWN readings: Point Blank / Point Blank / Point Blank / Point Blank / Tesla Bullets / Tesla Bullets / Tesla Bullets / Tesla Bullets
+  burst: rank (reading 1) Burst Fire > Tesla Bullets > Point Blank > Weighted Shots > Sharpshooter > Headhunter > Express Shot  <- changes with UNKNOWN readings: Burst Fire / Burst Fire / Burst Fire / Burst Fire / Tesla Bullets / Tesla Bullets / Tesla Bullets / Tesla Bullets
+  ult: rank (reading 1) Point Blank > Weighted Shots > Tesla Bullets > Burst Fire > Sharpshooter > Express Shot > Headhunter
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (165s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_haze_Point_Blank_3_Fixation_T3_weapon_damage_within_range.txt
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_haze_reload_probe.txt
+
+## NOT DETERMINED FROM DATA
+  - weapon damage % within range (CloseRangeBonusWeaponPower=50): 3=Fixation T3 [stacks]: per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage)
+  - reload time of Haze's gun (ASSUMED 2.5 s): normal shooting: reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

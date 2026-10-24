@@ -1,0 +1,41 @@
+BUILD haze | diff: added Mid · L-R|Weapon Shielding
+fixed: 0 | UNRESOLVED in resulting build: 13 | NEW: 7
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY haze: Ricochet: start farming and dont stop untill u have siphon bullets
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY haze: Healing Booster: Buffs all your lifesteal, smoke T3 included.
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY haze: Siphon Bullets: farm until this, then start fighting
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY haze: Rapid Recharge: More smokes, and Smoke Bomb works as a dispel: it clears hexes and bur
+  UNRESOLVED bc: CORE_NOTE_NONEMPTY haze: Vampiric Burst: Pop it with smoke T3 for the big heal.
+  UNRESOLVED bc: FRESH_T2_LATE haze: Bullet Lifesteal @28800
+  UNRESOLVED bc: OVER_WORDING haze: "over" in notes: if u die the game is over get this. Sell Fortitude for 
+  UNRESOLVED bc: OPT_SELL_NOT_IN_CORE haze: Divine Barrier sells Counterspell
+  UNRESOLVED bc: OVERSHOOT_GUN_BEFORE_HEALTH haze: gun 11200 at health 4.8k @16000
+  UNRESOLVED bc: T4_BEFORE_20K haze: Ricochet@14400
+  UNRESOLVED c12: Surge of Power (spirit) instead of Burst Fire (gun): colour changes, check spikes
+  UNRESOLVED c12: Phantom Strike (health) instead of Silencer (gun): colour changes, check spikes
+  UNRESOLVED c12: Spiritual Overflow (gun) instead of Mercurial Magnum (spirit): colour changes, check spikes
+  UNRESOLVED walk: Silencer: slot 13 with no sell that frees a slot
+  UNRESOLVED walk: Healing Tempo: slot 13 with no sell that frees a slot
+  UNRESOLVED c12: Surge of Power (spirit) instead of Burst Fire (gun): colour changes, check spikes
+  UNRESOLVED c12: Phantom Strike (health) instead of Silencer (gun): colour changes, check spikes
+  UNRESOLVED c12: Spiritual Overflow (gun) instead of Mercurial Magnum (spirit): colour changes, check spikes
+STRATEGY BLOCK
+INTERACTION: no damage/fire-rate/stat item added, removed or reordered
+WEAKNESS OK: Weapon Shielding [survive and keep fighting] beats the best simple remedy Mercurial Magnum (+33.3% vs +12.2% trade ratio per 1000 souls) [council/evidence/weakness/haze_ammo_12000.txt]
+SALES: no investment drop, sale-before-upgrade or redundant purchase detected
+OVERLAP check (changed items):
+  overlap Weapon Shielding (added): at_buy=COMPLEMENTS; core_end=ADDS-VALUE
+UNRESOLVED overlap-candidates in resulting build (not part of this change): 15
+  UNRESOLVED overlap-candidate Active Reload [at_buy=ADDS-VALUE(20.3% whole item) ALT-BETTER ["Titanic Magazine",46.5]; core_end=ADDS-VALUE(11.6% whole item)]
+  UNRESOLVED overlap-candidate Swift Striker [at_buy=REDUNDANT-LIKELY(2.7% whole item) ALT-BETTER ["Titanic Magazine",41.6]; core_end=REDUNDANT-LIKELY(3.6% whole item)]
+  UNRESOLVED overlap-candidate Ricochet [at_buy=ADDS-VALUE(8.1% whole item) ALT-BETTER ["Mercurial Magnum",19]; core_end=REDUNDANT-LIKELY(5.9% whole item) ALT-BETTER ["Mercurial Magnum",16.2]]
+  UNRESOLVED overlap-candidate Burst Fire [at_buy=ADDS-VALUE(10.1% whole item) ALT-BETTER ["Blood Tribute",13]; core_end=ADDS-VALUE(8.8% whole item) ALT-BETTER ["Blood Tribute",11.9]]
+  UNRESOLVED overlap-candidate Lucky Shot [at_buy=REDUNDANT-LIKELY(4.3% whole item) ALT-BETTER ["Mercurial Magnum",18.6]; core_end=COMPLEMENTS(4.3% whole item) ALT-BETTER ["Mercurial Magnum",16.5]]
+  UNRESOLVED overlap-candidate Vampiric Burst [at_buy=ADDS-VALUE(8.8% whole item) ALT-BETTER ["Healing Tempo",12]; core_end=ADDS-VALUE(8.9% whole item)]
+BLOCK NEW violation introduced: bc: T1T2_NOT_UPGRADED_OR_SOLD haze: Weapon Shielding (T2) @16000
+BLOCK NEW violation introduced: bc: SLOTS_GT12_NO_SELL haze: Silencer is slot 13
+BLOCK NEW violation introduced: bc: SLOTS_GT12_NO_SELL haze: Healing Tempo is slot 13
+BLOCK NEW violation introduced: bc: CORE_NOT_12 haze: core ends with 13 items, 54400 souls
+BLOCK NEW violation introduced: walk: Silencer: slot 13 with no sell that frees a slot
+BLOCK NEW violation introduced: walk: Healing Tempo: slot 13 with no sell that frees a slot
+BLOCK STRATEGY: proposal changes greens (Extra Health,Fortitude,Healing Booster,Siphon Bullets,Bullet Lifesteal,Vampiric Burst,Healing Tempo -> Extra Health,Fortitude,Weapon Shielding,Healing Booster,Siphon Bullets,Bullet Lifesteal,Vampiric Burst,Healing Tempo) but cites no `strategy` evidence file (run abtimeline.py --strategy haze <checkpoints> and cite it as kind `strategy`)
+RESULT: BLOCKED

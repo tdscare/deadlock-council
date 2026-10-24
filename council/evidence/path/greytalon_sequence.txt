@@ -1,0 +1,131 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: greytalon
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:10:57Z
+BODY-SHA: c20cc03c6438095935ea8304ac9896e5ec4bc85bfcb831aea8a64c21eef13e0a
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Charge: retained-or-upgraded (-> Rapid Recharge)
+  Mystic Burst: retained-or-upgraded (-> Tankbuster)
+  High-Velocity Rounds: retained-or-upgraded (-> Sharpshooter)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit,Surge of Power)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Extra Stamina: retained-or-upgraded (-> Stamina Mastery)
+  Enchanter's Emblem: retained
+  Stamina Mastery: retained
+  Tankbuster: retained
+  Long Range: retained-or-upgraded (-> Sharpshooter)
+  Sharpshooter: retained
+  Recharging Rush: retained
+  Rapid Recharge: retained
+  Surge of Power: retained
+  Boundless Spirit: retained
+  Superior Cooldown: retained
+  Indomitable: retained
+  Spirit Burn: retained
+  Mystic Reverb: retained
+  Extra Regen: conditional branch (lane alternative)
+  Metal Skin: conditional branch (counter menu)
+  Plated Armor: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Unstoppable: conditional branch (counter menu)
+  Spiritual Overflow: situational-luxury
+  Witchmail: situational-luxury
+  Echo Shard: situational-luxury
+  Refresher: situational-luxury
+  Divine Barrier: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Losing lane? Buy 1         -> lane alternative (branch): Extra Regen
+  Early · L-R                -> main path (sequential): Extra Charge, Mystic Burst, High-Velocity Rounds, Extra Spirit, Compress Cooldown, Improved Spirit
+  Mid · L-R                  -> main path (sequential): Extra Stamina, Enchanter's Emblem, Stamina Mastery, Tankbuster, Long Range, Sharpshooter
+  Mid · cont.                -> main path (sequential): Recharging Rush, Rapid Recharge
+  Late · L-R                 -> main path (sequential): Surge of Power, Boundless Spirit, Superior Cooldown, Indomitable, Spirit Burn, Mystic Reverb
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Plated Armor, Counterspell, Dispel Magic, Spirit Resilience, Unstoppable
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Spiritual Overflow, Witchmail, Echo Shard, Refresher, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+
+## Recharging Rush: sold when buying Spiritual Overflow (I'm rich as fuck, luxury)
+  role of Recharging Rush: retained; role of Spiritual Overflow: situational-luxury
+  Recharging Rush: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 16800 souls (~16.0 min), replaced at ~55.0 min -> owned ~39.0 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 11200/11200/32000 -> after 9600/11200/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 79 min | window TR | key purchase times (min)
+  as built                                    |          68713 |      0.35 | Recharging Rush 16, Spiritual Overflow 55
+  keep Recharging Rush (slot cap ignored)     |          69155 |      0.37 | Recharging Rush 16, Spiritual Overflow 56
+  skip Recharging Rush                        |          66914 |      0.33 | Spiritual Overflow 56
+  sell Enchanter's Emblem instead             |          68901 |      0.36 | Recharging Rush 16, Spiritual Overflow 55
+  keep Recharging Rush (slot cap ignored) vs as built: d souls +273, d window TR +3.3% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Recharging Rush vs as built: d souls -1093, d window TR -7.1% | souls: MODEL-ONLY (sign robust in 97% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Enchanter's Emblem instead vs as built: d souls +37, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  ammo mechanics (clip 17, reload 2.35 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Recharging Rush): 8 s trade 17 bullets (4% not firing), 20 s 35 bullets (18% not firing, 2.1 magazines), damage 20 s 4140, refill uses 0.0
+    keep Recharging Rush: 8 s trade 18 bullets (0% not firing), 20 s 37 bullets (14% not firing, 1.8 magazines), damage 20 s 4914, refill uses 0.0
+    without Spiritual Overflow (keep Recharging Rush): 8 s trade 16 bullets (0% not firing), 20 s 36 bullets (11% not firing, 1.8 magazines), damage 20 s 3995, refill uses 0.0
+    sell Enchanter's Emblem instead: 8 s trade 18 bullets (0% not firing), 20 s 37 bullets (14% not firing, 1.8 magazines), damage 20 s 4914, refill uses 0.0
+    sustained 20 s gun damage: selling Recharging Rush costs 16% vs keeping it (both with Spiritual Overflow); Spiritual Overflow adds +23% on top of Recharging Rush; selling Enchanter's Emblem instead: +0% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: the sale of Recharging Rush lowers modelled sustained gun damage by 16% (ammo mechanics)
+  VERDICT: REVIEW: selling Recharging Rush costs sustained gun output; Spiritual Overflow does not replace its ammo role (quantified above). Alternatives for the slot: sell Enchanter's Emblem (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED); flipping assumptions: keep Recharging Rush (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+
+## Enchanter's Emblem: sold when buying Witchmail (I'm rich as fuck, luxury)
+  role of Enchanter's Emblem: retained; role of Witchmail: situational-luxury
+  Enchanter's Emblem: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 8000 souls (~8.5 min), replaced at ~55.0 min -> owned ~46.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/17600/32000 -> after 4800/16000/32000; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 79 min | window TR | key purchase times (min)
+  as built                                    |          68497 |      0.37 | Enchanter's Emblem 8, Witchmail 55
+  keep Enchanter's Emblem (slot cap ignored)  |          68632 |      0.38 | Enchanter's Emblem 8, Witchmail 56
+  skip Enchanter's Emblem                     |          67017 |      0.34 | Witchmail 56
+  sell Recharging Rush instead                |          68033 |      0.36 | Enchanter's Emblem 8, Witchmail 55
+  keep Enchanter's Emblem (slot cap ignored) vs as built: d souls +460, d window TR +1.9% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Enchanter's Emblem vs as built: d souls -1182, d window TR -7.6% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Recharging Rush instead vs as built: d souls +0, d window TR -1.8% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: keep Enchanter's Emblem (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Recharging Rush instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Rapid Recharge: sold when buying Echo Shard (I'm rich as fuck, luxury)
+  role of Rapid Recharge: retained; role of Echo Shard: situational-luxury
+  Rapid Recharge: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 19200 souls (~18.2 min), replaced at ~53.8 min -> owned ~35.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/11200/38400 -> after 4800/11200/35200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 79 min | window TR | key purchase times (min)
+  as built                                    |          68400 |      0.33 | Rapid Recharge 18, Echo Shard 54
+  keep Rapid Recharge (slot cap ignored)      |          68434 |      0.34 | Rapid Recharge 18, Echo Shard 56
+  skip Rapid Recharge                         |          68785 |      0.34 | Echo Shard 52
+  sell Recharging Rush instead                |          67863 |      0.32 | Rapid Recharge 18, Echo Shard 55
+  keep Rapid Recharge (slot cap ignored) vs as built: d souls +13, d window TR +0.8% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Rapid Recharge vs as built: d souls +378, d window TR +2.6% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Recharging Rush instead vs as built: d souls -538, d window TR -3.7% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  note: the variants ['skip Rapid Recharge'] differ from 'as built' only through items with no modelled stat (Rapid Recharge, Echo Shard contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Echo Shard has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Rapid Recharge, Echo Shard (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: sell Recharging Rush instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Stamina Mastery: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Stamina Mastery: retained; role of Refresher: situational-luxury
+  Stamina Mastery: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 10400 souls (~10.5 min), replaced at ~53.8 min -> owned ~43.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 4800/11200/38400 -> after 4800/8000/38400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 79 min | window TR | key purchase times (min)
+  as built                                    |          68751 |      0.38 | Stamina Mastery 10, Refresher 54
+  keep Stamina Mastery (slot cap ignored)     |          68757 |      0.38 | Stamina Mastery 10, Refresher 56
+  skip Stamina Mastery                        |          68295 |      0.37 | Refresher 54
+  sell Recharging Rush instead                |          68119 |      0.36 | Stamina Mastery 10, Refresher 55
+  keep Stamina Mastery (slot cap ignored) vs as built: d souls +13, d window TR +0.4% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Stamina Mastery vs as built: d souls -394, d window TR -2.8% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY (sign robust in 91% of cells; no measured inputs)
+  sell Recharging Rush instead vs as built: d souls -459, d window TR -3.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Stamina Mastery, Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: skip Stamina Mastery: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Recharging Rush instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)

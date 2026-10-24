@@ -1,0 +1,41 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: bebop
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:12Z
+BODY-SHA: d55f7ee10c71fec23940e7c660095eb62c71c4ea08b664c08db0bc8052a5647f
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Early · L-R              -> main path (sequential): Spirit Strike, Headshot Booster, Stalker, Bullet Resist Shredder
+  Mid · L-R                -> main path (sequential): Headhunter, Sprint Boots, Enduring Speed, Veil Walker, Hunter's Aura, Spirit Snatch, Extra Health, Fortitude
+  Late · L-R               -> main path (sequential): Siphon Bullets, Vampiric Burst, Crippling Headshot, Witchmail
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Counterspell, Metal Skin, Dispel Magic, Plated Armor, Bullet Resilience, Spirit Resilience, Unstoppable, Slowing Hex
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Inhibitor, Lucky Shot, Colossus, Divine Barrier, Spellslinger
+  Slot locked              -> optional upgrade (branch): Juggernaut
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Inhibitor, sell Veil Walker
+    function of Veil Walker: move_speed; replacement Inhibitor: bullet_proc; roles lost: move_speed  [VERIFIED GAME MECHANIC]
+    Veil Walker is a component of later items: no
+    held for 40800 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 14400/27200/4800 -> 14400/30400/4800; thresholds lost: none
+    trade ratio after the sale 0.64; selling Bullet Resist Shredder instead: 0.58 (-10.0%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck: buy Lucky Shot, sell Headshot Booster: Headshot Booster is not held at that point in the walk - dropped earlier by the walk's 12-slot policy (oldest-cheapest) or by an earlier sale note
+- I'm rich as fuck (luxury ending): buy Colossus, sell Fortitude
+    function of Fortitude: move_speed; replacement Colossus: bullet_resist, slow, spirit_resist; roles lost: move_speed  [VERIFIED GAME MECHANIC]
+    Fortitude is a component of later items: no
+    held for 32000 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 14400/27200/4800 -> 14400/30400/4800; thresholds lost: none
+    trade ratio after the sale 0.63; selling Bullet Resist Shredder instead: 0.58 (-6.9%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Spellslinger, sell Crippling Headshot
+    function of Crippling Headshot: resist_shred; replacement Spellslinger: ammo, cooldown, fire_rate; roles lost: resist_shred  [VERIFIED GAME MECHANIC]
+    Crippling Headshot is a component of later items: no
+    held for 12800 souls of purchases; resale 3200, net cost of having owned it 3200
+    investment before/after gun/vit/spirit 14400/27200/4800 -> 14400/27200/4800; thresholds lost: none
+    trade ratio after the sale 0.63; selling Bullet Resist Shredder instead: 0.57 (-9.3%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

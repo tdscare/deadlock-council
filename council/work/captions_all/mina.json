@@ -1,0 +1,4345 @@
+{
+ "schema": 1,
+ "id": "mina",
+ "hero": "Mina",
+ "name": "Rizuhble's Takeaway Mina",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Health",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, once you're out of slots.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-6,400 (levels 1-12). Abilities gained (both point models agree): Nox Nostra unlocked. 4.8k spikes: spirit 4.8k at Improved Spirit. Ultimate (Nox Nostra) is available from Extra Stamina.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "mina:6:phase_range:3183",
+    "mina:6:phase_abilities:3184",
+    "mina:6:phase_spikes:3192",
+    "mina:6:phase_ult:3193"
+   ],
+   "items": [
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 18.5 to Love Bites's bonus damage (1.85x scaling), your steepest spirit scaling.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:0:spirit_scaling:3166"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:0:spirit_scaling:3166",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Burst",
+     "imbue": null,
+     "caption": "Rake (120) clears its 80-damage trigger.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:1:threshold_now:3168"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:1:threshold_now:3168",
+       true,
+       "instances above: [(1, 120.0)]"
+      ]
+     ]
+    },
+    {
+     "name": "Quicksilver Reload",
+     "imbue": "1",
+     "caption": "Imbued on Rake: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:2:imbue_reload:3171"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:2:imbue_reload:3171",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Expansion",
+     "imbue": "1",
+     "caption": "Imbued on Rake: widens its range.",
+     "cls": "b",
+     "why": "imminent: Improved Spirit completes 4.8k spirit in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "mina:3:imbue_reach:3174"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:3:imbue_reach:3174",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "Completes the 4.8k spirit tier (4,000 to 4,800 invested): bonus 19 to 38 spirit power. +18 spirit adds about 33.3 to Love Bites's bonus damage (1.85x scaling), your steepest spirit scaling. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:4:spike_complete:3176",
+      "mina:4:spirit_scaling:3178",
+      "mina:4:upgrade_of:3177"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:4:spike_complete:3176",
+       true,
+       "inventory spirit: before 4000, after 4800, threshold 4800"
+      ],
+      [
+       "mina:4:spirit_scaling:3178",
+       true,
+       ""
+      ],
+      [
+       "mina:4:upgrade_of:3177",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Extra Stamina",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Reactive Barrier, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 4.8k tier completes at Reactive Barrier, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 6,400-17,600 (levels 12-24). Abilities gained (both point models agree): Rake T3, Love Bites T3. 4.8k spikes: vitality 4.8k at Reactive Barrier.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "mina:13:phase_range:3211",
+    "mina:13:phase_abilities:3212",
+    "mina:13:phase_spikes:3220"
+   ],
+   "items": [
+    {
+     "name": "Stamina Mastery",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Reactive Barrier completes 800 souls on. Upgrade of Extra Stamina (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "b",
+     "why": "imminent: Reactive Barrier completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+     "claim_ids": [
+      "mina:7:spike_progress:3194",
+      "mina:7:upgrade_of:3195"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:7:spike_progress:3194",
+       true,
+       "4000"
+      ],
+      [
+       "mina:7:upgrade_of:3195",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Reactive Barrier",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus. Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:8:spike_complete:3197",
+      "mina:8:upgrade_of:3198"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:8:spike_complete:3197",
+       true,
+       "inventory vitality: before 4000, after 4800, threshold 4800"
+      ],
+      [
+       "mina:8:upgrade_of:3198",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you. Takes vitality from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:9:defence_purge:3201",
+      "mina:9:invest_step:3199"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:9:defence_purge:3201",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "mina:9:invest_step:3199",
+       true,
+       "inventory vitality: before 4800, after 8000, threshold 6400"
+      ]
+     ]
+    },
+    {
+     "name": "Rapid Rounds",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only and the build never reaches the 4.8k weapon tier through the core: timing review",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Swift Striker",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only and the build never reaches the 4.8k weapon tier through the core: timing review",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Spirit Sap",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "1",
+     "caption": "Imbued on Rake: takes 18% off its 8s base cooldown. Takes spirit from 6,400 to 8,000 invested: bonus 45 to 52 spirit power.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:13:imbue_cooldown:3209",
+      "mina:13:invest_step:3208"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:13:imbue_cooldown:3209",
+       true,
+       ""
+      ],
+      [
+       "mina:13:invest_step:3208",
+       true,
+       "inventory spirit: before 6400, after 8000, threshold 8000"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 cont.",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 17,600-26,400 (levels 24-28). Abilities gained (both point models agree): Sanguine Retreat T3. Your biggest single spirit hit (Love Bites, bonus damage) grows from 266 to 355.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "mina:16:phase_range:3228",
+    "mina:16:phase_abilities:3229",
+    "mina:16:phase_power:3230"
+   ],
+   "items": [
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 55.5 to Love Bites's bonus damage (1.85x scaling), your steepest spirit scaling. Takes spirit from 8,000 to 12,800 invested: bonus 52 to 59 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:15:spirit_scaling:3224",
+      "mina:15:invest_step:3222",
+      "mina:15:upgrade_of:3223"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:15:spirit_scaling:3224",
+       true,
+       ""
+      ],
+      [
+       "mina:15:invest_step:3222",
+       true,
+       "inventory spirit: before 8000, after 12800, threshold 11200"
+      ],
+      [
+       "mina:15:upgrade_of:3223",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Tankbuster",
+     "imbue": null,
+     "caption": "Love Bites (355), Rake (270) clear its 165-damage trigger. Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:16:threshold_now:3225",
+      "mina:16:upgrade_of:3226"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:16:threshold_now:3225",
+       true,
+       "instances above: [(1, 270.1075), (3, 355.29925000000003)]"
+      ],
+      [
+       "mina:16:upgrade_of:3226",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 26,400-46,400 (levels 28-35). Your biggest single spirit hit (Love Bites, bonus damage) grows from 355 to 474.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "mina:21:phase_range:3244",
+    "mina:21:phase_power:3245"
+   ],
+   "items": [
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 15,200 to 21,600 invested: bonus 59 to 66 spirit power.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 21,600 to 23,200 invested: bonus 66 to 75 spirit power. | With 3 abilities trained their base cooldowns total 135s; 20% off is 27s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Greater Expansion",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Infuser",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 9,600 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Pop it with your ult.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mercurial Magnum",
+     "imbue": "1",
+     "caption": "Imbued on Rake: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s. Takes spirit from 25,600 to 30,400 invested: bonus 75 to 100 spirit power. Upgrade of Quicksilver Reload (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:21:imbue_reload:3241",
+      "mina:21:invest_step:3240",
+      "mina:21:upgrade_of:3242"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "mina:21:imbue_reload:3241",
+       true,
+       ""
+      ],
+      [
+       "mina:21:invest_step:3240",
+       true,
+       "inventory spirit: before 25600, after 30400, threshold 28800"
+      ],
+      [
+       "mina:21:upgrade_of:3242",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Tankbuster? Buy what is killing you, cheapest first. Not dying? Skip. Sell Spirit Sap.",
+   "desc": "Dying after Tankbuster? Buy what is killing you, cheapest first. Not dying? Skip. Sell Spirit Sap.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:22:defence_bullet:3250"
+     ],
+     "lint": [],
+     "legacy_note": "Their gun carry is melting you.",
+     "temporary": false,
+     "verify": [
+      [
+       "mina:22:defence_bullet:3250",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:22:defence_gun:3251"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is gun.",
+     "temporary": false,
+     "verify": [
+      [
+       "mina:22:defence_gun:3251",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Resilience",
+     "imbue": null,
+     "caption": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:22:defence_spirit:3252"
+     ],
+     "lint": [],
+     "legacy_note": "Most of their damage is spirit.",
+     "temporary": false,
+     "verify": [
+      [
+       "mina:22:defence_spirit:3252",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Spellbreaker",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Big spirit bursts catch you when you go in.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:22:defence_parry:3253"
+     ],
+     "lint": [],
+     "legacy_note": "A big ult you can see coming, like Lash's or Infernus's.",
+     "temporary": false,
+     "verify": [
+      [
+       "mina:22:defence_parry:3253",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": "A stun cancels your Sanguine Retreat (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:22:cc_exposure:3254"
+     ],
+     "lint": [],
+     "legacy_note": "Stuns keep catching you before you blink.",
+     "temporary": false,
+     "verify": [
+      [
+       "mina:22:cc_exposure:3254",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Ethereal Shift",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They keep jumping you and you can't blink out.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Toxic Bullets",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "They're all tanks or self-healers.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Focus Lens",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Spirit Sap for 4,800 more souls: resist reduction duration 0 to 12; bonus fire rate 0 to 10..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:22:upgrade_delta:3255"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Spirit Sap. Throw it on them, then ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "mina:22:upgrade_delta:3255",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Swift Striker for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Indomitable",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Reactive Barrier for 4,800 more souls: cooldown reduction on proc 0 to 20; bullet resist 0 to 10..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:22:upgrade_delta:3258"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Reactive Barrier.",
+     "temporary": false,
+     "verify": [
+      [
+       "mina:22:upgrade_delta:3258",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Mystic Reverb",
+     "imbue": "1",
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "On Rake. Sell Tankbuster for this.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun. Takes vitality from 14,400 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:22:defence_barrier:3263",
+      "mina:22:invest_step:3262"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Dispel Magic for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "mina:22:defence_barrier:3263",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "mina:22:invest_step:3262",
+       true,
+       "inventory vitality: before 14400, after 17600, threshold 16000"
+      ]
+     ]
+    },
+    {
+     "name": "Lightning Scroll",
+     "imbue": null,
+     "caption": "Nox Nostra deals damage (damage), so it applies the item's 0.75s stun after a 3s delay plus 150 damage. Replaces Mercurial Magnum: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:22:ult_trigger:3265",
+      "mina:22:sell_swap:3266"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Mercurial Magnum for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "mina:22:ult_trigger:3265",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "mina:22:sell_swap:3266",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Cheat Death",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 14,400 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Stamina Mastery for this.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "mina:22:upgrade_delta:3269"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "mina:22:upgrade_delta:3269",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "mina:22:temporary_sold:3163": {
+   "id": "mina:22:temporary_sold:3163",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, once you're out of slots.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 22,
+    "item": "Extra Health",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it once you're out of slots."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Health",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:0:spike_progress:3164": {
+   "id": "mina:0:spike_progress:3164",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "mina:0:component_for:3165": {
+   "id": "mina:0:component_for:3165",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 4000,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:0:spirit_scaling:3166": {
+   "id": "mina:0:spirit_scaling:3166",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 18.5 to Love Bites's bonus damage (1.85x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_lovebites"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 3,
+    "prop": "BonusDamage"
+   },
+   "numbers": [
+    "10.0",
+    "18.5",
+    "1.85"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mina:1:spike_progress:3167": {
+   "id": "mina:1:spike_progress:3167",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "mina:1:threshold_now:3168": {
+   "id": "mina:1:threshold_now:3168",
+   "kind": "threshold_now",
+   "phrase": "Rake (120) clears its 80-damage trigger.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_burst MinimumDamage=80",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_steallife",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_batblink",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_lovebites"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 80.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "80.0",
+    "120"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 1.5,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "mina:1:component_for:3169": {
+   "id": "mina:1:component_for:3169",
+   "kind": "component_for",
+   "phrase": "From Tankbuster: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Mystic Burst",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 24800,
+    "event": "Tankbuster"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Tankbuster"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:2:spike_progress:3170": {
+   "id": "mina:2:spike_progress:3170",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Quicksilver Reload",
+    "souls": 3200,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "mina:2:imbue_reload:3171": {
+   "id": "mina:2:imbue_reload:3171",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Rake: the imbue charges up over 18s; the charged use reloads the clip and gives 10% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_quick_silver",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_steallife"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 2,
+    "item": "Quicksilver Reload",
+    "souls": 3200,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 1
+   },
+   "numbers": [
+    "18.0",
+    "10.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mina:2:component_for:3172": {
+   "id": "mina:2:component_for:3172",
+   "kind": "component_for",
+   "phrase": "From Mercurial Magnum: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 2,
+    "item": "Quicksilver Reload",
+    "souls": 3200,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 43200,
+    "event": "Mercurial Magnum"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Mercurial Magnum"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:3:spike_progress:3173": {
+   "id": "mina:3:spike_progress:3173",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k spirit tier, which Improved Spirit completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Expansion",
+    "souls": 4000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Improved Spirit completes the 4.8k spirit tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "mina:3:imbue_reach:3174": {
+   "id": "mina:3:imbue_reach:3174",
+   "kind": "imbue_reach",
+   "phrase": "Imbued on Rake: widens its range.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_reach",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_steallife"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Expansion",
+    "souls": 4000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 1,
+    "stats": [
+     "ETechRange",
+     "ETechRadius"
+    ]
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mina:3:component_for:3175": {
+   "id": "mina:3:component_for:3175",
+   "kind": "component_for",
+   "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Mystic Expansion",
+    "souls": 4000,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 32800,
+    "event": "Greater Expansion"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Greater Expansion"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:4:spike_complete:3176": {
+   "id": "mina:4:spike_complete:3176",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (4,000 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 4,
+    "item": "Improved Spirit",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "mina:4:upgrade_of:3177": {
+   "id": "mina:4:upgrade_of:3177",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 4,
+    "item": "Improved Spirit",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:4:spirit_scaling:3178": {
+   "id": "mina:4:spirit_scaling:3178",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 33.3 to Love Bites's bonus damage (1.85x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_lovebites"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 4,
+    "item": "Improved Spirit",
+    "souls": 4800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 3,
+    "prop": "BonusDamage"
+   },
+   "numbers": [
+    "18.0",
+    "33.3",
+    "1.85"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mina:5:spike_progress:3179": {
+   "id": "mina:5:spike_progress:3179",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Extra Stamina",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "mina:5:component_for:3180": {
+   "id": "mina:5:component_for:3180",
+   "kind": "component_for",
+   "phrase": "From Stamina Mastery: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Extra Stamina",
+    "souls": 5600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 3200,
+    "event": "Stamina Mastery"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Stamina Mastery"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:6:spike_progress:3181": {
+   "id": "mina:6:spike_progress:3181",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 6,
+    "item": "Grit",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "mina:6:component_for:3182": {
+   "id": "mina:6:component_for:3182",
+   "kind": "component_for",
+   "phrase": "From Reactive Barrier: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Grit",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 3200,
+    "event": "Reactive Barrier"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Reactive Barrier"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:6:phase_range:3183": {
+   "id": "mina:6:phase_range:3183",
+   "kind": "phase_range",
+   "phrase": "Souls 0-6,400 (levels 1-12).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Grit",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Grit",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "6,400",
+    "1",
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:6:phase_abilities:3184": {
+   "id": "mina:6:phase_abilities:3184",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Nox Nostra unlocked.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Grit",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Grit",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:6:phase_spikes:3192": {
+   "id": "mina:6:phase_spikes:3192",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: spirit 4.8k at Improved Spirit.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Grit",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Grit",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:6:phase_ult:3193": {
+   "id": "mina:6:phase_ult:3193",
+   "kind": "phase_ult",
+   "phrase": "Ultimate (Nox Nostra) is available from Extra Stamina.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 6,
+    "item": "Grit",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Grit",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:7:spike_progress:3194": {
+   "id": "mina:7:spike_progress:3194",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Reactive Barrier completes 800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Stamina Mastery",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Reactive Barrier completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 4000
+   },
+   "numbers": [
+    "4000",
+    "4.8k",
+    800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "mina:7:upgrade_of:3195": {
+   "id": "mina:7:upgrade_of:3195",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Stamina (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Stamina Mastery",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Stamina"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:7:swap_candidate:3196": {
+   "id": "mina:7:swap_candidate:3196",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Cheat Death later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 7,
+    "item": "Stamina Mastery",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Stamina Mastery",
+    "buyer": "Cheat Death"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:8:spike_complete:3197": {
+   "id": "mina:8:spike_complete:3197",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (4,000 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 8,
+    "item": "Reactive Barrier",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "4000",
+    "4800",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "mina:8:upgrade_of:3198": {
+   "id": "mina:8:upgrade_of:3198",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 8,
+    "item": "Reactive Barrier",
+    "souls": 9600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Grit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:9:invest_step:3199": {
+   "id": "mina:9:invest_step:3199",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 4,800 to 8,000 invested, crossing the 6.4k, 8k tiers: bonus 38 to 46 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 9,
+    "item": "Dispel Magic",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "8000",
+    "38.0",
+    "46.0",
+    "6.4k",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "mina:9:swap_candidate:3200": {
+   "id": "mina:9:swap_candidate:3200",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Divine Barrier later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 9,
+    "item": "Dispel Magic",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Dispel Magic",
+    "buyer": "Divine Barrier"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:9:defence_purge:3201": {
+   "id": "mina:9:defence_purge:3201",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 9,
+    "item": "Dispel Magic",
+    "souls": 12800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:10:spike_progress:3202": {
+   "id": "mina:10:spike_progress:3202",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 10,
+    "item": "Rapid Rounds",
+    "souls": 13600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "mina:10:component_for:3203": {
+   "id": "mina:10:component_for:3203",
+   "kind": "component_for",
+   "phrase": "From Swift Striker: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 10,
+    "item": "Rapid Rounds",
+    "souls": 13600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 800,
+    "event": "Swift Striker"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Swift Striker"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:11:spike_progress:3204": {
+   "id": "mina:11:spike_progress:3204",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 11,
+    "item": "Swift Striker",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "mina:11:upgrade_of:3205": {
+   "id": "mina:11:upgrade_of:3205",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Rapid Rounds (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Swift Striker",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Rapid Rounds"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:11:swap_candidate:3206": {
+   "id": "mina:11:swap_candidate:3206",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Escalating Exposure later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 11,
+    "item": "Swift Striker",
+    "souls": 14400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Swift Striker",
+    "buyer": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:12:invest_step:3207": {
+   "id": "mina:12:invest_step:3207",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 12,
+    "item": "Spirit Sap",
+    "souls": 16000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "mina:13:invest_step:3208": {
+   "id": "mina:13:invest_step:3208",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 6,400 to 8,000 invested: bonus 45 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Compress Cooldown",
+    "souls": 17600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "8000",
+    "45.0",
+    "52.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "mina:13:imbue_cooldown:3209": {
+   "id": "mina:13:imbue_cooldown:3209",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Rake: takes 18% off its 8s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_steallife"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 13,
+    "item": "Compress Cooldown",
+    "souls": 17600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 1
+   },
+   "numbers": [
+    "18.0",
+    "8.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mina:13:component_for:3210": {
+   "id": "mina:13:component_for:3210",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Compress Cooldown",
+    "souls": 17600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 16800,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:13:phase_range:3211": {
+   "id": "mina:13:phase_range:3211",
+   "kind": "phase_range",
+   "phrase": "Souls 6,400-17,600 (levels 12-24).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Compress Cooldown",
+    "souls": 17600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "6,400",
+    "17,600",
+    "12",
+    "24"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:13:phase_abilities:3212": {
+   "id": "mina:13:phase_abilities:3212",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Rake T3, Love Bites T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Compress Cooldown",
+    "souls": 17600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:13:phase_spikes:3220": {
+   "id": "mina:13:phase_spikes:3220",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Reactive Barrier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Compress Cooldown",
+    "souls": 17600,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Compress Cooldown",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:14:component_for:3221": {
+   "id": "mina:14:component_for:3221",
+   "kind": "component_for",
+   "phrase": "From Infuser: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 14,
+    "item": "Spirit Lifesteal",
+    "souls": 19200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 22400,
+    "event": "Infuser"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Infuser"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:15:invest_step:3222": {
+   "id": "mina:15:invest_step:3222",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 8,000 to 12,800 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "8000",
+    "12800",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "mina:15:upgrade_of:3223": {
+   "id": "mina:15:upgrade_of:3223",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:15:spirit_scaling:3224": {
+   "id": "mina:15:spirit_scaling:3224",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 55.5 to Love Bites's bonus damage (1.85x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_lovebites"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 24000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 3,
+    "prop": "BonusDamage"
+   },
+   "numbers": [
+    "30.0",
+    "55.5",
+    "1.85"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mina:16:threshold_now:3225": {
+   "id": "mina:16:threshold_now:3225",
+   "kind": "threshold_now",
+   "phrase": "Love Bites (355), Rake (270) clear its 165-damage trigger.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_shock MinimumDamage=165",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_steallife",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_batblink",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_lovebites"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 26400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 165.0,
+    "slots": [
+     1,
+     2,
+     3
+    ]
+   },
+   "numbers": [
+    "165.0",
+    "355",
+    "270"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 2.15,
+   "caveat": "pre- vs post-resist comparison not in data; published only with >=50% margin"
+  },
+  "mina:16:upgrade_of:3226": {
+   "id": "mina:16:upgrade_of:3226",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Burst (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 26400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Burst"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:16:swap_candidate:3227": {
+   "id": "mina:16:swap_candidate:3227",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Mystic Reverb later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 26400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Tankbuster",
+    "buyer": "Mystic Reverb"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:16:phase_range:3228": {
+   "id": "mina:16:phase_range:3228",
+   "kind": "phase_range",
+   "phrase": "Souls 17,600-26,400 (levels 24-28).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 26400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Tankbuster",
+    "keys": []
+   },
+   "numbers": [
+    "17,600",
+    "26,400",
+    "24",
+    "28"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:16:phase_abilities:3229": {
+   "id": "mina:16:phase_abilities:3229",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Sanguine Retreat T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 26400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Tankbuster",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:16:phase_power:3230": {
+   "id": "mina:16:phase_power:3230",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Love Bites, bonus damage) grows from 266 to 355.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_lovebites",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 16,
+    "item": "Tankbuster",
+    "souls": 26400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Tankbuster",
+    "keys": []
+   },
+   "numbers": [
+    "266",
+    "355"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:17:burn_trigger_modelled:3232": {
+   "id": "mina:17:burn_trigger_modelled:3232",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Rake (288) + Love Bites (377) = 665 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 17,
+    "item": "Spirit Burn",
+    "souls": 32800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "665",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mina:17:invest_step:3233": {
+   "id": "mina:17:invest_step:3233",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 15,200 to 21,600 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 17,
+    "item": "Spirit Burn",
+    "souls": 32800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "15200",
+    "21600",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "mina:18:invest_step:3234": {
+   "id": "mina:18:invest_step:3234",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 21,600 to 23,200 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Superior Cooldown",
+    "souls": 34400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "21600",
+    "23200",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "mina:18:upgrade_of:3235": {
+   "id": "mina:18:upgrade_of:3235",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 18,
+    "item": "Superior Cooldown",
+    "souls": 34400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:18:cdr_rotation:3236": {
+   "id": "mina:18:cdr_rotation:3236",
+   "kind": "cdr_rotation",
+   "phrase": "With 3 abilities trained their base cooldowns total 135s; 20% off is 27s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_steallife",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_batblink",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_batswarm"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 18,
+    "item": "Superior Cooldown",
+    "souls": 34400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     1,
+     2,
+     4
+    ]
+   },
+   "numbers": [
+    "3",
+    "135",
+    "20.0",
+    "27"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mina:19:upgrade_of:3237": {
+   "id": "mina:19:upgrade_of:3237",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Expansion (already owned): costs 2,400 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 19,
+    "item": "Greater Expansion",
+    "souls": 36800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Expansion"
+    ]
+   },
+   "numbers": [
+    "2400",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:20:invest_step:3238": {
+   "id": "mina:20:invest_step:3238",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 9,600 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Infuser",
+    "souls": 41600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "14400",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "mina:20:upgrade_of:3239": {
+   "id": "mina:20:upgrade_of:3239",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Lifesteal (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Infuser",
+    "souls": 41600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Lifesteal"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:21:invest_step:3240": {
+   "id": "mina:21:invest_step:3240",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 25,600 to 30,400 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 21,
+    "item": "Mercurial Magnum",
+    "souls": 46400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "25600",
+    "30400",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "mina:21:imbue_reload:3241": {
+   "id": "mina:21:imbue_reload:3241",
+   "kind": "imbue_reload",
+   "phrase": "Imbued on Rake: the imbue charges up over 14s; the charged use reloads the clip and gives 22% fire rate for 12s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ethereal_bullets",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_steallife"
+   ],
+   "score": 45,
+   "point": {
+    "idx": 21,
+    "item": "Mercurial Magnum",
+    "souls": 46400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_trained",
+    "slot": 1
+   },
+   "numbers": [
+    "14.0",
+    "22.0",
+    "12.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mina:21:upgrade_of:3242": {
+   "id": "mina:21:upgrade_of:3242",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Quicksilver Reload (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 21,
+    "item": "Mercurial Magnum",
+    "souls": 46400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Quicksilver Reload"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:21:swap_candidate:3243": {
+   "id": "mina:21:swap_candidate:3243",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Lightning Scroll later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 21,
+    "item": "Mercurial Magnum",
+    "souls": 46400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Mercurial Magnum",
+    "buyer": "Lightning Scroll"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:21:phase_range:3244": {
+   "id": "mina:21:phase_range:3244",
+   "kind": "phase_range",
+   "phrase": "Souls 26,400-46,400 (levels 28-35).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 21,
+    "item": "Mercurial Magnum",
+    "souls": 46400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mercurial Magnum",
+    "keys": []
+   },
+   "numbers": [
+    "26,400",
+    "46,400",
+    "28",
+    "35"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:21:phase_power:3245": {
+   "id": "mina:21:phase_power:3245",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Love Bites, bonus damage) grows from 355 to 474.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_lovebites",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 21,
+    "item": "Mercurial Magnum",
+    "souls": 46400,
+    "noncore": false,
+    "imb": 1,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Mercurial Magnum",
+    "keys": []
+   },
+   "numbers": [
+    "355",
+    "474"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:22:defence_bullet:3250": {
+   "id": "mina:22:defence_bullet:3250",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Metal Skin",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Their gun carry is melting you."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:22:defence_gun:3251": {
+   "id": "mina:22:defence_gun:3251",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Plated Armor",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is gun."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:22:defence_spirit:3252": {
+   "id": "mina:22:defence_spirit:3252",
+   "kind": "defence_spirit",
+   "phrase": "Spirit resist 30, plus 15 more below 50% health: buy it when enemy spirit damage is what kills you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_tech_purge"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Spirit Resilience",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Most of their damage is spirit."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Resilience",
+    "keys": [
+     "TechResist",
+     "TechResistBelowThreshold"
+    ]
+   },
+   "numbers": [
+    "30",
+    "15",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:22:defence_parry:3253": {
+   "id": "mina:22:defence_parry:3253",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Counterspell",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "A big ult you can see coming, like Lash's or Infernus's."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:22:cc_exposure:3254": {
+   "id": "mina:22:cc_exposure:3254",
+   "kind": "cc_exposure",
+   "phrase": "A stun cancels your Sanguine Retreat (channelled). Activate this before the stun lands (it cannot be used while stunned): 5.5s immune to stun, silence, sleep, root and disarm, 60s cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_unstoppable",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 22,
+    "item": "Unstoppable",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Stuns keep catching you before you blink."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cc_exposure",
+    "slots": [
+     2
+    ]
+   },
+   "numbers": [
+    "5.5",
+    "60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mina:22:upgrade_delta:3255": {
+   "id": "mina:22:upgrade_delta:3255",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Spirit Sap for 4,800 more souls: resist reduction duration 0 to 12; bonus fire rate 0 to 10..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_focus_lens",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_sap"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Focus Lens",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Spirit Sap. Throw it on them, then ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Spirit Sap"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "12",
+    "0",
+    "10"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:22:upgrade_of:3256": {
+   "id": "mina:22:upgrade_of:3256",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Spirit Sap (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 22,
+    "item": "Focus Lens",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Spirit Sap. Throw it on them, then ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Spirit Sap"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:22:sell_swap:3257": {
+   "id": "mina:22:sell_swap:3257",
+   "kind": "sell_swap",
+   "phrase": "Replaces Swift Striker: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 22,
+    "item": "Escalating Exposure",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Swift Striker for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Swift Striker",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Swift Striker"
+  },
+  "mina:22:upgrade_delta:3258": {
+   "id": "mina:22:upgrade_delta:3258",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Reactive Barrier for 4,800 more souls: cooldown reduction on proc 0 to 20; bullet resist 0 to 10..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_auto_cleanse",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_vex_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Indomitable",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Reactive Barrier."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Reactive Barrier"
+   },
+   "numbers": [
+    "4,800",
+    "0",
+    "20",
+    "0",
+    "10"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:22:upgrade_of:3259": {
+   "id": "mina:22:upgrade_of:3259",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Reactive Barrier (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 22,
+    "item": "Indomitable",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Reactive Barrier."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Reactive Barrier"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "mina:22:threshold_now:3260": {
+   "id": "mina:22:threshold_now:3260",
+   "kind": "threshold_now",
+   "phrase": "Rake (366) clears its 100-damage trigger.",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_mystic_reverb MinimumDamage=100",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_steallife"
+   ],
+   "score": 85,
+   "point": {
+    "idx": 22,
+    "item": "Mystic Reverb",
+    "souls": 46400,
+    "noncore": true,
+    "imb": 1,
+    "note": "On Rake. Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "threshold",
+    "thr": 100.0,
+    "slots": [
+     1
+    ]
+   },
+   "numbers": [
+    "100.0",
+    "366"
+   ],
+   "hero_specific": true,
+   "role": "reason",
+   "margin": 3.66,
+   "caveat": "item has no localisation text; trigger semantics are modelled",
+   "contradiction": false
+  },
+  "mina:22:sell_swap:3261": {
+   "id": "mina:22:sell_swap:3261",
+   "kind": "sell_swap",
+   "phrase": "Replaces Tankbuster: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 22,
+    "item": "Mystic Reverb",
+    "souls": 46400,
+    "noncore": true,
+    "imb": 1,
+    "note": "On Rake. Sell Tankbuster for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Tankbuster",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Tankbuster"
+  },
+  "mina:22:invest_step:3262": {
+   "id": "mina:22:invest_step:3262",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 14,400 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 22,
+    "item": "Divine Barrier",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Dispel Magic for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "17600",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "mina:22:defence_barrier:3263": {
+   "id": "mina:22:defence_barrier:3263",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Divine Barrier",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Dispel Magic for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:22:sell_swap:3264": {
+   "id": "mina:22:sell_swap:3264",
+   "kind": "sell_swap",
+   "phrase": "Replaces Dispel Magic: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 22,
+    "item": "Divine Barrier",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Dispel Magic for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Dispel Magic",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Dispel Magic"
+  },
+  "mina:22:ult_trigger:3265": {
+   "id": "mina:22:ult_trigger:3265",
+   "kind": "ult_trigger",
+   "phrase": "Nox Nostra deals damage (damage), so it applies the item's 0.75s stun after a 3s delay plus 150 damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ultimate_burst",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_vampirebat_batswarm"
+   ],
+   "score": 52,
+   "point": {
+    "idx": 22,
+    "item": "Lightning Scroll",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Mercurial Magnum for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "ult_dmg"
+   },
+   "numbers": [
+    "0.75",
+    "3",
+    "150"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "mina:22:sell_swap:3266": {
+   "id": "mina:22:sell_swap:3266",
+   "kind": "sell_swap",
+   "phrase": "Replaces Mercurial Magnum: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 22,
+    "item": "Lightning Scroll",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Mercurial Magnum for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Mercurial Magnum",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Mercurial Magnum"
+  },
+  "mina:22:invest_step:3267": {
+   "id": "mina:22:invest_step:3267",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 14,400 to 17,600 invested: bonus 50 to 54 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_vampirebat m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 22,
+    "item": "Cheat Death",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Stamina Mastery for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 16000
+   },
+   "numbers": [
+    "14400",
+    "17600",
+    "50.0",
+    "54.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 16000
+  },
+  "mina:22:sell_swap:3268": {
+   "id": "mina:22:sell_swap:3268",
+   "kind": "sell_swap",
+   "phrase": "Replaces Stamina Mastery: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 22,
+    "item": "Cheat Death",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Stamina Mastery for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Stamina Mastery",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Stamina Mastery"
+  },
+  "mina:22:upgrade_delta:3269": {
+   "id": "mina:22:upgrade_delta:3269",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 22,
+    "item": "Transcendent Cooldown",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "mina:22:upgrade_of:3270": {
+   "id": "mina:22:upgrade_of:3270",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 22,
+    "item": "Transcendent Cooldown",
+    "souls": 46400,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "mina",
+   "item": "Mystic Expansion",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Improved Spirit completes 4.8k spirit in 800 souls (~0.8 min), 1 purchases",
+   "souls": 4000,
+   "unpublished": [
+    {
+     "id": "mina:3:spike_progress:3173",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k spirit tier, which Improved Spirit completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Improved Spirit completes the 4.8k spirit tier"
+     }
+    },
+    {
+     "id": "mina:3:component_for:3175",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Greater Expansion: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 32800,
+      "event": "Greater Expansion"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mina",
+   "item": "Extra Stamina",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Reactive Barrier, 4000 souls (~4.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 5600,
+   "unpublished": [
+    {
+     "id": "mina:5:component_for:3180",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Stamina Mastery: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 3200,
+      "event": "Stamina Mastery"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mina",
+   "item": "Grit",
+   "section": "early",
+   "cls": "c",
+   "why": "vitality investment only; its 4.8k tier completes at Reactive Barrier, 3200 souls (~3.2 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 6400,
+   "unpublished": [
+    {
+     "id": "mina:6:component_for:3182",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Reactive Barrier: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 3200,
+      "event": "Reactive Barrier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mina",
+   "item": "Stamina Mastery",
+   "section": "mid",
+   "cls": "b",
+   "why": "imminent: Reactive Barrier completes 4.8k vitality in 800 souls (~0.8 min), 1 purchases",
+   "souls": 8800,
+   "unpublished": [
+    {
+     "id": "mina:7:spike_progress:3194",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Reactive Barrier completes 800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Reactive Barrier completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mina",
+   "item": "Rapid Rounds",
+   "section": "mid",
+   "cls": "c",
+   "why": "weapon investment only and the build never reaches the 4.8k weapon tier through the core: timing review",
+   "souls": 13600,
+   "unpublished": [
+    {
+     "id": "mina:10:component_for:3203",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Swift Striker: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 800,
+      "event": "Swift Striker"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mina",
+   "item": "Swift Striker",
+   "section": "mid",
+   "cls": "c",
+   "why": "weapon investment only and the build never reaches the 4.8k weapon tier through the core: timing review",
+   "souls": 14400,
+   "unpublished": []
+  },
+  {
+   "build": "mina",
+   "item": "Spirit Lifesteal",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+   "souls": 19200,
+   "unpublished": [
+    {
+     "id": "mina:14:component_for:3221",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Infuser: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 22400,
+      "event": "Infuser"
+     }
+    }
+   ]
+  },
+  {
+   "build": "mina",
+   "item": "Greater Expansion",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 36800,
+   "unpublished": []
+  },
+  {
+   "build": "mina",
+   "item": "Infuser",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Pop it with your ult."
+  },
+  {
+   "build": "mina",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their gun carry is melting you."
+  },
+  {
+   "build": "mina",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is gun."
+  },
+  {
+   "build": "mina",
+   "item": "Spirit Resilience",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Most of their damage is spirit."
+  },
+  {
+   "build": "mina",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 46400,
+   "unpublished": []
+  },
+  {
+   "build": "mina",
+   "item": "Spellbreaker",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Big spirit bursts catch you when you go in."
+  },
+  {
+   "build": "mina",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "A big ult you can see coming, like Lash's or Infernus's."
+  },
+  {
+   "build": "mina",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep catching you before you blink."
+  },
+  {
+   "build": "mina",
+   "item": "Ethereal Shift",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 46400,
+   "unpublished": []
+  },
+  {
+   "build": "mina",
+   "item": "Ethereal Shift",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They keep jumping you and you can't blink out."
+  },
+  {
+   "build": "mina",
+   "item": "Toxic Bullets",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 46400,
+   "unpublished": []
+  },
+  {
+   "build": "mina",
+   "item": "Toxic Bullets",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "They're all tanks or self-healers."
+  },
+  {
+   "build": "mina",
+   "item": "Focus Lens",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Upgrade of Spirit Sap. Throw it on them, then ult."
+  },
+  {
+   "build": "mina",
+   "item": "Escalating Exposure",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 46400,
+   "unpublished": []
+  },
+  {
+   "build": "mina",
+   "item": "Mystic Reverb",
+   "section": "luxury",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: sell_swap)",
+   "souls": 46400,
+   "unpublished": [
+    {
+     "id": "mina:22:threshold_now:3260",
+     "tier": "MODELLED",
+     "phrase": "Rake (366) clears its 100-damage trigger.",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "mina",
+   "item": "Mystic Reverb",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Rake. Sell Tankbuster for this."
+  }
+ ],
+ "stats": {
+  "g": 6,
+  "a": 20,
+  "b": 2,
+  "c": 4,
+  "d": 7
+ }
+}

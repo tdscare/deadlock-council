@@ -1,0 +1,79 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: rem
+HERO: Rem
+ITEM: Bullet Lifesteal
+CHECKPOINT: add-on-top at 6000 souls (state souls 7600; item cost 1600)
+VERSION: interaction-v1
+ARGS: --discover rem --at 6000 --n 3 --queue (discover Bullet Lifesteal)
+GENERATED: 2026-10-24T14:27:58Z
+BODY-SHA: 0559144ae32ab3012dbf69dd85e386769b247144c76e3310c09bb1ee22c83a5a
+INPUT-SHA: d55e5fdba113eeee1fbe9e31a2cf7e869d35a2362ec9a5117dbe08d752f109cb
+ALTERNATIVES (equal souls 1600, unconditional, ranked): Long Range, Mystic Shot, Bullet Resist Shredder, Intensifying Magazine, Titanic Magazine, Recharging Rush; also shown, not ranked (conditional or unequal cost): Kinetic Dash, Active Reload
+VERDICT: Bullet Lifesteal is beaten in every window: sustained: Mystic Shot; burst: Mystic Shot; ult: Mystic Shot (no permanent equal-soul fire-rate item exists at this checkpoint)
+UNKNOWN_CELLS: 4
+SELECTION: discovery | discovery: Bullet Lifesteal's bullet lifesteal has an UNKNOWN interaction with attached ally via Tag Along (passive stat on the holder; sharing with the host is not in data); attached ally via Tag Along is 30% of Rem's output at 6000 souls (component share, CALCULATED; support components ASSUMED top), so the answer can change a purchase
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (1600) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+UPPER-BOUND OPTIONS THAT BEAT IT (their trigger condition decides; UNKNOWN uptime): Active Reload, Kinetic Dash
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.6, long_share=0.3, W_sus=10.0, W_burst=3.0; reload 2.5 s (ASSUMED 2.5 s: reload duration is animation-defined, not in vdata)
+STATE: owned ['Extra Charge', 'Opening Rounds', 'Guardian Ward', 'Extra Spirit', 'Mystic Burst', 'Bullet Lifesteal'] | tiers Pillow Toss=T1(spirit) Tag Along=T3(utility) Lil Helpers=T1(utility) Naptime=U(spirit) | weapon invest bonus 12% | spirit 46
+
+## INTERACTION MATRIX (item effect x kit component)
+- bullet lifesteal (BulletLifestealPercent=13)
+    normal shooting                              WORKS                      [CALCULATED] heals a share of bullet damage
+    1=Pillow Toss T1 [spirit]                    DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Tag Along T3 [utility]                     NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Lil Helpers T1 [utility]                   NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    4=Naptime U (ULT) [spirit]                   DOES NOT WORK              [CALCULATED] damage ['AwakeDamage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    attached ally via Tag Along                  UNKNOWN                    [UNKNOWN] passive stat on the holder; sharing with the host is not in data
+- defence (not damage) (BonusHealth=90)
+    normal shooting                              n/a                        [CALCULATED] defensive stat; valued by --strategy (survival), not damage
+    1=Pillow Toss T1 [spirit]                    n/a                        [CALCULATED] defensive stat
+    2=Tag Along T3 [utility] (attached ally)     UNKNOWN                    [UNKNOWN] passive stat while attached to an ally: data does not say if it is shared; attach ability has BonusItemRangePercent, BonusItemDurationPercent, BonusBarrierAmpPercent
+    2=Tag Along T3 [utility]                     n/a                        [CALCULATED] defensive stat
+    3=Lil Helpers T1 [utility]                   n/a                        [CALCULATED] defensive stat
+    4=Naptime U (ULT) [spirit]                   n/a                        [CALCULATED] defensive stat
+    attached ally via Tag Along                  DOES NOT WORK (ASSUMED)    [ASSUMED] passive health/resist stays on the holder (no sharing rule in data)
+- weapon damage % (BaseAttackDamagePercent=6)
+    normal shooting                              WORKS                      [CALCULATED] multiplies every bullet (weapon % pool now 20%: +6 adds 5.0% relative)
+    1=Pillow Toss T1 [spirit]                    DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    2=Tag Along T3 [utility]                     NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    3=Lil Helpers T1 [utility]                   NO INTERACTION             [CALCULATED] ability has no damage/bullet/stack property at this tier
+    4=Naptime U (ULT) [spirit]                   DOES NOT WORK              [CALCULATED] damage ['AwakeDamage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    melee (light/heavy)                          UNKNOWN                    [UNKNOWN] melee damage is ELightMeleeDamage/EHeavyMeleeDamage; whether weapon-% (incl. range-conditional) bonuses apply to melee is not in data
+    other weapon % items                         WORKS (diminishing)        [CALCULATED] additive pool 20% (incl. invest bonus): relative gain 5.0%
+- reload time of Rem's gun (ASSUMED 2.5 s)
+    normal shooting                              UNKNOWN                    [UNKNOWN] reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 8 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 8 UNKNOWN readings]
+(build state, nothing added) |       496              |       309              |       194              | 0
+Bullet Lifesteal             |          513 (+3..+4%) |          317 (+3..+3%) |          194 (+0..+0%) | 47
+Long Range                   |        548 (+10..+11%) |          333 (+8..+8%) |          194 (+0..+0%) | 0
+Mystic Shot                  |        722 (+43..+46%) |        449 (+45..+45%) |          205 (+6..+6%) | 0
+Bullet Resist Shredder       |        570 (+15..+15%) |        347 (+12..+12%) |          200 (+3..+3%) | 0
+Kinetic Dash                 |         537 (+8..+18%) |          333 (+8..+8%) |          194 (+0..+0%) | 0  ! fire rate is a timed buff, counted as always on (upper bound)
+Intensifying Magazine        |         545 (+8..+10%) |          319 (+3..+3%) |          194 (+0..+0%) | 0
+Titanic Magazine             |        614 (+24..+26%) |          338 (+9..+9%) |          194 (+0..+0%) | 0
+Active Reload                |        576 (+16..+21%) |        351 (+14..+14%) |          194 (+0..+0%) | 68  ! fire rate is a timed buff, counted as always on (upper bound)
+Recharging Rush              |        577 (+15..+16%) |          332 (+8..+8%) |          194 (+0..+0%) | 0
+  candidate detail (reading 1): sustained bullets 26, gun 364, stacks 0, procs 0, spirit 149 | ult: Naptime damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Mystic Shot > Titanic Magazine > Recharging Rush > Bullet Resist Shredder > Long Range > Intensifying Magazine > Bullet Lifesteal
+  burst: rank (reading 1) Mystic Shot > Bullet Resist Shredder > Titanic Magazine > Long Range > Recharging Rush > Intensifying Magazine > Bullet Lifesteal
+  ult: rank (reading 1) Mystic Shot > Bullet Resist Shredder > Bullet Lifesteal > Long Range > Intensifying Magazine > Titanic Magazine > Recharging Rush
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (200s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_rem_Bullet_Lifesteal_attached_ally_via_Tag_Along_bullet_lifesteal.txt
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_rem_Bullet_Lifesteal_2_Tag_Along_T3_defence.txt
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_rem_Bullet_Lifesteal_melee_light_heavy__weapon_damage_.txt
+  /tmp/claude-0/-home-claude/47606c1f-aee7-5b4e-b80d-df074bbfb70f/scratchpad/council/sandbox/autorun/scenarios/interaction/int_rem_reload_probe.txt
+
+## NOT DETERMINED FROM DATA
+  - bullet lifesteal (BulletLifestealPercent=13): attached ally via Tag Along: passive stat on the holder; sharing with the host is not in data
+  - defence (not damage) (BonusHealth=90): 2=Tag Along T3 [utility] (attached ally): passive stat while attached to an ally: data does not say if it is shared; attach ability has BonusItemRangePercent, BonusItemDurationPercent, BonusBarrierAmpPercent
+  - weapon damage % (BaseAttackDamagePercent=6): melee (light/heavy): melee damage is ELightMeleeDamage/EHeavyMeleeDamage; whether weapon-% (incl. range-conditional) bonuses apply to melee is not in data
+  - reload time of Rem's gun (ASSUMED 2.5 s): normal shooting: reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

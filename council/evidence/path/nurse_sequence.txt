@@ -1,0 +1,146 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: nurse
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:14:48Z
+BODY-SHA: 767a7c6338f45d2fa9c53054b4d8f9efd477adf6021f0ea5fb758ed570370992
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Spirit: retained-or-upgraded (-> Surge of Power,Improved Spirit)
+  Extended Magazine: retained-or-upgraded (-> Titanic Magazine)
+  Extra Regen: retained-or-upgraded (-> Healing Booster)
+  Rapid Rounds: retained-or-upgraded (-> Burst Fire)
+  Healing Booster: retained-or-upgraded (-> Healing Tempo)
+  Titanic Magazine: retained
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Surge of Power: retained
+  Burst Fire: retained
+  Spirit Lifesteal: retained-or-upgraded (-> Spiritual Overflow)
+  Debuff Reducer: retained-or-upgraded (-> Unstoppable)
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Superior Cooldown: retained
+  Toxic Bullets: retained
+  Guardian Ward: temporary (bought to be sold)
+  Boundless Spirit: retained
+  Unstoppable: retained
+  Vampiric Burst: retained
+  Spiritual Overflow: retained
+  Healing Tempo: retained
+  Ricochet: retained
+  Escalating Exposure: retained
+  Metal Skin: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Echo Shard: situational-luxury
+  Mercurial Magnum: situational-luxury
+  Divine Barrier: situational-luxury
+  Refresher: situational-luxury
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Early · L-R                -> main path (sequential): Extra Spirit, Extended Magazine, Extra Regen, Rapid Rounds, Healing Booster, Titanic Magazine, Compress Cooldown, Surge of Power
+  Mid · L-R                  -> main path (sequential): Burst Fire, Spirit Lifesteal, Debuff Reducer, Improved Spirit, Superior Cooldown, Toxic Bullets, Guardian Ward, Boundless Spirit
+  Late · L-R                 -> main path (sequential): Unstoppable, Vampiric Burst, Spiritual Overflow, Healing Tempo, Ricochet, Escalating Exposure
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Metal Skin, Counterspell, Spirit Resilience, Dispel Magic
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Echo Shard, Mercurial Magnum, Divine Barrier, Refresher
+  Slot locked                -> optional upgrade (branch): Transcendent Cooldown
+
+## Guardian Ward: sold when buying Ricochet (Late · L-R, main)
+  role of Guardian Ward: temporary (bought to be sold); role of Ricochet: retained
+  Guardian Ward: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 22400 souls (~21.2 min), replaced at ~55.0 min -> owned ~33.8 min  [MODELLED ESTIMATE]
+  component of later purchases: Divine Barrier -> selling and rebuying adds 800 souls vs keeping it in the upgrade (UNVERIFIED HYPOTHESIS resale)
+  investment gun/vit/spirit before 20800/20800/12800 -> after 20800/19200/12800; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 90 min | window TR | key purchase times (min)
+  as built                                    |          76232 |      0.18 | Guardian Ward 21, Ricochet 55
+  keep Guardian Ward                          |          76171 |      0.18 | Guardian Ward 21, Ricochet 56
+  skip Guardian Ward                          |          76256 |      0.18 | Ricochet 54
+  sell Titanic Magazine instead               |          75619 |      0.17 | Guardian Ward 21, Ricochet 55
+  keep Guardian Ward vs as built: d souls -61, d window TR -0.5% | souls: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | TR: INSUFFICIENT (effect within model noise)
+  skip Guardian Ward vs as built: d souls +31, d window TR -0.8% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  sell Titanic Magazine instead vs as built: d souls +0, d window TR -5.9% | souls: INSUFFICIENT (effect within model noise) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  model limit: Guardian Ward has an active effect (PRESS) that the trade model does not price: its own value is under-counted -> a 'keep' preference is not a finding
+  FINDINGS: component sold before its planned upgrade
+  VERDICT: REVIEW: keep Guardian Ward until the Divine Barrier upgrade unless the freed slot is needed earlier (quantified above); proposal needs the gate; evidence tier: VERIFIED GAME MECHANIC (walk arithmetic) + MODEL-ONLY value; flipping assumptions: keep Guardian Ward: MODEL-ONLY, assumption-sensitive (flips with several parameters together) | sell Titanic Magazine instead: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Burst Fire: sold when buying Echo Shard (I'm rich as fuck, luxury)
+  role of Burst Fire: retained; role of Echo Shard: situational-luxury
+  Burst Fire: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 11200 souls (~11.2 min), replaced at ~70.0 min -> owned ~58.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 20800/19200/25600 -> after 17600/19200/25600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 95 min | window TR | key purchase times (min)
+  as built                                    |          78405 |      0.19 | Burst Fire 11, Echo Shard 70
+  keep Burst Fire (slot cap ignored)          |          78405 |      0.19 | Burst Fire 11, Echo Shard 72
+  skip Burst Fire                             |          77661 |      0.19 | Echo Shard 70
+  sell Titanic Magazine instead               |          78405 |      0.19 | Burst Fire 11, Echo Shard 71
+  keep Burst Fire (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Burst Fire vs as built: d souls -591, d window TR -1.3% | souls: MODEL-ONLY (sign robust in 88% of cells; no measured inputs) | TR: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+  sell Titanic Magazine instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Echo Shard has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Echo Shard (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: skip Burst Fire: MODEL-ONLY, assumption-sensitive (flips with several parameters together)
+
+## Titanic Magazine: sold when buying Mercurial Magnum (I'm rich as fuck, luxury)
+  role of Titanic Magazine: retained; role of Mercurial Magnum: situational-luxury
+  Titanic Magazine: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 4800 souls (~5.2 min), replaced at ~71.0 min -> owned ~65.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 20800/19200/25600 -> after 19200/19200/25600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 95 min | window TR | key purchase times (min)
+  as built                                    |          78405 |      0.20 | Titanic Magazine 5, Mercurial Magnum 71
+  keep Titanic Magazine (slot cap ignored)    |          78405 |      0.20 | Titanic Magazine 5, Mercurial Magnum 72
+  skip Titanic Magazine                       |          76315 |      0.18 | Mercurial Magnum 74
+  sell Surge of Power instead                 |          78405 |      0.20 | Titanic Magazine 5, Mercurial Magnum 70
+  keep Titanic Magazine (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Titanic Magazine vs as built: d souls -1926, d window TR -10.5% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 94% of cells; no measured inputs)
+  sell Surge of Power instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  ammo mechanics (clip 11, reload 1.9 s [VERIFIED GAME MECHANIC m_reloadDuration ], refill items on their cooldown; rotation/hit-rate share 0.5 of charges ASSUMED) [VERIFIED GAME MECHANIC inputs, MODELLED ESTIMATE rotation]:
+    as built (sell Titanic Magazine): 8 s trade 38 bullets (19% not firing), 20 s 76 bullets (34% not firing, 5.8 magazines), damage 20 s 3938, refill uses 2.0
+    keep Titanic Magazine: 8 s trade 47 bullets (0% not firing), 20 s 97 bullets (16% not firing, 4.0 magazines), damage 20 s 5378, refill uses 2.0
+    without Mercurial Magnum (keep Titanic Magazine): 8 s trade 39 bullets (13% not firing), 20 s 84 bullets (24% not firing, 3.8 magazines), damage 20 s 4668, refill uses 1.0
+    sell Surge of Power instead: 8 s trade 43 bullets (0% not firing), 20 s 91 bullets (14% not firing, 3.8 magazines), damage 20 s 5023, refill uses 2.0
+    sustained 20 s gun damage: selling Titanic Magazine costs 27% vs keeping it (both with Mercurial Magnum); Mercurial Magnum adds +15% on top of Titanic Magazine; selling Surge of Power instead: -7% vs keeping all  [VERIFIED GAME MECHANIC clip/reload/cycle, MODELLED ESTIMATE rotation]
+  FINDINGS: the sale of Titanic Magazine lowers modelled sustained gun damage by 27% (ammo mechanics)
+  VERDICT: REVIEW: selling Titanic Magazine costs sustained gun output; Mercurial Magnum does not replace its ammo role (quantified above). Alternatives for the slot: sell Surge of Power (modelled); proposal needs the gate; evidence tier: MODEL-ONLY (ammo mechanics VERIFIED; rotation/hit share ASSUMED)
+
+## Toxic Bullets: sold when buying Divine Barrier (I'm rich as fuck, luxury)
+  role of Toxic Bullets: retained; role of Divine Barrier: situational-luxury
+  Toxic Bullets: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 20800 souls (~19.8 min), replaced at ~70.0 min -> owned ~50.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 20800/25600/19200 -> after 17600/25600/19200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 95 min | window TR | key purchase times (min)
+  as built                                    |          78405 |      0.18 | Toxic Bullets 20, Divine Barrier 70
+  keep Toxic Bullets (slot cap ignored)       |          78405 |      0.18 | Toxic Bullets 20, Divine Barrier 72
+  skip Toxic Bullets                          |          78697 |      0.18 | Divine Barrier 67
+  sell Titanic Magazine instead               |          78405 |      0.18 | Toxic Bullets 20, Divine Barrier 71
+  keep Toxic Bullets (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Toxic Bullets vs as built: d souls +489, d window TR +2.7% | souls: MODEL-ONLY (sign robust in 94% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 88% of cells; no measured inputs)
+  sell Titanic Magazine instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  note: the variants ['skip Toxic Bullets'] differ from 'as built' only through items with no modelled stat (Toxic Bullets contributes 0 here), so the apparent gain is an artefact of leaving them out: NOT a finding
+  model limit: Divine Barrier has an active effect (PRESS) not priced
+  model limit: no modelled stat for Toxic Bullets (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled)
+
+## Escalating Exposure: sold when buying Refresher (I'm rich as fuck, luxury)
+  role of Escalating Exposure: retained; role of Refresher: situational-luxury
+  Escalating Exposure: price 6400, resale 3200, net cost of owning it 3200 souls (3.2 min of reference income); first bought at 60000.0 souls (~63.2 min), replaced at ~67.5 min -> owned ~4.2 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 20800/19200/25600 -> after 20800/19200/19200; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 95 min | window TR | key purchase times (min)
+  as built                                    |          78405 |      0.14 | Escalating Exposure 63, Refresher 68
+  keep Escalating Exposure (slot cap ignored) |          78405 |      0.14 | Escalating Exposure 63, Refresher 72
+  skip Escalating Exposure                    |          78598 |      0.16 | Refresher 63
+  sell Titanic Magazine instead               |          78405 |      0.14 | Escalating Exposure 63, Refresher 71
+  keep Escalating Exposure (slot cap ignored) vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Escalating Exposure vs as built: d souls +308, d window TR +12.1% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  sell Titanic Magazine instead vs as built: d souls +0, d window TR +0.0% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Refresher has an active effect (INSTANT_CAST) not priced
+  model limit: no modelled stat for Escalating Exposure, Refresher (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: briefly-held purchase: owned ~4.2 min for a net cost of 3200 souls (3.2 min of reference income); review flag only
+  VERDICT: REVIEW (timing, insufficient evidence either way): Escalating Exposure is owned ~4.2 min before Refresher replaces it, for a net 3200 souls; its value over that window is NOT PRICED by the model (Escalating Exposure has no modelled stat), so it cannot be called wasted or justified. Settle by measuring Escalating Exposure's contribution (queued interaction/path requests) or by deciding the branch ending is not reached; proposal needs the gate; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: skip Escalating Exposure: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))

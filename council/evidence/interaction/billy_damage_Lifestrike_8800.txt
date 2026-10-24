@@ -1,0 +1,52 @@
+SCOPE: build-context
+KIND: interaction
+VALID: yes (CALCULATED from game data + ASSUMED shares; no MEASURED input)
+BUILD: billy_damage
+HERO: Billy
+ITEM: Lifestrike
+CHECKPOINT: buy-point at 8800 souls (state souls 8800; item cost 2400)
+VERSION: interaction-v1
+ARGS: --interactions billy_damage Lifestrike
+GENERATED: 2026-10-24T16:47:11Z
+BODY-SHA: bcacba59e18c00136175c6482a6562808e4b9cef8bcc4c1e2ecc4dfb2324ec43
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+ALTERNATIVES (equal souls 2400, unconditional, ranked): 
+VERDICT: Lifestrike delivers the most damage of the equal-soul options in every window (sustained, burst, ult) (no permanent equal-soul fire-rate item exists at this checkpoint)
+UNKNOWN_CELLS: 0
+SELECTION: build-decision | Lifestrike is bought at 8800 souls in billy_damage: checking what it improves in the kit against equal-soul options
+ALTERNATIVES CONSIDERED: every unconditional catalog item at the same souls (2400) with a damage/fire-rate/magazine/proc stat, top 8 by sustained damage
+PARAMETERS (ASSUMED): hit=0.55, head=0.15, close_share=0.8, long_share=0.1, W_sus=10.0, W_burst=3.0; reload 2.9 s (VERIFIED GAME MECHANIC m_reloadDuration (weapon vdata; Wraith value equals its sandbox measurement))
+STATE: owned ['Grit', 'Stalker', 'Cultist Sacrifice', 'Lifestrike'] | tiers Bashdown=T2(melee-scaled) Rising Ram=T1(spirit) Blasted=T2(gun-mode) Chain Gang=U(spirit) | weapon invest bonus 46% | spirit 15
+
+## INTERACTION MATRIX (item effect x kit component)
+- melee damage % (BonusMeleeDamagePercent=16)
+    normal shooting                              DOES NOT WORK              [CALCULATED] melee % does not touch bullets
+    1=Bashdown T2 [melee-scaled]                 WORKS                      [CALCULATED] scales with melee damage
+    2=Rising Ram T1 [spirit]                     DOES NOT WORK              [CALCULATED] damage ['Damage'] scales with spirit power (ETechPower), not weapon damage/bullets
+    3=Blasted T2 [gun-mode]                      DOES NOT WORK              [CALCULATED] no matching mechanic
+    4=Chain Gang U (ULT) [spirit]                DOES NOT WORK              [CALCULATED] damage ['Damage', 'DPS'] scales with spirit power (ETechPower), not weapon damage/bullets
+    melee (light/heavy)                          WORKS                      [CALCULATED] melee damage %
+- defence (not damage) (BonusHealth=125)
+    normal shooting                              n/a                        [CALCULATED] defensive stat; valued by --strategy (survival), not damage
+    1=Bashdown T2 [melee-scaled]                 n/a                        [CALCULATED] defensive stat
+    2=Rising Ram T1 [spirit]                     n/a                        [CALCULATED] defensive stat
+    3=Blasted T2 [gun-mode]                      n/a                        [CALCULATED] defensive stat
+    4=Chain Gang U (ULT) [spirit]                n/a                        [CALCULATED] defensive stat
+
+## DAMAGE DELIVERED (complete build state; total over the window; reading 1 = flat stack bonus multiplied by weapon %, ult does not use ammo, reload as assumed; 4 readings of the UNKNOWN cells)
+item                         |              sustained |                  burst |                    ult | heal(sustained)  [range over the 4 UNKNOWN readings]
+(without: state before the b |       876              |       586              |       296              | 0
+Lifestrike                   |          886 (+1..+1%) |          594 (+1..+1%) |          296 (+0..+0%) | 0
+  candidate detail (reading 1): sustained bullets 61, gun 443, stacks 0, procs 0, spirit 69 | ult: Chain Gang damage is spirit (no weapon bullets)
+  sustained: rank (reading 1) Lifestrike
+  burst: rank (reading 1) Lifestrike
+  ult: rank (reading 1) Lifestrike
+  matters in realistic combat: sustained window = every long trade/teamfight; burst = picks and lane all-ins; ult window = once per ultimate cooldown (175s)
+
+## TEST REQUESTS (UNKNOWN cells -> sandbox; meta kind INTERACTION, queue via `node council/tools/queue.js add <build> <exp> <file>`)
+  none
+
+## NOT DETERMINED FROM DATA
+  - nothing beyond the ASSUMED shares above
+  - hit rate, headshot share, close-range share and ult target spread are ASSUMED (IA_P); item procs without a stated damage value are counted (procs) but not priced
+  - windows price DAMAGE only: healing/lifesteal/defence value of an item is shown (heal column, defence rows) but ranked in --strategy, not here; melee cadence ASSUMED (4 light + 1 heavy per 8 s, 50% in range)

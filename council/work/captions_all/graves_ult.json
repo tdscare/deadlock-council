@@ -1,0 +1,3569 @@
+{
+ "schema": 1,
+ "id": "graves_ult",
+ "hero": "Graves",
+ "name": "Rizuhble's Zombie Horde Graves",
+ "game_build": "6819 (gt6819 / effects format 1)",
+ "data_js_sha16": "1392ab065923d55a",
+ "generator": "council/tools/captions.py",
+ "point_model": "claims about ability tiers require model A and model B to agree",
+ "section_order": [
+  "lane",
+  "early",
+  "mid",
+  "mid",
+  "late",
+  "counters",
+  "luxury",
+  "slot_locked"
+ ],
+ "sections": [
+  {
+   "section": "lane",
+   "label": "Losing lane (temporary)",
+   "box_title": "Losing lane? Buy 1",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Extra Regen",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Temporary: sell it later, once you're out of slots.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell it once you're out of slots.",
+     "temporary": true,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "early",
+   "label": "Early game",
+   "box_title": "Early \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 0-6,400 (levels 1-12). Abilities gained (both point models agree): Grasping Hands T2, Borrowed Decree T2.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "graves_ult:5:phase_range:6172",
+    "graves_ult:5:phase_abilities:6173"
+   ],
+   "items": [
+    {
+     "name": "Extra Spirit",
+     "imbue": null,
+     "caption": "+10 spirit adds about 16 to Grasping Hands's damage (1.60x scaling), your steepest spirit scaling.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:0:spirit_scaling:6159"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:0:spirit_scaling:6159",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Extra Stamina",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 6,400 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (vitality): Spirit Lifesteal completes 4.8k vitality in 6400 souls (~6.4 min), 5 purchases",
+     "claim_ids": [
+      "graves_ult:1:spike_progress:6160"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:1:spike_progress:6160",
+       true,
+       "800"
+      ]
+     ]
+    },
+    {
+     "name": "Improved Spirit",
+     "imbue": null,
+     "caption": "+18 spirit adds about 28.8 to Grasping Hands's damage (1.60x scaling), your steepest spirit scaling. Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:2:spirit_scaling:6164",
+      "graves_ult:2:upgrade_of:6163"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:2:spirit_scaling:6164",
+       true,
+       ""
+      ],
+      [
+       "graves_ult:2:upgrade_of:6163",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Grit",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 4,800 souls on.",
+     "cls": "b",
+     "why": "on the path to the build's first 4.8k (vitality): Spirit Lifesteal completes 4.8k vitality in 4800 souls (~4.8 min), 3 purchases",
+     "claim_ids": [
+      "graves_ult:3:spike_progress:6165"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:3:spike_progress:6165",
+       true,
+       "1600"
+      ]
+     ]
+    },
+    {
+     "name": "Duration Extender",
+     "imbue": "4",
+     "caption": "Imbued on Borrowed Decree: its duration-scaled parts (duration 16s, channel time 0.7s) get +22%.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:4:imbue_duration:6168"
+     ],
+     "lint": [],
+     "legacy_note": "On Borrowed Decree.",
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:4:imbue_duration:6168",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Enchanter's Emblem",
+     "imbue": null,
+     "caption": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 1,600 souls on.",
+     "cls": "b",
+     "why": "imminent: Spirit Lifesteal completes 4.8k vitality in 1600 souls (~1.6 min), 1 purchases",
+     "claim_ids": [
+      "graves_ult:5:spike_progress:6170"
+     ],
+     "lint": [],
+     "legacy_note": "Sell it for Refresher if you get rich.",
+     "temporary": true,
+     "verify": [
+      [
+       "graves_ult:5:spike_progress:6170",
+       true,
+       "3200"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 6,400-24,800 (levels 12-28). Abilities gained (both point models agree): Grasping Hands T3, Borrowed Decree T3. Your biggest single spirit hit (Grasping Hands, damage) grows from 259 to 413. 4.8k spikes: vitality 4.8k at Spirit Lifesteal, spirit 4.8k at Compress Cooldown.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "graves_ult:13:phase_range:6198",
+    "graves_ult:13:phase_abilities:6199",
+    "graves_ult:13:phase_power:6200",
+    "graves_ult:13:phase_spikes:6208"
+   ],
+   "items": [
+    {
+     "name": "Spirit Lifesteal",
+     "imbue": null,
+     "caption": "Completes the 4.8k vitality tier (3,200 to 4,800 invested): bonus 20 to 38 vitality bonus. Temporary, sold when you buy Magic Carpet later.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:6:spike_complete:6180",
+      "graves_ult:6:temporary_sold:6181"
+     ],
+     "lint": [],
+     "legacy_note": "Sell it for Magic Carpet.",
+     "temporary": true,
+     "verify": [
+      [
+       "graves_ult:6:spike_complete:6180",
+       true,
+       "inventory vitality: before 3200, after 4800, threshold 4800"
+      ],
+      [
+       "graves_ult:6:temporary_sold:6181",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Shielding",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "vitality investment only; its 6.4k tier completes at Diviner's Kevlar, 16000 souls (~16.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Heroic Aura",
+     "imbue": null,
+     "caption": null,
+     "cls": "c",
+     "why": "weapon investment only and the build never reaches the 4.8k weapon tier through the core: timing review",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Works on your ghouls too.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Compress Cooldown",
+     "imbue": "4",
+     "caption": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power. Imbued on Borrowed Decree: takes 18% off its 125s base cooldown.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:9:spike_complete:6186",
+      "graves_ult:9:imbue_cooldown:6187"
+     ],
+     "lint": [],
+     "legacy_note": "On Borrowed Decree.",
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:9:spike_complete:6186",
+       true,
+       "inventory spirit: before 3200, after 4800, threshold 4800"
+      ],
+      [
+       "graves_ult:9:imbue_cooldown:6187",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Superior Duration",
+     "imbue": null,
+     "caption": "+28% to every duration-scaled effect you have: Borrowed Decree duration (26s), Borrowed Decree summon lifetime (20s), Borrowed Decree slow duration (1.2s). Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power. Upgrade of Duration Extender (already owned): costs 1,600 souls more, not 3,200.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:10:dur_global:6191",
+      "graves_ult:10:invest_step:6189",
+      "graves_ult:10:upgrade_of:6190"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:10:dur_global:6191",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "graves_ult:10:invest_step:6189",
+       true,
+       "inventory spirit: before 4800, after 6400, threshold 6400"
+      ],
+      [
+       "graves_ult:10:upgrade_of:6190",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Superior Cooldown",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes spirit from 6,400 to 8,000 invested: bonus 45 to 52 spirit power. | With 2 abilities trained their base cooldowns total 145s; 20% off is 29s per full rotation.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Mystic Vulnerability",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Diviner's Kevlar",
+     "imbue": null,
+     "caption": "Casting Borrowed Decree gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (125s at your current ultimate tier), so it is a once-per-fight burst of defence. Takes vitality from 5,600 to 12,000 invested, crossing the 6.4k, 8k, 11.2k tiers: bonus 38 to 50 vitality bonus.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:13:ult_trigger:6196",
+      "graves_ult:13:invest_step:6197"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:13:ult_trigger:6196",
+       true,
+       ""
+      ],
+      [
+       "graves_ult:13:invest_step:6197",
+       true,
+       "inventory vitality: before 5600, after 12000, threshold 6400"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "mid",
+   "label": "Midgame",
+   "box_title": "Mid \u00b7 cont.",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 24,800-30,400 (levels 28-30). Abilities gained (both point models agree): Jar of Dead T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "graves_ult:15:phase_range:6216",
+    "graves_ult:15:phase_abilities:6217"
+   ],
+   "items": [
+    {
+     "name": "Arcane Surge",
+     "imbue": null,
+     "caption": "+20 spirit adds about 32 to Grasping Hands's damage (1.60x scaling), your steepest spirit scaling. Takes spirit from 9,600 to 11,200 invested: bonus 52 to 59 spirit power. Upgrade of Extra Stamina (already owned): costs 800 souls more, not 1,600.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:14:spirit_scaling:6212",
+      "graves_ult:14:invest_step:6209",
+      "graves_ult:14:upgrade_of:6210"
+     ],
+     "lint": [],
+     "legacy_note": "Dash-jump right before you cast your ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:14:spirit_scaling:6212",
+       true,
+       ""
+      ],
+      [
+       "graves_ult:14:invest_step:6209",
+       true,
+       "inventory spirit: before 9600, after 11200, threshold 11200"
+      ],
+      [
+       "graves_ult:14:upgrade_of:6210",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Boundless Spirit",
+     "imbue": null,
+     "caption": "+30 spirit adds about 48 to Grasping Hands's damage (1.60x scaling), your steepest spirit scaling. Takes spirit from 11,200 to 16,000 invested: bonus 59 to 66 spirit power. Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:15:spirit_scaling:6215",
+      "graves_ult:15:invest_step:6213",
+      "graves_ult:15:upgrade_of:6214"
+     ],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:15:spirit_scaling:6215",
+       true,
+       ""
+      ],
+      [
+       "graves_ult:15:invest_step:6213",
+       true,
+       "inventory spirit: before 11200, after 16000, threshold 16000"
+      ],
+      [
+       "graves_ult:15:upgrade_of:6214",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "late",
+   "label": "Late game",
+   "box_title": "Late \u00b7 L-R",
+   "optional": false,
+   "legacy_desc": null,
+   "desc": "Souls 30,400-54,400 (levels 30-36). Abilities gained (both point models agree): Essence Theft T3.",
+   "desc_origin": "generated:progression",
+   "desc_claims": [
+    "graves_ult:19:phase_range:6227",
+    "graves_ult:19:phase_abilities:6228"
+   ],
+   "items": [
+    {
+     "name": "Echo Shard",
+     "imbue": "4",
+     "caption": null,
+     "cls": "x",
+     "why": "contradiction: Echo Shard resets non-ultimate abilities only and Borrowed Decree is the ultimate.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "On Borrowed Decree.",
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Escalating Exposure",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    },
+    {
+     "name": "Magic Carpet",
+     "imbue": null,
+     "caption": "+14 spirit adds about 22.4 to Grasping Hands's damage (1.60x scaling), your steepest spirit scaling. Takes spirit from 27,200 to 33,600 invested: bonus 75 to 100 spirit power. Replaces Spirit Lifesteal: sell it when you buy this.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:18:spirit_scaling:6224",
+      "graves_ult:18:invest_step:6223",
+      "graves_ult:18:sell_swap:6225"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Spirit Lifesteal for this.",
+     "temporary": true,
+     "verify": [
+      [
+       "graves_ult:18:spirit_scaling:6224",
+       true,
+       ""
+      ],
+      [
+       "graves_ult:18:invest_step:6223",
+       true,
+       "inventory spirit: before 27200, after 33600, threshold 28800"
+      ],
+      [
+       "graves_ult:18:sell_swap:6225",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Spirit Burn",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": null,
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "counters",
+   "label": "Situational counters",
+   "box_title": "Counters",
+   "optional": true,
+   "legacy_desc": "Dying after Heroic Aura? Buy what is killing you, cheapest first. Not dying? Skip. Sell Arcane Surge.",
+   "desc": "Dying after Heroic Aura? Buy what is killing you, cheapest first. Not dying? Skip. Sell Arcane Surge.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Metal Skin",
+     "imbue": null,
+     "caption": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:20:defence_bullet:6231"
+     ],
+     "lint": [],
+     "legacy_note": "One gun hero is deleting you. Pop it and keep casting.",
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:20:defence_bullet:6231",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Plated Armor",
+     "imbue": null,
+     "caption": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:20:defence_gun:6232"
+     ],
+     "lint": [],
+     "legacy_note": "Their damage is bullets.",
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:20:defence_gun:6232",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Counterspell",
+     "imbue": null,
+     "caption": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:20:defence_parry:6233"
+     ],
+     "lint": [],
+     "legacy_note": "Lash ult, Infernus ult.",
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:20:defence_parry:6233",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Dispel Magic",
+     "imbue": null,
+     "caption": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:20:defence_purge:6234"
+     ],
+     "lint": [],
+     "legacy_note": "Slows, hexes and burns like Infernus's.",
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:20:defence_purge:6234",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    },
+    {
+     "name": "Unstoppable",
+     "imbue": null,
+     "caption": null,
+     "cls": "d",
+     "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Stuns keep stopping you casting your ult.",
+     "temporary": false,
+     "verify": []
+    }
+   ]
+  },
+  {
+   "section": "luxury",
+   "label": "Luxury purchases",
+   "box_title": "I'm rich as fuck",
+   "optional": true,
+   "legacy_desc": "Most important first.",
+   "desc": "Most important first.",
+   "desc_origin": "legacy",
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Cursed Relic",
+     "imbue": null,
+     "caption": "Silences, disarms and blocks item use on one enemy for 3.25s and strips their non-ultimate buffs, at -25% damage for you and a 55s cooldown: a single-target answer to a buffed carry or engage. Replaces Arcane Surge: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:20:defence_curse:6235",
+      "graves_ult:20:sell_swap:6236"
+     ],
+     "lint": [],
+     "legacy_note": "Sell Arcane Surge for this, or Heroic Aura if it's gone.",
+     "temporary": true,
+     "verify": [
+      [
+       "graves_ult:20:defence_curse:6235",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "graves_ult:20:sell_swap:6236",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Cheat Death",
+     "imbue": null,
+     "caption": null,
+     "cls": "g",
+     "why": "only generic accurate reasons: Takes vitality from 9,600 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+     "claim_ids": [],
+     "lint": [],
+     "legacy_note": "Sell Spirit Shielding for this.",
+     "temporary": true,
+     "verify": []
+    },
+    {
+     "name": "Refresher",
+     "imbue": null,
+     "caption": "Resets every ability and charge: up to 145s of base cooldown across your kit, 125s of it the ultimate; the item has its own cooldown of 300s. Replaces Enchanter's Emblem: sell it when you buy this (all 12 slots are full).",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:20:refresher:6239",
+      "graves_ult:20:sell_swap:6240"
+     ],
+     "lint": [],
+     "legacy_note": "Use it right after Echo Shard for a third gravestone. Sell Enchanter's Emblem for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:20:refresher:6239",
+       true,
+       "structural; re-derived by generator"
+      ],
+      [
+       "graves_ult:20:sell_swap:6240",
+       true,
+       ""
+      ]
+     ]
+    },
+    {
+     "name": "Divine Barrier",
+     "imbue": null,
+     "caption": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:20:defence_barrier:6241"
+     ],
+     "lint": [],
+     "legacy_note": "If you bought Dispel Magic, sell it for this.",
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:20:defence_barrier:6241",
+       true,
+       "structural; re-derived by generator"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "section": "slot_locked",
+   "label": "Slot locked upgrades",
+   "box_title": "Slot locked",
+   "optional": true,
+   "legacy_desc": null,
+   "desc": null,
+   "desc_origin": null,
+   "desc_claims": [],
+   "items": [
+    {
+     "name": "Transcendent Cooldown",
+     "imbue": null,
+     "caption": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+     "cls": "a",
+     "why": "",
+     "claim_ids": [
+      "graves_ult:20:upgrade_delta:6242"
+     ],
+     "lint": [],
+     "legacy_note": "Upgrade of Superior Cooldown.",
+     "temporary": false,
+     "verify": [
+      [
+       "graves_ult:20:upgrade_delta:6242",
+       true,
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "claims": {
+  "graves_ult:20:temporary_sold:6156": {
+   "id": "graves_ult:20:temporary_sold:6156",
+   "kind": "temporary_sold",
+   "phrase": "Temporary: sell it later, once you're out of slots.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 40,
+   "point": {
+    "idx": 20,
+    "item": "Extra Regen",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell it once you're out of slots."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Extra Regen",
+    "buyer": null
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:0:spike_progress:6157": {
+   "id": "graves_ult:0:spike_progress:6157",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 800 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "graves_ult:0:component_for:6158": {
+   "id": "graves_ult:0:component_for:6158",
+   "kind": "component_for",
+   "phrase": "From Improved Spirit: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Improved Spirit"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Improved Spirit"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:0:spirit_scaling:6159": {
+   "id": "graves_ult:0:spirit_scaling:6159",
+   "kind": "spirit_scaling",
+   "phrase": "+10 spirit adds about 16 to Grasping Hands's damage (1.60x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_improved_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_zombiewall"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 0,
+    "item": "Extra Spirit",
+    "souls": 800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "10.0",
+    "16",
+    "1.60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:1:spike_progress:6160": {
+   "id": "graves_ult:1:spike_progress:6160",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 6,400 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 1,
+    "item": "Extra Stamina",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 6400,
+    "event": "Spirit Lifesteal completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 800
+   },
+   "numbers": [
+    "800",
+    "4.8k",
+    6400,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "graves_ult:1:component_for:6161": {
+   "id": "graves_ult:1:component_for:6161",
+   "kind": "component_for",
+   "phrase": "From Arcane Surge: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 1,
+    "item": "Extra Stamina",
+    "souls": 1600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 24000,
+    "event": "Arcane Surge"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Arcane Surge"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:2:spike_progress:6162": {
+   "id": "graves_ult:2:spike_progress:6162",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 1,600 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 2,
+    "item": "Improved Spirit",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "graves_ult:2:upgrade_of:6163": {
+   "id": "graves_ult:2:upgrade_of:6163",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Spirit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 2,
+    "item": "Improved Spirit",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Spirit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:2:spirit_scaling:6164": {
+   "id": "graves_ult:2:spirit_scaling:6164",
+   "kind": "spirit_scaling",
+   "phrase": "+18 spirit adds about 28.8 to Grasping Hands's damage (1.60x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_soaring_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_zombiewall"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 2,
+    "item": "Improved Spirit",
+    "souls": 2400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "18.0",
+    "28.8",
+    "1.60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:3:spike_progress:6165": {
+   "id": "graves_ult:3:spike_progress:6165",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 4,800 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 3,
+    "item": "Grit",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 4800,
+    "event": "Spirit Lifesteal completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 1600
+   },
+   "numbers": [
+    "1600",
+    "4.8k",
+    4800,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "graves_ult:3:component_for:6166": {
+   "id": "graves_ult:3:component_for:6166",
+   "kind": "component_for",
+   "phrase": "From Spirit Shielding: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 3,
+    "item": "Grit",
+    "souls": 3200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 5600,
+    "event": "Spirit Shielding"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Spirit Shielding"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:4:spike_progress:6167": {
+   "id": "graves_ult:4:spike_progress:6167",
+   "kind": "spike_progress",
+   "phrase": "Takes spirit to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 4,
+    "item": "Duration Extender",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "spirit",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "spirit",
+   "target": 4800
+  },
+  "graves_ult:4:imbue_duration:6168": {
+   "id": "graves_ult:4:imbue_duration:6168",
+   "kind": "imbue_duration",
+   "phrase": "Imbued on Borrowed Decree: its duration-scaled parts (duration 16s, channel time 0.7s) get +22%.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_arcane_extension",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_gravestone"
+   ],
+   "score": 58,
+   "point": {
+    "idx": 4,
+    "item": "Duration Extender",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_scale",
+    "slot": 4,
+    "stats": [
+     "ETechDuration"
+    ]
+   },
+   "numbers": [
+    "22.0",
+    "16",
+    "0.7"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:4:component_for:6169": {
+   "id": "graves_ult:4:component_for:6169",
+   "kind": "component_for",
+   "phrase": "From Superior Duration: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 4,
+    "item": "Duration Extender",
+    "souls": 4800,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 10400,
+    "event": "Superior Duration"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Duration"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:5:spike_progress:6170": {
+   "id": "graves_ult:5:spike_progress:6170",
+   "kind": "spike_progress",
+   "phrase": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 1,600 souls on.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 5,
+    "item": "Enchanter's Emblem",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "imminent",
+    "delta_souls": 1600,
+    "event": "Spirit Lifesteal completes the 4.8k vitality tier"
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k",
+    1600,
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 4800
+  },
+  "graves_ult:5:swap_candidate:6171": {
+   "id": "graves_ult:5:swap_candidate:6171",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Refresher later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 5,
+    "item": "Enchanter's Emblem",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Enchanter's Emblem",
+    "buyer": "Refresher"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:5:phase_range:6172": {
+   "id": "graves_ult:5:phase_range:6172",
+   "kind": "phase_range",
+   "phrase": "Souls 0-6,400 (levels 1-12).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Enchanter's Emblem",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Enchanter's Emblem",
+    "keys": []
+   },
+   "numbers": [
+    "0",
+    "6,400",
+    "1",
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:5:phase_abilities:6173": {
+   "id": "graves_ult:5:phase_abilities:6173",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Grasping Hands T2, Borrowed Decree T2.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 5,
+    "item": "Enchanter's Emblem",
+    "souls": 6400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Enchanter's Emblem",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:6:spike_complete:6180": {
+   "id": "graves_ult:6:spike_complete:6180",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k vitality tier (3,200 to 4,800 invested): bonus 20 to 38 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 6,
+    "item": "Spirit Lifesteal",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "20.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 4800
+  },
+  "graves_ult:6:temporary_sold:6181": {
+   "id": "graves_ult:6:temporary_sold:6181",
+   "kind": "temporary_sold",
+   "phrase": "Temporary, sold when you buy Magic Carpet later.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 34,
+   "point": {
+    "idx": 6,
+    "item": "Spirit Lifesteal",
+    "souls": 8000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Lifesteal",
+    "buyer": "Magic Carpet"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:7:spike_progress:6182": {
+   "id": "graves_ult:7:spike_progress:6182",
+   "kind": "spike_progress",
+   "phrase": "Takes vitality to 5,600 of the 6.4k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "vitality",
+    "upto": 5600
+   },
+   "numbers": [
+    "5600",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "vitality",
+   "target": 6400
+  },
+  "graves_ult:7:upgrade_of:6183": {
+   "id": "graves_ult:7:upgrade_of:6183",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Grit (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Grit"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:7:swap_candidate:6184": {
+   "id": "graves_ult:7:swap_candidate:6184",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Cheat Death later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 7,
+    "item": "Spirit Shielding",
+    "souls": 8800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Spirit Shielding",
+    "buyer": "Cheat Death"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:8:spike_progress:6185": {
+   "id": "graves_ult:8:spike_progress:6185",
+   "kind": "spike_progress",
+   "phrase": "Takes weapon to 3,200 of the 4.8k tier.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk"
+   ],
+   "score": 24,
+   "point": {
+    "idx": 8,
+    "item": "Heroic Aura",
+    "souls": 12000,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "progress",
+    "colour": "weapon",
+    "upto": 3200
+   },
+   "numbers": [
+    "3200",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "colour": "weapon",
+   "target": 4800
+  },
+  "graves_ult:9:spike_complete:6186": {
+   "id": "graves_ult:9:spike_complete:6186",
+   "kind": "spike_complete",
+   "phrase": "Completes the 4.8k spirit tier (3,200 to 4,800 invested): bonus 19 to 38 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 92,
+   "point": {
+    "idx": 9,
+    "item": "Compress Cooldown",
+    "souls": 13600,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 4800
+   },
+   "numbers": [
+    "4.8k",
+    "3200",
+    "4800",
+    "19.0",
+    "38.0",
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 4800
+  },
+  "graves_ult:9:imbue_cooldown:6187": {
+   "id": "graves_ult:9:imbue_cooldown:6187",
+   "kind": "imbue_cooldown",
+   "phrase": "Imbued on Borrowed Decree: takes 18% off its 125s base cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_tempo",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_gravestone"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 9,
+    "item": "Compress Cooldown",
+    "souls": 13600,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_cd",
+    "slot": 4
+   },
+   "numbers": [
+    "18.0",
+    "125.0"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:9:component_for:6188": {
+   "id": "graves_ult:9:component_for:6188",
+   "kind": "component_for",
+   "phrase": "From Superior Cooldown: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 9,
+    "item": "Compress Cooldown",
+    "souls": 13600,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 3200,
+    "event": "Superior Cooldown"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Superior Cooldown"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:10:invest_step:6189": {
+   "id": "graves_ult:10:invest_step:6189",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 4,800 to 6,400 invested: bonus 38 to 45 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 10,
+    "item": "Superior Duration",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 6400
+   },
+   "numbers": [
+    "4800",
+    "6400",
+    "38.0",
+    "45.0",
+    "6.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 6400
+  },
+  "graves_ult:10:upgrade_of:6190": {
+   "id": "graves_ult:10:upgrade_of:6190",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Duration Extender (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 10,
+    "item": "Superior Duration",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Duration Extender"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:10:dur_global:6191": {
+   "id": "graves_ult:10:dur_global:6191",
+   "kind": "dur_global",
+   "phrase": "+28% to every duration-scaled effect you have: Borrowed Decree duration (26s), Borrowed Decree summon lifetime (20s), Borrowed Decree slow duration (1.2s).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_imbued_duration_extender",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_hauntingskull",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_zombiewall",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_fear",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_gravestone"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 10,
+    "item": "Superior Duration",
+    "souls": 15200,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "dur_global"
+   },
+   "numbers": [
+    "28.0",
+    "26",
+    "20",
+    "1.2"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:11:invest_step:6192": {
+   "id": "graves_ult:11:invest_step:6192",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 6,400 to 8,000 invested: bonus 45 to 52 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 11,
+    "item": "Superior Cooldown",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 8000
+   },
+   "numbers": [
+    "6400",
+    "8000",
+    "45.0",
+    "52.0",
+    "8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 8000
+  },
+  "graves_ult:11:upgrade_of:6193": {
+   "id": "graves_ult:11:upgrade_of:6193",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Compress Cooldown (already owned): costs 1,600 souls more, not 3,200.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 11,
+    "item": "Superior Cooldown",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Compress Cooldown"
+    ]
+   },
+   "numbers": [
+    "1600",
+    "3200"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:11:cdr_rotation:6194": {
+   "id": "graves_ult:11:cdr_rotation:6194",
+   "kind": "cdr_rotation",
+   "phrase": "With 2 abilities trained their base cooldowns total 145s; 20% off is 29s per full rotation.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_zombiewall",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_gravestone"
+   ],
+   "score": 33,
+   "point": {
+    "idx": 11,
+    "item": "Superior Cooldown",
+    "souls": 16800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     2,
+     4
+    ]
+   },
+   "numbers": [
+    "2",
+    "145",
+    "20.0",
+    "29"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:12:component_for:6195": {
+   "id": "graves_ult:12:component_for:6195",
+   "kind": "component_for",
+   "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 12,
+    "item": "Mystic Vulnerability",
+    "souls": 18400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "future",
+    "delta_souls": 23200,
+    "event": "Escalating Exposure"
+   },
+   "check": {
+    "kind": "component_for",
+    "target": "Escalating Exposure"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:13:ult_trigger:6196": {
+   "id": "graves_ult:13:ult_trigger:6196",
+   "kind": "ult_trigger",
+   "phrase": "Casting Borrowed Decree gives a 1,000 barrier and +40 spirit for 20s, available once per ultimate cooldown (125s at your current ultimate tier), so it is a once-per-fight burst of defence.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_diviners_kevlar",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_gravestone"
+   ],
+   "score": 56,
+   "point": {
+    "idx": 13,
+    "item": "Diviner's Kevlar",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "ult_tier",
+    "min_tier": 3
+   },
+   "numbers": [
+    "1,000",
+    "40",
+    "20",
+    "125"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:13:invest_step:6197": {
+   "id": "graves_ult:13:invest_step:6197",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 5,600 to 12,000 invested, crossing the 6.4k, 8k, 11.2k tiers: bonus 38 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 13,
+    "item": "Diviner's Kevlar",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 6400
+   },
+   "numbers": [
+    "5600",
+    "12000",
+    "38.0",
+    "50.0",
+    "6.4k",
+    "8k",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 6400
+  },
+  "graves_ult:13:phase_range:6198": {
+   "id": "graves_ult:13:phase_range:6198",
+   "kind": "phase_range",
+   "phrase": "Souls 6,400-24,800 (levels 12-28).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Diviner's Kevlar",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Diviner's Kevlar",
+    "keys": []
+   },
+   "numbers": [
+    "6,400",
+    "24,800",
+    "12",
+    "28"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:13:phase_abilities:6199": {
+   "id": "graves_ult:13:phase_abilities:6199",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Grasping Hands T3, Borrowed Decree T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Diviner's Kevlar",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Diviner's Kevlar",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:13:phase_power:6200": {
+   "id": "graves_ult:13:phase_power:6200",
+   "kind": "phase_power",
+   "phrase": "Your biggest single spirit hit (Grasping Hands, damage) grows from 259 to 413.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_zombiewall",
+    "spirit from owned items (vdata)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Diviner's Kevlar",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Diviner's Kevlar",
+    "keys": []
+   },
+   "numbers": [
+    "259",
+    "413"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:13:phase_spikes:6208": {
+   "id": "graves_ult:13:phase_spikes:6208",
+   "kind": "phase_spikes",
+   "phrase": "4.8k spikes: vitality 4.8k at Spirit Lifesteal, spirit 4.8k at Compress Cooldown.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 13,
+    "item": "Diviner's Kevlar",
+    "souls": 24800,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Diviner's Kevlar",
+    "keys": []
+   },
+   "numbers": [
+    "4.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:14:invest_step:6209": {
+   "id": "graves_ult:14:invest_step:6209",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 9,600 to 11,200 invested: bonus 52 to 59 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 14,
+    "item": "Arcane Surge",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "11200",
+    "52.0",
+    "59.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 11200
+  },
+  "graves_ult:14:upgrade_of:6210": {
+   "id": "graves_ult:14:upgrade_of:6210",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Extra Stamina (already owned): costs 800 souls more, not 1,600.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 14,
+    "item": "Arcane Surge",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Extra Stamina"
+    ]
+   },
+   "numbers": [
+    "800",
+    "1600"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:14:swap_candidate:6211": {
+   "id": "graves_ult:14:swap_candidate:6211",
+   "kind": "swap_candidate",
+   "phrase": "First item sold if you buy Cursed Relic later (listed under I'm rich as fuck).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build notes (planned sale)"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 14,
+    "item": "Arcane Surge",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "planned_sale",
+    "item": "Arcane Surge",
+    "buyer": "Cursed Relic"
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:14:spirit_scaling:6212": {
+   "id": "graves_ult:14:spirit_scaling:6212",
+   "kind": "spirit_scaling",
+   "phrase": "+20 spirit adds about 32 to Grasping Hands's damage (1.60x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_arcane_surge",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_zombiewall"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 14,
+    "item": "Arcane Surge",
+    "souls": 25600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "20.0",
+    "32",
+    "1.60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:15:invest_step:6213": {
+   "id": "graves_ult:15:invest_step:6213",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 11,200 to 16,000 invested: bonus 59 to 66 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 16000
+   },
+   "numbers": [
+    "11200",
+    "16000",
+    "59.0",
+    "66.0",
+    "16k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 16000
+  },
+  "graves_ult:15:upgrade_of:6214": {
+   "id": "graves_ult:15:upgrade_of:6214",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Improved Spirit (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Improved Spirit"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:15:spirit_scaling:6215": {
+   "id": "graves_ult:15:spirit_scaling:6215",
+   "kind": "spirit_scaling",
+   "phrase": "+30 spirit adds about 48 to Grasping Hands's damage (1.60x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_boundless_spirit",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_zombiewall"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "30.0",
+    "48",
+    "1.60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:15:phase_range:6216": {
+   "id": "graves_ult:15:phase_range:6216",
+   "kind": "phase_range",
+   "phrase": "Souls 24,800-30,400 (levels 28-30).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Boundless Spirit",
+    "keys": []
+   },
+   "numbers": [
+    "24,800",
+    "30,400",
+    "28",
+    "30"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:15:phase_abilities:6217": {
+   "id": "graves_ult:15:phase_abilities:6217",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Jar of Dead T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 15,
+    "item": "Boundless Spirit",
+    "souls": 30400,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Boundless Spirit",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:16:invest_step:6220": {
+   "id": "graves_ult:16:invest_step:6220",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 16,000 to 22,400 invested: bonus 66 to 75 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 16,
+    "item": "Echo Shard",
+    "souls": 36800,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 22400
+   },
+   "numbers": [
+    "16000",
+    "22400",
+    "66.0",
+    "75.0",
+    "22.4k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 22400
+  },
+  "graves_ult:16:imbue_invalid:6221": {
+   "id": "graves_ult:16:imbue_invalid:6221",
+   "kind": "imbue_invalid",
+   "phrase": "Echo Shard resets non-ultimate abilities only and Borrowed Decree is the ultimate.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_power_shard",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_gravestone"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 16,
+    "item": "Echo Shard",
+    "souls": 36800,
+    "noncore": false,
+    "imb": 4,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "imbue_nonult",
+    "slot": 4
+   },
+   "numbers": [],
+   "hero_specific": true,
+   "role": "reason",
+   "contradiction": true
+  },
+  "graves_ult:17:upgrade_of:6222": {
+   "id": "graves_ult:17:upgrade_of:6222",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Mystic Vulnerability (already owned): costs 4,800 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 17,
+    "item": "Escalating Exposure",
+    "souls": 41600,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Mystic Vulnerability"
+    ]
+   },
+   "numbers": [
+    "4800",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  },
+  "graves_ult:18:invest_step:6223": {
+   "id": "graves_ult:18:invest_step:6223",
+   "kind": "invest_step",
+   "phrase": "Takes spirit from 27,200 to 33,600 invested: bonus 75 to 100 spirit power.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 18,
+    "item": "Magic Carpet",
+    "souls": 48000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "spirit",
+    "threshold": 28800
+   },
+   "numbers": [
+    "27200",
+    "33600",
+    "75.0",
+    "100.0",
+    "28.8k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "spirit",
+   "threshold": 28800
+  },
+  "graves_ult:18:spirit_scaling:6224": {
+   "id": "graves_ult:18:spirit_scaling:6224",
+   "kind": "spirit_scaling",
+   "phrase": "+14 spirit adds about 22.4 to Grasping Hands's damage (1.60x scaling), your steepest spirit scaling.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_magic_carpet",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_zombiewall"
+   ],
+   "score": 48,
+   "point": {
+    "idx": 18,
+    "item": "Magic Carpet",
+    "souls": 48000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spirit_scaling",
+    "slot": 2,
+    "prop": "Damage"
+   },
+   "numbers": [
+    "14.0",
+    "22.4",
+    "1.60"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:18:sell_swap:6225": {
+   "id": "graves_ult:18:sell_swap:6225",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Lifesteal: sell it when you buy this.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 18,
+    "item": "Magic Carpet",
+    "souls": 48000.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Lifesteal",
+    "slots_full": false
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Lifesteal"
+  },
+  "graves_ult:19:burn_trigger_modelled:6226": {
+   "id": "graves_ult:19:burn_trigger_modelled:6226",
+   "kind": "burn_trigger_modelled",
+   "phrase": "One rotation of Jar of Dead (80) + Grasping Hands (589) + Essence Theft (109) = 778 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+   "tier": "MODELLED",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_spirit_burn"
+   ],
+   "score": 0,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Burn",
+    "souls": 54400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": [
+     "DamageThreshold"
+    ]
+   },
+   "numbers": [
+    "778",
+    "500",
+    "5"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:19:phase_range:6227": {
+   "id": "graves_ult:19:phase_range:6227",
+   "kind": "phase_range",
+   "phrase": "Souls 30,400-54,400 (levels 30-36).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build purchase walk",
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_mapLevelInfo"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Burn",
+    "souls": 54400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": []
+   },
+   "numbers": [
+    "30,400",
+    "54,400",
+    "30",
+    "36"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:19:phase_abilities:6228": {
+   "id": "graves_ult:19:phase_abilities:6228",
+   "kind": "phase_abilities",
+   "phrase": "Abilities gained (both point models agree): Essence Theft T3.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "ability point models A+B (abtimeline)"
+   ],
+   "score": 20,
+   "point": {
+    "idx": 19,
+    "item": "Spirit Burn",
+    "souls": 54400.0,
+    "noncore": false,
+    "imb": null,
+    "note": ""
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Spirit Burn",
+    "keys": []
+   },
+   "numbers": [],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:20:defence_bullet:6231": {
+   "id": "graves_ult:20:defence_bullet:6231",
+   "kind": "defence_bullet",
+   "phrase": "Immune to bullets only, for 5s on a 24s cooldown, at 1.5m/s slower: buy it against one gun carry, not against ability damage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_metal_skin"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Metal Skin",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "One gun hero is deleting you. Pop it and keep casting."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Metal Skin",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "5",
+    "24",
+    "1.5"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:20:defence_gun:6232": {
+   "id": "graves_ult:20:defence_gun:6232",
+   "kind": "defence_gun",
+   "phrase": "Passive: 30% chance to deflect a bullet and 50% to block its on-hit effects; it helps against several gun heroes at once where a timed bullet immunity covers only one.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_deflecting_armor"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Plated Armor",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Their damage is bullets."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Plated Armor",
+    "keys": [
+     "DeflectionPercent"
+    ]
+   },
+   "numbers": [
+    "30",
+    "50"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:20:defence_parry:6233": {
+   "id": "graves_ult:20:defence_parry:6233",
+   "kind": "defence_parry",
+   "phrase": "Your next parry blocks an enemy ability's damage and effects (0.8s window, 23s cooldown), so it only answers an ability you can see coming.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_counterspell"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Counterspell",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Lash ult, Infernus ult."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Counterspell",
+    "keys": [
+     "SpellParryDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "0.8",
+    "23"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:20:defence_purge:6234": {
+   "id": "graves_ult:20:defence_purge:6234",
+   "kind": "defence_purge",
+   "phrase": "Purges non-ultimate debuffs (silence, slow, disarm) and heals 250, but cannot be used while stunned or asleep, so it answers a hex or silence and not a stun already on you.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_reduce_debuff_duration",
+    "council/evidence/interactions/effects/heroes.json behaviors+interrupted_by"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Dispel Magic",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Slows, hexes and burns like Infernus's."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Dispel Magic",
+    "keys": [
+     "HealOnActivate"
+    ]
+   },
+   "numbers": [
+    "250"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:20:defence_curse:6235": {
+   "id": "graves_ult:20:defence_curse:6235",
+   "kind": "defence_curse",
+   "phrase": "Silences, disarms and blocks item use on one enemy for 3.25s and strips their non-ultimate buffs, at -25% damage for you and a 55s cooldown: a single-target answer to a buffed carry or engage.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_glitch"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Cursed Relic",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Arcane Surge for this, or Heroic Aura if it's gone."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Cursed Relic",
+    "keys": [
+     "AbilityDuration",
+     "AbilityCooldown"
+    ]
+   },
+   "numbers": [
+    "3.25",
+    "25",
+    "55"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:20:sell_swap:6236": {
+   "id": "graves_ult:20:sell_swap:6236",
+   "kind": "sell_swap",
+   "phrase": "Replaces Arcane Surge: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Cursed Relic",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Arcane Surge for this, or Heroic Aura if it's gone."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Arcane Surge",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Arcane Surge"
+  },
+  "graves_ult:20:invest_step:6237": {
+   "id": "graves_ult:20:invest_step:6237",
+   "kind": "invest_step",
+   "phrase": "Takes vitality from 9,600 to 14,400 invested: bonus 46 to 50 vitality bonus.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/heroes.vdata:hero_necro m_MapModCostBonuses",
+    "build purchase walk"
+   ],
+   "score": 30,
+   "point": {
+    "idx": 20,
+    "item": "Cheat Death",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Shielding for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "spike",
+    "colour": "vitality",
+    "threshold": 11200
+   },
+   "numbers": [
+    "9600",
+    "14400",
+    "46.0",
+    "50.0",
+    "11.2k"
+   ],
+   "hero_specific": false,
+   "role": "reason",
+   "colour": "vitality",
+   "threshold": 11200
+  },
+  "graves_ult:20:sell_swap:6238": {
+   "id": "graves_ult:20:sell_swap:6238",
+   "kind": "sell_swap",
+   "phrase": "Replaces Spirit Shielding: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Cheat Death",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Sell Spirit Shielding for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Spirit Shielding",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Spirit Shielding"
+  },
+  "graves_ult:20:refresher:6239": {
+   "id": "graves_ult:20:refresher:6239",
+   "kind": "refresher",
+   "phrase": "Resets every ability and charge: up to 145s of base cooldown across your kit, 125s of it the ultimate; the item has its own cooldown of 300s.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_ability_refresher",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_zombiewall",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:ability_necro_gravestone"
+   ],
+   "score": 50,
+   "point": {
+    "idx": 20,
+    "item": "Refresher",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Use it right after Echo Shard for a third gravestone. Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "cdr",
+    "slots": [
+     2,
+     4
+    ]
+   },
+   "numbers": [
+    "145",
+    "125",
+    "300"
+   ],
+   "hero_specific": true,
+   "role": "reason"
+  },
+  "graves_ult:20:sell_swap:6240": {
+   "id": "graves_ult:20:sell_swap:6240",
+   "kind": "sell_swap",
+   "phrase": "Replaces Enchanter's Emblem: sell it when you buy this (all 12 slots are full).",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "build note",
+    "build purchase walk"
+   ],
+   "score": 10,
+   "point": {
+    "idx": 20,
+    "item": "Refresher",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Use it right after Echo Shard for a third gravestone. Sell Enchanter's Emblem for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "sell",
+    "old": "Enchanter's Emblem",
+    "slots_full": true
+   },
+   "numbers": [
+    "12"
+   ],
+   "hero_specific": false,
+   "role": "context",
+   "sold": "Enchanter's Emblem"
+  },
+  "graves_ult:20:defence_barrier:6241": {
+   "id": "graves_ult:20:defence_barrier:6241",
+   "kind": "defence_barrier",
+   "phrase": "Cast on yourself or an ally: removes non-stun debuffs and gives a 600 barrier for 6s, 45s cooldown (halved when cast on an ally), so it covers debuffs and burst damage but not a stun.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_divine_barrier"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Divine Barrier",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "If you bought Dispel Magic, sell it for this."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "stat",
+    "item": "Divine Barrier",
+    "keys": [
+     "CombatBarrier",
+     "BuffDuration"
+    ]
+   },
+   "numbers": [
+    "600",
+    "6",
+    "45"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:20:upgrade_delta:6242": {
+   "id": "graves_ult:20:upgrade_delta:6242",
+   "kind": "upgrade_delta",
+   "phrase": "Same-slot upgrade of Superior Cooldown for 3,200 more souls: item cooldown reduction 0 to 25; cooldown reduction 20 to 25..",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_transcendent_cooldown",
+    "gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata:upgrade_cooldown_reduction"
+   ],
+   "score": 46,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_delta",
+    "comp": "Superior Cooldown"
+   },
+   "numbers": [
+    "3,200",
+    "0",
+    "25",
+    "20",
+    "25"
+   ],
+   "hero_specific": false,
+   "role": "reason"
+  },
+  "graves_ult:20:upgrade_of:6243": {
+   "id": "graves_ult:20:upgrade_of:6243",
+   "kind": "upgrade_of",
+   "phrase": "Upgrade of Superior Cooldown (already owned): costs 3,200 souls more, not 6,400.",
+   "tier": "VERIFIED DATA",
+   "sources": [
+    "audit/items_full.json components",
+    "build purchase walk"
+   ],
+   "score": 25,
+   "point": {
+    "idx": 20,
+    "item": "Transcendent Cooldown",
+    "souls": 54400.0,
+    "noncore": true,
+    "imb": null,
+    "note": "Upgrade of Superior Cooldown."
+   },
+   "timing": {
+    "when": "now",
+    "delta_souls": 0,
+    "event": ""
+   },
+   "check": {
+    "kind": "upgrade_of",
+    "comps": [
+     "Superior Cooldown"
+    ]
+   },
+   "numbers": [
+    "3200",
+    "6400"
+   ],
+   "hero_specific": false,
+   "role": "context"
+  }
+ },
+ "review": [
+  {
+   "build": "graves_ult",
+   "item": "Extra Stamina",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (vitality): Spirit Lifesteal completes 4.8k vitality in 6400 souls (~6.4 min), 5 purchases",
+   "souls": 1600,
+   "unpublished": [
+    {
+     "id": "graves_ult:1:spike_progress:6160",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 6,400 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 6400,
+      "event": "Spirit Lifesteal completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "graves_ult:1:component_for:6161",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Arcane Surge: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 24000,
+      "event": "Arcane Surge"
+     }
+    }
+   ]
+  },
+  {
+   "build": "graves_ult",
+   "item": "Grit",
+   "section": "early",
+   "cls": "b",
+   "why": "on the path to the build's first 4.8k (vitality): Spirit Lifesteal completes 4.8k vitality in 4800 souls (~4.8 min), 3 purchases",
+   "souls": 3200,
+   "unpublished": [
+    {
+     "id": "graves_ult:3:spike_progress:6165",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 4,800 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 4800,
+      "event": "Spirit Lifesteal completes the 4.8k vitality tier"
+     }
+    },
+    {
+     "id": "graves_ult:3:component_for:6166",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Spirit Shielding: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 5600,
+      "event": "Spirit Shielding"
+     }
+    }
+   ]
+  },
+  {
+   "build": "graves_ult",
+   "item": "Duration Extender",
+   "section": "early",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Borrowed Decree."
+  },
+  {
+   "build": "graves_ult",
+   "item": "Enchanter's Emblem",
+   "section": "early",
+   "cls": "b",
+   "why": "imminent: Spirit Lifesteal completes 4.8k vitality in 1600 souls (~1.6 min), 1 purchases",
+   "souls": 6400,
+   "unpublished": [
+    {
+     "id": "graves_ult:5:spike_progress:6170",
+     "tier": "VERIFIED DATA",
+     "phrase": "Builds toward the 4.8k vitality tier, which Spirit Lifesteal completes 1,600 souls on.",
+     "timing": {
+      "when": "imminent",
+      "delta_souls": 1600,
+      "event": "Spirit Lifesteal completes the 4.8k vitality tier"
+     }
+    }
+   ]
+  },
+  {
+   "build": "graves_ult",
+   "item": "Spirit Shielding",
+   "section": "mid",
+   "cls": "c",
+   "why": "vitality investment only; its 6.4k tier completes at Diviner's Kevlar, 16000 souls (~16.0 min) later and vitality is not the first spike colour: timing review (delay, or is a lane/stat reason missing?)",
+   "souls": 8800,
+   "unpublished": []
+  },
+  {
+   "build": "graves_ult",
+   "item": "Heroic Aura",
+   "section": "mid",
+   "cls": "c",
+   "why": "weapon investment only and the build never reaches the 4.8k weapon tier through the core: timing review",
+   "souls": 12000,
+   "unpublished": []
+  },
+  {
+   "build": "graves_ult",
+   "item": "Heroic Aura",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Works on your ghouls too."
+  },
+  {
+   "build": "graves_ult",
+   "item": "Compress Cooldown",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Borrowed Decree."
+  },
+  {
+   "build": "graves_ult",
+   "item": "Mystic Vulnerability",
+   "section": "mid",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: component_for)",
+   "souls": 18400,
+   "unpublished": [
+    {
+     "id": "graves_ult:12:component_for:6195",
+     "tier": "VERIFIED DATA",
+     "phrase": "From Escalating Exposure: this becomes its component and counts toward the upgrade price.",
+     "timing": {
+      "when": "future",
+      "delta_souls": 23200,
+      "event": "Escalating Exposure"
+     }
+    }
+   ]
+  },
+  {
+   "build": "graves_ult",
+   "item": "Arcane Surge",
+   "section": "mid",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Dash-jump right before you cast your ult."
+  },
+  {
+   "build": "graves_ult",
+   "item": "Echo Shard",
+   "section": "late",
+   "cls": "x",
+   "why": "contradiction: Echo Shard resets non-ultimate abilities only and Borrowed Decree is the ultimate.",
+   "souls": 36800,
+   "unpublished": []
+  },
+  {
+   "build": "graves_ult",
+   "item": "Echo Shard",
+   "section": "late",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "On Borrowed Decree."
+  },
+  {
+   "build": "graves_ult",
+   "item": "Escalating Exposure",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented (only context: upgrade_of)",
+   "souls": 41600,
+   "unpublished": []
+  },
+  {
+   "build": "graves_ult",
+   "item": "Spirit Burn",
+   "section": "late",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 54400.0,
+   "unpublished": [
+    {
+     "id": "graves_ult:19:burn_trigger_modelled:6226",
+     "tier": "MODELLED",
+     "phrase": "One rotation of Jar of Dead (80) + Grasping Hands (589) + Essence Theft (109) = 778 against the 500 trigger within 5s; needs the abilities to land together on one target (hit and timing assumed).",
+     "timing": {
+      "when": "now",
+      "delta_souls": 0,
+      "event": ""
+     }
+    }
+   ]
+  },
+  {
+   "build": "graves_ult",
+   "item": "Metal Skin",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "One gun hero is deleting you. Pop it and keep casting."
+  },
+  {
+   "build": "graves_ult",
+   "item": "Plated Armor",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Their damage is bullets."
+  },
+  {
+   "build": "graves_ult",
+   "item": "Counterspell",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Lash ult, Infernus ult."
+  },
+  {
+   "build": "graves_ult",
+   "item": "Dispel Magic",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Slows, hexes and burns like Infernus's."
+  },
+  {
+   "build": "graves_ult",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "d",
+   "why": "no hero-, build- or timing-specific reason established from the data layers implemented",
+   "souls": 54400.0,
+   "unpublished": []
+  },
+  {
+   "build": "graves_ult",
+   "item": "Unstoppable",
+   "section": "counters",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Stuns keep stopping you casting your ult."
+  },
+  {
+   "build": "graves_ult",
+   "item": "Cursed Relic",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Sell Arcane Surge for this, or Heroic Aura if it's gone."
+  },
+  {
+   "build": "graves_ult",
+   "item": "Refresher",
+   "section": "luxury",
+   "cls": "legacy-unverified",
+   "why": "legacy note in data.js is not backed by any claim record (kept untouched, not published by this system)",
+   "legacy_note": "Use it right after Echo Shard for a third gravestone. Sell Enchanter's Emblem for this."
+  }
+ ],
+ "stats": {
+  "g": 3,
+  "a": 18,
+  "b": 3,
+  "c": 2,
+  "d": 4,
+  "x": 1
+ }
+}

@@ -1,0 +1,252 @@
+{
+ "id": "victor",
+ "hk": "hero_frank",
+ "hero": "Victor",
+ "tag": "Fix",
+ "name": "Rizuhble's Aura Farming Victor",
+ "desc": "Spirit Victor",
+ "tg": [
+  "spirit",
+  "vitality",
+  "Torment Pulse"
+ ],
+ "abil": [
+  "Pain Battery",
+  "Jumpstart",
+  "Aura of Suffering",
+  "Shocking Reanimation"
+ ],
+ "order": [
+  3,
+  3,
+  1,
+  2,
+  3,
+  4,
+  1,
+  3,
+  1,
+  2,
+  2,
+  1,
+  4,
+  4,
+  2,
+  4
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Grit",
+      "Losing trades up close. Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "Extra Regen",
+      ""
+     ],
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ],
+     [
+      "Torment Pulse",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Healing Booster",
+      ""
+     ],
+     [
+      "Spirit Lifesteal",
+      ""
+     ],
+     [
+      "Sprint Boots",
+      ""
+     ],
+     [
+      "Enduring Speed",
+      ""
+     ],
+     [
+      "Mystic Vulnerability",
+      ""
+     ],
+     [
+      "Mystic Expansion",
+      "",
+      "3"
+     ],
+     [
+      "Infuser",
+      ""
+     ],
+     [
+      "Compress Cooldown",
+      "",
+      "2"
+     ]
+    ]
+   ],
+   [
+    "Mid · cont.",
+    "",
+    false,
+    [
+     [
+      "Escalating Exposure",
+      ""
+     ],
+     [
+      "Greater Expansion",
+      ""
+     ],
+     [
+      "Warp Stone",
+      ""
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Scourge",
+      ""
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Juggernaut",
+      ""
+     ],
+     [
+      "Spirit Burn",
+      "If you bought Healbane, sell it for this."
+     ],
+     [
+      "Witchmail",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Infuser if needed. Ahead? Skip it until you're dying. Sell Warp Stone for it.",
+    true,
+    [
+     [
+      "Spirit Resilience",
+      "Most of their damage is spirit."
+     ],
+     [
+      "Metal Skin",
+      "A gun carry outshoots you while you sit in the aura."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun."
+     ],
+     [
+      "Dispel Magic",
+      "Hexes and slows that pull you out of aura range."
+     ],
+     [
+      "Healbane",
+      "Their team heals a lot."
+     ],
+     [
+      "Debuff Reducer",
+      "Stuns and slows keep you off them."
+     ],
+     [
+      "Counterspell",
+      "A big ability you can see coming at you, like Lash's ult or Grey Talon's charged arrow."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Ethereal Shift",
+      "Sell Warp Stone for this."
+     ],
+     [
+      "Refresher",
+      "Resets your revive too, so you can come back twice in one fight. Sell Torment Pulse for this."
+     ],
+     [
+      "Divine Barrier",
+      "If you bought Dispel Magic, sell it for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ],
+     [
+      "Healing Tempo",
+      "Upgrade of Healing Booster."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Round 13: new spirit tank build (the existing one is the gun hybrid) — style source: deadlocklabs.gg Victor meta consensus, a pure spirit/vitality path (Extra Spirit, Extra Regen, Improved Spirit, Mystic Regen, Extra Charge, Healing Booster, Spirit Lifesteal, Enduring Speed, Mystic Vulnerability, Escalating Exposure, Transcendent Cooldown, Healing Tempo; Infuser among its popular items). Kit-justified: Torment Pulse (hits the 2 closest every 1.4s, 25 + 0.23x, he sits in them), Mystic Burst → Tankbuster (battery 100 + 1.6x per bolt clears 80 and 165 at buy), Mystic Expansion on the aura (8m radius), Compress Cooldown on the 240s revive, Scourge (self-cast aura, 2.3% max health a second in 10m, +40% spirit resist), Spirit Burn (aura up to 58 + 0.72x a second plus a battery clears 500 in 5s at 46k). Jumpstart has 1 charge (+1 at T3), so Extra Charge adds one. Hero-wide win rates are not used to justify items. Order: seemeta most popular (57.2%, 6,414 matches) 1123144134422233; Victor's public data is almost all spirit builds.",
+  "Round 14: renamed Spirit Victor (the build ends with no more health than the gun hybrid, so 'tank' was a false claim). Mystic Burst → Tankbuster out (in no spirit Victor list: RawDawger, Eido's, mobalytics Archon+; only the battery clears 80/165 and it needs 40% of your health lost per charge); Warp Stone in at the same 3.2k (RawDawger mid core, mobalytics late 35%), gets you into aura range. Healing Tempo moved to Slot locked (Kieran's rule; RawDawger rates it last-buy). Witchmail out of rich (not a pricier version of a build item); Juggernaut added to Slot locked; Divine Barrier added as Dispel Magic's pricier version. Counters now sell Torment Pulse (Mystic Vulnerability turns into Escalating Exposure). Order now RawDawger/mobalytics 1234114134422233. Notes trimmed to the condition.",
+  "Round 15: rebuilt as a real spirit tank (Kieran asked for a spirit tank Victor; the round-14 rename to Spirit Victor dropped his style). Same-style sources: lockbuilds 638121 UNGA BUNGA VICTOR ('Frontliner', Oct 16), 629760 30:00 EGG's Frontline Victor (Oct 5), 569180 Frankensteins Looksmaxxer ('a frontliner build', Sep 28). Juggernaut (core in all three), Plated Armor (UNGA core, EGG luxury) and Witchmail (UNGA core, late) moved into the core; Scourge kept (EGG core: +40% spirit resist, damage from enemy max health). Extra Charge/Rapid Recharge, Spirit Burn and Plated Armor's counter slot out. Health invest 12.8k -> 30.4k (gun hybrid stays 12.8k); spirit 4.8k at 5.6k, health 4.8k at 9.6k unchanged. Name 'Rizuhble's Spirit Tank Victor', desc 'Spirit tank Victor'. Counters after Infuser, sell Warp Stone (desc now fits 112). Refresher sells Torment Pulse. Order alternates spirit and health after the 4.8k spikes (damage, health, damage...). Plated Armor carries a swap note because an empty note would show the site's default counter text.",
+  "Round 17: Counterspell added to Counters (none in the build). Lane sells now 'Sell it once you're out of slots.'; Divine Barrier note 'If you bought Dispel Magic, sell it for this.' (Dispel is in Counters). Pair check: the gun hybrid main now opens gun-first (Close Quarters, Extended Magazine, Titanic, Point Blank) with Spiritual Overflow; this build stays spirit + tank (Torment Pulse, Juggernaut, Scourge, Plated Armor, Witchmail).",
+  "Round 19: this full Spirit Victor (Kieran's Aura Brawler: Torment Pulse, Infuser early) is now the MAIN build in id victor, moved from victor_spirit, because it is the common public style (lockbuilds Victor item stats: Infuser 44.2%, Torment Pulse 41.1%, Opening Rounds 7.0%). Rebuilt to the public spirit core (RawDawger Oct 18, Eido's Oct 19, cropdust Oct 4, YOU CAN'T KILL ME Oct 14, tauva Sep 30, apacycle spirit Oct 9): Infuser moved up to 16.8k right after Mystic Expansion (RawDawger core order); Plated Armor and Witchmail out of the core (tank add-ons, not in the spirit core lists; Plated Armor back to Counters); Ethereal Shift and Refresher into the core (RawDawger mid, cropdust mid, Eido's final form). Spirit Burn in rich as Healbane's pricier version. Name 'Rizuhble's Aura Brawler Victor', desc 'Spirit Victor'. Spirit 4.8k at 5.6k, health 4.8k at 9.6k, Infuser 16.8k.",
+  "Round 20: Mystic Regeneration out of the lane box. Ethereal Shift and Refresher moved from core to the end of the late list (luxuries); Spirit Burn and Witchmail take their core slots. Core+late 80k.",
+  "Round 23: kit re-read, no item change (see log).",
+  "Round 25: ability order 1234114134422233 -> 3312341312214424 (worked out from the kit for this build's playstyle). Compress Cooldown imbue 4 -> 2.",
+  "Cost pass: Boundless Spirit moved to right after Scourge (was the last buy)."
+ ]
+}

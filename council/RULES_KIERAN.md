@@ -1,0 +1,70 @@
+# Kieran's stated build rules (oldest first; when two conflict, the LATER one wins)
+
+- Build order must hit soul-investment spikes per colour (weapon/vitality/spirit) — 4.8k is the one that matters (weapon: 800→9%, 1.6k→12%, 2.4k→15%, 3.2k→18%, 4.8k→46%), so race to 4.8k in the build's main colour rather than collecting small steps across colours; then 6.4k/8k/16k; don't overshoot a threshold and don't spend randomly between them.
+- Priority: damage spike first, then the 4.8k health spike, then keep investing damage, then more health. A few cheap greens early (Extra Health, Extra Regen, Grit, melee lifesteal) are fine if they fix a lane problem.
+- Greens/off-colour items early are fine when they fix a hero's weakness (Enduring Speed on slow heroes, Grit on close-range heroes, High-Velocity on slow-bullet heroes).
+- Early lane items can be sold later once the real build is online.
+- Core categories are bought left-to-right; optional categories must say the problem they solve or when to buy them. Items like Enduring Speed are core or not in — never an optional.
+- Don't buy fresh T2s late; late buys should be T3/T4 or upgrades of owned T1/T2s.
+- Swaps must name what they replace. Don't take his item suggestions as gospel — check stats and say when an item is bad.
+- Spike totals count souls actually spent in that colour: an upgrade over an owned component adds only the difference.
+- Weapon-tree items that deal spirit damage (Mystic Shot) scale off spirit invest, so buy them right after the spirit spike.
+- Never copy an item from another hero's build without checking it against THIS hero's kit numbers (threshold items need an ability that clears the threshold; charge items need a charge ability).
+- Multiple imbue items can go on the same ability and all apply.
+- Threshold items chain: Tankbuster's bonus helps reach Spirit Burn's 500, so order the enabler first.
+- Before building, scan the FULL item list tier by tier against the kit, not just items seen in other builds.
+- Soul income ~1k/min early: no 6400s until ~20 min; fill gaps with 800/1600/3200 items that give stats now. Snowball items (Glass Cannon, Boundless) go after you have the fire rate/health to use them.
+- Dislikes Restorative Shot and Weakening Headshot (later: Restorative Shot is fine on shotgun heroes like Pocket, Shiv, Abrams, but bought FIRST since it's sold later).
+- Mercurial Magnum counts as a gun item for his purposes.
+- Health-spike timing depends on the kit: heroes with built-in sustain/escapes (Viscous, Calico, Vindicta, Geist, Mo & Krill, Shiv) can push the 4.8k health spike to ~14–16k; fighty heroes without kit sustain (Abrams) go green right after the first damage spike (~11–12k).
+- No random untouched 800s: a cheap item must be upgraded later or be an optional that solves a lane problem; prefers Extra Regen over Healing Rite; skip regen items on heroes with built-in healing.
+- Heroes with abysmal lanes (Billy, Drifter, Rem-types) can take several cheap lane-fixers first, then race the spike; items that heal but add damage (Lifestrike, Restorative Shot) count as damage items for this.
+- Assume slot-lock early (3 flex slots locked until a Walker, can be 20 min): every T1/T2 must be upgraded later or have a named replacement it gets sold for.
+- No long run of 6.4ks before ~30k: one, two or three back to back is fine; late (≥~30k) 4–5 in a row is fine; the problem is a long early/mid run (Boundless → Mercurial Magnum → Spirit Burn → Infuser). Core cost has no target.
+- Counters/armors on every build (vs gun carry, flyer, spirit burst, on-hit comps).
+- Sustain must actually exist in a build (Siphon alone isn't sustain).
+- Wording: simple, player-facing, no commanding; "shred" means reducing bullet resist; no tick/proc jargon; say "your gun", never shotgun/beam/laser.
+- Split Shot + Ricochet: each split applies its own Ricochet — used on gun Graves.
+- Layout: Early/Lane · L-R, Mid · L-R, Late · L-R, then optional boxes; swap boxes named for what they replace; if Dispel Magic is in, Divine Barrier is listed as its rich upgrade.
+- Upgrades are never written "X over Y"; don't list a stepping-stone armor if the answer is to wait for the T4; no AI phrasing.
+- "I'm rich as fuck" holds tier-4 items only, and only pricier versions of something the build already does (Healbane→Spirit Burn, Counterspell→Divine Barrier, Cold Front→Arctic Blast, Refresher when the ult matters). "Slot locked" (no box description) holds only tiny-gain expensive upgrades (Transcendent Cooldown, Healing Tempo in most games, Juggernaut), never early items; Echo Shard usually in rich, not Slot locked. Counters box sits beside Late; every box one row (split long rows into two boxes); a lane "pick 1" box beside Early says clearly when to pick.
+- Past 12 slots, the note says what to sell for it. Notes never mention bugs.
+- Never agree with his item changes blindly — check real numbers and push back when he's wrong.
+- Any farming build can take its damage spikes and rush Ricochet before the health spike, but greens must start right after; leaving health very late is bad.
+- Core (Early/Mid/Late) fills all 12 slots by itself. Counters desc: "Dying after X? Buy what is killing you, cheapest first. Not dying? Skip. Sell Y for it." Premise (Oct 22): the Counters box is a menu, not a sequence: buy one only when you keep dying, pick by what is killing you (each item note names the threat), cheapest items first in the box; still dying, add the next; expensive ones (Spirit Resilience etc.) come once the next core spike is in; not dying, skip all of it.
+- Notes never explain proc conditions/thresholds; the builder guarantees them via order and timing.
+- Build names describe the playstyle; names that just restate the hero's theme are wrong.
+- Don't overshoot a spike by a lot before the next spike (8k or 10.4k spirit before any health is wrong); a bit over is fine when cheap items that land it exactly don't suit the hero.
+- If a build delays a spike, the extra items must fix the missing spike's problem. In-your-face heroes (Bebop, Abrams, Billy, Victor, Yamato) need the health spike before more big damage; mobile heroes (Vindicta, Holliday) can delay it.
+- Items must match the playstyle: no Torment Pulse on squishy back-line heroes (it's for tanks in their face); no Escalating Resilience on burst/poke heroes; no melee items on flying heroes; kiting heroes with Sprint Boots also want Enduring Speed.
+- Cultist Sacrifice is strong on heroes that struggle to farm (Pocket, Billy, often Venator), ~8 min. Pocket wants Majestic Leap or Warp Stone.
+- Research: top ~10 public builds per hero that match the style (skip other styles); common items, spike order, trends. Don't call a build bad only because public builds differ when it serves the chosen style.
+- Losing-lane box: survival items only (Extra Regen, Healing Rite, Grit), never damage items.
+- Fortitude is not a default: fine mainly on roamers (Calico, Mo & Krill, Haze, Holliday, Bebop) or with a kit reason (Rat King's 3 barrier scales with max health; support Paige roams).
+- Item reasons must be worked out from the kit.
+- No item is a template default: Infuser is for heroes with lots of separate spirit hits (bad on one-arrow Grey Talon); Glass Cannon is bad on small-magazine heroes (Drifter).
+- Builds already agreed / made in game are the base (his in-game Haze: Healing Booster core, Siphon Bullets to proc Healing Tempo).
+- Older playstyle list (now = the MAIN build; variants cover other styles): Abrams tanky; Baba shotgun/gun not melee; Bebop gun (1v1); Billy tanky; Calico bursty; Celeste copy current top builds; Danny dive+ult (keep 4.8k gun spike HV→Opening Rounds→Sharpshooter from his in-game build); Drifter gun; Dynamo full support; Graves gun (Ricochet/Capacitor/Toxic/Split Shot); Grey Talon 1-arrow; Haze tanky healer; Holliday gun; Infernus gun; Ivy support (Headhunter + Healing Tempo); Kelvin damage-orientated; Geist gun/tank hybrid; Lash slam; McGinnis gun; Mina high burst; Mirage gun hybrid with mark damage; Paige speedy AoE; Paradox gun/carbine (long range sniper); Pocket burst ult; Rat King super tanky, damage from grenade only (weapon damage scales grenade, fire rate doesn't matter), Return Fire a must; Rem support (Heroic Aura, Trophy Collector); Seven ult build with early farm (Surge of Power/Arcane Surge on his 3 early, Escalating Exposure/Mystic Vulnerability or Cultist early, then Infuser/Unstoppable); Shiv = Spirit Shiv (dash); Sinclair melee/punch (Rabbit Backshots: Cultist, Melee Charge→Crushing Fists, situational Infuser/Unstoppable vs Seven, Warp Stone/Majestic Leap vs Lash/Dynamo); Solomon AoE damage; Doorman high burst DPS; Venator (main) per current build; Victor gun hybrid; Vindicta pure gun; Violet gun-hybrid (Mercurial Magnum straight, no Quicksilver; Surge of Power, Tankbuster, Spirit Burn good because her 1 resets actives); Viscous support (Echo Shard on cube mid/late, Rescue Beam, Trophy Collector, some 1/fist damage); Vyper more spirit invest; Warden gun; Wraith early farm then AoE gun (Leech, Ricochet, Tesla); Yamato grapple early (Stalker, Spirit Snatch, Recharging Rush, Healing Booster, Torment Pulse, Melee Lifesteal) into the 1-build late (Boundless, Spirit Burn, Mystic Reverb, Tankbuster).
+- Trophy Collector is probably needed on pure-support builds (move speed + passive souls).
+- Notes on imbue upgrades never say "keep it on X".
+- Audit ability orders against top builds of the SAME style. Abrams: ult maxed much earlier than last; his 1 low priority.
+- Rich-box items must only be pricier versions of something actually in the build.
+- A build's style doesn't ban other items (pure gun Vindicta still needs Counterspell; gun Bebop still buys spirit items to scale the bomb).
+- Ability orders copy what popular builds do; cheap high-value T1s get taken early across abilities (Paige: unlock 2 or 1, T1 Plot Armor, T1 on the 3, then the 1).
+- Threshold items must proc when bought (Violet's 1 does ~64 when Mystic Burst bought, under 80). Threshold maths: boons +1.1 spirit/level, spirit invest bonus, items, imbues, tier scaling; never statue buffs. Witchmail late; Recharging Rush not early on slow-firing heroes; Tankbuster a bit later; Mystic Reverb minimum 100.
+- Paige: HV → Opening Rounds early, Grit and Express Shot in lane, Trophy Collector; no Mystic Vulnerability; Tankbuster good; Knockdown not core.
+- Make the calls yourself when data supports them. Use only data from after the latest patch that changed the hero/item.
+- No token investments: commit with supporting items or drop it. Support lane items help the lane partner.
+- When he points out a mistake, hunt that problem type across every build.
+- Imbues go on the ability cast most often / that benefits most (Haze Surge of Power on the dagger).
+- Swaps solve the same problem (colour can differ: Healbane → Spirit Burn), but walk the build to check spikes still land.
+- Sell-later dead-end items (Restorative Shot) bought first or not at all; never the same item twice; no "Worth a try" boxes.
+- Builds are for new players: triggers and notes concrete ("lots of gun carries on your team"); Heroic Aura only when the team actually has gun carries.
+- Item notes only when needed: niche tips (Focus Lens before Danny's dive; Haze smoke works as a dispel, hence Rapid Recharge), item changes how you play (Bebop with Hunter's Aura hunts solo side-lane gun carries), situational conditions (Rat King Return Fire only vs a real gun hero), plus sell/swap info. Otherwise EMPTY.
+- Separate named builds per viable style (usually two per hero) instead of pivot boxes; reorder-only answers go in one empty box whose description says the reorder.
+- Haze tanky build: Burst Fire core; Surge of Power on the dagger as a swap for Burst Fire, never on Bullet Dance.
+- Lifestrike procs on light melee too (longer cooldown) and on troopers; Abrams' Shoulder Charge pins into a wall for a guaranteed heavy, so earlier Lifestrike is a valid lost-lane plan on Abrams.
+- Pick rates only count from builds of the same style.
+- Build descriptions: short style label only ("Speedy AoE Paige", "Tanky Abrams"), blank if it's how the hero is always played; never spikes, item explanations, how-to or false claims. Gun Bebop named like "1v1 Beast Bebop". Box captions equally short.
+- Drifter makes souls from picks (Bloodscent): Trophy Collector fits, Monster Rounds doesn't.
+- Item relevance (Oct 22): every item must raise something this build's damage sources actually use (grenade/ability/weapon scaling); range, headshot, fire-rate or projectile items on ability-damage builds are wrong (e.g. Trash Lobber Rat King: Close Quarters to Point Blank, not Long Range/Sharpshooter/High-Velocity Rounds).

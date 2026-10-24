@@ -1,0 +1,106 @@
+SCOPE: build-context
+KIND: path
+MODE: sequence
+BUILD: abrams
+ARGS: --seq danny danny_gun bebop bebop_bomb bebop_support dynamo dynamo_damage greytalon greytalon_gun infernus infernus_dash kelvin kelvin_support paige paige_support ratking ratking_grenade haze haze_assassin rem seven seven_gun solomon solomon_support venator_grenade venator victor victor_gun violet violet_spirit viscous viscous_damage wraith yamato yamato_brawler mina vindicta vindicta_sniper geist geist_bomb mcginnis mcginnis_turret mcginnis_ult paradox paradox_bomb apollo apollo_melee silver celeste celeste_carry baba baba_tank warden lash pocket mirage vyper vyper_gun sinclair sinclair_bolt doorman doorman_support billy billy_damage abrams abrams_melee holliday holliday_spirit graves graves_ult graves_tank drifter drifter_spirit calico calico_gun mokrill shiv shiv_gun ivy ivy_carry nurse
+GENERATED: 2026-10-24T16:13:50Z
+BODY-SHA: b55a5d6ecce9d38f0d617592141da478a9e303aa707ba00f2da07f50490084d5
+INPUT-SHA: 0d72d6be6d343ba2a124bc22fd5abef303c4ae4e1dbf90680619eb3f6bac5535
+COUNTING: resale 0.5 of price (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); slots capped at 12 only in the investment walk (sequence variants ignore the slot cap = upper bound for 'keep')
+METHOD: each sale instruction is evaluated as a whole progression through the --strategy soul-income walk: AS BUILT vs KEEP vs SELL-OTHER vs SKIP-THE-SOLD-ITEM; value = souls earned by the end of the window and the mean trade ratio from the time the sold item was first bought; grid = {'hit': (0.35, 0.75), 'enemy': (0.6, 1.6), 'beta': (0.0, 0.5), 'POKE': (0.06, 0.2), 'lost': (0, 1)} (assumptions flip the verdict -> listed)
+TIERS: SUPPORTED = decisive inputs VERIFIED/measured; MODEL-ONLY = robust in >=80% of grid cells but model-derived; MODEL-ONLY, assumption-sensitive = flips with listed parameters; INSUFFICIENT = effect inside model noise. Whole-build values here are never above MODEL-ONLY (trade/income model has no measured inputs)
+
+## ITEM ROLES (derived from sale notes, branch type and upgrade components)
+  Extra Regen: retained-or-upgraded (-> Healing Booster)
+  Spirit Strike: retained-or-upgraded (-> Spirit Snatch)
+  Arcane Surge: retained
+  Duration Extender: retained-or-upgraded (-> Superior Duration)
+  Extra Spirit: retained-or-upgraded (-> Improved Spirit)
+  Healing Booster: retained
+  Healbane: retained
+  Enduring Speed: retained
+  Mystic Expansion: retained-or-upgraded (-> Greater Expansion)
+  Compress Cooldown: retained-or-upgraded (-> Superior Cooldown)
+  Spirit Snatch: retained
+  Improved Spirit: retained-or-upgraded (-> Boundless Spirit)
+  Superior Duration: retained
+  Superior Cooldown: retained
+  Mystic Vulnerability: retained-or-upgraded (-> Escalating Exposure)
+  Greater Expansion: retained
+  Witchmail: retained
+  Scourge: retained
+  Boundless Spirit: retained
+  Escalating Exposure: retained
+  Plated Armor: conditional branch (counter menu)
+  Metal Skin: conditional branch (counter menu)
+  Bullet Resilience: conditional branch (counter menu)
+  Spirit Resilience: conditional branch (counter menu)
+  Spellbreaker: conditional branch (counter menu)
+  Counterspell: conditional branch (counter menu)
+  Dispel Magic: conditional branch (counter menu)
+  Infuser: situational-luxury
+  Spirit Burn: situational-luxury
+  Colossus: situational-luxury
+  Divine Barrier: situational-luxury
+  Healing Tempo: conditional branch (optional upgrade)
+  Juggernaut: conditional branch (optional upgrade)
+  Transcendent Cooldown: conditional branch (optional upgrade)
+
+## BRANCH STRUCTURE
+  Early · L-R                -> main path (sequential): Extra Regen, Spirit Strike, Arcane Surge, Duration Extender, Extra Spirit, Healing Booster, Healbane, Enduring Speed
+  Mid · L-R                  -> main path (sequential): Mystic Expansion, Compress Cooldown, Spirit Snatch, Improved Spirit, Superior Duration, Superior Cooldown, Mystic Vulnerability, Greater Expansion
+  Late · L-R                 -> main path (sequential): Witchmail, Scourge, Boundless Spirit, Escalating Exposure
+  Counters                   -> counter menu (mutually exclusive, buy only if needed): Plated Armor, Metal Skin, Bullet Resilience, Spirit Resilience, Spellbreaker, Counterspell, Dispel Magic
+  I'm rich as fuck           -> luxury ending (optional branch, each item separately): Infuser, Spirit Burn, Colossus, Divine Barrier
+  Slot locked                -> optional upgrade (branch): Healing Tempo, Juggernaut, Transcendent Cooldown
+
+## Healbane: sold when buying Infuser (I'm rich as fuck, luxury)
+  role of Healbane: retained; role of Infuser: situational-luxury
+  Healbane: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 8000 souls (~8.2 min), replaced at ~54.0 min -> owned ~45.8 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/17600/33600 -> after 0/16000/33600; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 76 min | window TR | key purchase times (min)
+  as built                                    |          68632 |      0.41 | Healbane 8, Infuser 54
+  keep Healbane (slot cap ignored)            |          68707 |      0.41 | Healbane 8, Infuser 55
+  skip Healbane                               |          68059 |      0.39 | Infuser 54
+  sell Spirit Snatch instead                  |          69052 |      0.42 | Healbane 8, Infuser 53
+  keep Healbane (slot cap ignored) vs as built: d souls +37, d window TR +0.5% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Healbane vs as built: d souls -127, d window TR -3.7% | souls: MODEL-ONLY (sign robust in 82% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 88% of cells; no measured inputs)
+  sell Spirit Snatch instead vs as built: d souls +98, d window TR +1.5% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -))
+  model limit: Infuser has an active effect (INSTANT_CAST) not priced
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT; flipping assumptions: sell Spirit Snatch instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -))
+
+## Arcane Surge: sold when buying Spirit Burn (I'm rich as fuck, luxury)
+  role of Arcane Surge: retained; role of Spirit Burn: situational-luxury
+  Arcane Surge: price 1600, resale 800, net cost of owning it 800 souls (0.8 min of reference income); first bought at 3200 souls (~3.5 min), replaced at ~54.0 min -> owned ~50.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/11200/40000 -> after 0/11200/38400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 76 min | window TR | key purchase times (min)
+  as built                                    |          66265 |      0.33 | Arcane Surge 4, Spirit Burn 54
+  keep Arcane Surge (slot cap ignored)        |          66416 |      0.34 | Arcane Surge 4, Spirit Burn 55
+  skip Arcane Surge                           |          65425 |      0.31 | Spirit Burn 54
+  sell Healbane instead                       |          66329 |      0.33 | Arcane Surge 4, Spirit Burn 54
+  keep Arcane Surge (slot cap ignored) vs as built: d souls +102, d window TR +2.1% | souls: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | TR: MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -))
+  skip Arcane Surge vs as built: d souls -396, d window TR -5.2% | souls: MODEL-ONLY (sign robust in 100% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Healbane instead vs as built: d souls +53, d window TR +0.6% | souls: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -)) | TR: INSUFFICIENT (effect within model noise)
+  model limit: no modelled stat for Arcane Surge, Spirit Burn (its contribution is 0 in the walk) -> not a finding for it
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT (item effects not modelled); flipping assumptions: keep Arcane Surge (slot cap ignored): MODEL-ONLY, assumption-sensitive (flips with beta (0.0: +, 0.5: -)) | sell Healbane instead: MODEL-ONLY, assumption-sensitive (flips with enemy (0.6: +, 1.6: -); beta (0.0: +, 0.5: -); lost (0: +, 1: -))
+
+## Spirit Snatch: sold when buying Colossus (I'm rich as fuck, luxury)
+  role of Spirit Snatch: retained; role of Colossus: situational-luxury
+  Spirit Snatch: price 3200, resale 1600, net cost of owning it 1600 souls (1.6 min of reference income); first bought at 14400 souls (~14.5 min), replaced at ~56.0 min -> owned ~41.5 min  [MODELLED ESTIMATE]
+  component of later purchases: none
+  investment gun/vit/spirit before 0/17600/33600 -> after 0/17600/30400; thresholds lost: none; gained: none  [UNVERIFIED HYPOTHESIS: counting rule]
+  variant                                     | souls at 76 min | window TR | key purchase times (min)
+  as built                                    |          63208 |      0.36 | Spirit Snatch 14, Colossus 56
+  keep Spirit Snatch (slot cap ignored)       |          63221 |      0.36 | Spirit Snatch 14, Colossus 58
+  skip Spirit Snatch                          |          59894 |      0.29 | Colossus 59
+  sell Healbane instead                       |          63190 |      0.36 | Spirit Snatch 14, Colossus 57
+  keep Spirit Snatch (slot cap ignored) vs as built: d souls +2, d window TR +0.6% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  skip Spirit Snatch vs as built: d souls -1162, d window TR -16.9% | souls: MODEL-ONLY (sign robust in 94% of cells; no measured inputs) | TR: MODEL-ONLY (sign robust in 100% of cells; no measured inputs)
+  sell Healbane instead vs as built: d souls -13, d window TR +0.1% | souls: INSUFFICIENT (effect within model noise) | TR: INSUFFICIENT (effect within model noise)
+  model limit: Colossus has an active effect (INSTANT_CAST) not priced
+  FINDINGS: none
+  VERDICT: KEEP AS WRITTEN (no evidence to change); open question listed; evidence tier: INSUFFICIENT

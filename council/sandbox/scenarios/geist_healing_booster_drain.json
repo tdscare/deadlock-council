@@ -1,0 +1,92 @@
+{
+ "id": "geist_healing_booster_drain",
+ "title": "Geist: Healing Booster raises each Life Drain heal by 20% (why it goes right after Radiant Regeneration)",
+ "hero": "Lady Geist",
+ "playstyle": "Gun tank Geist",
+ "builds": [
+  "geist"
+ ],
+ "question": "Does Healing Booster (HealAmpCastPercent 20) raise the health Geist gains from one full Life Drain charge, and by how much at the 9.6k state?",
+ "hypothesis": "Yes: heal per 5s drain rises ~20% (calc 322 -> 387 at 9.6k state, Life Drain T3, spirit ~36). REFUTED if within 5%.",
+ "arms": [
+  {
+   "name": "A_no_booster",
+   "items": [
+    "Monster Rounds",
+    "Extra Regen",
+    "Radiant Regeneration",
+    "Kinetic Dash",
+    "Cultist Sacrifice"
+   ],
+   "ability_order": "3231224233444111",
+   "imbues": {},
+   "souls": "9.6k state minus Healing Booster",
+   "notes": "Life Drain T3"
+  },
+  {
+   "name": "B_booster",
+   "items": [
+    "Monster Rounds",
+    "Healing Booster",
+    "Radiant Regeneration",
+    "Kinetic Dash",
+    "Cultist Sacrifice"
+   ],
+   "ability_order": "3231224233444111",
+   "imbues": {},
+   "souls": "9.6k state",
+   "notes": "Life Drain T3"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "level 16 (9.6k souls), Life Drain T3 via abil bits 15 (not unlock 7)",
+  "souls": "9600",
+  "position": "flat ground, dummy at 10m",
+  "enemies": [
+   {
+    "hero": "target dummy or idle bot",
+    "count": 1,
+    "items": [],
+    "behaviour": "stationary",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "hurtme to 40% so heal is never capped",
+  "resets": [
+   "cooldowns",
+   "hp",
+   "buffs"
+  ]
+ },
+ "controls": [
+  "same level/boons",
+  "Cultist buff OFF in both (it adds a drain charge and health)",
+  "same target",
+  "one full 5s drain per trial"
+ ],
+ "procedure": [
+  "log Life Drain tier/charges before each block",
+  "hurt self to 40%",
+  "channel one full Life Drain charge on the dummy",
+  "read health gained (healsrc if available, else HP before/after)",
+  "reset; interleave A,B"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "heal_per_drain",
+   "unit": "hp",
+   "how": "health gained over one 5s drain",
+   "grade_target": "A",
+   "better": "higher",
+   "primary": true
+  }
+ ],
+ "decision": {
+  "metric": "heal_per_drain",
+  "min_effect_pct": 10,
+  "min_trials": 5,
+  "rule": "SUPPORTS early Healing Booster if B beats A by >=10% (expected ~20%); REFUTES if within 5%; else INCONCLUSIVE. Radiant Regeneration heals are a secondary log."
+ }
+}

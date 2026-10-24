@@ -1,0 +1,944 @@
+{
+ "n_builds": 81,
+ "builds_with_imbue": 69,
+ "unmapped": [
+  "violet",
+  "violet_spirit",
+  "baba",
+  "baba_tank"
+ ],
+ "finding_counts": {
+  "DEPENDS-ON-N01": 62,
+  "DEPENDS-ON-N08": 7,
+  "DEPENDS-ON-CHARGES": 4,
+  "CERTAIN-INVALID": 1
+ },
+ "builds_per_class": {
+  "DEPENDS-ON-N01": [
+   "abrams",
+   "apollo",
+   "bebop_bomb",
+   "bebop_support",
+   "calico",
+   "celeste_carry",
+   "danny",
+   "danny_gun",
+   "doorman",
+   "dynamo",
+   "dynamo_damage",
+   "geist_bomb",
+   "graves",
+   "graves_ult",
+   "greytalon",
+   "greytalon_gun",
+   "haze",
+   "holliday",
+   "holliday_spirit",
+   "infernus_dash",
+   "kelvin",
+   "kelvin_support",
+   "lash",
+   "mcginnis",
+   "mcginnis_turret",
+   "mcginnis_ult",
+   "mina",
+   "mirage",
+   "mokrill",
+   "nurse",
+   "paige",
+   "paige_support",
+   "paradox",
+   "paradox_bomb",
+   "ratking",
+   "ratking_grenade",
+   "rem",
+   "seven",
+   "seven_gun",
+   "shiv",
+   "sinclair",
+   "sinclair_bolt",
+   "solomon",
+   "solomon_support",
+   "venator",
+   "victor_gun",
+   "vindicta",
+   "vindicta_sniper",
+   "violet",
+   "violet_spirit",
+   "viscous",
+   "viscous_damage",
+   "vyper",
+   "vyper_gun",
+   "warden",
+   "wraith"
+  ],
+  "DEPENDS-ON-N08": [
+   "dynamo",
+   "infernus",
+   "paige_support",
+   "pocket",
+   "seven",
+   "sinclair",
+   "sinclair_bolt"
+  ],
+  "DEPENDS-ON-CHARGES": [
+   "graves",
+   "nurse"
+  ],
+  "CERTAIN-INVALID": [
+   "graves_ult"
+  ]
+ },
+ "per_build": {
+  "danny": {
+   "build": "danny",
+   "hero": "Danny",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Compress Cooldown, Surge of Power, Mystic Reverb",
+     "slot 2 Chimera Mk1",
+     "types: modifier_value + modifier_value + active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "danny_gun": {
+   "build": "danny_gun",
+   "hero": "Danny",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Duration Extender, Surge of Power, Echo Shard",
+     "slot 3 Jettison Fuel",
+     "types: modifier_value + active + active_non_ult"
+    ]
+   ]
+  },
+  "bebop_bomb": {
+   "build": "bebop_bomb",
+   "hero": "Bebop",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Mystic Expansion, Echo Shard, Mystic Reverb",
+     "slot 2 Sticky Bomb",
+     "types: modifier_value + modifier_value + active_non_ult + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "bebop_support": {
+   "build": "bebop_support",
+   "hero": "Bebop",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Echo Shard",
+     "slot 3 Grapple Arm",
+     "types: modifier_value + active_non_ult"
+    ]
+   ]
+  },
+  "dynamo": {
+   "build": "dynamo",
+   "hero": "Dynamo",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N08",
+     "Duration Extender",
+     "Singularity (slot 4)",
+     "AbilityDuration=0 at every tier; other duration props: none (does the extender scale them? UNRESOLVED)"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Duration Extender",
+     "slot 4 Singularity",
+     "types: modifier_value + modifier_value | SAME TYPE x2"
+    ]
+   ]
+  },
+  "dynamo_damage": {
+   "build": "dynamo_damage",
+   "hero": "Dynamo",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Quicksilver Reload, Mercurial Magnum, Mystic Reverb, Echo Shard",
+     "slot 1 Kinetic Pulse",
+     "types: modifier_value + active + active + active + active_non_ult | SAME TYPE x3"
+    ]
+   ]
+  },
+  "greytalon": {
+   "build": "greytalon",
+   "hero": "Grey Talon",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Surge of Power, Mystic Reverb, Echo Shard",
+     "slot 1 Charged Shot",
+     "types: modifier_value + active + active + active_non_ult | SAME TYPE x2"
+    ]
+   ]
+  },
+  "greytalon_gun": {
+   "build": "greytalon_gun",
+   "hero": "Grey Talon",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Quicksilver Reload, Surge of Power, Mercurial Magnum",
+     "slot 2 Rain of Arrows",
+     "types: active + active + active | SAME TYPE x3"
+    ]
+   ]
+  },
+  "infernus": {
+   "build": "infernus",
+   "hero": "Infernus",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N08",
+     "Duration Extender",
+     "Afterburn (slot 3)",
+     "AbilityDuration=0 at every tier; other duration props: BuildUpDuration, BurnDuration, BurnDurationBase, RefillDuration, RefillDurationCrit (does the extender scale them? UNRESOLVED)"
+    ]
+   ]
+  },
+  "infernus_dash": {
+   "build": "infernus_dash",
+   "hero": "Infernus",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Duration Extender, Echo Shard",
+     "slot 2 Flame Dash",
+     "types: modifier_value + active_non_ult"
+    ]
+   ]
+  },
+  "kelvin": {
+   "build": "kelvin",
+   "hero": "Kelvin",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Duration Extender, Echo Shard",
+     "slot 3 Arctic Beam",
+     "types: modifier_value + modifier_value + active_non_ult | SAME TYPE x2"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Mystic Reverb",
+     "slot 1 Frost Grenade",
+     "types: modifier_value + active"
+    ]
+   ]
+  },
+  "kelvin_support": {
+   "build": "kelvin_support",
+   "hero": "Kelvin",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Compress Cooldown",
+     "slot 1 Frost Grenade",
+     "types: modifier_value + modifier_value | SAME TYPE x2"
+    ]
+   ]
+  },
+  "paige": {
+   "build": "paige",
+   "hero": "Paige",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Surge of Power, Mystic Reverb, Echo Shard",
+     "slot 1 Bookwyrm",
+     "types: modifier_value + active + active + active_non_ult | SAME TYPE x2"
+    ]
+   ]
+  },
+  "paige_support": {
+   "build": "paige_support",
+   "hero": "Paige",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N08",
+     "Duration Extender",
+     "Captivating Read (slot 3)",
+     "AbilityDuration=0 at every tier; other duration props: DebuffDuration, ImmobilizeDuration, SlowDuration (does the extender scale them? UNRESOLVED)"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Duration Extender",
+     "slot 3 Captivating Read",
+     "types: modifier_value + modifier_value | SAME TYPE x2"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Echo Shard",
+     "slot 2 Plot Armor",
+     "types: modifier_value + active_non_ult"
+    ]
+   ]
+  },
+  "ratking": {
+   "build": "ratking",
+   "hero": "Rat King",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Compress Cooldown, Ballistic Enchantment, Echo Shard",
+     "slot 1 Scrap Grenade",
+     "types: modifier_value + modifier_value + active + active_non_ult | SAME TYPE x2"
+    ]
+   ]
+  },
+  "ratking_grenade": {
+   "build": "ratking_grenade",
+   "hero": "Rat King",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Compress Cooldown, Ballistic Enchantment, Echo Shard, Mystic Reverb",
+     "slot 1 Scrap Grenade",
+     "types: modifier_value + modifier_value + active + active_non_ult + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "haze": {
+   "build": "haze",
+   "hero": "Haze",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Surge of Power, Mercurial Magnum",
+     "slot 1 Sleep Dagger",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "rem": {
+   "build": "rem",
+   "hero": "Rem",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Echo Shard",
+     "slot 2 Tag Along",
+     "types: modifier_value + active_non_ult"
+    ]
+   ]
+  },
+  "seven": {
+   "build": "seven",
+   "hero": "Seven",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Surge of Power, Compress Cooldown",
+     "slot 3 Power Surge",
+     "types: active + modifier_value"
+    ],
+    [
+     "DEPENDS-ON-N08",
+     "Duration Extender",
+     "Storm Cloud (slot 4)",
+     "AbilityDuration=0 at every tier; other duration props: none (does the extender scale them? UNRESOLVED)"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Duration Extender, Mystic Expansion",
+     "slot 4 Storm Cloud",
+     "types: modifier_value + modifier_value | SAME TYPE x2"
+    ]
+   ]
+  },
+  "seven_gun": {
+   "build": "seven_gun",
+   "hero": "Seven",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Duration Extender, Surge of Power",
+     "slot 3 Power Surge",
+     "types: modifier_value + active"
+    ]
+   ]
+  },
+  "solomon": {
+   "build": "solomon",
+   "hero": "Solomon",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Echo Shard",
+     "slot 3 Rook Battery",
+     "types: modifier_value + active_non_ult"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Mystic Reverb",
+     "slot 1 Setup Bishop",
+     "types: modifier_value + active"
+    ]
+   ]
+  },
+  "solomon_support": {
+   "build": "solomon_support",
+   "hero": "Solomon",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Echo Shard",
+     "slot 2 Kingside Knight",
+     "types: modifier_value + active_non_ult"
+    ]
+   ]
+  },
+  "venator": {
+   "build": "venator",
+   "hero": "Venator",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Mystic Expansion, Echo Shard",
+     "slot 2 Gutshot",
+     "types: modifier_value + modifier_value + active_non_ult | SAME TYPE x2"
+    ]
+   ]
+  },
+  "victor_gun": {
+   "build": "victor_gun",
+   "hero": "Victor",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Quicksilver Reload, Compress Cooldown, Mercurial Magnum",
+     "slot 2 Jumpstart",
+     "types: active + modifier_value + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "violet": {
+   "build": "violet",
+   "hero": "Violet",
+   "mapped": false,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Surge of Power, Mercurial Magnum",
+     "slot 1",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "violet_spirit": {
+   "build": "violet_spirit",
+   "hero": "Violet",
+   "mapped": false,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Surge of Power, Mystic Reverb",
+     "slot 1",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "viscous": {
+   "build": "viscous",
+   "hero": "Viscous",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Mystic Expansion, Echo Shard",
+     "slot 2 The Cube",
+     "types: modifier_value + modifier_value + active_non_ult | SAME TYPE x2"
+    ]
+   ]
+  },
+  "viscous_damage": {
+   "build": "viscous_damage",
+   "hero": "Viscous",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Compress Cooldown, Mystic Reverb",
+     "slot 1 Splatter",
+     "types: modifier_value + modifier_value + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "wraith": {
+   "build": "wraith",
+   "hero": "Wraith",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Quicksilver Reload, Surge of Power, Mercurial Magnum",
+     "slot 1 Card Trick",
+     "types: active + active + active | SAME TYPE x3"
+    ]
+   ]
+  },
+  "mina": {
+   "build": "mina",
+   "hero": "Mina",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Quicksilver Reload, Mystic Expansion, Compress Cooldown, Mercurial Magnum, Mystic Reverb",
+     "slot 1 Rake",
+     "types: active + modifier_value + modifier_value + active + active | SAME TYPE x3"
+    ]
+   ]
+  },
+  "vindicta": {
+   "build": "vindicta",
+   "hero": "Vindicta",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Quicksilver Reload, Mercurial Magnum",
+     "slot 3 Crow Familiar",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "vindicta_sniper": {
+   "build": "vindicta_sniper",
+   "hero": "Vindicta",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Surge of Power, Mystic Reverb",
+     "slot 4 Assassinate",
+     "types: modifier_value + active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "geist_bomb": {
+   "build": "geist_bomb",
+   "hero": "Lady Geist",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Compress Cooldown, Mystic Reverb, Echo Shard",
+     "slot 1 Essence Bomb",
+     "types: modifier_value + modifier_value + active + active_non_ult | SAME TYPE x2"
+    ]
+   ]
+  },
+  "mcginnis": {
+   "build": "mcginnis",
+   "hero": "McGinnis",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Quicksilver Reload, Mercurial Magnum",
+     "slot 1 Mini Turret",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "mcginnis_turret": {
+   "build": "mcginnis_turret",
+   "hero": "McGinnis",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Compress Cooldown, Echo Shard",
+     "slot 1 Mini Turret",
+     "types: modifier_value + modifier_value + active_non_ult | SAME TYPE x2"
+    ]
+   ]
+  },
+  "mcginnis_ult": {
+   "build": "mcginnis_ult",
+   "hero": "McGinnis",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Compress Cooldown, Duration Extender",
+     "slot 4 Heavy Barrage",
+     "types: modifier_value + modifier_value + modifier_value | SAME TYPE x3"
+    ]
+   ]
+  },
+  "paradox": {
+   "build": "paradox",
+   "hero": "Paradox",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Mystic Reverb",
+     "slot 3 Kinetic Carbine",
+     "types: modifier_value + active"
+    ]
+   ]
+  },
+  "paradox_bomb": {
+   "build": "paradox_bomb",
+   "hero": "Paradox",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Duration Extender, Compress Cooldown, Echo Shard",
+     "slot 1 Pulse Grenade",
+     "types: modifier_value + modifier_value + modifier_value + active_non_ult | SAME TYPE x3"
+    ]
+   ]
+  },
+  "apollo": {
+   "build": "apollo",
+   "hero": "Apollo",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Compress Cooldown, Mystic Reverb, Echo Shard",
+     "slot 3 Flawless Advance",
+     "types: modifier_value + modifier_value + active + active_non_ult | SAME TYPE x2"
+    ]
+   ]
+  },
+  "celeste_carry": {
+   "build": "celeste_carry",
+   "hero": "Celeste",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Quicksilver Reload, Mercurial Magnum",
+     "slot 3 Radiant Daggers",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "warden": {
+   "build": "warden",
+   "hero": "Warden",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Quicksilver Reload, Mercurial Magnum",
+     "slot 1 Alchemical Flask",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "lash": {
+   "build": "lash",
+   "hero": "Lash",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Mystic Reverb",
+     "slot 1 Ground Strike",
+     "types: modifier_value + active"
+    ]
+   ]
+  },
+  "pocket": {
+   "build": "pocket",
+   "hero": "Pocket",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N08",
+     "Duration Extender",
+     "Affliction (slot 4)",
+     "AbilityDuration=0 at every tier; other duration props: DebuffDuration (does the extender scale them? UNRESOLVED)"
+    ]
+   ]
+  },
+  "mirage": {
+   "build": "mirage",
+   "hero": "Mirage",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Mystic Reverb",
+     "slot 3 Djinn's Mark",
+     "types: modifier_value + active"
+    ]
+   ]
+  },
+  "vyper": {
+   "build": "vyper",
+   "hero": "Vyper",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Quicksilver Reload, Mercurial Magnum",
+     "slot 1 Screwjab Dagger",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "vyper_gun": {
+   "build": "vyper_gun",
+   "hero": "Vyper",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Quicksilver Reload, Mercurial Magnum",
+     "slot 1 Screwjab Dagger",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "sinclair": {
+   "build": "sinclair",
+   "hero": "Sinclair",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N08",
+     "Duration Extender",
+     "Rabbit Hex (slot 3)",
+     "AbilityDuration=0 at every tier; other duration props: AirDampingDuration, HexDuration (does the extender scale them? UNRESOLVED)"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Duration Extender, Echo Shard",
+     "slot 3 Rabbit Hex",
+     "types: modifier_value + active_non_ult"
+    ]
+   ]
+  },
+  "sinclair_bolt": {
+   "build": "sinclair_bolt",
+   "hero": "Sinclair",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N08",
+     "Duration Extender",
+     "Rabbit Hex (slot 3)",
+     "AbilityDuration=0 at every tier; other duration props: AirDampingDuration, HexDuration (does the extender scale them? UNRESOLVED)"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Duration Extender, Mystic Expansion, Echo Shard",
+     "slot 3 Rabbit Hex",
+     "types: modifier_value + modifier_value + active_non_ult | SAME TYPE x2"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Mystic Reverb",
+     "slot 1 Vexing Bolt",
+     "types: modifier_value + active"
+    ]
+   ]
+  },
+  "doorman": {
+   "build": "doorman",
+   "hero": "The Doorman",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Mystic Expansion, Compress Cooldown, Mystic Reverb",
+     "slot 1 Call Bell",
+     "types: modifier_value + modifier_value + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "abrams": {
+   "build": "abrams",
+   "hero": "Abrams",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Duration Extender, Mystic Expansion, Compress Cooldown",
+     "slot 1 Siphon Life",
+     "types: modifier_value + modifier_value + modifier_value | SAME TYPE x3"
+    ]
+   ]
+  },
+  "holliday": {
+   "build": "holliday",
+   "hero": "Holliday",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Ballistic Enchantment, Mercurial Magnum",
+     "slot 1 Powder Keg",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "holliday_spirit": {
+   "build": "holliday_spirit",
+   "hero": "Holliday",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Mystic Reverb",
+     "slot 1 Powder Keg",
+     "types: modifier_value + active"
+    ]
+   ]
+  },
+  "graves": {
+   "build": "graves",
+   "hero": "Graves",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-CHARGES",
+     "Surge of Power",
+     "Jar of Dead (slot 1)",
+     "no cooldown field but charges_by_tier=[4.0, 4.0, 4.0, 4.0]: how a use-triggered imbue interacts with charge recharge is UNRESOLVED"
+    ],
+    [
+     "DEPENDS-ON-CHARGES",
+     "Mercurial Magnum",
+     "Jar of Dead (slot 1)",
+     "no cooldown field but charges_by_tier=[4.0, 4.0, 4.0, 4.0]: how a use-triggered imbue interacts with charge recharge is UNRESOLVED"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Surge of Power, Mercurial Magnum",
+     "slot 1 Jar of Dead",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "graves_ult": {
+   "build": "graves_ult",
+   "hero": "Graves",
+   "mapped": true,
+   "findings": [
+    [
+     "CERTAIN-INVALID",
+     "Echo Shard",
+     "Borrowed Decree (slot 4)",
+     "type IMBUE_ACTIVE_NON_ULT (Echo Shard: \"Reset the cooldown of the imbued non-ultimate ability.\") on an ultimate"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Duration Extender, Compress Cooldown, Echo Shard",
+     "slot 4 Borrowed Decree",
+     "types: modifier_value + modifier_value + active_non_ult | SAME TYPE x2"
+    ]
+   ]
+  },
+  "calico": {
+   "build": "calico",
+   "hero": "Calico",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Mystic Reverb",
+     "slot 1 Gloom Bombs",
+     "types: modifier_value + active"
+    ]
+   ]
+  },
+  "mokrill": {
+   "build": "mokrill",
+   "hero": "Mo & Krill",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Quicksilver Reload, Compress Cooldown, Mystic Expansion, Mercurial Magnum",
+     "slot 1 Scorn",
+     "types: active + modifier_value + modifier_value + active | SAME TYPE x2"
+    ]
+   ]
+  },
+  "shiv": {
+   "build": "shiv",
+   "hero": "Shiv",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Mystic Reverb",
+     "slot 2 Slice and Dice",
+     "types: modifier_value + active"
+    ]
+   ]
+  },
+  "nurse": {
+   "build": "nurse",
+   "hero": "Nurse Harrow",
+   "mapped": true,
+   "findings": [
+    [
+     "DEPENDS-ON-N01",
+     "Compress Cooldown, Echo Shard",
+     "slot 2 Wretched Vapors",
+     "types: modifier_value + active_non_ult"
+    ],
+    [
+     "DEPENDS-ON-CHARGES",
+     "Surge of Power",
+     "Healing Needles (slot 3)",
+     "no cooldown field but charges_by_tier=[1.0, 2.0, 2.0, 2.0]: how a use-triggered imbue interacts with charge recharge is UNRESOLVED"
+    ],
+    [
+     "DEPENDS-ON-CHARGES",
+     "Mercurial Magnum",
+     "Healing Needles (slot 3)",
+     "no cooldown field but charges_by_tier=[1.0, 2.0, 2.0, 2.0]: how a use-triggered imbue interacts with charge recharge is UNRESOLVED"
+    ],
+    [
+     "DEPENDS-ON-N01",
+     "Surge of Power, Mercurial Magnum",
+     "slot 3 Healing Needles",
+     "types: active + active | SAME TYPE x2"
+    ]
+   ]
+  }
+ }
+}

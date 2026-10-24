@@ -1,0 +1,262 @@
+{
+ "id": "doorman_support",
+ "hk": "hero_doorman",
+ "hero": "The Doorman",
+ "tag": "Fix",
+ "name": "Rizuhble's Concierge Doorman",
+ "desc": "Support Doorman",
+ "tg": [
+  "spirit",
+  "utility",
+  "Heroic Aura"
+ ],
+ "abil": [
+  "Call Bell",
+  "Doorway",
+  "Luggage Cart",
+  "Hotel Guest"
+ ],
+ "order": [
+  1,
+  1,
+  3,
+  2,
+  2,
+  2,
+  4,
+  3,
+  3,
+  3,
+  4,
+  4,
+  2,
+  1,
+  4,
+  1
+ ],
+ "rows": [
+  [
+   [
+    "Losing lane? Buy 1",
+    "",
+    true,
+    [
+     [
+      "Extra Regen",
+      "Sell it once you're out of slots."
+     ]
+    ]
+   ],
+   [
+    "Early · L-R",
+    "",
+    false,
+    [
+     [
+      "High-Velocity Rounds",
+      ""
+     ],
+     [
+      "Opening Rounds",
+      ""
+     ],
+     [
+      "Extra Charge",
+      ""
+     ],
+     [
+      "Healing Rite",
+      ""
+     ],
+     [
+      "Grit",
+      ""
+     ],
+     [
+      "Rapid Recharge",
+      ""
+     ],
+     [
+      "Compress Cooldown",
+      "On Luggage Cart.",
+      "3"
+     ],
+     [
+      "Sprint Boots",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Mid · L-R",
+    "",
+    false,
+    [
+     [
+      "Guardian Ward",
+      "Put it on the mate you're about to cart in."
+     ],
+     [
+      "Trophy Collector",
+      ""
+     ],
+     [
+      "Enchanter's Emblem",
+      ""
+     ],
+     [
+      "Heroic Aura",
+      "Only if your team has gun heroes."
+     ],
+     [
+      "Slowing Hex",
+      ""
+     ],
+     [
+      "Extra Spirit",
+      ""
+     ],
+     [
+      "Improved Spirit",
+      ""
+     ],
+     [
+      "Rescue Beam",
+      ""
+     ]
+    ]
+   ],
+   [
+    "Mid · cont.",
+    "",
+    false,
+    [
+     [
+      "Warp Stone",
+      ""
+     ],
+     [
+      "Superior Cooldown",
+      ""
+     ],
+     [
+      "Vortex Web",
+      ""
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Late · L-R",
+    "",
+    false,
+    [
+     [
+      "Divine Barrier",
+      "Upgrade of Guardian Ward. If you bought Dispel Magic, sell it for this."
+     ],
+     [
+      "Knockdown",
+      "Knockdown their carry, then cart a mate in on them as the stun lands."
+     ],
+     [
+      "Boundless Spirit",
+      ""
+     ],
+     [
+      "Cheat Death",
+      "Sell Opening Rounds for this."
+     ]
+    ]
+   ],
+   [
+    "Counters",
+    "Get after Guardian Ward if needed. Ahead? Skip it until you're dying. Sell Knockdown for it.",
+    true,
+    [
+     [
+      "Metal Skin",
+      "Their gun carry dives you."
+     ],
+     [
+      "Plated Armor",
+      "Most of their damage is gun."
+     ],
+     [
+      "Spirit Resilience",
+      "Their spirit damage keeps hurting you after the hit, like Infernus burn or Seven's ult."
+     ],
+     [
+      "Counterspell",
+      "A big ult or stun you can see coming."
+     ],
+     [
+      "Dispel Magic",
+      "Hexes and slows that let them catch you."
+     ],
+     [
+      "Unstoppable",
+      "Stuns keep cancelling Hotel Guest."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "Swap for Heroic Aura",
+    "",
+    true,
+    [
+     [
+      "Alchemical Fire",
+      "Instead of Heroic Aura when your team has no gun heroes."
+     ]
+    ]
+   ]
+  ],
+  [
+   [
+    "I'm rich as fuck",
+    "Most important first.",
+    true,
+    [
+     [
+      "Cursed Relic",
+      "Sell Warp Stone for this."
+     ],
+     [
+      "Witchmail",
+      "Sell Trophy Collector for this."
+     ],
+     [
+      "Refresher",
+      "Sell Enchanter's Emblem for this."
+     ]
+    ]
+   ],
+   [
+    "Slot locked",
+    "",
+    true,
+    [
+     [
+      "Transcendent Cooldown",
+      "Upgrade of Superior Cooldown."
+     ]
+    ]
+   ]
+  ]
+ ],
+ "changes": [
+  "Round 13: new support build — items from support-style builds only: lockbuilds SleepiJack's Soft Support Doorman (Sep 30: HV, Extra Charge, Mystic Burst, Opening Rounds, Mystic Expansion lane; Tankbuster, Enchanter's Emblem, Rapid Recharge, Greater Expansion; support Guardian Ward, Heroic Aura, Divine Barrier; disruptive Slowing Hex, Knockdown; late Boundless, Vortex Web, Cheat Death, Transcendent; greens Trophy Collector) and steezycat's Majestic Doorman (Sep 12, 'cart teammates': HV, Extra Charge, Sprint Boots, Trophy Collector, Grit, Mystic Burst, Guardian Ward; Mystic Expansion, Slowing Hex, Vortex Web, Rapid Recharge, Tankbuster; Heroic Aura; Cheat Death, Compress/Superior/Transcendent Cooldown, Greater Expansion; Enchanter's Emblem, Divine Barrier; Knockdown; Refresher). Ability order: steezycat says max Luggage Cart or Doorway for utility and Bell only if the team needs damage, so Cart T2 (friendly cart range 20m→45m) and Doorway T2 (ally barrier) come before Bell T2/T3; ult T1 at 10.",
+  "Round 14: Heroic Aura now says when to buy it (only with gun carries on your team, Kieran's rule). Notes cut to the allowed kinds: every 'Upgrade.' removed, Trophy Collector's explanation emptied, Divine Barrier given a real tip instead of 'Upgrade.' (an empty note shows the site's default counter text). Items, order and spikes unchanged.",
+  "Round 15: Counters desc was 116 characters (game limit 112): now 'Get after Guardian Ward … Sell Knockdown for it.' (111). Heroic Aura was a core item with an 'Only if' note, leaving a hole in the core without gun carries: its condition moved to a 'Swap for Heroic Aura' box with Alchemical Fire (same price and colour; steezycat's '1 of these' pairs exactly Heroic Aura and Alchemical Fire, SleepiJack lists both under Support Utility). Guardian Ward note said 'Throw it' (it's a targeted cast) and restated the half-cooldown line: now 'Put it on the mate you're about to cart in.' Notes emptied: HV (restated Call Bell's desc + duplicate sell), Enchanter's (duplicate sell), Divine Barrier (restated the item's cleanse).",
+  "Round 17: made a real support build instead of the DPS build plus support items: the bell damage line is gone (Mystic Burst → Tankbuster, Mystic Expansion → Greater Expansion). In its place Healing Rite in lane (heals your lane mate from 30m) → Healing Nova (325 heal to you and allies within 18m), and Warp Stone (SleepiJack's support core). Rescue Beam not used: the cart already moves a mate, the same reason support Solomon skips it. Compress Cooldown on the cart moved into Early, so spirit 4.8k lands at 7.2k (was 6.4k); health 4.8k at 11.2k (was 10.4k); Healing Nova after Improved Spirit so spirit 8k (17.6k) comes before more health; core 48.8k, 12 slots. Heroic Aura now says 'Only if your team has gun heroes.' (the Swap box covers the core without it). Divine Barrier note 'Upgrade of Guardian Ward.' + Dispel Magic sell. Spirit Resilience counter no longer says 'ticking'.",
+  "Round 19: checked against the real support/utility Doorman (steezycat's Majestic Doorman Sep 12, SleepiJack's Soft Support Sep 30). Healing Nova (no public support build has it) replaced by Rescue Beam (Bell Nukes support box, steezycat misc), same Healing Rite upgrade. Round 20: High-Velocity Rounds now upgrades to Opening Rounds (steezycat, SleepiJack lane core) instead of being sold; Cheat Death sells Opening Rounds. Late list adds Cursed Relic and Witchmail (steezycat late, SleepiJack late), Refresher last as the luxury; total 72k.",
+  "Round 23 (kit): checked Doorway T2 barrier (250 + 1.5x spirit for 12s to everyone passing through the first time, abilities.vdata), Luggage Cart alt-cast on allies (Guardian Ward note), Call Bell charges for Extra Charge/Rapid Recharge. The build's spirit items already feed the door barrier; nothing in the item list multiplies these better than what's here. No changes.",
+  "Round 25: ability order 1324133224312144 -> 1132224333442141 (playstyle-based; see a25/log/doorman_support.md)."
+ ]
+}

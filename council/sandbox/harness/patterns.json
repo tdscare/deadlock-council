@@ -1,0 +1,10 @@
+{
+ "_note": "Regexes for console/log lines. THE DAMAGE/HEAL/KILL LINE FORMATS ARE GUESSES: no source documents what (if anything) Deadlock prints. After PROBE 7-8, paste a real log sample into samples/ and edit these. Each regex needs a named group (?<v>number) for amounts; kills use (?<victim>..). Case-insensitive.",
+ "timestamp": ["^\\[?(?<h>\\d{2}):(?<m>\\d{2}):(?<s>\\d{2})(?:[.,](?<ms>\\d{1,3}))?\\]?", "\\bt=(?<t>\\d+(?:\\.\\d+)?)"],
+ "mark": "SBXMARK\\s+(?<kind>START|END)\\s+(?<scenario>\\S+)\\s+(?<arm>\\S+)\\s+(?<trial>\\d+)",
+ "damage_dealt": ["(?:you|player|local)\\S*\\s+(?:dealt|hit\\b.*?for)\\s+(?<v>\\d+(?:\\.\\d+)?)\\s*(?:damage|dmg)?", "damage_dealt\\W+(?<v>\\d+(?:\\.\\d+)?)"],
+ "damage_taken": ["(?:you|player|local)\\S*\\s+(?:took|taken|received)\\s+(?<v>\\d+(?:\\.\\d+)?)\\s*(?:damage|dmg)?", "damage_taken\\W+(?<v>\\d+(?:\\.\\d+)?)"],
+ "healing": ["(?:healed|heal(?:ing)?)\\W+(?<v>\\d+(?:\\.\\d+)?)", "lifesteal\\W+(?<v>\\d+(?:\\.\\d+)?)"],
+ "enemy_death": ["(?:enemy|bot)\\S*\\s+(?<victim>\\S+)\\s+(?:died|killed|was killed)", "killed\\s+(?<victim>hero_\\w+)"],
+ "player_death": ["(?:you|player|local)\\S*\\s+(?:died|was killed)"]
+}

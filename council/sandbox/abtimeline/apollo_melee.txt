@@ -1,0 +1,88 @@
+# apollo_melee | Apollo | Rizuhble's Curb Stomp Apollo
+abilities: 1=Disengaging Sigil (ability_fencer_throwblade, start_trained=false, Signature) / 2=Riposte (ability_fencer_riposte, start_trained=false, Signature) / 3=Flawless Advance (ability_fencer_lunge, start_trained=false, Signature) / 4=Itani Lo Sahn (ability_fencer_ultimate, start_trained=false, Ultimate)
+order: 2231234324411431
+model A (data):  Riposte:U@0  Riposte:T1@200  Flawless A:U@500  Disengagin:U@1400  Riposte:T2@2000  Flawless A:T1@2600  Itani Lo S:U@3200  Flawless A:T2@4600  Riposte:T3@8400  Itani Lo S:T1@9200  Itani Lo S:T2@11000  Disengagin:T1@11900  Disengagin:T2@13800  Itani Lo S:T3@20600  Flawless A:T3@32100  Disengagin:T3@48600
+model B (old):   Riposte:T1@200  Riposte:T2@900  Flawless A:T1@2000  Disengagin:T1@2600  Riposte:T3@3900  Flawless A:T2@4600  Itani Lo S:U@5300  Flawless A:T3@6000  Itani Lo S:T1@7600  Itani Lo S:T2@8400  Disengagin:T2@9200  Disengagin:T3@10100  Itani Lo S:T3@11000
+tier upgrades: Disengaging : BonusFireRate+25,BonusBulletSpeedPercent+25,BuffDuration+8 / StaminaToRestore+1,ResetsAirLimit+1 / RecastTime+4 | Riposte: AbilityCooldown-8 / MeleeResistReduction-25,StunDuration+0.4 / TargetLifesteal+75,TargetLifestealDuration+13 | Flawless Adv: HealFixedHealth+35,HealFixedHealth+1.3x / AbilityCooldown-12,BulletResist+60,DashBuffDuration+1.5 / BaseDamage+30,BaseDamage+1.15,MaxDamageBeforePerfect+45,MaxDamageBeforePerfect+1.15,PerfectDamage+65,PerfectDamage+1.15,AttackDashRange+3,DashSpeed+550 | Itani Lo Sah: DashRange+8 / AbilityCooldown-35 / BonusDamagePercent+50
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  Melee Lifesteal
+        Disengagin L[U] | Riposte T1 ch1 cd14 | Flawless A U ch1 cd26 d8 BaseDama=26,MaxDamag=42 | Itani Lo S L
+  2400 L6   3     6  Melee Charge
+        Disengagin U ch1 cd12 Damage=92 | Riposte T2 ch1 cd14 | Flawless A U[T1] ch1 cd26 d8 BaseDama=28,MaxDamag=45 | Itani Lo S L
+  3200 L8   4     8  Extra Regen
+        Disengagin U[T1] ch1 cd12 Damage=95 | Riposte T2 ch1 cd14 | Flawless A T1 ch1 cd26 d8 BaseDama=29,MaxDamag=47 | Itani Lo S U[L] ch1 cd145 ImpactDa=76,DelayedD=220
+  6400 L12  8    12  Hunter's Aura
+        Disengagin U[T1] ch1 cd12 Damage=101 | Riposte T2[T3] ch1 cd14 | Flawless A T2[T3] ch1 cd14 d8 BaseDama=32,MaxDamag=51 | Itani Lo S U ch1 cd145 ImpactDa=79,DelayedD=231
+  8800 L15 11    15  Lifestrike
+        Disengagin U[T1] ch1 cd12 Damage=105 | Riposte T3 ch1 cd14 | Flawless A T2[T3] ch1 cd14 d8 BaseDama=33,MaxDamag=54 | Itani Lo S U[T2] ch1 cd145 ImpactDa=82,DelayedD=240
+  9600 L16 12    16  Healing Booster
+        Disengagin U[T2] ch1 cd12 Damage=106 | Riposte T3 ch1 cd14 | Flawless A T2[T3] ch1 cd14 d8 BaseDama=34,MaxDamag=55 | Itani Lo S T1[T2] ch1 cd145 ImpactDa=83,DelayedD=243
+ 10400 L17 13    18  Close Quarters
+        Disengagin U[T3] ch1 cd12 Damage=108 | Riposte T3 ch1 cd14 | Flawless A T2[T3] ch1 cd14 d8 BaseDama=35,MaxDamag=56 | Itani Lo S T1[T2] ch1 cd145 ImpactDa=84,DelayedD=246
+ 11200 L18 14    19  Grit
+        Disengagin U[T3] ch1 cd12 Damage=109 | Riposte T3 ch1 cd14 | Flawless A T2[T3] ch1 cd14 d8 BaseDama=35,MaxDamag=57 | Itani Lo S T2[T3] ch1 cd110 ImpactDa=84,DelayedD=249
+ 12000 L19 15    20  Reactive Barrier
+        Disengagin T1[T3] ch1 cd12 Damage=111 | Riposte T3 ch1 cd14 | Flawless A T2[T3] ch1 cd14 d8 BaseDama=36,MaxDamag=58 | Itani Lo S T2[T3] ch1 cd110 ImpactDa=85,DelayedD=251
+ 13600 L20 16    21  Stalker
+        Disengagin T1[T3] ch1 cd12 Damage=112 | Riposte T3 ch1 cd14 | Flawless A T2[T3] ch1 cd14 d8 BaseDama=36,MaxDamag=59 | Itani Lo S T2[T3] ch1 cd110 ImpactDa=86,DelayedD=254
+ 16000 L22 18    23  Point Blank
+        Disengagin T2[T3] ch1 cd12 Damage=115 | Riposte T3 ch1 cd14 | Flawless A T2[T3] ch1 cd14 d8 BaseDama=38,MaxDamag=61 | Itani Lo S T2[T3] ch1 cd110 ImpactDa=88,DelayedD=260
+ 19200 L25 21    26  Berserker
+        Disengagin T2[T3] ch1 cd12 Damage=119 | Riposte T3 ch1 cd14 | Flawless A T2[T3] ch1 cd14 d8 BaseDama=40,MaxDamag=64 | Itani Lo S T2[T3] ch1 cd110 ImpactDa=90,DelayedD=269
+ 24000 L27 23    29  Crushing Fists
+        Disengagin T2[T3] ch1 cd12 Damage=122 | Riposte T3 ch1 cd14 | Flawless A T2[T3] ch1 cd14 d8 BaseDama=41,MaxDamag=66 | Itani Lo S T3 ch1 cd110 ImpactDa=92,DelayedD=274
+ 27200 L29 25    31  Spirit Resilience
+        Disengagin T2[T3] ch1 cd12 Damage=125 | Riposte T3 ch1 cd14 | Flawless A T2[T3] ch1 cd14 d8 BaseDama=42,MaxDamag=68 | Itani Lo S T3 ch1 cd110 ImpactDa=94,DelayedD=280
+ 33600 L31 27    47  Witchmail
+        Disengagin T2[T3] ch1 cd12 Damage=146 | Riposte T3 ch1 cd14 | Flawless A T3 ch1 cd14 d8 BaseDama=82,MaxDamag=128 | Itani Lo S T3 ch1 cd110 ImpactDa=106,DelayedD=322
+ 40000 L33 29    57  Phantom Strike
+        Disengagin T2[T3] ch1 cd12 Damage=159 | Riposte T3 ch1 cd14 | Flawless A T3 ch1 cd14 d8 BaseDama=88,MaxDamag=138 | Itani Lo S T3 ch1 cd110 ImpactDa=114,DelayedD=349
+ 44800 L34 30    58  Indomitable
+        Disengagin T2[T3] ch1 cd12 Damage=161 | Riposte T3 ch1 cd14 | Flawless A T3 ch1 cd14 d8 BaseDama=88,MaxDamag=139 | Itani Lo S T3 ch1 cd110 ImpactDa=115,DelayedD=352
+ 51200 L36 32    60  Unstoppable
+        Disengagin T3 ch1 cd12 Damage=164 | Riposte T3 ch1 cd14 | Flawless A T3 ch1 cd14 d8 BaseDama=89,MaxDamag=141 | Itani Lo S T3 ch1 cd110 ImpactDa=117,DelayedD=357
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @800 Melee Lifesteal [melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs melee hits
+    game text: Your next Melee attack heals you. This heal is {s:NonHeroHealPct}% effective vs non-heroes. Cooldown is {s:LightMeleeCooldownMult}x as long for Light ... | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @2400 Melee Charge [melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs melee hits
+    game text: Your next Heavy Melee attack against an enemy deals increased damage. | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @8800 Lifestrike [melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs melee hits
+    game text: Your Melee Attack applies Movement Slow and heals you for a percentage of the Melee Damage dealt plus a fixed amount. This heal is {s:NonHeroHealPct}%... | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @10400 Close Quarters [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (CloseRangeBonusDamageRange=15m)
+    game text: Deal additional Weapon Damage when in close range to your target.
+    at buy: not computed (needs play data)
+- @13600 Stalker [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills
+    game text: Dealing {g:citadel_inline_attribute:'WeaponDamage'} at close range opens a wound and grants you {g:citadel_inline_attribute:'BonusMoveSpeed'}. Wounded...
+    at buy: not computed (needs play data)
+- @16000 Point Blank [range] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on distance to target (CloseRangeBonusDamageRange=15m)
+    game text: When in close range to your target, gain Weapon Damage and your bullets apply a Movement Slow.
+    at buy: not computed (needs play data)
+- @19200 Berserker [stack] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (DamageToStack=120, MaxStacks=10)
+    game text: Your Weapon Damage increases as you take sustained damage.
+    at buy: not computed (needs play data)
+- @24000 Crushing Fists [stack+melee] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: needs repeated hits/kills to stack (MaxStacks=6)
+    game text: Your {g:citadel_inline_attribute:'MeleeDamage'} will restore ammo and apply a stacking bullet resist debuff on enemies. Heavy melee applies 2 stacks. ... | vdata: proc damage types MELEE
+    at buy: not computed (needs play data)
+- @27200 Spirit Resilience [selfhp] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: depends on your own health % (HealthThreshold=50, TechResistBelowThreshold=15)
+    game text: When below {s:HealthThreshold}% health, gain additional Spirit Resist.
+    at buy: not computed (needs play data)
+- @33600 Witchmail [taken] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: triggers on damage TAKEN from enemies (enemy-dependent) (CooldownReductionPerHit=4, DamageThreshold=75)
+    game text: Taking heavy hits of {g:citadel_inline_attribute:'SpiritDamage'} from an enemy reduces a random ability cooldown.
+    at buy: not computed (needs play data)
+
+no trigger condition (plain stats/actives): Extra Regen, Hunter's Aura, Healing Booster, Grit, Reactive Barrier, Phantom Strike, Indomitable, Unstoppable

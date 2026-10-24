@@ -1,0 +1,62 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: holliday_spirit
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:16Z
+BODY-SHA: 9f13a77de9bf82cb32afe74f0bef0be3f12037c26bfe29c7f7bf924429f97806
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Regen
+  Early · L-R              -> main path (sequential): Extra Charge, Headshot Booster, Extra Spirit, Extra Stamina, Improved Spirit, Rapid Recharge, Sprint Boots, Trophy Collector
+  Mid · L-R                -> main path (sequential): Mystic Burst, Recharging Rush, Stamina Mastery, Duration Extender, Mystic Vulnerability, Tankbuster, Superior Duration, Compress Cooldown
+  Mid · cont.              -> main path (sequential): Boundless Spirit, Superior Cooldown
+  Late · L-R               -> main path (sequential): Spirit Burn, Extra Health, Fortitude, Escalating Exposure, Cursed Relic
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Counterspell, Dispel Magic, Metal Skin, Spirit Resilience, Plated Armor
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Diviner's Kevlar, Mystic Reverb, Crippling Headshot, Refresher, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Transcendent Cooldown
+
+## SALE CHECKLIST (computed)
+- Late · L-R (main path): buy Spirit Burn, sell Headshot Booster
+    function of Headshot Booster: bullet_proc; replacement Spirit Burn: range; roles lost: bullet_proc  [VERIFIED GAME MECHANIC]
+    Headshot Booster is a component of later items: no
+    held for 32400.0 souls of purchases; resale 400, net cost of having owned it 400
+    investment before/after gun/vit/spirit 2400/4800/20800 -> 1600/4800/27200; thresholds lost: none
+    trade ratio after the sale 0.27; selling Trophy Collector instead: 0.24 (-10.9%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Diviner's Kevlar, sell Trophy Collector
+    function of Trophy Collector: stats only; replacement Diviner's Kevlar: cooldown, duration, sustain; roles lost: none  [VERIFIED GAME MECHANIC]
+    Trophy Collector is a component of later items: no
+    held for 46800.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 1600/8000/38400 -> 1600/12800/38400; thresholds lost: none
+    trade ratio after the sale 0.28; selling Recharging Rush instead: 0.26 (-5.1%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Mystic Reverb, sell Recharging Rush
+    function of Recharging Rush: ammo; replacement Mystic Reverb: slow, sustain; roles lost: ammo  [VERIFIED GAME MECHANIC]
+    Recharging Rush is a component of later items: no
+    held for 44400.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 1600/8000/38400 -> 0/8000/44800; thresholds lost: none
+    trade ratio after the sale 0.19; selling Trophy Collector instead: 0.20 (+3.4%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Recharging Rush): 20 s 30 bullets (clip 10, 3.0 magazines, 30% not firing; refill items used every other charge) | 60 s 85 bullets, 33% not firing | damage 60 s 4794  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Recharging Rush, sell Trophy Collector: 20 s 32 bullets (clip 12, 2.6 magazines, 25% not firing; refill items used every other charge) | 60 s 90 bullets, 29% not firing | damage 60 s 6202  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Recharging Rush, no Mystic Reverb): 20 s 32 bullets (clip 12, 2.6 magazines, 25% not firing; refill items used every other charge) | 60 s 90 bullets, 29% not firing | damage 60 s 6202  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Crippling Headshot, sell Recharging Rush
+    function of Recharging Rush: ammo; replacement Crippling Headshot: resist_shred; roles lost: ammo  [VERIFIED GAME MECHANIC]
+    Recharging Rush is a component of later items: no
+    held for 44400.0 souls of purchases; resale 800, net cost of having owned it 800
+    investment before/after gun/vit/spirit 1600/8000/38400 -> 6400/8000/38400; thresholds lost: none
+    trade ratio after the sale 0.21; selling Trophy Collector instead: 0.22 (+2.7%)  [MODELLED ESTIMATE]
+    ammo as instructed (sell Recharging Rush): 20 s 30 bullets (clip 10, 3.0 magazines, 30% not firing; refill items used every other charge) | 60 s 85 bullets, 33% not firing | damage 60 s 7383  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo keep Recharging Rush, sell Trophy Collector: 20 s 32 bullets (clip 12, 2.6 magazines, 25% not firing; refill items used every other charge) | 60 s 90 bullets, 29% not firing | damage 60 s 8744  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    ammo neither (keep Recharging Rush, no Crippling Headshot): 20 s 32 bullets (clip 12, 2.6 magazines, 25% not firing; refill items used every other charge) | 60 s 90 bullets, 29% not firing | damage 60 s 6202  [MODELLED ESTIMATE; reload 2.5s ASSUMED 2.5 s: reload duration]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Refresher, sell Stamina Mastery
+    function of Stamina Mastery: stats only; replacement Refresher: bullet_resist, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Stamina Mastery is a component of later items: no
+    held for 42000.0 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 1600/8000/38400 -> 1600/4800/44800; thresholds lost: none
+    trade ratio after the sale 0.22; selling Trophy Collector instead: 0.23 (+2.5%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)

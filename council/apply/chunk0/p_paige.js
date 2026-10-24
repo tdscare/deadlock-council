@@ -1,0 +1,13 @@
+const L=require('./lib');
+let b=L.load('paige');
+L.move(b,'Surge of Power','Late · L-R',null);
+L.box(b,'Counters')[1]="Get after Fortitude if needed. Ahead? Skip it until you're dying. Sell Greater Expansion for it.";
+L.note(b,'Mystic Reverb','On the dragon. Sell Greater Expansion for this.');
+L.note(b,'Spirit Burn','Sell Escalating Exposure for this.');
+L.note(b,'Slowing Hex','Buy with Vortex Web instead of Mystic Burst.');
+L.note(b,'Vortex Web','Buy with Slowing Hex instead of Escalating Exposure.');
+L.add(b,"Cost pass: Surge of Power before Guardian Ward; counters and Mystic Reverb sell Greater Expansion and Spirit Burn sells Escalating Exposure (gun 4.8k holds); Slowing Hex and Vortex Web swaps merged so the swap stays 12 slots.");
+L.save(b);
+b=L.load('kelvin');b.name="Rizuhble's Fridge Tank Kelvin";L.add(b,"Cost pass: renamed Fridge Tank Kelvin; no item changes.");L.save(b);
+b=L.load('kelvin_support');b.name="Rizuhble's Ice Pack Kelvin";L.add(b,"Cost pass: renamed Ice Pack Kelvin; no item changes.");L.save(b);
+b=L.load('haze_assassin');b.name="Rizuhble's Night Night Haze";L.save(b);

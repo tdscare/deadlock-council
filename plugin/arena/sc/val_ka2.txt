@@ -1,0 +1,307 @@
+meta kind ISOLATED ITEM
+meta hero Haze
+meta checkpoint Level 18 stat floor, 0 souls spent (one gun item per block)
+meta build none (single-item validation)
+meta items upgrade_rapid_rounds, upgrade_high_velocity_mag, upgrade_headshot_booster, upgrade_clip_size
+meta question Known-answer check: do Rapid Rounds, High-Velocity Mag, Headshot Booster and Clip Size change fire rate, damage and clip as documented, measured in isolation?
+meta purpose validate harness readbacks for four more gun items against documented values
+meta mechanics fire-rate, bullet-velocity, headshot-damage and clip size modifiers; gun only
+meta expectedstate items=none before each block; exactly one tested item in its block; stacks=0
+meta excluded all other items and abilities - isolated results are not a build verdict
+meta accmode body-only and head-only blocks
+meta accwhy separates headshot-specific items from body damage
+meta abilities gun only
+meta runs 1/1
+meta assumed documented item values from game data
+setup Haze Haze
+basemods
+mark none
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark K2|none|body
+pos
+expect hero=Haze level=18 items=0 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.0
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -5
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark K2|none|head
+pos
+expect hero=Haze level=18 items=0 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.0
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_high_velocity_mag
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark K2|HV|body
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.0
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_high_velocity_mag
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -5
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark K2|HV|head
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.0
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_clip_size
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark K2|EXT|body
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.0
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_clip_size
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -5
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark K2|EXT|head
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.0
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_rapid_rounds
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark K2|RAPID|body
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.0
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_rapid_rounds
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -5
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark K2|RAPID|head
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.0
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_headshot_booster
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -30
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark K2|HSB|body
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.0
+wait 0.3
+mark none
+acclog
+wait 0.5
+hardreset
+raw citadel_unlock_flex_slots
+aimoff 0 0
+setgold 0
+wait 0.4
+give upgrade_headshot_booster
+wait 0.8
+lvlhold 18
+wait 1.2
+nw
+egod
+eresist gun 0
+eresist spirit 0
+aimpt -33 -5
+accoff
+wait 0.8
+heal
+fetch 150
+wait 0.8
+healreset
+mark K2|HSB|head
+pos
+expect hero=Haze level=18 items=1 gold=0 dist=150 enemies=1 resgun=0 resspirit=0 cdready=1
+cast reload 2.3
+fire 2.0
+wait 0.3
+mark none
+acclog
+wait 0.5
+end

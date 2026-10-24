@@ -1,0 +1,109 @@
+{
+ "id": "graves_ult_echo_target",
+ "title": "Echo Shard on Graves: can it go on Borrowed Decree, and what does it give on Grasping Hands?",
+ "hero": "Graves",
+ "playstyle": "Ult Graves",
+ "builds": [
+  "graves_ult"
+ ],
+ "question": "Game data marks Echo Shard IMBUE_ACTIVE_NON_ULT. Does the imbue UI refuse Decree, and does Echo on Hands give an immediate second Hands (2 ghouls each at T3)?",
+ "hypothesis": "H-GU-1: Decree cannot be selected as Echo's imbue target. On Hands T3, activating Echo right after Hands allows a second Hands within 1s; Echo's cooldown after use = 30s + Hands' current cooldown (~16-20s).",
+ "arms": [
+  {
+   "name": "echo_hands",
+   "items": [
+    "Echo Shard (Grasping Hands)",
+    "Superior Cooldown"
+   ],
+   "ability_order": "1123444224231133",
+   "imbues": {
+    "Echo Shard": "Grasping Hands"
+   },
+   "souls": 36800,
+   "notes": "abil 1 15 / 2 15 / 3 3 / 4 15 bits (real tiers at 36.8k: Jar T3, Hands T3, Theft T1, Decree T3)"
+  },
+  {
+   "name": "no_echo",
+   "items": [
+    "Superior Cooldown"
+   ],
+   "ability_order": "1123444224231133",
+   "imbues": {},
+   "souls": 36800,
+   "notes": "control"
+  }
+ ],
+ "setup": {
+  "level_or_boons": "36.8k",
+  "souls": 36800,
+  "position": "open ground, 3 stationary bots in a line 10m away",
+  "enemies": [
+   {
+    "hero": "bot",
+    "count": 3,
+    "items": [],
+    "behaviour": "stationary",
+    "hp": "full"
+   }
+  ],
+  "allies": [],
+  "start_hp": "full",
+  "resets": [
+   "cooldowns"
+  ]
+ },
+ "controls": [
+  "Same position and spawn distance",
+  "Cooldowns and HP reset between trials",
+  "Same boons/souls/ability points in both arms except the thing under test",
+  "Same bot heroes, HP and resists",
+  "Arms interleaved A,B,A,B"
+ ],
+ "procedure": [
+  "Try to imbue Echo Shard on Decree; record whether the UI accepts it (echo arm only)",
+  "Cast Hands, then Echo, then Hands; record time between the two Hands casts, ghouls raised and total Hands damage in 10s",
+  "Record Echo's cooldown shown after use"
+ ],
+ "trials": 5,
+ "metrics": [
+  {
+   "name": "decree_imbue_accepted",
+   "unit": "bool",
+   "how": "imbue UI",
+   "grade_target": "A",
+   "better": "lower",
+   "primary": false
+  },
+  {
+   "name": "hands_damage_10s",
+   "unit": "damage",
+   "how": "damage numbers sum / bot HP lost",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": true
+  },
+  {
+   "name": "ghouls_10s",
+   "unit": "count",
+   "how": "count",
+   "grade_target": "B",
+   "better": "higher",
+   "primary": false
+  },
+  {
+   "name": "echo_cd",
+   "unit": "s",
+   "how": "item cooldown display",
+   "grade_target": "A",
+   "better": "lower",
+   "primary": false
+  }
+ ],
+ "decision": {
+  "metric": "hands_damage_10s",
+  "min_effect_pct": 40,
+  "min_trials": 5,
+  "rule": "If Decree imbue is accepted, REFUTES the non-ult reading: revisit the build. If echo_hands deals >=40% more Hands damage in 10s (prediction ~+100%), SUPPORTS Echo on Hands; otherwise INCONCLUSIVE and Echo's slot is re-opened against Refresher-in-core."
+ },
+ "blockedIfNo": []
+}

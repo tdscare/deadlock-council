@@ -1,0 +1,34 @@
+SCOPE: build-context
+KIND: path
+MODE: audit
+BUILD: apollo_melee
+ARGS: --path ALL audit
+GENERATED: 2026-10-24T15:31:14Z
+BODY-SHA: d150c18fa9d488d272c8889a5baa35d5441b21da3ac240f954dd6fcf8f048e4d
+INPUT-SHA: 51b2ce038f3bd8e0cb294a1ccbfbd48a4a8c5557d1e5f0eb26388ca7ef95f410
+COUNTING: REFUND 0.5 of the price on sale (UNVERIFIED HYPOTHESIS); investment = full tier price of held items (UNVERIFIED HYPOTHESIS: counting rule not in data); state values = --strategy trade model (MODELLED ESTIMATE)
+
+## BRANCH STRUCTURE (data.js boxes; abtimeline walk() and the strategy walk use ONLY the main path; counters/luxury are branches evaluated one at a time)
+  Losing lane? Buy 1       -> lane alternative (branch): Extra Health
+  Early · L-R              -> main path (sequential): Melee Lifesteal, Melee Charge, Extra Regen, Hunter's Aura, Lifestrike, Healing Booster, Close Quarters, Grit
+  Mid · L-R                -> main path (sequential): Reactive Barrier, Stalker, Point Blank, Berserker, Crushing Fists, Spirit Resilience
+  Late · L-R               -> main path (sequential): Witchmail, Phantom Strike, Indomitable, Unstoppable
+  Counters                 -> counter menu (mutually exclusive, buy only if needed): Dispel Magic, Counterspell, Metal Skin, Plated Armor, Healbane
+  I'm rich as fuck         -> luxury ending (optional branch, each item separately): Colossus, Scourge, Divine Barrier
+  Slot locked              -> optional upgrade (branch): Healing Tempo
+
+## SALE CHECKLIST (computed)
+- I'm rich as fuck (luxury ending): buy Colossus, sell Hunter's Aura
+    function of Hunter's Aura: resist_shred, slow; replacement Colossus: bullet_resist, slow, spirit_resist; roles lost: resist_shred  [VERIFIED GAME MECHANIC]
+    Hunter's Aura is a component of later items: no
+    held for 51200 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 17600/33600/0 -> 14400/40000/0; thresholds lost: none
+    trade ratio after the sale 0.70; selling Stalker instead: 0.71 (+1.6%)  [MODELLED ESTIMATE]
+    review: no issue found by the computed checks; evidence tier: MODEL-ONLY (no measured inputs)
+- I'm rich as fuck (luxury ending): buy Scourge, sell Spirit Resilience
+    function of Spirit Resilience: spirit_resist; replacement Scourge: cleanse, spirit_resist; roles lost: none  [VERIFIED GAME MECHANIC]
+    Spirit Resilience is a component of later items: no
+    held for 30400 souls of purchases; resale 1600, net cost of having owned it 1600
+    investment before/after gun/vit/spirit 17600/33600/0 -> 17600/30400/6400; thresholds lost: none
+    trade ratio after the sale 0.90; selling Stalker instead: 1.04 (+15.8%)  [MODELLED ESTIMATE]
+    review: a cheaper non-component sale keeps more strength; evidence tier: MODEL-ONLY (no measured inputs)

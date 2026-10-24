@@ -1,0 +1,74 @@
+{
+ "strategy": {
+  "trig": [
+   "greens (Melee Lifesteal,Grit,Lifestrike,Spirit Shielding,Colossus -> Melee Lifesteal,Grit,Enduring Speed,Lifestrike,Spirit Shielding,Colossus)",
+   "4.8k spike timing (vitality 9600 -> 10400, spirit 16000 -> 17600)"
+  ],
+  "lines": [
+   "STRATEGY BLOCK"
+  ]
+ },
+ "interaction": {
+  "lines": [
+   "INTERACTION: no damage/fire-rate/stat item added, removed or reordered"
+  ]
+ },
+ "weakness": {
+  "lines": [
+   "WEAKNESS BLOCK"
+  ]
+ },
+ "overlap": {
+  "changed": [
+   "  overlap Enduring Speed (added): no overlap-candidate"
+  ],
+  "unresolved": [
+   "overlap-candidate Lifestrike [core_end=UNKNOWN]",
+   "overlap-candidate Point Blank [at_buy=UNKNOWN; core_end=UNKNOWN]",
+   "overlap-candidate Unstoppable [core_end=UNKNOWN]",
+   "overlap-candidate Phantom Strike [core_end=UNKNOWN]",
+   "overlap-candidate Divine Barrier [core_end=UNKNOWN]"
+  ]
+ },
+ "unresolved": [
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Cultist Sacrifice: Have it by about 8 minutes and eat a big camp with it.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Lifestrike: Light punches and troopers trigger it too.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Spirit Strike: Bashdown counts as a punch for this.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Colossus: Pop it when you chain them in.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Scourge: Cast it on yourself as you dive in.",
+  "walk: Scourge: slot 13 with no sell that frees a slot"
+ ],
+ "proposal": "W3_weakness_nofix",
+ "id": "billy_damage",
+ "diff": [
+  "added Mid · L-R|Enduring Speed"
+ ],
+ "block": [
+  "NEW violation introduced: bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Enduring Speed (T2) @8000",
+  "NEW violation introduced: bc: BOX_GT8 billy_damage: Mid · L-R has 9",
+  "NEW violation introduced: bc: SLOTS_GT12_NO_SELL billy_damage: Scourge is slot 13",
+  "NEW violation introduced: bc: CORE_NOT_12 billy_damage: core ends with 13 items, 51200 souls",
+  "NEW violation introduced: walk: Scourge: slot 13 with no sell that frees a slot",
+  "STRATEGY: proposal changes greens (Melee Lifesteal,Grit,Lifestrike,Spirit Shielding,Colossus -> Melee Lifesteal,Grit,Enduring Speed,Lifestrike,Spirit Shielding,Colossus) + 4.8k spike timing (vitality 9600 -> 10400, spirit 16000 -> 17600) but cites no `strategy` evidence file (run abtimeline.py --strategy billy_damage <checkpoints> and cite it as kind `strategy`)",
+  "WEAKNESS: council/evidence/weakness/billy_damage_reach_7200.txt: its conclusion is \"NO FIX NEEDED: the kit already covers it in realistic trades\": no purchase is justified by this weakness"
+ ],
+ "warn": [],
+ "fixed": [],
+ "kept": [
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Cultist Sacrifice: Have it by about 8 minutes and eat a big camp with it.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Lifestrike: Light punches and troopers trigger it too.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Spirit Strike: Bashdown counts as a punch for this.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Colossus: Pop it when you chain them in.",
+  "bc: CORE_NOTE_NONEMPTY billy_damage: Scourge: Cast it on yourself as you dive in."
+ ],
+ "newV": [
+  "bc: T1T2_NOT_UPGRADED_OR_SOLD billy_damage: Enduring Speed (T2) @8000",
+  "bc: BOX_GT8 billy_damage: Mid · L-R has 9",
+  "bc: SLOTS_GT12_NO_SELL billy_damage: Scourge is slot 13",
+  "bc: CORE_NOT_12 billy_damage: core ends with 13 items, 51200 souls",
+  "bc: RT_ITEMS billy_damage: Mid · L-R: [[\"Lifestrike\",null],[\"Spirit Shielding\",null],[\"Melee Charge\",null],[\"Spirit Strike\",null],[\"Bullet Resist Shredder\",null],[\"Spirit Snatch\",null],[\"Close Quarters\",null],[\"Point Blank\",null]] vs [[\"Enduring Speed\",null],[\"Lifestrike\",null],[\"Spirit Shielding\",null],[\"Melee Charge\",null],[\"Spirit Strike\",null],[\"Bullet Resist Shredder\",null],[\"Spirit Snatch\",null],[\"Close Quarters\",null],[\"Point Blank\",null]]",
+  "walk: Scourge: slot 13 with no sell that frees a slot"
+ ],
+ "when": "2026-10-24 16:59",
+ "line": "[2026-10-24 16:59] Add Enduring Speed to fix the reach problem (crafted gate test; remedy set says no fix needed) | added Mid · L-R|Enduring Speed | evidence: data:gt/repo/game/citadel/pak01_dir/scripts/abilities.vdata, weakness:council/evidence/weakness/billy_damage_reach_7200.txt | gate: FAIL"
+}

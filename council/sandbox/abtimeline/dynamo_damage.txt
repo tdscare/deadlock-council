@@ -1,0 +1,120 @@
+# dynamo_damage | Dynamo | Rizuhble's Dyson Dynamo
+abilities: 1=Kinetic Pulse (citadel_ability_stomp, start_trained=false, Signature) / 2=Quantum Entanglement (citadel_ability_void_sphere, start_trained=false, Signature) / 3=Rejuvenating Aurora (citadel_ability_nikuman, start_trained=false, Signature) / 4=Singularity (citadel_ability_self_vacuum, start_trained=false, Ultimate)
+order: 1132141444332232
+model A (data):  Kinetic Pu:U@0  Kinetic Pu:T1@200  Rejuvenati:U@500  Quantum En:U@1400  Kinetic Pu:T2@2000  Singularit:U@3200  Kinetic Pu:T3@6000  Singularit:T1@6800  Singularit:T2@8400  Singularit:T3@12800  Rejuvenati:T1@13800  Rejuvenati:T2@16100  Quantum En:T1@17400  Quantum En:T2@20600  Rejuvenati:T3@32100  Quantum En:T3@48600
+model B (old):   Kinetic Pu:T1@200  Kinetic Pu:T2@900  Rejuvenati:T1@2000  Quantum En:T1@2600  Kinetic Pu:T3@3900  Singularit:U@4600  Singularit:T1@6000  Singularit:T2@6800  Singularit:T3@7600  Rejuvenati:T2@8400  Rejuvenati:T3@9200  Quantum En:T2@10100  Quantum En:T3@11000
+tier upgrades: Kinetic Puls: AbilityCharges+1 / BulletResistReduction-15,SlowPercent+24,SlowDuration+4 / Damage+135,StompRange+20 | Quantum Enta: AbilityCastRange+6 / AbilityCooldown-6 / ReduceDebuffs+50,ChargeReplenish+1 | Rejuvenating: MovementSpeedBonus+4,MovementSpeedBonusDuration+8 / AbilityCooldown-20,AbilityChannelTime+1 / NoChannel+1,HealMaxHealthPercent+2.5 | Singularity: VacuumRadius+2 / AbilityChannelTime+0.75 / DPSPercentHealth+6
+
+souls  lvl AP spirit  item [imbue]   || per ability: tier(A)[B if different] charges cd/between dur | spirit hit
+   800 L3   1     2  Headshot Booster
+        Kinetic Pu T1 ch2 cd26/5 Damage=118 | Quantum En L[U] | Rejuvenati U ch1 cd48 | Singularit L
+  1600 L5   2    11  Mystic Burst
+        Kinetic Pu T1[T2] ch2 cd26/5 Damage=133 | Quantum En U ch1 cd20 d1.4 | Rejuvenati U ch1 cd48 | Singularit L
+  4000 L9   5    16  Headhunter
+        Kinetic Pu T2[T3] ch2 cd26/5 Damage=139 | Quantum En U[T1] ch1 cd20 d1.4 | Rejuvenati U[T1] ch1 cd48 | Singularit U[L] ch1 cd250 DPS=20
+  4800 L10  6    17  Sprint Boots
+        Kinetic Pu T2[T3] ch2 cd26/5 Damage=141 | Quantum En U[T1] ch1 cd20 d1.4 | Rejuvenati U[T1] ch1 cd48 | Singularit U ch1 cd250 DPS=20
+  6400 L12  8    19  Recharging Rush
+        Kinetic Pu T3 ch2 cd26/5 Damage=280 | Quantum En U[T1] ch1 cd20 d1.4 | Rejuvenati U[T1] ch1 cd48 | Singularit U[T1] ch1 cd250 DPS=20
+  7200 L13  9    20  Enduring Speed
+        Kinetic Pu T3 ch2 cd26/5 Damage=281 | Quantum En U[T1] ch1 cd20 d1.4 | Rejuvenati U[T1] ch1 cd48 | Singularit T1[T2] ch1 cd250 DPS=20
+ 10400 L17 13    25  Warp Stone
+        Kinetic Pu T3 ch2 cd26/5 Damage=288 | Quantum En U[T2] ch1 cd20 d1.4 | Rejuvenati U[T3] ch1 cd48 | Singularit T2[T3] ch1 cd250 DPS=20
+ 12800 L20 16    40  Tankbuster
+        Kinetic Pu T3 ch2 cd26/5 Damage=312 | Quantum En U[T3] ch1 cd20 d1.4 | Rejuvenati U[T3] ch1 cd48 | Singularit T3 ch1 cd250 DPS=22
+ 14400 L21 17    60  Compress Cooldown [imbue Kinetic Pulse]
+        Kinetic Pu T3 ch2 cd26/5 Damage=343 | Quantum En U[T3] ch1 cd20 d1.4 | Rejuvenati T1[T3] ch1 cd48 | Singularit T3 ch1 cd250 DPS=23
+ 16000 L22 18    68  Quicksilver Reload [imbue Kinetic Pulse]
+        Kinetic Pu T3 ch2 cd26/5 Damage=356 | Quantum En U[T3] ch1 cd20 d1.4 | Rejuvenati T1[T3] ch1 cd48 | Singularit T3 ch1 cd250 DPS=24
+ 16800 L23 19    69  Extra Charge
+        Kinetic Pu T3 ch2 cd26/5 Damage=368 | Quantum En U[T3] ch1 cd20 d1.4 | Rejuvenati T2[T3] ch1 cd28 | Singularit T3 ch1 cd250 DPS=24
+ 19200 L25 21    78  Rapid Recharge
+        Kinetic Pu T3 ch2 cd26/5 Damage=393 | Quantum En T1[T3] ch1 cd20 d1.4 | Rejuvenati T2[T3] ch1 cd28 | Singularit T3 ch1 cd250 DPS=24
+ 20800 L26 22    86  Superior Cooldown
+        Kinetic Pu T3 ch2 cd26/5 Damage=406 | Quantum En T2[T3] ch1 cd14 d1.4 | Rejuvenati T2[T3] ch1 cd28 | Singularit T3 ch1 cd250 DPS=25
+ 25600 L28 24   103  Mercurial Magnum [imbue Kinetic Pulse]
+        Kinetic Pu T3 ch2 cd26/5 Damage=431 | Quantum En T2[T3] ch1 cd14 d1.4 | Rejuvenati T2[T3] ch1 cd28 | Singularit T3 ch1 cd250 DPS=26
+ 32000 L30 26   105  Unstoppable
+        Kinetic Pu T3 ch2 cd26/5 Damage=434 | Quantum En T2[T3] ch1 cd14 d1.4 | Rejuvenati T2[T3] ch1 cd28 | Singularit T3 ch1 cd250 DPS=26
+ 38400 L33 29   117  Mystic Reverb [imbue Kinetic Pulse]
+        Kinetic Pu T3 ch2 cd26/5 Damage=453 | Quantum En T2[T3] ch1 cd14 d1.4 | Rejuvenati T3 ch1 cd28 | Singularit T3 ch1 cd250 DPS=27
+ 44800 L34 30   143  Spirit Burn
+        Kinetic Pu T3 ch2 cd26/5 Damage=494 | Quantum En T2[T3] ch1 cd14 d1.4 | Rejuvenati T3 ch1 cd28 | Singularit T3 ch1 cd250 DPS=29
+ 51200 L36 32   146  Refresher
+        Kinetic Pu T3 ch2 cd26/5 Damage=497 | Quantum En T3 ch1 cd14 d1.4 | Rejuvenati T3 ch1 cd28 | Singularit T3 ch1 cd250 DPS=29
+
+## conditional / ability-related items (model A; [B] shown where the verdict differs; F7 = 1-charge question)
+- @800 Headshot Booster [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=100)
+    game text: Your next headshot against an enemy Hero deals {g:citadel_inline_attribute:'BonusWeaponDamage'}.
+    at buy: not computed (needs play data)
+- @1600 Mystic Burst [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 80 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcByOtherObjects=true
+    at buy: best Kinetic Pulse.Damage 133 at spirit 11
+    margin: +66%
+    reliability: procs from Kinetic Pulse.Damage 133 (cd 26)
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @4000 Headhunter [proc] -> OK | verdict: keep (situational; not a timeline check) | UNTESTABLE-HIGH-RISK
+    rule: chance/hit-based proc on bullets or kills (ProcChance=100)
+    game text: Your next headshot against an enemy Hero deals {g:citadel_inline_attribute:'BonusWeaponDamage'}, {g:citadel_inline_attribute:'Heal'} you, and briefly ...
+    at buy: not computed (needs play data)
+- @6400 Recharging Rush [gunwin+charged] -> OK | verdict: buy now | CALCULATED
+    rule: 200 weapon damage within 3.5s (game text: 'significant weapon damage'), refills one charge per charged ability; cd 25s; needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Dealing significant {g:citadel_inline_attribute:'WeaponDamage'} replenishes a charge for each of your charged abilities.
+    at buy: gun 29/bullet x 14 shots = 408 in 3.5s (100% hits, base + level + weapon-invest + item weapon damage); Kinetic Pulse 2->2 charges; Kinetic Pulse shots in 5s 2->2 (between-charge 5s)
+    margin: +104% at 100% hits; needs 6.9 hits
+    unverified: falloff, headshots, accuracy; whether ability weapon-damage counts; F7 1-charge abilities
+- @12800 Tankbuster [hit] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 165 (any ability); scaled by spirit at hit time; procs at most every 14s
+    game text: Charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, causing abilities dealing more than {s:MinimumDamage} damage to deal addit... | vdata: proc damage types ABILITY, CanProcFromItems=false, IgnoreResists=true, CanProcByOtherObjects=true
+    at buy: best Kinetic Pulse.Damage 312 at spirit 40
+    margin: +89%
+    reliability: procs from Kinetic Pulse.Damage 312 (cd 26); below threshold: Singularity.DPS 22
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @14400 Compress Cooldown [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Kinetic Pulse; needs it trained and the stat the item raises
+    game text: Imbue an ability to reduce its Cooldown.
+    at buy: Kinetic Pulse T3: cd 26s, duration 0s, charges 2; saves 4.7s/cast (2.31->2.81 casts/min)
+- @16000 Quicksilver Reload [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Kinetic Pulse; needs it trained and the stat the item raises
+    game text: Your imbued ability charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, {g:citadel_inline_attribute:'BonusFireRate'}, and relo... | vdata: proc damage types ABILITY/BULLET/MELEE, CanProcByOtherObjects=true
+    at buy: Kinetic Pulse T3: cd 26s, duration 0s, charges 2
+- @16800 Extra Charge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: Adds one to your ability max charges.
+    at buy: Kinetic Pulse 2->3 charges; Kinetic Pulse shots in 5s 2->2 (between-charge 5s)
+    unverified: F7 1-charge abilities
+- @19200 Rapid Recharge [charged] -> OK | verdict: buy now | CALCULATED
+    rule: needs an ability with charges (vdata ERequirementChargedAbility); Kieran's reading = 2+ base charges (F7 UNVERIFIED: does a 1-charge ability count?)
+    game text: (no game text)
+    at buy: Kinetic Pulse 2->4 charges; Kinetic Pulse shots in 5s 2->2 (between-charge 5s) (cd 26->22.4s, between 5->3.50s)
+    unverified: F7 1-charge abilities
+- @20800 Superior Cooldown [cast] -> OK | verdict: buy now | CALCULATED
+    rule: value scales with ability casts / trained abilities
+    game text: Reduces the Cooldown of your abilities.
+    at buy: 4 abilities trained, summed cooldown 318s; 20% saves 63.6s per rotation
+- @25600 Mercurial Magnum [imbue] -> OK | verdict: buy now | CALCULATED
+    rule: imbued on Kinetic Pulse; needs it trained and the stat the item raises
+    game text: Your imbued ability charges up over time with {g:citadel_inline_attribute:'BonusSpiritDamage'}, {g:citadel_inline_attribute:'BonusFireRate'}, and relo... | vdata: proc damage types ABILITY/BULLET/MELEE, CanProcByOtherObjects=true
+    at buy: Kinetic Pulse T3: cd 26s, duration 0s, charges 2
+- @38400 Mystic Reverb [hitimb] -> OK | verdict: buy now | CALCULATED
+    rule: one ability damage instance > 100 (imbued ability only); scaled by spirit at hit time; procs at most every 6s
+    game text: (no game text) | vdata: proc damage types ABILITY/BULLET, CanProcByOtherObjects=true
+    at buy: best Kinetic Pulse.Damage 453 at spirit 117
+    margin: +353%
+    reliability: procs from Kinetic Pulse.Damage 453 (cd 26)
+    unverified: pre- vs post-resist damage, whether DoT ticks/item damage count, whether ult counts (code, not data)
+- @44800 Spirit Burn [win] -> OK | verdict: buy now | UNTESTABLE-HIGH-RISK
+    rule: 500 spirit damage to one enemy within 5s (game text: 'significant spirit damage'); per-enemy cooldown
+    game text: Dealing significant {g:citadel_inline_attribute:'SpiritDamage'} to an enemy within {s:DamageThresholdDuration}s causes an explosion dealing damage and...
+    at buy: all abilities in 5s ~1016 (Kinetic Puls 494x2; Singularity 29x1), without ult 988
+    margin: +98% without ult, +103% with
+    reliability: needs the whole combo on one target (hit rate, travel time)
+    unverified: pre/post resist; item and DoT damage count (text says any spirit damage)
+- @51200 Refresher [ult] -> OK | verdict: buy now | CALCULATED
+    rule: needs the ultimate (damage from ult / reset value mostly from ult)
+    game text: Reset the cooldown of all your abilities and restore all your charges.
+    at buy: ult T3, cd 250.0
+
+no trigger condition (plain stats/actives): Sprint Boots, Enduring Speed, Warp Stone, Unstoppable
