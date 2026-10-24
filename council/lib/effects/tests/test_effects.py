@@ -146,5 +146,36 @@ class TestLearningLoop(unittest.TestCase):
         self.assertEqual(r['T5-a1-i1']['ladder']['stages'][1]['status'], 'REFUTED')
 
 
+class TestProvenanceGate(unittest.TestCase):
+    def setUp(self):
+        import tempfile, hashlib
+        self.root = tempfile.mkdtemp(); os.makedirs(os.path.join(self.root, 'B1'))
+        self.data = b'{"VALID": "yes"}'
+        open(os.path.join(self.root, 'B1', 'r.json'), 'wb').write(self.data)
+        self.pv = dict(result_file='r.json', result_sha256=hashlib.sha256(self.data).hexdigest(), task_id='t1', runner_valid='yes', frame_validity='CLEAN',
+                       client_version='6819', server_version='6819', build_hash='abc', n=5, n_min=3, bundle_path='B1')
+    def entry(self, **ch):
+        pv = dict(self.pv); pv.update(ch)
+        return dict(id='M', tier='CONTROLLED SANDBOX RESULT', fact='x', provenance=pv, links=[dict(template='T5', hero='h1', ability='a1', item='i1', event='heavy_melee', outcome='confirmed')])
+    def test_complete_bundle_passes(self):
+        self.assertEqual(DI.provenance_problems(self.entry(), self.root), [])
+    def test_no_provenance_does_not_move_ranking(self):
+        m = self.entry(); del m['provenance']
+        self.assertTrue(DI.provenance_problems(m, self.root))
+        h = [TestLearningLoop.mk(self, 'h1', 'a1', 'i1'), TestLearningLoop.mk(self, 'h2', 'a2', 'i1')]
+        ok = [x for x in [m] if not DI.provenance_problems(x, self.root)]
+        DI.apply_measured(h, ok)
+        self.assertEqual([x['scoring']['total'] for x in h], [3.0, 3.0])
+    def test_tampered_hash_rejected(self):
+        open(os.path.join(self.root, 'B1', 'r.json'), 'wb').write(self.data + b' ')
+        self.assertTrue(any('MISMATCH' in p for p in DI.provenance_problems(self.entry(), self.root)))
+    def test_missing_bundle_and_bad_flags_rejected(self):
+        self.assertTrue(any('not present' in p for p in DI.provenance_problems(self.entry(bundle_path='nope'), self.root)))
+        for ch in (dict(runner_valid='no'), dict(frame_validity='NOT CLEAN'), dict(server_version='6820'), dict(n=2), dict(build_hash='')):
+            self.assertTrue(DI.provenance_problems(self.entry(**ch), self.root), ch)
+    def test_path_escape_rejected(self):
+        self.assertTrue(DI.provenance_problems(self.entry(result_file='../../etc/passwd'), self.root))
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

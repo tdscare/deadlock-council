@@ -1,0 +1,217 @@
+# plugin.log excerpt act:demo2 attempt 1 lines 65481-65696; local time UTC+1
+2026-10-24 15:23:32.693 QR TASK-START act:demo2#1 scenario=act_demo2
+2026-10-24 15:23:32.707 ACT required: Reload refill [event ~reload:refill >= 2]
+2026-10-24 15:23:32.710 DISPLAY FULL Haze | Level 18 stat floor, 0 souls spent, then Clip Size given | ISOLATED ITEM: Does the tester prove that a clip-size item changes the magazine and that a reload really happened? (build: none (harness check); items: upgrade_clip_size; why: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict)
+2026-10-24 15:23:32.711 DISPLAY ISOLATED: does not justify the overall build
+2026-10-24 15:23:32.712 SC scenario act_demo2 started, 62 steps origin=runner:act:demo2
+2026-10-24 15:23:32.717 FG client BACKGROUND
+2026-10-24 15:23:32.728 SC step 0: meta kind ISOLATED ITEM
+2026-10-24 15:23:32.749 PERF slow hook 0 34.7 ms
+2026-10-24 15:23:32.750 SC step 1: meta hero Haze
+2026-10-24 15:23:32.751 SC step 2: meta checkpoint Level 18 stat floor, 0 souls spent, then Clip Size given
+2026-10-24 15:23:32.752 SC step 3: meta build none (harness check)
+2026-10-24 15:23:32.767 SC step 4: meta items upgrade_clip_size
+2026-10-24 15:23:32.783 SC step 5: meta question Does the tester prove that a clip-size item changes the magazine and that a reload really happened?
+2026-10-24 15:23:32.798 SC step 6: meta purpose calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict
+2026-10-24 15:23:32.814 SC step 7: meta mechanics reload plus clip-size readback; gun only
+2026-10-24 15:23:32.830 SC step 8: meta expectedstate items=none at start; exactly one item given mid-run
+2026-10-24 15:23:32.845 SC step 9: meta excluded all abilities and all other items; this is a harness check
+2026-10-24 15:23:32.861 SC step 10: meta accmode body-only
+2026-10-24 15:23:32.877 SC step 11: meta accwhy not a damage test
+2026-10-24 15:23:32.892 SC step 12: meta abilities gun only
+2026-10-24 15:23:32.908 SC step 13: meta runs 1/1
+2026-10-24 15:23:32.923 SC step 14: meta assumed clip size item raises the magazine
+2026-10-24 15:23:32.939 SC step 15: meta required_activation Reload refill|event|reload:refill|2
+2026-10-24 15:23:32.955 SC step 16: meta required_readback Clip grew after item|clip_after|>|clip_before ; Item count 1|items_after|==|1
+2026-10-24 15:23:32.970 SC step 17: meta activation_range 300
+2026-10-24 15:23:32.986 SC step 18: meta range_expect in
+2026-10-24 15:23:33.001 SC step 19: meta player_title Haze check: clip size
+2026-10-24 15:23:33.017 SC step 20: meta player_what Clip bigger after the item?|Did a reload really occur?
+2026-10-24 15:23:33.033 SC step 21: meta player_why Checking the tester, not a build
+2026-10-24 15:23:33.048 SC step 22: meta player_short Harness check
+2026-10-24 15:23:33.064 SC step 23: meta player_expect Clip grows, reload occurs
+2026-10-24 15:23:33.080 SC step 24: setup Haze Haze
+2026-10-24 15:23:33.081 SETUP me already Haze
+2026-10-24 15:23:33.081 SETUP start me=Haze enemy=Haze
+2026-10-24 15:23:33.682 DISPLAY STATE Haze vs Haze | none (harness check) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Clip Size given || WHY: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | setup | task 29/29 (done 24, blocked 3) || MECH: intended reload plus clip-size readback; gun only -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:23:33.693 DISPLAY HUD[announce] Haze check: clip size | + blitz bullets, titan round / New test
+2026-10-24 15:23:33.693 DISPLAY SENT Haze check: clip size
+2026-10-24 15:23:34.681 DISPLAY SENT Clip bigger after the item?
+2026-10-24 15:23:35.681 DISPLAY SENT Checking the tester, not a build
+2026-10-24 15:23:39.576 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12549.125, 2647.2188, 441.8125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:23:39.576 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:23:39.576 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 15:23:39.608 SC step 25: basemods 
+2026-10-24 15:23:39.608 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_active_reload/modifier_intrinsic_base,upgrade_blitz_bullets/modifier_intrinsic_base,upgrade_titan_round/modifier_intrinsic_base,upgrade_chonky/modifier_apex_watcher,upgrade_ricochet/modifier_ricochet_proc,upgrade_healing_booster/modifier_intrinsic_base,upgrade_siphon_bullets/modifier_siphon_bullets,upgrade_chonky/modifier_apex_watcher/modifier_apex,upgrade_siphon_bullets/modifier_siphon_bullets/modifier_siphon_bullets_watcher
+2026-10-24 15:23:39.608 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:23:39.623 SC step 26: mark none
+2026-10-24 15:23:39.630 UCSTAT label=none secs=6.9 calls=445 cmds=1329 calls/s=64.4 cmds/call=2.99 perCall[0..7+]=0/2/119/207/117/0/0/0 gapMs mean=15.56 p50=15.6 p95=31.5 p99=32.7 max=48.2 gap>32ms=6 gap>50ms=0 allSlotCalls=1333 allSlotCalls/frame=3.00 slots=0:444,1:444,2:445 | frames=444 emptyFrames(no human cmd)=130 frameGapMs p50=15.7 p99=17.5 max=50.3 | fgSamples=28 fgPct=0 minimizedPct=0
+2026-10-24 15:23:39.632 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:23:39.633 SC ITEMS@none: maxhp=3203 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_ricochet,upgrade_healing_booster,upgrade_siphon_bullets
+2026-10-24 15:23:39.639 SC step 27: hardreset 
+2026-10-24 15:23:39.639 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 15:23:39.639 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 15:23:39.655 SC step 28: setup Wraith Haze
+2026-10-24 15:23:39.656 SETUP start me=Wraith enemy=Haze
+2026-10-24 15:23:39.686 DISPLAY STATE 0 vs Haze | none (harness check) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Clip Size given || WHY: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | reset | task 29/29 (done 24, blocked 3) || MECH: intended reload plus clip-size readback; gun only -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:23:39.686 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Haze -> 3264121818/2/0
+2026-10-24 15:23:40.685 DISPLAY STATE Wraith vs Haze | none (harness check) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Clip Size given || WHY: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | reset | task 29/29 (done 24, blocked 3) || MECH: intended reload plus clip-size readback; gun only -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:23:40.685 DISPLAY re-assert: pawn/level/hero changed 3264121818/2/0 -> 3264121818/31/Wraith
+2026-10-24 15:23:41.686 DISPLAY re-assert: pawn/level/hero changed 3264121818/31/Wraith -> 3264121818/36/Wraith
+2026-10-24 15:23:46.573 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12549.125, 2647.2188, 441.8125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:23:46.573 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:23:46.573 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 15:23:46.606 SC step 29: wait 1.5
+2026-10-24 15:23:48.105 SC step 30: setup Haze Haze
+2026-10-24 15:23:48.106 SETUP start me=Haze enemy=Haze
+2026-10-24 15:23:48.684 DISPLAY STATE Haze vs Haze | none (harness check) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Clip Size given || WHY: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | reset | task 29/29 (done 24, blocked 3) || MECH: intended reload plus clip-size readback; gun only -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:23:48.684 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Wraith -> 3264121818/2/Haze
+2026-10-24 15:23:49.683 DISPLAY re-assert: pawn/level/hero changed 3264121818/2/Haze -> 3264121818/36/Haze
+2026-10-24 15:23:51.683 DISPLAY HUD[announce] Haze check: clip size | Type: Calibration: item / New test
+2026-10-24 15:23:55.574 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12549.125, 2647.2188, 441.8125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:23:55.574 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:23:55.574 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 15:23:55.605 SC step 31: wait 1
+2026-10-24 15:23:56.605 SC step 32: raw citadel_unlock_flex_slots
+2026-10-24 15:23:56.620 SC step 33: unlock 7
+2026-10-24 15:23:56.622 SC unlock ability_sleep_dagger 0 -> 7
+2026-10-24 15:23:56.622 SC unlock ability_smoke_bomb 0 -> 7
+2026-10-24 15:23:56.622 SC unlock ability_stacking_damage 0 -> 7
+2026-10-24 15:23:56.622 SC unlock ability_bullet_flurry 0 -> 7
+2026-10-24 15:23:56.622 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 15:23:56.622 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 15:23:56.622 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 15:23:56.622 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 15:23:56.622 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 15:23:56.622 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 15:23:56.622 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 15:23:56.622 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 15:23:56.622 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 15:23:56.622 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 15:23:56.622 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 15:23:56.622 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 15:23:56.636 SC step 34: basemods 
+2026-10-24 15:23:56.636 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 15:23:56.636 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:23:56.651 SC step 35: fetch 
+2026-10-24 15:23:56.652 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:23:56.667 SC step 36: mark none
+2026-10-24 15:23:56.667 UCSTAT label=none secs=17.0 calls=1091 cmds=2866 calls/s=64.1 cmds/call=2.63 perCall[0..7+]=0/16/434/582/59/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.5 p99=32.1 max=62.5 gap>32ms=15 gap>50ms=2 allSlotCalls=3273 allSlotCalls/frame=3.00 slots=0:1091,1:1091,2:1091 | frames=1091 emptyFrames(no human cmd)=336 frameGapMs p50=15.6 p99=16.5 max=52.9 | fgSamples=67 fgPct=0 minimizedPct=0
+2026-10-24 15:23:56.667 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:23:56.667 SC ITEMS@none: maxhp=1885 
+2026-10-24 15:23:56.683 SC step 37: raw citadel_unlock_flex_slots
+2026-10-24 15:23:56.683 DISPLAY STATE Haze vs Haze | none (harness check) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Clip Size given || WHY: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | idle-between-blocks | task 29/29 (done 24, blocked 3) || MECH: intended reload plus clip-size readback; gun only -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:23:56.699 SC step 38: aimoff 0 0
+2026-10-24 15:23:56.714 SC step 39: setgold 0
+2026-10-24 15:23:56.714 SC setgold 0
+2026-10-24 15:23:56.730 SC step 40: wait 0.4
+2026-10-24 15:23:56.964 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:23:57.136 SC step 41: wait 0.8
+2026-10-24 15:23:57.948 SC step 42: lvlhold 18
+2026-10-24 15:23:57.948 SC lvlhold 18
+2026-10-24 15:23:57.964 SC step 43: wait 1.2
+2026-10-24 15:23:58.683 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Haze -> 3264121818/18/Haze
+2026-10-24 15:23:59.167 SC step 44: nw 
+2026-10-24 15:23:59.167 SC NW level=18 pdLevel=18 netWorth=0 hpMaxPD=1885 gold=0 maxhp=1885 hp=1885
+2026-10-24 15:23:59.183 SC step 45: egod 
+2026-10-24 15:23:59.183 SC egod floor=0.9999 ehp=0
+2026-10-24 15:23:59.199 SC step 46: eresist gun 0
+2026-10-24 15:23:59.199 SC eresist gun=0% spirit=0% (damage scaled in OnTakeDamage on enemy-team players)
+2026-10-24 15:23:59.214 SC step 47: eresist spirit 0
+2026-10-24 15:23:59.214 SC eresist gun=0% spirit=0% (damage scaled in OnTakeDamage on enemy-team players)
+2026-10-24 15:23:59.230 SC step 48: aimpt -33 -30
+2026-10-24 15:23:59.230 SC aimpt right=-33 up=-30
+2026-10-24 15:23:59.246 SC step 49: accoff 
+2026-10-24 15:23:59.246 SC accuracy off
+2026-10-24 15:23:59.261 SC step 50: wait 0.8
+2026-10-24 15:24:00.073 SC step 51: heal 
+2026-10-24 15:24:00.089 SC step 52: fetch 150
+2026-10-24 15:24:00.089 SC fetched enemy to <12347.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:24:00.105 SC step 53: wait 0.8
+2026-10-24 15:24:00.402 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12347.9375, 2625.8125, 441.78125> dist=150.0 want=150
+2026-10-24 15:24:00.917 SC step 54: healreset 
+2026-10-24 15:24:00.933 SC step 55: mark ACT|none|body
+2026-10-24 15:24:00.933 UCSTAT label=none secs=4.2 calls=272 cmds=698 calls/s=64.2 cmds/call=2.57 perCall[0..7+]=0/1/117/153/1/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.4 p99=31.9 max=32.0 gap>32ms=2 gap>50ms=0 allSlotCalls=818 allSlotCalls/frame=3.00 slots=0:273,1:273,2:272 | frames=273 emptyFrames(no human cmd)=78 frameGapMs p50=15.6 p99=16.4 max=16.4 | fgSamples=17 fgPct=0 minimizedPct=0
+2026-10-24 15:24:00.935 DIST ACT|none|body: target 150 units away, activation range 300 => IN RANGE (item should be active)
+2026-10-24 15:24:00.935 DISPLAY PHASE measure - ACT|none|body
+2026-10-24 15:24:00.936 DISPLAY Haze - now testing [ACT|none|body] - calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict | items read back: no items | aim: body-only (not a damage test) | run 1/1
+2026-10-24 15:24:00.936 SC ITEMS@ACT|none|body: maxhp=1885 
+2026-10-24 15:24:00.949 SC step 56: rbprobe 
+2026-10-24 15:24:00.953 RBPROBE weapon ability = citadel_weapon_haze_set
+2026-10-24 15:24:00.956 RBPROBE ok CCitadel_Ability_PrimaryWeapon.m_iClip (int) = 34
+2026-10-24 15:24:00.956 RBPROBE clip field chosen: CCitadel_Ability_PrimaryWeapon.m_iClip
+2026-10-24 15:24:00.968 RBPROBE ok CCitadel_Ability_PrimaryWeapon.m_bInReload (int) = 256
+2026-10-24 15:24:00.968 RBPROBE ok CCitadel_Ability_PrimaryWeapon.m_flNextPrimaryAttack (float) = 9406.03125
+2026-10-24 15:24:01.001 RBPROBE ok CBasePlayerWeapon.m_iClip1 (int) = 0
+2026-10-24 15:24:01.006 RBPROBE ok CBasePlayerWeapon.m_iClip2 (int) = 0
+2026-10-24 15:24:01.050 PERF slow hook 0 101.4 ms
+2026-10-24 15:24:01.055 SC step 57: rb clip_before clip
+2026-10-24 15:24:01.055 SC RB clip_before = 34  (clip)
+2026-10-24 15:24:01.056 SC step 58: fire 1.5
+2026-10-24 15:24:01.073 DMG victim idx=0 type=CBaseEntity designer=worldent team=0 hp=0 infl=player dmg=4.3607416 flags=None
+2026-10-24 15:24:01.129 DMG victim idx=0 type=CBaseEntity designer=worldent team=0 hp=0 infl=player dmg=7.6910005 flags=None
+2026-10-24 15:24:01.238 DMG victim idx=2713 type=CBaseEntity designer=player team=3 hp=1192 infl=player dmg=7.6910005 flags=None
+2026-10-24 15:24:01.348 DMG victim idx=2713 type=CBaseEntity designer=player team=3 hp=1192 infl=player dmg=7.6910005 flags=None
+2026-10-24 15:24:01.348 DMG victim idx=2713 type=CBaseEntity designer=player team=3 hp=1185 infl=player dmg=0.2 flags=SuppressPhysicsForce, SuppressHitIndicatorSound, DoNotProc
+2026-10-24 15:24:01.441 DMG victim idx=2713 type=CBaseEntity designer=player team=3 hp=1192 infl=player dmg=7.6910005 flags=None
+2026-10-24 15:24:01.442 DMG victim idx=2713 type=CBaseEntity designer=player team=3 hp=1184 infl=player dmg=0.4 flags=SuppressPhysicsForce, SuppressHitIndicatorSound, DoNotProc
+2026-10-24 15:24:01.551 DMG victim idx=2713 type=CBaseEntity designer=player team=3 hp=1192 infl=player dmg=7.6910005 flags=None
+2026-10-24 15:24:01.551 DMG victim idx=2713 type=CBaseEntity designer=player team=3 hp=1185 infl=player dmg=0.6 flags=SuppressPhysicsForce, SuppressHitIndicatorSound, DoNotProc
+2026-10-24 15:24:01.660 DMG victim idx=2713 type=CBaseEntity designer=player team=3 hp=1192 infl=player dmg=7.6910005 flags=None
+2026-10-24 15:24:01.660 DMG victim idx=2713 type=CBaseEntity designer=player team=3 hp=1184 infl=player dmg=0.8 flags=SuppressPhysicsForce, SuppressHitIndicatorSound, DoNotProc
+2026-10-24 15:24:01.678 DISPLAY STATE Haze vs Haze | none (harness check) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Clip Size given || WHY: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 29/29 (done 24, blocked 3) || MECH: intended reload plus clip-size readback; gun only -> shots 7, hits 9, abilities executed 1
+2026-10-24 15:24:01.770 DMG victim idx=2713 type=CBaseEntity designer=player team=3 hp=1192 infl=player dmg=7.6910005 flags=None
+2026-10-24 15:24:02.552 SC step 59: cast reload 2.5
+2026-10-24 15:24:02.676 DISPLAY STATE Haze vs Haze | none (harness check) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Clip Size given || WHY: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 29/29 (done 24, blocked 3) || MECH: intended reload plus clip-size readback; gun only -> shots 15, hits 25, abilities executed 2
+2026-10-24 15:24:04.989 ACT reload/refill event: clip 19 -> 30 (max seen 34)
+2026-10-24 15:24:05.052 SC step 60: wait 0.5
+2026-10-24 15:24:05.552 SC step 61: give upgrade_clip_size
+2026-10-24 15:24:05.552 SC gave upgrade_clip_size
+2026-10-24 15:24:05.567 SC step 62: wait 1.0
+2026-10-24 15:24:05.645 ACT modifier seen: upgrade_clip_size/modifier_intrinsic_base
+2026-10-24 15:24:05.676 DISPLAY STATE Haze vs Haze | none (harness check) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Clip Size given || WHY: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict || ITEMS (read back): clip_size | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 29/29 (done 24, blocked 3) || MECH: intended reload plus clip-size readback; gun only -> shots 15, hits 25, abilities executed 2
+2026-10-24 15:24:06.567 SC step 63: fire 1.5
+2026-10-24 15:24:06.676 DISPLAY STATE Haze vs Haze | none (harness check) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Clip Size given || WHY: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict || ITEMS (read back): clip_size | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 29/29 (done 24, blocked 3) || MECH: intended reload plus clip-size readback; gun only -> shots 16, hits 27, abilities executed 3
+2026-10-24 15:24:07.677 DISPLAY STATE Haze vs Haze | none (harness check) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Clip Size given || WHY: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict || ITEMS (read back): clip_size | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 29/29 (done 24, blocked 3) || MECH: intended reload plus clip-size readback; gun only -> shots 26, hits 48, abilities executed 3
+2026-10-24 15:24:08.067 SC step 64: cast reload 2.5
+2026-10-24 15:24:08.676 DISPLAY STATE Haze vs Haze | none (harness check) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Clip Size given || WHY: calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict || ITEMS (read back): clip_size | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 29/29 (done 24, blocked 3) || MECH: intended reload plus clip-size readback; gun only -> shots 30, hits 56, abilities executed 4
+2026-10-24 15:24:09.676 DISPLAY HUD[announce] Haze check: clip size | Uses: gun only / New test
+2026-10-24 15:24:10.458 ACT reload/refill event: clip 15 -> 39 (max seen 39)
+2026-10-24 15:24:10.567 SC step 65: wait 0.8
+2026-10-24 15:24:11.379 SC step 66: rb clip_after clip
+2026-10-24 15:24:11.379 SC RB clip_after = 39  (clip)
+2026-10-24 15:24:11.395 SC step 67: rb items_after items
+2026-10-24 15:24:11.396 SC RB items_after = 1  (items)
+2026-10-24 15:24:11.411 SC step 68: rb clipmax_seen clipmax
+2026-10-24 15:24:11.411 SC RB clipmax_seen = 39  (clipmax)
+2026-10-24 15:24:11.426 SC step 69: mark none
+2026-10-24 15:24:11.426 UCSTAT label=ACT|none|body secs=10.5 calls=672 cmds=1758 calls/s=64.1 cmds/call=2.62 perCall[0..7+]=0/4/271/376/21/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.6 p99=32.0 max=102.6 gap>32ms=7 gap>50ms=1 allSlotCalls=2014 allSlotCalls/frame=3.00 slots=0:671,1:671,2:672 | frames=671 emptyFrames(no human cmd)=197 frameGapMs p50=15.7 p99=16.4 max=103.6 | fgSamples=41 fgPct=0 minimizedPct=0
+2026-10-24 15:24:11.426 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:24:11.426 SC ITEMS@none: maxhp=1291 upgrade_clip_size
+2026-10-24 15:24:11.442 SC step 70: end 
+2026-10-24 15:24:11.446 SC ACC p=1 head=1: windows=0 missWindows=0 headWindows=0 dmgHitsOnEnemy=56 weakpointHits=0
+2026-10-24 15:24:11.447 SC EVENTS AbilityCastStarted:=2 AbilityExecuted:=4 BulletCreated:me=30 BulletHit:me=30 GunFired:me=30 Reload:refill=2
+2026-10-24 15:24:11.447 SC HEALSRC UnitHealed|player|: n=21 requested=0 applied=0
+2026-10-24 15:24:11.447 SC TRK heal=0 loss=594 minHp=1291 floorHits=0 firstFloorMs=0 secs=10.5 maxhp=1291
+2026-10-24 15:24:11.447 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-24 15:24:11.448 PERF tick n=5046 avg=0.04ms max=101.4ms slow>20ms=2 | usercmd n=15142 max=1.6ms slow=0 | abilityAttempt n=0 max=0.0ms
+2026-10-24 15:24:11.448 UCSTAT label=scenario-end secs=0.0 calls=1 cmds=2 calls/s=0.0 cmds/call=2.00 perCall[0..7+]=0/0/1/0/0/0/0/0 gapMs mean=0.00 p50=- p95=- p99=- max=0.0 gap>32ms=0 gap>50ms=0 allSlotCalls=3 allSlotCalls/frame=3.00 slots=0:1,1:1,2:1 | frames=1 emptyFrames(no human cmd)=0 frameGapMs p50=- p99=- max=0.0 | fgSamples=0 fgPct=-1 minimizedPct=-1
+2026-10-24 15:24:11.457 ACT SUMMARY Reload refill: count=2 (needed 2) uptime=0.0s of 39s (0%) avgDuration=0.0s shortestGap=n/a (a continuous-bonus assumption would be 100% uptime) activeWhileFiring=n/a of 0.0s
+2026-10-24 15:24:11.458 DIST SUMMARY blocks=1 inRange=1 outOfRange=0 expected=in
+2026-10-24 15:24:11.463 RB SUMMARY clipField=CCitadel_Ability_PrimaryWeapon.m_iClip clipMax=39 refillEvents=2
+2026-10-24 15:24:11.463 RB CHECK Clip grew after item: clip_after=39 > clip_before=34 => PASS
+2026-10-24 15:24:11.463 RB CHECK Item count 1: items_after=1 == 1=1 => PASS
+2026-10-24 15:24:11.463 DISPLAYPERF ticks=38 avg=0.622ms max=18.444ms
+2026-10-24 15:24:11.465 DISPLAY FINISHED: ISOLATED ITEM - Does the tester prove that a clip-size item changes the magazine and that a reload really happened? -> shots 30, bullet hits 30, damage events on target 56 (end step)
+2026-10-24 15:24:11.465 DISPLAY MEASURED: shots 30, bullet hits 30, damage events on target 56; verify-pass/fail are in the run log
+2026-10-24 15:24:11.465 DISPLAY ASSUMED: clip size item raises the magazine
+2026-10-24 15:24:11.465 DISPLAY CALCULATED: none
+2026-10-24 15:24:11.465 DISPLAY CONCLUSION: INSUFFICIENT EVIDENCE - no decision | isolated result: NOT a build verdict (excluded: all abilities and all other items; this is a harness check)
+2026-10-24 15:24:11.465 SC scenario act_demo2 finished: end step
+2026-10-24 15:24:11.465 PERF slow hook 0 23.5 ms
+2026-10-24 15:24:11.686 DISPLAY SENT Done: Harness check
+2026-10-24 15:24:11.686 QR TASK-END act:demo2#1 why=end step
+2026-10-24 15:24:12.685 DISPLAY SENT 30 shots, 56 hits recorded
+2026-10-24 15:24:13.686 DISPLAY SENT Clip grows, reload occurs
+2026-10-24 15:24:13.695 DISPLAY NEXT: queue empty
+2026-10-24 15:24:13.695 QR TASK-RESULT act:demo2#1 VALID=yes 

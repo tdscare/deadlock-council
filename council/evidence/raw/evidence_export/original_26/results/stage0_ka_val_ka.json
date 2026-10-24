@@ -1,0 +1,69 @@
+{
+  "verdict": "VALID: yes",
+  "task": "stage0:ka_val_ka",
+  "build": "stage0",
+  "scenario": "val_ka",
+  "attempt": 3,
+  "reasons": [],
+  "startedAt": "2026-10-24T13:14:06.2770426Z",
+  "wallSec": 398.4,
+  "endWhy": "end step",
+  "checks": {
+    "setupVerifyOk": 29,
+    "posVerifyOk": 28,
+    "expectPass": 14,
+    "verifyFail": 0,
+    "unknownOps": 0,
+    "exceptions": 0,
+    "opFailed": 0,
+    "humanClientInput": 0,
+    "forcedExternal": 0
+  },
+  "damageCsv": "E:\\deadworks-server\\sbx_logs\\damage_20261024_141341.csv",
+  "damageCsvBytes": 88391,
+  "damageCsvTMs": [
+    25141,
+    423578
+  ],
+  "samplesCsv": "E:\\deadworks-server\\sbx_logs\\samples_val_ka_141406.csv",
+  "samplesCsvBytes": 56935,
+  "env": "ENV: unlabelled",
+  "meta": {
+    "kind": "ISOLATED ITEM",
+    "hero": "Haze",
+    "checkpoint": "Level 18 stat floor, 0 souls spent (Close Quarters only)",
+    "build": "none (single-item validation)",
+    "items": "upgrade_close_range",
+    "question": "Known-answer check: does Close Quarters add its documented damage inside its range and nothing outside, for body and head shots?",
+    "purpose": "validate the harness against a documented item effect before trusting any item comparison",
+    "mechanics": "Close Quarters range-gated gun damage bonus; Haze gun only, no abilities",
+    "expectedstate": "items=none before each block; items=upgrade_close_range in CQ blocks; stacks=0",
+    "excluded": "all other items and all abilities - the result says nothing about a full build because Haze\u0027s real build interacts with other bonuses",
+    "accmode": "body-only and head-only blocks at fixed range",
+    "accwhy": "removes miss/headshot noise so the known answer is exact",
+    "abilities": "gun only",
+    "runs": "1/1",
+    "assumed": "documented Close Quarters values from game data",
+    "player_title": "Haze lvl 18: Close Quarters",
+    "player_what": "Bonus damage up close only?",
+    "player_why": "No other items: clean reading",
+    "player_short": "Close Quarters check",
+    "player_expect": "Game must match our numbers"
+  },
+  "startStates": [],
+  "displayTickMsAvgMax": [
+    0.126,
+    12.495
+  ],
+  "pluginLog": {
+    "file": "E:\\deadworks-server\\sbx_logs\\plugin.log",
+    "lineStart": 56940,
+    "lineEnd": 58517,
+    "markerStart": "QR TASK-START stage0:ka_val_ka#3",
+    "markerEnd": "QR TASK-END stage0:ka_val_ka#3"
+  },
+  "messages": [],
+  "clientInput": [],
+  "externalCommands": [],
+  "written": "2026-10-24T13:20:46.708Z"
+}

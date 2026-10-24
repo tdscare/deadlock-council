@@ -1,0 +1,65 @@
+{
+  "verdict": "VALID: yes",
+  "task": "haze:interaction:reload_probe",
+  "build": "haze",
+  "scenario": "int_haze_reload_probe",
+  "attempt": 1,
+  "reasons": [],
+  "startedAt": "2026-10-24T14:09:35.6196498Z",
+  "wallSec": 53,
+  "endWhy": "end step",
+  "checks": {
+    "setupVerifyOk": 3,
+    "posVerifyOk": 2,
+    "expectPass": 0,
+    "verifyFail": 0,
+    "unknownOps": 0,
+    "exceptions": 0,
+    "opFailed": 0,
+    "humanClientInput": 0,
+    "forcedExternal": 0
+  },
+  "damageCsv": "E:\\deadworks-server\\sbx_logs\\damage_20261024_150154.csv",
+  "damageCsvBytes": 2397,
+  "damageCsvTMs": [
+    461328,
+    514328
+  ],
+  "samplesCsv": "E:\\deadworks-server\\sbx_logs\\samples_int_haze_reload_probe_150935.csv",
+  "samplesCsvBytes": 7846,
+  "env": "ENV: unlabelled",
+  "meta": {
+    "kind": "INTERACTION",
+    "question": "Checking how long Haze\u0027s reload takes, so magazine and fire-rate items can be compared.",
+    "purpose": "decide one UNKNOWN interaction cell (reload time of Haze\u0027s gun x normal shooting) for haze; the planner records the answer, it does not reason around it",
+    "mechanics": "reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced",
+    "expectedstate": "souls=25600 items=upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_ricochet,upgrade_healing_booster,upgrade_siphon_bullets tiers=7 15 15 3",
+    "build": "haze",
+    "checkpoint": "25600",
+    "items": "upgrade_active_reload upgrade_blitz_bullets upgrade_titan_round upgrade_chonky upgrade_ricochet upgrade_healing_booster upgrade_siphon_bullets",
+    "strategy_source": "council/evidence/interaction/haze_burst_fire_buypoint.txt",
+    "feeds": "interaction matrix haze Burst Fire",
+    "player_title": "Haze reload time",
+    "player_what": "Shoot 20s, time the reloads",
+    "player_why": "The game files do not say",
+    "player_short": "Reload timing",
+    "player_expect": "Gap between magazines (s)",
+    "result_says": "reload seconds = gap between the last bullet of a magazine and the first of the next (MEASURED); replaces the ASSUMED 2.5 s"
+  },
+  "startStates": [],
+  "displayTickMsAvgMax": [
+    0.099,
+    0.225
+  ],
+  "pluginLog": {
+    "file": "E:\\deadworks-server\\sbx_logs\\plugin.log",
+    "lineStart": 65286,
+    "lineEnd": 65449,
+    "markerStart": "QR TASK-START haze:interaction:reload_probe#1",
+    "markerEnd": "QR TASK-END haze:interaction:reload_probe#1"
+  },
+  "messages": [],
+  "clientInput": [],
+  "externalCommands": [],
+  "written": "2026-10-24T14:10:30.615Z"
+}

@@ -1,0 +1,912 @@
+# plugin.log excerpt for v16:T2_5d1b5cd1f7 attempt 1, lines 93881-94786 (1-based) of the log as of export; local time UTC+1
+# context (last load/version lines before the window):
+# 2026-10-24 22:45:04.059 OnUnload
+# 2026-10-24 22:45:05.500 OnLoad isReload=True csv=E:\deadworks-server\sbx_logs\damage_20261024_224505.csv
+# 2026-10-24 22:45:05.519 BUILDVER client=6819 server=6819 match=True 
+# 2026-10-24 22:45:05.552 QR LOAD isReload=True active=True tasks=46 orphanedRunningReset=0 foreignController=none reconciled total=46=sum-of-states
+2026-10-24 22:59:03.280 QR TASK-START v16:T2_5d1b5cd1f7#1 scenario=int_disc_T2_5d1b5cd1f7_v16
+2026-10-24 22:59:03.281 ACT required: cast2 [ability ~ability_smoke_bomb >= 1]
+2026-10-24 22:59:03.281 DISPLAY FULL Haze | 30000 | INTERACTION: Checking whether Echo Shard lets Smoke Bomb be cast twice in a row, and what the second cast does. (build: haze; items: upgrade_ability_power_shard; why: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance)
+2026-10-24 22:59:03.281 DISPLAY strategy source missing on this PC: E:\deadworks-server\council/evidence/interactions/hypotheses/ranked.json
+2026-10-24 22:59:03.281 SC scenario int_disc_T2_5d1b5cd1f7_v16 started, 150 steps origin=runner:v16:T2_5d1b5cd1f7
+2026-10-24 22:59:03.296 ACT modifier seen: upgrade_active_reload/modifier_intrinsic_base
+2026-10-24 22:59:03.296 SC step 0: meta kind INTERACTION
+2026-10-24 22:59:03.312 SC step 1: meta question Checking whether Echo Shard lets Smoke Bomb be cast twice in a row, and what the second cast does.
+2026-10-24 22:59:03.326 SC step 2: meta purpose decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance
+2026-10-24 22:59:03.343 SC step 3: meta mechanics second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text
+2026-10-24 22:59:03.359 SC step 4: meta expectedstate souls=30000 items=upgrade_ability_power_shard tiers=1 15 1 1
+2026-10-24 22:59:03.373 SC step 5: meta build haze
+2026-10-24 22:59:03.389 SC step 6: meta checkpoint 30000
+2026-10-24 22:59:03.406 SC step 7: meta items upgrade_ability_power_shard
+2026-10-24 22:59:03.420 SC step 8: meta strategy_source council/evidence/interactions/hypotheses/ranked.json
+2026-10-24 22:59:03.436 SC step 9: meta feeds interaction hypothesis T2-5d1b5cd1f7 (Haze: Echo Shard imbued on Smoke Bomb (cast, reset, cast again))
+2026-10-24 22:59:03.453 SC step 10: meta selection_kind discovery
+2026-10-24 22:59:03.467 SC step 11: meta selection_reason discovery: data-derived hypothesis T2-5d1b5cd1f7 (item text resets the cooldown of the imbued non-ultimate ability; ability has 33.0s cooldown, 8.0s duration at T3; reset-recast and recipient-lockout interplay is UNKNOWN)
+2026-10-24 22:59:03.484 SC step 12: meta alternative_reason controls inside the file: ability alone (P0), item after expiry (B), item before first cast (C); the plain alternative (ordinary single use) is arm P0
+2026-10-24 22:59:03.500 SC step 13: meta cond_scope ability 2 cast + item active, recipient = caster
+2026-10-24 22:59:03.515 SC step 14: meta cond_abilities_used cast 2 twice
+2026-10-24 22:59:03.530 SC step 15: meta cond_abilities_excluded all other abilities
+2026-10-24 22:59:03.546 SC step 16: meta cond_accuracy n/a
+2026-10-24 22:59:03.561 SC step 17: meta cond_misses none
+2026-10-24 22:59:03.577 SC step 18: meta cond_start_stacks n/a
+2026-10-24 22:59:03.596 SC step 19: meta cond_activations Echo Shard
+2026-10-24 22:59:03.608 SC step 20: meta cond_distance n/a (self recipient)
+2026-10-24 22:59:03.624 SC step 21: meta cond_targets enemies=1 allies=0
+2026-10-24 22:59:03.639 SC step 22: meta required_levels 1=1;2=4;3=1;4=1
+2026-10-24 22:59:03.656 SC step 23: meta levels_mode fixed
+2026-10-24 22:59:03.670 SC step 24: meta required_activation cast2|ability|ability_smoke_bomb|1
+2026-10-24 22:59:03.686 SC step 25: meta required_readback items_ok|1|==|1 ; Echo Shard used|item_used|==|1
+2026-10-24 22:59:03.702 SC step 26: meta rotation Smoke Bomb at 0s; Echo Shard at +late s (late = 0.0/0.6/1.2); Smoke Bomb again; controls: P0 cast alone, B after expiry, C item first
+2026-10-24 22:59:03.718 SC step 27: meta blocked_by ally recipient branch needs an allied bot; remaining-duration readback missing (mods = names only); self-cast of an ally-target ability unverified
+2026-10-24 22:59:03.732 SC step 28: meta player_title Echo Shard: cast twice?
+2026-10-24 22:59:03.748 SC step 29: meta player_what Echo Shard then Smoke Bomb again
+2026-10-24 22:59:03.764 SC step 30: meta player_why Testing a discovered combo
+2026-10-24 22:59:03.779 SC step 31: meta player_short Smoke Bomb x2 test
+2026-10-24 22:59:03.795 SC step 32: meta player_expect 2nd cast works or not
+2026-10-24 22:59:03.811 SC step 33: meta result_says WORKS if the second cast produces a new/extended modifier after the item press; DOES NOT WORK if the item press is rejected or the second cast is refused or adds nothing (compare with controls P0/B/C)
+2026-10-24 22:59:03.826 SC step 34: meta readbacks equipped_items,ability_tiers,activation:Echo Shard,ability_cast:2
+2026-10-24 22:59:03.842 SC step 35: setup Haze Haze
+2026-10-24 22:59:03.842 SETUP me already Haze
+2026-10-24 22:59:03.842 SETUP start me=Haze enemy=Haze
+2026-10-24 22:59:04.281 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | setup | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 0
+2026-10-24 22:59:06.279 DISPLAY re-assert: pawn/level/hero changed 1077316562/18/Haze -> 1077316562/19/Haze
+2026-10-24 22:59:07.280 DISPLAY re-assert: pawn/level/hero changed 1077316562/19/Haze -> 1077316562/20/Haze
+2026-10-24 22:59:08.280 DISPLAY re-assert: pawn/level/hero changed 1077316562/20/Haze -> 1077316562/21/Haze
+2026-10-24 22:59:09.279 DISPLAY re-assert: pawn/level/hero changed 1077316562/21/Haze -> 1077316562/22/Haze
+2026-10-24 22:59:09.889 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 22:59:09.889 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 22:59:09.889 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 22:59:09.920 SC step 36: raw citadel_unlock_flex_slots
+2026-10-24 22:59:09.936 SC step 37: abil 1 15 1 1
+2026-10-24 22:59:09.936 SC abil 1 ability_sleep_dagger bits=1 unlocked=True
+2026-10-24 22:59:09.936 SC abil 2 ability_smoke_bomb bits=15 unlocked=True
+2026-10-24 22:59:09.936 SC abil 3 ability_stacking_damage bits=1 unlocked=True
+2026-10-24 22:59:09.936 SC abil 4 ability_bullet_flurry bits=1 unlocked=True
+2026-10-24 22:59:09.952 SC step 38: souls 30000
+2026-10-24 22:59:09.967 SC step 39: hardreset 
+2026-10-24 22:59:09.967 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-24 22:59:09.967 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 22:59:09.967 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 22:59:09.983 SC step 40: setup Wraith Haze
+2026-10-24 22:59:09.984 SETUP start me=Wraith enemy=Haze
+2026-10-24 22:59:10.280 DISPLAY STATE 0 vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): active_reload | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 0
+2026-10-24 22:59:10.280 DISPLAY re-assert: pawn/level/hero changed 1077316562/22/Haze -> 1077316562/19/0
+2026-10-24 22:59:10.639 SC ABIL enforce slot 1 citadel_ability_card_toss bits 0 -> 1 (levels requested by the scenario)
+2026-10-24 22:59:10.640 SC ABIL enforce slot 2 citadel_ability_projectmind bits 0 -> 15 (levels requested by the scenario)
+2026-10-24 22:59:10.640 SC ABIL enforce slot 3 citadel_ability_wraith_rapidfire bits 0 -> 1 (levels requested by the scenario)
+2026-10-24 22:59:10.640 SC ABIL enforce slot 4 citadel_ability_psychic_lift bits 0 -> 1 (levels requested by the scenario)
+2026-10-24 22:59:10.640 ACT modifier seen: citadel_ability_card_toss/modifier_ability_resource_pool
+2026-10-24 22:59:11.280 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 0
+2026-10-24 22:59:11.280 DISPLAY re-assert: pawn/level/hero changed 1077316562/19/0 -> 1077316562/36/Wraith
+2026-10-24 22:59:16.888 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 22:59:16.888 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 22:59:16.888 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 22:59:16.920 SC step 41: wait 1.5
+2026-10-24 22:59:18.409 SC step 42: setup Haze Haze
+2026-10-24 22:59:18.410 SETUP start me=Haze enemy=Haze
+2026-10-24 22:59:19.159 SC ABIL enforce slot 1 ability_sleep_dagger bits 0 -> 1 (levels requested by the scenario)
+2026-10-24 22:59:19.159 SC ABIL enforce slot 2 ability_smoke_bomb bits 0 -> 15 (levels requested by the scenario)
+2026-10-24 22:59:19.159 SC ABIL enforce slot 3 ability_stacking_damage bits 0 -> 1 (levels requested by the scenario)
+2026-10-24 22:59:19.159 SC ABIL enforce slot 4 ability_bullet_flurry bits 0 -> 1 (levels requested by the scenario)
+2026-10-24 22:59:19.269 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 0
+2026-10-24 22:59:19.269 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/20/Haze
+2026-10-24 22:59:20.269 DISPLAY re-assert: pawn/level/hero changed 1077316562/20/Haze -> 1077316562/36/Haze
+2026-10-24 22:59:25.885 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 22:59:25.885 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 22:59:25.885 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 22:59:25.917 SC step 43: wait 1
+2026-10-24 22:59:26.917 SC step 44: raw citadel_unlock_flex_slots
+2026-10-24 22:59:26.933 SC step 45: unlock 7
+2026-10-24 22:59:26.933 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-24 22:59:26.933 SC unlock ability_smoke_bomb 15 -> 7
+2026-10-24 22:59:26.933 SC unlock ability_stacking_damage 1 -> 7
+2026-10-24 22:59:26.933 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-24 22:59:26.933 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 22:59:26.933 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 22:59:26.933 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 22:59:26.933 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 22:59:26.933 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 22:59:26.933 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 22:59:26.933 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 22:59:26.933 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 22:59:26.933 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 22:59:26.933 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 22:59:26.933 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 22:59:26.933 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 22:59:26.948 SC step 46: basemods 
+2026-10-24 22:59:26.948 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 22:59:26.948 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 22:59:26.963 SC step 47: fetch 
+2026-10-24 22:59:26.963 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 22:59:26.979 SC step 48: mark none
+2026-10-24 22:59:26.979 UCSTAT label=none secs=23.7 calls=1517 cmds=4476 calls/s=64.1 cmds/call=2.95 perCall[0..7+]=0/62/383/640/432/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.9 p99=47.2 max=104.7 gap>32ms=67 gap>50ms=5 allSlotCalls=4551 allSlotCalls/frame=3.00 slots=0:1517,1:1517,2:1517 | frames=1517 emptyFrames(no human cmd)=583 frameGapMs p50=15.7 p99=17.9 max=113.6 | fgSamples=93 fgPct=0 minimizedPct=0
+2026-10-24 22:59:26.979 DISPLAY PHASE idle-between-blocks
+2026-10-24 22:59:26.979 SC ITEMS@none: maxhp=1885 
+2026-10-24 22:59:26.995 SC step 49: souls 30000
+2026-10-24 22:59:27.011 SC step 50: give upgrade_ability_power_shard
+2026-10-24 22:59:27.011 SC gave upgrade_ability_power_shard
+2026-10-24 22:59:27.026 SC step 51: imbueown upgrade_ability_power_shard Signature2
+2026-10-24 22:59:27.026 SC imbueown upgrade_ability_power_shard -> Signature2: Success
+2026-10-24 22:59:27.026 SC IMBUE readback: item=upgrade_ability_power_shard present=True isImbued=True imbuedInto=[ability_smoke_bomb] target=ability_smoke_bomb api=Success => OK
+2026-10-24 22:59:27.042 SC ABIL enforce slot 1 ability_sleep_dagger bits 7 -> 1 (levels requested by the scenario)
+2026-10-24 22:59:27.042 SC ABIL enforce slot 2 ability_smoke_bomb bits 7 -> 15 (levels requested by the scenario)
+2026-10-24 22:59:27.042 SC ABIL enforce slot 3 ability_stacking_damage bits 7 -> 1 (levels requested by the scenario)
+2026-10-24 22:59:27.042 SC ABIL enforce slot 4 ability_bullet_flurry bits 7 -> 1 (levels requested by the scenario)
+2026-10-24 22:59:27.042 ACT modifier seen: upgrade_ability_power_shard/modifier_intrinsic_base
+2026-10-24 22:59:27.042 SC step 52: basemods 
+2026-10-24 22:59:27.042 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base
+2026-10-24 22:59:27.042 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 22:59:27.057 SC step 53: enemies 1 300 4
+2026-10-24 22:59:27.057 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 22:59:27.057 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 22:59:27.057 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 22:59:27.276 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 22:59:27.276 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 0
+2026-10-24 22:59:31.049 SC step 54: mark P0_cast_alone
+2026-10-24 22:59:31.049 UCSTAT label=none secs=4.1 calls=260 cmds=669 calls/s=64.1 cmds/call=2.57 perCall[0..7+]=0/5/103/150/2/0/0/0 gapMs mean=15.65 p50=15.6 p95=31.6 p99=32.5 max=35.5 gap>32ms=4 gap>50ms=0 allSlotCalls=780 allSlotCalls/frame=3.00 slots=0:260,1:260,2:260 | frames=260 emptyFrames(no human cmd)=78 frameGapMs p50=15.7 p99=17.0 max=36.2 | fgSamples=16 fgPct=0 minimizedPct=0
+2026-10-24 22:59:31.049 LEVELS P0_cast_alone: actual [ability_sleep_dagger=1, ability_smoke_bomb=4, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-24 22:59:31.049 DIST P0_cast_alone: target 350 units away
+2026-10-24 22:59:31.049 DISPLAY PHASE measure - P0_cast_alone
+2026-10-24 22:59:31.049 DISPLAY Haze - now testing [P0_cast_alone] - decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance | items read back: ability_power_shard | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 22:59:31.049 SC ITEMS@P0_cast_alone: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 22:59:31.065 SC step 55: cast 2 0.6
+2026-10-24 22:59:31.065 SC CASTDIAG before cast 2 0.6: events(AbilityExecuted so far)=0 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 22:59:31.080 SC ABILCD cast registered by cooldown start: ability_smoke_bomb slot=Signature2
+2026-10-24 22:59:31.080 ACT modifier seen: ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 22:59:31.080 ACT modifier seen: modifier_invis_fading
+2026-10-24 22:59:31.268 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P0_cast_alone] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 2
+2026-10-24 22:59:31.268 DISPLAY HUD[announce] #91 Hero: Haze - Measuring | Test: Echo Shard: cast twice? / Why: Testing a discovered combo / Gear: verified / Attempt 1 of 3 / Status: Running
+2026-10-24 22:59:31.674 SC step 56: mods 
+2026-10-24 22:59:31.674 SC MODS enemy@P0_cast_alone: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 22:59:31.674 SC MODS@P0_cast_alone: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis,modifier_invis_fading
+2026-10-24 22:59:31.689 SC step 57: wait 4.0
+2026-10-24 22:59:31.768 SC CASTDIAG after cast 2 0.6: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 22:59:35.690 SC step 58: mods 
+2026-10-24 22:59:35.690 SC MODS enemy@P0_cast_alone: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 22:59:35.690 SC MODS@P0_cast_alone: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 22:59:35.706 SC step 59: wait 9.5
+2026-10-24 22:59:45.218 SC step 60: mods 
+2026-10-24 22:59:45.218 SC MODS enemy@P0_cast_alone: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 22:59:45.218 SC MODS@P0_cast_alone: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 22:59:45.233 SC step 61: cds 
+2026-10-24 22:59:45.233 SC CD ability_sleep_dagger onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 22:59:45.233 SC CD ability_smoke_bomb onCd=False start=14315.1 end=14322.1 bits=15
+2026-10-24 22:59:45.233 SC CD ability_stacking_damage onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 22:59:45.233 SC CD ability_bullet_flurry onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 22:59:45.233 SC CD citadel_weapon_haze_set onCd=False start=0.0 end=0.0 bits=7
+2026-10-24 22:59:45.233 SC CD ability_melee_haze onCd=False start=0.0 end=0.0 bits=7
+2026-10-24 22:59:45.233 SC CD upgrade_ability_power_shard onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 22:59:45.233 SC CD listing done
+2026-10-24 22:59:45.249 SC step 62: mark none
+2026-10-24 22:59:45.249 UCSTAT label=P0_cast_alone secs=14.2 calls=909 cmds=2614 calls/s=64.1 cmds/call=2.88 perCall[0..7+]=0/16/262/450/181/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.7 p99=32.1 max=90.5 gap>32ms=18 gap>50ms=3 allSlotCalls=2727 allSlotCalls/frame=3.00 slots=0:909,1:909,2:909 | frames=909 emptyFrames(no human cmd)=304 frameGapMs p50=15.7 p99=16.7 max=91.8 | fgSamples=56 fgPct=0 minimizedPct=0
+2026-10-24 22:59:45.249 DISPLAY PHASE idle-between-blocks
+2026-10-24 22:59:45.249 SC ITEMS@none: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 22:59:45.265 SC step 63: hardreset 
+2026-10-24 22:59:45.265 SC RESET method=soft #1: clear items + cooldown/charge refill + heal, then statecheck against the clean baseline (hardreset only if it still differs after waiting)
+2026-10-24 22:59:45.265 DISPLAY PHASE reset - clean-state check: removing items and verifying no leftover stacks/buffs/cooldowns
+2026-10-24 22:59:45.280 SC step 64: clear 
+2026-10-24 22:59:45.280 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 2
+2026-10-24 22:59:45.295 SC step 65: cdreset each
+2026-10-24 22:59:45.295 SC CDRESET each: reset=16 skipped(insane/shocktarget/item)=0 (start/end written to 0; ResetCooldown() is NOT used: it starts a 700 s cooldown)
+2026-10-24 22:59:45.295 SC CDRESET verify: abilitiesStillOnCooldown=0 
+2026-10-24 22:59:45.311 SC step 66: heal 
+2026-10-24 22:59:45.327 SC step 67: wait 1.0
+2026-10-24 22:59:45.420 ACT modifier seen: ability_smoke_bomb/buff_modifier
+2026-10-24 22:59:46.327 SC step 68: fetch 
+2026-10-24 22:59:46.327 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 22:59:46.342 SC step 69: statecheck items=none mods=none cdready=1 charges=1 wait=6 hardreset=1
+2026-10-24 22:59:46.342 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 6.0s)
+2026-10-24 22:59:46.639 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 22:59:46.843 SC step 70: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=5.5
+2026-10-24 22:59:46.843 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 5.5s)
+2026-10-24 22:59:47.342 SC step 71: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=5.0
+2026-10-24 22:59:47.342 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 5.0s)
+2026-10-24 22:59:47.843 SC step 72: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=4.5
+2026-10-24 22:59:47.843 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 4.5s)
+2026-10-24 22:59:48.342 SC step 73: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=4.0
+2026-10-24 22:59:48.342 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 4.0s)
+2026-10-24 22:59:48.843 SC step 74: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=3.5
+2026-10-24 22:59:48.843 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 3.5s)
+2026-10-24 22:59:49.350 SC step 75: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=3.0
+2026-10-24 22:59:49.350 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 3.0s)
+2026-10-24 22:59:49.855 SC step 76: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=2.5
+2026-10-24 22:59:49.855 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 2.5s)
+2026-10-24 22:59:50.354 SC step 77: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=2.0
+2026-10-24 22:59:50.354 STATE none items=[none] tiers=1/15/1/1 extraMods=[none] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => MATCHES expected
+2026-10-24 22:59:50.354 SC VERIFY none PASS statecheck
+2026-10-24 22:59:50.370 SC step 78: souls 30000
+2026-10-24 22:59:50.386 SC step 79: give upgrade_ability_power_shard
+2026-10-24 22:59:50.386 SC gave upgrade_ability_power_shard
+2026-10-24 22:59:50.401 SC step 80: imbueown upgrade_ability_power_shard Signature2
+2026-10-24 22:59:50.401 SC imbueown upgrade_ability_power_shard -> Signature2: Success
+2026-10-24 22:59:50.401 SC IMBUE readback: item=upgrade_ability_power_shard present=True isImbued=True imbuedInto=[ability_smoke_bomb] target=ability_smoke_bomb api=Success => OK
+2026-10-24 22:59:50.417 SC step 81: basemods 
+2026-10-24 22:59:50.417 SC BASEMODS kept from the hero-swap baseline (8 mods) so leftovers are detectable
+2026-10-24 22:59:50.432 SC step 82: enemies 1 300 4
+2026-10-24 22:59:50.432 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 22:59:50.432 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 22:59:50.432 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 22:59:51.355 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 2
+2026-10-24 22:59:54.433 SC step 83: mark A_late0.0s
+2026-10-24 22:59:54.433 UCSTAT label=none secs=9.2 calls=588 cmds=1539 calls/s=64.1 cmds/call=2.62 perCall[0..7+]=0/7/226/340/15/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.6 p99=32.3 max=82.7 gap>32ms=13 gap>50ms=1 allSlotCalls=1764 allSlotCalls/frame=3.00 slots=0:588,1:588,2:588 | frames=588 emptyFrames(no human cmd)=183 frameGapMs p50=15.7 p99=17.0 max=85.6 | fgSamples=36 fgPct=0 minimizedPct=0
+2026-10-24 22:59:54.433 LEVELS A_late0.0s: actual [ability_sleep_dagger=1, ability_smoke_bomb=4, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-24 22:59:54.433 DIST A_late0.0s: target 350 units away
+2026-10-24 22:59:54.433 DISPLAY PHASE measure - A_late0.0s
+2026-10-24 22:59:54.433 DISPLAY Haze - now testing [A_late0.0s] - decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance | items read back: ability_power_shard | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 22:59:54.433 SC ITEMS@A_late0.0s: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 22:59:54.448 SC step 84: cast 2 0.6
+2026-10-24 22:59:54.448 SC CASTDIAG before cast 2 0.6: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 22:59:54.464 SC ABILCD cast registered by cooldown start: ability_smoke_bomb slot=Signature2
+2026-10-24 22:59:55.057 SC step 85: mods 
+2026-10-24 22:59:55.057 SC MODS enemy@A_late0.0s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 22:59:55.057 SC MODS@A_late0.0s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis,modifier_invis_fading
+2026-10-24 22:59:55.073 SC step 86: wait 0.0
+2026-10-24 22:59:55.088 SC step 87: cast i1 0.6
+2026-10-24 22:59:55.088 SC CASTDIAG before cast i1 0.6: events(AbilityExecuted so far)=4 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 22:59:55.354 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_late0.0s] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 5
+2026-10-24 22:59:55.698 SC step 88: rb item_used oncd:upgrade_ability_power_shard
+2026-10-24 22:59:55.699 SC RB item_used = 1  (oncd:upgrade_ability_power_shard)
+2026-10-24 22:59:55.713 SC step 89: mods 
+2026-10-24 22:59:55.713 SC MODS enemy@A_late0.0s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 22:59:55.713 SC MODS@A_late0.0s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis,modifier_invis_fading
+2026-10-24 22:59:55.729 SC step 90: cds 
+2026-10-24 22:59:55.729 SC CD ability_sleep_dagger onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 22:59:55.729 SC CD ability_smoke_bomb onCd=False start=0.0 end=0.0 bits=15
+2026-10-24 22:59:55.729 SC CD ability_stacking_damage onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 22:59:55.729 SC CD ability_bullet_flurry onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 22:59:55.729 SC CD citadel_weapon_haze_set onCd=False start=0.0 end=0.0 bits=7
+2026-10-24 22:59:55.729 SC CD ability_melee_haze onCd=False start=0.0 end=0.0 bits=7
+2026-10-24 22:59:55.729 SC CD upgrade_ability_power_shard onCd=True start=14339.1 end=14402.1 bits=1
+2026-10-24 22:59:55.729 SC CD listing done
+2026-10-24 22:59:55.744 SC step 91: cast 2 0.6
+2026-10-24 22:59:55.744 SC CASTDIAG before cast 2 0.6: events(AbilityExecuted so far)=5 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14339.1 end=14402.1] 
+2026-10-24 22:59:55.760 SC ABILCD cast registered by cooldown start: ability_smoke_bomb slot=Signature2
+2026-10-24 22:59:56.354 SC step 92: mods 
+2026-10-24 22:59:56.354 SC MODS enemy@A_late0.0s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 22:59:56.354 SC MODS@A_late0.0s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 22:59:56.354 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_late0.0s] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 7
+2026-10-24 22:59:56.370 SC step 93: wait 1.0
+2026-10-24 22:59:56.448 SC CASTDIAG after cast 2 0.6: events(AbilityExecuted so far)=7 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14339.1 end=14402.1] 
+2026-10-24 22:59:57.370 SC step 94: mods 
+2026-10-24 22:59:57.370 SC MODS enemy@A_late0.0s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 22:59:57.370 SC MODS@A_late0.0s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 22:59:57.386 SC step 95: wait 9.5
+2026-10-24 23:00:06.880 SC step 96: mods 
+2026-10-24 23:00:06.880 SC MODS enemy@A_late0.0s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:00:06.880 SC MODS@A_late0.0s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:00:06.896 SC step 97: mark none
+2026-10-24 23:00:06.896 UCSTAT label=A_late0.0s secs=12.4 calls=798 cmds=2185 calls/s=64.2 cmds/call=2.74 perCall[0..7+]=0/14/263/439/82/0/0/0 gapMs mean=15.60 p50=15.7 p95=31.7 p99=46.9 max=91.7 gap>32ms=33 gap>50ms=1 allSlotCalls=2392 allSlotCalls/frame=3.00 slots=0:797,1:797,2:798 | frames=797 emptyFrames(no human cmd)=284 frameGapMs p50=15.7 p99=31.0 max=92.2 | fgSamples=49 fgPct=0 minimizedPct=0
+2026-10-24 23:00:06.896 DISPLAY PHASE idle-between-blocks
+2026-10-24 23:00:06.896 SC ITEMS@none: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 23:00:06.897 SC step 98: hardreset 
+2026-10-24 23:00:06.897 SC RESET method=soft #2: clear items + cooldown/charge refill + heal, then statecheck against the clean baseline (hardreset only if it still differs after waiting)
+2026-10-24 23:00:06.897 DISPLAY PHASE reset - clean-state check: removing items and verifying no leftover stacks/buffs/cooldowns
+2026-10-24 23:00:06.927 SC step 99: clear 
+2026-10-24 23:00:06.942 SC step 100: cdreset each
+2026-10-24 23:00:06.942 SC CDRESET each: reset=16 skipped(insane/shocktarget/item)=0 (start/end written to 0; ResetCooldown() is NOT used: it starts a 700 s cooldown)
+2026-10-24 23:00:06.942 SC CDRESET verify: abilitiesStillOnCooldown=0 
+2026-10-24 23:00:06.959 SC step 101: heal 
+2026-10-24 23:00:06.959 SC step 102: wait 1.0
+2026-10-24 23:00:07.355 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 7
+2026-10-24 23:00:07.968 SC step 103: fetch 
+2026-10-24 23:00:07.968 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 23:00:07.984 SC step 104: statecheck items=none mods=none cdready=1 charges=1 wait=6 hardreset=1
+2026-10-24 23:00:07.984 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 6.0s)
+2026-10-24 23:00:08.281 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 23:00:08.485 SC step 105: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=5.5
+2026-10-24 23:00:08.485 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 5.5s)
+2026-10-24 23:00:08.984 SC step 106: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=5.0
+2026-10-24 23:00:08.984 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 5.0s)
+2026-10-24 23:00:09.484 SC step 107: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=4.5
+2026-10-24 23:00:09.484 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 4.5s)
+2026-10-24 23:00:09.984 SC step 108: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=4.0
+2026-10-24 23:00:09.984 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 4.0s)
+2026-10-24 23:00:10.484 SC step 109: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=3.5
+2026-10-24 23:00:10.484 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 3.5s)
+2026-10-24 23:00:10.984 SC step 110: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=3.0
+2026-10-24 23:00:10.984 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 3.0s)
+2026-10-24 23:00:11.485 SC step 111: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=2.5
+2026-10-24 23:00:11.485 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 2.5s)
+2026-10-24 23:00:12.001 SC step 112: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=2.0
+2026-10-24 23:00:12.001 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 2.0s)
+2026-10-24 23:00:12.486 SC step 113: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=1.5
+2026-10-24 23:00:12.486 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 1.5s)
+2026-10-24 23:00:13.002 SC step 114: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=1.0
+2026-10-24 23:00:13.002 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 1.0s)
+2026-10-24 23:00:13.516 SC step 115: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=0.5
+2026-10-24 23:00:13.516 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 0.5s)
+2026-10-24 23:00:14.021 SC step 116: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=0.0
+2026-10-24 23:00:14.021 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - hardreset and re-verify once
+2026-10-24 23:00:14.021 SC step 117: hardreset force
+2026-10-24 23:00:14.021 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-24 23:00:14.021 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 23:00:14.021 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 23:00:14.022 SC step 118: setup Wraith Haze
+2026-10-24 23:00:14.023 SETUP start me=Wraith enemy=Haze
+2026-10-24 23:00:14.362 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 7
+2026-10-24 23:00:14.362 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/6/Wraith
+2026-10-24 23:00:15.362 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 7
+2026-10-24 23:00:15.362 DISPLAY re-assert: pawn/level/hero changed 1077316562/6/Wraith -> 1077316562/36/Wraith
+2026-10-24 23:00:20.882 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 23:00:20.882 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 23:00:20.882 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 23:00:20.913 SC step 119: wait 1.5
+2026-10-24 23:00:22.409 SC step 120: setup Haze Haze
+2026-10-24 23:00:22.410 SETUP start me=Haze enemy=Haze
+2026-10-24 23:00:23.362 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 7
+2026-10-24 23:00:23.362 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/36/Haze
+2026-10-24 23:00:28.894 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 23:00:28.894 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 23:00:28.894 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 23:00:28.925 SC step 121: wait 1
+2026-10-24 23:00:29.925 SC step 122: raw citadel_unlock_flex_slots
+2026-10-24 23:00:29.940 SC step 123: unlock 7
+2026-10-24 23:00:29.941 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-24 23:00:29.941 SC unlock ability_smoke_bomb 15 -> 7
+2026-10-24 23:00:29.941 SC unlock ability_stacking_damage 1 -> 7
+2026-10-24 23:00:29.941 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-24 23:00:29.941 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 23:00:29.941 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 23:00:29.941 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 23:00:29.941 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 23:00:29.941 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 23:00:29.941 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 23:00:29.941 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 23:00:29.941 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 23:00:29.941 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 23:00:29.941 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 23:00:29.941 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 23:00:29.941 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 23:00:29.956 SC step 124: basemods 
+2026-10-24 23:00:29.956 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 23:00:29.956 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:00:29.972 SC step 125: fetch 
+2026-10-24 23:00:29.972 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 23:00:29.987 SC step 126: mark none
+2026-10-24 23:00:29.988 UCSTAT label=none secs=23.1 calls=1476 cmds=4864 calls/s=64.0 cmds/call=3.30 perCall[0..7+]=0/37/234/461/744/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.7 p99=47.4 max=109.6 gap>32ms=39 gap>50ms=13 allSlotCalls=4432 allSlotCalls/frame=3.00 slots=0:1478,1:1478,2:1476 | frames=1478 emptyFrames(no human cmd)=528 frameGapMs p50=15.7 p99=27.4 max=104.7 | fgSamples=91 fgPct=0 minimizedPct=0
+2026-10-24 23:00:29.988 DISPLAY PHASE idle-between-blocks
+2026-10-24 23:00:29.988 SC ITEMS@none: maxhp=1885 
+2026-10-24 23:00:30.003 SC step 127: statecheck items=none mods=none cdready=1 charges=1 wait=0.0 retried=1
+2026-10-24 23:00:30.003 STATE none items=[none] tiers=7/7/7/7 extraMods=[none] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => MATCHES expected
+2026-10-24 23:00:30.003 SC VERIFY none PASS statecheck
+2026-10-24 23:00:30.019 SC step 128: souls 30000
+2026-10-24 23:00:30.035 SC step 129: give upgrade_ability_power_shard
+2026-10-24 23:00:30.035 SC gave upgrade_ability_power_shard
+2026-10-24 23:00:30.050 SC step 130: imbueown upgrade_ability_power_shard Signature2
+2026-10-24 23:00:30.050 SC imbueown upgrade_ability_power_shard -> Signature2: Success
+2026-10-24 23:00:30.050 SC IMBUE readback: item=upgrade_ability_power_shard present=True isImbued=True imbuedInto=[ability_smoke_bomb] target=ability_smoke_bomb api=Success => OK
+2026-10-24 23:00:30.066 SC step 131: basemods 
+2026-10-24 23:00:30.066 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base
+2026-10-24 23:00:30.066 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:00:30.082 SC step 132: enemies 1 300 4
+2026-10-24 23:00:30.082 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 23:00:30.082 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 23:00:30.082 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 23:00:30.284 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 23:00:30.363 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 7
+2026-10-24 23:00:34.085 SC step 133: mark A_late0.6s
+2026-10-24 23:00:34.085 UCSTAT label=none secs=4.1 calls=264 cmds=849 calls/s=64.7 cmds/call=3.22 perCall[0..7+]=0/1/59/86/118/0/0/0 gapMs mean=15.52 p50=15.6 p95=31.4 p99=31.6 max=97.9 gap>32ms=1 gap>50ms=1 allSlotCalls=790 allSlotCalls/frame=3.00 slots=0:263,1:263,2:264 | frames=263 emptyFrames(no human cmd)=81 frameGapMs p50=15.6 p99=19.9 max=98.3 | fgSamples=16 fgPct=0 minimizedPct=0
+2026-10-24 23:00:34.085 LEVELS A_late0.6s: actual [ability_sleep_dagger=1, ability_smoke_bomb=4, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-24 23:00:34.085 DIST A_late0.6s: target 350 units away
+2026-10-24 23:00:34.085 DISPLAY PHASE measure - A_late0.6s
+2026-10-24 23:00:34.085 DISPLAY Haze - now testing [A_late0.6s] - decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance | items read back: ability_power_shard | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 23:00:34.085 SC ITEMS@A_late0.6s: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 23:00:34.100 SC step 134: cast 2 0.6
+2026-10-24 23:00:34.100 SC CASTDIAG before cast 2 0.6: events(AbilityExecuted so far)=7 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 23:00:34.116 SC ABILCD cast registered by cooldown start: ability_smoke_bomb slot=Signature2
+2026-10-24 23:00:34.366 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_late0.6s] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 9
+2026-10-24 23:00:34.709 SC step 135: mods 
+2026-10-24 23:00:34.709 SC MODS enemy@A_late0.6s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:00:34.709 SC MODS@A_late0.6s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis,modifier_invis_fading
+2026-10-24 23:00:34.726 SC step 136: wait 0.6
+2026-10-24 23:00:34.803 SC CASTDIAG after cast 2 0.6: events(AbilityExecuted so far)=9 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 23:00:35.334 SC step 137: cast i1 0.6
+2026-10-24 23:00:35.334 SC CASTDIAG before cast i1 0.6: events(AbilityExecuted so far)=9 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 23:00:35.365 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_late0.6s] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 10
+2026-10-24 23:00:35.943 SC step 138: mods 
+2026-10-24 23:00:35.943 SC MODS enemy@A_late0.6s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:00:35.943 SC MODS@A_late0.6s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:00:35.960 SC step 139: cds 
+2026-10-24 23:00:35.960 SC CD ability_sleep_dagger onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 23:00:35.960 SC CD ability_smoke_bomb onCd=False start=0.0 end=0.0 bits=15
+2026-10-24 23:00:35.960 SC CD ability_stacking_damage onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 23:00:35.960 SC CD ability_bullet_flurry onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 23:00:35.960 SC CD citadel_weapon_haze_set onCd=False start=0.0 end=0.0 bits=7
+2026-10-24 23:00:35.960 SC CD ability_melee_haze onCd=False start=0.0 end=0.0 bits=7
+2026-10-24 23:00:35.960 SC CD upgrade_ability_power_shard onCd=True start=14379.4 end=14442.4 bits=1
+2026-10-24 23:00:35.960 SC CD listing done
+2026-10-24 23:00:35.975 SC step 140: cast 2 0.6
+2026-10-24 23:00:35.975 SC CASTDIAG before cast 2 0.6: events(AbilityExecuted so far)=10 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14379.4 end=14442.4] 
+2026-10-24 23:00:35.991 SC ABILCD cast registered by cooldown start: ability_smoke_bomb slot=Signature2
+2026-10-24 23:00:36.366 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_late0.6s] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 12
+2026-10-24 23:00:36.584 SC step 141: mods 
+2026-10-24 23:00:36.584 SC MODS enemy@A_late0.6s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:00:36.584 SC MODS@A_late0.6s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:00:36.601 SC step 142: wait 1.0
+2026-10-24 23:00:36.678 SC CASTDIAG after cast 2 0.6: events(AbilityExecuted so far)=12 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14379.4 end=14442.4] 
+2026-10-24 23:00:37.600 SC step 143: mods 
+2026-10-24 23:00:37.600 SC MODS enemy@A_late0.6s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:00:37.600 SC MODS@A_late0.6s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:00:37.615 SC step 144: wait 9.5
+2026-10-24 23:00:47.118 SC step 145: mods 
+2026-10-24 23:00:47.118 SC MODS enemy@A_late0.6s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:00:47.118 SC MODS@A_late0.6s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:00:47.131 SC step 146: mark none
+2026-10-24 23:00:47.131 UCSTAT label=A_late0.6s secs=13.0 calls=831 cmds=2497 calls/s=64.0 cmds/call=3.00 perCall[0..7+]=0/57/191/274/309/0/0/0 gapMs mean=15.64 p50=15.5 p95=32.3 p99=86.8 max=717.6 gap>32ms=45 gap>50ms=18 allSlotCalls=2355 allSlotCalls/frame=3.09 slots=0:762,1:762,2:831 | frames=762 emptyFrames(no human cmd)=292 frameGapMs p50=15.6 p99=82.3 max=723.6 | fgSamples=46 fgPct=0 minimizedPct=0
+2026-10-24 23:00:47.131 DISPLAY PHASE idle-between-blocks
+2026-10-24 23:00:47.131 SC ITEMS@none: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 23:00:47.132 SC step 147: hardreset 
+2026-10-24 23:00:47.132 SC RESET method=soft #3: clear items + cooldown/charge refill + heal, then statecheck against the clean baseline (hardreset only if it still differs after waiting)
+2026-10-24 23:00:47.132 DISPLAY PHASE reset - clean-state check: removing items and verifying no leftover stacks/buffs/cooldowns
+2026-10-24 23:00:47.160 SC step 148: clear 
+2026-10-24 23:00:47.192 SC step 149: cdreset each
+2026-10-24 23:00:47.192 SC CDRESET each: reset=16 skipped(insane/shocktarget/item)=0 (start/end written to 0; ResetCooldown() is NOT used: it starts a 700 s cooldown)
+2026-10-24 23:00:47.192 SC CDRESET verify: abilitiesStillOnCooldown=0 
+2026-10-24 23:00:47.197 SC step 150: heal 
+2026-10-24 23:00:47.206 SC step 151: wait 1.0
+2026-10-24 23:00:47.870 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 12
+2026-10-24 23:00:48.211 SC step 152: fetch 
+2026-10-24 23:00:48.211 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 23:00:48.228 SC step 153: statecheck items=none mods=none cdready=1 charges=1 wait=6 hardreset=1
+2026-10-24 23:00:48.228 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 6.0s)
+2026-10-24 23:00:48.524 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 23:00:48.740 SC step 154: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=5.5
+2026-10-24 23:00:48.740 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 5.5s)
+2026-10-24 23:00:49.239 SC step 155: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=5.0
+2026-10-24 23:00:49.239 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 5.0s)
+2026-10-24 23:00:49.739 SC step 156: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=4.5
+2026-10-24 23:00:49.739 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 4.5s)
+2026-10-24 23:00:50.238 SC step 157: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=4.0
+2026-10-24 23:00:50.239 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 4.0s)
+2026-10-24 23:00:50.738 SC step 158: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=3.5
+2026-10-24 23:00:50.738 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 3.5s)
+2026-10-24 23:00:51.254 SC step 159: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=3.0
+2026-10-24 23:00:51.254 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 3.0s)
+2026-10-24 23:00:51.757 SC step 160: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=2.5
+2026-10-24 23:00:51.757 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 2.5s)
+2026-10-24 23:00:52.261 SC step 161: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=2.0
+2026-10-24 23:00:52.261 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 2.0s)
+2026-10-24 23:00:52.754 SC step 162: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=1.5
+2026-10-24 23:00:52.754 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 1.5s)
+2026-10-24 23:00:53.255 SC step 163: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=1.0
+2026-10-24 23:00:53.255 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 1.0s)
+2026-10-24 23:00:53.754 SC step 164: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=0.5
+2026-10-24 23:00:53.754 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 0.5s)
+2026-10-24 23:00:54.254 SC step 165: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=0.0
+2026-10-24 23:00:54.254 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - hardreset and re-verify once
+2026-10-24 23:00:54.270 SC step 166: hardreset force
+2026-10-24 23:00:54.270 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-24 23:00:54.270 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 23:00:54.270 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 23:00:54.286 SC step 167: setup Wraith Haze
+2026-10-24 23:00:54.287 SETUP start me=Wraith enemy=Haze
+2026-10-24 23:00:54.864 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 12
+2026-10-24 23:00:54.864 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/21/Wraith
+2026-10-24 23:00:55.864 DISPLAY re-assert: pawn/level/hero changed 1077316562/21/Wraith -> 1077316562/36/Wraith
+2026-10-24 23:01:01.018 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 23:01:01.018 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 23:01:01.018 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 23:01:01.050 SC step 168: wait 1.5
+2026-10-24 23:01:02.549 SC step 169: setup Haze Haze
+2026-10-24 23:01:02.550 SETUP start me=Haze enemy=Haze
+2026-10-24 23:01:02.862 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 12
+2026-10-24 23:01:02.862 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/5/Haze
+2026-10-24 23:01:03.862 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 12
+2026-10-24 23:01:03.862 DISPLAY re-assert: pawn/level/hero changed 1077316562/5/Haze -> 1077316562/36/Haze
+2026-10-24 23:01:09.014 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 23:01:09.014 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 23:01:09.014 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 23:01:09.045 SC step 170: wait 1
+2026-10-24 23:01:10.045 SC step 171: raw citadel_unlock_flex_slots
+2026-10-24 23:01:10.061 SC step 172: unlock 7
+2026-10-24 23:01:10.061 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-24 23:01:10.061 SC unlock ability_smoke_bomb 15 -> 7
+2026-10-24 23:01:10.061 SC unlock ability_stacking_damage 1 -> 7
+2026-10-24 23:01:10.061 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-24 23:01:10.061 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 23:01:10.061 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 23:01:10.061 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 23:01:10.061 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 23:01:10.061 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 23:01:10.061 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 23:01:10.061 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 23:01:10.061 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 23:01:10.061 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 23:01:10.061 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 23:01:10.061 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 23:01:10.061 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 23:01:10.076 SC step 173: basemods 
+2026-10-24 23:01:10.076 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 23:01:10.076 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:01:10.092 SC step 174: fetch 
+2026-10-24 23:01:10.092 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 23:01:10.108 SC step 175: mark none
+2026-10-24 23:01:10.108 UCSTAT label=none secs=22.9 calls=1467 cmds=4245 calls/s=63.9 cmds/call=2.89 perCall[0..7+]=0/63/396/642/366/0/0/0 gapMs mean=15.65 p50=15.6 p95=31.8 p99=46.9 max=92.3 gap>32ms=56 gap>50ms=9 allSlotCalls=4409 allSlotCalls/frame=3.00 slots=0:1471,1:1471,2:1467 | frames=1471 emptyFrames(no human cmd)=531 frameGapMs p50=15.7 p99=31.6 max=88.1 | fgSamples=90 fgPct=0 minimizedPct=0
+2026-10-24 23:01:10.108 DISPLAY PHASE idle-between-blocks
+2026-10-24 23:01:10.108 SC ITEMS@none: maxhp=1885 
+2026-10-24 23:01:10.123 SC step 176: statecheck items=none mods=none cdready=1 charges=1 wait=0.0 retried=1
+2026-10-24 23:01:10.123 STATE none items=[none] tiers=1/15/1/1 extraMods=[none] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => MATCHES expected
+2026-10-24 23:01:10.123 SC VERIFY none PASS statecheck
+2026-10-24 23:01:10.139 SC step 177: souls 30000
+2026-10-24 23:01:10.154 SC step 178: give upgrade_ability_power_shard
+2026-10-24 23:01:10.154 SC gave upgrade_ability_power_shard
+2026-10-24 23:01:10.170 SC step 179: imbueown upgrade_ability_power_shard Signature2
+2026-10-24 23:01:10.170 SC imbueown upgrade_ability_power_shard -> Signature2: Success
+2026-10-24 23:01:10.170 SC IMBUE readback: item=upgrade_ability_power_shard present=True isImbued=True imbuedInto=[ability_smoke_bomb] target=ability_smoke_bomb api=Success => OK
+2026-10-24 23:01:10.186 SC step 180: basemods 
+2026-10-24 23:01:10.186 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base
+2026-10-24 23:01:10.186 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:01:10.201 SC step 181: enemies 1 300 4
+2026-10-24 23:01:10.201 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 23:01:10.201 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 23:01:10.201 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 23:01:10.399 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 23:01:10.876 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 12
+2026-10-24 23:01:14.195 SC step 182: mark A_late1.2s
+2026-10-24 23:01:14.195 UCSTAT label=none secs=4.1 calls=262 cmds=711 calls/s=64.6 cmds/call=2.71 perCall[0..7+]=0/2/98/135/27/0/0/0 gapMs mean=15.54 p50=15.6 p95=31.5 p99=32.3 max=87.8 gap>32ms=6 gap>50ms=1 allSlotCalls=786 allSlotCalls/frame=3.00 slots=0:262,1:262,2:262 | frames=262 emptyFrames(no human cmd)=82 frameGapMs p50=15.7 p99=24.7 max=88.4 | fgSamples=16 fgPct=0 minimizedPct=0
+2026-10-24 23:01:14.195 LEVELS A_late1.2s: actual [ability_sleep_dagger=1, ability_smoke_bomb=4, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-24 23:01:14.195 DIST A_late1.2s: target 350 units away
+2026-10-24 23:01:14.195 DISPLAY PHASE measure - A_late1.2s
+2026-10-24 23:01:14.195 DISPLAY Haze - now testing [A_late1.2s] - decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance | items read back: ability_power_shard | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 23:01:14.195 SC ITEMS@A_late1.2s: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 23:01:14.211 SC step 183: cast 2 0.6
+2026-10-24 23:01:14.211 SC CASTDIAG before cast 2 0.6: events(AbilityExecuted so far)=12 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 23:01:14.227 SC ABILCD cast registered by cooldown start: ability_smoke_bomb slot=Signature2
+2026-10-24 23:01:14.821 SC step 184: mods 
+2026-10-24 23:01:14.821 SC MODS enemy@A_late1.2s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:01:14.821 SC MODS@A_late1.2s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis,modifier_invis_fading
+2026-10-24 23:01:14.836 SC step 185: wait 1.2
+2026-10-24 23:01:14.883 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_late1.2s] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 14
+2026-10-24 23:01:14.914 SC CASTDIAG after cast 2 0.6: events(AbilityExecuted so far)=14 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 23:01:16.046 SC step 186: cast i1 0.6
+2026-10-24 23:01:16.046 SC CASTDIAG before cast i1 0.6: events(AbilityExecuted so far)=14 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 23:01:16.656 SC step 187: mods 
+2026-10-24 23:01:16.656 SC MODS enemy@A_late1.2s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:01:16.656 SC MODS@A_late1.2s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:01:16.671 SC step 188: cds 
+2026-10-24 23:01:16.671 SC CD ability_sleep_dagger onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 23:01:16.671 SC CD ability_smoke_bomb onCd=False start=0.0 end=0.0 bits=15
+2026-10-24 23:01:16.671 SC CD ability_stacking_damage onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 23:01:16.671 SC CD ability_bullet_flurry onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 23:01:16.671 SC CD citadel_weapon_haze_set onCd=False start=0.0 end=0.0 bits=7
+2026-10-24 23:01:16.671 SC CD ability_melee_haze onCd=False start=0.0 end=0.0 bits=7
+2026-10-24 23:01:16.671 SC CD upgrade_ability_power_shard onCd=True start=14419.0 end=14482.0 bits=1
+2026-10-24 23:01:16.671 SC CD listing done
+2026-10-24 23:01:16.687 SC step 189: cast 2 0.6
+2026-10-24 23:01:16.687 SC CASTDIAG before cast 2 0.6: events(AbilityExecuted so far)=15 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14419.0 end=14482.0] 
+2026-10-24 23:01:16.703 SC ABILCD cast registered by cooldown start: ability_smoke_bomb slot=Signature2
+2026-10-24 23:01:16.890 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_late1.2s] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 17
+2026-10-24 23:01:17.296 SC step 190: mods 
+2026-10-24 23:01:17.296 SC MODS enemy@A_late1.2s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:01:17.296 SC MODS@A_late1.2s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:01:17.312 SC step 191: wait 1.0
+2026-10-24 23:01:17.389 SC CASTDIAG after cast 2 0.6: events(AbilityExecuted so far)=17 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14419.0 end=14482.0] 
+2026-10-24 23:01:18.312 SC step 192: mods 
+2026-10-24 23:01:18.312 SC MODS enemy@A_late1.2s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:01:18.312 SC MODS@A_late1.2s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:01:18.327 SC step 193: wait 9.5
+2026-10-24 23:01:27.828 SC step 194: mods 
+2026-10-24 23:01:27.828 SC MODS enemy@A_late1.2s: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:01:27.828 SC MODS@A_late1.2s: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:01:27.844 SC step 195: mark none
+2026-10-24 23:01:27.844 UCSTAT label=A_late1.2s secs=13.6 calls=873 cmds=2337 calls/s=64.0 cmds/call=2.68 perCall[0..7+]=0/22/299/491/61/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.6 p99=32.1 max=94.2 gap>32ms=11 gap>50ms=2 allSlotCalls=2619 allSlotCalls/frame=3.00 slots=0:873,1:873,2:873 | frames=873 emptyFrames(no human cmd)=287 frameGapMs p50=15.7 p99=17.6 max=101.6 | fgSamples=54 fgPct=0 minimizedPct=0
+2026-10-24 23:01:27.844 DISPLAY PHASE idle-between-blocks
+2026-10-24 23:01:27.844 SC ITEMS@none: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 23:01:27.859 SC step 196: hardreset 
+2026-10-24 23:01:27.859 SC RESET method=soft #4: clear items + cooldown/charge refill + heal, then statecheck against the clean baseline (hardreset only if it still differs after waiting)
+2026-10-24 23:01:27.859 DISPLAY PHASE reset - clean-state check: removing items and verifying no leftover stacks/buffs/cooldowns
+2026-10-24 23:01:27.875 SC step 197: clear 
+2026-10-24 23:01:27.890 SC step 198: cdreset each
+2026-10-24 23:01:27.890 SC CDRESET each: reset=16 skipped(insane/shocktarget/item)=0 (start/end written to 0; ResetCooldown() is NOT used: it starts a 700 s cooldown)
+2026-10-24 23:01:27.890 SC CDRESET verify: abilitiesStillOnCooldown=0 
+2026-10-24 23:01:27.890 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 17
+2026-10-24 23:01:27.906 SC step 199: heal 
+2026-10-24 23:01:27.921 SC step 200: wait 1.0
+2026-10-24 23:01:28.910 SC step 201: fetch 
+2026-10-24 23:01:28.910 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 23:01:28.925 SC step 202: statecheck items=none mods=none cdready=1 charges=1 wait=6 hardreset=1
+2026-10-24 23:01:28.925 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 6.0s)
+2026-10-24 23:01:29.222 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 23:01:29.426 SC step 203: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=5.5
+2026-10-24 23:01:29.426 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 5.5s)
+2026-10-24 23:01:29.925 SC step 204: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=5.0
+2026-10-24 23:01:29.925 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 5.0s)
+2026-10-24 23:01:30.426 SC step 205: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=4.5
+2026-10-24 23:01:30.426 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 4.5s)
+2026-10-24 23:01:30.925 SC step 206: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=4.0
+2026-10-24 23:01:30.925 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 4.0s)
+2026-10-24 23:01:31.429 SC step 207: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=3.5
+2026-10-24 23:01:31.429 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 3.5s)
+2026-10-24 23:01:31.928 SC step 208: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=3.0
+2026-10-24 23:01:31.928 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 3.0s)
+2026-10-24 23:01:32.429 SC step 209: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=2.5
+2026-10-24 23:01:32.429 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 2.5s)
+2026-10-24 23:01:32.928 SC step 210: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=2.0
+2026-10-24 23:01:32.928 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 2.0s)
+2026-10-24 23:01:33.428 SC step 211: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=1.5
+2026-10-24 23:01:33.428 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 1.5s)
+2026-10-24 23:01:33.928 SC step 212: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=1.0
+2026-10-24 23:01:33.928 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 1.0s)
+2026-10-24 23:01:34.448 SC step 213: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=0.5
+2026-10-24 23:01:34.448 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 0.5s)
+2026-10-24 23:01:34.951 SC step 214: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=0.0
+2026-10-24 23:01:34.951 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - hardreset and re-verify once
+2026-10-24 23:01:34.967 SC step 215: hardreset force
+2026-10-24 23:01:34.967 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-24 23:01:34.967 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 23:01:34.967 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 23:01:34.982 SC step 216: setup Wraith Haze
+2026-10-24 23:01:34.983 SETUP start me=Wraith enemy=Haze
+2026-10-24 23:01:35.889 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 17
+2026-10-24 23:01:35.889 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/36/Wraith
+2026-10-24 23:01:35.889 DISPLAY HUD[announce] #106 Hero: Wraith - Verifying | Test: Echo Shard: cast twice? / Why: Testing a discovered combo / Gear: verified / Attempt 1 of 3 / Status: Running
+2026-10-24 23:01:42.019 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 23:01:42.019 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 23:01:42.019 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 23:01:42.050 SC step 217: wait 1.5
+2026-10-24 23:01:43.549 SC step 218: setup Haze Haze
+2026-10-24 23:01:43.550 SETUP start me=Haze enemy=Haze
+2026-10-24 23:01:43.877 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 17
+2026-10-24 23:01:43.877 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/5/Haze
+2026-10-24 23:01:44.877 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 17
+2026-10-24 23:01:44.877 DISPLAY re-assert: pawn/level/hero changed 1077316562/5/Haze -> 1077316562/36/Haze
+2026-10-24 23:01:50.015 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 23:01:50.015 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 23:01:50.015 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 23:01:50.048 SC step 219: wait 1
+2026-10-24 23:01:51.063 SC step 220: raw citadel_unlock_flex_slots
+2026-10-24 23:01:51.077 SC step 221: unlock 7
+2026-10-24 23:01:51.077 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-24 23:01:51.077 SC unlock ability_smoke_bomb 15 -> 7
+2026-10-24 23:01:51.077 SC unlock ability_stacking_damage 1 -> 7
+2026-10-24 23:01:51.077 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-24 23:01:51.077 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 23:01:51.077 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 23:01:51.077 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 23:01:51.077 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 23:01:51.077 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 23:01:51.077 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 23:01:51.077 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 23:01:51.077 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 23:01:51.078 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 23:01:51.078 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 23:01:51.078 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 23:01:51.078 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 23:01:51.093 SC step 222: basemods 
+2026-10-24 23:01:51.093 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 23:01:51.093 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:01:51.110 SC step 223: fetch 
+2026-10-24 23:01:51.110 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 23:01:51.124 SC step 224: mark none
+2026-10-24 23:01:51.125 UCSTAT label=none secs=23.2 calls=1489 cmds=4396 calls/s=64.1 cmds/call=2.95 perCall[0..7+]=0/21/401/695/372/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.7 p99=46.9 max=98.4 gap>32ms=35 gap>50ms=10 allSlotCalls=4469 allSlotCalls/frame=3.00 slots=0:1490,1:1490,2:1489 | frames=1490 emptyFrames(no human cmd)=509 frameGapMs p50=15.7 p99=20.1 max=98.9 | fgSamples=91 fgPct=0 minimizedPct=0
+2026-10-24 23:01:51.125 DISPLAY PHASE idle-between-blocks
+2026-10-24 23:01:51.125 SC ITEMS@none: maxhp=1885 
+2026-10-24 23:01:51.140 SC step 225: statecheck items=none mods=none cdready=1 charges=1 wait=0.0 retried=1
+2026-10-24 23:01:51.141 STATE none items=[none] tiers=7/7/7/7 extraMods=[none] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => MATCHES expected
+2026-10-24 23:01:51.141 SC VERIFY none PASS statecheck
+2026-10-24 23:01:51.156 SC step 226: souls 30000
+2026-10-24 23:01:51.171 SC step 227: give upgrade_ability_power_shard
+2026-10-24 23:01:51.171 SC gave upgrade_ability_power_shard
+2026-10-24 23:01:51.187 SC step 228: imbueown upgrade_ability_power_shard Signature2
+2026-10-24 23:01:51.187 SC imbueown upgrade_ability_power_shard -> Signature2: Success
+2026-10-24 23:01:51.187 SC IMBUE readback: item=upgrade_ability_power_shard present=True isImbued=True imbuedInto=[ability_smoke_bomb] target=ability_smoke_bomb api=Success => OK
+2026-10-24 23:01:51.203 SC step 229: basemods 
+2026-10-24 23:01:51.203 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base
+2026-10-24 23:01:51.203 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:01:51.218 SC step 230: enemies 1 300 4
+2026-10-24 23:01:51.218 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 23:01:51.218 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 23:01:51.218 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 23:01:51.422 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 23:01:51.891 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 17
+2026-10-24 23:01:55.216 SC step 231: mark B_after_expiry
+2026-10-24 23:01:55.216 UCSTAT label=none secs=4.1 calls=264 cmds=740 calls/s=64.8 cmds/call=2.80 perCall[0..7+]=0/9/80/129/46/0/0/0 gapMs mean=15.49 p50=15.6 p95=31.8 p99=39.9 max=90.7 gap>32ms=12 gap>50ms=1 allSlotCalls=788 allSlotCalls/frame=3.01 slots=0:262,1:262,2:264 | frames=262 emptyFrames(no human cmd)=87 frameGapMs p50=15.7 p99=40.0 max=83.7 | fgSamples=16 fgPct=0 minimizedPct=0
+2026-10-24 23:01:55.216 LEVELS B_after_expiry: actual [ability_sleep_dagger=1, ability_smoke_bomb=4, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-24 23:01:55.216 DIST B_after_expiry: target 350 units away
+2026-10-24 23:01:55.216 DISPLAY PHASE measure - B_after_expiry
+2026-10-24 23:01:55.216 DISPLAY Haze - now testing [B_after_expiry] - decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance | items read back: ability_power_shard | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 23:01:55.216 SC ITEMS@B_after_expiry: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 23:01:55.230 SC step 232: cast 2 0.6
+2026-10-24 23:01:55.230 SC CASTDIAG before cast 2 0.6: events(AbilityExecuted so far)=17 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 23:01:55.247 SC ABILCD cast registered by cooldown start: ability_smoke_bomb slot=Signature2
+2026-10-24 23:01:55.840 SC step 233: mods 
+2026-10-24 23:01:55.840 SC MODS enemy@B_after_expiry: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:01:55.840 SC MODS@B_after_expiry: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis,modifier_invis_fading
+2026-10-24 23:01:55.856 SC step 234: wait 9.0
+2026-10-24 23:01:55.903 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_after_expiry] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 19
+2026-10-24 23:01:55.934 SC CASTDIAG after cast 2 0.6: events(AbilityExecuted so far)=19 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 23:02:04.858 SC step 235: mods 
+2026-10-24 23:02:04.858 SC MODS enemy@B_after_expiry: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:02:04.858 SC MODS@B_after_expiry: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:02:04.873 SC step 236: cast i1 0.6
+2026-10-24 23:02:04.873 SC CASTDIAG before cast i1 0.6: events(AbilityExecuted so far)=19 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 23:02:04.905 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_after_expiry] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 20
+2026-10-24 23:02:05.483 SC step 237: cds 
+2026-10-24 23:02:05.483 SC CD ability_sleep_dagger onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 23:02:05.483 SC CD ability_smoke_bomb onCd=False start=0.0 end=0.0 bits=15
+2026-10-24 23:02:05.483 SC CD ability_stacking_damage onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 23:02:05.483 SC CD ability_bullet_flurry onCd=False start=0.0 end=0.0 bits=1
+2026-10-24 23:02:05.483 SC CD citadel_weapon_haze_set onCd=False start=0.0 end=0.0 bits=7
+2026-10-24 23:02:05.483 SC CD ability_melee_haze onCd=False start=0.0 end=0.0 bits=7
+2026-10-24 23:02:05.483 SC CD upgrade_ability_power_shard onCd=True start=14467.8 end=14530.8 bits=1
+2026-10-24 23:02:05.483 SC CD listing done
+2026-10-24 23:02:05.498 SC step 238: cast 2 0.6
+2026-10-24 23:02:05.498 SC CASTDIAG before cast 2 0.6: events(AbilityExecuted so far)=20 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14467.8 end=14530.8] 
+2026-10-24 23:02:05.514 SC ABILCD cast registered by cooldown start: ability_smoke_bomb slot=Signature2
+2026-10-24 23:02:05.905 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_after_expiry] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 22
+2026-10-24 23:02:06.108 SC step 239: mods 
+2026-10-24 23:02:06.108 SC MODS enemy@B_after_expiry: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:02:06.108 SC MODS@B_after_expiry: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:02:06.123 SC step 240: wait 1.0
+2026-10-24 23:02:06.203 SC CASTDIAG after cast 2 0.6: events(AbilityExecuted so far)=22 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14467.8 end=14530.8] 
+2026-10-24 23:02:07.123 SC step 241: mods 
+2026-10-24 23:02:07.123 SC MODS enemy@B_after_expiry: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:02:07.123 SC MODS@B_after_expiry: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:02:07.140 SC step 242: wait 9.5
+2026-10-24 23:02:16.636 SC step 243: mark none
+2026-10-24 23:02:16.636 UCSTAT label=B_after_expiry secs=21.4 calls=1369 cmds=4168 calls/s=64.0 cmds/call=3.04 perCall[0..7+]=0/68/262/580/459/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.6 p99=32.2 max=96.3 gap>32ms=26 gap>50ms=3 allSlotCalls=4111 allSlotCalls/frame=3.00 slots=0:1371,1:1371,2:1369 | frames=1371 emptyFrames(no human cmd)=495 frameGapMs p50=15.7 p99=16.9 max=97.1 | fgSamples=84 fgPct=0 minimizedPct=0
+2026-10-24 23:02:16.636 DISPLAY PHASE idle-between-blocks
+2026-10-24 23:02:16.636 SC ITEMS@none: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 23:02:16.652 SC step 244: hardreset 
+2026-10-24 23:02:16.652 SC RESET method=soft #5: clear items + cooldown/charge refill + heal, then statecheck against the clean baseline (hardreset only if it still differs after waiting)
+2026-10-24 23:02:16.652 DISPLAY PHASE reset - clean-state check: removing items and verifying no leftover stacks/buffs/cooldowns
+2026-10-24 23:02:16.667 SC step 245: clear 
+2026-10-24 23:02:16.684 SC step 246: cdreset each
+2026-10-24 23:02:16.684 SC CDRESET each: reset=16 skipped(insane/shocktarget/item)=0 (start/end written to 0; ResetCooldown() is NOT used: it starts a 700 s cooldown)
+2026-10-24 23:02:16.684 SC CDRESET verify: abilitiesStillOnCooldown=0 
+2026-10-24 23:02:16.699 SC step 247: heal 
+2026-10-24 23:02:16.714 SC step 248: wait 1.0
+2026-10-24 23:02:16.901 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 22
+2026-10-24 23:02:17.714 SC step 249: fetch 
+2026-10-24 23:02:17.714 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 23:02:17.730 SC step 250: statecheck items=none mods=none cdready=1 charges=1 wait=6 hardreset=1
+2026-10-24 23:02:17.730 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 6.0s)
+2026-10-24 23:02:18.027 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 23:02:18.230 SC step 251: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=5.5
+2026-10-24 23:02:18.230 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 5.5s)
+2026-10-24 23:02:18.730 SC step 252: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=5.0
+2026-10-24 23:02:18.730 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 5.0s)
+2026-10-24 23:02:19.230 SC step 253: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=4.5
+2026-10-24 23:02:19.230 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 4.5s)
+2026-10-24 23:02:19.730 SC step 254: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=4.0
+2026-10-24 23:02:19.730 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/smokebomb_modifier_invis] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/smokebomb_modifier_invis - waiting (remaining 4.0s)
+2026-10-24 23:02:20.230 SC step 255: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=3.5
+2026-10-24 23:02:20.230 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 3.5s)
+2026-10-24 23:02:20.730 SC step 256: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=3.0
+2026-10-24 23:02:20.730 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 3.0s)
+2026-10-24 23:02:21.230 SC step 257: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=2.5
+2026-10-24 23:02:21.230 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 2.5s)
+2026-10-24 23:02:21.730 SC step 258: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=2.0
+2026-10-24 23:02:21.730 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 2.0s)
+2026-10-24 23:02:22.230 SC step 259: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=1.5
+2026-10-24 23:02:22.230 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 1.5s)
+2026-10-24 23:02:22.730 SC step 260: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=1.0
+2026-10-24 23:02:22.730 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 1.0s)
+2026-10-24 23:02:23.230 SC step 261: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=0.5
+2026-10-24 23:02:23.230 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - waiting (remaining 0.5s)
+2026-10-24 23:02:23.730 SC step 262: statecheck items=none mods=none cdready=1 charges=1 hardreset=1 wait=0.0
+2026-10-24 23:02:23.730 STATE none items=[none] tiers=1/15/1/1 extraMods=[ability_smoke_bomb/buff_modifier] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => differs: unexpected modifiers: ability_smoke_bomb/buff_modifier - hardreset and re-verify once
+2026-10-24 23:02:23.746 SC step 263: hardreset force
+2026-10-24 23:02:23.746 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-24 23:02:23.746 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 23:02:23.746 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 23:02:23.761 SC step 264: setup Wraith Haze
+2026-10-24 23:02:23.761 SETUP start me=Wraith enemy=Haze
+2026-10-24 23:02:23.902 DISPLAY STATE 0 vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 22
+2026-10-24 23:02:23.902 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/9/0
+2026-10-24 23:02:24.901 DISPLAY re-assert: pawn/level/hero changed 1077316562/9/0 -> 1077316562/36/0
+2026-10-24 23:02:25.895 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 22
+2026-10-24 23:02:25.895 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/0 -> 1077316562/36/Wraith
+2026-10-24 23:02:32.016 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 23:02:32.016 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 23:02:32.016 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 23:02:32.048 SC step 265: wait 1.5
+2026-10-24 23:02:33.548 SC step 266: setup Haze Haze
+2026-10-24 23:02:33.548 SETUP start me=Haze enemy=Haze
+2026-10-24 23:02:33.906 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): none | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 22
+2026-10-24 23:02:33.906 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/9/Haze
+2026-10-24 23:02:34.907 DISPLAY re-assert: pawn/level/hero changed 1077316562/9/Haze -> 1077316562/36/Haze
+2026-10-24 23:02:40.011 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 23:02:40.011 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 23:02:40.011 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 23:02:40.042 SC step 267: wait 1
+2026-10-24 23:02:41.042 SC step 268: raw citadel_unlock_flex_slots
+2026-10-24 23:02:41.058 SC step 269: unlock 7
+2026-10-24 23:02:41.058 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-24 23:02:41.058 SC unlock ability_smoke_bomb 15 -> 7
+2026-10-24 23:02:41.058 SC unlock ability_stacking_damage 1 -> 7
+2026-10-24 23:02:41.058 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-24 23:02:41.058 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 23:02:41.058 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 23:02:41.058 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 23:02:41.058 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 23:02:41.058 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 23:02:41.058 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 23:02:41.058 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 23:02:41.058 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 23:02:41.058 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 23:02:41.058 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 23:02:41.058 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 23:02:41.058 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 23:02:41.073 SC step 270: basemods 
+2026-10-24 23:02:41.073 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 23:02:41.073 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:02:41.089 SC step 271: fetch 
+2026-10-24 23:02:41.089 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 23:02:41.105 SC step 272: mark none
+2026-10-24 23:02:41.105 UCSTAT label=none secs=24.5 calls=1543 cmds=4041 calls/s=63.1 cmds/call=2.62 perCall[0..7+]=0/57/583/794/109/0/0/0 gapMs mean=15.86 p50=15.6 p95=31.7 p99=35.1 max=936.7 gap>32ms=36 gap>50ms=7 allSlotCalls=4675 allSlotCalls/frame=2.99 slots=0:1566,1:1566,2:1543 | frames=1566 emptyFrames(no human cmd)=553 frameGapMs p50=15.7 p99=17.2 max=83.6 | fgSamples=97 fgPct=0 minimizedPct=0
+2026-10-24 23:02:41.105 DISPLAY PHASE idle-between-blocks
+2026-10-24 23:02:41.105 SC ITEMS@none: maxhp=1885 
+2026-10-24 23:02:41.120 SC step 273: statecheck items=none mods=none cdready=1 charges=1 wait=0.0 retried=1
+2026-10-24 23:02:41.120 STATE none items=[none] tiers=7/7/7/7 extraMods=[none] onCooldown=[] chargesNotFull=[] lastHazeStacks=-1 targetHp=1357/1357 => MATCHES expected
+2026-10-24 23:02:41.120 SC VERIFY none PASS statecheck
+2026-10-24 23:02:41.136 SC step 274: souls 30000
+2026-10-24 23:02:41.151 SC step 275: give upgrade_ability_power_shard
+2026-10-24 23:02:41.152 SC gave upgrade_ability_power_shard
+2026-10-24 23:02:41.167 SC step 276: imbueown upgrade_ability_power_shard Signature2
+2026-10-24 23:02:41.168 SC imbueown upgrade_ability_power_shard -> Signature2: Success
+2026-10-24 23:02:41.168 SC IMBUE readback: item=upgrade_ability_power_shard present=True isImbued=True imbuedInto=[ability_smoke_bomb] target=ability_smoke_bomb api=Success => OK
+2026-10-24 23:02:41.183 SC step 277: basemods 
+2026-10-24 23:02:41.183 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base
+2026-10-24 23:02:41.183 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:02:41.198 SC step 278: enemies 1 300 4
+2026-10-24 23:02:41.198 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 23:02:41.198 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 23:02:41.198 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 23:02:41.402 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 23:02:41.949 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 22
+2026-10-24 23:02:45.197 SC step 279: mark C_item_first
+2026-10-24 23:02:45.197 UCSTAT label=none secs=4.1 calls=262 cmds=766 calls/s=64.5 cmds/call=2.92 perCall[0..7+]=0/18/64/100/80/0/0/0 gapMs mean=15.56 p50=15.6 p95=31.5 p99=37.0 max=119.6 gap>32ms=6 gap>50ms=2 allSlotCalls=784 allSlotCalls/frame=3.00 slots=0:261,1:261,2:262 | frames=261 emptyFrames(no human cmd)=88 frameGapMs p50=15.7 p99=46.2 max=124.8 | fgSamples=16 fgPct=0 minimizedPct=0
+2026-10-24 23:02:45.197 LEVELS C_item_first: actual [ability_sleep_dagger=1, ability_smoke_bomb=4, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-24 23:02:45.197 DIST C_item_first: target 350 units away
+2026-10-24 23:02:45.197 DISPLAY PHASE measure - C_item_first
+2026-10-24 23:02:45.197 DISPLAY Haze - now testing [C_item_first] - decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance | items read back: ability_power_shard | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 23:02:45.197 SC ITEMS@C_item_first: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 23:02:45.212 SC step 280: cast i1 0.6
+2026-10-24 23:02:45.212 SC CASTDIAG before cast i1 0.6: events(AbilityExecuted so far)=22 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=False start=0.0 end=0.0] 
+2026-10-24 23:02:45.817 SC step 281: cast 2 0.6
+2026-10-24 23:02:45.817 SC CASTDIAG before cast 2 0.6: events(AbilityExecuted so far)=23 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14508.1 end=14571.1] 
+2026-10-24 23:02:45.834 SC ABILCD cast registered by cooldown start: ability_smoke_bomb slot=Signature2
+2026-10-24 23:02:45.959 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decide the UNKNOWN cells of hypothesis T2-5d1b5cd1f7: item usable while the recipient is affected, refresh vs stack vs rejected, and late-press tolerance || ITEMS (read back): ability_power_shard | TIERS: 1/15/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [C_item_first] | task 52/52 (done 41, blocked 9) || MECH: intended second cast after the item reset on the imbued ability; recipient is the caster (no allied bot); no recipient lockout in text -> shots 0, hits 0, abilities executed 25
+2026-10-24 23:02:46.427 SC step 282: mods 
+2026-10-24 23:02:46.427 SC MODS enemy@C_item_first: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:02:46.427 SC MODS@C_item_first: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis,modifier_invis_fading
+2026-10-24 23:02:46.443 SC step 283: wait 1.0
+2026-10-24 23:02:46.537 SC CASTDIAG after cast 2 0.6: events(AbilityExecuted so far)=25 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14508.1 end=14571.1] 
+2026-10-24 23:02:47.442 SC step 284: cast 2 0.6
+2026-10-24 23:02:47.442 SC CASTDIAG before cast 2 0.6: events(AbilityExecuted so far)=25 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14508.1 end=14571.1] 
+2026-10-24 23:02:48.058 SC step 285: mods 
+2026-10-24 23:02:48.058 SC MODS enemy@C_item_first: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 23:02:48.058 SC MODS@C_item_first: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_ability_power_shard/modifier_intrinsic_base,ability_smoke_bomb/smokebomb_modifier_invis
+2026-10-24 23:02:48.073 SC step 286: wait 9.5
+2026-10-24 23:02:48.150 SC CASTDIAG after cast 2 0.6: events(AbilityExecuted so far)=25 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=15 unl=True cd=True] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_ability_power_shard[cd=True start=14508.1 end=14571.1] 
+2026-10-24 23:02:53.051 PERF slow hook 0 28.8 ms
+2026-10-24 23:02:57.568 SC step 287: mark none
+2026-10-24 23:02:57.568 UCSTAT label=C_item_first secs=12.3 calls=787 cmds=2510 calls/s=63.9 cmds/call=3.19 perCall[0..7+]=0/71/126/173/417/0/0/0 gapMs mean=15.68 p50=15.6 p95=31.9 p99=48.3 max=173.1 gap>32ms=38 gap>50ms=6 allSlotCalls=2355 allSlotCalls/frame=3.00 slots=0:784,1:784,2:787 | frames=784 emptyFrames(no human cmd)=304 frameGapMs p50=15.6 p99=42.8 max=173.4 | fgSamples=48 fgPct=0 minimizedPct=0
+2026-10-24 23:02:57.568 DISPLAY PHASE idle-between-blocks
+2026-10-24 23:02:57.568 SC ITEMS@none: maxhp=1885 upgrade_ability_power_shard
+2026-10-24 23:02:57.584 SC step 288: end 
+2026-10-24 23:02:57.584 SC ACC p=1 head=1: windows=0 missWindows=0 headWindows=0 dmgHitsOnEnemy=0 weakpointHits=0
+2026-10-24 23:02:57.584 SC EVENTS AbilityCastStarted:=15 AbilityExecuted:=15 AbilityExecuted:ability_smoke_bomb(cd)=10
+2026-10-24 23:02:57.584 SC HEALSRC UnitHealed|player|: n=467 requested=0 applied=0
+2026-10-24 23:02:57.584 SC TRK heal=29787 loss=29787 minHp=730 floorHits=0 firstFloorMs=0 secs=434.2 maxhp=1885
+2026-10-24 23:02:57.584 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-24 23:02:57.584 PERF tick n=15168 avg=0.02ms max=28.8ms slow>20ms=1 | usercmd n=45550 max=9.3ms slow=0 | abilityAttempt n=0 max=0.0ms
+2026-10-24 23:02:57.584 UCSTAT label=scenario-end secs=0.0 calls=2 cmds=8 calls/s=47393.4 cmds/call=4.00 perCall[0..7+]=0/0/0/0/2/0/0/0 gapMs mean=0.04 p50=0.0 p95=0.0 p99=0.0 max=0.0 gap>32ms=0 gap>50ms=0 allSlotCalls=4 allSlotCalls/frame=4.00 slots=0:1,1:1,2:2 | frames=1 emptyFrames(no human cmd)=0 frameGapMs p50=- p99=- max=0.0 | fgSamples=0 fgPct=-1 minimizedPct=-1
+2026-10-24 23:02:57.584 ACT SUMMARY cast2: count=10 (needed 1) uptime=0.0s of 234s (0%) avgDuration=0.0s shortestGap=n/a (a continuous-bonus assumption would be 100% uptime) activeWhileFiring=n/a of 0.0s
+2026-10-24 23:02:57.584 DIST SUMMARY blocks=6 inRange=6 outOfRange=0 expected=mixed
+2026-10-24 23:02:57.584 RB CHECK items_ok: 1=1 == 1=1 => PASS
+2026-10-24 23:02:57.584 RB CHECK Echo Shard used: item_used=1 == 1=1 => PASS
+2026-10-24 23:02:57.584 DISPLAYPERF ticks=233 avg=0.133ms max=0.575ms
+2026-10-24 23:02:57.584 DISPLAY FINISHED: INTERACTION - Checking whether Echo Shard lets Smoke Bomb be cast twice in a row, and what the second cast does. -> shots 0, bullet hits 0, damage events on target 0 (end step)
+2026-10-24 23:02:57.585 DISPLAY MEASURED: shots 0, bullet hits 0, damage events on target 0; verify-pass/fail are in the run log
+2026-10-24 23:02:57.585 DISPLAY ASSUMED: none declared
+2026-10-24 23:02:57.585 DISPLAY CALCULATED: none
+2026-10-24 23:02:57.585 DISPLAY CONCLUSION: INSUFFICIENT EVIDENCE - no decision
+2026-10-24 23:02:57.585 SC scenario int_disc_T2_5d1b5cd1f7_v16 finished: end step
+2026-10-24 23:02:57.960 DISPLAY SENT Done: Smoke Bomb x2 test
+2026-10-24 23:02:57.961 QR TASK-END v16:T2_5d1b5cd1f7#1 why=end step
+2026-10-24 23:02:58.960 DISPLAY SENT 0 shots, 0 hits recorded
+2026-10-24 23:02:59.960 DISPLAY SENT 2nd cast works or not
+2026-10-24 23:02:59.961 DISPLAY NEXT: queue empty
+2026-10-24 23:02:59.961 QR TASK-RESULT v16:T2_5d1b5cd1f7#1 VALID=yes 

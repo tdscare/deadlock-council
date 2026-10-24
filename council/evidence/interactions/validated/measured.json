@@ -7,10 +7,10 @@
   {
    "id": "M-haze-active-reload-2nd-press",
    "hero": "haze",
-   "fact": "Active Reload second-press delays (s after first press) -> reload: 0.8 none (2.469), 0.9 none, 1.0 none, 1.10 effect (1.203 vs base 2.406, buff 7.0 s), 1.2 effect (1.266 vs 2.438), 1.3 none, 1.4 none, 1.5 none, 1.6 none (2.438). Window lies inside (1.0, 1.3) s; edges unmeasured.",
+   "fact": "Active Reload second-press delays (s after first press) -> reload seconds. NO effect (reload stays ~2.4): 0.8, 0.9, 1.0 (x3 trials: act_ar2, act_ar3 twice), 1.4, 1.5, 1.6, and 1.3 once (act_ar2). EFFECT (reload ends ~0.01-0.09 s after the press): 1.05 (1.06, 1.16), 1.10 (1.20, 1.16, 1.11), 1.15 (1.20, 1.17), 1.20 (1.27, 1.24; earlier run 1.27), 1.25 (1.31, 1.30), 1.30 (1.36 twice in act_ar3). Active Reload buff 7.0 s seen. Window opens between 1.00 and 1.05 s and closes at about 1.30-1.40 s (1.30 effect in 2 of 3 trials).",
    "tier": "CONTROLLED SANDBOX RESULT (preliminary)",
-   "n": "1 per delay (9 delays, two sessions)",
-   "status": "CONTROLLED SANDBOX RESULT, PRELIMINARY: n=1 per delay; window edges and width unmeasured; act_ar2 server frames clean (max 76 ms)",
+   "n": "1-4 per delay; act_ar3 = 2 per delay at 1.00-1.30 in 0.05 steps, one session",
+   "status": "CONTROLLED SANDBOX RESULT, PRELIMINARY: act_ar3 task flagged NOT CLEAN by the frame check (26 server frames 105-190 ms from host load while Overwatch ran at ~85 percent total CPU); 3 of 15 trials had a spike inside the reload (1.05 first, 1.15 first, 1.20 first); the effect/no-effect outcome of every delay agreed across its pair, exact reload seconds in those 3 trials are not clean. Repeat on a quiet host before dropping PRELIMINARY.",
    "log": "E:\\deadworks-server\\sbx_logs\\plugin.log between 'QR TASK-START act:ar1#1' (16:24:56.393) and 'QR TASK-END act:ar1#1' (16:25:47.452); result E:\\deadworks-server\\sbx_queue\\results\\act_ar1.json",
    "cited_lines": [
     "SC RELOAD done: first press -> refill 2.44s (clip 19->30, second press none)",
@@ -33,7 +33,42 @@
      "outcome": "confirmed-window",
      "stage": 2
     }
-   ]
+   ],
+   "provenance_note": "combined entry mixes runs with different validity: NO provenance block (UNVERIFIED). Per-run candidates in provenance_runs (manifest values verbatim); only p2:act_ar2 is frame-clean, see split entry M-haze-active-reload-2nd-press--p2_act_ar2. act:ar2 and p3:act_ar3 are NOT CLEAN, act:ar1 has no frame data.",
+   "provenance_runs": {
+    "act:ar1": {
+     "valid_flag": "VALID: yes",
+     "frame_validity": "not covered (server_stdout.log starts 19:00:38 local)",
+     "build": "4B24B567",
+     "buildVersions": null
+    },
+    "p2:act_ar2": {
+     "valid_flag": "VALID: yes",
+     "frame_validity": "clean",
+     "build": "4B24B567",
+     "buildVersions": null
+    },
+    "act:ar2": {
+     "valid_flag": "VALID: yes",
+     "frame_validity": "NOT CLEAN(timing-sensitive, >100ms)",
+     "build": "5DA596D0",
+     "buildVersions": {
+      "clientVersion": "6819",
+      "serverVersion": "6819",
+      "match": true
+     }
+    },
+    "p3:act_ar3": {
+     "valid_flag": "VALID: yes",
+     "frame_validity": "NOT CLEAN(timing-sensitive, >100ms)",
+     "build": "33D1B53F",
+     "buildVersions": {
+      "clientVersion": "6819",
+      "serverVersion": "6819",
+      "match": true
+     }
+    }
+   }
   },
   {
    "id": "M-drifter-rend-crushing-fists",
@@ -70,7 +105,90 @@
      "stage": 2,
      "mechanism": "item scales the MELEE-typed part of the ability damage (x1.49), not the ABILITY-typed part"
     }
-   ]
+   ],
+   "provenance": {
+    "result_file": "M-drifter-rend-crushing-fists/results/v14_T5_77785e7cae.json",
+    "result_sha256": "b8bfdba46ef066f64b1713178269c0553efa661456cbf3996bb8ca2da3a29284",
+    "task_id": "v14:T5_77785e7cae",
+    "runner_valid": "VALID: yes",
+    "frame_validity": "clean",
+    "build_hash": "5DA596D052D0327510989E6D594CD5174D260E8AA66017E10407FBDAB0016572",
+    "build_hash_source": "INFERRED by tester from plugin load timeline + verified_builds.csv (manifest note); build id 5DA596D0",
+    "bundle_path": "evidence_export",
+    "attempt": 1,
+    "client_version": "6819",
+    "server_version": "6819",
+    "n": 4,
+    "n_min": 4,
+    "n_min_source": "NOT a stated numeric minimum: the pre-run scenario rotation meta fixes the design as arms interleaved A,B,A,B (4 blocks per range); n_min = that design count. No separate minimum-trials field exists in the scenario or manifest. Coordinator to accept or reject."
+   },
+   "provenance_note": "replicate run disc:T5_77785e7cae#2 has frame status flag(non-timing); not used for the gate (single result design); v14 is the cited result"
+  },
+  {
+   "id": "M-haze-echo-shard-smoke-bomb",
+   "hero": "haze",
+   "fact": "With Echo Shard imbued on Smoke Bomb (imbue API read back OK), using the item (button path) 0.0, 0.6 and 1.2 s after a Smoke Bomb cast, and after the buff expired, immediately cleared the Smoke Bomb cooldown (start/end=0) and a second cast registered every time; the item went on a 63.0 s cooldown. Without the imbue, the item press did nothing.",
+   "tier": "CONTROLLED SANDBOX RESULT",
+   "n": "1 trial per arm (A_late0.0/0.6/1.2, B_after_expiry), one session, self recipient only",
+   "status": "valid; binary outcomes clean (spikes outside press-to-cast intervals); invisibility-modifier durations and refresh-vs-stack NOT established (a 723 ms server frame at 23:00:42 fell inside the A_late0.6 observation window)",
+   "does_not_show": [
+    "refresh vs stack of the invisibility modifier",
+    "build value, or ally-recipient behaviour (no ally bot)",
+    "item-first arm C outcome on the item cooldown (not read)"
+   ],
+   "log": "plugin.log 'QR TASK-START v16:T2_5d1b5cd1f7#1' 22:59:03 .. 23:02:57; result sbx_queue\\results\\v16_T2_5d1b5cd1f7.json",
+   "hypothesis": "T2-5d1b5cd1f7",
+   "reported": "2026-10-24",
+   "provenance": {
+    "result_file": "M-haze-echo-shard-smoke-bomb/results/v16_T2_5d1b5cd1f7.json",
+    "result_sha256": "2b63ba0046a8dd0afd2ad8a3f3a4e623e0fe2bd00252477b616b0d772e0e66a6",
+    "task_id": "v16:T2_5d1b5cd1f7",
+    "runner_valid": "VALID: yes",
+    "frame_validity": "INVALID(timing-sensitive, >250ms)",
+    "build_hash": "33D1B53FFF8F876CD5FFE92326EF1D2C0685BB43C79E42D93D0D9FA17CBE1EFC",
+    "build_hash_source": "INFERRED by tester from plugin load timeline + verified_builds.csv (manifest note); build id 33D1B53F",
+    "bundle_path": "evidence_export",
+    "attempt": 1,
+    "client_version": "6819",
+    "server_version": "6819",
+    "n": 1
+   },
+   "provenance_note": "held back: frame status INVALID(timing-sensitive, >250ms) and no pre-registered rule classifies the binary outcomes as timing-insensitive; no stated n_min"
+  },
+  {
+   "id": "M-haze-active-reload-2nd-press--p2_act_ar2",
+   "hero": "haze",
+   "fact": "SUBSET: claims limited to run p2:act_ar2 (frame clean, VALID: yes); the delay table is in the cited result file results/p2_act_ar2.md. The combined entry above is NOT supported by this subset alone.",
+   "tier": "CONTROLLED SANDBOX RESULT (preliminary)",
+   "n": "1 run (p2:act_ar2); per-delay counts in the result file",
+   "status": "CONTROLLED SANDBOX RESULT, PRELIMINARY: act_ar3 task flagged NOT CLEAN by the frame check (26 server frames 105-190 ms from host load while Overwatch ran at ~85 percent total CPU); 3 of 15 trials had a spike inside the reload (1.05 first, 1.15 first, 1.20 first); the effect/no-effect outcome of every delay agreed across its pair, exact reload seconds in those 3 trials are not clean. Repeat on a quiet host before dropping PRELIMINARY.",
+   "log": "E:\\deadworks-server\\sbx_logs\\plugin.log between 'QR TASK-START act:ar1#1' (16:24:56.393) and 'QR TASK-END act:ar1#1' (16:25:47.452); result E:\\deadworks-server\\sbx_queue\\results\\act_ar1.json",
+   "cited_lines": [
+    "SC RELOAD done: first press -> refill 2.44s (clip 19->30, second press none)",
+    "SC RB base_reload = 2.438",
+    "SC RB ar_a = 2.469 (0.80 s)",
+    "SC RELOAD done: ... 1.27s (clip 21->36, second press 1.20s)",
+    "ACT modifier seen: upgrade_active_reload/buff (16:25:38.952)",
+    "SC RB ar_b = 1.266",
+    "SC RB ar_c = 2.438 (1.60 s)",
+    "RB CHECK Timed press reloaded faster: ar_best=1.266 < base_reload=2.438 => PASS"
+   ],
+   "not_cited": "act:ar1 activation COUNT (matched the intrinsic modifier; untrustworthy)",
+   "reported": "2026-10-24",
+   "log2": "E:\\deadworks-server\\sbx_logs\\plugin.log between 'QR TASK-START p2:act_ar2#1' (2026-10-24 20:00:19) and 'QR TASK-END p2:act_ar2#1' (20:01:28); result sbx_queue\\results\\p2_act_ar2.json",
+   "provenance_note": "clean run, but pre-5DA596D0: no client/server versions recorded and no stated n_min, so the gate cannot pass it; nothing is invented to fix that",
+   "provenance": {
+    "result_file": "M-haze-active-reload-2nd-press/results/p2_act_ar2.json",
+    "result_sha256": "757037f4f9fbcd771201c36da09cc29eeccea21392a976702f9c475c5a114090",
+    "task_id": "p2:act_ar2",
+    "runner_valid": "VALID: yes",
+    "frame_validity": "clean",
+    "build_hash": "4B24B5671C1B8A7602CFA62E490B250B87EF68E68A2BE76B8097D810D62592FC",
+    "build_hash_source": "INFERRED by tester from plugin load timeline + verified_builds.csv (manifest note); build id 4B24B567",
+    "bundle_path": "evidence_export",
+    "attempt": 1,
+    "version_note": "no buildVersions recorded for this run (runner writes them from build 5DA596D0)"
+   }
   }
  ]
 }

@@ -1,0 +1,813 @@
+# plugin.log excerpt stage0:tiers_bitstest attempt 1 lines 59647-60458; local time UTC+1
+2026-10-24 14:25:10.919 QR TASK-START stage0:tiers_bitstest#1 scenario=bitstest
+2026-10-24 14:25:10.919 DISPLAY FULL Wraith | Level 20, 0 souls spent, no items | BASELINE: Do UpgradeBits 1/3/7/15 read back as unlocked/T1/T2/T3 on Wraith abilities? (build: none; items: none; why: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued)
+2026-10-24 14:25:10.919 SC scenario bitstest started, 130 steps origin=runner:stage0:tiers_bitstest
+2026-10-24 14:25:10.936 SC step 0: meta kind BASELINE
+2026-10-24 14:25:10.949 SC step 1: meta hero Wraith
+2026-10-24 14:25:10.967 SC step 2: meta checkpoint Level 20, 0 souls spent, no items
+2026-10-24 14:25:10.980 SC step 3: meta build none
+2026-10-24 14:25:10.996 SC step 4: meta items none
+2026-10-24 14:25:11.013 SC step 5: meta question Do UpgradeBits 1/3/7/15 read back as unlocked/T1/T2/T3 on Wraith abilities?
+2026-10-24 14:25:11.029 SC step 6: meta purpose verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued
+2026-10-24 14:25:11.043 SC step 7: meta mechanics ability tier readback only; no damage measured
+2026-10-24 14:25:11.058 SC step 8: meta expectedstate items=none stacks=0 tiers set by abil per block
+2026-10-24 14:25:11.075 SC step 9: meta accmode none - no gun accuracy measured
+2026-10-24 14:25:11.090 SC step 10: meta accwhy this is a state readback test, not a damage test
+2026-10-24 14:25:11.108 SC step 11: meta abilities abilities read back, not cast for damage
+2026-10-24 14:25:11.122 SC step 12: meta runs 1/1
+2026-10-24 14:25:11.137 SC step 13: meta player_title Wraith lvl 20: ability tiers
+2026-10-24 14:25:11.152 SC step 14: meta player_what Do tier settings really apply?
+2026-10-24 14:25:11.169 SC step 15: meta player_why No items: only tiers change
+2026-10-24 14:25:11.184 SC step 16: meta player_short Ability tier check
+2026-10-24 14:25:11.200 SC step 17: meta player_expect Each tier reads back right
+2026-10-24 14:25:11.215 SC step 18: setup Wraith Haze
+2026-10-24 14:25:11.217 SETUP start me=Wraith enemy=Haze
+2026-10-24 14:25:11.909 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | setup | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 0
+2026-10-24 14:25:11.909 DISPLAY SENT Next: Ability tier check
+2026-10-24 14:25:17.759 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 14:25:17.759 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 14:25:17.790 SC step 19: basemods 
+2026-10-24 14:25:17.790 SC BASEMODS citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher
+2026-10-24 14:25:17.790 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 14:25:17.807 SC step 20: mark none
+2026-10-24 14:25:17.807 UCSTAT label=none secs=6.8 calls=409 cmds=1234 calls/s=60.5 cmds/call=3.02 perCall[0..7+]=0/63/69/75/202/0/0/0 gapMs mean=16.57 p50=0.1 p95=65.8 p99=103.3 max=139.5 gap>32ms=80 gap>50ms=43 allSlotCalls=1289 allSlotCalls/frame=2.93 slots=0:440,1:440,2:409 | frames=440 emptyFrames(no human cmd)=288 frameGapMs p50=15.5 p99=43.5 max=114.8 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-24 14:25:17.807 DISPLAY PHASE idle-between-blocks
+2026-10-24 14:25:17.807 SC ITEMS@none: maxhp=1570 
+2026-10-24 14:25:17.823 SC step 21: hardreset 
+2026-10-24 14:25:17.823 DISPLAY PHASE reset - clean-state reset: briefly switching to Haze and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 14:25:17.823 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 14:25:17.837 SC step 22: setup Haze Haze
+2026-10-24 14:25:17.839 SETUP start me=Haze enemy=Haze
+2026-10-24 14:25:17.936 DISPLAY STATE 0 vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | reset | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 0
+2026-10-24 14:25:18.925 DISPLAY STATE Haze vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | reset | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 0
+2026-10-24 14:25:20.938 DISPLAY SENT Wraith lvl 20: ability tiers
+2026-10-24 14:25:21.940 DISPLAY SENT Do tier settings really apply?
+2026-10-24 14:25:22.939 DISPLAY SENT No items: only tiers change
+2026-10-24 14:25:24.760 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 14:25:24.760 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 14:25:24.791 SC step 23: wait 1.5
+2026-10-24 14:25:26.291 SC step 24: setup Wraith Haze
+2026-10-24 14:25:26.292 SETUP start me=Wraith enemy=Haze
+2026-10-24 14:25:26.942 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | reset | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 0
+2026-10-24 14:25:33.759 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 14:25:33.759 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 14:25:33.789 SC step 25: wait 1
+2026-10-24 14:25:34.790 SC step 26: raw citadel_unlock_flex_slots
+2026-10-24 14:25:34.805 SC step 27: unlock 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_card_toss 0 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_projectmind 0 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_wraith_rapidfire 0 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_psychic_lift 0 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 14:25:34.805 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_weapon_wraith_set 1 -> 7
+2026-10-24 14:25:34.805 SC unlock citadel_ability_melee_wraith 1 -> 7
+2026-10-24 14:25:34.821 SC step 28: basemods 
+2026-10-24 14:25:34.821 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,citadel_ability_card_toss/modifier_ability_resource_pool
+2026-10-24 14:25:34.821 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 14:25:34.837 SC step 29: fetch 
+2026-10-24 14:25:34.837 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 14:25:34.852 SC step 30: mark none
+2026-10-24 14:25:34.852 UCSTAT label=none secs=17.0 calls=780 cmds=2460 calls/s=45.8 cmds/call=3.15 perCall[0..7+]=0/79/128/167/406/0/0/0 gapMs mean=21.84 p50=0.1 p95=124.9 p99=232.4 max=312.7 gap>32ms=133 gap>50ms=101 allSlotCalls=2962 allSlotCalls/frame=2.71 slots=0:1091,1:1091,2:780 | frames=1091 emptyFrames(no human cmd)=794 frameGapMs p50=15.5 p99=24.2 max=67.1 | fgSamples=67 fgPct=0 minimizedPct=0
+2026-10-24 14:25:34.852 DISPLAY PHASE idle-between-blocks
+2026-10-24 14:25:34.852 SC ITEMS@none: maxhp=1955 
+2026-10-24 14:25:34.868 SC step 31: raw citadel_unlock_flex_slots
+2026-10-24 14:25:34.883 SC step 32: setgold 0
+2026-10-24 14:25:34.883 SC setgold 0
+2026-10-24 14:25:34.899 SC step 33: wait 0.4
+2026-10-24 14:25:34.946 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | idle-between-blocks | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 0
+2026-10-24 14:25:35.149 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 14:25:35.306 SC step 34: wait 0.8
+2026-10-24 14:25:35.947 DISPLAY HUD[announce] Wraith lvl 20: ability tiers | Do tier settings really apply? / Setting up
+2026-10-24 14:25:36.118 SC step 35: lvlhold 20
+2026-10-24 14:25:36.118 SC lvlhold 20
+2026-10-24 14:25:36.133 SC step 36: wait 1.2
+2026-10-24 14:25:37.336 SC step 37: abil 0 0 1 0
+2026-10-24 14:25:37.337 SC abil 1 citadel_ability_card_toss bits=0 unlocked=False
+2026-10-24 14:25:37.337 SC abil 2 citadel_ability_projectmind bits=0 unlocked=False
+2026-10-24 14:25:37.337 SC abil 3 citadel_ability_wraith_rapidfire bits=1 unlocked=True
+2026-10-24 14:25:37.337 SC abil 4 citadel_ability_psychic_lift bits=0 unlocked=False
+2026-10-24 14:25:37.352 SC step 38: abilist 
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=1 unl=True weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:25:37.352 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:25:37.367 SC step 39: nw 
+2026-10-24 14:25:37.367 SC NW level=20 pdLevel=20 netWorth=0 hpMaxPD=1955 gold=0 maxhp=1955 hp=1955
+2026-10-24 14:25:37.383 SC step 40: egod 
+2026-10-24 14:25:37.383 SC egod floor=0.9999 ehp=0
+2026-10-24 14:25:37.399 SC step 41: fetch 350
+2026-10-24 14:25:37.399 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 14:25:37.414 SC step 42: wait 0.5
+2026-10-24 14:25:37.706 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 14:25:37.908 SC step 43: mark bits1
+2026-10-24 14:25:37.908 UCSTAT label=none secs=3.0 calls=192 cmds=513 calls/s=63.2 cmds/call=2.67 perCall[0..7+]=0/6/63/111/12/0/0/0 gapMs mean=15.91 p50=15.5 p95=31.8 p99=47.4 max=50.1 gap>32ms=6 gap>50ms=1 allSlotCalls=582 allSlotCalls/frame=2.98 slots=0:195,1:195,2:192 | frames=195 emptyFrames(no human cmd)=70 frameGapMs p50=15.6 p99=28.3 max=68.0 | fgSamples=12 fgPct=0 minimizedPct=0
+2026-10-24 14:25:37.908 DISPLAY PHASE measure - bits1
+2026-10-24 14:25:37.908 DISPLAY Wraith - now testing [bits1] - verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued | items read back: no items | aim: none - no gun accuracy measured (this is a state readback test, not a damage test) | run 1/1
+2026-10-24 14:25:37.908 SC ITEMS@bits1: maxhp=1955 
+2026-10-24 14:25:37.924 SC step 44: cast 3 0.3
+2026-10-24 14:25:37.940 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/1/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | measure [bits1] | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 1
+2026-10-24 14:25:38.236 SC step 45: wait 0.2
+2026-10-24 14:25:38.439 SC step 46: abilist 
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=1 unl=True weapon=False cd=True
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:25:38.439 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:25:38.455 SC step 47: wait 14
+2026-10-24 14:25:52.443 SC step 48: abilist 
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=1 unl=True weapon=False cd=True
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:25:52.443 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:25:52.459 SC step 49: wait 6
+2026-10-24 14:25:58.457 SC step 50: abilist 
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=1 unl=True weapon=False cd=True
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:25:58.457 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:25:58.473 SC step 51: wait 6
+2026-10-24 14:26:04.473 SC step 52: abilist 
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=1 unl=True weapon=False cd=True
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:04.473 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:04.488 SC step 53: wait 12
+2026-10-24 14:26:05.942 DISPLAY HUD[announce] Wraith lvl 20: ability tiers | Do tier settings really apply? / Measuring
+2026-10-24 14:26:16.496 SC step 54: abilist 
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=1 unl=True weapon=False cd=True
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:16.496 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:16.512 SC step 55: mark none
+2026-10-24 14:26:16.512 UCSTAT label=bits1 secs=38.6 calls=2448 cmds=6810 calls/s=63.5 cmds/call=2.78 perCall[0..7+]=0/86/706/1312/344/0/0/0 gapMs mean=15.76 p50=15.6 p95=32.2 p99=62.5 max=171.8 gap>32ms=141 gap>50ms=32 allSlotCalls=7390 allSlotCalls/frame=2.99 slots=0:2471,1:2471,2:2448 | frames=2471 emptyFrames(no human cmd)=984 frameGapMs p50=15.6 p99=21.2 max=65.9 | fgSamples=152 fgPct=0 minimizedPct=0
+2026-10-24 14:26:16.512 DISPLAY PHASE idle-between-blocks
+2026-10-24 14:26:16.512 SC ITEMS@none: maxhp=1395 
+2026-10-24 14:26:16.528 SC step 56: lvlhold 0
+2026-10-24 14:26:16.528 SC lvlhold 0
+2026-10-24 14:26:16.543 SC step 57: hardreset 
+2026-10-24 14:26:16.543 DISPLAY PHASE reset - clean-state reset: briefly switching to Haze and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 14:26:16.543 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 14:26:16.559 SC step 58: setup Haze Haze
+2026-10-24 14:26:16.560 SETUP start me=Haze enemy=Haze
+2026-10-24 14:26:16.950 DISPLAY STATE Haze vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | reset | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 1
+2026-10-24 14:26:22.760 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 14:26:22.760 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 14:26:22.791 SC step 59: wait 1.5
+2026-10-24 14:26:24.291 SC step 60: setup Wraith Haze
+2026-10-24 14:26:24.292 SETUP start me=Wraith enemy=Haze
+2026-10-24 14:26:24.947 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | reset | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 1
+2026-10-24 14:26:30.760 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 14:26:30.760 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 14:26:30.793 SC step 61: wait 1
+2026-10-24 14:26:31.785 SC step 62: raw citadel_unlock_flex_slots
+2026-10-24 14:26:31.799 SC step 63: unlock 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_card_toss 0 -> 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_projectmind 0 -> 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_wraith_rapidfire 0 -> 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_psychic_lift 0 -> 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 14:26:31.800 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 14:26:31.800 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 14:26:31.801 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 14:26:31.801 SC unlock citadel_weapon_wraith_set 1 -> 7
+2026-10-24 14:26:31.801 SC unlock citadel_ability_melee_wraith 1 -> 7
+2026-10-24 14:26:31.816 SC step 64: basemods 
+2026-10-24 14:26:31.816 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,citadel_ability_card_toss/modifier_ability_resource_pool
+2026-10-24 14:26:31.816 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 14:26:31.833 SC step 65: fetch 
+2026-10-24 14:26:31.833 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 14:26:31.847 SC step 66: mark none
+2026-10-24 14:26:31.847 UCSTAT label=none secs=15.3 calls=978 cmds=2685 calls/s=63.9 cmds/call=2.75 perCall[0..7+]=0/16/306/567/89/0/0/0 gapMs mean=15.66 p50=15.6 p95=31.8 p99=43.1 max=74.8 gap>32ms=34 gap>50ms=6 allSlotCalls=2940 allSlotCalls/frame=3.00 slots=0:981,1:981,2:978 | frames=981 emptyFrames(no human cmd)=350 frameGapMs p50=15.6 p99=18.3 max=92.8 | fgSamples=60 fgPct=0 minimizedPct=0
+2026-10-24 14:26:31.847 DISPLAY PHASE idle-between-blocks
+2026-10-24 14:26:31.847 SC ITEMS@none: maxhp=1955 
+2026-10-24 14:26:31.862 SC step 67: raw citadel_unlock_flex_slots
+2026-10-24 14:26:31.878 SC step 68: setgold 0
+2026-10-24 14:26:31.878 SC setgold 0
+2026-10-24 14:26:31.893 SC step 69: wait 0.4
+2026-10-24 14:26:31.941 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | idle-between-blocks | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 1
+2026-10-24 14:26:32.143 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 14:26:32.299 SC step 70: wait 0.8
+2026-10-24 14:26:33.113 SC step 71: lvlhold 20
+2026-10-24 14:26:33.113 SC lvlhold 20
+2026-10-24 14:26:33.131 SC step 72: wait 1.2
+2026-10-24 14:26:34.332 SC step 73: abil 0 0 3 0
+2026-10-24 14:26:34.332 SC abil 1 citadel_ability_card_toss bits=0 unlocked=False
+2026-10-24 14:26:34.332 SC abil 2 citadel_ability_projectmind bits=0 unlocked=False
+2026-10-24 14:26:34.332 SC abil 3 citadel_ability_wraith_rapidfire bits=3 unlocked=True
+2026-10-24 14:26:34.332 SC abil 4 citadel_ability_psychic_lift bits=0 unlocked=False
+2026-10-24 14:26:34.347 SC step 74: abilist 
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=3 unl=True weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:34.347 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:34.363 SC step 75: nw 
+2026-10-24 14:26:34.363 SC NW level=20 pdLevel=20 netWorth=0 hpMaxPD=1955 gold=0 maxhp=1955 hp=1955
+2026-10-24 14:26:34.380 SC step 76: egod 
+2026-10-24 14:26:34.380 SC egod floor=0.9999 ehp=0
+2026-10-24 14:26:34.395 SC step 77: fetch 350
+2026-10-24 14:26:34.395 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 14:26:34.417 SC step 78: wait 0.5
+2026-10-24 14:26:34.704 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 14:26:34.919 SC step 79: mark bits3
+2026-10-24 14:26:34.919 UCSTAT label=none secs=3.1 calls=199 cmds=774 calls/s=65.1 cmds/call=3.89 perCall[0..7+]=0/1/4/11/183/0/0/0 gapMs mean=15.44 p50=15.5 p95=32.6 p99=70.9 max=90.0 gap>32ms=15 gap>50ms=3 allSlotCalls=593 allSlotCalls/frame=3.01 slots=0:197,1:197,2:199 | frames=197 emptyFrames(no human cmd)=86 frameGapMs p50=15.5 p99=49.2 max=57.3 | fgSamples=12 fgPct=0 minimizedPct=0
+2026-10-24 14:26:34.919 DISPLAY PHASE measure - bits3
+2026-10-24 14:26:34.919 DISPLAY Wraith - now testing [bits3] - verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued | items read back: no items | aim: none - no gun accuracy measured (this is a state readback test, not a damage test) | run 1/1
+2026-10-24 14:26:34.919 SC ITEMS@bits3: maxhp=1955 
+2026-10-24 14:26:34.940 SC step 80: cast 3 0.3
+2026-10-24 14:26:34.941 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/3/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | measure [bits3] | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 1
+2026-10-24 14:26:35.264 SC step 81: wait 0.2
+2026-10-24 14:26:35.466 SC step 82: abilist 
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=3 unl=True weapon=False cd=True
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:35.466 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:35.485 SC step 83: wait 14
+2026-10-24 14:26:35.950 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/3/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | measure [bits3] | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 2
+2026-10-24 14:26:35.950 DISPLAY HUD[announce] Wraith lvl 20: ability tiers | Do tier settings really apply? / Measuring
+2026-10-24 14:26:49.474 SC step 84: abilist 
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=3 unl=True weapon=False cd=True
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:49.474 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:49.490 SC step 85: wait 6
+2026-10-24 14:26:55.488 SC step 86: abilist 
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=3 unl=True weapon=False cd=True
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:55.488 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:26:55.502 SC step 87: wait 6
+2026-10-24 14:27:01.507 SC step 88: abilist 
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=3 unl=True weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:01.507 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:01.522 SC step 89: wait 12
+2026-10-24 14:27:05.967 DISPLAY HUD[announce] Wraith lvl 20: ability tiers | Do tier settings really apply? / Measuring
+2026-10-24 14:27:13.531 SC step 90: abilist 
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=3 unl=True weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:13.531 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:13.546 SC step 91: mark none
+2026-10-24 14:27:13.547 UCSTAT label=bits3 secs=38.6 calls=2274 cmds=7019 calls/s=58.9 cmds/call=3.09 perCall[0..7+]=0/218/403/617/1036/0/0/0 gapMs mean=16.97 p50=0.2 p95=62.4 p99=140.3 max=171.9 gap>32ms=296 gap>50ms=150 allSlotCalls=7212 allSlotCalls/frame=2.92 slots=0:2469,1:2469,2:2274 | frames=2469 emptyFrames(no human cmd)=1394 frameGapMs p50=15.6 p99=49.5 max=120.2 | fgSamples=150 fgPct=0 minimizedPct=0
+2026-10-24 14:27:13.547 DISPLAY PHASE idle-between-blocks
+2026-10-24 14:27:13.547 SC ITEMS@none: maxhp=1395 
+2026-10-24 14:27:13.562 SC step 92: lvlhold 0
+2026-10-24 14:27:13.562 SC lvlhold 0
+2026-10-24 14:27:13.578 SC step 93: hardreset 
+2026-10-24 14:27:13.578 DISPLAY PHASE reset - clean-state reset: briefly switching to Haze and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 14:27:13.578 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 14:27:13.594 SC step 94: setup Haze Haze
+2026-10-24 14:27:13.595 SETUP start me=Haze enemy=Haze
+2026-10-24 14:27:13.984 DISPLAY STATE Haze vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | reset | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 2
+2026-10-24 14:27:20.970 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 14:27:20.970 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 14:27:21.001 SC step 95: wait 1.5
+2026-10-24 14:27:22.486 SC step 96: setup Wraith Haze
+2026-10-24 14:27:22.487 SETUP start me=Wraith enemy=Haze
+2026-10-24 14:27:23.032 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | reset | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 2
+2026-10-24 14:27:28.969 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 14:27:28.969 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 14:27:29.001 SC step 97: wait 1
+2026-10-24 14:27:30.001 SC step 98: raw citadel_unlock_flex_slots
+2026-10-24 14:27:30.016 SC step 99: unlock 7
+2026-10-24 14:27:30.016 SC unlock citadel_ability_card_toss 0 -> 7
+2026-10-24 14:27:30.016 SC unlock citadel_ability_projectmind 0 -> 7
+2026-10-24 14:27:30.016 SC unlock citadel_ability_wraith_rapidfire 0 -> 7
+2026-10-24 14:27:30.016 SC unlock citadel_ability_psychic_lift 0 -> 7
+2026-10-24 14:27:30.016 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 14:27:30.016 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 14:27:30.016 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 14:27:30.016 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 14:27:30.016 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 14:27:30.016 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 14:27:30.017 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 14:27:30.017 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 14:27:30.017 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 14:27:30.017 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 14:27:30.017 SC unlock citadel_weapon_wraith_set 1 -> 7
+2026-10-24 14:27:30.017 SC unlock citadel_ability_melee_wraith 1 -> 7
+2026-10-24 14:27:30.032 SC step 100: basemods 
+2026-10-24 14:27:30.032 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,citadel_ability_card_toss/modifier_ability_resource_pool
+2026-10-24 14:27:30.032 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 14:27:30.053 SC step 101: fetch 
+2026-10-24 14:27:30.053 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 14:27:30.070 SC step 102: mark none
+2026-10-24 14:27:30.070 UCSTAT label=none secs=16.5 calls=1011 cmds=3124 calls/s=61.3 cmds/call=3.09 perCall[0..7+]=0/97/178/273/463/0/0/0 gapMs mean=16.33 p50=0.2 p95=48.0 p99=110.2 max=202.2 gap>32ms=123 gap>50ms=47 allSlotCalls=3105 allSlotCalls/frame=2.97 slots=0:1047,1:1047,2:1011 | frames=1047 emptyFrames(no human cmd)=557 frameGapMs p50=15.6 p99=18.6 max=288.1 | fgSamples=65 fgPct=0 minimizedPct=0
+2026-10-24 14:27:30.070 DISPLAY PHASE idle-between-blocks
+2026-10-24 14:27:30.070 SC ITEMS@none: maxhp=1955 
+2026-10-24 14:27:30.070 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | idle-between-blocks | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 2
+2026-10-24 14:27:30.079 SC step 103: raw citadel_unlock_flex_slots
+2026-10-24 14:27:30.101 SC step 104: setgold 0
+2026-10-24 14:27:30.101 SC setgold 0
+2026-10-24 14:27:30.110 SC step 105: wait 0.4
+2026-10-24 14:27:30.360 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 14:27:30.517 SC step 106: wait 0.8
+2026-10-24 14:27:31.329 SC step 107: lvlhold 20
+2026-10-24 14:27:31.329 SC lvlhold 20
+2026-10-24 14:27:31.345 SC step 108: wait 1.2
+2026-10-24 14:27:32.548 SC step 109: abil 0 0 7 0
+2026-10-24 14:27:32.548 SC abil 1 citadel_ability_card_toss bits=0 unlocked=False
+2026-10-24 14:27:32.548 SC abil 2 citadel_ability_projectmind bits=0 unlocked=False
+2026-10-24 14:27:32.548 SC abil 3 citadel_ability_wraith_rapidfire bits=7 unlocked=True
+2026-10-24 14:27:32.548 SC abil 4 citadel_ability_psychic_lift bits=0 unlocked=False
+2026-10-24 14:27:32.563 SC step 110: abilist 
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:32.563 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:32.580 SC step 111: nw 
+2026-10-24 14:27:32.580 SC NW level=20 pdLevel=20 netWorth=0 hpMaxPD=1955 gold=0 maxhp=1955 hp=1955
+2026-10-24 14:27:32.595 SC step 112: egod 
+2026-10-24 14:27:32.595 SC egod floor=0.9999 ehp=0
+2026-10-24 14:27:32.610 SC step 113: fetch 350
+2026-10-24 14:27:32.610 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 14:27:32.626 SC step 114: wait 0.5
+2026-10-24 14:27:32.911 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 14:27:33.069 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/7/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | idle-between-blocks | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 2
+2026-10-24 14:27:33.116 SC step 115: mark bits7
+2026-10-24 14:27:33.116 UCSTAT label=none secs=3.0 calls=196 cmds=554 calls/s=64.9 cmds/call=2.83 perCall[0..7+]=0/14/49/90/43/0/0/0 gapMs mean=15.49 p50=15.4 p95=32.3 p99=62.3 max=73.6 gap>32ms=14 gap>50ms=2 allSlotCalls=586 allSlotCalls/frame=3.01 slots=0:195,1:195,2:196 | frames=195 emptyFrames(no human cmd)=83 frameGapMs p50=15.5 p99=38.7 max=73.6 | fgSamples=11 fgPct=0 minimizedPct=0
+2026-10-24 14:27:33.116 DISPLAY PHASE measure - bits7
+2026-10-24 14:27:33.116 DISPLAY Wraith - now testing [bits7] - verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued | items read back: no items | aim: none - no gun accuracy measured (this is a state readback test, not a damage test) | run 1/1
+2026-10-24 14:27:33.116 SC ITEMS@bits7: maxhp=1955 
+2026-10-24 14:27:33.132 SC step 116: cast 3 0.3
+2026-10-24 14:27:33.445 SC step 117: wait 0.2
+2026-10-24 14:27:33.648 SC step 118: abilist 
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=7 unl=True weapon=False cd=True
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:33.648 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:33.663 SC step 119: wait 14
+2026-10-24 14:27:34.069 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/7/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | measure [bits7] | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 3
+2026-10-24 14:27:36.068 DISPLAY HUD[announce] Wraith lvl 20: ability tiers | Do tier settings really apply? / Measuring
+2026-10-24 14:27:47.660 SC step 120: abilist 
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=7 unl=True weapon=False cd=True
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:47.660 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:47.675 SC step 121: wait 6
+2026-10-24 14:27:53.676 SC step 122: abilist 
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=7 unl=True weapon=False cd=True
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:53.676 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:53.692 SC step 123: wait 6
+2026-10-24 14:27:59.692 SC step 124: abilist 
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:59.692 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:27:59.709 SC step 125: wait 12
+2026-10-24 14:28:06.066 DISPLAY HUD[announce] Wraith lvl 20: ability tiers | Do tier settings really apply? / Measuring
+2026-10-24 14:28:11.716 SC step 126: abilist 
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:11.716 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:11.731 SC step 127: mark none
+2026-10-24 14:28:11.732 UCSTAT label=bits7 secs=38.6 calls=2438 cmds=7140 calls/s=63.2 cmds/call=2.93 perCall[0..7+]=0/166/545/1024/703/0/0/0 gapMs mean=15.84 p50=15.4 p95=46.1 p99=77.0 max=172.5 gap>32ms=194 gap>50ms=60 allSlotCalls=7380 allSlotCalls/frame=2.99 slots=0:2471,1:2471,2:2438 | frames=2471 emptyFrames(no human cmd)=1113 frameGapMs p50=15.6 p99=19.0 max=112.3 | fgSamples=152 fgPct=0 minimizedPct=0
+2026-10-24 14:28:11.732 DISPLAY PHASE idle-between-blocks
+2026-10-24 14:28:11.732 SC ITEMS@none: maxhp=1395 
+2026-10-24 14:28:11.746 SC step 128: lvlhold 0
+2026-10-24 14:28:11.746 SC lvlhold 0
+2026-10-24 14:28:11.761 SC step 129: hardreset 
+2026-10-24 14:28:11.761 DISPLAY PHASE reset - clean-state reset: briefly switching to Haze and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 14:28:11.761 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 14:28:11.777 SC step 130: setup Haze Haze
+2026-10-24 14:28:11.778 SETUP start me=Haze enemy=Haze
+2026-10-24 14:28:12.074 DISPLAY STATE Haze vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | reset | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 3
+2026-10-24 14:28:18.000 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 14:28:18.000 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 14:28:18.032 SC step 131: wait 1.5
+2026-10-24 14:28:19.546 SC step 132: setup Wraith Haze
+2026-10-24 14:28:19.548 SETUP start me=Wraith enemy=Haze
+2026-10-24 14:28:20.079 DISPLAY STATE 0 vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | reset | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 3
+2026-10-24 14:28:21.108 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | reset | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 3
+2026-10-24 14:28:27.014 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 14:28:27.014 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 14:28:27.045 SC step 133: wait 1
+2026-10-24 14:28:28.045 SC step 134: raw citadel_unlock_flex_slots
+2026-10-24 14:28:28.060 SC step 135: unlock 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_card_toss 0 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_projectmind 0 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_wraith_rapidfire 0 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_psychic_lift 0 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 14:28:28.060 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_weapon_wraith_set 1 -> 7
+2026-10-24 14:28:28.060 SC unlock citadel_ability_melee_wraith 1 -> 7
+2026-10-24 14:28:28.076 SC step 136: basemods 
+2026-10-24 14:28:28.076 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,citadel_ability_card_toss/modifier_ability_resource_pool
+2026-10-24 14:28:28.076 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 14:28:28.077 SC step 137: fetch 
+2026-10-24 14:28:28.077 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 14:28:28.107 SC step 138: mark none
+2026-10-24 14:28:28.107 UCSTAT label=none secs=16.3 calls=1048 cmds=3352 calls/s=64.1 cmds/call=3.20 perCall[0..7+]=0/64/168/312/504/0/0/0 gapMs mean=15.61 p50=15.5 p95=46.8 p99=63.1 max=133.1 gap>32ms=93 gap>50ms=22 allSlotCalls=3140 allSlotCalls/frame=3.00 slots=0:1046,1:1046,2:1048 | frames=1046 emptyFrames(no human cmd)=465 frameGapMs p50=15.6 p99=31.4 max=140.5 | fgSamples=64 fgPct=0 minimizedPct=0
+2026-10-24 14:28:28.107 DISPLAY PHASE idle-between-blocks
+2026-10-24 14:28:28.107 SC ITEMS@none: maxhp=1955 
+2026-10-24 14:28:28.123 SC step 139: raw citadel_unlock_flex_slots
+2026-10-24 14:28:28.123 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | idle-between-blocks | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 3
+2026-10-24 14:28:28.139 SC step 140: setgold 0
+2026-10-24 14:28:28.139 SC setgold 0
+2026-10-24 14:28:28.154 SC step 141: wait 0.4
+2026-10-24 14:28:28.388 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 14:28:28.560 SC step 142: wait 0.8
+2026-10-24 14:28:29.374 SC step 143: lvlhold 20
+2026-10-24 14:28:29.374 SC lvlhold 20
+2026-10-24 14:28:29.374 SC step 144: wait 1.2
+2026-10-24 14:28:30.576 SC step 145: abil 0 0 15 0
+2026-10-24 14:28:30.576 SC abil 1 citadel_ability_card_toss bits=0 unlocked=False
+2026-10-24 14:28:30.576 SC abil 2 citadel_ability_projectmind bits=0 unlocked=False
+2026-10-24 14:28:30.576 SC abil 3 citadel_ability_wraith_rapidfire bits=15 unlocked=True
+2026-10-24 14:28:30.576 SC abil 4 citadel_ability_psychic_lift bits=0 unlocked=False
+2026-10-24 14:28:30.592 SC step 146: abilist 
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=15 unl=True weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:30.592 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:30.593 SC step 147: nw 
+2026-10-24 14:28:30.593 SC NW level=20 pdLevel=20 netWorth=0 hpMaxPD=1955 gold=0 maxhp=1955 hp=1955
+2026-10-24 14:28:30.623 SC step 148: egod 
+2026-10-24 14:28:30.623 SC egod floor=0.9999 ehp=0
+2026-10-24 14:28:30.638 SC step 149: fetch 350
+2026-10-24 14:28:30.638 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 14:28:30.654 SC step 150: wait 0.5
+2026-10-24 14:28:30.951 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 14:28:31.123 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/15/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | idle-between-blocks | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 3
+2026-10-24 14:28:31.154 SC step 151: mark bits15
+2026-10-24 14:28:31.154 UCSTAT label=none secs=3.0 calls=195 cmds=532 calls/s=64.7 cmds/call=2.73 perCall[0..7+]=0/2/64/114/15/0/0/0 gapMs mean=15.54 p50=15.9 p95=31.6 p99=45.9 max=47.0 gap>32ms=5 gap>50ms=0 allSlotCalls=585 allSlotCalls/frame=3.00 slots=0:195,1:195,2:195 | frames=195 emptyFrames(no human cmd)=67 frameGapMs p50=15.7 p99=30.9 max=31.1 | fgSamples=12 fgPct=0 minimizedPct=0
+2026-10-24 14:28:31.154 DISPLAY PHASE measure - bits15
+2026-10-24 14:28:31.154 DISPLAY Wraith - now testing [bits15] - verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued | items read back: no items | aim: none - no gun accuracy measured (this is a state readback test, not a damage test) | run 1/1
+2026-10-24 14:28:31.154 SC ITEMS@bits15: maxhp=1955 
+2026-10-24 14:28:31.174 SC step 152: cast 3 0.3
+2026-10-24 14:28:31.499 SC step 153: wait 0.2
+2026-10-24 14:28:31.688 SC step 154: abilist 
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=15 unl=True weapon=False cd=True
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:31.688 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:31.701 SC step 155: wait 14
+2026-10-24 14:28:32.123 DISPLAY STATE Wraith vs Haze | none | BASELINE @Level 20, 0 souls spent, no items || WHY: verify that tier setting via abil bits really takes effect before any tier-dependent scenario is queued || ITEMS (read back): none | TIERS: 0/0/15/0 || AIM: none - no gun accuracy measured (this is a state readback test, not a damage test) | USES: abilities read back, not cast for damage || run 1/1 | measure [bits15] | task 21/24 (done 18, blocked 2) || MECH: intended ability tier readback only; no damage measured -> shots 0, hits 0, abilities executed 4
+2026-10-24 14:28:36.135 DISPLAY HUD[announce] Wraith lvl 20: ability tiers | Do tier settings really apply? / Measuring
+2026-10-24 14:28:45.697 SC step 156: abilist 
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=15 unl=True weapon=False cd=True
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:45.697 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:45.716 SC step 157: wait 6
+2026-10-24 14:28:51.711 SC step 158: abilist 
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=15 unl=True weapon=False cd=True
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:51.711 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:51.728 SC step 159: wait 6
+2026-10-24 14:28:57.748 SC step 160: abilist 
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=15 unl=True weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:57.748 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:28:57.764 SC step 161: wait 12
+2026-10-24 14:29:06.146 DISPLAY HUD[announce] Wraith lvl 20: ability tiers | Do tier settings really apply? / Measuring
+2026-10-24 14:29:09.755 SC step 162: abilist 
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_card_toss slot=Signature1 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_projectmind slot=Signature2 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_wraith_rapidfire slot=Signature3 bits=15 unl=True weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_psychic_lift slot=Signature4 bits=0 unl=False weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_zip_line slot=Ability_ZipLine bits=7 unl=True weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_mantle slot=Ability_Mantle bits=7 unl=True weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_climb_rope slot=Ability_ClimbRope bits=7 unl=True weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_jump slot=Ability_Jump bits=7 unl=True weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_slide slot=Ability_Slide bits=7 unl=True weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_zipline_boost slot=Ability_ZipLineBoost bits=7 unl=True weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL cosmetic_ability_voting_poster slot=Cosmetic1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_dash slot=Innate1 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_sprint slot=Innate2 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_melee_parry slot=Innate3 bits=7 unl=True weapon=False cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_weapon_wraith_set slot=WeaponPrimary bits=7 unl=True weapon=True cd=False
+2026-10-24 14:29:09.755 SC ABIL citadel_ability_melee_wraith slot=WeaponMelee bits=7 unl=True weapon=True cd=False
+2026-10-24 14:29:09.771 SC step 163: mark none
+2026-10-24 14:29:09.772 UCSTAT label=bits15 secs=38.5 calls=2194 cmds=6694 calls/s=57.0 cmds/call=3.05 perCall[0..7+]=0/57/499/913/725/0/0/0 gapMs mean=17.57 p50=15.6 p95=46.5 p99=156.2 max=213.0 gap>32ms=149 gap>50ms=78 allSlotCalls=7138 allSlotCalls/frame=2.89 slots=0:2472,1:2472,2:2194 | frames=2472 emptyFrames(no human cmd)=1175 frameGapMs p50=15.7 p99=30.6 max=94.6 | fgSamples=152 fgPct=0 minimizedPct=0
+2026-10-24 14:29:09.772 DISPLAY PHASE idle-between-blocks
+2026-10-24 14:29:09.772 SC ITEMS@none: maxhp=1395 
+2026-10-24 14:29:09.786 SC step 164: lvlhold 0
+2026-10-24 14:29:09.786 SC lvlhold 0
+2026-10-24 14:29:09.802 SC step 165: end 
+2026-10-24 14:29:09.802 SC ACC p=1 head=1: windows=0 missWindows=0 headWindows=0 dmgHitsOnEnemy=0 weakpointHits=0
+2026-10-24 14:29:09.802 SC EVENTS AbilityCastStarted:=4 AbilityExecuted:=4
+2026-10-24 14:29:09.802 SC HEALSRC UnitHealed|player|: n=478 requested=0 applied=0
+2026-10-24 14:29:09.802 SC TRK heal=26021 loss=26541 minHp=730 floorHits=0 firstFloorMs=0 secs=247.7 maxhp=1395
+2026-10-24 14:29:09.802 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-24 14:29:09.802 PERF tick n=15504 avg=0.01ms max=2.5ms slow>20ms=0 | usercmd n=45598 max=0.7ms slow=0 | abilityAttempt n=0 max=0.0ms
+2026-10-24 14:29:09.802 UCSTAT label=scenario-end secs=0.0 calls=0 cmds=0 calls/s=0.0 cmds/call=0.00 perCall[0..7+]=0/0/0/0/0/0/0/0 gapMs mean=0.00 p50=- p95=- p99=- max=0.0 gap>32ms=0 gap>50ms=0 allSlotCalls=4 allSlotCalls/frame=2.00 slots=0:2,1:2 | frames=2 emptyFrames(no human cmd)=2 frameGapMs p50=15.9 p99=15.9 max=15.9 | fgSamples=0 fgPct=-1 minimizedPct=-1
+2026-10-24 14:29:09.802 DISPLAYPERF ticks=238 avg=0.065ms max=0.509ms
+2026-10-24 14:29:09.802 DISPLAY FINISHED: BASELINE - Do UpgradeBits 1/3/7/15 read back as unlocked/T1/T2/T3 on Wraith abilities? -> shots 0, bullet hits 0, damage events on target 0 (end step)
+2026-10-24 14:29:09.802 DISPLAY MEASURED: shots 0, bullet hits 0, damage events on target 0; verify-pass/fail are in the run log
+2026-10-24 14:29:09.802 DISPLAY ASSUMED: none declared
+2026-10-24 14:29:09.802 DISPLAY CALCULATED: none
+2026-10-24 14:29:09.802 DISPLAY CONCLUSION: INSUFFICIENT EVIDENCE - no decision | baseline datum only
+2026-10-24 14:29:09.802 DISPLAY NOTE: Wraith's real build also has Quicksilver Reload, Mercurial Magnum, Full Auto; magazine/ammo questions need the complete build
+2026-10-24 14:29:09.802 SC scenario bitstest finished: end step
+2026-10-24 14:29:10.146 DISPLAY SENT Finished: Ability tier check
+2026-10-24 14:29:10.146 QR TASK-END stage0:tiers_bitstest#1 why=end step
+2026-10-24 14:29:11.147 DISPLAY SENT 0 shots, 0 hits recorded
+2026-10-24 14:29:12.146 DISPLAY SENT Each tier reads back right
+2026-10-24 14:29:12.147 DISPLAY NEXT: ISOLATED ITEM stage0:tiers_gt_f7_f9 - Grey Talon: do ability bits 1/3/7/15 give unlocked/T1/T2/T3 and does Extra Charge add a charge to a 1-charge Charged Shot? because establish tier readback and charge behaviour before any Grey Talon build comparison
+2026-10-24 14:29:12.147 QR TASK-RESULT stage0:tiers_bitstest#1 VALID=yes 

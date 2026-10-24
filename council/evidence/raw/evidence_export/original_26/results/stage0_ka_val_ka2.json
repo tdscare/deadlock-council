@@ -1,0 +1,69 @@
+{
+  "verdict": "VALID: yes",
+  "task": "stage0:ka_val_ka2",
+  "build": "stage0",
+  "scenario": "val_ka2",
+  "attempt": 1,
+  "reasons": [],
+  "startedAt": "2026-10-24T13:20:47.7009098Z",
+  "wallSec": 260.2,
+  "endWhy": "end step",
+  "checks": {
+    "setupVerifyOk": 21,
+    "posVerifyOk": 20,
+    "expectPass": 10,
+    "verifyFail": 0,
+    "unknownOps": 0,
+    "exceptions": 0,
+    "opFailed": 0,
+    "humanClientInput": 0,
+    "forcedExternal": 0
+  },
+  "damageCsv": "E:\\deadworks-server\\sbx_logs\\damage_20261024_141341.csv",
+  "damageCsvBytes": 126263,
+  "damageCsvTMs": [
+    426578,
+    686797
+  ],
+  "samplesCsv": "E:\\deadworks-server\\sbx_logs\\samples_val_ka2_142047.csv",
+  "samplesCsvBytes": 36534,
+  "env": "ENV: unlabelled",
+  "meta": {
+    "kind": "ISOLATED ITEM",
+    "hero": "Haze",
+    "checkpoint": "Level 18 stat floor, 0 souls spent (one gun item per block)",
+    "build": "none (single-item validation)",
+    "items": "upgrade_rapid_rounds, upgrade_high_velocity_mag, upgrade_headshot_booster, upgrade_clip_size",
+    "question": "Known-answer check: do Rapid Rounds, High-Velocity Mag, Headshot Booster and Clip Size change fire rate, damage and clip as documented, measured in isolation?",
+    "purpose": "validate harness readbacks for four more gun items against documented values",
+    "mechanics": "fire-rate, bullet-velocity, headshot-damage and clip size modifiers; gun only",
+    "expectedstate": "items=none before each block; exactly one tested item in its block; stacks=0",
+    "excluded": "all other items and abilities - isolated results are not a build verdict",
+    "accmode": "body-only and head-only blocks",
+    "accwhy": "separates headshot-specific items from body damage",
+    "abilities": "gun only",
+    "runs": "1/1",
+    "assumed": "documented item values from game data",
+    "player_title": "Haze lvl 18: 4 gun items",
+    "player_what": "Fire rate, head dmg, clip size",
+    "player_why": "One item at a time, no others",
+    "player_short": "4 gun items check",
+    "player_expect": "Game must match listed values"
+  },
+  "startStates": [],
+  "displayTickMsAvgMax": [
+    0.07,
+    0.358
+  ],
+  "pluginLog": {
+    "file": "E:\\deadworks-server\\sbx_logs\\plugin.log",
+    "lineStart": 58523,
+    "lineEnd": 59641,
+    "markerStart": "QR TASK-START stage0:ka_val_ka2#1",
+    "markerEnd": "QR TASK-END stage0:ka_val_ka2#1"
+  },
+  "messages": [],
+  "clientInput": [],
+  "externalCommands": [],
+  "written": "2026-10-24T13:25:09.907Z"
+}

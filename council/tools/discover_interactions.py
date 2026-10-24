@@ -10,8 +10,11 @@ Commands (run with python3 -I from the scratchpad root):
   show <hypothesis id>         print one hypothesis with ladder
   scenarios [--top N]          write sandbox scenario specs for the top TESTABLE hypotheses into
                                council/sandbox/autorun/scenarios/interaction/ and print `queue.js add` commands (never pushes to a queue)
+  verify <MANIFEST.json> [dir]  check evidence_export file hashes
   selfcheck                    verifies that no rule/output depends on seeded names (opaque-relabel invariance)
 Evidence tiers: VERIFIED MECHANIC (game data) | MEASURED (sandbox result) | MODELLED (arithmetic on data with labelled assumptions) | HYPOTHESIS.
+LEARNING LOOP SCOPE: template T5 only. All other templates (T1-T4) and the item_window kind are unaffected by measured results.
+PROVENANCE GATE: an entry in validated/measured.json changes nothing unless its `provenance` block is complete (result_file + sha256, task_id, runner_valid=yes, frame_validity CLEAN|TIMING-INSENSITIVE, client==server version, build_hash, n>=n_min, bundle_path) and the raw file exists under council/evidence/raw/<bundle_path>/ with a matching sha256; otherwise it is loaded as UNVERIFIED-PROVENANCE. `verify <MANIFEST.json> [dir]` checks a tester evidence export.
 Measured results in validated/measured.json (entries with `links`) are READ by `run`: the matching hypothesis becomes MEASURED (ladder stage 2) and T5 siblings are re-ranked by an explicit rule (see apply_measured / BOOST). `rerank-diff` prints the ranking with and without the measured results.
 Event classes for T5 are derived from the data (shared property-key stems between ability and item properties that also occur in ability and item text), not from a written list. Hypotheses whose relation class matches validated/user_example_patterns.json are flagged user_example_derived and penalised; at most ITEM_CAP hypotheses per item stay in the list (the rest are in meta.overflow). Hypotheses live in hypotheses/, only data facts in validated/.
 """
@@ -557,9 +560,70 @@ def user_reported():
     fn = os.path.join(EVD, 'validated', 'user_example_patterns.json')
     return json.load(open(fn))['entries'] if os.path.exists(fn) else []
 
-def measured_entries():
+RAW_ROOT = os.path.join(EVD, '..', 'raw')      # council/evidence/raw/<bundle>/ (copy of the tester's evidence_export with MANIFEST.json)
+PROV_REQUIRED = ('result_file', 'result_sha256', 'task_id', 'runner_valid', 'frame_validity', 'client_version', 'server_version', 'build_hash', 'n', 'n_min', 'bundle_path')
+PROV_REPORT = []   # [(entry id, status, [problems])] of the last measured_entries() call
+
+def _sha256_file(fn):
+    h = hashlib.sha256()
+    with open(fn, 'rb') as f:
+        for ch in iter(lambda: f.read(1 << 20), b''): h.update(ch)
+    return h.hexdigest()
+
+def provenance_problems(m, raw_root=None):
+    """PROVENANCE GATE. [] only if every required field is present and valid AND the raw result file exists under the bundle and its sha256 matches. Otherwise the reasons."""
+    raw_root = os.path.abspath(raw_root or RAW_ROOT)
+    pv = m.get('provenance')
+    if not isinstance(pv, dict): return ['no provenance block']
+    pr = ['missing %s' % k for k in PROV_REQUIRED if pv.get(k) in (None, '')]
+    if pr:
+        if pv.get('frame_validity') and str(pv['frame_validity']).strip().upper() not in ('CLEAN', 'TIMING-INSENSITIVE'): pr.append('frame_validity %s (need CLEAN or TIMING-INSENSITIVE)' % pv['frame_validity'])
+        return pr
+    if re.sub(r'^valid:\s*', '', str(pv['runner_valid']).strip().lower()).split(' ')[0] != 'yes': pr.append('runner VALID is not yes (%s)' % pv['runner_valid'])
+    if str(pv['frame_validity']).strip().upper() not in ('CLEAN', 'TIMING-INSENSITIVE'): pr.append('frame_validity %s (need CLEAN or TIMING-INSENSITIVE)' % pv['frame_validity'])
+    if str(pv['client_version']).strip() != str(pv['server_version']).strip(): pr.append('client version %s != server version %s' % (pv['client_version'], pv['server_version']))
+    try:
+        if int(pv['n']) < int(pv['n_min']): pr.append('n %s below the entry\'s own minimum %s' % (pv['n'], pv['n_min']))
+    except Exception: pr.append('n / n_min not integers')
+    if not re.fullmatch(r'[0-9a-f]{64}', str(pv['result_sha256']).lower()): pr.append('result_sha256 is not a sha256')
+    bdir = os.path.abspath(os.path.join(raw_root, str(pv['bundle_path'])))
+    if not (bdir + os.sep).startswith(raw_root + os.sep): pr.append('bundle_path escapes council/evidence/raw/')
+    elif not os.path.isdir(bdir): pr.append('evidence bundle not present under council/evidence/raw/%s (cannot verify)' % pv['bundle_path'])
+    else:
+        fn = os.path.abspath(os.path.join(bdir, str(pv['result_file'])))
+        if not (fn + os.sep).startswith(bdir + os.sep): pr.append('result_file escapes the bundle')
+        elif not os.path.isfile(fn): pr.append('result_file %s not in the bundle' % pv['result_file'])
+        elif _sha256_file(fn) != str(pv['result_sha256']).lower(): pr.append('sha256 MISMATCH for %s (file differs from the recorded hash: tampered or replaced)' % pv['result_file'])
+    return pr
+
+def measured_entries(verified_only=True, raw_root=None):
+    """entries of validated/measured.json. verified_only: entries failing the provenance gate are NOT returned (they are loaded as UNVERIFIED-PROVENANCE and cannot change any ranking); reasons go to PROV_REPORT."""
     fn = os.path.join(EVD, 'validated', 'measured.json')
-    return json.load(open(fn)).get('measured', []) if os.path.exists(fn) else []
+    allm = json.load(open(fn)).get('measured', []) if os.path.exists(fn) else []
+    PROV_REPORT.clear(); keep = []
+    for m in allm:
+        pr = provenance_problems(m, raw_root)
+        PROV_REPORT.append((m['id'], 'VERIFIED' if not pr else 'UNVERIFIED-PROVENANCE', pr))
+        if not pr: keep.append(m)
+    return keep if verified_only else allm
+
+def cmd_verify(args):
+    """verify <MANIFEST.json> [bundle_dir]: check every file listed in the tester's MANIFEST.json against its sha256 (bundle_dir defaults to the manifest's folder)."""
+    mf = args[0]; bd = args[1] if len(args) > 1 else os.path.dirname(os.path.abspath(mf))
+    M = json.load(open(mf)); items = []
+    if isinstance(M, dict) and ('entries' in M or 'original_26' in M):       # tester's evidence_export layout
+        for e in list(M.get('entries', {}).values()) + ([M['original_26']] if 'original_26' in M else []):
+            items += [(f['file'], f['sha256']) for f in e.get('files', [])]
+    else:
+        files = M.get('files', M) if isinstance(M, dict) else M
+        items = list(files.items()) if isinstance(files, dict) else [(f.get('path') or f.get('file'), f.get('sha256')) for f in files]
+    bad = 0
+    for rel, h in items:
+        fn = os.path.join(bd, rel)
+        if not os.path.isfile(fn): print('MISSING  ', rel); bad += 1
+        elif _sha256_file(fn) != str(h).lower(): print('MISMATCH ', rel); bad += 1
+        else: print('OK       ', rel)
+    print('RESULT: %s (%d problem(s))' % ('VERIFIED' if not bad else 'FAILED', bad)); return bad
 
 USER_PENALTY = 1.0      # a question the user already raised adds less to what he knows (flag + fixed penalty, same for every entry)
 ITEM_CAP = 10           # at most this many hypotheses per item class stay in the ranked list; the rest go to `overflow`
@@ -650,7 +714,7 @@ def write_outputs(hy, D, outdir=None):
     meta = dict(format_version=2, source_sha=D['sha'], count=len(hy), tier_note='HYPOTHESIS unless a premise says VERIFIED MECHANIC or the entry carries `measured` (CONTROLLED SANDBOX RESULT from validated/measured.json)',
                 user_example_derived=sum(1 for x in hy if x.get('user_example_derived')), measured=sum(1 for x in hy if x.get('measured')), item_cap=ITEM_CAP,
                 overflow_count=len(ov), overflow_by_template=dict(collections.Counter(x['template'][:2] for x in ov)), overflow_ids=[x['id'] for x in ov],
-                measured_log=[list(t) for t in getattr(generate, 'log', [])], event_classes_derived=[' '.join(e) for e in getattr(generate, 'events', [])])
+                prov_gate=[[a, b, c] for a, b, c in PROV_REPORT], learning_loop_scope='template T5 only; all other templates unaffected', measured_log=[list(t) for t in getattr(generate, 'log', [])], event_classes_derived=[' '.join(e) for e in getattr(generate, 'events', [])])
     json.dump(dict(meta=meta, hypotheses=hy), open(os.path.join(hd, 'ranked.json'), 'w'), indent=1)
     with open(os.path.join(hd, 'ranked.txt'), 'w') as f:
         f.write('# RANKED HYPOTHESES (generated; HYPOTHESIS tier unless stated)  source_sha=%s  n=%d\n# priority = 0.35 impact + 0.2 information value + 0.1 plausibility + 0.15 availability + 0.2 testability (0..5 each)\n' % (D['sha'], len(hy)))
@@ -681,7 +745,11 @@ def cmd_rerank_diff(args):
     top = int(args[args.index('--top') + 1]) if '--top' in args else 15
     _, _, _, b = generate(use_measured=False); _, _, _, a = generate(use_measured=True); log = generate.log
     rb = {x['id']: i for i, x in enumerate(b, 1)}; ra = {x['id']: i for i, x in enumerate(a, 1)}
-    out = ['RE-RANK DIFF driven only by validated/measured.json (%d measured entries, %d with links)' % (len(measured_entries()), sum(1 for m in measured_entries() if m.get('links'))), 'rule: see apply_measured(); BOOST=%s' % BOOST, '']
+    allm = measured_entries(verified_only=False); ver = measured_entries()
+    out = ['RE-RANK DIFF driven only by validated/measured.json (%d entries, %d passed the provenance gate, %d with links among them)' % (len(allm), len(ver), sum(1 for m in ver if m.get('links'))), 'SCOPE: the learning loop covers template T5 only; every other template is unaffected by measured results.', 'rule: see apply_measured(); BOOST=%s' % BOOST, '', 'provenance gate:']
+    out += ['  %s : %s%s' % (i, st, ('  <- ' + '; '.join(pr)) if pr else '') for i, st, pr in PROV_REPORT]
+    if not ver: out.append('  => NO verified entry: the ranking is identical with and without measured.json (no movement until a raw bundle verifies).')
+    out.append('')
     out.append('measured log:'); out += ['  %s -> %s : %s' % t for t in log] or ['  (none)']
     out.append(''); out.append('moved hypotheses (id | rank before -> after | score before -> after | title):')
     moved = [x for x in a if rb.get(x['id']) != ra[x['id']]]
@@ -800,5 +868,5 @@ def cmd_selfcheck(args):
 if __name__ == '__main__':
     a = sys.argv[1:]
     if not a: print(__doc__); sys.exit(0)
-    {'extract': cmd_extract, 'run': cmd_run, 'show': cmd_show, 'scenarios': cmd_scenarios, 'selfcheck': cmd_selfcheck, 'rerank-diff': cmd_rerank_diff}.get(a[0], lambda x: print(__doc__))(a[1:])
+    {'extract': cmd_extract, 'run': cmd_run, 'show': cmd_show, 'scenarios': cmd_scenarios, 'selfcheck': cmd_selfcheck, 'rerank-diff': cmd_rerank_diff, 'verify': cmd_verify}.get(a[0], lambda x: print(__doc__))(a[1:])
 

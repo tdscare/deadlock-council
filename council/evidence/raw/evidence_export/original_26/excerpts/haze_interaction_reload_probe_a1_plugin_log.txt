@@ -1,0 +1,169 @@
+# plugin.log excerpt haze:interaction:reload_probe attempt 1 lines 65286-65453; local time UTC+1
+2026-10-24 15:09:35.619 QR TASK-START haze:interaction:reload_probe#1 scenario=int_haze_reload_probe
+2026-10-24 15:09:35.621 DISPLAY FULL Haze | 25600 | INTERACTION: Checking how long Haze's reload takes, so magazine and fire-rate items can be compared. (build: haze; items: upgrade_active_reload upgrade_blitz_bullets upgrade_titan_round upgrade_chonky upgrade_ricochet upgrade_healing_booster upgrade_siphon_bullets; why: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it)
+2026-10-24 15:09:35.630 DISPLAY strategy source has no GAME_SUMMARY: lines (ok for interaction files): E:\deadworks-server\council/evidence/interaction/haze_burst_fire_buypoint.txt
+2026-10-24 15:09:35.630 SC scenario int_haze_reload_probe started, 38 steps origin=runner:haze:interaction:reload_probe
+2026-10-24 15:09:35.634 SC step 0: meta kind INTERACTION
+2026-10-24 15:09:35.650 SC step 1: meta question Checking how long Haze's reload takes, so magazine and fire-rate items can be compared.
+2026-10-24 15:09:35.666 SC step 2: meta purpose decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it
+2026-10-24 15:09:35.681 SC step 3: meta mechanics reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced
+2026-10-24 15:09:35.697 SC step 4: meta expectedstate souls=25600 items=upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_ricochet,upgrade_healing_booster,upgrade_siphon_bullets tiers=7 15 15 3
+2026-10-24 15:09:35.714 SC step 5: meta build haze
+2026-10-24 15:09:35.729 SC step 6: meta checkpoint 25600
+2026-10-24 15:09:35.744 SC step 7: meta items upgrade_active_reload upgrade_blitz_bullets upgrade_titan_round upgrade_chonky upgrade_ricochet upgrade_healing_booster upgrade_siphon_bullets
+2026-10-24 15:09:35.759 SC step 8: meta strategy_source council/evidence/interaction/haze_burst_fire_buypoint.txt
+2026-10-24 15:09:35.775 SC step 9: meta feeds interaction matrix haze Burst Fire
+2026-10-24 15:09:35.790 SC step 10: meta player_title Haze reload time
+2026-10-24 15:09:35.807 SC step 11: meta player_what Shoot 20s, time the reloads
+2026-10-24 15:09:35.822 SC step 12: meta player_why The game files do not say
+2026-10-24 15:09:35.839 SC step 13: meta player_short Reload timing
+2026-10-24 15:09:35.853 SC step 14: meta player_expect Gap between magazines (s)
+2026-10-24 15:09:35.869 SC step 15: meta result_says reload seconds = gap between the last bullet of a magazine and the first of the next (MEASURED); replaces the ASSUMED 2.5 s
+2026-10-24 15:09:35.884 SC step 16: setup Haze Haze
+2026-10-24 15:09:35.885 SETUP me already Haze
+2026-10-24 15:09:35.885 SETUP start me=Haze enemy=Haze
+2026-10-24 15:09:36.619 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_quarter_combat | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | setup | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:09:36.619 DISPLAY SENT Next: Reload timing
+2026-10-24 15:09:42.392 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:09:42.392 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:09:42.424 SC step 17: raw citadel_unlock_flex_slots
+2026-10-24 15:09:42.439 SC step 18: abil 7 15 15 3
+2026-10-24 15:09:42.439 SC abil 1 ability_sleep_dagger bits=7 unlocked=True
+2026-10-24 15:09:42.439 SC abil 2 ability_smoke_bomb bits=15 unlocked=True
+2026-10-24 15:09:42.439 SC abil 3 ability_stacking_damage bits=15 unlocked=True
+2026-10-24 15:09:42.439 SC abil 4 ability_bullet_flurry bits=3 unlocked=True
+2026-10-24 15:09:42.458 SC step 19: souls 25600
+2026-10-24 15:09:42.470 SC step 20: hardreset 
+2026-10-24 15:09:42.470 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 15:09:42.470 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 15:09:42.487 SC step 21: setup Wraith Haze
+2026-10-24 15:09:42.489 SETUP start me=Wraith enemy=Haze
+2026-10-24 15:09:42.612 DISPLAY STATE 0 vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_quarter_combat | TIERS: 7/15/15/3 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:09:42.612 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Haze -> 3264121818/8/0
+2026-10-24 15:09:43.626 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:09:43.626 DISPLAY re-assert: pawn/level/hero changed 3264121818/8/0 -> 3264121818/36/Wraith
+2026-10-24 15:09:44.796 CLIENTCMD exit_item_shop exit_item_shop
+2026-10-24 15:09:45.625 DISPLAY SENT Haze reload time
+2026-10-24 15:09:46.625 DISPLAY SENT Shoot 20s, time the reloads
+2026-10-24 15:09:47.610 DISPLAY SENT Feeds: interaction matrix haze...
+2026-10-24 15:09:48.625 DISPLAY SENT Checking how long Haze's reload
+2026-10-24 15:09:49.391 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:09:49.391 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:09:49.422 SC step 22: wait 1.5
+2026-10-24 15:09:49.625 DISPLAY SENT takes, so magazine and fire-rate
+2026-10-24 15:09:50.624 DISPLAY SENT items can be compared.
+2026-10-24 15:09:50.921 SC step 23: setup Haze Haze
+2026-10-24 15:09:50.922 SETUP start me=Haze enemy=Haze
+2026-10-24 15:09:51.625 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:09:51.625 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Wraith -> 3264121818/36/Haze
+2026-10-24 15:09:53.625 DISPLAY HUD[announce] Haze reload time | Feeds: interaction matrix haze... / Setting up
+2026-10-24 15:09:57.390 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:09:57.390 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:09:57.421 SC step 24: wait 1
+2026-10-24 15:09:58.422 SC step 25: raw citadel_unlock_flex_slots
+2026-10-24 15:09:58.436 SC step 26: unlock 7
+2026-10-24 15:09:58.436 SC unlock ability_sleep_dagger 0 -> 7
+2026-10-24 15:09:58.436 SC unlock ability_smoke_bomb 0 -> 7
+2026-10-24 15:09:58.436 SC unlock ability_stacking_damage 0 -> 7
+2026-10-24 15:09:58.436 SC unlock ability_bullet_flurry 0 -> 7
+2026-10-24 15:09:58.436 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 15:09:58.436 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 15:09:58.436 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 15:09:58.436 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 15:09:58.436 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 15:09:58.436 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 15:09:58.436 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 15:09:58.436 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 15:09:58.436 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 15:09:58.436 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 15:09:58.436 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 15:09:58.436 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 15:09:58.452 SC step 27: basemods 
+2026-10-24 15:09:58.452 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 15:09:58.452 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:09:58.468 SC step 28: fetch 
+2026-10-24 15:09:58.468 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:09:58.483 SC step 29: mark none
+2026-10-24 15:09:58.483 UCSTAT label=none secs=22.8 calls=1464 cmds=3699 calls/s=64.1 cmds/call=2.53 perCall[0..7+]=0/20/767/563/114/0/0/0 gapMs mean=15.62 p50=15.6 p95=16.8 p99=31.8 max=78.6 gap>32ms=13 gap>50ms=5 allSlotCalls=4392 allSlotCalls/frame=3.00 slots=0:1464,1:1464,2:1464 | frames=1464 emptyFrames(no human cmd)=58 frameGapMs p50=15.6 p99=17.6 max=56.4 | fgSamples=90 fgPct=100 minimizedPct=0
+2026-10-24 15:09:58.484 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:09:58.484 SC ITEMS@none: maxhp=1885 
+2026-10-24 15:09:58.499 SC step 30: souls 25600
+2026-10-24 15:09:58.515 SC step 31: give upgrade_active_reload
+2026-10-24 15:09:58.515 SC gave upgrade_active_reload
+2026-10-24 15:09:58.532 SC step 32: give upgrade_blitz_bullets
+2026-10-24 15:09:58.532 SC gave upgrade_blitz_bullets
+2026-10-24 15:09:58.546 SC step 33: give upgrade_titan_round
+2026-10-24 15:09:58.547 SC gave upgrade_titan_round
+2026-10-24 15:09:58.562 SC step 34: give upgrade_chonky
+2026-10-24 15:09:58.562 SC gave upgrade_chonky
+2026-10-24 15:09:58.577 SC step 35: give upgrade_ricochet
+2026-10-24 15:09:58.578 SC gave upgrade_ricochet
+2026-10-24 15:09:58.593 SC step 36: give upgrade_healing_booster
+2026-10-24 15:09:58.593 SC gave upgrade_healing_booster
+2026-10-24 15:09:58.609 SC step 37: give upgrade_siphon_bullets
+2026-10-24 15:09:58.609 SC gave upgrade_siphon_bullets
+2026-10-24 15:09:58.624 SC step 38: basemods 
+2026-10-24 15:09:58.624 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_active_reload/modifier_intrinsic_base,upgrade_blitz_bullets/modifier_intrinsic_base,upgrade_titan_round/modifier_intrinsic_base,upgrade_chonky/modifier_apex_watcher,upgrade_ricochet/modifier_ricochet_proc,upgrade_healing_booster/modifier_intrinsic_base,upgrade_siphon_bullets/modifier_siphon_bullets
+2026-10-24 15:09:58.624 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:09:58.624 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:09:58.639 SC step 39: enemies 1 300 4
+2026-10-24 15:09:58.640 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 15:09:58.640 SC BOT[enemies] 0 idx=1 active=True hp=1192 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 15:09:58.640 SC BOT[enemies] 1 idx=2 active=False hp=1192 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 15:09:58.780 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:10:02.633 SC step 40: fetch 350
+2026-10-24 15:10:02.633 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:10:02.649 SC step 41: cast reload 2.5
+2026-10-24 15:10:02.948 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:10:05.149 SC step 42: mark P_350_fire20
+2026-10-24 15:10:05.149 UCSTAT label=none secs=6.6 calls=426 cmds=1128 calls/s=64.1 cmds/call=2.65 perCall[0..7+]=0/5/140/281/0/0/0/0 gapMs mean=15.65 p50=15.6 p95=16.6 p99=24.8 max=53.8 gap>32ms=1 gap>50ms=1 allSlotCalls=1278 allSlotCalls/frame=3.00 slots=0:426,1:426,2:426 | frames=426 emptyFrames(no human cmd)=6 frameGapMs p50=15.6 p99=17.8 max=44.2 | fgSamples=26 fgPct=100 minimizedPct=0
+2026-10-24 15:10:05.149 DISPLAY PHASE measure - P_350_fire20
+2026-10-24 15:10:05.149 DISPLAY Haze - now testing [P_350_fire20] - decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:10:05.149 SC ITEMS@P_350_fire20: maxhp=3203 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_ricochet,upgrade_healing_booster,upgrade_siphon_bullets
+2026-10-24 15:10:05.165 SC step 43: fire 20
+2026-10-24 15:10:05.617 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 6, hits 0, abilities executed 1
+2026-10-24 15:10:06.618 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 19, hits 0, abilities executed 1
+2026-10-24 15:10:07.618 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 33, hits 0, abilities executed 1
+2026-10-24 15:10:08.618 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 46, hits 0, abilities executed 1
+2026-10-24 15:10:09.615 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 59, hits 0, abilities executed 1
+2026-10-24 15:10:10.615 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 72, hits 0, abilities executed 1
+2026-10-24 15:10:11.615 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 75, hits 0, abilities executed 1
+2026-10-24 15:10:13.615 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 80, hits 0, abilities executed 2
+2026-10-24 15:10:14.615 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 93, hits 0, abilities executed 2
+2026-10-24 15:10:15.615 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 106, hits 0, abilities executed 2
+2026-10-24 15:10:16.616 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 119, hits 0, abilities executed 2
+2026-10-24 15:10:17.615 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 132, hits 0, abilities executed 2
+2026-10-24 15:10:18.615 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 145, hits 0, abilities executed 2
+2026-10-24 15:10:18.615 DISPLAY HUD[announce] Haze reload time | Shoot 20s, time the reloads / New test
+2026-10-24 15:10:19.622 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 150, hits 0, abilities executed 2
+2026-10-24 15:10:21.622 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 153, hits 0, abilities executed 3
+2026-10-24 15:10:22.622 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 166, hits 0, abilities executed 3
+2026-10-24 15:10:23.622 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 179, hits 0, abilities executed 3
+2026-10-24 15:10:24.622 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [P_350_fire20] | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 192, hits 0, abilities executed 3
+2026-10-24 15:10:25.169 SC step 44: mark none
+2026-10-24 15:10:25.169 UCSTAT label=P_350_fire20 secs=20.0 calls=1281 cmds=3454 calls/s=64.0 cmds/call=2.70 perCall[0..7+]=0/9/608/427/237/0/0/0 gapMs mean=15.63 p50=15.6 p95=16.6 p99=17.4 max=81.5 gap>32ms=6 gap>50ms=2 allSlotCalls=3843 allSlotCalls/frame=3.00 slots=0:1281,1:1281,2:1281 | frames=1281 emptyFrames(no human cmd)=15 frameGapMs p50=15.6 p99=17.6 max=82.7 | fgSamples=79 fgPct=100 minimizedPct=0
+2026-10-24 15:10:25.169 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:10:25.169 SC ITEMS@none: maxhp=3203 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_ricochet,upgrade_healing_booster,upgrade_siphon_bullets
+2026-10-24 15:10:25.184 SC step 45: wait 3
+2026-10-24 15:10:25.621 DISPLAY STATE Haze vs Haze | haze | INTERACTION @25600 || WHY: decide one UNKNOWN interaction cell (reload time of Haze's gun x normal shooting) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+ricochet+healing_booster+siphon_bullets | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 27/27 (done 23, blocked 2) || MECH: intended reload duration is animation-defined, not in vdata; magazine/fire-rate items change reload count; readings x1.0 and x0.6 priced -> shots 200, hits 0, abilities executed 4
+2026-10-24 15:10:28.184 SC step 46: end 
+2026-10-24 15:10:28.184 SC ACC p=1 head=1: windows=0 missWindows=0 headWindows=0 dmgHitsOnEnemy=0 weakpointHits=0
+2026-10-24 15:10:28.184 SC EVENTS AbilityCastStarted:=3 AbilityExecuted:=4 BulletCreated:me=200 GunFired:me=200
+2026-10-24 15:10:28.184 SC HEALSRC UnitHealed|player|: n=223 requested=0 applied=0
+2026-10-24 15:10:28.184 SC TRK heal=52165 loss=50408 minHp=730 floorHits=0 firstFloorMs=0 secs=73615.8 maxhp=3203
+2026-10-24 15:10:28.184 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-24 15:10:28.184 PERF tick n=3584 avg=0.02ms max=1.6ms slow>20ms=0 | usercmd n=10752 max=0.2ms slow=0 | abilityAttempt n=0 max=0.0ms
+2026-10-24 15:10:28.184 UCSTAT label=scenario-end secs=3.0 calls=193 cmds=394 calls/s=64.3 cmds/call=2.04 perCall[0..7+]=0/0/185/8/0/0/0/0 gapMs mean=15.63 p50=15.6 p95=16.5 p99=16.9 max=17.5 gap>32ms=0 gap>50ms=0 allSlotCalls=579 allSlotCalls/frame=3.00 slots=0:193,1:193,2:193 | frames=193 emptyFrames(no human cmd)=0 frameGapMs p50=15.6 p99=17.3 max=17.4 | fgSamples=12 fgPct=100 minimizedPct=0
+2026-10-24 15:10:28.184 DISPLAYPERF ticks=52 avg=0.101ms max=0.225ms
+2026-10-24 15:10:28.184 DISPLAY FINISHED: INTERACTION - Checking how long Haze's reload takes, so magazine and fire-rate items can be compared. -> shots 200, bullet hits 0, damage events on target 0 (end step)
+2026-10-24 15:10:28.184 DISPLAY MEASURED: shots 200, bullet hits 0, damage events on target 0; verify-pass/fail are in the run log
+2026-10-24 15:10:28.184 DISPLAY ASSUMED: none declared
+2026-10-24 15:10:28.184 DISPLAY CALCULATED: none
+2026-10-24 15:10:28.184 DISPLAY CONCLUSION: INSUFFICIENT EVIDENCE - no decision
+2026-10-24 15:10:28.184 SC scenario int_haze_reload_probe finished: end step
+2026-10-24 15:10:28.614 DISPLAY SENT Finished: Reload timing
+2026-10-24 15:10:28.614 QR TASK-END haze:interaction:reload_probe#1 why=end step
+2026-10-24 15:10:29.614 DISPLAY SENT 200 shots, 0 hits recorded
+2026-10-24 15:10:30.615 DISPLAY SENT Gap between magazines (s)
+2026-10-24 15:10:30.615 DISPLAY NEXT: queue empty
+2026-10-24 15:10:30.615 QR TASK-RESULT haze:interaction:reload_probe#1 VALID=yes 

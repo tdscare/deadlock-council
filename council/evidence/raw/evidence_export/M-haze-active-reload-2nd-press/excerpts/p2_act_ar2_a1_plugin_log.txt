@@ -1,0 +1,255 @@
+# plugin.log excerpt for p2:act_ar2 attempt 1, lines 76566-76814 (1-based) of the log as of export; local time UTC+1
+# context (last load/version lines before the window):
+# 2026-10-24 18:16:25.228 OnLoad isReload=False csv=E:\deadworks-server\sbx_logs\damage_20261024_181625.csv
+# 2026-10-24 18:16:25.281 QR LOAD isReload=False active=True tasks=38 orphanedRunningReset=0 foreignController=none reconciled total=38=sum-of-states
+# 2026-10-24 19:00:42.911 OnLoad isReload=False csv=E:\deadworks-server\sbx_logs\damage_20261024_190042.csv
+# 2026-10-24 19:00:42.944 QR LOAD isReload=False active=True tasks=38 orphanedRunningReset=0 foreignController=none reconciled total=38=sum-of-states
+2026-10-24 20:00:19.770 QR TASK-START p2:act_ar2#1 scenario=act_ar2
+2026-10-24 20:00:19.771 ACT required: Active Reload buff [modifier ~active_reload/buff >= 1]
+2026-10-24 20:00:19.771 DISPLAY FULL Haze | Level 18 stat floor, 0 souls spent, then Active Reload given | ISOLATED ITEM: Can the tester trigger Active Reload with a timed second reload press, and does the reload get shorter? (build: none (mechanic discovery); items: upgrade_active_reload; why: discover and verify the timed-input path; not a build verdict)
+2026-10-24 20:00:19.771 DISPLAY ISOLATED: does not justify the overall build
+2026-10-24 20:00:19.771 SC scenario act_ar2 started, 73 steps origin=runner:p2:act_ar2
+2026-10-24 20:00:19.782 SC step 0: meta hero Haze
+2026-10-24 20:00:19.797 SC step 1: meta kind ISOLATED ITEM
+2026-10-24 20:00:19.813 SC step 2: meta checkpoint Level 18 stat floor, 0 souls spent, then Active Reload given
+2026-10-24 20:00:19.829 SC step 3: meta build none (mechanic discovery)
+2026-10-24 20:00:19.844 SC step 4: meta items upgrade_active_reload
+2026-10-24 20:00:19.860 SC step 5: meta question Can the tester trigger Active Reload with a timed second reload press, and does the reload get shorter?
+2026-10-24 20:00:19.876 SC step 6: meta purpose discover and verify the timed-input path; not a build verdict
+2026-10-24 20:00:19.891 SC step 7: meta mechanics gun plus timed reload input; no abilities
+2026-10-24 20:00:19.907 SC step 8: meta excluded all abilities and all other items; this is a mechanic check
+2026-10-24 20:00:19.922 SC step 9: meta assumed second press inside the reload window shortens the reload
+2026-10-24 20:00:19.938 SC step 10: meta levels_mode isolated
+2026-10-24 20:00:19.954 SC step 11: meta required_activation Active Reload buff|modifier|active_reload/buff|1
+2026-10-24 20:00:19.969 SC step 12: meta required_readback Timed press reloaded faster|ar_best|<|base_reload
+2026-10-24 20:00:19.985 SC step 13: meta player_title Haze check: Active Reload
+2026-10-24 20:00:20.000 SC step 14: meta player_what Timed 2nd reload press|Which delay works?
+2026-10-24 20:00:20.016 SC step 15: meta player_why Checking the tester, not a build
+2026-10-24 20:00:20.032 SC step 16: meta player_short Harness check
+2026-10-24 20:00:20.047 SC step 17: meta player_expect Buff seen, reload shorter
+2026-10-24 20:00:20.063 SC step 18: meta expectedstate items=none at start; exactly one item given mid-run
+2026-10-24 20:00:20.079 SC step 19: meta accmode body-only
+2026-10-24 20:00:20.094 SC step 20: meta accwhy not a damage test
+2026-10-24 20:00:20.110 SC step 21: meta abilities gun only
+2026-10-24 20:00:20.126 SC step 22: meta runs 1/1
+2026-10-24 20:00:20.141 SC step 23: setup Haze Haze
+2026-10-24 20:00:20.142 SETUP start me=Haze enemy=Haze
+2026-10-24 20:00:20.767 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | setup | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 0, hits 0, abilities executed 0
+2026-10-24 20:00:20.767 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Viscous -> 1077316562/27/Haze
+2026-10-24 20:00:21.767 DISPLAY re-assert: pawn/level/hero changed 1077316562/27/Haze -> 1077316562/36/Haze
+2026-10-24 20:00:27.282 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 20:00:27.282 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 20:00:27.282 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 20:00:27.313 SC step 24: basemods 
+2026-10-24 20:00:27.313 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 20:00:27.313 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 20:00:27.329 SC step 25: mark none
+2026-10-24 20:00:27.329 UCSTAT label=none secs=7.5 calls=484 cmds=1251 calls/s=64.1 cmds/call=2.58 perCall[0..7+]=0/14/191/261/18/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.7 p99=32.2 max=62.5 gap>32ms=8 gap>50ms=2 allSlotCalls=1452 allSlotCalls/frame=3.00 slots=0:484,1:484,2:484 | frames=484 emptyFrames(no human cmd)=154 frameGapMs p50=15.7 p99=16.4 max=16.7 | fgSamples=30 fgPct=0 minimizedPct=0
+2026-10-24 20:00:27.329 DISPLAY PHASE idle-between-blocks
+2026-10-24 20:00:27.329 SC ITEMS@none: maxhp=1885 
+2026-10-24 20:00:27.344 SC step 26: hardreset 
+2026-10-24 20:00:27.344 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-24 20:00:27.344 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 20:00:27.344 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 20:00:27.360 SC step 27: setup Wraith Haze
+2026-10-24 20:00:27.360 SETUP start me=Wraith enemy=Haze
+2026-10-24 20:00:27.798 DISPLAY STATE 0 vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | reset | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 0, hits 0, abilities executed 0
+2026-10-24 20:00:27.798 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/28/0
+2026-10-24 20:00:28.807 DISPLAY STATE Wraith vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | reset | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 0, hits 0, abilities executed 0
+2026-10-24 20:00:28.807 DISPLAY re-assert: pawn/level/hero changed 1077316562/28/0 -> 1077316562/31/Wraith
+2026-10-24 20:00:29.810 DISPLAY re-assert: pawn/level/hero changed 1077316562/31/Wraith -> 1077316562/36/Wraith
+2026-10-24 20:00:29.810 DISPLAY HUD[announce] #196 Hero: Wraith - Preparing | Test: Haze check: Active Reload / Why: Checking the tester, not a... / Gear: checking / Attempt 1 of 3 / Status: Running
+2026-10-24 20:00:35.278 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 20:00:35.278 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 20:00:35.278 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 20:00:35.310 SC step 28: wait 1.5
+2026-10-24 20:00:36.809 SC step 29: setup Haze Haze
+2026-10-24 20:00:36.810 SETUP start me=Haze enemy=Haze
+2026-10-24 20:00:36.810 DISPLAY STATE 0 vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | reset | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 0, hits 0, abilities executed 0
+2026-10-24 20:00:36.810 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/0/0
+2026-10-24 20:00:37.809 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | reset | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 0, hits 0, abilities executed 0
+2026-10-24 20:00:37.809 DISPLAY re-assert: pawn/level/hero changed 1077316562/0/0 -> 1077316562/36/Haze
+2026-10-24 20:00:43.279 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 20:00:43.279 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-24 20:00:43.279 enemy dummy placed (chat suppressed: quiet display)
+2026-10-24 20:00:43.309 SC step 30: wait 1
+2026-10-24 20:00:44.309 SC step 31: raw citadel_unlock_flex_slots
+2026-10-24 20:00:44.325 SC step 32: unlock 7
+2026-10-24 20:00:44.325 SC unlock ability_sleep_dagger 0 -> 7
+2026-10-24 20:00:44.325 SC unlock ability_smoke_bomb 0 -> 7
+2026-10-24 20:00:44.325 SC unlock ability_stacking_damage 0 -> 7
+2026-10-24 20:00:44.325 SC unlock ability_bullet_flurry 0 -> 7
+2026-10-24 20:00:44.325 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 20:00:44.325 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 20:00:44.325 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 20:00:44.325 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 20:00:44.325 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 20:00:44.325 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 20:00:44.325 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 20:00:44.325 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 20:00:44.325 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 20:00:44.325 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 20:00:44.325 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 20:00:44.325 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 20:00:44.341 SC step 33: basemods 
+2026-10-24 20:00:44.341 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 20:00:44.341 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 20:00:44.356 SC step 34: fetch 
+2026-10-24 20:00:44.356 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 20:00:44.372 SC step 35: mark none
+2026-10-24 20:00:44.372 UCSTAT label=none secs=17.0 calls=1091 cmds=3145 calls/s=64.1 cmds/call=2.88 perCall[0..7+]=0/32/333/457/269/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.6 p99=32.4 max=106.1 gap>32ms=16 gap>50ms=6 allSlotCalls=3273 allSlotCalls/frame=3.00 slots=0:1091,1:1091,2:1091 | frames=1091 emptyFrames(no human cmd)=352 frameGapMs p50=15.6 p99=16.6 max=75.9 | fgSamples=67 fgPct=0 minimizedPct=0
+2026-10-24 20:00:44.372 DISPLAY PHASE idle-between-blocks
+2026-10-24 20:00:44.372 SC ITEMS@none: maxhp=1885 
+2026-10-24 20:00:44.388 SC step 36: raw citadel_unlock_flex_slots
+2026-10-24 20:00:44.404 SC step 37: aimoff 0 0
+2026-10-24 20:00:44.419 SC step 38: setgold 0
+2026-10-24 20:00:44.419 SC setgold 0
+2026-10-24 20:00:44.435 SC step 39: wait 0.4
+2026-10-24 20:00:44.669 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 20:00:44.809 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | idle-between-blocks | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 0, hits 0, abilities executed 0
+2026-10-24 20:00:44.841 SC step 40: wait 0.8
+2026-10-24 20:00:45.654 SC step 41: lvlhold 18
+2026-10-24 20:00:45.654 SC lvlhold 18
+2026-10-24 20:00:45.669 SC step 42: wait 1.2
+2026-10-24 20:00:45.810 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/18/Haze
+2026-10-24 20:00:46.872 SC step 43: nw 
+2026-10-24 20:00:46.873 SC NW level=18 pdLevel=18 netWorth=0 hpMaxPD=1885 gold=0 maxhp=1885 hp=1885
+2026-10-24 20:00:46.887 SC step 44: egod 
+2026-10-24 20:00:46.887 SC egod floor=0.9999 ehp=0
+2026-10-24 20:00:46.903 SC step 45: eresist gun 0
+2026-10-24 20:00:46.903 SC eresist gun=0% spirit=0% (damage scaled in OnTakeDamage on enemy-team players)
+2026-10-24 20:00:46.919 SC step 46: eresist spirit 0
+2026-10-24 20:00:46.919 SC eresist gun=0% spirit=0% (damage scaled in OnTakeDamage on enemy-team players)
+2026-10-24 20:00:46.934 SC step 47: aimpt -33 -30
+2026-10-24 20:00:46.934 SC aimpt right=-33 up=-30
+2026-10-24 20:00:46.950 SC step 48: accoff 
+2026-10-24 20:00:46.950 SC accuracy off
+2026-10-24 20:00:46.965 SC step 49: wait 0.8
+2026-10-24 20:00:47.778 SC step 50: heal 
+2026-10-24 20:00:47.794 SC step 51: fetch 150
+2026-10-24 20:00:47.794 SC fetched enemy to <12347.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 20:00:47.809 SC step 52: wait 0.8
+2026-10-24 20:00:48.106 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12347.9375, 2625.8125, 441.78125> dist=150.0 want=150
+2026-10-24 20:00:48.622 SC step 53: healreset 
+2026-10-24 20:00:48.638 SC step 54: mark ACT|none|body
+2026-10-24 20:00:48.638 UCSTAT label=none secs=4.2 calls=273 cmds=703 calls/s=64.2 cmds/call=2.58 perCall[0..7+]=0/2/115/153/3/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.4 p99=31.7 max=32.2 gap>32ms=1 gap>50ms=0 allSlotCalls=819 allSlotCalls/frame=3.00 slots=0:273,1:273,2:273 | frames=273 emptyFrames(no human cmd)=79 frameGapMs p50=15.7 p99=16.5 max=16.5 | fgSamples=17 fgPct=0 minimizedPct=0
+2026-10-24 20:00:48.638 LEVELS ACT|none|body: actual [ability_sleep_dagger=3, ability_smoke_bomb=3, ability_stacking_damage=3, ability_bullet_flurry=3, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=isolated
+2026-10-24 20:00:48.638 DIST ACT|none|body: target 150 units away
+2026-10-24 20:00:48.638 DISPLAY PHASE measure - ACT|none|body
+2026-10-24 20:00:48.638 DISPLAY Haze - now testing [ACT|none|body] - discover and verify the timed-input path; not a build verdict | items read back: no items | aim: body-only (not a damage test) | run 1/1
+2026-10-24 20:00:48.638 SC ITEMS@ACT|none|body: maxhp=1885 
+2026-10-24 20:00:48.653 SC step 55: rbprobe 
+2026-10-24 20:00:48.659 RBPROBE weapon ability = citadel_weapon_haze_set
+2026-10-24 20:00:48.660 RBPROBE ok CCitadel_Ability_PrimaryWeapon.m_iClip (int) = 34
+2026-10-24 20:00:48.660 RBPROBE clip field chosen: CCitadel_Ability_PrimaryWeapon.m_iClip
+2026-10-24 20:00:48.660 RBPROBE ok CCitadel_Ability_PrimaryWeapon.m_bInReload (int) = 256
+2026-10-24 20:00:48.660 RBPROBE ok CCitadel_Ability_PrimaryWeapon.m_flNextPrimaryAttack (float) = 3594.296875
+2026-10-24 20:00:48.661 RBPROBE ok CBasePlayerWeapon.m_iClip1 (int) = 0
+2026-10-24 20:00:48.661 RBPROBE ok CBasePlayerWeapon.m_iClip2 (int) = 0
+2026-10-24 20:00:48.669 SC step 56: fire 1.5
+2026-10-24 20:00:48.810 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 2, hits 1, abilities executed 1
+2026-10-24 20:00:49.809 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 11, hits 19, abilities executed 1
+2026-10-24 20:00:50.157 SC step 57: rl none 4
+2026-10-24 20:00:50.161 SC RELOAD press: clip=20 secondPress=none (timed input via the plugin)
+2026-10-24 20:00:50.798 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 14, hits 25, abilities executed 2
+2026-10-24 20:00:52.565 SC RELOAD done: first press -> refill 2.41s (clip 20->30, second press none)
+2026-10-24 20:00:52.565 ACT reload/refill event: clip 20 -> 30 (max seen 33)
+2026-10-24 20:00:54.173 SC step 58: rb base_reload reload_s
+2026-10-24 20:00:54.173 SC RB base_reload = 2.406  (reload_s)
+2026-10-24 20:00:54.189 SC step 59: give upgrade_active_reload
+2026-10-24 20:00:54.189 SC gave upgrade_active_reload
+2026-10-24 20:00:54.205 SC step 60: wait 1.0
+2026-10-24 20:00:54.298 ACT modifier seen: upgrade_active_reload/modifier_intrinsic_base
+2026-10-24 20:00:54.815 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 14, hits 25, abilities executed 2
+2026-10-24 20:00:55.220 SC step 61: fire 1.5
+2026-10-24 20:00:55.813 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 20, hits 37, abilities executed 3
+2026-10-24 20:00:56.735 SC step 62: rl 0.9 4
+2026-10-24 20:00:56.736 SC RELOAD press: clip=15 secondPress=0.90s (timed input via the plugin)
+2026-10-24 20:00:56.814 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 29, hits 56, abilities executed 4
+2026-10-24 20:00:59.126 SC RELOAD done: first press -> refill 2.39s (clip 15->36, second press 0.90s)
+2026-10-24 20:00:59.126 ACT reload/refill event: clip 15 -> 36 (max seen 36)
+2026-10-24 20:01:00.736 SC step 63: rb ar_0 reload_s
+2026-10-24 20:01:00.736 SC RB ar_0 = 2.391  (reload_s)
+2026-10-24 20:01:00.752 SC step 64: fire 1.5
+2026-10-24 20:01:00.814 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 30, hits 58, abilities executed 5
+2026-10-24 20:01:01.815 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 39, hits 76, abilities executed 5
+2026-10-24 20:01:02.252 SC step 65: rl 1.0 4
+2026-10-24 20:01:02.252 SC RELOAD press: clip=21 secondPress=1.00s (timed input via the plugin)
+2026-10-24 20:01:02.814 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 44, hits 87, abilities executed 6
+2026-10-24 20:01:04.626 SC RELOAD done: first press -> refill 2.38s (clip 21->36, second press 1.00s)
+2026-10-24 20:01:04.626 ACT reload/refill event: clip 21 -> 36 (max seen 36)
+2026-10-24 20:01:06.267 SC step 66: rb ar_1 reload_s
+2026-10-24 20:01:06.267 SC RB ar_1 = 2.375  (reload_s)
+2026-10-24 20:01:06.282 SC step 67: fire 1.5
+2026-10-24 20:01:06.813 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 49, hits 97, abilities executed 7
+2026-10-24 20:01:07.767 SC step 68: rl 1.1 4
+2026-10-24 20:01:07.767 SC RELOAD press: clip=22 secondPress=1.10s (timed input via the plugin)
+2026-10-24 20:01:07.829 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 58, hits 115, abilities executed 8
+2026-10-24 20:01:08.970 SC RELOAD done: first press -> refill 1.20s (clip 22->36, second press 1.10s)
+2026-10-24 20:01:08.970 ACT reload/refill event: clip 22 -> 36 (max seen 36)
+2026-10-24 20:01:08.970 ACT modifier seen: upgrade_active_reload/buff
+2026-10-24 20:01:08.970 ACT Active Reload buff: activation #1 (modifier ~active_reload/buff)
+2026-10-24 20:01:11.767 SC step 69: rb ar_2 reload_s
+2026-10-24 20:01:11.767 SC RB ar_2 = 1.203  (reload_s)
+2026-10-24 20:01:11.782 SC step 70: fire 1.5
+2026-10-24 20:01:11.845 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 59, hits 117, abilities executed 9
+2026-10-24 20:01:11.892 ACT modifier seen: modifier_life_steal
+2026-10-24 20:01:12.845 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 71, hits 142, abilities executed 9
+2026-10-24 20:01:13.283 SC step 71: rl 1.3 4
+2026-10-24 20:01:13.283 SC RELOAD press: clip=18 secondPress=1.30s (timed input via the plugin)
+2026-10-24 20:01:13.845 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 76, hits 152, abilities executed 10
+2026-10-24 20:01:15.657 SC RELOAD done: first press -> refill 2.38s (clip 18->36, second press 1.30s)
+2026-10-24 20:01:15.657 ACT reload/refill event: clip 18 -> 36 (max seen 36)
+2026-10-24 20:01:17.282 SC step 72: rb ar_3 reload_s
+2026-10-24 20:01:17.282 SC RB ar_3 = 2.375  (reload_s)
+2026-10-24 20:01:17.298 SC step 73: fire 1.5
+2026-10-24 20:01:17.845 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 82, hits 163, abilities executed 11
+2026-10-24 20:01:18.798 SC step 74: rl 1.4 4
+2026-10-24 20:01:18.798 SC RELOAD press: clip=21 secondPress=1.40s (timed input via the plugin)
+2026-10-24 20:01:18.845 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 91, hits 183, abilities executed 12
+2026-10-24 20:01:21.251 SC RELOAD done: first press -> refill 2.45s (clip 21->36, second press 1.40s)
+2026-10-24 20:01:21.251 ACT reload/refill event: clip 21 -> 36 (max seen 36)
+2026-10-24 20:01:22.798 SC step 75: rb ar_4 reload_s
+2026-10-24 20:01:22.798 SC RB ar_4 = 2.454  (reload_s)
+2026-10-24 20:01:22.814 SC step 76: fire 1.5
+2026-10-24 20:01:22.845 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 92, hits 183, abilities executed 13
+2026-10-24 20:01:23.845 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 101, hits 203, abilities executed 13
+2026-10-24 20:01:24.314 SC step 77: rl 1.5 4
+2026-10-24 20:01:24.314 SC RELOAD press: clip=21 secondPress=1.50s (timed input via the plugin)
+2026-10-24 20:01:24.860 DISPLAY STATE Haze vs Haze | none (mechanic discovery) | ISOLATED ITEM @Level 18 stat floor, 0 souls spent, then Active Reload given || WHY: discover and verify the timed-input path; not a build verdict || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: body-only (not a damage test) | USES: gun only || run 1/1 | measure [ACT|none|body] | task 39/40 (done 26, blocked 4) || MECH: intended gun plus timed reload input; no abilities -> shots 106, hits 213, abilities executed 14
+2026-10-24 20:01:26.735 SC RELOAD done: first press -> refill 2.41s (clip 21->36, second press 1.50s)
+2026-10-24 20:01:26.735 ACT reload/refill event: clip 21 -> 36 (max seen 36)
+2026-10-24 20:01:28.314 SC step 78: rb ar_5 reload_s
+2026-10-24 20:01:28.314 SC RB ar_5 = 2.406  (reload_s)
+2026-10-24 20:01:28.329 SC step 79: rb ar_best minof:ar_0,ar_1,ar_2,ar_3,ar_4,ar_5
+2026-10-24 20:01:28.333 SC RB ar_best = 1.203  (minof:ar_0,ar_1,ar_2,ar_3,ar_4,ar_5)
+2026-10-24 20:01:28.345 SC step 80: mark none
+2026-10-24 20:01:28.345 UCSTAT label=ACT|none|body secs=39.7 calls=2541 cmds=6566 calls/s=64.0 cmds/call=2.58 perCall[0..7+]=0/13/1053/1453/22/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.5 p99=32.0 max=46.5 gap>32ms=24 gap>50ms=0 allSlotCalls=7623 allSlotCalls/frame=3.00 slots=0:2541,1:2541,2:2541 | frames=2541 emptyFrames(no human cmd)=746 frameGapMs p50=15.7 p99=16.6 max=34.2 | fgSamples=157 fgPct=0 minimizedPct=0
+2026-10-24 20:01:28.345 DISPLAY PHASE idle-between-blocks
+2026-10-24 20:01:28.345 SC ITEMS@none: maxhp=1291 upgrade_active_reload
+2026-10-24 20:01:28.360 SC step 81: end 
+2026-10-24 20:01:28.360 SC ACC p=1 head=1: windows=0 missWindows=0 headWindows=0 dmgHitsOnEnemy=213 weakpointHits=0
+2026-10-24 20:01:28.360 SC EVENTS AbilityCastStarted:=7 AbilityExecuted:=14 BulletCreated:me=106 BulletHit:me=106 GunFired:me=106 Reload:refill=7
+2026-10-24 20:01:28.361 SC HEALSRC UnitHealed|player|: n=95 requested=0 applied=0
+2026-10-24 20:01:28.361 SC HEALSRC PreUnitHealed|player|: n=16 requested=0 applied=0
+2026-10-24 20:01:28.361 SC TRK heal=0 loss=594 minHp=1291 floorHits=0 firstFloorMs=0 secs=39.8 maxhp=1291
+2026-10-24 20:01:28.361 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-24 20:01:28.361 PERF tick n=4868 avg=0.01ms max=9.0ms slow>20ms=0 | usercmd n=14606 max=0.1ms slow=0 | abilityAttempt n=0 max=0.0ms
+2026-10-24 20:01:28.361 UCSTAT label=scenario-end secs=0.0 calls=0 cmds=0 calls/s=0.0 cmds/call=0.00 perCall[0..7+]=0/0/0/0/0/0/0/0 gapMs mean=0.00 p50=- p95=- p99=- max=0.0 gap>32ms=0 gap>50ms=0 allSlotCalls=2 allSlotCalls/frame=2.00 slots=0:1,1:1 | frames=1 emptyFrames(no human cmd)=1 frameGapMs p50=- p99=- max=0.0 | fgSamples=0 fgPct=-1 minimizedPct=-1
+2026-10-24 20:01:28.361 ACT SUMMARY Active Reload buff: count=1 (needed 1) uptime=7.0s of 69s (10%) avgDuration=7.0s shortestGap=n/a (a continuous-bonus assumption would be 100% uptime) activeWhileFiring=14% of 10.4s
+2026-10-24 20:01:28.361 DIST SUMMARY blocks=1 inRange=1 outOfRange=0 expected=mixed
+2026-10-24 20:01:28.361 RB SUMMARY clipField=CCitadel_Ability_PrimaryWeapon.m_iClip clipMax=36 refillEvents=7
+2026-10-24 20:01:28.361 RB CHECK Timed press reloaded faster: ar_best=1.203 < base_reload=2.406 => PASS
+2026-10-24 20:01:28.361 DISPLAYPERF ticks=68 avg=0.372ms max=16.890ms
+2026-10-24 20:01:28.361 DISPLAY FINISHED: ISOLATED ITEM - Can the tester trigger Active Reload with a timed second reload press, and does the reload get shorter? -> shots 106, bullet hits 106, damage events on target 213 (end step)
+2026-10-24 20:01:28.361 DISPLAY MEASURED: shots 106, bullet hits 106, damage events on target 213; verify-pass/fail are in the run log
+2026-10-24 20:01:28.361 DISPLAY ASSUMED: second press inside the reload window shortens the reload
+2026-10-24 20:01:28.361 DISPLAY CALCULATED: none
+2026-10-24 20:01:28.361 DISPLAY CONCLUSION: INSUFFICIENT EVIDENCE - no decision | isolated result: NOT a build verdict (excluded: all abilities and all other items; this is a mechanic check)
+2026-10-24 20:01:28.361 SC scenario act_ar2 finished: end step
+2026-10-24 20:01:28.876 DISPLAY SENT Done: Harness check
+2026-10-24 20:01:28.876 QR TASK-END p2:act_ar2#1 why=end step
+2026-10-24 20:01:29.892 DISPLAY SENT 106 shots, 213 hits recorded
+2026-10-24 20:01:30.908 DISPLAY SENT Buff seen, reload shorter
+2026-10-24 20:01:30.908 DISPLAY NEXT: INTERACTION disc:T5_2f170e43b3 - Checking whether Crushing Fists boosts the damage of Puddle Punch. because decide whether an item heavy-melee bonus applies to ability-delivered heavy melee damage (hypothesis T5-2f170e43b3)
+2026-10-24 20:01:30.908 QR TASK-RESULT p2:act_ar2#1 VALID=yes 

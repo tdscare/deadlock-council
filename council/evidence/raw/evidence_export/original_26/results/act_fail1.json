@@ -1,0 +1,103 @@
+{
+  "verdict": "VALID: no",
+  "task": "act:fail1",
+  "build": "act",
+  "scenario": "act_fail1",
+  "attempt": 3,
+  "reasons": [
+    "setup/activation check failed: Fake proc never fires never triggered (0 of 1 needed); target was inside the item\u0027s range in 1 block(s) but the test needs it out of range; Clip shrank (should fail): clip_after is 39, needed \u003C 34 (clip_before)"
+  ],
+  "startedAt": "2026-10-24T15:25:55.4513584Z",
+  "wallSec": 39,
+  "endWhy": "end step",
+  "checks": {
+    "setupVerifyOk": 3,
+    "posVerifyOk": 2,
+    "expectPass": 0,
+    "verifyFail": 3,
+    "unknownOps": 0,
+    "exceptions": 0,
+    "opFailed": 0,
+    "humanClientInput": 0,
+    "forcedExternal": 0
+  },
+  "damageCsv": "E:\\deadworks-server\\sbx_logs\\damage_20261024_154715.csv",
+  "damageCsvBytes": 27188,
+  "damageCsvTMs": [
+    2320016,
+    2359016
+  ],
+  "samplesCsv": "E:\\deadworks-server\\sbx_logs\\samples_act_fail1_162555.csv",
+  "samplesCsvBytes": 5735,
+  "env": "ENV: unlabelled",
+  "meta": {
+    "kind": "ISOLATED ITEM",
+    "hero": "Haze",
+    "checkpoint": "Level 18 stat floor, 0 souls spent, then Clip Size given",
+    "build": "none (harness check)",
+    "items": "upgrade_clip_size",
+    "question": "Does the tester prove that a clip-size item changes the magazine and that a reload really happened?",
+    "purpose": "calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict",
+    "mechanics": "reload plus clip-size readback; gun only",
+    "expectedstate": "items=none at start; exactly one item given mid-run",
+    "excluded": "all abilities and all other items; this is a harness check",
+    "accmode": "body-only",
+    "accwhy": "not a damage test",
+    "abilities": "gun only",
+    "runs": "1/1",
+    "assumed": "clip size item raises the magazine",
+    "required_activation": "Fake proc never fires|modifier|zzz_not_a_real_modifier|1",
+    "required_readback": "Clip shrank (should fail)|clip_after|\u003C|clip_before",
+    "activation_range": "300",
+    "range_expect": "out",
+    "player_title": "Haze check: forced failure",
+    "player_what": "Clip bigger after the item?|Did a reload really occur?",
+    "player_why": "Checking the tester, not a build",
+    "player_short": "Harness check",
+    "player_expect": "Clip grows, reload occurs"
+  },
+  "startStates": [],
+  "displayTickMsAvgMax": [
+    0.117,
+    0.557
+  ],
+  "pluginLog": {
+    "file": "E:\\deadworks-server\\sbx_logs\\plugin.log",
+    "lineStart": 66555,
+    "lineEnd": 66757,
+    "markerStart": "QR TASK-START act:fail1#3",
+    "markerEnd": "QR TASK-END act:fail1#3"
+  },
+  "measured": [
+    "ACT required: Fake proc never fires [modifier ~zzz_not_a_real_modifier \u003E= 1]",
+    "ACT modifier seen: upgrade_active_reload/modifier_intrinsic_base",
+    "LEVELS ACT|none|body: actual [ability_sleep_dagger=3, ability_smoke_bomb=3, ability_stacking_damage=3, ability_bullet_flurry=3, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3,",
+    "DIST ACT|none|body: target 150 units away, activation range 300 =\u003E IN RANGE (item should be active)",
+    "RBPROBE weapon ability = citadel_weapon_haze_set",
+    "RBPROBE ok CCitadel_Ability_PrimaryWeapon.m_iClip (int) = 34",
+    "RBPROBE clip field chosen: CCitadel_Ability_PrimaryWeapon.m_iClip",
+    "RBPROBE ok CCitadel_Ability_PrimaryWeapon.m_bInReload (int) = 256",
+    "RBPROBE ok CCitadel_Ability_PrimaryWeapon.m_flNextPrimaryAttack (float) = 13141.40625",
+    "RBPROBE ok CBasePlayerWeapon.m_iClip1 (int) = 0",
+    "RBPROBE ok CBasePlayerWeapon.m_iClip2 (int) = 0",
+    "SC RB clip_before = 34  (clip)",
+    "ACT reload/refill event: clip 19 -\u003E 30 (max seen 33)",
+    "ACT modifier seen: upgrade_clip_size/modifier_intrinsic_base",
+    "ACT reload/refill event: clip 15 -\u003E 39 (max seen 39)",
+    "SC RB clip_after = 39  (clip)",
+    "SC RB items_after = 1  (items)",
+    "SC RB clipmax_seen = 39  (clipmax)",
+    "ACT SUMMARY Fake proc never fires: count=0 (needed 1) uptime=0.0s of 38s (0%) avgDuration=0.0s shortestGap=n/a (a continuous-bonus assumption would be 100% uptime) activeWhileFiring=0% of 3.1s",
+    "DIST SUMMARY blocks=1 inRange=1 outOfRange=0 expected=out",
+    "RB SUMMARY clipField=CCitadel_Ability_PrimaryWeapon.m_iClip clipMax=39 refillEvents=2",
+    "RB CHECK Clip shrank (should fail): clip_after=39 \u003C clip_before=34 =\u003E FAIL"
+  ],
+  "messages": [
+    "SC VERIFY FAIL setup/activation: Fake proc never fires never triggered (0 of 1 needed)",
+    "SC VERIFY FAIL setup/activation: target was inside the item\u0027s range in 1 block(s) but the test needs it out of range",
+    "SC VERIFY FAIL setup/activation: Clip shrank (should fail): clip_after is 39, needed \u003C 34 (clip_before)"
+  ],
+  "clientInput": [],
+  "externalCommands": [],
+  "written": "2026-10-24T15:26:36.448Z"
+}

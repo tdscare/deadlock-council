@@ -1,0 +1,65 @@
+{
+  "verdict": "VALID: yes",
+  "task": "haze:interaction:Close_Quarters_3_Fixation_T2_weapon_damage_within_range",
+  "build": "haze",
+  "scenario": "int_haze_Close_Quarters_3_Fixation_T2_weapon_damage_within_range",
+  "attempt": 1,
+  "reasons": [],
+  "startedAt": "2026-10-24T14:02:08.4351998Z",
+  "wallSec": 222.1,
+  "endWhy": "end step",
+  "checks": {
+    "setupVerifyOk": 13,
+    "posVerifyOk": 12,
+    "expectPass": 0,
+    "verifyFail": 0,
+    "unknownOps": 0,
+    "exceptions": 0,
+    "opFailed": 0,
+    "humanClientInput": 0,
+    "forcedExternal": 0
+  },
+  "damageCsv": "E:\\deadworks-server\\sbx_logs\\damage_20261024_150154.csv",
+  "damageCsvBytes": 1045,
+  "damageCsvTMs": [
+    14125,
+    236234
+  ],
+  "samplesCsv": "E:\\deadworks-server\\sbx_logs\\samples_int_haze_Close_Quarters_3_Fixation_T2_weapon_damage_within_range_150208.csv",
+  "samplesCsvBytes": 32668,
+  "env": "ENV: unlabelled",
+  "meta": {
+    "kind": "INTERACTION",
+    "question": "Checking whether Close Quarters boosts Haze\u0027s Fixation more than High-Velocity Rounds.",
+    "purpose": "decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it",
+    "mechanics": "per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage)",
+    "expectedstate": "souls=12800 items=upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_close_range,upgrade_high_velocity_mag tiers=3 15 7 1",
+    "build": "haze",
+    "checkpoint": "12800",
+    "items": "upgrade_active_reload upgrade_blitz_bullets upgrade_titan_round upgrade_chonky upgrade_close_range upgrade_high_velocity_mag",
+    "strategy_source": "council/evidence/interaction/haze_close_quarters_12000.txt",
+    "feeds": "interaction matrix haze Close Quarters",
+    "player_title": "Does Close Quarters help Fixatio",
+    "player_what": "Close Quarter vs High-Velocity",
+    "player_why": "The game files do not say",
+    "player_short": "Close Quarters on Fixation",
+    "player_expect": "More damage: A or B?",
+    "result_says": "WORKS if arm A\u0027s damage per bullet rises with stacks by the item\u0027s % (reading 1) / DOES NOT WORK if only the flat stack part rises (reading 2); A vs B damage per window"
+  },
+  "startStates": [],
+  "displayTickMsAvgMax": [
+    0.155,
+    12.002
+  ],
+  "pluginLog": {
+    "file": "E:\\deadworks-server\\sbx_logs\\plugin.log",
+    "lineStart": 63945,
+    "lineEnd": 64611,
+    "markerStart": "QR TASK-START haze:interaction:Close_Quarters_3_Fixation_T2_weapon_damage_within_range#1",
+    "markerEnd": "QR TASK-END haze:interaction:Close_Quarters_3_Fixation_T2_weapon_damage_within_range#1"
+  },
+  "messages": [],
+  "clientInput": [],
+  "externalCommands": [],
+  "written": "2026-10-24T14:05:52.533Z"
+}

@@ -1,0 +1,672 @@
+# plugin.log excerpt haze:interaction:Close_Quarters_3_Fixation_T2_weapon_damage_within_range attempt 1 lines 63945-64615; local time UTC+1
+2026-10-24 15:02:08.435 QR TASK-START haze:interaction:Close_Quarters_3_Fixation_T2_weapon_damage_within_range#1 scenario=int_haze_Close_Quarters_3_Fixation_T2_weapon_damage_within_range
+2026-10-24 15:02:08.451 DISPLAY FULL Haze | 12800 | INTERACTION: Checking whether Close Quarters boosts Haze's Fixation more than High-Velocity Rounds. (build: haze; items: upgrade_active_reload upgrade_blitz_bullets upgrade_titan_round upgrade_chonky upgrade_close_range upgrade_high_velocity_mag; why: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it)
+2026-10-24 15:02:08.458 DISPLAY strategy source has no GAME_SUMMARY: lines (ok for interaction files): E:\deadworks-server\council/evidence/interaction/haze_close_quarters_12000.txt
+2026-10-24 15:02:08.459 SC scenario int_haze_Close_Quarters_3_Fixation_T2_weapon_damage_within_range started, 123 steps origin=runner:haze:interaction:Close_Quarters_3_Fixation_T2_weapon_damage_within_range
+2026-10-24 15:02:08.464 FG client BACKGROUND
+2026-10-24 15:02:08.474 SC step 0: meta kind INTERACTION
+2026-10-24 15:02:08.494 PERF slow hook 0 32.2 ms
+2026-10-24 15:02:08.495 SC step 1: meta question Checking whether Close Quarters boosts Haze's Fixation more than High-Velocity Rounds.
+2026-10-24 15:02:08.497 SC step 2: meta purpose decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it
+2026-10-24 15:02:08.498 SC step 3: meta mechanics per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage)
+2026-10-24 15:02:08.499 SC step 4: meta expectedstate souls=12800 items=upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_close_range,upgrade_high_velocity_mag tiers=3 15 7 1
+2026-10-24 15:02:08.512 SC step 5: meta build haze
+2026-10-24 15:02:08.528 SC step 6: meta checkpoint 12800
+2026-10-24 15:02:08.543 SC step 7: meta items upgrade_active_reload upgrade_blitz_bullets upgrade_titan_round upgrade_chonky upgrade_close_range upgrade_high_velocity_mag
+2026-10-24 15:02:08.560 SC step 8: meta strategy_source council/evidence/interaction/haze_close_quarters_12000.txt
+2026-10-24 15:02:08.575 SC step 9: meta feeds interaction matrix haze Close Quarters
+2026-10-24 15:02:08.591 SC step 10: meta player_title Does Close Quarters help Fixatio
+2026-10-24 15:02:08.606 SC step 11: meta player_what Close Quarter vs High-Velocity
+2026-10-24 15:02:08.622 SC step 12: meta player_why The game files do not say
+2026-10-24 15:02:08.637 SC step 13: meta player_short Close Quarters on Fixation
+2026-10-24 15:02:08.653 SC step 14: meta player_expect More damage: A or B?
+2026-10-24 15:02:08.669 SC step 15: meta result_says WORKS if arm A's damage per bullet rises with stacks by the item's % (reading 1) / DOES NOT WORK if only the flat stack part rises (reading 2); A vs B damage per window
+2026-10-24 15:02:08.684 SC step 16: setup Haze Haze
+2026-10-24 15:02:08.687 SETUP start me=Haze enemy=Haze
+2026-10-24 15:02:09.419 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | setup | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:02:09.419 DISPLAY re-assert: pawn/level/hero changed 3264121818/20/Frank -> 3264121818/5/Haze
+2026-10-24 15:02:09.424 DISPLAY HUD[announce] Does Close Quarters help Fixatio | Feeds: interaction matrix haze... / Setting up
+2026-10-24 15:02:09.424 DISPLAY SENT Does Close Quarters help Fixatio
+2026-10-24 15:02:10.415 DISPLAY re-assert: pawn/level/hero changed 3264121818/5/Haze -> 3264121818/36/Haze
+2026-10-24 15:02:10.415 DISPLAY SENT Close Quarter vs High-Velocity
+2026-10-24 15:02:11.415 DISPLAY SENT Feeds: interaction matrix haze...
+2026-10-24 15:02:12.415 DISPLAY SENT Checking whether Close Quarters
+2026-10-24 15:02:13.415 DISPLAY SENT boosts Haze's Fixation more than
+2026-10-24 15:02:14.415 DISPLAY SENT High-Velocity Rounds.
+2026-10-24 15:02:16.338 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.84375>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:02:16.338 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:02:16.368 SC step 17: raw citadel_unlock_flex_slots
+2026-10-24 15:02:16.384 SC step 18: abil 3 15 7 1
+2026-10-24 15:02:16.384 SC abil 1 ability_sleep_dagger bits=3 unlocked=True
+2026-10-24 15:02:16.384 SC abil 2 ability_smoke_bomb bits=15 unlocked=True
+2026-10-24 15:02:16.384 SC abil 3 ability_stacking_damage bits=7 unlocked=True
+2026-10-24 15:02:16.384 SC abil 4 ability_bullet_flurry bits=1 unlocked=True
+2026-10-24 15:02:16.400 SC step 19: souls 12800
+2026-10-24 15:02:16.416 SC step 20: hardreset 
+2026-10-24 15:02:16.416 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 15:02:16.417 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 15:02:16.417 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 3/15/7/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:02:16.431 SC step 21: setup Wraith Haze
+2026-10-24 15:02:16.432 SETUP start me=Wraith enemy=Haze
+2026-10-24 15:02:17.415 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:02:17.415 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Haze -> 3264121818/28/Wraith
+2026-10-24 15:02:18.416 DISPLAY re-assert: pawn/level/hero changed 3264121818/28/Wraith -> 3264121818/36/Wraith
+2026-10-24 15:02:23.337 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.84375>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:02:23.337 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:02:23.368 SC step 22: wait 1.5
+2026-10-24 15:02:24.415 DISPLAY HUD[announce] Does Close Quarters help Fixatio | Feeds: interaction matrix haze... / New test
+2026-10-24 15:02:24.869 SC step 23: setup Haze Haze
+2026-10-24 15:02:24.870 SETUP start me=Haze enemy=Haze
+2026-10-24 15:02:25.415 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:02:25.415 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Wraith -> 3264121818/19/Haze
+2026-10-24 15:02:26.415 DISPLAY re-assert: pawn/level/hero changed 3264121818/19/Haze -> 3264121818/36/Haze
+2026-10-24 15:02:31.337 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.84375>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:02:31.337 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:02:31.368 SC step 24: wait 1
+2026-10-24 15:02:32.369 SC step 25: raw citadel_unlock_flex_slots
+2026-10-24 15:02:32.384 SC step 26: unlock 7
+2026-10-24 15:02:32.385 SC unlock ability_sleep_dagger 0 -> 7
+2026-10-24 15:02:32.385 SC unlock ability_smoke_bomb 0 -> 7
+2026-10-24 15:02:32.385 SC unlock ability_stacking_damage 0 -> 7
+2026-10-24 15:02:32.385 SC unlock ability_bullet_flurry 0 -> 7
+2026-10-24 15:02:32.385 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 15:02:32.385 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 15:02:32.385 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 15:02:32.385 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 15:02:32.385 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 15:02:32.385 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 15:02:32.385 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 15:02:32.385 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 15:02:32.385 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 15:02:32.385 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 15:02:32.385 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 15:02:32.385 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 15:02:32.399 SC step 27: basemods 
+2026-10-24 15:02:32.400 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 15:02:32.400 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:02:32.415 SC step 28: fetch 
+2026-10-24 15:02:32.415 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:02:32.415 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:02:32.431 SC step 29: mark none
+2026-10-24 15:02:32.438 UCSTAT label=none secs=24.0 calls=1535 cmds=4264 calls/s=64.1 cmds/call=2.78 perCall[0..7+]=0/37/486/793/219/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.6 p99=32.4 max=93.8 gap>32ms=27 gap>50ms=6 allSlotCalls=4609 allSlotCalls/frame=3.00 slots=0:1537,1:1537,2:1535 | frames=1537 emptyFrames(no human cmd)=510 frameGapMs p50=15.7 p99=16.6 max=33.6 | fgSamples=95 fgPct=0 minimizedPct=0
+2026-10-24 15:02:32.440 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:02:32.441 SC ITEMS@none: maxhp=1885 
+2026-10-24 15:02:32.446 SC step 30: souls 12800
+2026-10-24 15:02:32.462 SC step 31: give upgrade_active_reload
+2026-10-24 15:02:32.462 SC gave upgrade_active_reload
+2026-10-24 15:02:32.477 SC step 32: give upgrade_blitz_bullets
+2026-10-24 15:02:32.478 SC gave upgrade_blitz_bullets
+2026-10-24 15:02:32.493 SC step 33: give upgrade_titan_round
+2026-10-24 15:02:32.494 SC gave upgrade_titan_round
+2026-10-24 15:02:32.509 SC step 34: give upgrade_chonky
+2026-10-24 15:02:32.509 SC gave upgrade_chonky
+2026-10-24 15:02:32.524 SC step 35: give upgrade_close_range
+2026-10-24 15:02:32.525 SC gave upgrade_close_range
+2026-10-24 15:02:32.540 SC step 36: basemods 
+2026-10-24 15:02:32.540 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_active_reload/modifier_intrinsic_base,upgrade_blitz_bullets/modifier_intrinsic_base,upgrade_titan_round/modifier_intrinsic_base,upgrade_chonky/modifier_apex_watcher,upgrade_close_range/modifier_intrinsic_base
+2026-10-24 15:02:32.540 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:02:32.556 SC step 37: enemies 1 300 4
+2026-10-24 15:02:32.556 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 15:02:32.559 SC BOT[enemies] 0 idx=1 active=True hp=1192 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 15:02:32.559 SC BOT[enemies] 1 idx=2 active=False hp=1192 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 15:02:32.728 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:02:33.416 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 0, hits 0, abilities executed 0
+2026-10-24 15:02:36.551 SC step 38: fetch 350
+2026-10-24 15:02:36.551 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:02:36.567 SC step 39: cast reload 2.5
+2026-10-24 15:02:36.864 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:02:39.067 SC step 40: mark A_350_lowstacks
+2026-10-24 15:02:39.067 UCSTAT label=none secs=6.6 calls=425 cmds=1100 calls/s=64.3 cmds/call=2.59 perCall[0..7+]=0/15/157/241/12/0/0/0 gapMs mean=15.58 p50=15.6 p95=31.7 p99=45.7 max=47.0 gap>32ms=10 gap>50ms=0 allSlotCalls=1273 allSlotCalls/frame=3.00 slots=0:424,1:424,2:425 | frames=424 emptyFrames(no human cmd)=137 frameGapMs p50=15.7 p99=17.2 max=33.6 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-24 15:02:39.067 DISPLAY PHASE measure - A_350_lowstacks
+2026-10-24 15:02:39.069 DISPLAY Haze - now testing [A_350_lowstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+close_range | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:02:39.070 SC ITEMS@A_350_lowstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_close_range
+2026-10-24 15:02:39.082 SC step 41: fire 2
+2026-10-24 15:02:39.413 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_350_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 4, hits 0, abilities executed 1
+2026-10-24 15:02:40.410 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_350_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 16, hits 0, abilities executed 1
+2026-10-24 15:02:41.082 SC step 42: mark A_350_highstacks
+2026-10-24 15:02:41.082 UCSTAT label=A_350_lowstacks secs=2.0 calls=128 cmds=341 calls/s=64.5 cmds/call=2.66 perCall[0..7+]=0/2/46/73/7/0/0/0 gapMs mean=15.63 p50=15.7 p95=31.6 p99=32.1 max=62.3 gap>32ms=3 gap>50ms=1 allSlotCalls=386 allSlotCalls/frame=2.99 slots=0:129,1:129,2:128 | frames=129 emptyFrames(no human cmd)=41 frameGapMs p50=15.7 p99=16.6 max=16.6 | fgSamples=8 fgPct=0 minimizedPct=0
+2026-10-24 15:02:41.082 DISPLAY PHASE measure - A_350_highstacks
+2026-10-24 15:02:41.082 DISPLAY Haze - now testing [A_350_highstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+close_range | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:02:41.082 SC ITEMS@A_350_highstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_close_range
+2026-10-24 15:02:41.098 SC step 43: fire 8
+2026-10-24 15:02:41.410 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 27, hits 0, abilities executed 3
+2026-10-24 15:02:42.410 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 38, hits 0, abilities executed 3
+2026-10-24 15:02:43.411 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 50, hits 0, abilities executed 3
+2026-10-24 15:02:44.410 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 61, hits 0, abilities executed 3
+2026-10-24 15:02:45.410 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 73, hits 0, abilities executed 3
+2026-10-24 15:02:45.410 DISPLAY HUD[announce] Does Close Quarters help Fixatio | More damage: A or B? / New test
+2026-10-24 15:02:46.410 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 75, hits 0, abilities executed 3
+2026-10-24 15:02:48.410 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 79, hits 0, abilities executed 4
+2026-10-24 15:02:49.098 SC step 44: mark none
+2026-10-24 15:02:49.098 UCSTAT label=A_350_highstacks secs=8.0 calls=513 cmds=1353 calls/s=64.2 cmds/call=2.64 perCall[0..7+]=0/5/185/314/9/0/0/0 gapMs mean=15.60 p50=15.6 p95=31.6 p99=32.1 max=36.2 gap>32ms=8 gap>50ms=0 allSlotCalls=1539 allSlotCalls/frame=3.00 slots=0:513,1:513,2:513 | frames=513 emptyFrames(no human cmd)=165 frameGapMs p50=15.7 p99=17.0 max=36.1 | fgSamples=32 fgPct=0 minimizedPct=0
+2026-10-24 15:02:49.098 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:02:49.098 SC ITEMS@none: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_close_range
+2026-10-24 15:02:49.113 SC step 45: wait 3
+2026-10-24 15:02:49.410 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 87, hits 0, abilities executed 5
+2026-10-24 15:02:52.114 SC step 46: hardreset 
+2026-10-24 15:02:52.114 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 15:02:52.114 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 15:02:52.129 SC step 47: setup Wraith Haze
+2026-10-24 15:02:52.130 SETUP start me=Wraith enemy=Haze
+2026-10-24 15:02:52.408 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 87, hits 0, abilities executed 5
+2026-10-24 15:02:52.408 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Haze -> 3264121818/2/Wraith
+2026-10-24 15:02:53.422 DISPLAY re-assert: pawn/level/hero changed 3264121818/2/Wraith -> 3264121818/36/Wraith
+2026-10-24 15:02:59.344 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:02:59.344 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:02:59.375 SC step 48: wait 1.5
+2026-10-24 15:03:00.876 SC step 49: setup Haze Haze
+2026-10-24 15:03:00.877 SETUP start me=Haze enemy=Haze
+2026-10-24 15:03:01.408 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 87, hits 0, abilities executed 5
+2026-10-24 15:03:01.408 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Wraith -> 3264121818/17/Haze
+2026-10-24 15:03:02.408 DISPLAY re-assert: pawn/level/hero changed 3264121818/17/Haze -> 3264121818/36/Haze
+2026-10-24 15:03:03.407 DISPLAY HUD[announce] Does Close Quarters help Fixatio | Close Quarter vs High-Velocity / New test
+2026-10-24 15:03:07.391 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:03:07.391 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:03:07.422 SC step 50: wait 1
+2026-10-24 15:03:08.423 SC step 51: raw citadel_unlock_flex_slots
+2026-10-24 15:03:08.438 SC step 52: unlock 7
+2026-10-24 15:03:08.438 SC unlock ability_sleep_dagger 0 -> 7
+2026-10-24 15:03:08.438 SC unlock ability_smoke_bomb 0 -> 7
+2026-10-24 15:03:08.438 SC unlock ability_stacking_damage 0 -> 7
+2026-10-24 15:03:08.438 SC unlock ability_bullet_flurry 0 -> 7
+2026-10-24 15:03:08.438 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 15:03:08.438 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 15:03:08.438 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 15:03:08.438 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 15:03:08.438 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 15:03:08.438 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 15:03:08.438 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 15:03:08.438 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 15:03:08.438 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 15:03:08.438 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 15:03:08.438 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 15:03:08.438 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 15:03:08.454 SC step 53: basemods 
+2026-10-24 15:03:08.454 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 15:03:08.454 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:03:08.469 SC step 54: fetch 
+2026-10-24 15:03:08.469 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:03:08.485 SC step 55: mark none
+2026-10-24 15:03:08.485 UCSTAT label=none secs=19.4 calls=1239 cmds=3499 calls/s=64.0 cmds/call=2.82 perCall[0..7+]=0/30/376/615/218/0/0/0 gapMs mean=15.65 p50=15.6 p95=31.6 p99=32.5 max=156.8 gap>32ms=28 gap>50ms=5 allSlotCalls=3715 allSlotCalls/frame=3.00 slots=0:1238,1:1238,2:1239 | frames=1238 emptyFrames(no human cmd)=411 frameGapMs p50=15.7 p99=16.9 max=197.8 | fgSamples=77 fgPct=0 minimizedPct=0
+2026-10-24 15:03:08.485 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:03:08.485 SC ITEMS@none: maxhp=1885 
+2026-10-24 15:03:08.501 SC step 56: souls 12800
+2026-10-24 15:03:08.516 SC step 57: give upgrade_active_reload
+2026-10-24 15:03:08.516 SC gave upgrade_active_reload
+2026-10-24 15:03:08.532 SC step 58: give upgrade_blitz_bullets
+2026-10-24 15:03:08.532 SC gave upgrade_blitz_bullets
+2026-10-24 15:03:08.548 SC step 59: give upgrade_titan_round
+2026-10-24 15:03:08.548 SC gave upgrade_titan_round
+2026-10-24 15:03:08.563 SC step 60: give upgrade_chonky
+2026-10-24 15:03:08.564 SC gave upgrade_chonky
+2026-10-24 15:03:08.579 SC step 61: give upgrade_close_range
+2026-10-24 15:03:08.579 SC gave upgrade_close_range
+2026-10-24 15:03:08.595 SC step 62: basemods 
+2026-10-24 15:03:08.595 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_active_reload/modifier_intrinsic_base,upgrade_blitz_bullets/modifier_intrinsic_base,upgrade_titan_round/modifier_intrinsic_base,upgrade_chonky/modifier_apex_watcher,upgrade_close_range/modifier_intrinsic_base
+2026-10-24 15:03:08.595 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:03:08.610 SC step 63: enemies 1 300 4
+2026-10-24 15:03:08.610 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 15:03:08.610 SC BOT[enemies] 0 idx=1 active=True hp=1192 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 15:03:08.610 SC BOT[enemies] 1 idx=2 active=False hp=1192 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 15:03:08.782 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:03:09.408 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 87, hits 0, abilities executed 5
+2026-10-24 15:03:12.595 SC step 64: fetch 900
+2026-10-24 15:03:12.595 SC fetched enemy to <13097.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:03:12.610 SC step 65: cast reload 2.5
+2026-10-24 15:03:12.907 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <13097.9375, 2625.8125, 441.78125> dist=900.0 want=900
+2026-10-24 15:03:15.110 SC step 66: mark A_900_lowstacks
+2026-10-24 15:03:15.110 UCSTAT label=none secs=6.6 calls=424 cmds=1115 calls/s=64.5 cmds/call=2.63 perCall[0..7+]=0/3/155/262/4/0/0/0 gapMs mean=15.55 p50=15.6 p95=31.6 p99=32.1 max=32.9 gap>32ms=5 gap>50ms=0 allSlotCalls=1272 allSlotCalls/frame=3.00 slots=0:424,1:424,2:424 | frames=424 emptyFrames(no human cmd)=136 frameGapMs p50=15.7 p99=16.6 max=21.6 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-24 15:03:15.110 DISPLAY PHASE measure - A_900_lowstacks
+2026-10-24 15:03:15.110 DISPLAY Haze - now testing [A_900_lowstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+close_range | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:03:15.110 SC ITEMS@A_900_lowstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_close_range
+2026-10-24 15:03:15.126 SC step 67: fire 2
+2026-10-24 15:03:15.438 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_900_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 91, hits 0, abilities executed 6
+2026-10-24 15:03:16.423 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_900_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 102, hits 0, abilities executed 6
+2026-10-24 15:03:17.110 SC step 68: mark A_900_highstacks
+2026-10-24 15:03:17.110 UCSTAT label=A_900_lowstacks secs=2.0 calls=127 cmds=334 calls/s=64.5 cmds/call=2.63 perCall[0..7+]=0/0/47/80/0/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.5 p99=31.9 max=32.1 gap>32ms=1 gap>50ms=0 allSlotCalls=383 allSlotCalls/frame=2.99 slots=0:128,1:128,2:127 | frames=128 emptyFrames(no human cmd)=41 frameGapMs p50=15.6 p99=16.7 max=16.9 | fgSamples=8 fgPct=0 minimizedPct=0
+2026-10-24 15:03:17.110 DISPLAY PHASE measure - A_900_highstacks
+2026-10-24 15:03:17.110 DISPLAY Haze - now testing [A_900_highstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+close_range | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:03:17.110 SC ITEMS@A_900_highstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_close_range
+2026-10-24 15:03:17.126 SC step 69: fire 8
+2026-10-24 15:03:17.423 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 114, hits 0, abilities executed 8
+2026-10-24 15:03:18.439 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 125, hits 0, abilities executed 8
+2026-10-24 15:03:19.439 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 137, hits 0, abilities executed 8
+2026-10-24 15:03:20.454 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 148, hits 0, abilities executed 8
+2026-10-24 15:03:21.454 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 160, hits 0, abilities executed 8
+2026-10-24 15:03:22.470 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 162, hits 0, abilities executed 8
+2026-10-24 15:03:24.470 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 167, hits 0, abilities executed 9
+2026-10-24 15:03:25.111 SC step 70: mark none
+2026-10-24 15:03:25.111 UCSTAT label=A_900_highstacks secs=8.0 calls=513 cmds=1354 calls/s=64.2 cmds/call=2.64 perCall[0..7+]=0/0/188/322/3/0/0/0 gapMs mean=15.60 p50=15.6 p95=31.7 p99=32.1 max=33.4 gap>32ms=8 gap>50ms=0 allSlotCalls=1537 allSlotCalls/frame=3.00 slots=0:512,1:512,2:513 | frames=512 emptyFrames(no human cmd)=162 frameGapMs p50=15.7 p99=16.5 max=17.5 | fgSamples=31 fgPct=0 minimizedPct=0
+2026-10-24 15:03:25.111 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:03:25.111 SC ITEMS@none: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_close_range
+2026-10-24 15:03:25.126 SC step 71: wait 3
+2026-10-24 15:03:25.470 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 174, hits 0, abilities executed 10
+2026-10-24 15:03:27.470 DISPLAY HUD[announce] Does Close Quarters help Fixatio | More damage: A or B? / Measuring
+2026-10-24 15:03:28.127 SC step 72: hardreset 
+2026-10-24 15:03:28.127 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 15:03:28.127 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 15:03:28.141 SC step 73: setup Wraith Haze
+2026-10-24 15:03:28.143 SETUP start me=Wraith enemy=Haze
+2026-10-24 15:03:28.469 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 174, hits 0, abilities executed 10
+2026-10-24 15:03:28.469 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Haze -> 3264121818/8/Wraith
+2026-10-24 15:03:29.470 DISPLAY re-assert: pawn/level/hero changed 3264121818/8/Wraith -> 3264121818/36/Wraith
+2026-10-24 15:03:34.392 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:03:34.392 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:03:34.423 SC step 74: wait 1.5
+2026-10-24 15:03:35.908 SC step 75: setup Haze Haze
+2026-10-24 15:03:35.909 SETUP start me=Haze enemy=Haze
+2026-10-24 15:03:36.485 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 174, hits 0, abilities executed 10
+2026-10-24 15:03:36.485 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Wraith -> 3264121818/22/Haze
+2026-10-24 15:03:37.485 DISPLAY re-assert: pawn/level/hero changed 3264121818/22/Haze -> 3264121818/36/Haze
+2026-10-24 15:03:42.392 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:03:42.392 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:03:42.423 SC step 76: wait 1
+2026-10-24 15:03:42.501 DISPLAY HUD[announce] Does Close Quarters help Fixatio | More damage: A or B? / New test
+2026-10-24 15:03:43.408 SC step 77: raw citadel_unlock_flex_slots
+2026-10-24 15:03:43.422 SC step 78: unlock 7
+2026-10-24 15:03:43.423 SC unlock ability_sleep_dagger 0 -> 7
+2026-10-24 15:03:43.423 SC unlock ability_smoke_bomb 0 -> 7
+2026-10-24 15:03:43.423 SC unlock ability_stacking_damage 0 -> 7
+2026-10-24 15:03:43.423 SC unlock ability_bullet_flurry 0 -> 7
+2026-10-24 15:03:43.423 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 15:03:43.423 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 15:03:43.423 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 15:03:43.423 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 15:03:43.423 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 15:03:43.423 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 15:03:43.423 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 15:03:43.423 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 15:03:43.423 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 15:03:43.423 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 15:03:43.423 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 15:03:43.423 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 15:03:43.438 SC step 79: basemods 
+2026-10-24 15:03:43.438 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 15:03:43.438 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:03:43.454 SC step 80: fetch 
+2026-10-24 15:03:43.454 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:03:43.469 SC step 81: mark none
+2026-10-24 15:03:43.470 UCSTAT label=none secs=18.3 calls=1174 cmds=3079 calls/s=64.1 cmds/call=2.62 perCall[0..7+]=0/19/434/692/29/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.5 p99=32.1 max=78.1 gap>32ms=15 gap>50ms=4 allSlotCalls=3524 allSlotCalls/frame=3.00 slots=0:1175,1:1175,2:1174 | frames=1175 emptyFrames(no human cmd)=385 frameGapMs p50=15.6 p99=16.6 max=28.4 | fgSamples=73 fgPct=0 minimizedPct=0
+2026-10-24 15:03:43.470 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:03:43.470 SC ITEMS@none: maxhp=1885 
+2026-10-24 15:03:43.485 SC step 82: souls 12800
+2026-10-24 15:03:43.501 SC step 83: give upgrade_active_reload
+2026-10-24 15:03:43.501 SC gave upgrade_active_reload
+2026-10-24 15:03:43.501 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 174, hits 0, abilities executed 10
+2026-10-24 15:03:43.516 SC step 84: give upgrade_blitz_bullets
+2026-10-24 15:03:43.516 SC gave upgrade_blitz_bullets
+2026-10-24 15:03:43.532 SC step 85: give upgrade_titan_round
+2026-10-24 15:03:43.532 SC gave upgrade_titan_round
+2026-10-24 15:03:43.548 SC step 86: give upgrade_chonky
+2026-10-24 15:03:43.549 SC gave upgrade_chonky
+2026-10-24 15:03:43.563 SC step 87: give upgrade_high_velocity_mag
+2026-10-24 15:03:43.563 SC gave upgrade_high_velocity_mag
+2026-10-24 15:03:43.580 SC step 88: basemods 
+2026-10-24 15:03:43.580 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_active_reload/modifier_intrinsic_base,upgrade_blitz_bullets/modifier_intrinsic_base,upgrade_titan_round/modifier_intrinsic_base,upgrade_chonky/modifier_apex_watcher,upgrade_high_velocity_mag/modifier_regenerating_bullet_shield
+2026-10-24 15:03:43.580 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:03:43.595 SC step 89: enemies 1 300 4
+2026-10-24 15:03:43.595 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 15:03:43.595 SC BOT[enemies] 0 idx=1 active=True hp=1192 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 15:03:43.595 SC BOT[enemies] 1 idx=2 active=False hp=1192 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 15:03:43.766 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:03:44.486 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 174, hits 0, abilities executed 10
+2026-10-24 15:03:47.595 SC step 90: fetch 350
+2026-10-24 15:03:47.595 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:03:47.611 SC step 91: cast reload 2.5
+2026-10-24 15:03:47.908 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:03:50.116 SC step 92: mark B_350_lowstacks
+2026-10-24 15:03:50.116 UCSTAT label=none secs=6.6 calls=427 cmds=1110 calls/s=64.4 cmds/call=2.60 perCall[0..7+]=0/10/157/254/6/0/0/0 gapMs mean=15.57 p50=15.6 p95=31.5 p99=32.2 max=60.6 gap>32ms=10 gap>50ms=1 allSlotCalls=1277 allSlotCalls/frame=3.00 slots=0:425,1:425,2:427 | frames=425 emptyFrames(no human cmd)=138 frameGapMs p50=15.7 p99=19.3 max=46.6 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-24 15:03:50.116 DISPLAY PHASE measure - B_350_lowstacks
+2026-10-24 15:03:50.116 DISPLAY Haze - now testing [B_350_lowstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:03:50.116 SC ITEMS@B_350_lowstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_high_velocity_mag
+2026-10-24 15:03:50.132 SC step 93: fire 2
+2026-10-24 15:03:50.491 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_350_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 178, hits 0, abilities executed 11
+2026-10-24 15:03:51.491 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_350_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 190, hits 0, abilities executed 11
+2026-10-24 15:03:52.132 SC step 94: mark B_350_highstacks
+2026-10-24 15:03:52.132 UCSTAT label=B_350_lowstacks secs=2.0 calls=128 cmds=342 calls/s=64.5 cmds/call=2.67 perCall[0..7+]=0/0/43/84/1/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.6 p99=32.1 max=32.3 gap>32ms=2 gap>50ms=0 allSlotCalls=386 allSlotCalls/frame=2.99 slots=0:129,1:129,2:128 | frames=129 emptyFrames(no human cmd)=43 frameGapMs p50=15.7 p99=16.5 max=16.7 | fgSamples=8 fgPct=0 minimizedPct=0
+2026-10-24 15:03:52.132 DISPLAY PHASE measure - B_350_highstacks
+2026-10-24 15:03:52.132 DISPLAY Haze - now testing [B_350_highstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:03:52.132 SC ITEMS@B_350_highstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_high_velocity_mag
+2026-10-24 15:03:52.148 SC step 95: fire 8
+2026-10-24 15:03:52.501 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 201, hits 0, abilities executed 13
+2026-10-24 15:03:53.500 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 213, hits 0, abilities executed 13
+2026-10-24 15:03:54.501 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 224, hits 0, abilities executed 13
+2026-10-24 15:03:55.500 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 235, hits 0, abilities executed 13
+2026-10-24 15:03:56.492 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 247, hits 0, abilities executed 13
+2026-10-24 15:03:57.492 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 249, hits 0, abilities executed 13
+2026-10-24 15:03:59.492 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 253, hits 0, abilities executed 14
+2026-10-24 15:04:00.148 SC step 96: mark none
+2026-10-24 15:04:00.148 UCSTAT label=B_350_highstacks secs=8.0 calls=513 cmds=1354 calls/s=64.1 cmds/call=2.64 perCall[0..7+]=0/7/179/319/8/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.5 p99=32.1 max=38.6 gap>32ms=7 gap>50ms=0 allSlotCalls=1539 allSlotCalls/frame=3.00 slots=0:513,1:513,2:513 | frames=513 emptyFrames(no human cmd)=166 frameGapMs p50=15.7 p99=16.8 max=38.9 | fgSamples=32 fgPct=0 minimizedPct=0
+2026-10-24 15:04:00.148 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:04:00.148 SC ITEMS@none: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_high_velocity_mag
+2026-10-24 15:04:00.164 SC step 97: wait 3
+2026-10-24 15:04:00.492 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 261, hits 0, abilities executed 15
+2026-10-24 15:04:03.164 SC step 98: hardreset 
+2026-10-24 15:04:03.164 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 15:04:03.164 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 15:04:03.180 SC step 99: setup Wraith Haze
+2026-10-24 15:04:03.181 SETUP start me=Wraith enemy=Haze
+2026-10-24 15:04:03.492 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 261, hits 0, abilities executed 15
+2026-10-24 15:04:03.492 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Haze -> 3264121818/6/Wraith
+2026-10-24 15:04:04.492 DISPLAY re-assert: pawn/level/hero changed 3264121818/6/Wraith -> 3264121818/36/Wraith
+2026-10-24 15:04:06.492 DISPLAY HUD[announce] Does Close Quarters help Fixatio | Close Quarter vs High-Velocity / New test
+2026-10-24 15:04:10.398 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:04:10.398 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:04:10.430 SC step 100: wait 1.5
+2026-10-24 15:04:11.930 SC step 101: setup Haze Haze
+2026-10-24 15:04:11.931 SETUP start me=Haze enemy=Haze
+2026-10-24 15:04:12.492 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 261, hits 0, abilities executed 15
+2026-10-24 15:04:12.492 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Wraith -> 3264121818/21/Haze
+2026-10-24 15:04:13.492 DISPLAY re-assert: pawn/level/hero changed 3264121818/21/Haze -> 3264121818/36/Haze
+2026-10-24 15:04:18.398 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:04:18.398 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:04:18.430 SC step 102: wait 1
+2026-10-24 15:04:19.430 SC step 103: raw citadel_unlock_flex_slots
+2026-10-24 15:04:19.445 SC step 104: unlock 7
+2026-10-24 15:04:19.445 SC unlock ability_sleep_dagger 0 -> 7
+2026-10-24 15:04:19.445 SC unlock ability_smoke_bomb 0 -> 7
+2026-10-24 15:04:19.445 SC unlock ability_stacking_damage 0 -> 7
+2026-10-24 15:04:19.445 SC unlock ability_bullet_flurry 0 -> 7
+2026-10-24 15:04:19.445 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 15:04:19.445 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 15:04:19.445 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 15:04:19.445 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 15:04:19.445 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 15:04:19.445 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 15:04:19.445 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 15:04:19.445 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 15:04:19.445 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 15:04:19.445 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 15:04:19.445 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 15:04:19.445 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 15:04:19.461 SC step 105: basemods 
+2026-10-24 15:04:19.461 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 15:04:19.461 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:04:19.476 SC step 106: fetch 
+2026-10-24 15:04:19.476 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:04:19.493 SC step 107: mark none
+2026-10-24 15:04:19.493 UCSTAT label=none secs=19.3 calls=1238 cmds=3229 calls/s=64.1 cmds/call=2.61 perCall[0..7+]=0/28/459/721/30/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.7 p99=32.5 max=78.2 gap>32ms=24 gap>50ms=5 allSlotCalls=3714 allSlotCalls/frame=3.00 slots=0:1238,1:1238,2:1238 | frames=1238 emptyFrames(no human cmd)=407 frameGapMs p50=15.7 p99=16.6 max=41.4 | fgSamples=76 fgPct=0 minimizedPct=0
+2026-10-24 15:04:19.493 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:04:19.493 SC ITEMS@none: maxhp=1885 
+2026-10-24 15:04:19.493 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 261, hits 0, abilities executed 15
+2026-10-24 15:04:19.507 SC step 108: souls 12800
+2026-10-24 15:04:19.523 SC step 109: give upgrade_active_reload
+2026-10-24 15:04:19.523 SC gave upgrade_active_reload
+2026-10-24 15:04:19.540 SC step 110: give upgrade_blitz_bullets
+2026-10-24 15:04:19.540 SC gave upgrade_blitz_bullets
+2026-10-24 15:04:19.554 SC step 111: give upgrade_titan_round
+2026-10-24 15:04:19.555 SC gave upgrade_titan_round
+2026-10-24 15:04:19.571 SC step 112: give upgrade_chonky
+2026-10-24 15:04:19.571 SC gave upgrade_chonky
+2026-10-24 15:04:19.586 SC step 113: give upgrade_high_velocity_mag
+2026-10-24 15:04:19.586 SC gave upgrade_high_velocity_mag
+2026-10-24 15:04:19.602 SC step 114: basemods 
+2026-10-24 15:04:19.602 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_active_reload/modifier_intrinsic_base,upgrade_blitz_bullets/modifier_intrinsic_base,upgrade_titan_round/modifier_intrinsic_base,upgrade_chonky/modifier_apex_watcher,upgrade_high_velocity_mag/modifier_regenerating_bullet_shield
+2026-10-24 15:04:19.602 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:04:19.617 SC step 115: enemies 1 300 4
+2026-10-24 15:04:19.617 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 15:04:19.617 SC BOT[enemies] 0 idx=1 active=True hp=1192 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 15:04:19.617 SC BOT[enemies] 1 idx=2 active=False hp=1192 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 15:04:19.789 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:04:20.492 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 261, hits 0, abilities executed 15
+2026-10-24 15:04:22.492 DISPLAY HUD[announce] Does Close Quarters help Fixatio | Feeds: interaction matrix haze... / New test
+2026-10-24 15:04:23.614 SC step 116: fetch 900
+2026-10-24 15:04:23.614 SC fetched enemy to <13097.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:04:23.630 SC step 117: cast reload 2.5
+2026-10-24 15:04:23.928 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <13097.9375, 2625.8125, 441.78125> dist=900.0 want=900
+2026-10-24 15:04:26.171 SC step 118: mark B_900_lowstacks
+2026-10-24 15:04:26.171 UCSTAT label=none secs=6.6 calls=425 cmds=1111 calls/s=64.0 cmds/call=2.61 perCall[0..7+]=0/6/158/255/6/0/0/0 gapMs mean=15.67 p50=15.6 p95=31.6 p99=32.2 max=92.9 gap>32ms=8 gap>50ms=2 allSlotCalls=1275 allSlotCalls/frame=3.00 slots=0:425,1:425,2:425 | frames=425 emptyFrames(no human cmd)=138 frameGapMs p50=15.7 p99=17.1 max=94.7 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-24 15:04:26.171 DISPLAY PHASE measure - B_900_lowstacks
+2026-10-24 15:04:26.171 DISPLAY Haze - now testing [B_900_lowstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:04:26.171 SC ITEMS@B_900_lowstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_high_velocity_mag
+2026-10-24 15:04:26.172 SC step 119: fire 2
+2026-10-24 15:04:26.501 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_900_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 265, hits 0, abilities executed 16
+2026-10-24 15:04:27.516 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_900_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 277, hits 0, abilities executed 16
+2026-10-24 15:04:28.172 SC step 120: mark B_900_highstacks
+2026-10-24 15:04:28.172 UCSTAT label=B_900_lowstacks secs=2.0 calls=131 cmds=390 calls/s=65.5 cmds/call=2.98 perCall[0..7+]=0/1/35/61/34/0/0/0 gapMs mean=15.38 p50=15.6 p95=31.4 p99=31.8 max=32.3 gap>32ms=1 gap>50ms=0 allSlotCalls=393 allSlotCalls/frame=3.00 slots=0:131,1:131,2:131 | frames=131 emptyFrames(no human cmd)=44 frameGapMs p50=15.6 p99=16.8 max=16.9 | fgSamples=8 fgPct=0 minimizedPct=0
+2026-10-24 15:04:28.172 DISPLAY PHASE measure - B_900_highstacks
+2026-10-24 15:04:28.172 DISPLAY Haze - now testing [B_900_highstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:04:28.172 SC ITEMS@B_900_highstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_high_velocity_mag
+2026-10-24 15:04:28.187 SC step 121: fire 8
+2026-10-24 15:04:28.515 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 288, hits 0, abilities executed 18
+2026-10-24 15:04:29.516 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 300, hits 0, abilities executed 18
+2026-10-24 15:04:30.510 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 311, hits 0, abilities executed 18
+2026-10-24 15:04:31.509 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 322, hits 0, abilities executed 18
+2026-10-24 15:04:32.039 FG client FOREGROUND
+2026-10-24 15:04:32.510 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 334, hits 0, abilities executed 18
+2026-10-24 15:04:33.509 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 336, hits 0, abilities executed 18
+2026-10-24 15:04:33.745 CLIENTCMD exit_item_shop exit_item_shop
+2026-10-24 15:04:35.510 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B_900_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 340, hits 0, abilities executed 19
+2026-10-24 15:04:36.181 SC step 122: mark none
+2026-10-24 15:04:36.181 UCSTAT label=B_900_highstacks secs=8.0 calls=504 cmds=1362 calls/s=63.0 cmds/call=2.70 perCall[0..7+]=0/12/162/294/36/0/0/0 gapMs mean=15.89 p50=15.6 p95=31.6 p99=80.1 max=187.5 gap>32ms=11 gap>50ms=6 allSlotCalls=1528 allSlotCalls/frame=2.98 slots=0:512,1:512,2:504 | frames=512 emptyFrames(no human cmd)=125 frameGapMs p50=15.7 p99=17.3 max=37.2 | fgSamples=32 fgPct=53 minimizedPct=0
+2026-10-24 15:04:36.181 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:04:36.181 SC ITEMS@none: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_high_velocity_mag
+2026-10-24 15:04:36.197 SC step 123: wait 3
+2026-10-24 15:04:36.509 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 348, hits 0, abilities executed 20
+2026-10-24 15:04:39.197 SC step 124: hardreset 
+2026-10-24 15:04:39.197 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 15:04:39.197 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 15:04:39.213 SC step 125: setup Wraith Haze
+2026-10-24 15:04:39.214 SETUP start me=Wraith enemy=Haze
+2026-10-24 15:04:39.510 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 348, hits 0, abilities executed 20
+2026-10-24 15:04:39.510 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Haze -> 3264121818/4/Wraith
+2026-10-24 15:04:40.510 DISPLAY re-assert: pawn/level/hero changed 3264121818/4/Wraith -> 3264121818/36/Wraith
+2026-10-24 15:04:43.705 FG client BACKGROUND
+2026-10-24 15:04:44.466 FG client FOREGROUND
+2026-10-24 15:04:45.226 FG client BACKGROUND
+2026-10-24 15:04:45.512 DISPLAY HUD[announce] Does Close Quarters help Fixatio | More damage: A or B? / New test
+2026-10-24 15:04:46.402 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:04:46.402 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:04:46.433 SC step 126: wait 1.5
+2026-10-24 15:04:47.933 SC step 127: setup Haze Haze
+2026-10-24 15:04:47.934 SETUP start me=Haze enemy=Haze
+2026-10-24 15:04:48.512 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 348, hits 0, abilities executed 20
+2026-10-24 15:04:48.512 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Wraith -> 3264121818/25/Haze
+2026-10-24 15:04:49.511 DISPLAY re-assert: pawn/level/hero changed 3264121818/25/Haze -> 3264121818/36/Haze
+2026-10-24 15:04:54.401 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:04:54.401 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:04:54.433 SC step 128: wait 1
+2026-10-24 15:04:54.845 FG client FOREGROUND
+2026-10-24 15:04:55.433 SC step 129: raw citadel_unlock_flex_slots
+2026-10-24 15:04:55.448 SC step 130: unlock 7
+2026-10-24 15:04:55.448 SC unlock ability_sleep_dagger 0 -> 7
+2026-10-24 15:04:55.448 SC unlock ability_smoke_bomb 0 -> 7
+2026-10-24 15:04:55.448 SC unlock ability_stacking_damage 0 -> 7
+2026-10-24 15:04:55.448 SC unlock ability_bullet_flurry 0 -> 7
+2026-10-24 15:04:55.448 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 15:04:55.448 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 15:04:55.448 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 15:04:55.448 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 15:04:55.448 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 15:04:55.448 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 15:04:55.448 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 15:04:55.448 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 15:04:55.448 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 15:04:55.448 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 15:04:55.448 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 15:04:55.448 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 15:04:55.464 SC step 131: basemods 
+2026-10-24 15:04:55.464 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 15:04:55.464 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:04:55.480 SC step 132: fetch 
+2026-10-24 15:04:55.480 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:04:55.495 SC step 133: mark none
+2026-10-24 15:04:55.496 UCSTAT label=none secs=19.3 calls=1230 cmds=3066 calls/s=63.8 cmds/call=2.49 perCall[0..7+]=0/99/544/469/118/0/0/0 gapMs mean=15.69 p50=15.6 p95=31.9 p99=47.0 max=93.7 gap>32ms=55 gap>50ms=6 allSlotCalls=3702 allSlotCalls/frame=3.00 slots=0:1236,1:1236,2:1230 | frames=1236 emptyFrames(no human cmd)=412 frameGapMs p50=15.6 p99=17.1 max=53.1 | fgSamples=76 fgPct=46 minimizedPct=0
+2026-10-24 15:04:55.496 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:04:55.496 SC ITEMS@none: maxhp=1885 
+2026-10-24 15:04:55.511 SC step 134: souls 12800
+2026-10-24 15:04:55.511 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 348, hits 0, abilities executed 20
+2026-10-24 15:04:55.527 SC step 135: give upgrade_active_reload
+2026-10-24 15:04:55.527 SC gave upgrade_active_reload
+2026-10-24 15:04:55.542 SC step 136: give upgrade_blitz_bullets
+2026-10-24 15:04:55.542 SC gave upgrade_blitz_bullets
+2026-10-24 15:04:55.558 SC step 137: give upgrade_titan_round
+2026-10-24 15:04:55.558 SC gave upgrade_titan_round
+2026-10-24 15:04:55.574 SC step 138: give upgrade_chonky
+2026-10-24 15:04:55.574 SC gave upgrade_chonky
+2026-10-24 15:04:55.589 SC step 139: give upgrade_high_velocity_mag
+2026-10-24 15:04:55.589 SC gave upgrade_high_velocity_mag
+2026-10-24 15:04:55.605 SC step 140: basemods 
+2026-10-24 15:04:55.605 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_active_reload/modifier_intrinsic_base,upgrade_blitz_bullets/modifier_intrinsic_base,upgrade_titan_round/modifier_intrinsic_base,upgrade_chonky/modifier_apex_watcher,upgrade_high_velocity_mag/modifier_regenerating_bullet_shield
+2026-10-24 15:04:55.605 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:04:55.620 SC step 141: enemies 1 300 4
+2026-10-24 15:04:55.621 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 15:04:55.621 SC BOT[enemies] 0 idx=1 active=True hp=1192 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 15:04:55.621 SC BOT[enemies] 1 idx=2 active=False hp=1192 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 15:04:55.792 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:04:56.511 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 348, hits 0, abilities executed 20
+2026-10-24 15:04:59.613 SC step 142: fetch 350
+2026-10-24 15:04:59.613 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:04:59.629 SC step 143: cast reload 2.5
+2026-10-24 15:04:59.925 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:05:02.130 SC step 144: mark B2_350_lowstacks
+2026-10-24 15:05:02.130 UCSTAT label=none secs=6.6 calls=426 cmds=1291 calls/s=64.4 cmds/call=3.03 perCall[0..7+]=0/43/59/166/158/0/0/0 gapMs mean=15.57 p50=15.5 p95=32.2 p99=46.7 max=62.8 gap>32ms=24 gap>50ms=2 allSlotCalls=1276 allSlotCalls/frame=3.00 slots=0:425,1:425,2:426 | frames=425 emptyFrames(no human cmd)=181 frameGapMs p50=15.7 p99=31.9 max=56.6 | fgSamples=26 fgPct=100 minimizedPct=0
+2026-10-24 15:05:02.130 DISPLAY PHASE measure - B2_350_lowstacks
+2026-10-24 15:05:02.130 DISPLAY Haze - now testing [B2_350_lowstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:05:02.130 SC ITEMS@B2_350_lowstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_high_velocity_mag
+2026-10-24 15:05:02.145 SC step 145: fire 2
+2026-10-24 15:05:02.505 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B2_350_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 352, hits 0, abilities executed 21
+2026-10-24 15:05:03.504 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B2_350_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 364, hits 0, abilities executed 21
+2026-10-24 15:05:04.146 SC step 146: mark B2_350_highstacks
+2026-10-24 15:05:04.146 UCSTAT label=B2_350_lowstacks secs=2.0 calls=129 cmds=387 calls/s=64.5 cmds/call=3.00 perCall[0..7+]=0/0/1/127/1/0/0/0 gapMs mean=15.63 p50=15.6 p95=16.6 p99=17.0 max=31.2 gap>32ms=0 gap>50ms=0 allSlotCalls=387 allSlotCalls/frame=3.00 slots=0:129,1:129,2:129 | frames=129 emptyFrames(no human cmd)=1 frameGapMs p50=15.6 p99=17.1 max=18.3 | fgSamples=8 fgPct=100 minimizedPct=0
+2026-10-24 15:05:04.146 DISPLAY PHASE measure - B2_350_highstacks
+2026-10-24 15:05:04.146 DISPLAY Haze - now testing [B2_350_highstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:05:04.146 SC ITEMS@B2_350_highstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_high_velocity_mag
+2026-10-24 15:05:04.161 SC step 147: fire 8
+2026-10-24 15:05:04.506 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 375, hits 0, abilities executed 23
+2026-10-24 15:05:04.506 DISPLAY HUD[announce] Does Close Quarters help Fixatio | Close Quarter vs High-Velocity / New test
+2026-10-24 15:05:05.505 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 387, hits 0, abilities executed 23
+2026-10-24 15:05:06.502 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 392, hits 0, abilities executed 23
+2026-10-24 15:05:08.501 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 394, hits 0, abilities executed 24
+2026-10-24 15:05:09.502 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 395, hits 0, abilities executed 24
+2026-10-24 15:05:10.089 FG client BACKGROUND
+2026-10-24 15:05:10.501 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 407, hits 0, abilities executed 25
+2026-10-24 15:05:11.502 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [B2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 421, hits 0, abilities executed 25
+2026-10-24 15:05:12.158 SC step 148: mark none
+2026-10-24 15:05:12.158 UCSTAT label=B2_350_highstacks secs=8.0 calls=512 cmds=1436 calls/s=64.2 cmds/call=2.80 perCall[0..7+]=0/4/94/412/2/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.2 p99=31.9 max=55.6 gap>32ms=5 gap>50ms=2 allSlotCalls=1538 allSlotCalls/frame=3.00 slots=0:513,1:513,2:512 | frames=513 emptyFrames(no human cmd)=50 frameGapMs p50=15.6 p99=18.9 max=58.8 | fgSamples=32 fgPct=72 minimizedPct=0
+2026-10-24 15:05:12.158 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:05:12.158 SC ITEMS@none: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_high_velocity_mag
+2026-10-24 15:05:12.173 SC step 149: wait 3
+2026-10-24 15:05:12.501 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+high_velocity_mag | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 430, hits 0, abilities executed 26
+2026-10-24 15:05:15.177 SC step 150: hardreset 
+2026-10-24 15:05:15.177 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-24 15:05:15.177 SC hardreset: inserted fresh-pawn swap steps
+2026-10-24 15:05:15.193 SC step 151: setup Wraith Haze
+2026-10-24 15:05:15.194 SETUP start me=Wraith enemy=Haze
+2026-10-24 15:05:15.506 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 430, hits 0, abilities executed 26
+2026-10-24 15:05:15.506 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Haze -> 3264121818/9/Wraith
+2026-10-24 15:05:16.505 DISPLAY re-assert: pawn/level/hero changed 3264121818/9/Wraith -> 3264121818/36/Wraith
+2026-10-24 15:05:21.394 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:05:21.394 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:05:21.425 SC step 152: wait 1.5
+2026-10-24 15:05:22.937 SC step 153: setup Haze Haze
+2026-10-24 15:05:22.938 SETUP start me=Haze enemy=Haze
+2026-10-24 15:05:23.515 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 430, hits 0, abilities executed 26
+2026-10-24 15:05:23.515 DISPLAY re-assert: pawn/level/hero changed 3264121818/36/Wraith -> 3264121818/23/Haze
+2026-10-24 15:05:24.515 DISPLAY re-assert: pawn/level/hero changed 3264121818/23/Haze -> 3264121818/36/Haze
+2026-10-24 15:05:24.515 DISPLAY HUD[announce] Does Close Quarters help Fixatio | Feeds: interaction matrix haze... / New test
+2026-10-24 15:05:29.403 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-24 15:05:29.403 SETUP done: dummy team 3 hero Haze hp 1192
+2026-10-24 15:05:29.435 SC step 154: wait 1
+2026-10-24 15:05:30.436 SC step 155: raw citadel_unlock_flex_slots
+2026-10-24 15:05:30.450 SC step 156: unlock 7
+2026-10-24 15:05:30.450 SC unlock ability_sleep_dagger 0 -> 7
+2026-10-24 15:05:30.450 SC unlock ability_smoke_bomb 0 -> 7
+2026-10-24 15:05:30.450 SC unlock ability_stacking_damage 0 -> 7
+2026-10-24 15:05:30.450 SC unlock ability_bullet_flurry 0 -> 7
+2026-10-24 15:05:30.450 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-24 15:05:30.450 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-24 15:05:30.450 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-24 15:05:30.450 SC unlock citadel_ability_jump 1 -> 7
+2026-10-24 15:05:30.451 SC unlock citadel_ability_slide 1 -> 7
+2026-10-24 15:05:30.451 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-24 15:05:30.451 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-24 15:05:30.451 SC unlock citadel_ability_dash 1 -> 7
+2026-10-24 15:05:30.451 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-24 15:05:30.451 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-24 15:05:30.451 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-24 15:05:30.451 SC unlock ability_melee_haze 1 -> 7
+2026-10-24 15:05:30.466 SC step 157: basemods 
+2026-10-24 15:05:30.466 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-24 15:05:30.466 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:05:30.482 SC step 158: fetch 
+2026-10-24 15:05:30.482 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:05:30.497 SC step 159: mark none
+2026-10-24 15:05:30.497 UCSTAT label=none secs=18.3 calls=1174 cmds=3039 calls/s=64.1 cmds/call=2.59 perCall[0..7+]=0/33/459/640/42/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.6 p99=32.6 max=84.2 gap>32ms=24 gap>50ms=5 allSlotCalls=3520 allSlotCalls/frame=3.00 slots=0:1173,1:1173,2:1174 | frames=1173 emptyFrames(no human cmd)=373 frameGapMs p50=15.7 p99=21.3 max=70.0 | fgSamples=72 fgPct=0 minimizedPct=0
+2026-10-24 15:05:30.497 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:05:30.497 SC ITEMS@none: maxhp=1885 
+2026-10-24 15:05:30.513 SC step 160: souls 12800
+2026-10-24 15:05:30.513 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 430, hits 0, abilities executed 26
+2026-10-24 15:05:30.530 SC step 161: give upgrade_active_reload
+2026-10-24 15:05:30.530 SC gave upgrade_active_reload
+2026-10-24 15:05:30.531 SC step 162: give upgrade_blitz_bullets
+2026-10-24 15:05:30.531 SC gave upgrade_blitz_bullets
+2026-10-24 15:05:30.560 SC step 163: give upgrade_titan_round
+2026-10-24 15:05:30.560 SC gave upgrade_titan_round
+2026-10-24 15:05:30.576 SC step 164: give upgrade_chonky
+2026-10-24 15:05:30.576 SC gave upgrade_chonky
+2026-10-24 15:05:30.591 SC step 165: give upgrade_close_range
+2026-10-24 15:05:30.591 SC gave upgrade_close_range
+2026-10-24 15:05:30.608 SC step 166: basemods 
+2026-10-24 15:05:30.608 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_active_reload/modifier_intrinsic_base,upgrade_blitz_bullets/modifier_intrinsic_base,upgrade_titan_round/modifier_intrinsic_base,upgrade_chonky/modifier_apex_watcher,upgrade_close_range/modifier_intrinsic_base
+2026-10-24 15:05:30.608 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-24 15:05:30.622 SC step 167: enemies 1 300 4
+2026-10-24 15:05:30.622 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-24 15:05:30.622 SC BOT[enemies] 0 idx=1 active=True hp=1192 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-24 15:05:30.622 SC BOT[enemies] 1 idx=2 active=False hp=1192 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-24 15:05:30.794 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:05:31.513 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 430, hits 0, abilities executed 26
+2026-10-24 15:05:34.622 SC step 168: fetch 350
+2026-10-24 15:05:34.622 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-24 15:05:34.638 SC step 169: cast reload 2.5
+2026-10-24 15:05:34.935 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-24 15:05:37.128 SC step 170: mark A2_350_lowstacks
+2026-10-24 15:05:37.128 UCSTAT label=none secs=6.6 calls=425 cmds=1222 calls/s=64.3 cmds/call=2.88 perCall[0..7+]=0/6/128/204/87/0/0/0 gapMs mean=15.60 p50=15.6 p95=31.8 p99=46.9 max=69.1 gap>32ms=18 gap>50ms=2 allSlotCalls=1275 allSlotCalls/frame=3.00 slots=0:425,1:425,2:425 | frames=425 emptyFrames(no human cmd)=146 frameGapMs p50=15.7 p99=30.9 max=55.4 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-24 15:05:37.128 DISPLAY PHASE measure - A2_350_lowstacks
+2026-10-24 15:05:37.128 DISPLAY Haze - now testing [A2_350_lowstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+close_range | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:05:37.128 SC ITEMS@A2_350_lowstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_close_range
+2026-10-24 15:05:37.143 SC step 171: fire 2
+2026-10-24 15:05:37.503 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A2_350_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 434, hits 0, abilities executed 27
+2026-10-24 15:05:38.503 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A2_350_lowstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 446, hits 0, abilities executed 27
+2026-10-24 15:05:39.143 SC step 172: mark A2_350_highstacks
+2026-10-24 15:05:39.143 UCSTAT label=A2_350_lowstacks secs=2.0 calls=128 cmds=408 calls/s=64.5 cmds/call=3.19 perCall[0..7+]=0/0/29/46/53/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.6 p99=32.0 max=32.2 gap>32ms=2 gap>50ms=0 allSlotCalls=386 allSlotCalls/frame=2.99 slots=0:129,1:129,2:128 | frames=129 emptyFrames(no human cmd)=40 frameGapMs p50=15.7 p99=16.6 max=16.6 | fgSamples=8 fgPct=0 minimizedPct=0
+2026-10-24 15:05:39.143 DISPLAY PHASE measure - A2_350_highstacks
+2026-10-24 15:05:39.143 DISPLAY Haze - now testing [A2_350_highstacks] - decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it | items read back: active_reload+blitz_bullets+titan_round+chonky+close_range | aim: 100% hit, body only - measurement | run 1/1
+2026-10-24 15:05:39.143 SC ITEMS@A2_350_highstacks: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_close_range
+2026-10-24 15:05:39.160 SC step 173: fire 8
+2026-10-24 15:05:39.503 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 457, hits 0, abilities executed 29
+2026-10-24 15:05:40.503 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 469, hits 0, abilities executed 29
+2026-10-24 15:05:41.503 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 480, hits 0, abilities executed 29
+2026-10-24 15:05:42.503 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 491, hits 0, abilities executed 29
+2026-10-24 15:05:43.512 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 503, hits 0, abilities executed 29
+2026-10-24 15:05:44.388 FG client FOREGROUND
+2026-10-24 15:05:44.515 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 505, hits 0, abilities executed 29
+2026-10-24 15:05:46.517 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | measure [A2_350_highstacks] | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 510, hits 0, abilities executed 30
+2026-10-24 15:05:47.172 SC step 174: mark none
+2026-10-24 15:05:47.172 UCSTAT label=A2_350_highstacks secs=8.0 calls=515 cmds=1461 calls/s=64.3 cmds/call=2.84 perCall[0..7+]=0/10/106/357/42/0/0/0 gapMs mean=15.59 p50=15.6 p95=31.4 p99=31.8 max=61.5 gap>32ms=4 gap>50ms=1 allSlotCalls=1543 allSlotCalls/frame=3.00 slots=0:514,1:514,2:515 | frames=514 emptyFrames(no human cmd)=103 frameGapMs p50=15.7 p99=17.7 max=47.3 | fgSamples=31 fgPct=35 minimizedPct=0
+2026-10-24 15:05:47.172 DISPLAY PHASE idle-between-blocks
+2026-10-24 15:05:47.172 SC ITEMS@none: maxhp=2637 upgrade_active_reload,upgrade_blitz_bullets,upgrade_titan_round,upgrade_chonky,upgrade_close_range
+2026-10-24 15:05:47.188 SC step 175: wait 3
+2026-10-24 15:05:47.516 DISPLAY STATE Haze vs Haze | haze | INTERACTION @12800 || WHY: decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it || ITEMS (read back): active_reload+blitz_bullets+titan_round+chonky+close_range | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 25/27 (done 21, blocked 2) || MECH: intended per-stack bonus is a FLAT bullet damage add (EBaseWeaponDamageIncrease); whether weapon % multiplies it is not in the data; both readings priced. Stack RATE is unchanged (counts hits, not damage) -> shots 517, hits 0, abilities executed 31
+2026-10-24 15:05:47.517 DISPLAY HUD[announce] Does Close Quarters help Fixatio | Close Quarter vs High-Velocity / Measuring
+2026-10-24 15:05:50.187 SC step 176: end 
+2026-10-24 15:05:50.194 SC ACC p=1 head=1: windows=0 missWindows=0 headWindows=0 dmgHitsOnEnemy=0 weakpointHits=0
+2026-10-24 15:05:50.195 SC EVENTS AbilityCastStarted:=19 AbilityExecuted:=31 BulletCreated:me=517 GunFired:me=517
+2026-10-24 15:05:50.196 SC HEALSRC UnitHealed|player|: n=443 requested=0 applied=0
+2026-10-24 15:05:50.196 SC TRK heal=25708 loss=24517 minHp=730 floorHits=0 firstFloorMs=0 secs=73337.8 maxhp=2637
+2026-10-24 15:05:50.196 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-24 15:05:50.197 PERF tick n=15090 avg=0.02ms max=32.2ms slow>20ms=1 | usercmd n=45259 max=1.5ms slow=0 | abilityAttempt n=0 max=0.0ms
+2026-10-24 15:05:50.197 UCSTAT label=scenario-end secs=3.0 calls=193 cmds=463 calls/s=64.3 cmds/call=2.40 perCall[0..7+]=0/0/116/77/0/0/0/0 gapMs mean=15.63 p50=15.6 p95=16.5 p99=16.9 max=17.1 gap>32ms=0 gap>50ms=0 allSlotCalls=579 allSlotCalls/frame=3.00 slots=0:193,1:193,2:193 | frames=193 emptyFrames(no human cmd)=0 frameGapMs p50=15.7 p99=17.0 max=17.2 | fgSamples=12 fgPct=100 minimizedPct=0
+2026-10-24 15:05:50.202 DISPLAYPERF ticks=221 avg=0.156ms max=12.002ms
+2026-10-24 15:05:50.205 DISPLAY FINISHED: INTERACTION - Checking whether Close Quarters boosts Haze's Fixation more than High-Velocity Rounds. -> shots 517, bullet hits 0, damage events on target 0 (end step)
+2026-10-24 15:05:50.205 DISPLAY MEASURED: shots 517, bullet hits 0, damage events on target 0; verify-pass/fail are in the run log
+2026-10-24 15:05:50.205 DISPLAY ASSUMED: none declared
+2026-10-24 15:05:50.205 DISPLAY CALCULATED: none
+2026-10-24 15:05:50.205 DISPLAY CONCLUSION: INSUFFICIENT EVIDENCE - no decision
+2026-10-24 15:05:50.205 SC scenario int_haze_Close_Quarters_3_Fixation_T2_weapon_damage_within_range finished: end step
+2026-10-24 15:05:50.519 DISPLAY SENT Finished: Close Quarters on...
+2026-10-24 15:05:50.519 QR TASK-END haze:interaction:Close_Quarters_3_Fixation_T2_weapon_damage_within_range#1 why=end step
+2026-10-24 15:05:51.520 DISPLAY SENT 517 shots, 0 hits recorded
+2026-10-24 15:05:52.520 DISPLAY SENT More damage: A or B?
+2026-10-24 15:05:52.539 DISPLAY NEXT: INTERACTION haze:interaction:Point_Blank_3_Fixation_T3_weapon_damage_within_range - Checking whether Point Blank boosts Haze's Fixation more than Burst Fire. because decide one UNKNOWN interaction cell (weapon damage % within range x Fixation) for haze; the planner records the answer, it does not reason around it
+2026-10-24 15:05:52.539 QR TASK-RESULT haze:interaction:Close_Quarters_3_Fixation_T2_weapon_damage_within_range#1 VALID=yes 

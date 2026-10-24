@@ -1,0 +1,73 @@
+{
+  "verdict": "VALID: yes",
+  "task": "act:demo2",
+  "build": "act",
+  "scenario": "act_demo2",
+  "attempt": 1,
+  "reasons": [],
+  "startedAt": "2026-10-24T14:23:32.6930056Z",
+  "wallSec": 39,
+  "endWhy": "end step",
+  "checks": {
+    "setupVerifyOk": 3,
+    "posVerifyOk": 2,
+    "expectPass": 0,
+    "verifyFail": 0,
+    "unknownOps": 0,
+    "exceptions": 0,
+    "opFailed": 0,
+    "humanClientInput": 0,
+    "forcedExternal": 0
+  },
+  "damageCsv": "E:\\deadworks-server\\sbx_logs\\damage_20261024_152252.csv",
+  "damageCsvBytes": 5715,
+  "damageCsvTMs": [
+    40281,
+    79281
+  ],
+  "samplesCsv": "E:\\deadworks-server\\sbx_logs\\samples_act_demo2_152332.csv",
+  "samplesCsvBytes": 5528,
+  "env": "ENV: unlabelled",
+  "meta": {
+    "kind": "ISOLATED ITEM",
+    "hero": "Haze",
+    "checkpoint": "Level 18 stat floor, 0 souls spent, then Clip Size given",
+    "build": "none (harness check)",
+    "items": "upgrade_clip_size",
+    "question": "Does the tester prove that a clip-size item changes the magazine and that a reload really happened?",
+    "purpose": "calibration of the readback checks (clip before/after, reload event, target distance); not a build verdict",
+    "mechanics": "reload plus clip-size readback; gun only",
+    "expectedstate": "items=none at start; exactly one item given mid-run",
+    "excluded": "all abilities and all other items; this is a harness check",
+    "accmode": "body-only",
+    "accwhy": "not a damage test",
+    "abilities": "gun only",
+    "runs": "1/1",
+    "assumed": "clip size item raises the magazine",
+    "required_activation": "Reload refill|event|reload:refill|2",
+    "required_readback": "Clip grew after item|clip_after|\u003E|clip_before ; Item count 1|items_after|==|1",
+    "activation_range": "300",
+    "range_expect": "in",
+    "player_title": "Haze check: clip size",
+    "player_what": "Clip bigger after the item?|Did a reload really occur?",
+    "player_why": "Checking the tester, not a build",
+    "player_short": "Harness check",
+    "player_expect": "Clip grows, reload occurs"
+  },
+  "startStates": [],
+  "displayTickMsAvgMax": [
+    0.581,
+    18.444
+  ],
+  "pluginLog": {
+    "file": "E:\\deadworks-server\\sbx_logs\\plugin.log",
+    "lineStart": 65481,
+    "lineEnd": 65692,
+    "markerStart": "QR TASK-START act:demo2#1",
+    "markerEnd": "QR TASK-END act:demo2#1"
+  },
+  "messages": [],
+  "clientInput": [],
+  "externalCommands": [],
+  "written": "2026-10-24T14:24:13.692Z"
+}
