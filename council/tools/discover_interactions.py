@@ -667,7 +667,7 @@ def apply_measured(allh, measured):
                 same_item = x.get('item_cls') == ln['item'] and x.get('event') == ln['event'] and x.get('ability_cls') != ln['ability']
                 same_abil = x.get('ability_cls') == ln['ability'] and x.get('item_cls') != ln['item'] and x.get('event') == ln['event']
                 d = 0.0; why = None
-                if same_item and conf and x.get('damage_type_match') is not False: d, why = BOOST['same_item_other_ability_type_match'], 'sibling: %s confirmed on %s' % (ln['item'], ln['ability'])
+                if same_item and conf and x.get('damage_type_match') is True: d, why = BOOST['same_item_other_ability_type_match'], 'sibling: %s confirmed on %s' % (ln['item'], ln['ability'])
                 elif same_item and not conf: d, why = BOOST['reject_same_item'], 'sibling: %s rejected on %s' % (ln['item'], ln['ability'])
                 elif same_abil and conf: d, why = BOOST['same_ability_other_item'], 'ability %s confirmed to deliver %s' % (ln['ability'], ln['event'])
                 elif same_abil and not conf: d, why = BOOST['reject_same_ability'], 'ability %s rejected as a %s source' % (ln['ability'], ln['event'])

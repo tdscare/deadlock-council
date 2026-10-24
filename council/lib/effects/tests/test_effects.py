@@ -133,6 +133,12 @@ class TestLearningLoop(unittest.TestCase):
         h[4]['id'] = 'T5-nomatch'
         m = [dict(id='M', tier='CONTROLLED SANDBOX RESULT', fact='x', links=[dict(template='T5', hero='h1', ability='a1', item='i1', event='heavy_melee', outcome=outcome)])]
         DI.apply_measured(h, m); return {x['id']: x for x in h}
+    def test_unknown_type_match_gets_no_sibling_boost(self):
+        # review #1 (GitHub issue 1): damage_type_match None = unknown, which is not evidence of compatibility
+        h = [self.mk('h1', 'a1', 'i1'), self.mk('h2', 'a2', 'i1', match=None)]
+        m = [dict(id='M', tier='CONTROLLED SANDBOX RESULT', fact='x', links=[dict(template='T5', hero='h1', ability='a1', item='i1', event='heavy_melee', outcome='confirmed')])]
+        DI.apply_measured(h, m)
+        self.assertEqual(h[1]['scoring']['total'], 3.0); self.assertNotIn('measured_adjust', h[1]['scoring'])
     def test_confirmed_promotes_siblings_only(self):
         r = self.run_rule('confirmed')
         self.assertEqual(r['T5-a1-i1']['scoring']['total'], 0.0); self.assertTrue(r['T5-a1-i1']['measured'])
