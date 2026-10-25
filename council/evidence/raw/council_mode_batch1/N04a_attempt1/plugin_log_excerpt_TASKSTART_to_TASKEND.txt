@@ -1,0 +1,834 @@
+2026-10-25 01:38:39.312 QR TASK-START novel:N04a#1 scenario=nv_N04a_next_bullet_haze_control
+2026-10-25 01:38:39.313 DISPLAY FULL Drifter | 30000 | INTERACTION: Checking whether a 'next bullet' item gives its bonus to one pellet or to every pellet of a multi-pellet shot, and what Express Shot does to a shotgun-style shot. (build: haze; items: upgrade_crackshot upgrade_express_shot; why: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero)
+2026-10-25 01:38:39.313 DISPLAY strategy source missing on this PC: E:\deadworks-server\council/evidence/interactions/novel/novel_hypotheses.json
+2026-10-25 01:38:39.313 SC scenario nv_N04a_next_bullet_haze_control started, 151 steps origin=runner:novel:N04a
+2026-10-25 01:38:39.327 SC step 0: meta kind INTERACTION
+2026-10-25 01:38:39.344 SC step 1: meta question Checking whether a 'next bullet' item gives its bonus to one pellet or to every pellet of a multi-pellet shot, and what Express Shot does to a shotgun-style shot.
+2026-10-25 01:38:39.358 SC step 2: meta purpose decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero
+2026-10-25 01:38:39.374 SC step 3: meta mechanics the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED
+2026-10-25 01:38:39.390 SC step 4: meta expectedstate souls=30000 items=upgrade_crackshot,upgrade_express_shot
+2026-10-25 01:38:39.405 SC step 5: meta build haze
+2026-10-25 01:38:39.421 SC step 6: meta checkpoint 30000
+2026-10-25 01:38:39.437 SC step 7: meta items upgrade_crackshot upgrade_express_shot
+2026-10-25 01:38:39.453 SC step 8: meta strategy_source council/evidence/interactions/novel/novel_hypotheses.json
+2026-10-25 01:38:39.468 SC step 9: meta feeds novel hypothesis N04 (next-bullet items on pellet/burst weapons)
+2026-10-25 01:38:39.484 SC step 10: meta prediction_haze_control Haze: exactly one extra spirit row on the first bullet of M, nothing further inside 8 s (item cooldown); E: first shot comes out twice with more damage and a larger ammo drop
+2026-10-25 01:38:39.499 SC step 11: meta prediction_drifter_CAP Drifter M: one extra spirit row in total (cap of 1 respected) attached to one of the three first-shot pellets
+2026-10-25 01:38:39.516 SC step 12: meta prediction_drifter_ALL Drifter M: three extra rows on the first shot (cap counts shots, not pellets)
+2026-10-25 01:38:39.530 SC step 13: meta prediction_drifter_ME ME: the bonus rides on the first bullet of the first volley only (Express Shot extra volley carries none) if the cap is per shot
+2026-10-25 01:38:39.546 SC step 14: meta decision_rule CAP: a next-bullet bonus is worth one pellet of three; the model divides its value by the pellet count on Drifter, Yamato (5), Calico (9), Shiv (6) style weapons and the builds in changes_builds drop or downgrade the item where the share is under about a third. ALL: item value counts every pellet, no change. Express Shot rows without ammo readback: report volleys and damage only
+2026-10-25 01:38:39.562 SC step 15: meta changes_builds yamato, yamato_brawler, paradox, lash, pocket, abrams_melee, shiv_gun
+2026-10-25 01:38:39.577 SC step 16: meta unresolved_if Drifter blocks show no pellet rows (gun not firing: statecheck first); per-row timestamps cannot separate shots (report row counts per 0.5 s instead)
+2026-10-25 01:38:39.593 SC step 17: meta selection_kind discovery
+2026-10-25 01:38:39.609 SC step 18: meta selection_reason independent theorycraft: item text says next bullet, data caps it at 1 bullet per shot, and many heroes fire several bullets per shot
+2026-10-25 01:38:39.624 SC step 19: meta alternative_reason Haze (1 bullet per shot) is the control hero in the same file
+2026-10-25 01:38:39.640 SC step 20: meta required_levels 1=1;2=1;3=1;4=1
+2026-10-25 01:38:39.655 SC step 21: meta levels_mode fixed
+2026-10-25 01:38:39.671 SC step 22: meta required_readback items_ok|1|==|1 ; dmg_hits|hits|>|0
+2026-10-25 01:38:39.687 SC step 23: meta rotation two heroes in sequence (the setup line switches); blocks X0, M, E, ME then reversed; 1.3 s of fire per block
+2026-10-25 01:38:39.702 SC step 24: meta blocked_by ammo count after the shot is not a runner readback (only GunFired/BulletHit counts via acclog); Drifter gun operation not yet exercised in a queue run: run a statecheck block first
+2026-10-25 01:38:39.718 SC step 25: meta stack_track none
+2026-10-25 01:38:39.733 SC step 26: meta cond_scope gun only
+2026-10-25 01:38:39.749 SC step 27: meta cond_abilities_used none
+2026-10-25 01:38:39.765 SC step 28: meta cond_abilities_excluded all abilities
+2026-10-25 01:38:39.780 SC step 29: meta cond_accuracy 100 percent body
+2026-10-25 01:38:39.796 SC step 30: meta cond_misses none
+2026-10-25 01:38:39.812 SC step 31: meta cond_start_stacks 0 (hardreset before every block)
+2026-10-25 01:38:39.827 SC step 32: meta cond_activations Mystic Shot, Express Shot
+2026-10-25 01:38:39.844 SC step 33: meta cond_distance 350u
+2026-10-25 01:38:39.858 SC step 34: meta cond_targets enemies=1 allies=0
+2026-10-25 01:38:39.874 SC step 35: meta readbacks equipped_items,distance_m,rows_per_shot,extra_rows_per_shot
+2026-10-25 01:38:39.890 SC step 36: meta player_title Next bullet: one pellet?
+2026-10-25 01:38:39.906 SC step 37: meta player_what Pellet gun vs next-bullet item
+2026-10-25 01:38:39.922 SC step 38: meta player_why Worth it on shotguns?
+2026-10-25 01:38:39.937 SC step 39: meta player_short Pellet item test
+2026-10-25 01:38:39.953 SC step 40: meta player_expect One pellet or all
+2026-10-25 01:38:39.968 SC step 41: meta result_says WORKS if the bonus lands on every pellet of the first shot; DOES NOT WORK (cap) if exactly one pellet carries it
+2026-10-25 01:38:39.984 SC step 42: setup Haze Haze
+2026-10-25 01:38:39.984 SETUP start me=Haze enemy=Haze
+2026-10-25 01:38:40.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | setup | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:38:40.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Drifter -> 1077316562/8/Haze
+2026-10-25 01:38:41.311 DISPLAY re-assert: pawn/level/hero changed 1077316562/8/Haze -> 1077316562/36/Haze
+2026-10-25 01:38:46.593 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:38:46.593 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:38:46.593 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:38:46.624 SC step 43: raw citadel_unlock_flex_slots
+2026-10-25 01:38:46.640 SC step 44: abil 1 1 1 1
+2026-10-25 01:38:46.640 SC abil 1 ability_sleep_dagger bits=1 unlocked=True
+2026-10-25 01:38:46.640 SC abil 2 ability_smoke_bomb bits=1 unlocked=True
+2026-10-25 01:38:46.640 SC abil 3 ability_stacking_damage bits=1 unlocked=True
+2026-10-25 01:38:46.640 SC abil 4 ability_bullet_flurry bits=1 unlocked=True
+2026-10-25 01:38:46.656 SC step 45: souls 30000
+2026-10-25 01:38:46.671 SC step 46: hardreset 
+2026-10-25 01:38:46.671 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:38:46.671 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:38:46.671 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:38:46.687 SC step 47: setup Wraith Haze
+2026-10-25 01:38:46.687 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:38:47.312 SC ABIL enforce slot 1 citadel_ability_card_toss bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:38:47.312 SC ABIL enforce slot 2 citadel_ability_projectmind bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:38:47.312 SC ABIL enforce slot 3 citadel_ability_wraith_rapidfire bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:38:47.312 SC ABIL enforce slot 4 citadel_ability_psychic_lift bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:38:47.312 ACT modifier seen: citadel_ability_card_toss/modifier_ability_resource_pool
+2026-10-25 01:38:47.312 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:38:47.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/5/Wraith
+2026-10-25 01:38:48.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/5/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:38:53.593 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:38:53.593 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:38:53.593 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:38:53.624 SC step 48: wait 1.5
+2026-10-25 01:38:55.124 SC step 49: setup Haze Haze
+2026-10-25 01:38:55.125 SETUP start me=Haze enemy=Haze
+2026-10-25 01:38:55.312 DISPLAY STATE 0 vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:38:55.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/12/0
+2026-10-25 01:38:55.515 SC ABIL enforce slot 1 ability_sleep_dagger bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:38:55.515 SC ABIL enforce slot 2 ability_smoke_bomb bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:38:55.515 SC ABIL enforce slot 3 ability_stacking_damage bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:38:55.515 SC ABIL enforce slot 4 ability_bullet_flurry bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:38:56.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:38:56.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/12/0 -> 1077316562/36/Haze
+2026-10-25 01:39:01.593 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:39:01.593 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:39:01.593 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:39:01.625 SC step 50: wait 1
+2026-10-25 01:39:02.624 SC step 51: raw citadel_unlock_flex_slots
+2026-10-25 01:39:02.640 SC step 52: unlock 7
+2026-10-25 01:39:02.640 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:39:02.640 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:39:02.640 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:39:02.640 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:39:02.640 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:39:02.640 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:39:02.640 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:39:02.640 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:39:02.640 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:39:02.640 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:39:02.640 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:39:02.640 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:39:02.640 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:39:02.640 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:39:02.640 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:39:02.640 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:39:02.656 SC step 53: basemods 
+2026-10-25 01:39:02.656 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:39:02.656 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:39:02.671 SC step 54: fetch 
+2026-10-25 01:39:02.671 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:39:02.687 SC step 55: mark none
+2026-10-25 01:39:02.687 UCSTAT label=none secs=23.3 calls=1495 cmds=3836 calls/s=64.0 cmds/call=2.57 perCall[0..7+]=0/30/621/812/32/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.5 p99=32.0 max=63.1 gap>32ms=17 gap>50ms=4 allSlotCalls=4487 allSlotCalls/frame=3.00 slots=0:1496,1:1496,2:1495 | frames=1496 emptyFrames(no human cmd)=451 frameGapMs p50=15.6 p99=16.4 max=17.4 | fgSamples=92 fgPct=0 minimizedPct=0
+2026-10-25 01:39:02.687 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:39:02.687 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:39:02.702 SC step 56: souls 30000
+2026-10-25 01:39:02.718 SC step 57: basemods 
+2026-10-25 01:39:02.718 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:39:02.718 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:39:02.734 SC ABIL enforce slot 1 ability_sleep_dagger bits 7 -> 1 (levels requested by the scenario)
+2026-10-25 01:39:02.734 SC ABIL enforce slot 2 ability_smoke_bomb bits 7 -> 1 (levels requested by the scenario)
+2026-10-25 01:39:02.734 SC ABIL enforce slot 3 ability_stacking_damage bits 7 -> 1 (levels requested by the scenario)
+2026-10-25 01:39:02.734 SC ABIL enforce slot 4 ability_bullet_flurry bits 7 -> 1 (levels requested by the scenario)
+2026-10-25 01:39:02.734 SC step 58: enemies 1 300 4
+2026-10-25 01:39:02.734 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:39:02.734 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:39:02.734 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:39:02.984 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:39:03.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:39:06.734 SC step 59: fetch 350
+2026-10-25 01:39:06.734 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:39:06.749 SC step 60: cast reload 2.5
+2026-10-25 01:39:06.749 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=0 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:39:07.046 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:39:07.452 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=0 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:39:09.249 SC step 61: mark H_X0
+2026-10-25 01:39:09.249 UCSTAT label=none secs=6.5 calls=420 cmds=1067 calls/s=64.3 cmds/call=2.54 perCall[0..7+]=0/0/193/227/0/0/0/0 gapMs mean=15.59 p50=15.6 p95=31.4 p99=31.8 max=32.0 gap>32ms=3 gap>50ms=0 allSlotCalls=1260 allSlotCalls/frame=3.00 slots=0:420,1:420,2:420 | frames=420 emptyFrames(no human cmd)=114 frameGapMs p50=15.6 p99=16.3 max=16.6 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:39:09.249 LEVELS H_X0: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:39:09.249 DIST H_X0: target 350 units away
+2026-10-25 01:39:09.249 DISPLAY PHASE measure - H_X0
+2026-10-25 01:39:09.249 DISPLAY Haze - now testing [H_X0] - decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero | items read back: no items | aim: 100% hit, body only - measurement | run 1/1
+2026-10-25 01:39:09.249 SC ITEMS@H_X0: maxhp=1885 
+2026-10-25 01:39:09.265 SC step 62: accuracy 1 0
+2026-10-25 01:39:09.265 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:39:09.280 SC step 63: fire 1.3
+2026-10-25 01:39:09.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_X0] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 1, hits 0, abilities executed 1
+2026-10-25 01:39:10.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_X0] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 10, hits 19, abilities executed 1
+2026-10-25 01:39:10.593 SC step 64: acclog 
+2026-10-25 01:39:10.593 SC ACC p=1 head=0: windows=8 missWindows=0 headWindows=0 dmgHitsOnEnemy=25 weakpointHits=0
+2026-10-25 01:39:10.593 SC EVENTS AbilityCastStarted:=1 AbilityExecuted:=1 BulletCreated:me=13 BulletHit:me=13 GunFired:me=13
+2026-10-25 01:39:10.593 SC HEALSRC UnitHealed|player|: n=64 requested=0 applied=0
+2026-10-25 01:39:10.593 SC TRK heal=109515 loss=109515 minHp=730 floorHits=0 firstFloorMs=0 secs=9807.2 maxhp=1885
+2026-10-25 01:39:10.593 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-25 01:39:10.608 SC step 65: mark none
+2026-10-25 01:39:10.608 UCSTAT label=H_X0 secs=1.3 calls=88 cmds=225 calls/s=65.5 cmds/call=2.56 perCall[0..7+]=0/1/38/48/1/0/0/0 gapMs mean=15.44 p50=15.6 p95=31.4 p99=32.2 max=32.2 gap>32ms=2 gap>50ms=0 allSlotCalls=262 allSlotCalls/frame=3.01 slots=0:87,1:87,2:88 | frames=87 emptyFrames(no human cmd)=25 frameGapMs p50=15.7 p99=16.3 max=16.3 | fgSamples=5 fgPct=0 minimizedPct=0
+2026-10-25 01:39:10.608 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:39:10.608 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:39:10.624 SC step 66: wait 2
+2026-10-25 01:39:11.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 25, abilities executed 2
+2026-10-25 01:39:12.312 DISPLAY HUD[announce] #256 Hero: Haze - Verifying | Test: Next bullet: one pellet? / Why: Worth it on shotguns? / Gear: verified / Attempt 1 of 3 / Status: Running
+2026-10-25 01:39:12.624 SC step 67: hardreset 
+2026-10-25 01:39:12.624 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:39:12.624 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:39:12.624 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:39:12.640 SC step 68: setup Wraith Haze
+2026-10-25 01:39:12.640 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:39:13.313 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 25, abilities executed 2
+2026-10-25 01:39:13.313 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/32/Wraith
+2026-10-25 01:39:14.311 DISPLAY re-assert: pawn/level/hero changed 1077316562/32/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:39:19.593 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:39:19.593 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:39:19.593 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:39:19.625 SC step 69: wait 1.5
+2026-10-25 01:39:21.125 SC step 70: setup Haze Haze
+2026-10-25 01:39:21.125 SETUP start me=Haze enemy=Haze
+2026-10-25 01:39:21.312 DISPLAY STATE 0 vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 25, abilities executed 2
+2026-10-25 01:39:21.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/12/0
+2026-10-25 01:39:22.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 25, abilities executed 2
+2026-10-25 01:39:22.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/12/0 -> 1077316562/36/Haze
+2026-10-25 01:39:27.594 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:39:27.594 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:39:27.594 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:39:27.624 SC step 71: wait 1
+2026-10-25 01:39:28.624 SC step 72: raw citadel_unlock_flex_slots
+2026-10-25 01:39:28.640 SC step 73: unlock 7
+2026-10-25 01:39:28.640 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:39:28.640 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:39:28.640 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:39:28.640 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:39:28.640 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:39:28.640 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:39:28.640 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:39:28.640 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:39:28.640 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:39:28.640 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:39:28.640 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:39:28.640 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:39:28.640 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:39:28.640 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:39:28.640 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:39:28.640 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:39:28.656 SC step 74: basemods 
+2026-10-25 01:39:28.656 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:39:28.656 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:39:28.671 SC step 75: fetch 
+2026-10-25 01:39:28.671 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:39:28.687 SC step 76: mark none
+2026-10-25 01:39:28.687 UCSTAT label=none secs=18.1 calls=1157 cmds=2987 calls/s=64.1 cmds/call=2.58 perCall[0..7+]=0/21/480/618/38/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.4 p99=31.9 max=62.9 gap>32ms=10 gap>50ms=3 allSlotCalls=3471 allSlotCalls/frame=3.00 slots=0:1157,1:1157,2:1157 | frames=1157 emptyFrames(no human cmd)=347 frameGapMs p50=15.6 p99=16.5 max=17.1 | fgSamples=72 fgPct=0 minimizedPct=0
+2026-10-25 01:39:28.687 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:39:28.687 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:39:28.703 SC step 77: souls 30000
+2026-10-25 01:39:28.718 SC step 78: give upgrade_crackshot
+2026-10-25 01:39:28.718 SC gave upgrade_crackshot
+2026-10-25 01:39:28.734 SC step 79: basemods 
+2026-10-25 01:39:28.734 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_crackshot/modifier_mystic_shot,upgrade_crackshot/crackshot_stats
+2026-10-25 01:39:28.734 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:39:28.749 SC step 80: enemies 1 300 4
+2026-10-25 01:39:28.749 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:39:28.749 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:39:28.749 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:39:28.983 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:39:29.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 25, abilities executed 2
+2026-10-25 01:39:32.749 SC step 81: fetch 350
+2026-10-25 01:39:32.749 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:39:32.765 SC step 82: cast reload 2.5
+2026-10-25 01:39:32.765 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:39:33.062 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:39:33.468 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:39:35.265 SC step 83: mark H_M
+2026-10-25 01:39:35.265 UCSTAT label=none secs=6.5 calls=421 cmds=1074 calls/s=64.3 cmds/call=2.55 perCall[0..7+]=0/0/189/232/0/0/0/0 gapMs mean=15.59 p50=15.6 p95=31.4 p99=31.8 max=32.6 gap>32ms=2 gap>50ms=0 allSlotCalls=1263 allSlotCalls/frame=3.00 slots=0:421,1:421,2:421 | frames=421 emptyFrames(no human cmd)=116 frameGapMs p50=15.6 p99=16.6 max=17.1 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:39:35.265 LEVELS H_M: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:39:35.265 DIST H_M: target 350 units away
+2026-10-25 01:39:35.265 DISPLAY PHASE measure - H_M
+2026-10-25 01:39:35.265 DISPLAY Haze - now testing [H_M] - decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero | items read back: crackshot | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:39:35.265 SC ITEMS@H_M: maxhp=1885 upgrade_crackshot
+2026-10-25 01:39:35.280 SC step 84: accuracy 1 0
+2026-10-25 01:39:35.280 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:39:35.296 SC step 85: fire 1.3
+2026-10-25 01:39:35.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_M] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:39:36.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_M] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 10, hits 20, abilities executed 1
+2026-10-25 01:39:36.609 SC step 86: acclog 
+2026-10-25 01:39:36.609 SC ACC p=1 head=0: windows=8 missWindows=0 headWindows=0 dmgHitsOnEnemy=26 weakpointHits=0
+2026-10-25 01:39:36.609 SC EVENTS AbilityCastStarted:=1 AbilityExecuted:=1 BulletCreated:me=13 BulletHit:me=13 GunFired:me=13
+2026-10-25 01:39:36.609 SC HEALSRC UnitHealed|player|: n=116 requested=0 applied=0
+2026-10-25 01:39:36.609 SC TRK heal=112573 loss=112573 minHp=730 floorHits=0 firstFloorMs=0 secs=9833.2 maxhp=1885
+2026-10-25 01:39:36.609 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-25 01:39:36.624 SC step 87: mark none
+2026-10-25 01:39:36.624 UCSTAT label=H_M secs=1.3 calls=87 cmds=226 calls/s=64.7 cmds/call=2.60 perCall[0..7+]=0/1/35/49/2/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.6 p99=32.2 max=32.2 gap>32ms=2 gap>50ms=0 allSlotCalls=261 allSlotCalls/frame=3.00 slots=0:87,1:87,2:87 | frames=87 emptyFrames(no human cmd)=26 frameGapMs p50=15.6 p99=16.7 max=16.7 | fgSamples=5 fgPct=0 minimizedPct=0
+2026-10-25 01:39:36.624 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:39:36.624 SC ITEMS@none: maxhp=1885 upgrade_crackshot
+2026-10-25 01:39:36.640 SC step 88: wait 2
+2026-10-25 01:39:37.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 26, abilities executed 2
+2026-10-25 01:39:38.640 SC step 89: hardreset 
+2026-10-25 01:39:38.640 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:39:38.640 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:39:38.640 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:39:38.655 SC step 90: setup Wraith Haze
+2026-10-25 01:39:38.656 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:39:39.312 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 26, abilities executed 2
+2026-10-25 01:39:39.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/29/Wraith
+2026-10-25 01:39:40.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/29/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:39:45.593 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:39:45.593 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:39:45.593 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:39:45.624 SC step 91: wait 1.5
+2026-10-25 01:39:47.124 SC step 92: setup Haze Haze
+2026-10-25 01:39:47.125 SETUP start me=Haze enemy=Haze
+2026-10-25 01:39:47.312 DISPLAY STATE 0 vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 26, abilities executed 2
+2026-10-25 01:39:47.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/12/0
+2026-10-25 01:39:48.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 26, abilities executed 2
+2026-10-25 01:39:48.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/12/0 -> 1077316562/36/Haze
+2026-10-25 01:39:53.594 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:39:53.594 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:39:53.594 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:39:53.624 SC step 93: wait 1
+2026-10-25 01:39:54.624 SC step 94: raw citadel_unlock_flex_slots
+2026-10-25 01:39:54.640 SC step 95: unlock 7
+2026-10-25 01:39:54.640 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:39:54.640 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:39:54.640 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:39:54.640 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:39:54.640 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:39:54.640 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:39:54.640 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:39:54.640 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:39:54.640 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:39:54.640 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:39:54.640 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:39:54.640 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:39:54.640 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:39:54.640 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:39:54.640 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:39:54.640 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:39:54.656 SC step 96: basemods 
+2026-10-25 01:39:54.656 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:39:54.656 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:39:54.671 SC step 97: fetch 
+2026-10-25 01:39:54.671 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:39:54.687 SC step 98: mark none
+2026-10-25 01:39:54.687 UCSTAT label=none secs=18.0 calls=1155 cmds=2960 calls/s=64.1 cmds/call=2.56 perCall[0..7+]=0/22/485/624/24/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.5 p99=31.9 max=62.7 gap>32ms=7 gap>50ms=3 allSlotCalls=3467 allSlotCalls/frame=3.00 slots=0:1156,1:1156,2:1155 | frames=1156 emptyFrames(no human cmd)=347 frameGapMs p50=15.6 p99=16.5 max=17.2 | fgSamples=72 fgPct=0 minimizedPct=0
+2026-10-25 01:39:54.687 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:39:54.687 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:39:54.702 SC step 99: souls 30000
+2026-10-25 01:39:54.718 SC step 100: give upgrade_express_shot
+2026-10-25 01:39:54.718 SC gave upgrade_express_shot
+2026-10-25 01:39:54.734 SC step 101: basemods 
+2026-10-25 01:39:54.734 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_express_shot/express_shot_stats
+2026-10-25 01:39:54.734 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:39:54.749 SC step 102: enemies 1 300 4
+2026-10-25 01:39:54.749 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:39:54.749 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:39:54.749 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:39:54.984 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:39:55.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 26, abilities executed 2
+2026-10-25 01:39:58.749 SC step 103: fetch 350
+2026-10-25 01:39:58.749 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:39:58.765 SC step 104: cast reload 2.5
+2026-10-25 01:39:58.765 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:39:59.062 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:39:59.468 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:40:01.265 SC step 105: mark H_E
+2026-10-25 01:40:01.265 UCSTAT label=none secs=6.6 calls=422 cmds=1078 calls/s=64.3 cmds/call=2.55 perCall[0..7+]=0/0/190/230/2/0/0/0 gapMs mean=15.59 p50=15.6 p95=31.5 p99=32.0 max=32.3 gap>32ms=5 gap>50ms=0 allSlotCalls=1264 allSlotCalls/frame=3.00 slots=0:421,1:421,2:422 | frames=421 emptyFrames(no human cmd)=115 frameGapMs p50=15.6 p99=16.5 max=16.6 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:40:01.265 LEVELS H_E: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:40:01.265 DIST H_E: target 350 units away
+2026-10-25 01:40:01.265 DISPLAY PHASE measure - H_E
+2026-10-25 01:40:01.265 DISPLAY Haze - now testing [H_E] - decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero | items read back: express_shot | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:40:01.265 SC ITEMS@H_E: maxhp=1885 upgrade_express_shot
+2026-10-25 01:40:01.281 SC step 106: accuracy 1 0
+2026-10-25 01:40:01.281 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:40:01.296 SC step 107: fire 1.3
+2026-10-25 01:40:01.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_E] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:40:01.374 ACT modifier seen: upgrade_express_shot/notification
+2026-10-25 01:40:02.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_E] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 10, hits 21, abilities executed 1
+2026-10-25 01:40:02.608 SC step 108: acclog 
+2026-10-25 01:40:02.608 SC ACC p=1 head=0: windows=8 missWindows=0 headWindows=0 dmgHitsOnEnemy=27 weakpointHits=0
+2026-10-25 01:40:02.608 SC EVENTS AbilityCastStarted:=1 AbilityExecuted:=1 BulletCreated:me=14 BulletHit:me=14 GunFired:me=13
+2026-10-25 01:40:02.608 SC HEALSRC UnitHealed|player|: n=168 requested=0 applied=0
+2026-10-25 01:40:02.608 SC TRK heal=115701 loss=115701 minHp=730 floorHits=0 firstFloorMs=0 secs=9859.2 maxhp=1885
+2026-10-25 01:40:02.608 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-25 01:40:02.624 SC step 109: mark none
+2026-10-25 01:40:02.624 UCSTAT label=H_E secs=1.3 calls=87 cmds=223 calls/s=65.5 cmds/call=2.56 perCall[0..7+]=0/1/37/48/1/0/0/0 gapMs mean=15.44 p50=15.6 p95=31.6 p99=32.3 max=32.3 gap>32ms=3 gap>50ms=0 allSlotCalls=261 allSlotCalls/frame=3.00 slots=0:87,1:87,2:87 | frames=87 emptyFrames(no human cmd)=26 frameGapMs p50=15.6 p99=16.7 max=16.7 | fgSamples=5 fgPct=0 minimizedPct=0
+2026-10-25 01:40:02.624 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:40:02.624 SC ITEMS@none: maxhp=1885 upgrade_express_shot
+2026-10-25 01:40:02.640 SC step 110: wait 2
+2026-10-25 01:40:03.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 27, abilities executed 2
+2026-10-25 01:40:04.640 SC step 111: hardreset 
+2026-10-25 01:40:04.640 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:40:04.640 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:40:04.640 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:40:04.656 SC step 112: setup Wraith Haze
+2026-10-25 01:40:04.656 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:40:05.312 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 27, abilities executed 2
+2026-10-25 01:40:05.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/30/Wraith
+2026-10-25 01:40:06.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/30/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:40:11.593 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:40:11.593 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:40:11.593 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:40:11.624 SC step 113: wait 1.5
+2026-10-25 01:40:13.124 SC step 114: setup Haze Haze
+2026-10-25 01:40:13.125 SETUP start me=Haze enemy=Haze
+2026-10-25 01:40:13.312 DISPLAY STATE 0 vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 27, abilities executed 2
+2026-10-25 01:40:13.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/12/0
+2026-10-25 01:40:13.312 DISPLAY HUD[announce] #271 Hero: 0 - Verifying | Test: Next bullet: one pellet? / Why: Worth it on shotguns? / Gear: verified / Attempt 1 of 3 / Status: Running
+2026-10-25 01:40:14.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 27, abilities executed 2
+2026-10-25 01:40:14.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/12/0 -> 1077316562/36/Haze
+2026-10-25 01:40:20.593 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:40:20.593 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:40:20.593 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:40:20.625 SC step 115: wait 1
+2026-10-25 01:40:21.624 SC step 116: raw citadel_unlock_flex_slots
+2026-10-25 01:40:21.640 SC step 117: unlock 7
+2026-10-25 01:40:21.640 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:40:21.640 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:40:21.640 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:40:21.640 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:40:21.640 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:40:21.640 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:40:21.640 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:40:21.640 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:40:21.640 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:40:21.640 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:40:21.640 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:40:21.640 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:40:21.640 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:40:21.640 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:40:21.640 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:40:21.640 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:40:21.655 SC step 118: basemods 
+2026-10-25 01:40:21.655 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:40:21.655 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:40:21.671 SC step 119: fetch 
+2026-10-25 01:40:21.671 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:40:21.687 SC step 120: mark none
+2026-10-25 01:40:21.687 UCSTAT label=none secs=19.0 calls=1220 cmds=3142 calls/s=64.1 cmds/call=2.58 perCall[0..7+]=0/21/508/659/32/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.5 p99=32.0 max=62.9 gap>32ms=14 gap>50ms=3 allSlotCalls=3660 allSlotCalls/frame=3.00 slots=0:1220,1:1220,2:1220 | frames=1220 emptyFrames(no human cmd)=366 frameGapMs p50=15.6 p99=16.5 max=16.7 | fgSamples=75 fgPct=0 minimizedPct=0
+2026-10-25 01:40:21.687 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:40:21.687 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:40:21.702 SC step 121: souls 30000
+2026-10-25 01:40:21.718 SC step 122: give upgrade_crackshot
+2026-10-25 01:40:21.718 SC gave upgrade_crackshot
+2026-10-25 01:40:21.734 SC step 123: give upgrade_express_shot
+2026-10-25 01:40:21.734 SC gave upgrade_express_shot
+2026-10-25 01:40:21.749 SC step 124: basemods 
+2026-10-25 01:40:21.749 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_crackshot/modifier_mystic_shot,upgrade_crackshot/crackshot_stats,upgrade_express_shot/express_shot_stats
+2026-10-25 01:40:21.749 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:40:21.765 SC step 125: enemies 1 300 4
+2026-10-25 01:40:21.765 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:40:21.765 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:40:21.765 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:40:21.984 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:40:22.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot+express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 27, abilities executed 2
+2026-10-25 01:40:25.765 SC step 126: fetch 350
+2026-10-25 01:40:25.765 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:40:25.780 SC step 127: cast reload 2.5
+2026-10-25 01:40:25.780 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:40:26.077 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:40:26.483 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:40:28.280 SC step 128: mark H_ME
+2026-10-25 01:40:28.280 UCSTAT label=none secs=6.6 calls=422 cmds=1078 calls/s=64.2 cmds/call=2.55 perCall[0..7+]=0/0/188/234/0/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.4 p99=31.9 max=32.1 gap>32ms=1 gap>50ms=0 allSlotCalls=1266 allSlotCalls/frame=3.00 slots=0:422,1:422,2:422 | frames=422 emptyFrames(no human cmd)=117 frameGapMs p50=15.6 p99=16.4 max=16.5 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:40:28.280 LEVELS H_ME: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:40:28.280 DIST H_ME: target 350 units away
+2026-10-25 01:40:28.280 DISPLAY PHASE measure - H_ME
+2026-10-25 01:40:28.280 DISPLAY Haze - now testing [H_ME] - decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero | items read back: crackshot+express_shot | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:40:28.280 SC ITEMS@H_ME: maxhp=1885 upgrade_crackshot,upgrade_express_shot
+2026-10-25 01:40:28.296 SC step 129: accuracy 1 0
+2026-10-25 01:40:28.296 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:40:28.311 SC step 130: fire 1.3
+2026-10-25 01:40:28.311 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot+express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_ME] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:40:29.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot+express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_ME] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 10, hits 22, abilities executed 1
+2026-10-25 01:40:29.624 SC step 131: acclog 
+2026-10-25 01:40:29.624 SC ACC p=1 head=0: windows=8 missWindows=0 headWindows=0 dmgHitsOnEnemy=28 weakpointHits=0
+2026-10-25 01:40:29.624 SC EVENTS AbilityCastStarted:=1 AbilityExecuted:=1 BulletCreated:me=14 BulletHit:me=14 GunFired:me=13
+2026-10-25 01:40:29.624 SC HEALSRC UnitHealed|player|: n=222 requested=0 applied=0
+2026-10-25 01:40:29.624 SC TRK heal=119487 loss=119487 minHp=730 floorHits=0 firstFloorMs=0 secs=9886.3 maxhp=1885
+2026-10-25 01:40:29.624 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-25 01:40:29.640 SC step 132: mark none
+2026-10-25 01:40:29.640 UCSTAT label=H_ME secs=1.3 calls=87 cmds=229 calls/s=64.7 cmds/call=2.63 perCall[0..7+]=0/0/34/51/2/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.6 p99=32.2 max=32.2 gap>32ms=1 gap>50ms=0 allSlotCalls=261 allSlotCalls/frame=3.00 slots=0:87,1:87,2:87 | frames=87 emptyFrames(no human cmd)=26 frameGapMs p50=15.7 p99=16.8 max=16.8 | fgSamples=6 fgPct=0 minimizedPct=0
+2026-10-25 01:40:29.640 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:40:29.640 SC ITEMS@none: maxhp=1885 upgrade_crackshot,upgrade_express_shot
+2026-10-25 01:40:29.656 SC step 133: wait 2
+2026-10-25 01:40:30.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot+express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 28, abilities executed 2
+2026-10-25 01:40:31.656 SC step 134: hardreset 
+2026-10-25 01:40:31.656 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:40:31.656 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:40:31.656 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:40:31.671 SC step 135: setup Wraith Haze
+2026-10-25 01:40:31.672 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:40:32.312 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 28, abilities executed 2
+2026-10-25 01:40:32.312 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/27/Wraith
+2026-10-25 01:40:33.303 DISPLAY re-assert: pawn/level/hero changed 1077316562/27/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:40:38.584 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:40:38.584 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:40:38.584 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:40:38.615 SC step 136: wait 1.5
+2026-10-25 01:40:40.115 SC step 137: setup Haze Haze
+2026-10-25 01:40:40.116 SETUP start me=Haze enemy=Haze
+2026-10-25 01:40:40.303 DISPLAY STATE 0 vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 28, abilities executed 2
+2026-10-25 01:40:40.303 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/12/0
+2026-10-25 01:40:41.303 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 28, abilities executed 2
+2026-10-25 01:40:41.303 DISPLAY re-assert: pawn/level/hero changed 1077316562/12/0 -> 1077316562/36/Haze
+2026-10-25 01:40:46.584 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:40:46.584 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:40:46.584 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:40:46.615 SC step 138: wait 1
+2026-10-25 01:40:47.615 SC step 139: raw citadel_unlock_flex_slots
+2026-10-25 01:40:47.631 SC step 140: unlock 7
+2026-10-25 01:40:47.631 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:40:47.631 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:40:47.631 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:40:47.631 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:40:47.631 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:40:47.631 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:40:47.631 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:40:47.631 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:40:47.631 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:40:47.631 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:40:47.631 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:40:47.631 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:40:47.631 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:40:47.631 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:40:47.631 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:40:47.631 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:40:47.646 SC step 141: basemods 
+2026-10-25 01:40:47.646 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:40:47.646 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:40:47.662 SC step 142: fetch 
+2026-10-25 01:40:47.662 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:40:47.677 SC step 143: mark none
+2026-10-25 01:40:47.678 UCSTAT label=none secs=18.0 calls=1155 cmds=3003 calls/s=64.1 cmds/call=2.60 perCall[0..7+]=0/25/480/582/68/0/0/0 gapMs mean=15.60 p50=15.6 p95=31.5 p99=31.8 max=63.1 gap>32ms=9 gap>50ms=3 allSlotCalls=3465 allSlotCalls/frame=3.00 slots=0:1155,1:1155,2:1155 | frames=1155 emptyFrames(no human cmd)=345 frameGapMs p50=15.6 p99=16.4 max=36.5 | fgSamples=71 fgPct=0 minimizedPct=0
+2026-10-25 01:40:47.678 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:40:47.678 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:40:47.694 SC step 144: souls 30000
+2026-10-25 01:40:47.709 SC step 145: give upgrade_crackshot
+2026-10-25 01:40:47.709 SC gave upgrade_crackshot
+2026-10-25 01:40:47.725 SC step 146: give upgrade_express_shot
+2026-10-25 01:40:47.725 SC gave upgrade_express_shot
+2026-10-25 01:40:47.740 SC step 147: basemods 
+2026-10-25 01:40:47.740 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_crackshot/modifier_mystic_shot,upgrade_crackshot/crackshot_stats,upgrade_express_shot/express_shot_stats
+2026-10-25 01:40:47.740 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:40:47.756 SC step 148: enemies 1 300 4
+2026-10-25 01:40:47.756 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:40:47.756 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:40:47.756 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:40:47.975 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:40:48.303 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot+express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 28, abilities executed 2
+2026-10-25 01:40:51.756 SC step 149: fetch 350
+2026-10-25 01:40:51.756 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:40:51.771 SC step 150: cast reload 2.5
+2026-10-25 01:40:51.771 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:40:52.068 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:40:52.474 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:40:54.271 SC step 151: mark H_ME_rev
+2026-10-25 01:40:54.271 UCSTAT label=none secs=6.6 calls=422 cmds=1077 calls/s=64.2 cmds/call=2.55 perCall[0..7+]=0/1/188/232/1/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.5 p99=31.8 max=32.2 gap>32ms=3 gap>50ms=0 allSlotCalls=1266 allSlotCalls/frame=3.00 slots=0:422,1:422,2:422 | frames=422 emptyFrames(no human cmd)=117 frameGapMs p50=15.6 p99=16.3 max=16.5 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:40:54.272 LEVELS H_ME_rev: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:40:54.272 DIST H_ME_rev: target 350 units away
+2026-10-25 01:40:54.272 DISPLAY PHASE measure - H_ME_rev
+2026-10-25 01:40:54.272 DISPLAY Haze - now testing [H_ME_rev] - decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero | items read back: crackshot+express_shot | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:40:54.272 SC ITEMS@H_ME_rev: maxhp=1885 upgrade_crackshot,upgrade_express_shot
+2026-10-25 01:40:54.287 SC step 152: accuracy 1 0
+2026-10-25 01:40:54.287 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:40:54.302 SC step 153: fire 1.3
+2026-10-25 01:40:54.302 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot+express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_ME_rev] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:40:55.303 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot+express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_ME_rev] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 10, hits 22, abilities executed 1
+2026-10-25 01:40:55.615 SC step 154: acclog 
+2026-10-25 01:40:55.615 SC ACC p=1 head=0: windows=8 missWindows=0 headWindows=0 dmgHitsOnEnemy=28 weakpointHits=0
+2026-10-25 01:40:55.615 SC EVENTS AbilityCastStarted:=1 AbilityExecuted:=1 BulletCreated:me=14 BulletHit:me=14 GunFired:me=13
+2026-10-25 01:40:55.615 SC HEALSRC UnitHealed|player|: n=274 requested=0 applied=0
+2026-10-25 01:40:55.615 SC TRK heal=122650 loss=122650 minHp=730 floorHits=0 firstFloorMs=0 secs=9912.3 maxhp=1885
+2026-10-25 01:40:55.615 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-25 01:40:55.631 SC step 155: mark none
+2026-10-25 01:40:55.631 UCSTAT label=H_ME_rev secs=1.3 calls=87 cmds=228 calls/s=64.7 cmds/call=2.62 perCall[0..7+]=0/0/35/50/2/0/0/0 gapMs mean=15.63 p50=15.7 p95=31.6 p99=32.0 max=32.0 gap>32ms=1 gap>50ms=0 allSlotCalls=261 allSlotCalls/frame=3.00 slots=0:87,1:87,2:87 | frames=87 emptyFrames(no human cmd)=26 frameGapMs p50=15.7 p99=16.6 max=16.6 | fgSamples=5 fgPct=0 minimizedPct=0
+2026-10-25 01:40:55.631 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:40:55.631 SC ITEMS@none: maxhp=1885 upgrade_crackshot,upgrade_express_shot
+2026-10-25 01:40:55.647 SC step 156: wait 2
+2026-10-25 01:40:56.303 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot+express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 28, abilities executed 2
+2026-10-25 01:40:57.646 SC step 157: hardreset 
+2026-10-25 01:40:57.646 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:40:57.646 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:40:57.646 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:40:57.662 SC step 158: setup Wraith Haze
+2026-10-25 01:40:57.663 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:40:58.303 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 28, abilities executed 2
+2026-10-25 01:40:58.303 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/27/Wraith
+2026-10-25 01:40:59.302 DISPLAY re-assert: pawn/level/hero changed 1077316562/27/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:41:04.584 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:41:04.584 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:41:04.584 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:41:04.615 SC step 159: wait 1.5
+2026-10-25 01:41:06.115 SC step 160: setup Haze Haze
+2026-10-25 01:41:06.116 SETUP start me=Haze enemy=Haze
+2026-10-25 01:41:06.303 DISPLAY STATE 0 vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 28, abilities executed 2
+2026-10-25 01:41:06.303 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/12/0
+2026-10-25 01:41:07.302 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 28, abilities executed 2
+2026-10-25 01:41:07.303 DISPLAY re-assert: pawn/level/hero changed 1077316562/12/0 -> 1077316562/36/Haze
+2026-10-25 01:41:12.584 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:41:12.584 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:41:12.584 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:41:12.615 SC step 161: wait 1
+2026-10-25 01:41:13.615 SC step 162: raw citadel_unlock_flex_slots
+2026-10-25 01:41:13.631 SC step 163: unlock 7
+2026-10-25 01:41:13.631 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:41:13.631 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:41:13.631 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:41:13.631 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:41:13.631 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:41:13.631 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:41:13.631 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:41:13.631 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:41:13.631 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:41:13.631 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:41:13.631 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:41:13.631 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:41:13.631 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:41:13.631 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:41:13.631 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:41:13.631 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:41:13.646 SC step 164: basemods 
+2026-10-25 01:41:13.646 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:41:13.646 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:41:13.662 SC step 165: fetch 
+2026-10-25 01:41:13.662 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:41:13.678 SC step 166: mark none
+2026-10-25 01:41:13.678 UCSTAT label=none secs=18.0 calls=1155 cmds=2963 calls/s=64.1 cmds/call=2.57 perCall[0..7+]=0/22/482/627/24/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.5 p99=32.0 max=62.5 gap>32ms=11 gap>50ms=4 allSlotCalls=3465 allSlotCalls/frame=3.00 slots=0:1155,1:1155,2:1155 | frames=1155 emptyFrames(no human cmd)=346 frameGapMs p50=15.6 p99=16.4 max=17.2 | fgSamples=72 fgPct=0 minimizedPct=0
+2026-10-25 01:41:13.678 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:41:13.678 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:41:13.694 SC step 167: souls 30000
+2026-10-25 01:41:13.709 SC step 168: give upgrade_express_shot
+2026-10-25 01:41:13.709 SC gave upgrade_express_shot
+2026-10-25 01:41:13.725 SC step 169: basemods 
+2026-10-25 01:41:13.725 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_express_shot/express_shot_stats
+2026-10-25 01:41:13.725 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:41:13.740 SC step 170: enemies 1 300 4
+2026-10-25 01:41:13.740 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:41:13.740 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:41:13.740 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:41:13.974 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:41:14.312 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 28, abilities executed 2
+2026-10-25 01:41:17.736 SC step 171: fetch 350
+2026-10-25 01:41:17.736 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:41:17.752 SC step 172: cast reload 2.5
+2026-10-25 01:41:17.752 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:41:18.049 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:41:18.470 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:41:20.252 SC step 173: mark H_E_rev
+2026-10-25 01:41:20.252 UCSTAT label=none secs=6.5 calls=421 cmds=1080 calls/s=64.3 cmds/call=2.57 perCall[0..7+]=0/8/181/218/14/0/0/0 gapMs mean=15.58 p50=15.6 p95=31.5 p99=46.7 max=79.7 gap>32ms=9 gap>50ms=1 allSlotCalls=1261 allSlotCalls/frame=3.00 slots=0:420,1:420,2:421 | frames=420 emptyFrames(no human cmd)=126 frameGapMs p50=15.7 p99=30.0 max=86.3 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:41:20.252 LEVELS H_E_rev: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:41:20.252 DIST H_E_rev: target 350 units away
+2026-10-25 01:41:20.252 DISPLAY PHASE measure - H_E_rev
+2026-10-25 01:41:20.252 DISPLAY Haze - now testing [H_E_rev] - decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero | items read back: express_shot | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:41:20.252 SC ITEMS@H_E_rev: maxhp=1885 upgrade_express_shot
+2026-10-25 01:41:20.267 SC step 174: accuracy 1 0
+2026-10-25 01:41:20.267 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:41:20.283 SC step 175: fire 1.3
+2026-10-25 01:41:20.330 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_E_rev] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 1, hits 1, abilities executed 1
+2026-10-25 01:41:21.330 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_E_rev] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 10, hits 21, abilities executed 1
+2026-10-25 01:41:21.580 SC step 176: acclog 
+2026-10-25 01:41:21.580 SC ACC p=1 head=0: windows=8 missWindows=0 headWindows=0 dmgHitsOnEnemy=27 weakpointHits=0
+2026-10-25 01:41:21.580 SC EVENTS AbilityCastStarted:=1 AbilityExecuted:=1 BulletCreated:me=14 BulletHit:me=14 GunFired:me=13
+2026-10-25 01:41:21.580 SC HEALSRC UnitHealed|player|: n=326 requested=0 applied=0
+2026-10-25 01:41:21.580 SC TRK heal=125813 loss=125813 minHp=730 floorHits=0 firstFloorMs=0 secs=9938.2 maxhp=1885
+2026-10-25 01:41:21.580 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-25 01:41:21.596 SC step 177: mark none
+2026-10-25 01:41:21.596 UCSTAT label=H_E_rev secs=1.3 calls=85 cmds=223 calls/s=65.5 cmds/call=2.62 perCall[0..7+]=0/1/34/46/4/0/0/0 gapMs mean=15.44 p50=15.6 p95=32.0 p99=46.6 max=46.6 gap>32ms=4 gap>50ms=0 allSlotCalls=257 allSlotCalls/frame=2.99 slots=0:86,1:86,2:85 | frames=86 emptyFrames(no human cmd)=29 frameGapMs p50=15.7 p99=30.1 max=30.1 | fgSamples=5 fgPct=0 minimizedPct=0
+2026-10-25 01:41:21.596 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:41:21.596 SC ITEMS@none: maxhp=1885 upgrade_express_shot
+2026-10-25 01:41:21.611 SC step 178: wait 2
+2026-10-25 01:41:22.330 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): express_shot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 27, abilities executed 2
+2026-10-25 01:41:23.330 DISPLAY HUD[announce] #286 Hero: Haze - Verifying | Test: Next bullet: one pellet? / Why: Worth it on shotguns? / Gear: verified / Attempt 1 of 3 / Status: Running
+2026-10-25 01:41:23.611 SC step 179: hardreset 
+2026-10-25 01:41:23.611 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:41:23.611 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:41:23.611 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:41:23.626 SC step 180: setup Wraith Haze
+2026-10-25 01:41:23.627 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:41:24.330 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 27, abilities executed 2
+2026-10-25 01:41:24.330 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/32/Wraith
+2026-10-25 01:41:25.330 DISPLAY re-assert: pawn/level/hero changed 1077316562/32/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:41:30.595 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:41:30.595 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:41:30.595 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:41:30.627 SC step 181: wait 1.5
+2026-10-25 01:41:32.142 SC step 182: setup Haze Haze
+2026-10-25 01:41:32.143 SETUP start me=Haze enemy=Haze
+2026-10-25 01:41:32.330 DISPLAY STATE 0 vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 27, abilities executed 2
+2026-10-25 01:41:32.330 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/12/0
+2026-10-25 01:41:33.330 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 27, abilities executed 2
+2026-10-25 01:41:33.330 DISPLAY re-assert: pawn/level/hero changed 1077316562/12/0 -> 1077316562/36/Haze
+2026-10-25 01:41:38.596 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:41:38.596 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:41:38.596 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:41:38.612 SC step 183: wait 1
+2026-10-25 01:41:39.611 SC step 184: raw citadel_unlock_flex_slots
+2026-10-25 01:41:39.628 SC step 185: unlock 7
+2026-10-25 01:41:39.628 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:41:39.628 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:41:39.628 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:41:39.628 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:41:39.628 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:41:39.628 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:41:39.628 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:41:39.628 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:41:39.628 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:41:39.628 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:41:39.628 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:41:39.628 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:41:39.628 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:41:39.628 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:41:39.628 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:41:39.628 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:41:39.629 SC step 186: basemods 
+2026-10-25 01:41:39.629 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:41:39.629 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:41:39.658 SC step 187: fetch 
+2026-10-25 01:41:39.658 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:41:39.673 SC step 188: mark none
+2026-10-25 01:41:39.674 UCSTAT label=none secs=18.1 calls=1157 cmds=3017 calls/s=64.1 cmds/call=2.61 perCall[0..7+]=0/20/469/613/55/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.6 p99=46.7 max=62.5 gap>32ms=31 gap>50ms=3 allSlotCalls=3471 allSlotCalls/frame=3.00 slots=0:1157,1:1157,2:1157 | frames=1157 emptyFrames(no human cmd)=372 frameGapMs p50=15.7 p99=30.0 max=30.2 | fgSamples=72 fgPct=0 minimizedPct=0
+2026-10-25 01:41:39.674 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:41:39.674 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:41:39.689 SC step 189: souls 30000
+2026-10-25 01:41:39.705 SC step 190: give upgrade_crackshot
+2026-10-25 01:41:39.705 SC gave upgrade_crackshot
+2026-10-25 01:41:39.721 SC step 191: basemods 
+2026-10-25 01:41:39.721 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_crackshot/modifier_mystic_shot,upgrade_crackshot/crackshot_stats
+2026-10-25 01:41:39.721 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:41:39.722 SC step 192: enemies 1 300 4
+2026-10-25 01:41:39.722 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:41:39.722 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:41:39.722 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:41:39.970 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:41:40.345 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 27, abilities executed 2
+2026-10-25 01:41:43.720 SC step 193: fetch 350
+2026-10-25 01:41:43.720 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:41:43.736 SC step 194: cast reload 2.5
+2026-10-25 01:41:43.736 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:41:44.048 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:41:44.439 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:41:46.251 SC step 195: mark H_M_rev
+2026-10-25 01:41:46.252 UCSTAT label=none secs=6.6 calls=421 cmds=1093 calls/s=64.2 cmds/call=2.60 perCall[0..7+]=0/0/184/223/14/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.6 p99=46.6 max=46.8 gap>32ms=10 gap>50ms=0 allSlotCalls=1263 allSlotCalls/frame=3.00 slots=0:421,1:421,2:421 | frames=421 emptyFrames(no human cmd)=127 frameGapMs p50=15.7 p99=29.9 max=30.1 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:41:46.252 LEVELS H_M_rev: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:41:46.252 DIST H_M_rev: target 350 units away
+2026-10-25 01:41:46.252 DISPLAY PHASE measure - H_M_rev
+2026-10-25 01:41:46.252 DISPLAY Haze - now testing [H_M_rev] - decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero | items read back: crackshot | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:41:46.252 SC ITEMS@H_M_rev: maxhp=1885 upgrade_crackshot
+2026-10-25 01:41:46.267 SC step 196: accuracy 1 0
+2026-10-25 01:41:46.268 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:41:46.283 SC step 197: fire 1.3
+2026-10-25 01:41:46.345 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_M_rev] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 1, hits 2, abilities executed 1
+2026-10-25 01:41:47.361 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_M_rev] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 11, hits 20, abilities executed 1
+2026-10-25 01:41:47.596 SC step 198: acclog 
+2026-10-25 01:41:47.596 SC ACC p=1 head=0: windows=8 missWindows=0 headWindows=0 dmgHitsOnEnemy=26 weakpointHits=0
+2026-10-25 01:41:47.596 SC EVENTS AbilityCastStarted:=1 AbilityExecuted:=1 BulletCreated:me=13 BulletHit:me=13 GunFired:me=13
+2026-10-25 01:41:47.596 SC HEALSRC UnitHealed|player|: n=378 requested=0 applied=0
+2026-10-25 01:41:47.596 SC TRK heal=129007 loss=129007 minHp=730 floorHits=0 firstFloorMs=0 secs=9964.2 maxhp=1885
+2026-10-25 01:41:47.596 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-25 01:41:47.611 SC step 199: mark none
+2026-10-25 01:41:47.611 UCSTAT label=H_M_rev secs=1.3 calls=86 cmds=230 calls/s=64.8 cmds/call=2.67 perCall[0..7+]=0/0/34/46/6/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.9 p99=46.9 max=46.9 gap>32ms=3 gap>50ms=0 allSlotCalls=260 allSlotCalls/frame=2.99 slots=0:87,1:87,2:86 | frames=87 emptyFrames(no human cmd)=30 frameGapMs p50=15.7 p99=30.4 max=30.4 | fgSamples=5 fgPct=0 minimizedPct=0
+2026-10-25 01:41:47.611 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:41:47.611 SC ITEMS@none: maxhp=1885 upgrade_crackshot
+2026-10-25 01:41:47.612 SC step 200: wait 2
+2026-10-25 01:41:48.361 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): crackshot | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 26, abilities executed 2
+2026-10-25 01:41:49.611 SC step 201: hardreset 
+2026-10-25 01:41:49.611 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:41:49.611 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:41:49.611 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:41:49.627 SC step 202: setup Wraith Haze
+2026-10-25 01:41:49.627 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:41:50.362 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 26, abilities executed 2
+2026-10-25 01:41:50.362 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/34/Wraith
+2026-10-25 01:41:51.361 DISPLAY re-assert: pawn/level/hero changed 1077316562/34/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:41:56.596 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:41:56.596 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:41:56.596 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:41:56.626 SC step 203: wait 1.5
+2026-10-25 01:41:58.142 SC step 204: setup Haze Haze
+2026-10-25 01:41:58.143 SETUP start me=Haze enemy=Haze
+2026-10-25 01:41:58.377 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 26, abilities executed 2
+2026-10-25 01:41:58.377 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/3/Haze
+2026-10-25 01:41:59.377 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 26, abilities executed 2
+2026-10-25 01:41:59.377 DISPLAY re-assert: pawn/level/hero changed 1077316562/3/Haze -> 1077316562/36/Haze
+2026-10-25 01:42:04.596 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:42:04.596 SETUP done: dummy team 3 hero Haze hp 1357
+2026-10-25 01:42:04.596 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:42:04.627 SC step 205: wait 1
+2026-10-25 01:42:05.626 SC step 206: raw citadel_unlock_flex_slots
+2026-10-25 01:42:05.642 SC step 207: unlock 7
+2026-10-25 01:42:05.642 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:42:05.642 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:42:05.642 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:42:05.642 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:42:05.642 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:42:05.642 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:42:05.642 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:42:05.642 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:42:05.642 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:42:05.642 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:42:05.642 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:42:05.642 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:42:05.642 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:42:05.642 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:42:05.642 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:42:05.642 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:42:05.658 SC step 208: basemods 
+2026-10-25 01:42:05.658 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:42:05.658 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:42:05.673 SC step 209: fetch 
+2026-10-25 01:42:05.673 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:42:05.689 SC step 210: mark none
+2026-10-25 01:42:05.689 UCSTAT label=none secs=18.0 calls=1157 cmds=3018 calls/s=64.1 cmds/call=2.61 perCall[0..7+]=0/21/464/619/53/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.6 p99=46.8 max=62.8 gap>32ms=28 gap>50ms=3 allSlotCalls=3471 allSlotCalls/frame=3.00 slots=0:1157,1:1157,2:1157 | frames=1157 emptyFrames(no human cmd)=366 frameGapMs p50=15.6 p99=29.9 max=30.2 | fgSamples=71 fgPct=0 minimizedPct=0
+2026-10-25 01:42:05.689 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:42:05.689 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:42:05.705 SC step 211: souls 30000
+2026-10-25 01:42:05.720 SC step 212: basemods 
+2026-10-25 01:42:05.720 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:42:05.720 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction
+2026-10-25 01:42:05.736 SC step 213: enemies 1 300 4
+2026-10-25 01:42:05.736 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:42:05.736 SC BOT[enemies] 0 idx=1 active=True hp=1357 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:42:05.736 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:42:05.986 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:42:06.377 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 26, abilities executed 2
+2026-10-25 01:42:09.736 SC step 214: fetch 350
+2026-10-25 01:42:09.736 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:42:09.751 SC step 215: cast reload 2.5
+2026-10-25 01:42:09.751 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:42:10.049 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:42:10.455 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:42:12.251 SC step 216: mark H_X0_rev
+2026-10-25 01:42:12.251 UCSTAT label=none secs=6.5 calls=422 cmds=1091 calls/s=64.5 cmds/call=2.59 perCall[0..7+]=0/0/186/225/11/0/0/0 gapMs mean=15.55 p50=15.6 p95=31.5 p99=32.2 max=46.8 gap>32ms=6 gap>50ms=0 allSlotCalls=1262 allSlotCalls/frame=3.00 slots=0:420,1:420,2:422 | frames=420 emptyFrames(no human cmd)=124 frameGapMs p50=15.6 p99=29.9 max=30.2 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:42:12.251 LEVELS H_X0_rev: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:42:12.251 DIST H_X0_rev: target 350 units away
+2026-10-25 01:42:12.251 DISPLAY PHASE measure - H_X0_rev
+2026-10-25 01:42:12.251 DISPLAY Haze - now testing [H_X0_rev] - decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero | items read back: no items | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:42:12.251 SC ITEMS@H_X0_rev: maxhp=1885 
+2026-10-25 01:42:12.267 SC step 217: accuracy 1 0
+2026-10-25 01:42:12.267 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:42:12.283 SC step 218: fire 1.3
+2026-10-25 01:42:12.392 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_X0_rev] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 1, hits 1, abilities executed 1
+2026-10-25 01:42:13.392 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [H_X0_rev] | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 11, hits 21, abilities executed 1
+2026-10-25 01:42:13.596 SC step 219: acclog 
+2026-10-25 01:42:13.596 SC ACC p=1 head=0: windows=8 missWindows=0 headWindows=0 dmgHitsOnEnemy=25 weakpointHits=0
+2026-10-25 01:42:13.596 SC EVENTS AbilityCastStarted:=1 AbilityExecuted:=1 BulletCreated:me=13 BulletHit:me=13 GunFired:me=13
+2026-10-25 01:42:13.596 SC HEALSRC UnitHealed|player|: n=430 requested=0 applied=0
+2026-10-25 01:42:13.596 SC TRK heal=132102 loss=132102 minHp=730 floorHits=0 firstFloorMs=0 secs=9990.2 maxhp=1885
+2026-10-25 01:42:13.596 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-25 01:42:13.611 SC step 220: mark none
+2026-10-25 01:42:13.611 UCSTAT label=H_X0_rev secs=1.3 calls=86 cmds=229 calls/s=64.7 cmds/call=2.66 perCall[0..7+]=0/1/34/44/7/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.8 p99=46.9 max=46.9 gap>32ms=4 gap>50ms=0 allSlotCalls=260 allSlotCalls/frame=2.99 slots=0:87,1:87,2:86 | frames=87 emptyFrames(no human cmd)=31 frameGapMs p50=15.7 p99=30.0 max=30.0 | fgSamples=6 fgPct=0 minimizedPct=0
+2026-10-25 01:42:13.611 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:42:13.611 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:42:13.627 SC step 221: wait 2
+2026-10-25 01:42:14.392 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 55/58 (done 44, blocked 9) || MECH: intended the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED -> shots 13, hits 25, abilities executed 2
+2026-10-25 01:42:15.627 SC step 222: end 
+2026-10-25 01:42:15.627 SC ACC p=1 head=0: windows=20 missWindows=0 headWindows=0 dmgHitsOnEnemy=25 weakpointHits=0
+2026-10-25 01:42:15.627 SC EVENTS AbilityCastStarted:=1 AbilityExecuted:=2 BulletCreated:me=13 BulletHit:me=13 GunFired:me=13
+2026-10-25 01:42:15.627 SC HEALSRC UnitHealed|player|: n=434 requested=0 applied=0
+2026-10-25 01:42:15.627 SC TRK heal=132102 loss=132102 minHp=730 floorHits=0 firstFloorMs=0 secs=9992.3 maxhp=1885
+2026-10-25 01:42:15.627 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-25 01:42:15.627 PERF tick n=14080 avg=0.02ms max=0.6ms slow>20ms=0 | usercmd n=42241 max=0.1ms slow=0 | abilityAttempt n=0 max=0.0ms
+2026-10-25 01:42:15.627 UCSTAT label=scenario-end secs=2.0 calls=129 cmds=335 calls/s=64.5 cmds/call=2.60 perCall[0..7+]=0/0/57/67/5/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.5 p99=46.8 max=46.9 gap>32ms=2 gap>50ms=0 allSlotCalls=387 allSlotCalls/frame=3.00 slots=0:129,1:129,2:129 | frames=129 emptyFrames(no human cmd)=40 frameGapMs p50=15.7 p99=29.9 max=30.0 | fgSamples=8 fgPct=0 minimizedPct=0
+2026-10-25 01:42:15.627 DIST SUMMARY blocks=8 inRange=8 outOfRange=0 expected=mixed
+2026-10-25 01:42:15.627 RB CHECK items_ok: 1=1 == 1=1 => PASS
+2026-10-25 01:42:15.627 RB CHECK dmg_hits: hits=25 > 0=0 => PASS
+2026-10-25 01:42:15.627 DISPLAYPERF ticks=216 avg=0.153ms max=0.884ms
+2026-10-25 01:42:15.627 DISPLAY FINISHED: INTERACTION - Checking whether a 'next bullet' item gives its bonus to one pellet or to every pellet of a multi-pellet shot, and what Express Shot does to a shotgun-style shot. -> shots 13, bullet hits 13, damage events on target 25 (end step)
+2026-10-25 01:42:15.627 DISPLAY MEASURED: shots 13, bullet hits 13, damage events on target 25; verify-pass/fail are in the run log
+2026-10-25 01:42:15.627 DISPLAY ASSUMED: none declared
+2026-10-25 01:42:15.627 DISPLAY CALCULATED: none
+2026-10-25 01:42:15.627 DISPLAY CONCLUSION: INSUFFICIENT EVIDENCE - no decision
+2026-10-25 01:42:15.627 SC scenario nv_N04a_next_bullet_haze_control finished: end step
+2026-10-25 01:42:16.392 DISPLAY SENT Done: Pellet item test
+2026-10-25 01:42:16.392 QR TASK-END novel:N04a#1 why=end step

@@ -1,0 +1,890 @@
+2026-10-25 01:50:28.474 QR TASK-START novel:N07#1 scenario=nv_N07_healing_tempo_scope
+2026-10-25 01:50:28.475 DISPLAY FULL Haze | 30000 | INTERACTION: Checking whether Healing Tempo's speed buff turns on when healing comes from Vampiric Burst's lifesteal, from a direct heal item, from passive bullet lifesteal, or from nothing. (build: haze; items: upgrade_healbuff upgrade_surging_power upgrade_health_nova upgrade_vampire; why: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count)
+2026-10-25 01:50:28.475 DISPLAY strategy source missing on this PC: E:\deadworks-server\council/evidence/interactions/novel/novel_hypotheses.json
+2026-10-25 01:50:28.475 SC scenario nv_N07_healing_tempo_scope started, 184 steps origin=runner:novel:N07
+2026-10-25 01:50:28.490 SC step 0: meta kind INTERACTION
+2026-10-25 01:50:28.505 SC step 1: meta question Checking whether Healing Tempo's speed buff turns on when healing comes from Vampiric Burst's lifesteal, from a direct heal item, from passive bullet lifesteal, or from nothing.
+2026-10-25 01:50:28.521 SC step 2: meta purpose decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count
+2026-10-25 01:50:28.537 SC step 3: meta mechanics item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text)
+2026-10-25 01:50:28.553 SC step 4: meta expectedstate souls=30000 items=upgrade_healbuff,upgrade_surging_power,upgrade_health_nova,upgrade_vampire
+2026-10-25 01:50:28.568 SC step 5: meta build haze
+2026-10-25 01:50:28.583 SC step 6: meta checkpoint 30000
+2026-10-25 01:50:28.599 SC step 7: meta items upgrade_healbuff upgrade_surging_power upgrade_health_nova upgrade_vampire
+2026-10-25 01:50:28.615 SC step 8: meta strategy_source council/evidence/interactions/novel/novel_hypotheses.json
+2026-10-25 01:50:28.630 SC step 9: meta feeds novel hypothesis N07 (Healing Tempo scope)
+2026-10-25 01:50:28.646 SC step 10: meta prediction_D positive control: a new self modifier (the Tempo buff) appears after the Healing Nova cast; its name is then the detector for the other arms. If none appears Healing Tempo does not trigger on self-cast heals at all and the file is read as INCONCLUSIVE for V
+2026-10-25 01:50:28.661 SC step 11: meta prediction_P negative control (text): no Tempo modifier after passive lifesteal hits
+2026-10-25 01:50:28.677 SC step 12: meta prediction_V_counts Tempo modifier appears while Vampiric Burst lifesteal heals: active-granted lifesteal counts
+2026-10-25 01:50:28.693 SC step 13: meta prediction_V_not no Tempo modifier: active-granted lifesteal is treated as passive
+2026-10-25 01:50:28.708 SC step 14: meta decision_rule V counts: Healing Tempo stays where Vampiric Burst or Infuser is the main heal. V not: Healing Tempo is only valuable with direct heals (Healing Nova, Rescue Beam, ally heals), builds owner reviews the builds in changes_builds that rely on lifesteal heals. D fails: INCONCLUSIVE, no change
+2026-10-25 01:50:28.724 SC step 15: meta changes_builds dynamo, kelvin, kelvin_support, haze, rem, solomon_support, victor, victor_gun, viscous, yamato, yamato_brawler, geist, geist_bomb, apollo, apollo_melee, celeste, celeste_carry, baba_tank, abrams, ivy, nurse
+2026-10-25 01:50:28.740 SC step 16: meta unresolved_if D shows no modifier (detector unproven); lowhp clamps health every frame, so a heal that is fully clamped may not register: if D fails repeat D at lowhp 30
+2026-10-25 01:50:28.755 SC step 17: meta selection_kind discovery
+2026-10-25 01:50:28.771 SC step 18: meta selection_reason independent theorycraft: the item text names an exclusion (passive lifesteals) but not the active-granted case, and 21 builds pay for it
+2026-10-25 01:50:28.787 SC step 19: meta alternative_reason D and P are the positive and negative controls inside the file
+2026-10-25 01:50:28.802 SC step 20: meta required_levels 1=1;2=1;3=1;4=1
+2026-10-25 01:50:28.818 SC step 21: meta levels_mode fixed
+2026-10-25 01:50:28.833 SC step 22: meta required_readback items_ok|1|==|1
+2026-10-25 01:50:28.849 SC step 23: meta rotation lowhp 50 in every block; active item cast first, then 1.5 s of gun fire; mods read after each step
+2026-10-25 01:50:28.865 SC step 24: meta stack_track none
+2026-10-25 01:50:28.880 SC step 25: meta cond_scope gun + item actives
+2026-10-25 01:50:28.896 SC step 26: meta cond_abilities_used item active i1
+2026-10-25 01:50:28.911 SC step 27: meta cond_abilities_excluded abilities 1-4
+2026-10-25 01:50:28.927 SC step 28: meta cond_accuracy 100 percent body
+2026-10-25 01:50:28.943 SC step 29: meta cond_misses none
+2026-10-25 01:50:28.958 SC step 30: meta cond_start_stacks 0 (hardreset before every block)
+2026-10-25 01:50:28.975 SC step 31: meta cond_activations Vampiric Burst or Healing Nova
+2026-10-25 01:50:28.990 SC step 32: meta cond_distance 350u
+2026-10-25 01:50:29.005 SC step 33: meta cond_targets enemies=1 allies=0
+2026-10-25 01:50:29.021 SC step 34: meta readbacks equipped_items,self_modifier_names,healDiffObserved
+2026-10-25 01:50:29.037 SC step 35: meta player_title Healing Tempo and lifesteal
+2026-10-25 01:50:29.053 SC step 36: meta player_what Which heals trigger Tempo?
+2026-10-25 01:50:29.068 SC step 37: meta player_why Worth it with lifesteal?
+2026-10-25 01:50:29.083 SC step 38: meta player_short Tempo heal test
+2026-10-25 01:50:29.099 SC step 39: meta player_expect Buff on a heal, or not
+2026-10-25 01:50:29.115 SC step 40: meta result_says WORKS if the Tempo buff appears during Vampiric Burst; DOES NOT WORK if it appears only after the Healing Nova
+2026-10-25 01:50:29.130 SC step 41: setup Haze Haze
+2026-10-25 01:50:29.130 SETUP me already Haze
+2026-10-25 01:50:29.130 SETUP start me=Haze enemy=Haze
+2026-10-25 01:50:29.474 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 15/1/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | setup | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:50:35.427 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:50:35.427 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:50:35.427 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:50:35.458 SC step 42: raw citadel_unlock_flex_slots
+2026-10-25 01:50:35.474 SC step 43: abil 1 1 1 1
+2026-10-25 01:50:35.474 SC abil 1 ability_sleep_dagger bits=1 unlocked=True
+2026-10-25 01:50:35.474 SC abil 2 ability_smoke_bomb bits=1 unlocked=True
+2026-10-25 01:50:35.474 SC abil 3 ability_stacking_damage bits=1 unlocked=True
+2026-10-25 01:50:35.474 SC abil 4 ability_bullet_flurry bits=1 unlocked=True
+2026-10-25 01:50:35.474 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | setup | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:50:35.491 SC step 44: souls 30000
+2026-10-25 01:50:35.505 SC step 45: hardreset 
+2026-10-25 01:50:35.505 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:50:35.505 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:50:35.505 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:50:35.521 SC step 46: setup Wraith Haze
+2026-10-25 01:50:35.521 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:50:36.146 SC ABIL enforce slot 1 citadel_ability_card_toss bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:36.146 SC ABIL enforce slot 2 citadel_ability_projectmind bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:36.146 SC ABIL enforce slot 3 citadel_ability_wraith_rapidfire bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:36.146 SC ABIL enforce slot 4 citadel_ability_psychic_lift bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:36.146 ACT modifier seen: citadel_ability_card_toss/modifier_ability_resource_pool
+2026-10-25 01:50:36.474 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:50:36.474 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/29/Wraith
+2026-10-25 01:50:37.474 DISPLAY re-assert: pawn/level/hero changed 1077316562/29/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:50:42.427 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:50:42.427 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:50:42.427 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:50:42.458 SC step 47: wait 1.5
+2026-10-25 01:50:43.959 SC step 48: setup Haze Haze
+2026-10-25 01:50:43.959 SETUP start me=Haze enemy=Haze
+2026-10-25 01:50:44.474 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:50:44.474 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/2/Haze
+2026-10-25 01:50:44.677 SC ABIL enforce slot 1 ability_sleep_dagger bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:44.677 SC ABIL enforce slot 2 ability_smoke_bomb bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:44.677 SC ABIL enforce slot 3 ability_stacking_damage bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:44.677 SC ABIL enforce slot 4 ability_bullet_flurry bits 0 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:45.474 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:50:45.474 DISPLAY re-assert: pawn/level/hero changed 1077316562/2/Haze -> 1077316562/36/Haze
+2026-10-25 01:50:51.427 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:50:51.427 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:50:51.427 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:50:51.459 SC step 49: wait 1
+2026-10-25 01:50:52.458 SC step 50: raw citadel_unlock_flex_slots
+2026-10-25 01:50:52.474 SC step 51: unlock 7
+2026-10-25 01:50:52.474 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:50:52.474 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:50:52.474 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:50:52.474 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:50:52.474 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:50:52.474 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:50:52.474 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:50:52.474 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:50:52.474 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:50:52.474 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:50:52.474 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:50:52.474 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:50:52.474 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:50:52.474 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:50:52.474 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:50:52.474 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:50:52.474 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, body only - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:50:52.490 SC step 52: basemods 
+2026-10-25 01:50:52.490 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:50:52.490 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:50:52.505 SC step 53: fetch 
+2026-10-25 01:50:52.505 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:50:52.521 SC step 54: mark none
+2026-10-25 01:50:52.521 UCSTAT label=none secs=24.0 calls=1540 cmds=3959 calls/s=64.1 cmds/call=2.57 perCall[0..7+]=0/42/617/841/40/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.5 p99=32.0 max=63.0 gap>32ms=18 gap>50ms=3 allSlotCalls=4618 allSlotCalls/frame=3.00 slots=0:1539,1:1539,2:1540 | frames=1539 emptyFrames(no human cmd)=479 frameGapMs p50=15.6 p99=16.5 max=17.2 | fgSamples=96 fgPct=0 minimizedPct=0
+2026-10-25 01:50:52.521 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:50:52.521 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:50:52.537 SC step 55: souls 30000
+2026-10-25 01:50:52.552 SC ABIL enforce slot 1 ability_sleep_dagger bits 7 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:52.552 SC ABIL enforce slot 2 ability_smoke_bomb bits 7 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:52.552 SC ABIL enforce slot 3 ability_stacking_damage bits 7 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:52.552 SC ABIL enforce slot 4 ability_bullet_flurry bits 7 -> 1 (levels requested by the scenario)
+2026-10-25 01:50:52.552 SC step 56: give upgrade_healbuff
+2026-10-25 01:50:52.552 SC gave upgrade_healbuff
+2026-10-25 01:50:52.568 SC step 57: basemods 
+2026-10-25 01:50:52.568 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff
+2026-10-25 01:50:52.568 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:50:52.584 SC step 58: enemies 1 300 4
+2026-10-25 01:50:52.584 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:50:52.584 SC BOT[enemies] 0 idx=1 active=True hp=2253 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:50:52.584 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:50:52.818 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:50:53.474 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff | TIERS: 1/1/1/1 || AIM: 100% hit, body only - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 0, hits 0, abilities executed 0
+2026-10-25 01:50:56.583 SC step 59: fetch 350
+2026-10-25 01:50:56.583 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:50:56.599 SC step 60: lowhp 50
+2026-10-25 01:50:56.599 SC lowhp 50% -> hp 1338/2677
+2026-10-25 01:50:56.615 SC step 61: cast reload 2.5
+2026-10-25 01:50:56.615 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=0 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:50:56.896 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:50:57.318 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=0 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:50:59.115 SC step 62: mark T0_tempo_alone
+2026-10-25 01:50:59.115 UCSTAT label=none secs=6.6 calls=421 cmds=1076 calls/s=64.2 cmds/call=2.56 perCall[0..7+]=0/0/188/232/1/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.4 p99=32.0 max=32.2 gap>32ms=3 gap>50ms=0 allSlotCalls=1265 allSlotCalls/frame=3.00 slots=0:422,1:422,2:421 | frames=422 emptyFrames(no human cmd)=117 frameGapMs p50=15.6 p99=16.4 max=17.0 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:50:59.115 LEVELS T0_tempo_alone: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:50:59.115 DIST T0_tempo_alone: target 350 units away
+2026-10-25 01:50:59.115 DISPLAY PHASE measure - T0_tempo_alone
+2026-10-25 01:50:59.115 DISPLAY Haze - now testing [T0_tempo_alone] - decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count | items read back: healbuff | aim: 100% hit, body only - measurement | run 1/1
+2026-10-25 01:50:59.115 SC ITEMS@T0_tempo_alone: maxhp=2677 upgrade_healbuff
+2026-10-25 01:50:59.130 SC step 63: accuracy 1 0
+2026-10-25 01:50:59.130 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:50:59.146 SC step 64: fire 1.0
+2026-10-25 01:50:59.474 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [T0_tempo_alone] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 3, hits 5, abilities executed 1
+2026-10-25 01:51:00.146 SC step 65: mods 
+2026-10-25 01:51:00.146 SC MODS enemy@T0_tempo_alone: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base,ability_stacking_damage/modifier_passive_haze_stacking_damage
+2026-10-25 01:51:00.146 SC MODS@T0_tempo_alone: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff
+2026-10-25 01:51:00.162 SC step 66: mark none
+2026-10-25 01:51:00.162 UCSTAT label=T0_tempo_alone secs=1.0 calls=68 cmds=173 calls/s=65.9 cmds/call=2.54 perCall[0..7+]=0/2/28/37/1/0/0/0 gapMs mean=15.40 p50=15.6 p95=31.6 p99=46.7 max=46.7 gap>32ms=1 gap>50ms=0 allSlotCalls=202 allSlotCalls/frame=3.01 slots=0:67,1:67,2:68 | frames=67 emptyFrames(no human cmd)=20 frameGapMs p50=15.7 p99=16.4 max=16.4 | fgSamples=4 fgPct=0 minimizedPct=0
+2026-10-25 01:51:00.162 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:51:00.162 SC ITEMS@none: maxhp=2677 upgrade_healbuff
+2026-10-25 01:51:00.178 SC step 67: lowhp 0
+2026-10-25 01:51:00.178 SC lowhp 0% -> hp 1338/2677
+2026-10-25 01:51:00.193 SC step 68: wait 2
+2026-10-25 01:51:00.474 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 10, hits 19, abilities executed 2
+2026-10-25 01:51:02.193 SC step 69: hardreset 
+2026-10-25 01:51:02.193 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:51:02.193 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:51:02.193 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:51:02.209 SC step 70: setup Wraith Haze
+2026-10-25 01:51:02.209 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:51:02.474 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 10, hits 19, abilities executed 2
+2026-10-25 01:51:02.474 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/5/Wraith
+2026-10-25 01:51:03.474 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 10, hits 19, abilities executed 2
+2026-10-25 01:51:03.474 DISPLAY re-assert: pawn/level/hero changed 1077316562/5/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:51:03.475 DISPLAY HUD[announce] #421 Hero: Wraith - Verifying | Test: Healing Tempo and... / Why: Worth it with lifesteal? / Gear: verified / Attempt 1 of 3 / Status: Running
+2026-10-25 01:51:08.427 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:51:08.427 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:51:08.427 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:51:08.459 SC step 71: wait 1.5
+2026-10-25 01:51:09.959 SC step 72: setup Haze Haze
+2026-10-25 01:51:09.960 SETUP start me=Haze enemy=Haze
+2026-10-25 01:51:10.474 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 10, hits 19, abilities executed 2
+2026-10-25 01:51:10.474 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/18/Haze
+2026-10-25 01:51:11.474 DISPLAY re-assert: pawn/level/hero changed 1077316562/18/Haze -> 1077316562/36/Haze
+2026-10-25 01:51:16.427 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:51:16.427 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:51:16.427 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:51:16.458 SC step 73: wait 1
+2026-10-25 01:51:17.458 SC step 74: raw citadel_unlock_flex_slots
+2026-10-25 01:51:17.474 SC step 75: unlock 7
+2026-10-25 01:51:17.474 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:51:17.474 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:51:17.474 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:51:17.474 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:51:17.474 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:51:17.474 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:51:17.474 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:51:17.474 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:51:17.474 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:51:17.474 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:51:17.474 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:51:17.474 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:51:17.474 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:51:17.474 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:51:17.474 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:51:17.474 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:51:17.474 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 10, hits 19, abilities executed 2
+2026-10-25 01:51:17.490 SC step 76: basemods 
+2026-10-25 01:51:17.490 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:51:17.490 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:51:17.505 SC step 77: fetch 
+2026-10-25 01:51:17.505 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:51:17.521 SC step 78: mark none
+2026-10-25 01:51:17.521 UCSTAT label=none secs=17.3 calls=1110 cmds=2845 calls/s=64.0 cmds/call=2.56 perCall[0..7+]=0/33/454/588/35/0/0/0 gapMs mean=15.64 p50=15.6 p95=31.6 p99=32.1 max=62.5 gap>32ms=19 gap>50ms=3 allSlotCalls=3332 allSlotCalls/frame=3.00 slots=0:1111,1:1111,2:1110 | frames=1111 emptyFrames(no human cmd)=344 frameGapMs p50=15.7 p99=16.5 max=18.7 | fgSamples=68 fgPct=0 minimizedPct=0
+2026-10-25 01:51:17.521 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:51:17.521 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:51:17.537 SC step 79: souls 30000
+2026-10-25 01:51:17.552 SC step 80: give upgrade_healbuff
+2026-10-25 01:51:17.552 SC gave upgrade_healbuff
+2026-10-25 01:51:17.568 SC step 81: give upgrade_vampire
+2026-10-25 01:51:17.569 SC gave upgrade_vampire
+2026-10-25 01:51:17.583 SC step 82: basemods 
+2026-10-25 01:51:17.583 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_vampire/modifier_intrinsic_base
+2026-10-25 01:51:17.583 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:51:17.599 SC step 83: enemies 1 300 4
+2026-10-25 01:51:17.599 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:51:17.599 SC BOT[enemies] 0 idx=1 active=True hp=2253 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:51:17.599 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:51:17.818 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:51:18.474 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+vampire | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 10, hits 19, abilities executed 2
+2026-10-25 01:51:21.599 SC step 84: fetch 350
+2026-10-25 01:51:21.599 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:51:21.615 SC step 85: lowhp 50
+2026-10-25 01:51:21.615 SC lowhp 50% -> hp 1421/2842
+2026-10-25 01:51:21.630 SC step 86: cast reload 2.5
+2026-10-25 01:51:21.630 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:51:21.911 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:51:22.334 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:51:24.130 SC step 87: mark P_passive_lifesteal
+2026-10-25 01:51:24.130 UCSTAT label=none secs=6.6 calls=424 cmds=1082 calls/s=64.3 cmds/call=2.55 perCall[0..7+]=0/0/191/232/1/0/0/0 gapMs mean=15.59 p50=15.6 p95=31.5 p99=31.8 max=32.2 gap>32ms=3 gap>50ms=0 allSlotCalls=1270 allSlotCalls/frame=3.00 slots=0:423,1:423,2:424 | frames=423 emptyFrames(no human cmd)=116 frameGapMs p50=15.6 p99=16.4 max=16.5 | fgSamples=27 fgPct=0 minimizedPct=0
+2026-10-25 01:51:24.130 LEVELS P_passive_lifesteal: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:51:24.130 DIST P_passive_lifesteal: target 350 units away
+2026-10-25 01:51:24.130 DISPLAY PHASE measure - P_passive_lifesteal
+2026-10-25 01:51:24.130 DISPLAY Haze - now testing [P_passive_lifesteal] - decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count | items read back: healbuff+vampire | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:51:24.130 SC ITEMS@P_passive_lifesteal: maxhp=2842 upgrade_healbuff,upgrade_vampire
+2026-10-25 01:51:24.146 SC step 88: accuracy 1 0
+2026-10-25 01:51:24.146 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:51:24.161 SC step 89: fire 1.5
+2026-10-25 01:51:24.271 ACT modifier seen: modifier_life_steal
+2026-10-25 01:51:24.483 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+vampire | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [P_passive_lifesteal] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 3, hits 5, abilities executed 1
+2026-10-25 01:51:25.482 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+vampire | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [P_passive_lifesteal] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 13, hits 25, abilities executed 1
+2026-10-25 01:51:25.670 SC step 90: mods 
+2026-10-25 01:51:25.670 SC MODS enemy@P_passive_lifesteal: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base,ability_stacking_damage/modifier_passive_haze_stacking_damage
+2026-10-25 01:51:25.670 SC MODS@P_passive_lifesteal: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_vampire/modifier_intrinsic_base,modifier_life_steal
+2026-10-25 01:51:25.685 SC step 91: wait 0.5
+2026-10-25 01:51:26.185 SC step 92: mods 
+2026-10-25 01:51:26.185 SC MODS enemy@P_passive_lifesteal: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base,ability_stacking_damage/modifier_passive_haze_stacking_damage
+2026-10-25 01:51:26.185 SC MODS@P_passive_lifesteal: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_vampire/modifier_intrinsic_base
+2026-10-25 01:51:26.201 SC step 93: mark none
+2026-10-25 01:51:26.201 UCSTAT label=P_passive_lifesteal secs=2.0 calls=132 cmds=363 calls/s=64.7 cmds/call=2.75 perCall[0..7+]=0/1/51/60/20/0/0/0 gapMs mean=15.57 p50=15.6 p95=31.6 p99=31.9 max=32.1 gap>32ms=1 gap>50ms=0 allSlotCalls=398 allSlotCalls/frame=2.99 slots=0:133,1:133,2:132 | frames=133 emptyFrames(no human cmd)=40 frameGapMs p50=15.6 p99=16.5 max=37.9 | fgSamples=8 fgPct=0 minimizedPct=0
+2026-10-25 01:51:26.201 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:51:26.201 SC ITEMS@none: maxhp=2842 upgrade_healbuff,upgrade_vampire
+2026-10-25 01:51:26.216 SC step 94: lowhp 0
+2026-10-25 01:51:26.216 SC lowhp 0% -> hp 1421/2842
+2026-10-25 01:51:26.232 SC step 95: wait 2
+2026-10-25 01:51:26.482 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+vampire | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:51:28.232 SC step 96: hardreset 
+2026-10-25 01:51:28.232 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:51:28.232 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:51:28.232 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:51:28.248 SC step 97: setup Wraith Haze
+2026-10-25 01:51:28.248 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:51:28.482 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:51:28.482 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/1/Wraith
+2026-10-25 01:51:29.482 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:51:29.482 DISPLAY re-assert: pawn/level/hero changed 1077316562/1/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:51:35.419 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:51:35.419 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:51:35.419 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:51:35.451 SC step 98: wait 1.5
+2026-10-25 01:51:36.951 SC step 99: setup Haze Haze
+2026-10-25 01:51:36.951 SETUP start me=Haze enemy=Haze
+2026-10-25 01:51:37.482 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:51:37.482 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/21/Haze
+2026-10-25 01:51:38.482 DISPLAY re-assert: pawn/level/hero changed 1077316562/21/Haze -> 1077316562/36/Haze
+2026-10-25 01:51:43.419 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:51:43.419 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:51:43.419 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:51:43.451 SC step 100: wait 1
+2026-10-25 01:51:44.451 SC step 101: raw citadel_unlock_flex_slots
+2026-10-25 01:51:44.466 SC step 102: unlock 7
+2026-10-25 01:51:44.466 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:51:44.466 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:51:44.466 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:51:44.466 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:51:44.466 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:51:44.466 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:51:44.466 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:51:44.466 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:51:44.466 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:51:44.466 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:51:44.466 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:51:44.466 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:51:44.466 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:51:44.466 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:51:44.466 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:51:44.466 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:51:44.482 SC step 103: basemods 
+2026-10-25 01:51:44.482 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:51:44.482 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:51:44.482 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:51:44.497 SC step 104: fetch 
+2026-10-25 01:51:44.497 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:51:44.513 SC step 105: mark none
+2026-10-25 01:51:44.513 UCSTAT label=none secs=18.3 calls=1172 cmds=3067 calls/s=64.1 cmds/call=2.62 perCall[0..7+]=0/17/480/610/65/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.6 p99=32.0 max=63.1 gap>32ms=13 gap>50ms=2 allSlotCalls=3516 allSlotCalls/frame=3.00 slots=0:1172,1:1172,2:1172 | frames=1172 emptyFrames(no human cmd)=356 frameGapMs p50=15.6 p99=16.4 max=17.0 | fgSamples=72 fgPct=0 minimizedPct=0
+2026-10-25 01:51:44.513 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:51:44.513 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:51:44.529 SC step 106: souls 30000
+2026-10-25 01:51:44.544 SC step 107: give upgrade_healbuff
+2026-10-25 01:51:44.545 SC gave upgrade_healbuff
+2026-10-25 01:51:44.561 SC step 108: give upgrade_health_nova
+2026-10-25 01:51:44.561 SC gave upgrade_health_nova
+2026-10-25 01:51:44.596 SC step 109: basemods 
+2026-10-25 01:51:44.596 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_health_nova/modifier_intrinsic_base
+2026-10-25 01:51:44.596 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:51:44.597 SC step 110: enemies 1 300 4
+2026-10-25 01:51:44.597 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:51:44.597 SC BOT[enemies] 0 idx=1 active=True hp=2253 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:51:44.597 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:51:44.799 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:51:45.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+health_nova | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:51:48.596 SC step 111: fetch 350
+2026-10-25 01:51:48.596 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:51:48.611 SC step 112: lowhp 50
+2026-10-25 01:51:48.611 SC lowhp 50% -> hp 1376/2752
+2026-10-25 01:51:48.627 SC step 113: cast reload 2.5
+2026-10-25 01:51:48.627 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_health_nova[cd=False start=0.0 end=0.0] 
+2026-10-25 01:51:48.908 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:51:49.330 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_health_nova[cd=False start=0.0 end=0.0] 
+2026-10-25 01:51:51.127 SC step 114: mark D_healing_nova
+2026-10-25 01:51:51.128 UCSTAT label=none secs=6.6 calls=424 cmds=1078 calls/s=64.3 cmds/call=2.54 perCall[0..7+]=0/5/188/227/4/0/0/0 gapMs mean=15.60 p50=15.6 p95=31.5 p99=31.8 max=51.2 gap>32ms=1 gap>50ms=1 allSlotCalls=1270 allSlotCalls/frame=3.00 slots=0:423,1:423,2:424 | frames=423 emptyFrames(no human cmd)=119 frameGapMs p50=15.6 p99=16.6 max=35.3 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:51:51.128 LEVELS D_healing_nova: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:51:51.128 DIST D_healing_nova: target 350 units away
+2026-10-25 01:51:51.128 DISPLAY PHASE measure - D_healing_nova
+2026-10-25 01:51:51.128 DISPLAY Haze - now testing [D_healing_nova] - decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count | items read back: healbuff+health_nova | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:51:51.128 SC ITEMS@D_healing_nova: maxhp=2752 upgrade_healbuff,upgrade_health_nova
+2026-10-25 01:51:51.142 SC step 115: cast i1 0.6
+2026-10-25 01:51:51.142 SC CASTDIAG before cast i1 0.6: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_health_nova[cd=False start=0.0 end=0.0] 
+2026-10-25 01:51:51.472 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+health_nova | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [D_healing_nova] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 3
+2026-10-25 01:51:51.504 ACT modifier seen: upgrade_health_nova/modifier_healing_Nova_active
+2026-10-25 01:51:51.504 ACT modifier seen: upgrade_healbuff/modifier_healbuff/modifier_healbuff_buff
+2026-10-25 01:51:51.753 SC step 116: mods 
+2026-10-25 01:51:51.753 SC MODS enemy@D_healing_nova: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:51:51.753 SC MODS@D_healing_nova: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_health_nova/modifier_intrinsic_base,upgrade_health_nova/modifier_healing_Nova_active,upgrade_healbuff/modifier_healbuff/modifier_healbuff_buff
+2026-10-25 01:51:51.769 SC step 117: wait 1.0
+2026-10-25 01:51:51.847 SC CASTDIAG after cast i1 0.6: events(AbilityExecuted so far)=3 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_health_nova[cd=True start=24619.9 end=24679.9] 
+2026-10-25 01:51:52.769 SC step 118: mods 
+2026-10-25 01:51:52.769 SC MODS enemy@D_healing_nova: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:51:52.769 SC MODS@D_healing_nova: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_health_nova/modifier_intrinsic_base,upgrade_health_nova/modifier_healing_Nova_active,upgrade_healbuff/modifier_healbuff/modifier_healbuff_buff
+2026-10-25 01:51:52.784 SC step 119: mark none
+2026-10-25 01:51:52.784 UCSTAT label=D_healing_nova secs=1.6 calls=106 cmds=273 calls/s=65.2 cmds/call=2.58 perCall[0..7+]=0/1/46/56/3/0/0/0 gapMs mean=15.48 p50=15.6 p95=31.6 p99=31.9 max=48.2 gap>32ms=1 gap>50ms=0 allSlotCalls=318 allSlotCalls/frame=3.00 slots=0:106,1:106,2:106 | frames=106 emptyFrames(no human cmd)=32 frameGapMs p50=15.6 p99=16.3 max=31.5 | fgSamples=7 fgPct=0 minimizedPct=0
+2026-10-25 01:51:52.784 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:51:52.784 SC ITEMS@none: maxhp=2752 upgrade_healbuff,upgrade_health_nova
+2026-10-25 01:51:52.800 SC step 120: lowhp 0
+2026-10-25 01:51:52.800 SC lowhp 0% -> hp 1376/2752
+2026-10-25 01:51:52.816 SC step 121: wait 2
+2026-10-25 01:51:53.472 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+health_nova | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 3
+2026-10-25 01:51:54.816 SC step 122: hardreset 
+2026-10-25 01:51:54.816 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:51:54.816 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:51:54.816 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:51:54.831 SC step 123: setup Wraith Haze
+2026-10-25 01:51:54.832 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:51:55.472 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 3
+2026-10-25 01:51:55.472 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/28/Wraith
+2026-10-25 01:51:56.472 DISPLAY re-assert: pawn/level/hero changed 1077316562/28/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:52:01.425 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:52:01.425 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:52:01.425 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:52:01.456 SC step 124: wait 1.5
+2026-10-25 01:52:02.956 SC step 125: setup Haze Haze
+2026-10-25 01:52:02.957 SETUP start me=Haze enemy=Haze
+2026-10-25 01:52:03.473 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 3
+2026-10-25 01:52:03.473 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/20/Haze
+2026-10-25 01:52:04.472 DISPLAY re-assert: pawn/level/hero changed 1077316562/20/Haze -> 1077316562/36/Haze
+2026-10-25 01:52:09.425 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:52:09.425 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:52:09.425 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:52:09.456 SC step 126: wait 1
+2026-10-25 01:52:10.456 SC step 127: raw citadel_unlock_flex_slots
+2026-10-25 01:52:10.472 SC step 128: unlock 7
+2026-10-25 01:52:10.472 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:52:10.472 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:52:10.472 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:52:10.472 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:52:10.472 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:52:10.472 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:52:10.472 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:52:10.472 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:52:10.472 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:52:10.472 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:52:10.472 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:52:10.472 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:52:10.472 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:52:10.472 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:52:10.472 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:52:10.472 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:52:10.472 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 3
+2026-10-25 01:52:10.488 SC step 129: basemods 
+2026-10-25 01:52:10.488 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:52:10.488 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:52:10.503 SC step 130: fetch 
+2026-10-25 01:52:10.503 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:52:10.519 SC step 131: mark none
+2026-10-25 01:52:10.519 UCSTAT label=none secs=17.7 calls=1134 cmds=2896 calls/s=64.1 cmds/call=2.55 perCall[0..7+]=0/33/470/601/30/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.4 p99=31.9 max=62.6 gap>32ms=10 gap>50ms=4 allSlotCalls=3404 allSlotCalls/frame=3.00 slots=0:1135,1:1135,2:1134 | frames=1135 emptyFrames(no human cmd)=349 frameGapMs p50=15.6 p99=16.6 max=17.1 | fgSamples=70 fgPct=0 minimizedPct=0
+2026-10-25 01:52:10.519 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:52:10.519 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:52:10.535 SC step 132: souls 30000
+2026-10-25 01:52:10.550 SC step 133: give upgrade_healbuff
+2026-10-25 01:52:10.551 SC gave upgrade_healbuff
+2026-10-25 01:52:10.566 SC step 134: give upgrade_surging_power
+2026-10-25 01:52:10.578 SC gave upgrade_surging_power
+2026-10-25 01:52:10.582 SC step 135: basemods 
+2026-10-25 01:52:10.582 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_surging_power/modifier_intrinsic_base
+2026-10-25 01:52:10.582 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:52:10.597 SC step 136: enemies 1 300 4
+2026-10-25 01:52:10.597 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:52:10.597 SC BOT[enemies] 0 idx=1 active=True hp=2253 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:52:10.597 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:52:10.816 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:52:11.472 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+surging_power | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 3
+2026-10-25 01:52:14.597 SC step 137: fetch 350
+2026-10-25 01:52:14.598 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:52:14.613 SC step 138: lowhp 50
+2026-10-25 01:52:14.613 SC lowhp 50% -> hp 1464/2928
+2026-10-25 01:52:14.629 SC step 139: cast reload 2.5
+2026-10-25 01:52:14.629 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=3 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_surging_power[cd=False start=0.0 end=0.0] 
+2026-10-25 01:52:14.908 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:52:15.344 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=3 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_surging_power[cd=False start=0.0 end=0.0] 
+2026-10-25 01:52:17.141 SC step 140: mark V_vampiric_burst
+2026-10-25 01:52:17.141 UCSTAT label=none secs=6.6 calls=425 cmds=1090 calls/s=64.3 cmds/call=2.56 perCall[0..7+]=0/2/184/236/3/0/0/0 gapMs mean=15.58 p50=15.6 p95=31.4 p99=32.0 max=91.4 gap>32ms=4 gap>50ms=1 allSlotCalls=1273 allSlotCalls/frame=3.00 slots=0:424,1:424,2:425 | frames=424 emptyFrames(no human cmd)=121 frameGapMs p50=15.6 p99=16.6 max=82.7 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:52:17.141 LEVELS V_vampiric_burst: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:52:17.142 DIST V_vampiric_burst: target 350 units away
+2026-10-25 01:52:17.142 DISPLAY PHASE measure - V_vampiric_burst
+2026-10-25 01:52:17.142 DISPLAY Haze - now testing [V_vampiric_burst] - decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count | items read back: healbuff+surging_power | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:52:17.142 SC ITEMS@V_vampiric_burst: maxhp=2928 upgrade_healbuff,upgrade_surging_power
+2026-10-25 01:52:17.157 SC step 141: cast i1 0.6
+2026-10-25 01:52:17.157 SC CASTDIAG before cast i1 0.6: events(AbilityExecuted so far)=3 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_surging_power[cd=False start=0.0 end=0.0] 
+2026-10-25 01:52:17.189 ACT modifier seen: upgrade_surging_power/surge
+2026-10-25 01:52:17.189 ACT modifier seen: upgrade_surging_power/surge/active
+2026-10-25 01:52:17.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+surging_power | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [V_vampiric_burst] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 4
+2026-10-25 01:52:17.471 DISPLAY HUD[announce] #436 Hero: Haze - Measuring | Test: Healing Tempo and... / Why: Worth it with lifesteal? / Gear: verified / Attempt 1 of 3 / Status: Running
+2026-10-25 01:52:17.752 SC step 142: accuracy 1 0
+2026-10-25 01:52:17.752 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:52:17.768 SC step 143: fire 1.5
+2026-10-25 01:52:17.846 SC CASTDIAG after cast i1 0.6: events(AbilityExecuted so far)=1 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_surging_power[cd=True start=24645.7 end=24675.7] 
+2026-10-25 01:52:18.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+surging_power | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [V_vampiric_burst] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 9, hits 17, abilities executed 1
+2026-10-25 01:52:19.268 SC step 144: mods 
+2026-10-25 01:52:19.269 SC MODS enemy@V_vampiric_burst: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base,ability_stacking_damage/modifier_passive_haze_stacking_damage
+2026-10-25 01:52:19.269 SC MODS@V_vampiric_burst: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_surging_power/modifier_intrinsic_base,upgrade_surging_power/surge,upgrade_surging_power/surge/active,modifier_life_steal,modifier_life_steal
+2026-10-25 01:52:19.284 SC step 145: wait 0.5
+2026-10-25 01:52:19.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+surging_power | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [V_vampiric_burst] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:52:19.783 SC step 146: mods 
+2026-10-25 01:52:19.783 SC MODS enemy@V_vampiric_burst: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base,ability_stacking_damage/modifier_passive_haze_stacking_damage
+2026-10-25 01:52:19.783 SC MODS@V_vampiric_burst: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_surging_power/modifier_intrinsic_base,upgrade_surging_power/surge,upgrade_surging_power/surge/active
+2026-10-25 01:52:19.799 SC step 147: mark none
+2026-10-25 01:52:19.799 UCSTAT label=V_vampiric_burst secs=2.6 calls=169 cmds=439 calls/s=64.7 cmds/call=2.60 perCall[0..7+]=0/0/69/99/1/0/0/0 gapMs mean=15.54 p50=15.6 p95=31.6 p99=32.1 max=32.3 gap>32ms=2 gap>50ms=0 allSlotCalls=509 allSlotCalls/frame=2.99 slots=0:170,1:170,2:169 | frames=170 emptyFrames(no human cmd)=51 frameGapMs p50=15.7 p99=16.7 max=31.6 | fgSamples=11 fgPct=0 minimizedPct=0
+2026-10-25 01:52:19.799 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:52:19.799 SC ITEMS@none: maxhp=2928 upgrade_healbuff,upgrade_surging_power
+2026-10-25 01:52:19.815 SC step 148: lowhp 0
+2026-10-25 01:52:19.815 SC lowhp 0% -> hp 1464/2928
+2026-10-25 01:52:19.830 SC step 149: wait 2
+2026-10-25 01:52:20.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+surging_power | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:52:21.830 SC step 150: hardreset 
+2026-10-25 01:52:21.830 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:52:21.830 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:52:21.830 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:52:21.846 SC step 151: setup Wraith Haze
+2026-10-25 01:52:21.847 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:52:22.471 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:52:22.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/26/Wraith
+2026-10-25 01:52:23.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/26/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:52:28.424 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:52:28.424 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:52:28.424 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:52:28.455 SC step 152: wait 1.5
+2026-10-25 01:52:29.955 SC step 153: setup Haze Haze
+2026-10-25 01:52:29.956 SETUP start me=Haze enemy=Haze
+2026-10-25 01:52:30.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:52:30.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/20/Haze
+2026-10-25 01:52:31.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/20/Haze -> 1077316562/36/Haze
+2026-10-25 01:52:36.424 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:52:36.424 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:52:36.424 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:52:36.455 SC step 154: wait 1
+2026-10-25 01:52:37.455 SC step 155: raw citadel_unlock_flex_slots
+2026-10-25 01:52:37.471 SC step 156: unlock 7
+2026-10-25 01:52:37.471 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:52:37.471 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:52:37.471 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:52:37.471 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:52:37.471 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:52:37.471 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:52:37.471 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:52:37.471 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:52:37.471 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:52:37.471 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:52:37.471 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:52:37.471 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:52:37.471 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:52:37.471 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:52:37.471 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:52:37.471 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:52:37.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:52:37.487 SC step 157: basemods 
+2026-10-25 01:52:37.487 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:52:37.487 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:52:37.502 SC step 158: fetch 
+2026-10-25 01:52:37.502 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:52:37.518 SC step 159: mark none
+2026-10-25 01:52:37.518 UCSTAT label=none secs=17.7 calls=1135 cmds=2949 calls/s=64.1 cmds/call=2.60 perCall[0..7+]=0/21/455/618/41/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.5 p99=32.1 max=62.8 gap>32ms=17 gap>50ms=4 allSlotCalls=3403 allSlotCalls/frame=3.00 slots=0:1134,1:1134,2:1135 | frames=1134 emptyFrames(no human cmd)=350 frameGapMs p50=15.6 p99=16.5 max=17.1 | fgSamples=70 fgPct=0 minimizedPct=0
+2026-10-25 01:52:37.518 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:52:37.518 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:52:37.534 SC step 160: souls 30000
+2026-10-25 01:52:37.549 SC step 161: give upgrade_healbuff
+2026-10-25 01:52:37.549 SC gave upgrade_healbuff
+2026-10-25 01:52:37.565 SC step 162: give upgrade_surging_power
+2026-10-25 01:52:37.565 SC gave upgrade_surging_power
+2026-10-25 01:52:37.581 SC step 163: basemods 
+2026-10-25 01:52:37.581 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_surging_power/modifier_intrinsic_base
+2026-10-25 01:52:37.581 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:52:37.596 SC step 164: enemies 1 300 4
+2026-10-25 01:52:37.597 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:52:37.597 SC BOT[enemies] 0 idx=1 active=True hp=2253 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:52:37.597 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:52:37.815 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:52:38.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+surging_power | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:52:41.597 SC step 165: fetch 350
+2026-10-25 01:52:41.597 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:52:41.612 SC step 166: lowhp 50
+2026-10-25 01:52:41.612 SC lowhp 50% -> hp 1464/2928
+2026-10-25 01:52:41.628 SC step 167: cast reload 2.5
+2026-10-25 01:52:41.628 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_surging_power[cd=False start=0.0 end=0.0] 
+2026-10-25 01:52:41.909 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:52:42.331 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_surging_power[cd=False start=0.0 end=0.0] 
+2026-10-25 01:52:44.127 SC step 168: mark V_vampiric_burst_rev
+2026-10-25 01:52:44.127 UCSTAT label=none secs=6.6 calls=422 cmds=1079 calls/s=64.2 cmds/call=2.56 perCall[0..7+]=0/0/188/233/1/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.4 p99=32.0 max=32.4 gap>32ms=3 gap>50ms=0 allSlotCalls=1268 allSlotCalls/frame=3.00 slots=0:423,1:423,2:422 | frames=423 emptyFrames(no human cmd)=118 frameGapMs p50=15.6 p99=16.4 max=16.6 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:52:44.127 LEVELS V_vampiric_burst_rev: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:52:44.127 DIST V_vampiric_burst_rev: target 350 units away
+2026-10-25 01:52:44.127 DISPLAY PHASE measure - V_vampiric_burst_rev
+2026-10-25 01:52:44.127 DISPLAY Haze - now testing [V_vampiric_burst_rev] - decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count | items read back: healbuff+surging_power | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:52:44.127 SC ITEMS@V_vampiric_burst_rev: maxhp=2928 upgrade_healbuff,upgrade_surging_power
+2026-10-25 01:52:44.143 SC step 169: cast i1 0.6
+2026-10-25 01:52:44.143 SC CASTDIAG before cast i1 0.6: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_surging_power[cd=False start=0.0 end=0.0] 
+2026-10-25 01:52:44.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+surging_power | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [V_vampiric_burst_rev] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 3
+2026-10-25 01:52:44.753 SC step 170: accuracy 1 0
+2026-10-25 01:52:44.753 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:52:44.768 SC step 171: fire 1.5
+2026-10-25 01:52:44.846 SC CASTDIAG after cast i1 0.6: events(AbilityExecuted so far)=1 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_surging_power[cd=True start=24672.7 end=24702.7] 
+2026-10-25 01:52:45.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+surging_power | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [V_vampiric_burst_rev] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 9, hits 17, abilities executed 1
+2026-10-25 01:52:46.268 SC step 172: mods 
+2026-10-25 01:52:46.268 SC MODS enemy@V_vampiric_burst_rev: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base,ability_stacking_damage/modifier_passive_haze_stacking_damage
+2026-10-25 01:52:46.268 SC MODS@V_vampiric_burst_rev: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_surging_power/modifier_intrinsic_base,upgrade_surging_power/surge,upgrade_surging_power/surge/active,modifier_life_steal,modifier_life_steal
+2026-10-25 01:52:46.284 SC step 173: wait 0.5
+2026-10-25 01:52:46.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+surging_power | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [V_vampiric_burst_rev] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:52:46.783 SC step 174: mods 
+2026-10-25 01:52:46.783 SC MODS enemy@V_vampiric_burst_rev: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base,ability_stacking_damage/modifier_passive_haze_stacking_damage
+2026-10-25 01:52:46.783 SC MODS@V_vampiric_burst_rev: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_surging_power/modifier_intrinsic_base,upgrade_surging_power/surge,upgrade_surging_power/surge/active
+2026-10-25 01:52:46.799 SC step 175: mark none
+2026-10-25 01:52:46.799 UCSTAT label=V_vampiric_burst_rev secs=2.7 calls=172 cmds=448 calls/s=64.8 cmds/call=2.60 perCall[0..7+]=0/0/69/102/1/0/0/0 gapMs mean=15.53 p50=15.6 p95=31.6 p99=31.9 max=32.0 gap>32ms=1 gap>50ms=0 allSlotCalls=514 allSlotCalls/frame=3.01 slots=0:171,1:171,2:172 | frames=171 emptyFrames(no human cmd)=50 frameGapMs p50=15.6 p99=16.8 max=17.0 | fgSamples=10 fgPct=0 minimizedPct=0
+2026-10-25 01:52:46.799 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:52:46.799 SC ITEMS@none: maxhp=2928 upgrade_healbuff,upgrade_surging_power
+2026-10-25 01:52:46.815 SC step 176: lowhp 0
+2026-10-25 01:52:46.815 SC lowhp 0% -> hp 1464/2928
+2026-10-25 01:52:46.830 SC step 177: wait 2
+2026-10-25 01:52:47.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+surging_power | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:52:48.831 SC step 178: hardreset 
+2026-10-25 01:52:48.831 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:52:48.831 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:52:48.831 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:52:48.847 SC step 179: setup Wraith Haze
+2026-10-25 01:52:48.848 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:52:49.471 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:52:49.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/27/Wraith
+2026-10-25 01:52:50.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/27/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:52:55.424 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:52:55.424 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:52:55.424 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:52:55.455 SC step 180: wait 1.5
+2026-10-25 01:52:56.955 SC step 181: setup Haze Haze
+2026-10-25 01:52:56.956 SETUP start me=Haze enemy=Haze
+2026-10-25 01:52:57.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:52:57.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/20/Haze
+2026-10-25 01:52:58.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/20/Haze -> 1077316562/36/Haze
+2026-10-25 01:53:03.424 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:53:03.424 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:53:03.424 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:53:03.456 SC step 182: wait 1
+2026-10-25 01:53:04.455 SC step 183: raw citadel_unlock_flex_slots
+2026-10-25 01:53:04.471 SC step 184: unlock 7
+2026-10-25 01:53:04.471 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:53:04.471 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:53:04.471 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:53:04.471 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:53:04.471 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:53:04.471 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:53:04.471 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:53:04.471 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:53:04.471 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:53:04.471 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:53:04.471 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:53:04.471 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:53:04.471 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:53:04.471 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:53:04.471 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:53:04.471 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:53:04.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:53:04.487 SC step 185: basemods 
+2026-10-25 01:53:04.487 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:53:04.487 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:53:04.502 SC step 186: fetch 
+2026-10-25 01:53:04.502 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:53:04.518 SC step 187: mark none
+2026-10-25 01:53:04.518 UCSTAT label=none secs=17.7 calls=1133 cmds=2905 calls/s=64.1 cmds/call=2.56 perCall[0..7+]=0/28/466/611/28/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.6 p99=32.1 max=62.9 gap>32ms=18 gap>50ms=4 allSlotCalls=3401 allSlotCalls/frame=3.00 slots=0:1134,1:1134,2:1133 | frames=1134 emptyFrames(no human cmd)=350 frameGapMs p50=15.6 p99=16.4 max=16.8 | fgSamples=71 fgPct=0 minimizedPct=0
+2026-10-25 01:53:04.518 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:53:04.518 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:53:04.534 SC step 188: souls 30000
+2026-10-25 01:53:04.549 SC step 189: give upgrade_healbuff
+2026-10-25 01:53:04.549 SC gave upgrade_healbuff
+2026-10-25 01:53:04.565 SC step 190: give upgrade_health_nova
+2026-10-25 01:53:04.565 SC gave upgrade_health_nova
+2026-10-25 01:53:04.580 SC step 191: basemods 
+2026-10-25 01:53:04.580 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_health_nova/modifier_intrinsic_base
+2026-10-25 01:53:04.580 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:53:04.596 SC step 192: enemies 1 300 4
+2026-10-25 01:53:04.597 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:53:04.597 SC BOT[enemies] 0 idx=1 active=True hp=2253 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:53:04.597 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:53:04.815 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:53:05.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+health_nova | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 2
+2026-10-25 01:53:08.596 SC step 193: fetch 350
+2026-10-25 01:53:08.596 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:53:08.612 SC step 194: lowhp 50
+2026-10-25 01:53:08.612 SC lowhp 50% -> hp 1376/2752
+2026-10-25 01:53:08.627 SC step 195: cast reload 2.5
+2026-10-25 01:53:08.627 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_health_nova[cd=False start=0.0 end=0.0] 
+2026-10-25 01:53:08.909 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:53:09.330 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_health_nova[cd=False start=0.0 end=0.0] 
+2026-10-25 01:53:11.127 SC step 196: mark D_healing_nova_rev
+2026-10-25 01:53:11.128 UCSTAT label=none secs=6.6 calls=423 cmds=1083 calls/s=64.2 cmds/call=2.56 perCall[0..7+]=0/0/187/235/1/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.6 p99=32.0 max=32.5 gap>32ms=5 gap>50ms=0 allSlotCalls=1269 allSlotCalls/frame=3.00 slots=0:423,1:423,2:423 | frames=423 emptyFrames(no human cmd)=118 frameGapMs p50=15.6 p99=16.4 max=17.0 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:53:11.128 LEVELS D_healing_nova_rev: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:53:11.128 DIST D_healing_nova_rev: target 350 units away
+2026-10-25 01:53:11.128 DISPLAY PHASE measure - D_healing_nova_rev
+2026-10-25 01:53:11.128 DISPLAY Haze - now testing [D_healing_nova_rev] - decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count | items read back: healbuff+health_nova | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:53:11.128 SC ITEMS@D_healing_nova_rev: maxhp=2752 upgrade_healbuff,upgrade_health_nova
+2026-10-25 01:53:11.143 SC step 197: cast i1 0.6
+2026-10-25 01:53:11.143 SC CASTDIAG before cast i1 0.6: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_health_nova[cd=False start=0.0 end=0.0] 
+2026-10-25 01:53:11.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+health_nova | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [D_healing_nova_rev] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 3
+2026-10-25 01:53:11.753 SC step 198: mods 
+2026-10-25 01:53:11.753 SC MODS enemy@D_healing_nova_rev: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:53:11.753 SC MODS@D_healing_nova_rev: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_health_nova/modifier_intrinsic_base,upgrade_health_nova/modifier_healing_Nova_active,upgrade_healbuff/modifier_healbuff/modifier_healbuff_buff
+2026-10-25 01:53:11.768 SC step 199: wait 1.0
+2026-10-25 01:53:11.846 SC CASTDIAG after cast i1 0.6: events(AbilityExecuted so far)=3 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] ITEM:upgrade_health_nova[cd=True start=24699.9 end=24759.9] 
+2026-10-25 01:53:12.768 SC step 200: mods 
+2026-10-25 01:53:12.768 SC MODS enemy@D_healing_nova_rev: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:53:12.768 SC MODS@D_healing_nova_rev: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_health_nova/modifier_intrinsic_base,upgrade_health_nova/modifier_healing_Nova_active,upgrade_healbuff/modifier_healbuff/modifier_healbuff_buff
+2026-10-25 01:53:12.783 SC step 201: mark none
+2026-10-25 01:53:12.783 UCSTAT label=D_healing_nova_rev secs=1.6 calls=107 cmds=275 calls/s=65.2 cmds/call=2.57 perCall[0..7+]=0/0/46/61/0/0/0/0 gapMs mean=15.48 p50=15.6 p95=31.4 p99=31.7 max=32.1 gap>32ms=1 gap>50ms=0 allSlotCalls=319 allSlotCalls/frame=3.01 slots=0:106,1:106,2:107 | frames=106 emptyFrames(no human cmd)=30 frameGapMs p50=15.6 p99=16.4 max=16.6 | fgSamples=6 fgPct=0 minimizedPct=0
+2026-10-25 01:53:12.784 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:53:12.784 SC ITEMS@none: maxhp=2752 upgrade_healbuff,upgrade_health_nova
+2026-10-25 01:53:12.799 SC step 202: lowhp 0
+2026-10-25 01:53:12.799 SC lowhp 0% -> hp 1376/2752
+2026-10-25 01:53:12.815 SC step 203: wait 2
+2026-10-25 01:53:13.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+health_nova | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 3
+2026-10-25 01:53:14.815 SC step 204: hardreset 
+2026-10-25 01:53:14.815 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:53:14.815 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:53:14.815 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:53:14.831 SC step 205: setup Wraith Haze
+2026-10-25 01:53:14.832 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:53:15.471 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 3
+2026-10-25 01:53:15.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/28/Wraith
+2026-10-25 01:53:16.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/28/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:53:16.471 DISPLAY HUD[announce] #451 Hero: Wraith - Verifying | Test: Healing Tempo and... / Why: Worth it with lifesteal? / Gear: verified / Attempt 1 of 3 / Status: Running
+2026-10-25 01:53:21.424 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:53:21.424 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:53:21.424 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:53:21.455 SC step 206: wait 1.5
+2026-10-25 01:53:22.956 SC step 207: setup Haze Haze
+2026-10-25 01:53:22.956 SETUP start me=Haze enemy=Haze
+2026-10-25 01:53:23.472 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 3
+2026-10-25 01:53:23.472 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/18/Haze
+2026-10-25 01:53:24.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/18/Haze -> 1077316562/36/Haze
+2026-10-25 01:53:29.424 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:53:29.424 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:53:29.424 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:53:29.455 SC step 208: wait 1
+2026-10-25 01:53:30.455 SC step 209: raw citadel_unlock_flex_slots
+2026-10-25 01:53:30.471 SC step 210: unlock 7
+2026-10-25 01:53:30.471 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:53:30.471 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:53:30.471 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:53:30.471 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:53:30.471 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:53:30.471 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:53:30.471 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:53:30.471 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:53:30.471 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:53:30.471 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:53:30.471 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:53:30.471 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:53:30.471 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:53:30.471 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:53:30.471 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:53:30.471 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:53:30.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 3
+2026-10-25 01:53:30.487 SC step 211: basemods 
+2026-10-25 01:53:30.487 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:53:30.487 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:53:30.502 SC step 212: fetch 
+2026-10-25 01:53:30.502 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:53:30.518 SC step 213: mark none
+2026-10-25 01:53:30.518 UCSTAT label=none secs=17.7 calls=1135 cmds=2946 calls/s=64.1 cmds/call=2.60 perCall[0..7+]=0/22/458/612/43/0/0/0 gapMs mean=15.63 p50=15.6 p95=31.5 p99=32.2 max=62.7 gap>32ms=15 gap>50ms=3 allSlotCalls=3405 allSlotCalls/frame=3.00 slots=0:1135,1:1135,2:1135 | frames=1135 emptyFrames(no human cmd)=350 frameGapMs p50=15.6 p99=16.5 max=17.0 | fgSamples=70 fgPct=0 minimizedPct=0
+2026-10-25 01:53:30.518 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:53:30.518 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:53:30.534 SC step 214: souls 30000
+2026-10-25 01:53:30.550 SC step 215: give upgrade_healbuff
+2026-10-25 01:53:30.550 SC gave upgrade_healbuff
+2026-10-25 01:53:30.565 SC step 216: give upgrade_vampire
+2026-10-25 01:53:30.565 SC gave upgrade_vampire
+2026-10-25 01:53:30.580 SC step 217: basemods 
+2026-10-25 01:53:30.580 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_vampire/modifier_intrinsic_base
+2026-10-25 01:53:30.580 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:53:30.596 SC step 218: enemies 1 300 4
+2026-10-25 01:53:30.596 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:53:30.596 SC BOT[enemies] 0 idx=1 active=True hp=2253 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:53:30.596 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:53:30.815 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:53:31.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+vampire | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 20, hits 39, abilities executed 3
+2026-10-25 01:53:34.597 SC step 219: fetch 350
+2026-10-25 01:53:34.597 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:53:34.612 SC step 220: lowhp 50
+2026-10-25 01:53:34.612 SC lowhp 50% -> hp 1421/2842
+2026-10-25 01:53:34.627 SC step 221: cast reload 2.5
+2026-10-25 01:53:34.627 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=3 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:53:34.909 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:53:35.331 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=3 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:53:37.127 SC step 222: mark P_passive_lifesteal_rev
+2026-10-25 01:53:37.128 UCSTAT label=none secs=6.6 calls=422 cmds=1081 calls/s=64.2 cmds/call=2.56 perCall[0..7+]=0/0/187/233/2/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.4 p99=31.7 max=32.0 gap>32ms=1 gap>50ms=0 allSlotCalls=1268 allSlotCalls/frame=3.00 slots=0:423,1:423,2:422 | frames=423 emptyFrames(no human cmd)=118 frameGapMs p50=15.6 p99=16.5 max=17.1 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:53:37.128 LEVELS P_passive_lifesteal_rev: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:53:37.128 DIST P_passive_lifesteal_rev: target 350 units away
+2026-10-25 01:53:37.128 DISPLAY PHASE measure - P_passive_lifesteal_rev
+2026-10-25 01:53:37.128 DISPLAY Haze - now testing [P_passive_lifesteal_rev] - decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count | items read back: healbuff+vampire | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:53:37.128 SC ITEMS@P_passive_lifesteal_rev: maxhp=2842 upgrade_healbuff,upgrade_vampire
+2026-10-25 01:53:37.143 SC step 223: accuracy 1 0
+2026-10-25 01:53:37.143 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:53:37.158 SC step 224: fire 1.5
+2026-10-25 01:53:37.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+vampire | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [P_passive_lifesteal_rev] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 3, hits 5, abilities executed 1
+2026-10-25 01:53:38.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+vampire | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [P_passive_lifesteal_rev] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 13, hits 25, abilities executed 1
+2026-10-25 01:53:38.659 SC step 225: mods 
+2026-10-25 01:53:38.659 SC MODS enemy@P_passive_lifesteal_rev: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base,ability_stacking_damage/modifier_passive_haze_stacking_damage
+2026-10-25 01:53:38.659 SC MODS@P_passive_lifesteal_rev: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_vampire/modifier_intrinsic_base,modifier_life_steal
+2026-10-25 01:53:38.674 SC step 226: wait 0.5
+2026-10-25 01:53:39.174 SC step 227: mods 
+2026-10-25 01:53:39.174 SC MODS enemy@P_passive_lifesteal_rev: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base,ability_stacking_damage/modifier_passive_haze_stacking_damage
+2026-10-25 01:53:39.174 SC MODS@P_passive_lifesteal_rev: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff,upgrade_vampire/modifier_intrinsic_base
+2026-10-25 01:53:39.190 SC step 228: mark none
+2026-10-25 01:53:39.190 UCSTAT label=P_passive_lifesteal_rev secs=2.0 calls=133 cmds=343 calls/s=65.0 cmds/call=2.58 perCall[0..7+]=0/1/55/76/1/0/0/0 gapMs mean=15.51 p50=15.6 p95=31.4 p99=31.8 max=32.0 gap>32ms=0 gap>50ms=0 allSlotCalls=397 allSlotCalls/frame=3.01 slots=0:132,1:132,2:133 | frames=132 emptyFrames(no human cmd)=38 frameGapMs p50=15.7 p99=16.5 max=16.5 | fgSamples=9 fgPct=0 minimizedPct=0
+2026-10-25 01:53:39.190 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:53:39.190 SC ITEMS@none: maxhp=2842 upgrade_healbuff,upgrade_vampire
+2026-10-25 01:53:39.206 SC step 229: lowhp 0
+2026-10-25 01:53:39.206 SC lowhp 0% -> hp 1421/2842
+2026-10-25 01:53:39.221 SC step 230: wait 2
+2026-10-25 01:53:39.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff+vampire | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:53:41.221 SC step 231: hardreset 
+2026-10-25 01:53:41.221 SC RESET method=hard (hero swap, fresh pawn)
+2026-10-25 01:53:41.221 DISPLAY PHASE reset - clean-state reset: briefly switching to Wraith and back so the hero starts with no items, stacks or cooldown residue (not measured)
+2026-10-25 01:53:41.221 SC hardreset: inserted fresh-pawn swap steps
+2026-10-25 01:53:41.237 SC step 232: setup Wraith Haze
+2026-10-25 01:53:41.237 SETUP start me=Wraith enemy=Haze
+2026-10-25 01:53:41.471 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:53:41.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Haze -> 1077316562/2/Wraith
+2026-10-25 01:53:42.471 DISPLAY STATE Wraith vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:53:42.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/2/Wraith -> 1077316562/36/Wraith
+2026-10-25 01:53:48.424 SETUP VERIFY ok: me Wraith at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:53:48.424 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:53:48.424 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:53:48.455 SC step 233: wait 1.5
+2026-10-25 01:53:49.955 SC step 234: setup Haze Haze
+2026-10-25 01:53:49.956 SETUP start me=Haze enemy=Haze
+2026-10-25 01:53:50.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 0/0/0/0 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:53:50.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/36/Wraith -> 1077316562/20/Haze
+2026-10-25 01:53:51.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:53:51.471 DISPLAY re-assert: pawn/level/hero changed 1077316562/20/Haze -> 1077316562/36/Haze
+2026-10-25 01:53:56.424 SETUP VERIFY ok: me Haze at <12197.9375, 2625.8125, 441.84375>, enemy Haze at <12547.9375, 2625.8125, 441.78125>, arena=<12197.9375, 2625.8125, 442.03125>
+2026-10-25 01:53:56.424 SETUP done: dummy team 3 hero Haze hp 2253
+2026-10-25 01:53:56.424 enemy dummy placed (chat suppressed: quiet display)
+2026-10-25 01:53:56.455 SC step 235: wait 1
+2026-10-25 01:53:57.455 SC step 236: raw citadel_unlock_flex_slots
+2026-10-25 01:53:57.471 SC step 237: unlock 7
+2026-10-25 01:53:57.471 SC unlock ability_sleep_dagger 1 -> 7
+2026-10-25 01:53:57.471 SC unlock ability_smoke_bomb 1 -> 7
+2026-10-25 01:53:57.471 SC unlock ability_stacking_damage 1 -> 7
+2026-10-25 01:53:57.471 SC unlock ability_bullet_flurry 1 -> 7
+2026-10-25 01:53:57.471 SC unlock citadel_ability_zip_line 1 -> 7
+2026-10-25 01:53:57.471 SC unlock citadel_ability_mantle 1 -> 7
+2026-10-25 01:53:57.471 SC unlock citadel_ability_climb_rope 1 -> 7
+2026-10-25 01:53:57.471 SC unlock citadel_ability_jump 1 -> 7
+2026-10-25 01:53:57.471 SC unlock citadel_ability_slide 1 -> 7
+2026-10-25 01:53:57.471 SC unlock citadel_ability_zipline_boost 1 -> 7
+2026-10-25 01:53:57.471 SC unlock cosmetic_ability_voting_poster 1 -> 7
+2026-10-25 01:53:57.471 SC unlock citadel_ability_dash 1 -> 7
+2026-10-25 01:53:57.471 SC unlock citadel_ability_sprint 1 -> 7
+2026-10-25 01:53:57.471 SC unlock citadel_ability_melee_parry 1 -> 7
+2026-10-25 01:53:57.471 SC unlock citadel_weapon_haze_set 1 -> 7
+2026-10-25 01:53:57.471 SC unlock ability_melee_haze 1 -> 7
+2026-10-25 01:53:57.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): none | TIERS: 7/7/7/7 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | reset | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:53:57.488 SC step 238: basemods 
+2026-10-25 01:53:57.488 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker
+2026-10-25 01:53:57.488 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:53:57.502 SC step 239: fetch 
+2026-10-25 01:53:57.502 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:53:57.518 SC step 240: mark none
+2026-10-25 01:53:57.518 UCSTAT label=none secs=18.3 calls=1173 cmds=3004 calls/s=64.1 cmds/call=2.56 perCall[0..7+]=0/32/484/624/33/0/0/0 gapMs mean=15.61 p50=15.6 p95=31.5 p99=32.0 max=63.2 gap>32ms=12 gap>50ms=2 allSlotCalls=3519 allSlotCalls/frame=3.00 slots=0:1173,1:1173,2:1173 | frames=1173 emptyFrames(no human cmd)=360 frameGapMs p50=15.6 p99=16.5 max=17.2 | fgSamples=72 fgPct=0 minimizedPct=0
+2026-10-25 01:53:57.518 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:53:57.518 SC ITEMS@none: maxhp=1885 
+2026-10-25 01:53:57.534 SC step 241: souls 30000
+2026-10-25 01:53:57.549 SC step 242: give upgrade_healbuff
+2026-10-25 01:53:57.550 SC gave upgrade_healbuff
+2026-10-25 01:53:57.565 SC step 243: basemods 
+2026-10-25 01:53:57.566 SC BASEMODS modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff
+2026-10-25 01:53:57.566 SC BASEMODS enemy modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base
+2026-10-25 01:53:57.580 SC step 244: enemies 1 300 4
+2026-10-25 01:53:57.580 SC enemies n=1 r=300 (have 2, extras are parked, never removed)
+2026-10-25 01:53:57.580 SC BOT[enemies] 0 idx=1 active=True hp=2253 pos=<12547.9375, 2625.8125, 441.84375> dist=350 dz=0 ground=False
+2026-10-25 01:53:57.580 SC BOT[enemies] 1 idx=2 active=False hp=1357 pos=<12197.9375, 2625.8125, 3941.8438> dist=3500 dz=3500 ground=False
+2026-10-25 01:53:57.815 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:53:58.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 15, hits 29, abilities executed 2
+2026-10-25 01:54:01.580 SC step 245: fetch 350
+2026-10-25 01:54:01.580 SC fetched enemy to <12547.9375, 2625.8125, 441.84375> me <12197.9375, 2625.8125, 441.84375>
+2026-10-25 01:54:01.596 SC step 246: lowhp 50
+2026-10-25 01:54:01.596 SC lowhp 50% -> hp 1338/2677
+2026-10-25 01:54:01.612 SC step 247: cast reload 2.5
+2026-10-25 01:54:01.612 SC CASTDIAG before cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:54:01.893 SC POS VERIFY ok: me <12197.9375, 2625.8125, 441.84375> enemy <12547.9375, 2625.8125, 441.78125> dist=350.0 want=350
+2026-10-25 01:54:02.315 SC CASTDIAG after cast reload 2.5: events(AbilityExecuted so far)=2 ability_sleep_dagger[slot=Signature1 bits=1 unl=True cd=False] ability_smoke_bomb[slot=Signature2 bits=1 unl=True cd=False] ability_stacking_damage[slot=Signature3 bits=1 unl=True cd=False] ability_bullet_flurry[slot=Signature4 bits=1 unl=True cd=False] citadel_weapon_haze_set[slot=WeaponPrimary bits=7 unl=True cd=False] ability_melee_haze[slot=WeaponMelee bits=7 unl=True cd=False] 
+2026-10-25 01:54:04.112 SC step 248: mark T0_tempo_alone_rev
+2026-10-25 01:54:04.112 UCSTAT label=none secs=6.6 calls=421 cmds=1077 calls/s=64.2 cmds/call=2.56 perCall[0..7+]=0/0/186/235/0/0/0/0 gapMs mean=15.62 p50=15.6 p95=31.5 p99=32.0 max=32.1 gap>32ms=2 gap>50ms=0 allSlotCalls=1265 allSlotCalls/frame=3.00 slots=0:422,1:422,2:421 | frames=422 emptyFrames(no human cmd)=118 frameGapMs p50=15.7 p99=16.4 max=17.2 | fgSamples=26 fgPct=0 minimizedPct=0
+2026-10-25 01:54:04.112 LEVELS T0_tempo_alone_rev: actual [ability_sleep_dagger=1, ability_smoke_bomb=1, ability_stacking_damage=1, ability_bullet_flurry=1, citadel_ability_zip_line=3, citadel_ability_mantle=3, citadel_ability_climb_rope=3, citadel_ability_jump=3, citadel_ability_slide=3, citadel_ability_zipline_boost=3, cosmetic_ability_voting_poster=3, citadel_ability_dash=3, citadel_ability_sprint=3, citadel_ability_melee_parry=3] mode=fixed
+2026-10-25 01:54:04.112 DIST T0_tempo_alone_rev: target 350 units away
+2026-10-25 01:54:04.112 DISPLAY PHASE measure - T0_tempo_alone_rev
+2026-10-25 01:54:04.112 DISPLAY Haze - now testing [T0_tempo_alone_rev] - decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count | items read back: healbuff | aim: 100% hit, 0% of hits to head - measurement | run 1/1
+2026-10-25 01:54:04.112 SC ITEMS@T0_tempo_alone_rev: maxhp=2677 upgrade_healbuff
+2026-10-25 01:54:04.127 SC step 249: accuracy 1 0
+2026-10-25 01:54:04.127 SC accuracy p=1 head=0 headUp=14u missLat=60u
+2026-10-25 01:54:04.143 SC step 250: fire 1.0
+2026-10-25 01:54:04.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | measure [T0_tempo_alone_rev] | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 3, hits 5, abilities executed 1
+2026-10-25 01:54:05.143 SC step 251: mods 
+2026-10-25 01:54:05.143 SC MODS enemy@T0_tempo_alone_rev: modifier_life_steal_watcher,modifier_barrier_tracker,modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,upgrade_improved_bullet_armor/modifier_bullet_resilience,upgrade_improved_bullet_armor/modifier_intrinsic_base,ability_stacking_damage/modifier_passive_haze_stacking_damage
+2026-10-25 01:54:05.143 SC MODS@T0_tempo_alone_rev: modifier_hero_upgrade_bonuses,modifier_combat_status,modifier_crowd_control_diminish_watcher,citadel_ability_slide/modifier_slide_debuff,citadel_ability_dash/modifier_stamina_regen_jump_reduction,modifier_life_steal_watcher,modifier_barrier_tracker,upgrade_healbuff/modifier_healbuff
+2026-10-25 01:54:05.158 SC step 252: mark none
+2026-10-25 01:54:05.158 UCSTAT label=T0_tempo_alone_rev secs=1.0 calls=67 cmds=175 calls/s=65.9 cmds/call=2.61 perCall[0..7+]=0/0/27/39/1/0/0/0 gapMs mean=15.39 p50=15.7 p95=31.5 p99=32.1 max=32.1 gap>32ms=2 gap>50ms=0 allSlotCalls=201 allSlotCalls/frame=3.00 slots=0:67,1:67,2:67 | frames=67 emptyFrames(no human cmd)=20 frameGapMs p50=15.7 p99=16.6 max=16.6 | fgSamples=4 fgPct=0 minimizedPct=0
+2026-10-25 01:54:05.158 DISPLAY PHASE idle-between-blocks
+2026-10-25 01:54:05.158 SC ITEMS@none: maxhp=2677 upgrade_healbuff
+2026-10-25 01:54:05.174 SC step 253: lowhp 0
+2026-10-25 01:54:05.174 SC lowhp 0% -> hp 1338/2677
+2026-10-25 01:54:05.190 SC step 254: wait 2
+2026-10-25 01:54:05.471 DISPLAY STATE Haze vs Haze | haze | INTERACTION @30000 || WHY: decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count || ITEMS (read back): healbuff | TIERS: 1/1/1/1 || AIM: 100% hit, 0% of hits to head - measurement | USES: gun only || single run | idle-between-blocks | task 57/58 (done 46, blocked 9) || MECH: intended item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text) -> shots 10, hits 19, abilities executed 2
+2026-10-25 01:54:07.190 SC step 255: end 
+2026-10-25 01:54:07.190 SC ACC p=1 head=0: windows=18 missWindows=0 headWindows=0 dmgHitsOnEnemy=19 weakpointHits=0
+2026-10-25 01:54:07.190 SC EVENTS AbilityCastStarted:=1 AbilityExecuted:=2 BulletCreated:me=10 BulletHit:me=10 GunFired:me=10
+2026-10-25 01:54:07.190 SC HEALSRC UnitHealed|player|: n=1280 requested=0 applied=0
+2026-10-25 01:54:07.190 SC HEALSRC PreUnitHealed|player|: n=101 requested=0 applied=0
+2026-10-25 01:54:07.190 SC TRK heal=229272 loss=229802 minHp=730 floorHits=0 firstFloorMs=0 secs=10703.8 maxhp=2677
+2026-10-25 01:54:07.190 SC HEAL totalAppliedByEvents=0 healDiffObserved=0 incomingApplied=0
+2026-10-25 01:54:07.190 PERF tick n=14215 avg=0.02ms max=12.0ms slow>20ms=0 | usercmd n=42645 max=0.1ms slow=0 | abilityAttempt n=0 max=0.0ms
+2026-10-25 01:54:07.190 UCSTAT label=scenario-end secs=2.0 calls=131 cmds=335 calls/s=65.0 cmds/call=2.56 perCall[0..7+]=0/0/58/73/0/0/0/0 gapMs mean=15.51 p50=15.6 p95=31.5 p99=31.9 max=32.4 gap>32ms=1 gap>50ms=0 allSlotCalls=391 allSlotCalls/frame=3.01 slots=0:130,1:130,2:131 | frames=130 emptyFrames(no human cmd)=36 frameGapMs p50=15.6 p99=16.7 max=16.9 | fgSamples=8 fgPct=0 minimizedPct=0
+2026-10-25 01:54:07.190 DIST SUMMARY blocks=8 inRange=8 outOfRange=0 expected=mixed
+2026-10-25 01:54:07.190 RB CHECK items_ok: 1=1 == 1=1 => PASS
+2026-10-25 01:54:07.190 DISPLAYPERF ticks=218 avg=0.140ms max=0.801ms
+2026-10-25 01:54:07.190 DISPLAY FINISHED: INTERACTION - Checking whether Healing Tempo's speed buff turns on when healing comes from Vampiric Burst's lifesteal, from a direct heal item, from passive bullet lifesteal, or from nothing. -> shots 10, bullet hits 10, damage events on target 19 (end step)
+2026-10-25 01:54:07.190 DISPLAY MEASURED: shots 10, bullet hits 10, damage events on target 19; verify-pass/fail are in the run log
+2026-10-25 01:54:07.190 DISPLAY ASSUMED: none declared
+2026-10-25 01:54:07.190 DISPLAY CALCULATED: none
+2026-10-25 01:54:07.190 DISPLAY CONCLUSION: INSUFFICIENT EVIDENCE - no decision
+2026-10-25 01:54:07.190 SC scenario nv_N07_healing_tempo_scope finished: end step
+2026-10-25 01:54:07.471 DISPLAY SENT Done: Tempo heal test
+2026-10-25 01:54:07.471 QR TASK-END novel:N07#1 why=end step
