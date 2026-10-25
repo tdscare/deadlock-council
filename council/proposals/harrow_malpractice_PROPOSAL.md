@@ -14,3 +14,7 @@ Counters: Metal Skin / Plated Armor, Counterspell, Spirit Resilience, Dispel Mag
 
 ## Differences from the public build: no Tesla/Capacitor (Ricochet instead, as asked); Surge of Power as the upgrade of Extra Spirit; Superior Duration slot-locked; Fortitude kept as the 4.8k vitality piece; Spiritual Overflow + Vampiric Burst added for healing late.
 ## Unverified: imbue effects on Needles, Siphon/Toxic proc behaviour on a healer, damage vs current build. Test queue needed before any claim.
+
+
+## UPDATE 2026-10-25 12:5x: published to the live Build Browser at Kieran's explicit request (Harrow entry only; the other 80 builds in that page untouched; frozen data.js and its backups untouched).
+Change vs this draft: Compress Cooldown on Wretched Vapors replaces Duration Extender (earlier Round-24/25 review numbers: Vapors lasts 4s, Needles T3 already stretches ally buffs), Superior Cooldown is its 1.6k upgrade, Transcendent Cooldown slot locked, lane Grit box dropped. Final entry: council/proposals/harrow_malpractice_build.js. Validators: walk1 FLAGS none, check12 none; core 12 slots, 59.2k; spikes gun 4.8k @8.0k, health @13.6k, spirit @15.2k. Page tested: Harrow tab renders and generates a game code. Still not sandbox-tested.
