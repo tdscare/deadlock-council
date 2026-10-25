@@ -1,0 +1,102 @@
+# novel-hypothesis test request (council/tools/novel_scenarios.py). Offline-generated; the tester agent is the only executor.
+meta kind INTERACTION
+meta question Checking what the game does when Echo Shard is imbued on an ultimate, which its own text excludes.
+meta purpose confirms the graves_ult proposal (Echo Shard on Borrowed Decree): data says non-ultimate only; this shows whether the game refuses the imbue or accepts it with no effect
+meta mechanics abilities.vdata upgrade_ability_power_shard m_TargetAbilityEffectsToApply = IMBUE_ACTIVE_NON_ULT, text 'imbued non-ultimate ability' (VERIFIED MECHANIC). Runtime behaviour on an ultimate is UNRESOLVED
+meta expectedstate souls=30000 items=upgrade_ability_power_shard
+meta build haze
+meta checkpoint 30000
+meta items upgrade_ability_power_shard
+meta strategy_source council/evidence/interactions/novel/novel_hypotheses.json
+meta feeds proposal council/proposals/graves_ult_echo_fix.json
+meta prediction_refused the imbueown log line for Signature4 reports a refusal/false/error while Signature2 succeeds
+meta prediction_noeffect both imbues are accepted, but after the Echo Shard press the ultimate cooldown (cds) is unchanged while the Smoke Bomb cooldown is reset
+meta prediction_works the ultimate cooldown resets too (the data name would then be wrong): the proposal is withdrawn
+meta decision_rule refused or no effect: the graves_ult data-fact proposal stands. Works: withdraw it and correct the audit
+meta changes_builds graves_ult
+meta unresolved_if cds readback shows garbage values for the ultimate (see AUTORUN DANGER notes)
+meta selection_kind discovery
+meta selection_reason independent audit of imbue placements found one build with an item type placed outside its stated target
+meta alternative_reason the same item on Smoke Bomb (non-ultimate) is the control
+meta required_levels 1=1;2=4;3=1;4=1
+meta levels_mode fixed
+meta required_readback items_ok|1|==|1
+meta rotation cast the imbued ability, press the item, read cooldowns; bracketed and reversed
+meta stack_track none
+meta cond_scope ability 2 or 4 cast + item
+meta cond_abilities_used cast 2 or 4
+meta cond_abilities_excluded others
+meta cond_accuracy n/a
+meta cond_misses none
+meta cond_start_stacks 0 (hardreset before every block)
+meta cond_activations Echo Shard
+meta cond_distance n/a (self)
+meta cond_targets enemies=1 allies=0
+meta readbacks equipped_items,imbueown_log,cds
+meta player_title Echo Shard on an ultimate
+meta player_what Item says non-ultimate only
+meta player_why Does the game stop it?
+meta player_short Echo on ultimate
+meta player_expect Refused or no effect
+meta result_says WORKS if the ultimate cooldown resets after the item press; DOES NOT WORK if the imbue is refused or the cooldown stays
+setup Haze Haze
+raw citadel_unlock_flex_slots
+abil 1 1 1 1
+souls 30000
+hardreset
+souls 30000
+give upgrade_ability_power_shard
+imbueown upgrade_ability_power_shard Signature2
+basemods
+enemies 1 300 4
+fetch 350
+mark S2_nonult
+cast 2 0.6
+cds
+cast i1 0.6
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_ability_power_shard
+imbueown upgrade_ability_power_shard Signature4
+basemods
+enemies 1 300 4
+fetch 350
+mark S4_ult
+cast 4 0.6
+cds
+cast i1 0.6
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_ability_power_shard
+imbueown upgrade_ability_power_shard Signature4
+basemods
+enemies 1 300 4
+fetch 350
+mark S4_ult_rev
+cast 4 0.6
+cds
+cast i1 0.6
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_ability_power_shard
+imbueown upgrade_ability_power_shard Signature2
+basemods
+enemies 1 300 4
+fetch 350
+mark S2_nonult_rev
+cast 2 0.6
+cds
+cast i1 0.6
+cds
+mark none
+wait 2
+end

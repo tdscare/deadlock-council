@@ -1,0 +1,185 @@
+# novel-hypothesis test request (council/tools/novel_scenarios.py). Offline-generated; the tester agent is the only executor.
+meta kind INTERACTION
+meta question Checking whether Healing Tempo's speed buff turns on when healing comes from Vampiric Burst's lifesteal, from a direct heal item, from passive bullet lifesteal, or from nothing.
+meta purpose decides where Healing Tempo (a late, expensive item) belongs: 21 builds hold it, most of them pair it with lifesteal items whose heals may not count
+meta mechanics item text (VERIFIED MECHANIC, citadel_mods_english.txt upgrade_healbuff_desc): applying healing grants fire rate and move speed; does not apply on innate regen or passive Bullet/Spirit Lifesteals. Whether lifesteal granted by an active (Vampiric Burst, Infuser) counts as passive is not in the data (UNRESOLVED). Healing Nova is the positive control (a direct heal), passive Bullet Lifesteal the negative control (excluded by the text)
+meta expectedstate souls=30000 items=upgrade_healbuff,upgrade_surging_power,upgrade_health_nova,upgrade_vampire
+meta build haze
+meta checkpoint 30000
+meta items upgrade_healbuff upgrade_surging_power upgrade_health_nova upgrade_vampire
+meta strategy_source council/evidence/interactions/novel/novel_hypotheses.json
+meta feeds novel hypothesis N07 (Healing Tempo scope)
+meta prediction_D positive control: a new self modifier (the Tempo buff) appears after the Healing Nova cast; its name is then the detector for the other arms. If none appears Healing Tempo does not trigger on self-cast heals at all and the file is read as INCONCLUSIVE for V
+meta prediction_P negative control (text): no Tempo modifier after passive lifesteal hits
+meta prediction_V_counts Tempo modifier appears while Vampiric Burst lifesteal heals: active-granted lifesteal counts
+meta prediction_V_not no Tempo modifier: active-granted lifesteal is treated as passive
+meta decision_rule V counts: Healing Tempo stays where Vampiric Burst or Infuser is the main heal. V not: Healing Tempo is only valuable with direct heals (Healing Nova, Rescue Beam, ally heals), builds owner reviews the builds in changes_builds that rely on lifesteal heals. D fails: INCONCLUSIVE, no change
+meta changes_builds dynamo, kelvin, kelvin_support, haze, rem, solomon_support, victor, victor_gun, viscous, yamato, yamato_brawler, geist, geist_bomb, apollo, apollo_melee, celeste, celeste_carry, baba_tank, abrams, ivy, nurse
+meta unresolved_if D shows no modifier (detector unproven); lowhp clamps health every frame, so a heal that is fully clamped may not register: if D fails repeat D at lowhp 30
+meta selection_kind discovery
+meta selection_reason independent theorycraft: the item text names an exclusion (passive lifesteals) but not the active-granted case, and 21 builds pay for it
+meta alternative_reason D and P are the positive and negative controls inside the file
+meta required_levels 1=1;2=1;3=1;4=1
+meta levels_mode fixed
+meta required_readback items_ok|1|==|1
+meta rotation lowhp 50 in every block; active item cast first, then 1.5 s of gun fire; mods read after each step
+meta stack_track none
+meta cond_scope gun + item actives
+meta cond_abilities_used item active i1
+meta cond_abilities_excluded abilities 1-4
+meta cond_accuracy 100 percent body
+meta cond_misses none
+meta cond_start_stacks 0 (hardreset before every block)
+meta cond_activations Vampiric Burst or Healing Nova
+meta cond_distance 350u
+meta cond_targets enemies=1 allies=0
+meta readbacks equipped_items,self_modifier_names,healDiffObserved
+meta player_title Healing Tempo and lifesteal
+meta player_what Which heals trigger Tempo?
+meta player_why Worth it with lifesteal?
+meta player_short Tempo heal test
+meta player_expect Buff on a heal, or not
+meta result_says WORKS if the Tempo buff appears during Vampiric Burst; DOES NOT WORK if it appears only after the Healing Nova
+setup Haze Haze
+raw citadel_unlock_flex_slots
+abil 1 1 1 1
+souls 30000
+hardreset
+souls 30000
+give upgrade_healbuff
+basemods
+enemies 1 300 4
+fetch 350
+lowhp 50
+cast reload 2.5
+mark T0_tempo_alone
+accuracy 1 0
+fire 1.0
+mods
+mark none
+lowhp 0
+wait 2
+hardreset
+souls 30000
+give upgrade_healbuff
+give upgrade_vampire
+basemods
+enemies 1 300 4
+fetch 350
+lowhp 50
+cast reload 2.5
+mark P_passive_lifesteal
+accuracy 1 0
+fire 1.5
+mods
+wait 0.5
+mods
+mark none
+lowhp 0
+wait 2
+hardreset
+souls 30000
+give upgrade_healbuff
+give upgrade_health_nova
+basemods
+enemies 1 300 4
+fetch 350
+lowhp 50
+cast reload 2.5
+mark D_healing_nova
+cast i1 0.6
+mods
+wait 1.0
+mods
+mark none
+lowhp 0
+wait 2
+hardreset
+souls 30000
+give upgrade_healbuff
+give upgrade_surging_power
+basemods
+enemies 1 300 4
+fetch 350
+lowhp 50
+cast reload 2.5
+mark V_vampiric_burst
+cast i1 0.6
+accuracy 1 0
+fire 1.5
+mods
+wait 0.5
+mods
+mark none
+lowhp 0
+wait 2
+hardreset
+souls 30000
+give upgrade_healbuff
+give upgrade_surging_power
+basemods
+enemies 1 300 4
+fetch 350
+lowhp 50
+cast reload 2.5
+mark V_vampiric_burst_rev
+cast i1 0.6
+accuracy 1 0
+fire 1.5
+mods
+wait 0.5
+mods
+mark none
+lowhp 0
+wait 2
+hardreset
+souls 30000
+give upgrade_healbuff
+give upgrade_health_nova
+basemods
+enemies 1 300 4
+fetch 350
+lowhp 50
+cast reload 2.5
+mark D_healing_nova_rev
+cast i1 0.6
+mods
+wait 1.0
+mods
+mark none
+lowhp 0
+wait 2
+hardreset
+souls 30000
+give upgrade_healbuff
+give upgrade_vampire
+basemods
+enemies 1 300 4
+fetch 350
+lowhp 50
+cast reload 2.5
+mark P_passive_lifesteal_rev
+accuracy 1 0
+fire 1.5
+mods
+wait 0.5
+mods
+mark none
+lowhp 0
+wait 2
+hardreset
+souls 30000
+give upgrade_healbuff
+basemods
+enemies 1 300 4
+fetch 350
+lowhp 50
+cast reload 2.5
+mark T0_tempo_alone_rev
+accuracy 1 0
+fire 1.0
+mods
+mark none
+lowhp 0
+wait 2
+end

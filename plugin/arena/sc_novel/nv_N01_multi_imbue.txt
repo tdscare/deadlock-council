@@ -1,0 +1,232 @@
+# novel-hypothesis test request (council/tools/novel_scenarios.py). Offline-generated; the tester agent is the only executor.
+meta kind INTERACTION
+meta question Checking what happens when two imbue items are put on the same ability: do both work, does the last one replace the first, or is the second refused?
+meta purpose decides how 56 of 81 builds should use their imbue items: 56 builds put 2-5 imbue items on one ability (104 item placements would be unused if the game allows only one per ability)
+meta mechanics game data (abilities.vdata) gives each imbue item a behaviour type (ACTIVE / ACTIVE_NON_ULT / MODIFIER_VALUE) but no per-ability capacity field; replace vs refuse vs stack is not in the data (UNRESOLVED). Sleep Dagger is used because both effects are readable: Compress Cooldown shows in the ability cooldown (cds), Surge of Power adds imbued Spirit Power (ImbuedTechPower 28 x damage scale 2.2 = +61.6 dagger damage before resists, MODELLED)
+meta expectedstate souls=30000 items=upgrade_magic_tempo,upgrade_magic_storm
+meta build haze
+meta checkpoint 30000
+meta items upgrade_magic_tempo upgrade_magic_storm
+meta strategy_source council/evidence/interactions/novel/novel_hypotheses.json
+meta feeds novel hypothesis N01 (imbue capacity); council/evidence/interactions/imbue_audit/IMBUE_AUDIT.txt section C lists the 56 affected builds
+meta prediction_STACK both effects show in C and D, in either order: dagger cooldown in C/D is about the same as A, and dagger damage is about B (+61.6 over P0)
+meta prediction_REPLACE_LAST C shows only Surge (damage up, cooldown = P0); D shows only Compress Cooldown (cooldown down, damage = P0): the order of purchase decides
+meta prediction_FIRST_WINS_OR_REFUSE C shows only Compress Cooldown, D only Surge; the plugin log line for the second imbueown says refused/false/error
+meta prediction_SURGE_GLOBAL in G dagger damage rises although Surge sits on another ability: then its Spirit Power is not ability-bound and must be valued as a flat stat
+meta decision_rule STACK: keep all builds, model adds the effects. REPLACE or REFUSE: every build with 2+ imbue items on one ability loses the extra items (IMBUE_AUDIT.txt section C): re-split the imbues across abilities or drop the surplus items, builds owner proposes through the gate. Mixed (same-type refused, different-type stacks): this file cannot separate it (needs a duration readback), record as PARTIAL
+meta changes_builds danny, danny_gun, bebop_bomb, bebop_support, dynamo, dynamo_damage, greytalon, greytalon_gun, infernus_dash, kelvin, kelvin_support, paige, paige_support, ratking, ratking_grenade, haze, rem, seven, seven_gun, solomon, solomon_support, venator, victor_gun, violet, violet_spirit, viscous, viscous_damage, wraith, mina, vindicta, vindicta_sniper, geist_bomb, mcginnis, mcginnis_turret, mcginnis_ult, paradox, paradox_bomb, apollo, celeste_carry, warden, lash, mirage, vyper, vyper_gun, sinclair, sinclair_bolt, doorman, abrams, holliday, holliday_spirit, graves, graves_ult, calico, mokrill, shiv, nurse
+meta unresolved_if cooldown readback is garbage (cds reports end=0 or values above 1000 s) in P0: INVALID, report the raw cds lines
+meta selection_kind discovery
+meta selection_reason independent theorycraft: largest build exposure of any open question (56 of 81 builds) and no capacity field in the game data, so the answer cannot be reasoned out
+meta alternative_reason P0 and single-imbue arms A, B are the controls; C vs D tests order; G tests whether Surge is bound to its ability
+meta required_levels 1=4;2=1;3=1;4=1
+meta levels_mode fixed
+meta required_activation cast1|ability|ability_sleep_dagger|1
+meta required_readback items_ok|1|==|1 ; dmg_hits|hits|>|0
+meta rotation P0, A, B, C, D, G then the same arms in reverse order, P0 last (bracketing control); one Sleep Dagger cast per block, 350u
+meta stack_track none
+meta cond_scope ability 1 cast only (no gun)
+meta cond_abilities_used cast 1
+meta cond_abilities_excluded gun, other abilities
+meta cond_accuracy n/a
+meta cond_misses none
+meta cond_start_stacks 0 (hardreset before every block)
+meta cond_activations imbueown for each item, Sleep Dagger
+meta cond_distance 350u
+meta cond_targets enemies=1 allies=0
+meta readbacks equipped_items,ability_tiers,ability_cast:1,imbueown_log,cds_after_cast,dmg_row_of_ability_1
+meta player_title Two imbues on one ability
+meta player_what Compress + Surge on a dagger
+meta player_why Do extra imbues stack?
+meta player_short Stacking imbues
+meta player_expect Both work, or one is lost
+meta result_says WORKS (stack) if C and D show both effects; DOES NOT WORK if only one effect shows or the second imbueown is refused; the order of C and D says which one survives
+setup Haze Haze
+raw citadel_unlock_flex_slots
+abil 15 1 1 1
+souls 30000
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+fetch 350
+mark P0_none
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_tempo
+imbueown upgrade_magic_tempo Signature1
+basemods
+enemies 1 300 4
+fetch 350
+mark A_CC_only
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_storm
+imbueown upgrade_magic_storm Signature1
+basemods
+enemies 1 300 4
+fetch 350
+mark B_Surge_only
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_tempo
+give upgrade_magic_storm
+imbueown upgrade_magic_tempo Signature1
+imbueown upgrade_magic_storm Signature1
+basemods
+enemies 1 300 4
+fetch 350
+mark C_CC_then_Surge
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_tempo
+give upgrade_magic_storm
+imbueown upgrade_magic_storm Signature1
+imbueown upgrade_magic_tempo Signature1
+basemods
+enemies 1 300 4
+fetch 350
+mark D_Surge_then_CC
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_storm
+imbueown upgrade_magic_storm Signature2
+basemods
+enemies 1 300 4
+fetch 350
+mark G_Surge_on_other_slot
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_storm
+imbueown upgrade_magic_storm Signature2
+basemods
+enemies 1 300 4
+fetch 350
+mark G_Surge_on_other_slot_rev
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_tempo
+give upgrade_magic_storm
+imbueown upgrade_magic_storm Signature1
+imbueown upgrade_magic_tempo Signature1
+basemods
+enemies 1 300 4
+fetch 350
+mark D_Surge_then_CC_rev
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_tempo
+give upgrade_magic_storm
+imbueown upgrade_magic_tempo Signature1
+imbueown upgrade_magic_storm Signature1
+basemods
+enemies 1 300 4
+fetch 350
+mark C_CC_then_Surge_rev
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_storm
+imbueown upgrade_magic_storm Signature1
+basemods
+enemies 1 300 4
+fetch 350
+mark B_Surge_only_rev
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_tempo
+imbueown upgrade_magic_tempo Signature1
+basemods
+enemies 1 300 4
+fetch 350
+mark A_CC_only_rev
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+fetch 350
+mark P0_none_rev
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+fetch 350
+mark P0_end
+cast 1 0.8
+cds
+wait 1.5
+cds
+mark none
+wait 2
+end

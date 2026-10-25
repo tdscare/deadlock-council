@@ -1,0 +1,326 @@
+# novel-hypothesis test request (council/tools/novel_scenarios.py). Offline-generated; the tester agent is the only executor.
+meta kind INTERACTION
+meta question Checking whether two bullet-resist reducers add up, take only the stronger one, or each remove a share of what is left (and whether they do anything on an enemy with no bullet resist).
+meta purpose decides whether the second reducer is worth its souls: 10 builds hold Bullet Resist Shredder together with Hunter's Aura or Crippling Headshot, and 22 builds hold 2+ reducers of any kind
+meta mechanics each reducer applies its own debuff (items.json: BulletArmorReduction on Bullet Resist Shredder -10 and Hunter's Aura -10, doubled with one enemy hero near = -20 (SingleTargetPlayerMultiplier 2); BulletResistReduction on Crippling Headshot -16 with DiminishingMultiplier 0.5). The combining rule and whether the number is percentage points or a share of the target's resist are engine-side (UNRESOLVED). The target gets 30 percent bullet resist from Bullet Resilience (verified 34.8 -> 24.4 per bullet); two arms use 0 percent
+meta expectedstate souls=30000 items=upgrade_bullet_resist_shredder,upgrade_bullet_armor_reduction_aura,upgrade_banshee_slugs
+meta build haze
+meta checkpoint 30000
+meta items upgrade_bullet_resist_shredder upgrade_bullet_armor_reduction_aura upgrade_banshee_slugs
+meta strategy_source council/evidence/interactions/novel/novel_hypotheses.json
+meta feeds novel hypothesis N02 (resist reducer stacking); extends duo_D1_shred_formula with the cross-family pair and the diminishing multiplier
+meta prediction_table ratio of mean damage per bullet to the matching no-reducer arm, for resist 30 percent unless the label ends _0. N_30: ADD 1.000 | ADD with 2nd source x0.5 1.000 | MAX 1.000 | FRACTION-OF-RESIST 1.000 || BRS_30: ADD 1.143 | ADD with 2nd source x0.5 1.143 | MAX 1.143 | FRACTION-OF-RESIST 1.043 || HA_30: ADD 1.286 | ADD with 2nd source x0.5 1.286 | MAX 1.286 | FRACTION-OF-RESIST 1.086 || BRS_HA_30: ADD 1.429 | ADD with 2nd source x0.5 1.357 | MAX 1.286 | FRACTION-OF-RESIST 1.120 || Nh_30: ADD 1.000 | ADD with 2nd source x0.5 1.000 | MAX 1.000 | FRACTION-OF-RESIST 1.000 || CH_30: ADD 1.229 | ADD with 2nd source x0.5 1.229 | MAX 1.229 | FRACTION-OF-RESIST 1.069 || BRS_CH_30: ADD 1.371 | ADD with 2nd source x0.5 1.300 | MAX 1.229 | FRACTION-OF-RESIST 1.105 || N_0: ADD 1.000 | ADD with 2nd source x0.5 1.000 | MAX 1.000 | FRACTION-OF-RESIST 1.000 || BRS_HA_0: ADD 1.300 | ADD with 2nd source x0.5 1.250 | MAX 1.200 | FRACTION-OF-RESIST 1.000
+meta prediction_reading ADD column = reductions are percentage points and add; ADD with 2nd source x0.5 = the DiminishingMultiplier halves every later source; MAX = only the strongest applies; FRACTION = each takes that share of the remaining resist (then BRS_HA_0 must be 1.00: nothing to remove). If ADD or ADD-with-x0.5 holds on an enemy with 0 resist, the ratio exceeds 1 (negative resist amplifies)
+meta decision_rule match each arm to the nearest column (within 0.02). ADD: both reducers are worth their price, model credits the sum. MAX or ADD with x0.5: the second reducer is worth less than half in the builds in changes_builds, builds owner replaces it. FRACTION: reducers matter only against high-resist enemies, so value them by target resist in the model. No column within 0.02: INSUFFICIENT, report the three ratios
+meta changes_builds bebop, bebop_support, haze_assassin, yamato_brawler, geist, warden, abrams_melee, holliday, shiv_gun, ivy_carry
+meta unresolved_if N_30 vs N_30_end per-bullet damage differ by more than 3 percent (drift), or Nh_30 is not about 1.65 times N_30 (headshots not registering): head arms INVALID; BRS arms need the Sleep Dagger hit to land (dmg row for ability 1 present)
+meta selection_kind discovery
+meta selection_reason independent theorycraft: reducers are bought in 22 builds, the combining rule is not in the data, and the data hints at three different rules (two property names, a DiminishingMultiplier on one item)
+meta alternative_reason the same sequence with Sleep Dagger cast in every arm so the only difference is the items
+meta required_levels 1=4;2=1;3=1;4=1
+meta levels_mode fixed
+meta required_activation cast1|ability|ability_sleep_dagger|1
+meta required_readback items_ok|1|==|1 ; dmg_hits|hits|>|0
+meta rotation Sleep Dagger once, 0.6 s later 3 s of gun fire at 350u, 100 percent accuracy (body only; head arms use all-head), arms bracketed by the no-reducer control and run in reverse in the second half
+meta stack_track none
+meta cond_scope ability 1 cast + gun
+meta cond_abilities_used cast 1, gun
+meta cond_abilities_excluded abilities 2-4
+meta cond_accuracy 100 percent body (head arms: 100 percent head)
+meta cond_misses none
+meta cond_start_stacks 0 (hardreset before every block)
+meta cond_activations Bullet Resist Shredder (needs the dagger hit), Hunter's Aura (passive), Crippling Headshot (needs headshots)
+meta cond_distance 350u
+meta cond_targets enemies=1 allies=0
+meta readbacks equipped_items,ability_tiers,distance_m,ability_cast:1,dmg_per_bullet_by_arm,enemy_resist_modifier
+meta player_title Do resist shreds stack?
+meta player_what Two bullet shreds on one target
+meta player_why Is the 2nd shred worth buying?
+meta player_short Shred stacking
+meta player_expect More damage, or none extra
+meta result_says WORKS if the two-reducer arms deal clearly more per bullet than the best single reducer arm (ADD or FRACTION column); DOES NOT WORK if they equal the best single arm (MAX)
+setup Haze Haze
+raw citadel_unlock_flex_slots
+abil 15 1 1 1
+souls 30000
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark N_30
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_bullet_resist_shredder
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark BRS_30
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_bullet_armor_reduction_aura
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark HA_30
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_bullet_resist_shredder
+give upgrade_bullet_armor_reduction_aura
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark BRS_HA_30
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark Nh_30
+accuracy 1 1
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_banshee_slugs
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark CH_30
+accuracy 1 1
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_bullet_resist_shredder
+give upgrade_banshee_slugs
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark BRS_CH_30
+accuracy 1 1
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+fetch 350
+mark N_0
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_bullet_resist_shredder
+give upgrade_bullet_armor_reduction_aura
+basemods
+enemies 1 300 4
+fetch 350
+mark BRS_HA_0
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_bullet_resist_shredder
+give upgrade_bullet_armor_reduction_aura
+basemods
+enemies 1 300 4
+fetch 350
+mark BRS_HA_0_rev
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+fetch 350
+mark N_0_rev
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_bullet_resist_shredder
+give upgrade_banshee_slugs
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark BRS_CH_30_rev
+accuracy 1 1
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_banshee_slugs
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark CH_30_rev
+accuracy 1 1
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark Nh_30_rev
+accuracy 1 1
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_bullet_resist_shredder
+give upgrade_bullet_armor_reduction_aura
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark BRS_HA_30_rev
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_bullet_armor_reduction_aura
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark HA_30_rev
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_bullet_resist_shredder
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark BRS_30_rev
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark N_30_rev
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+eitem upgrade_improved_bullet_armor
+fetch 350
+mark N_30_end
+accuracy 1 0
+cast 1 0.8
+wait 0.6
+fire 2
+acclog
+mark none
+wait 2
+end

@@ -1,0 +1,166 @@
+# novel-hypothesis test request (council/tools/novel_scenarios.py). Offline-generated; the tester agent is the only executor.
+meta kind INTERACTION
+meta question Checking whether Nurse's Leech Therapy jar counts as a bullet hit (bullet-hit items, bullet resist) or as plain ability damage.
+meta purpose decides how the 12 abilities flagged as fired like bullets (Nurse Leech Therapy, Viper daggers, Werewolf, Kelvin, Hornet, Ratking and others) should be itemised: gun-hit items and bullet shreds help only if the projectile counts as a bullet; 1 Nurse build(s) test it directly and the rest of the flagged heroes follow the answer by inference
+meta mechanics behaviours list PROJECTILE_FIRED_AS_BULLET for these abilities (VERIFIED MECHANIC); Leech Therapy's damage is listed as ability damage (DPS, ABILITY). What the flag means for item procs and for which resist reduces it is engine-side (UNRESOLVED). Escalating Resilience (text: Bullet Resist when your bullets hit a hero) is the detector; K proves the detector works on real bullets
+meta expectedstate souls=30000 items=upgrade_reinforcing_casings
+meta build nurse
+meta checkpoint 30000
+meta items upgrade_reinforcing_casings
+meta strategy_source council/evidence/interactions/novel/novel_hypotheses.json
+meta feeds novel hypothesis N10 (PROJECTILE_FIRED_AS_BULLET)
+meta prediction_K positive control: bullets produce an Escalating Resilience modifier on the player (mods shows a new self modifier). If not, the detector is unproven: INVALID
+meta prediction_bullet L also produces the modifier and the damage rows of the jar fall with eresist gun 50 (not with spirit 50)
+meta prediction_ability L produces no modifier and the rows fall with eresist spirit 50 only
+meta prediction_mixed modifier appears but rows follow spirit resist (or the reverse): the flag affects procs and resist separately; report both
+meta decision_rule bullet: for the flagged heroes gun-hit items and bullet-resist shreds apply to the ability; the builds owner re-classes them in changes_builds. ability: no change. mixed: record both and test each flagged hero before any change. K fails: INCONCLUSIVE
+meta changes_builds nurse (and builds of Viper, Werewolf, Kelvin, Vindicta, Ratking, Graves, Chrono by inference only)
+meta unresolved_if Nurse cast 1 does not throw the jar (statecheck/ability_cast readback), or the damage csv has no rows for the leech (DPS ticks may be logged under another ability name)
+meta selection_kind discovery
+meta selection_reason independent theorycraft: the flag exists on 12 abilities and the data does not say how the engine treats them for procs and resist
+meta alternative_reason K is the positive control; the three resist arms separate gun vs spirit scaling
+meta required_levels 1=4;2=1;3=1;4=1
+meta levels_mode fixed
+meta required_readback items_ok|1|==|1 ; dmg_hits|hits|>|0
+meta rotation K fire; L jar with item; three resist arms with the jar only; bracketed and reversed
+meta blocked_by Nurse jar needs the aim to land on a stationary bot at 350u: verify with ability_cast:1 and a damage row before reading the arms
+meta stack_track none
+meta cond_scope ability 1 cast (K: gun)
+meta cond_abilities_used cast 1
+meta cond_abilities_excluded abilities 2-4
+meta cond_accuracy n/a
+meta cond_misses none
+meta cond_start_stacks 0 (hardreset before every block)
+meta cond_activations Escalating Resilience
+meta cond_distance 350u
+meta cond_targets enemies=1 allies=0
+meta readbacks equipped_items,ability_cast:1,self_modifier_names,dmg_rows_by_arm
+meta player_title Leech jar: bullet or spell?
+meta player_what Nurse jar vs bullet items
+meta player_why Which items help Nurse?
+meta player_short Jar bullet test
+meta player_expect Bullet buff or not
+meta result_says WORKS if the jar triggers the bullet-hit item and bullet resist reduces it; DOES NOT WORK if neither happens
+setup Nurse Haze
+raw citadel_unlock_flex_slots
+abil 15 1 1 1
+souls 30000
+hardreset
+souls 30000
+give upgrade_reinforcing_casings
+basemods
+enemies 1 300 4
+fetch 350
+cast reload 2.5
+mark K_bullets_casings
+accuracy 1 0
+fire 1.0
+mods
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_reinforcing_casings
+basemods
+enemies 1 300 4
+fetch 350
+mark L_leech_casings
+cast 1 0.8
+wait 1.0
+mods
+wait 2.0
+mods
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+fetch 350
+mark L_leech_resist_none
+cast 1 0.8
+wait 4.0
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+eresist gun 50
+fetch 350
+mark L_leech_resist_gun50
+cast 1 0.8
+wait 4.0
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+eresist spirit 50
+fetch 350
+mark L_leech_resist_spirit50
+cast 1 0.8
+wait 4.0
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+eresist spirit 50
+fetch 350
+mark L_leech_resist_spirit50_rev
+cast 1 0.8
+wait 4.0
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+eresist gun 50
+fetch 350
+mark L_leech_resist_gun50_rev
+cast 1 0.8
+wait 4.0
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+fetch 350
+mark L_leech_resist_none_rev
+cast 1 0.8
+wait 4.0
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_reinforcing_casings
+basemods
+enemies 1 300 4
+fetch 350
+mark L_leech_casings_rev
+cast 1 0.8
+wait 1.0
+mods
+wait 2.0
+mods
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_reinforcing_casings
+basemods
+enemies 1 300 4
+fetch 350
+cast reload 2.5
+mark K_bullets_casings_rev
+accuracy 1 0
+fire 1.0
+mods
+mark none
+wait 2
+end

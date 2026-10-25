@@ -1,0 +1,169 @@
+# novel-hypothesis test request (council/tools/novel_scenarios.py). Offline-generated; the tester agent is the only executor.
+meta kind INTERACTION
+meta question Checking whether spirit damage that rides on a bullet (Mystic Shot's bonus) is counted as ability damage by items that only react to ability damage (Mystic Slow).
+meta purpose decides if the five ability-damage-only items (Mystic Slow, Suppressor, Healbane, Escalating Exposure, Mystic Vulnerability, held by 45 builds) work on heroes whose spirit damage is attached to bullets; 7 of those builds are such heroes (Seven, Victor, Wraith, Mina, Vindicta)
+meta mechanics abilities.vdata lists only CITADEL_DAMAGETYPE_ABILITY in m_vecProcDamageTypes for all five (VERIFIED MECHANIC). The damage type of bullet-attached spirit damage is not in the data. PROXY: Mystic Shot (ProcBonusMagicDamage on the next bullet) is the only bullet-borne spirit damage a verified hero (Haze) can produce; transfer to the hero-specific kits (Wraith Full Auto, Gigawatt Power Surge) is UNVERIFIED and is the follow-up once a cast/state check exists for them
+meta expectedstate souls=30000 items=upgrade_magic_slow,upgrade_crackshot
+meta build haze
+meta checkpoint 30000
+meta items upgrade_magic_slow upgrade_crackshot
+meta strategy_source council/evidence/interactions/novel/novel_hypotheses.json
+meta feeds novel hypothesis N03 (ability-only proc items)
+meta prediction_K positive control: the dagger (ABILITY damage) applies the Mystic Slow modifier to the enemy within 1 s (mods shows a new enemy modifier). If it does not, the whole file is INVALID
+meta prediction_N negative control: plain bullets (BULLET damage) do NOT apply it (text and proc list say ABILITY only)
+meta prediction_T_if_ability the Mystic Shot bonus row in the damage csv has dmg_type Ability and the slow modifier appears after the first bullet
+meta prediction_T_if_bullet the bonus row has dmg_type Bullet (or merges into the bullet row) and no slow modifier appears
+meta decision_rule bonus row Ability AND slow appears: bullet-borne spirit damage counts, the five items stay in the builds in changes_builds (follow-up on Wraith/Gigawatt for confirmation). Bonus row Bullet or no slow: bullet-borne spirit damage does NOT trigger them: builds owner reviews the 45 builds in changes_builds on bullet-spirit heroes and swaps the five items there; INCONCLUSIVE if K fails
+meta changes_builds danny_gun, bebop_bomb, infernus, infernus_dash, kelvin, kelvin_support, paige, seven, seven_gun, solomon, victor, victor_gun, violet, violet_spirit, viscous_damage, wraith, yamato, yamato_brawler, mina, vindicta_sniper, geist_bomb, mcginnis_turret, mcginnis_ult, paradox_bomb, apollo, apollo_melee, celeste, baba, baba_tank, pocket, mirage, sinclair_bolt, doorman, abrams, abrams_melee, holliday_spirit, graves, graves_ult, graves_tank, drifter_spirit, calico, mokrill, shiv, ivy, nurse
+meta unresolved_if K arm shows no slow modifier, or T2 shows no extra spirit row (Mystic Shot did not fire; its cooldown is 8 s so only the first shot of each block can carry it)
+meta selection_kind discovery
+meta selection_reason independent theorycraft: five items are bought in 45 builds and the data says they only react to ability damage, so the damage type of bullet-attached spirit is a build-relevant unknown
+meta alternative_reason K and N are the positive and negative controls inside the file
+meta required_levels 1=4;2=1;3=1;4=1
+meta levels_mode fixed
+meta required_readback items_ok|1|==|1 ; dmg_hits|hits|>|0
+meta rotation K dagger cast; N 0.5 s of gun fire; T gun fire with Mystic Shot; T2 Mystic Shot only; bracketed and reversed; mods read twice per block
+meta stack_track none
+meta cond_scope gun only, except arm K (ability 1 cast)
+meta cond_abilities_used gun; cast 1 in K only
+meta cond_abilities_excluded abilities 2-4
+meta cond_accuracy 100 percent body
+meta cond_misses none
+meta cond_start_stacks 0 (hardreset before every block)
+meta cond_activations Mystic Shot on the first bullet
+meta cond_distance 350u
+meta cond_targets enemies=1 allies=0
+meta readbacks equipped_items,distance_m,enemy_modifier_names,dmg_type_of_bonus_row
+meta player_title Spirit on bullets: ability?
+meta player_what Mystic Shot vs Mystic Slow
+meta player_why Do slow items fire on it?
+meta player_short Bullet spirit test
+meta player_expect Slow appears or not
+meta result_says WORKS if the Mystic Shot bonus is typed Ability and Mystic Slow appears; DOES NOT WORK if it is typed Bullet and no slow appears (while K shows the slow)
+setup Haze Haze
+raw citadel_unlock_flex_slots
+abil 15 1 1 1
+souls 30000
+hardreset
+souls 30000
+give upgrade_magic_slow
+basemods
+enemies 1 300 4
+fetch 350
+mark K_slow_dagger
+cast 1 0.8
+wait 0.3
+mods
+wait 0.5
+mods
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_slow
+basemods
+enemies 1 300 4
+fetch 350
+mark N_slow_bullets
+accuracy 1 0
+fire 0.5
+mods
+wait 0.5
+mods
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_slow
+give upgrade_crackshot
+basemods
+enemies 1 300 4
+fetch 350
+mark T_slow_MysticShot
+accuracy 1 0
+fire 0.5
+mods
+wait 0.5
+mods
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_crackshot
+basemods
+enemies 1 300 4
+fetch 350
+mark T2_MysticShot_only
+accuracy 1 0
+fire 0.5
+mods
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_crackshot
+basemods
+enemies 1 300 4
+fetch 350
+mark T2_MysticShot_only_rev
+accuracy 1 0
+fire 0.5
+mods
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_slow
+give upgrade_crackshot
+basemods
+enemies 1 300 4
+fetch 350
+mark T_slow_MysticShot_rev
+accuracy 1 0
+fire 0.5
+mods
+wait 0.5
+mods
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_slow
+basemods
+enemies 1 300 4
+fetch 350
+mark N_slow_bullets_rev
+accuracy 1 0
+fire 0.5
+mods
+wait 0.5
+mods
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_slow
+basemods
+enemies 1 300 4
+fetch 350
+mark K_slow_dagger_rev
+cast 1 0.8
+wait 0.3
+mods
+wait 0.5
+mods
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_magic_slow
+basemods
+enemies 1 300 4
+fetch 350
+mark K_end
+cast 1 0.8
+wait 0.3
+mods
+mark none
+wait 2
+end

@@ -1,0 +1,152 @@
+# novel-hypothesis test request (council/tools/novel_scenarios.py). Offline-generated; the tester agent is the only executor.
+meta kind INTERACTION
+meta question Checking whether a 'next bullet' item gives its bonus to one pellet or to every pellet of a multi-pellet shot, and what Express Shot does to a shotgun-style shot.
+meta purpose decides if next-bullet items (Mystic Shot, Headshot Booster, Headhunter, Restorative Shot, Express Shot) are worth buying on multi-pellet or burst weapons: 7 builds hold one on such a hero
+meta mechanics the data caps these items at one bullet per shot (m_flMaxBulletsToProcInShot=1, no multiple procs per shot or per target; VERIFIED MECHANIC). Drifter's weapon fires m_iBullets=3 per shot (cycle 0.441 s), Haze 1 per shot (cycle 0.105 s). Whether the cap means 1 pellet of 3, and what Express Shot does (fires twice, uses extra ammo) is UNRESOLVED
+meta expectedstate souls=30000 items=upgrade_crackshot,upgrade_express_shot
+meta build haze
+meta checkpoint 30000
+meta items upgrade_crackshot upgrade_express_shot
+meta strategy_source council/evidence/interactions/novel/novel_hypotheses.json
+meta feeds novel hypothesis N04 (next-bullet items on pellet/burst weapons)
+meta prediction_haze_control Haze: exactly one extra spirit row on the first bullet of M, nothing further inside 8 s (item cooldown); E: first shot comes out twice with more damage and a larger ammo drop
+meta prediction_drifter_CAP Drifter M: one extra spirit row in total (cap of 1 respected) attached to one of the three first-shot pellets
+meta prediction_drifter_ALL Drifter M: three extra rows on the first shot (cap counts shots, not pellets)
+meta prediction_drifter_ME ME: the bonus rides on the first bullet of the first volley only (Express Shot extra volley carries none) if the cap is per shot
+meta decision_rule CAP: a next-bullet bonus is worth one pellet of three; the model divides its value by the pellet count on Drifter, Yamato (5), Calico (9), Shiv (6) style weapons and the builds in changes_builds drop or downgrade the item where the share is under about a third. ALL: item value counts every pellet, no change. Express Shot rows without ammo readback: report volleys and damage only
+meta changes_builds yamato, yamato_brawler, paradox, lash, pocket, abrams_melee, shiv_gun
+meta unresolved_if Drifter blocks show no pellet rows (gun not firing: statecheck first); per-row timestamps cannot separate shots (report row counts per 0.5 s instead)
+meta selection_kind discovery
+meta selection_reason independent theorycraft: item text says next bullet, data caps it at 1 bullet per shot, and many heroes fire several bullets per shot
+meta alternative_reason Haze (1 bullet per shot) is the control hero in the same file
+meta required_levels 1=1;2=1;3=1;4=1
+meta levels_mode fixed
+meta required_readback items_ok|1|==|1 ; dmg_hits|hits|>|0
+meta rotation two heroes in sequence (the setup line switches); blocks X0, M, E, ME then reversed; 1.3 s of fire per block
+meta blocked_by ammo count after the shot is not a runner readback (only GunFired/BulletHit counts via acclog); Drifter gun operation not yet exercised in a queue run: run a statecheck block first
+meta stack_track none
+meta cond_scope gun only
+meta cond_abilities_used none
+meta cond_abilities_excluded all abilities
+meta cond_accuracy 100 percent body
+meta cond_misses none
+meta cond_start_stacks 0 (hardreset before every block)
+meta cond_activations Mystic Shot, Express Shot
+meta cond_distance 350u
+meta cond_targets enemies=1 allies=0
+meta readbacks equipped_items,distance_m,rows_per_shot,extra_rows_per_shot
+meta player_title Next bullet: one pellet?
+meta player_what Pellet gun vs next-bullet item
+meta player_why Worth it on shotguns?
+meta player_short Pellet item test
+meta player_expect One pellet or all
+meta result_says WORKS if the bonus lands on every pellet of the first shot; DOES NOT WORK (cap) if exactly one pellet carries it
+setup Haze Haze
+raw citadel_unlock_flex_slots
+abil 1 1 1 1
+souls 30000
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+fetch 350
+cast reload 2.5
+mark H_X0
+accuracy 1 0
+fire 1.3
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_crackshot
+basemods
+enemies 1 300 4
+fetch 350
+cast reload 2.5
+mark H_M
+accuracy 1 0
+fire 1.3
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_express_shot
+basemods
+enemies 1 300 4
+fetch 350
+cast reload 2.5
+mark H_E
+accuracy 1 0
+fire 1.3
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_crackshot
+give upgrade_express_shot
+basemods
+enemies 1 300 4
+fetch 350
+cast reload 2.5
+mark H_ME
+accuracy 1 0
+fire 1.3
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_crackshot
+give upgrade_express_shot
+basemods
+enemies 1 300 4
+fetch 350
+cast reload 2.5
+mark H_ME_rev
+accuracy 1 0
+fire 1.3
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_express_shot
+basemods
+enemies 1 300 4
+fetch 350
+cast reload 2.5
+mark H_E_rev
+accuracy 1 0
+fire 1.3
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+give upgrade_crackshot
+basemods
+enemies 1 300 4
+fetch 350
+cast reload 2.5
+mark H_M_rev
+accuracy 1 0
+fire 1.3
+acclog
+mark none
+wait 2
+hardreset
+souls 30000
+basemods
+enemies 1 300 4
+fetch 350
+cast reload 2.5
+mark H_X0_rev
+accuracy 1 0
+fire 1.3
+acclog
+mark none
+wait 2
+end
