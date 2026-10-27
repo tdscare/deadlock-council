@@ -68,3 +68,9 @@
 - Build descriptions: short style label only ("Speedy AoE Paige", "Tanky Abrams"), blank if it's how the hero is always played; never spikes, item explanations, how-to or false claims. Gun Bebop named like "1v1 Beast Bebop". Box captions equally short.
 - Drifter makes souls from picks (Bloodscent): Trophy Collector fits, Monster Rounds doesn't.
 - Item relevance (Oct 22): every item must raise something this build's damage sources actually use (grenade/ability/weapon scaling); range, headshot, fire-rate or projectile items on ability-damage builds are wrong (e.g. Trash Lobber Rat King: Close Quarters to Point Blank, not Long Range/Sharpshooter/High-Velocity Rounds).
+
+## Playstyle loop check (Kieran, 2026-10-27) — required for every build, before item review
+Name the playstyle (e.g. stomp Dynamo, damage/heal-swap Harrow) and write its LOOP: what you do between ability uses, which resource the loop spends, and what gives it back. Every core item must serve a step of the loop or fix a named weakness; items that break the loop are out even if their numbers look good.
+- Dynamo stomp: Headhunter headshot triggers Recharging Rush, which gives a stomp back; Rapid Recharge on top = 4 stomps; the gun still deals damage. Items must feed the stomp-refund chain.
+- Harrow: damage mode (gun + Leech Therapy) refills Healing Needles charges (1.26%/bullet hit, 2.52%/headshot, 0.15%/s per leech) and farms leeches; healing mode spends the charges; swapping costs 1.3s in / 1.8s out. Imbue buffs trigger only when the imbued ability is cast, so they go on the ability cast at the START of the damage window (Leech Therapy), not on Healing Needles.
+Method: list the resource, its refund sources (check the ability data for charge/refund props), what the downtime does, then check each item against the loop and say which step it serves. Record the loop in the build's changes entry. Sandbox-test the refund chain where the tester can.
